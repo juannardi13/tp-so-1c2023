@@ -1,0 +1,8 @@
+[INFO] 15:07:18:332 memoria.log/(25623:25623): Escuchando en (null):7294 (MEMORIA)
+
+[INFO] 15:07:18:333 memoria.log/(25623:25623): MEMORIA inicializada, esperando a recibir al CPU en el PUERTO 7294.
+[INFO] 15:07:18:333 memoria.log/(25623:25623): Entro a la función esperar cliente
+[INFO] 15:08:17:043 memoria.log/(25623:25623): Cliente conectado (a MEMORIA)
+
+[INFO] 15:08:17:043 memoria.log/(25623:25623): El CPU me paso su puerto, y es: 7294
+[ERROR] 15:08:17:044 memoria.log/(25623:25623): el cliente se desconecto. Terminando servidor

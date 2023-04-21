@@ -18,20 +18,27 @@ int main() {
 	int fd_consola = esperar_cliente(logger, "KERNEL", fd_kernel);
 
 	t_list* lista;
-		while (1) {
-			int cod_op = recibir_operacion(logger, fd_consola);
-			switch (cod_op) {
-			case MENSAJE:
-				recibir_mensaje(logger, fd_consola);
-				break;
-			case -1:
-				log_error(logger, "el cliente se desconecto. Terminando servidor");
-				return EXIT_FAILURE;
-			default:
-				log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-				break;
+			while (1) {
+				int cod_op = recibir_operacion(logger, fd_consola);
+				switch (cod_op) {
+				case MENSAJE:
+					recibir_mensaje(logger, fd_consola);
+					break;
+				case PAQUETE:
+					//TODO
+					// no puede leer el paquete pero CREO que lo recibe
+					lista = recibir_paquete(fd_consola);
+					log_info(logger, "Me llegaron los siguientes valores:\n");
+					list_iterate(lista, (void*) iterator);
+					break;
+				case -1:
+					log_error(logger, "el cliente se desconecto. Terminando servidor");
+					return EXIT_FAILURE;
+				default:
+					log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+					break;
+				}
 			}
-		}
 
 
     return 0;

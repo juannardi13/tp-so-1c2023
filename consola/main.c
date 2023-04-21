@@ -1,9 +1,17 @@
 #include "./include/main.h"
 #include "./include/utils.h"
+#define MAX_LEN 256
 
 t_log* iniciar_logger(void);
 
-int main() {
+int main(/*int argc, char** argv*/) {
+/*
+	if (argc < 2) {
+        printf("Debes especificar un archivo de texto.\n");
+        printf("No se pudo comenzar la ejecución del programa.\n");
+        return 1;
+    }
+*/
 	char* ip_kernel;
 	char* puerto_kernel;
 
@@ -21,6 +29,7 @@ int main() {
 
     log_info(logger, "Conexion exitosa con el Kernel.");
     enviar_mensaje(puerto_kernel, conexion_kernel);
+    paquete_pseudocodigo(conexion_kernel);
 
     return EXIT_SUCCESS;
 }
@@ -51,3 +60,42 @@ t_config* iniciar_config(void)
 	return config;
 }
 
+void paquete_pseudocodigo(int conexion)
+{
+	t_paquete* paquete = crear_paquete();
+
+	 char buffer[MAX_LEN];
+	 FILE* file = fopen("./cfg/pseudocodigo.txt", "r");
+	 if (file == NULL) {
+	     printf("Error al abrir el archivo.\n");
+	     exit(3);
+	 }
+
+	 char** lista_lineas = malloc(sizeof(char*) * 10);
+	 int num_lineas = 0;
+
+	 while (fgets(buffer, MAX_LEN, file) != NULL) {
+	     char* linea = malloc(sizeof(char) * MAX_LEN);
+	     strcpy(linea, buffer);
+	     lista_lineas[num_lineas] = linea;
+	     num_lineas++;
+
+	     if (num_lineas % 10 == 0) {
+	         lista_lineas = realloc(lista_lineas, sizeof(char*) * (num_lineas + 10));
+	     }
+	 }
+
+	fclose(file);
+
+	for (int i = 0; i < num_lineas; i++) {
+		agregar_a_paquete(paquete, lista_lineas[i], 256);
+		printf("%s\n", lista_lineas[i]);
+	    free(lista_lineas[i]);
+    }
+
+	free(lista_lineas);
+
+
+	enviar_paquete(paquete, conexion);
+	free(paquete);
+}

@@ -1,0 +1,5 @@
+[INFO] 15:08:17:043 cpu.log/(25641:25641): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 15:08:17:043 cpu.log/(25641:25641): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 7294
+[INFO] 15:08:17:043 cpu.log/(25641:25641): Cliente conectado en 127.0.0.1:7294 (a MEMORIA)
+
+[INFO] 15:08:17:043 cpu.log/(25641:25641): Conexion exitosa con la memoria.
