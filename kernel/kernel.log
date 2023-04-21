@@ -1,0 +1,128 @@
+[INFO] 01:01:08:589 kernel.log/(19644:19644): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:01:08:589 kernel.log/(19644:19644): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:07:19:590 kernel.log/(19717:19717): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:07:19:590 kernel.log/(19717:19717): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:11:43:033 kernel.log/(19804:19804): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:11:43:033 kernel.log/(19804:19804): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:14:18:313 kernel.log/(19843:19843): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:14:18:313 kernel.log/(19843:19843): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:18:06:465 kernel.log/(19971:19971): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:18:06:465 kernel.log/(19971:19971): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:18:13:528 kernel.log/(19971:19971): Cliente conectado (a KERNEL)
+
+[INFO] 01:28:58:518 kernel.log/(20263:20263): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:28:58:518 kernel.log/(20263:20263): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:29:10:450 kernel.log/(20263:20263): Cliente conectado (a KERNEL)
+
+[INFO] 01:39:26:477 kernel.log/(20314:20314): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:39:26:477 kernel.log/(20314:20314): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:39:29:484 kernel.log/(20314:20314): Cliente conectado (a KERNEL)
+
+[INFO] 01:40:46:816 kernel.log/(20354:20354): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:40:46:816 kernel.log/(20354:20354): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:40:48:939 kernel.log/(20354:20354): Cliente conectado (a KERNEL)
+
+[INFO] 01:41:24:708 kernel.log/(20375:20375): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:41:24:709 kernel.log/(20375:20375): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:41:26:192 kernel.log/(20375:20375): Cliente conectado (a KERNEL)
+
+[INFO] 01:43:24:397 kernel.log/(20416:20416): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:43:24:397 kernel.log/(20416:20416): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:43:24:398 kernel.log/(20416:20416): Entro a la funci√≥n esperar cliente
+[INFO] 01:43:29:060 kernel.log/(20416:20416): Cliente conectado (a KERNEL)
+
+[INFO] 01:45:11:699 kernel.log/(20454:20454): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:45:11:699 kernel.log/(20454:20454): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:45:11:699 kernel.log/(20454:20454): Entro a la funci√≥n esperar cliente
+[INFO] 01:45:14:716 kernel.log/(20454:20454): Cliente conectado (a KERNEL)
+
+[INFO] 01:47:22:505 kernel.log/(20525:20525): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:47:22:505 kernel.log/(20525:20525): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:47:22:505 kernel.log/(20525:20525): Entro a la funci√≥n esperar cliente
+[INFO] 01:47:25:627 kernel.log/(20525:20525): Cliente conectado (a KERNEL)
+
+[INFO] 01:47:25:627 kernel.log/(20525:20525): Se conecto la consola
+[INFO] 01:48:35:770 kernel.log/(20562:20562): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:48:35:771 kernel.log/(20562:20562): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:48:35:771 kernel.log/(20562:20562): Entro a la funci√≥n esperar cliente
+[INFO] 01:48:38:558 kernel.log/(20562:20562): Cliente conectado (a KERNEL)
+
+[INFO] 01:48:38:558 kernel.log/(20562:20562): Salio de la funcion esperar al cliente
+[INFO] 01:50:36:643 kernel.log/(20604:20604): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:50:36:643 kernel.log/(20604:20604): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:50:36:643 kernel.log/(20604:20604): Entro a la funci√≥n esperar cliente
+[INFO] 01:50:38:479 kernel.log/(20604:20604): Cliente conectado (a KERNEL)
+
+[INFO] 01:51:28:127 kernel.log/(20631:20631): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:51:28:127 kernel.log/(20631:20631): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:51:28:127 kernel.log/(20631:20631): Entro a la funci√≥n esperar cliente
+[INFO] 01:51:29:805 kernel.log/(20631:20631): Cliente conectado (a KERNEL)
+
+[INFO] 01:52:11:169 kernel.log/(20706:20706): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:52:11:169 kernel.log/(20706:20706): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:52:11:169 kernel.log/(20706:20706): Entro a la funci√≥n esperar cliente
+[INFO] 01:52:12:906 kernel.log/(20706:20706): Cliente conectado (a KERNEL)
+
+[INFO] 01:53:15:598 kernel.log/(20749:20749): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:53:15:599 kernel.log/(20749:20749): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:53:15:599 kernel.log/(20749:20749): Entro a la funci√≥n esperar cliente
+[INFO] 01:53:18:728 kernel.log/(20749:20749): Cliente conectado (a KERNEL)
+
+[INFO] 01:53:18:728 kernel.log/(20749:20749): Me llego el mensaje ]ñ´˙U
+[INFO] 01:54:28:914 kernel.log/(20776:20776): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:54:28:914 kernel.log/(20776:20776): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:54:28:914 kernel.log/(20776:20776): Entro a la funci√≥n esperar cliente
+[INFO] 01:54:30:830 kernel.log/(20776:20776): Cliente conectado (a KERNEL)
+
+[INFO] 01:54:30:830 kernel.log/(20776:20776): Me llego el mensaje ˛Ø
+[INFO] 01:56:18:365 kernel.log/(20814:20814): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 01:56:18:365 kernel.log/(20814:20814): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:56:18:365 kernel.log/(20814:20814): Entro a la funci√≥n esperar cliente
+[INFO] 01:56:20:144 kernel.log/(20814:20814): Cliente conectado (a KERNEL)
+
+[INFO] 01:56:20:144 kernel.log/(20814:20814): Me llego el mensaje Ω„?æU
+[INFO] 02:18:33:887 kernel.log/(21145:21145): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 02:18:33:887 kernel.log/(21145:21145): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 02:18:33:887 kernel.log/(21145:21145): Entro a la funci√≥n esperar cliente
+[INFO] 02:18:40:412 kernel.log/(21145:21145): Cliente conectado (a KERNEL)
+
+[INFO] 02:18:40:412 kernel.log/(21145:21145): Pude entrar a recibir una operacion.
+[INFO] 02:18:40:412 kernel.log/(21145:21145): Me llego el mensaje 9120
+[INFO] 02:18:40:412 kernel.log/(21145:21145): Pude entrar a recibir una operacion.
+[ERROR] 02:18:40:412 kernel.log/(21145:21145): el cliente se desconecto. Terminando servidor
+[INFO] 02:19:52:158 kernel.log/(21183:21183): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 02:19:52:158 kernel.log/(21183:21183): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 02:19:52:158 kernel.log/(21183:21183): Entro a la funci√≥n esperar cliente
+[INFO] 02:19:55:589 kernel.log/(21183:21183): Cliente conectado (a KERNEL)
+
+[INFO] 02:19:55:590 kernel.log/(21183:21183): Me llego el mensaje 9120
+[ERROR] 02:19:55:590 kernel.log/(21183:21183): el cliente se desconecto. Terminando servidor
+[INFO] 02:21:01:037 kernel.log/(21204:21204): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 02:21:01:037 kernel.log/(21204:21204): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 02:21:01:037 kernel.log/(21204:21204): Entro a la funci√≥n esperar cliente
+[INFO] 02:21:03:325 kernel.log/(21204:21204): Cliente conectado (a KERNEL)
+
+[INFO] 02:21:03:325 kernel.log/(21204:21204): La consola me paso su puerto, y es: 9120
+[ERROR] 02:21:03:326 kernel.log/(21204:21204): el cliente se desconecto. Terminando servidor

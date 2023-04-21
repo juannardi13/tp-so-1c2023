@@ -1,6 +1,8 @@
-#include "../include/main.h"
+#include"../include/utils.h"
 
-// INICIA SERVER ESCUCHANDO EN IP:PUERTO
+t_log* logger;
+t_config* config;
+
 int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
     int socket_servidor;
     struct addrinfo hints, *servinfo;
@@ -47,10 +49,10 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
     return socket_servidor;
 }
 
-// ESPERAR CONEXION DE CLIENTE EN UN SERVER ABIERTO
 int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
     struct sockaddr_in dir_cliente;
     socklen_t tam_direccion = sizeof(struct sockaddr_in);
+    log_info(logger, "Entro a la función esperar cliente");
 
     int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
 
@@ -59,43 +61,60 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
     return socket_cliente;
 }
 
-// CLIENTE SE INTENTA CONECTAR A SERVER ESCUCHANDO EN IP:PUERTO
-int crear_conexion(t_log* logger, const char* server_name, char* ip, char* puerto) {
-    struct addrinfo hints, *servinfo;
-
-    // Init de hints
-    memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_UNSPEC;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_flags = AI_PASSIVE;
-
-    // Recibe addrinfo
-    getaddrinfo(ip, puerto, &hints, &servinfo);
-
-    // Crea un socket con la informacion recibida (del primero, suficiente)
-    int socket_cliente = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol);
-
-    // Fallo en crear el socket
-    if(socket_cliente == -1) {
-        log_error(logger, "Error creando el socket para %s:%s", ip, puerto);
-        return 0;
-    }
-
-    // Error conectando
-    if(connect(socket_cliente, servinfo->ai_addr, servinfo->ai_addrlen) == -1) {
-        log_error(logger, "Error al conectar (a %s)\n", server_name);
-        freeaddrinfo(servinfo);
-        return 0;
-    } else
-        log_info(logger, "Cliente conectado en %s:%s (a %s)\n", ip, puerto, server_name);
-
-    freeaddrinfo(servinfo);
-
-    return socket_cliente;
+int recibir_operacion(t_log* logger, int socket_cliente)
+{
+	int cod_op;
+	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0){
+		return cod_op;
+		log_info(logger, "se realizo el handshake");
+	}
+	else
+	{
+		close(socket_cliente);
+		return -1;
+	}
 }
 
-// CERRAR CONEXION
-void liberar_conexion(int* socket_cliente) {
-    close(*socket_cliente);
-    *socket_cliente = -1;
+void* recibir_buffer(int* size, int socket_cliente)
+{
+	void * buffer;
+
+	recv(socket_cliente, size, sizeof(int), MSG_WAITALL);
+	buffer = malloc(*size);
+	recv(socket_cliente, buffer, *size, MSG_WAITALL);
+
+	return buffer;
 }
+
+void recibir_mensaje(t_log* logger, int socket_cliente)
+{
+	int size;
+	char* buffer = recibir_buffer(&size, socket_cliente);
+	log_info(logger, "La consola me paso su puerto, y es: %s", buffer);
+	free(buffer);
+}
+
+t_list* recibir_paquete(int socket_cliente)
+{
+	int size;
+	int desplazamiento = 0;
+	void * buffer;
+	t_list* valores = list_create();
+	int tamanio;
+
+	buffer = recibir_buffer(&size, socket_cliente);
+	while(desplazamiento < size)
+	{
+		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
+		desplazamiento+=sizeof(int);
+		char* valor = malloc(tamanio);
+		memcpy(valor, buffer+desplazamiento, tamanio);
+		desplazamiento+=tamanio;
+		list_add(valores, valor);
+	}
+	free(buffer);
+	return valores;
+}
+
+
+

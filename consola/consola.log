@@ -1,0 +1,124 @@
+[INFO] 21:10:38:964 consola.log/(18634:18634): Hola! Se inicializo el modulo Consola.
+[INFO] 21:10:38:965 consola.log/(18634:18634): La configuracion de la conexion indica el PUERTO (null) y la IP 9120
+[INFO] 21:14:34:663 consola.log/(18727:18727): Hola! Se inicializo el modulo Consola.
+[INFO] 21:14:34:663 consola.log/(18727:18727): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 00:24:35:518 consola.log/(18852:18852): Hola! Se inicializo el modulo Consola.
+[INFO] 00:24:35:518 consola.log/(18852:18852): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:07:59:931 consola.log/(19747:19747): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:07:59:931 consola.log/(19747:19747): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:08:59:862 consola.log/(19765:19765): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:08:59:862 consola.log/(19765:19765): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:11:13:673 consola.log/(19803:19803): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:11:13:673 consola.log/(19803:19803): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[ERROR] 01:11:13:673 consola.log/(19803:19803): Error creando el socket para 127.0.0.1:127.0.0.1
+[INFO] 01:11:13:673 consola.log/(19803:19803): Conexion exitosa con el Kernel.
+[INFO] 01:11:49:922 consola.log/(19805:19805): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:11:49:922 consola.log/(19805:19805): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[ERROR] 01:11:49:922 consola.log/(19805:19805): Error creando el socket para 127.0.0.1:127.0.0.1
+[INFO] 01:11:49:922 consola.log/(19805:19805): Conexion exitosa con el Kernel.
+[INFO] 01:13:38:819 consola.log/(19839:19839): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:13:38:819 consola.log/(19839:19839): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:13:38:819 consola.log/(19839:19839): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:13:38:819 consola.log/(19839:19839): Conexion exitosa con el Kernel.
+[INFO] 01:14:22:587 consola.log/(19844:19844): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:14:22:587 consola.log/(19844:19844): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:14:22:587 consola.log/(19844:19844): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:14:22:588 consola.log/(19844:19844): Conexion exitosa con el Kernel.
+[INFO] 01:18:13:528 consola.log/(19972:19972): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:18:13:528 consola.log/(19972:19972): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:18:13:528 consola.log/(19972:19972): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:18:13:528 consola.log/(19972:19972): Conexion exitosa con el Kernel.
+[INFO] 01:29:10:450 consola.log/(20265:20265): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:29:10:450 consola.log/(20265:20265): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:29:10:451 consola.log/(20265:20265): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:29:10:451 consola.log/(20265:20265): Conexion exitosa con el Kernel.
+[INFO] 01:39:29:483 consola.log/(20315:20315): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:39:29:483 consola.log/(20315:20315): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:39:29:484 consola.log/(20315:20315): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:39:29:484 consola.log/(20315:20315): Conexion exitosa con el Kernel.
+[INFO] 01:40:48:938 consola.log/(20355:20355): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:40:48:938 consola.log/(20355:20355): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:40:48:939 consola.log/(20355:20355): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:40:48:939 consola.log/(20355:20355): Conexion exitosa con el Kernel.
+[INFO] 01:41:26:191 consola.log/(20376:20376): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:41:26:192 consola.log/(20376:20376): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:41:26:192 consola.log/(20376:20376): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:41:26:192 consola.log/(20376:20376): Conexion exitosa con el Kernel.
+[INFO] 01:43:29:060 consola.log/(20417:20417): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:43:29:060 consola.log/(20417:20417): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:43:29:060 consola.log/(20417:20417): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:43:29:060 consola.log/(20417:20417): Conexion exitosa con el Kernel.
+[INFO] 01:45:14:716 consola.log/(20455:20455): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:45:14:716 consola.log/(20455:20455): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:45:14:716 consola.log/(20455:20455): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:45:14:716 consola.log/(20455:20455): Conexion exitosa con el Kernel.
+[INFO] 01:47:25:627 consola.log/(20526:20526): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:47:25:627 consola.log/(20526:20526): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:47:25:627 consola.log/(20526:20526): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:47:25:627 consola.log/(20526:20526): Conexion exitosa con el Kernel.
+[INFO] 01:48:38:558 consola.log/(20563:20563): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:48:38:558 consola.log/(20563:20563): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:48:38:558 consola.log/(20563:20563): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:48:38:558 consola.log/(20563:20563): Conexion exitosa con el Kernel.
+[INFO] 01:50:38:479 consola.log/(20605:20605): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:50:38:479 consola.log/(20605:20605): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:50:38:479 consola.log/(20605:20605): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:50:38:479 consola.log/(20605:20605): Conexion exitosa con el Kernel.
+[INFO] 01:50:38:479 consola.log/(20605:20605): se ejecuto la funcion enviar mensaje
+[INFO] 01:51:29:804 consola.log/(20632:20632): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:51:29:805 consola.log/(20632:20632): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:51:29:805 consola.log/(20632:20632): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:51:29:805 consola.log/(20632:20632): Conexion exitosa con el Kernel.
+[INFO] 01:51:29:806 consola.log/(20632:20632): se ejecuto la funcion enviar mensaje
+[INFO] 01:52:12:905 consola.log/(20707:20707): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:52:12:905 consola.log/(20707:20707): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:52:12:906 consola.log/(20707:20707): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:52:12:906 consola.log/(20707:20707): Conexion exitosa con el Kernel.
+[INFO] 01:52:12:906 consola.log/(20707:20707): se ejecuto la funcion enviar mensaje
+[INFO] 01:53:18:728 consola.log/(20750:20750): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:53:18:728 consola.log/(20750:20750): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:53:18:728 consola.log/(20750:20750): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:53:18:728 consola.log/(20750:20750): Conexion exitosa con el Kernel.
+[INFO] 01:53:18:728 consola.log/(20750:20750): se ejecuto la funcion enviar mensaje
+[INFO] 01:54:30:829 consola.log/(20777:20777): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:54:30:829 consola.log/(20777:20777): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:54:30:830 consola.log/(20777:20777): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:54:30:830 consola.log/(20777:20777): Conexion exitosa con el Kernel.
+[INFO] 01:54:30:830 consola.log/(20777:20777): se ejecuto la funcion enviar mensaje
+[INFO] 01:56:20:144 consola.log/(20815:20815): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 01:56:20:144 consola.log/(20815:20815): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 01:56:20:144 consola.log/(20815:20815): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 01:56:20:144 consola.log/(20815:20815): Conexion exitosa con el Kernel.
+[INFO] 01:56:20:145 consola.log/(20815:20815): se ejecuto la funcion enviar mensaje
+[INFO] 02:18:40:411 consola.log/(21153:21153): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 02:18:40:412 consola.log/(21153:21153): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 02:18:40:412 consola.log/(21153:21153): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 02:18:40:412 consola.log/(21153:21153): Conexion exitosa con el Kernel.
+[INFO] 02:19:55:589 consola.log/(21184:21184): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 02:19:55:589 consola.log/(21184:21184): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 02:19:55:590 consola.log/(21184:21184): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 02:19:55:590 consola.log/(21184:21184): Conexion exitosa con el Kernel.
+[INFO] 02:21:03:325 consola.log/(21205:21205): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 02:21:03:325 consola.log/(21205:21205): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 9120
+[INFO] 02:21:03:325 consola.log/(21205:21205): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 02:21:03:325 consola.log/(21205:21205): Conexion exitosa con el Kernel.
