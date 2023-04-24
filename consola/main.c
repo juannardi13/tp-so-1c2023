@@ -2,51 +2,41 @@
 #include "./include/utils.h"
 #define MAX_LEN 256
 
-t_log* iniciar_logger(void);
-
-int main(/*int argc, char** argv*/) {
-/*
-	if (argc < 2) {
-        printf("Debes especificar un archivo de texto.\n");
-        printf("No se pudo comenzar la ejecución del programa.\n");
-        return 1;
-    }
-*/
+int main(int argc, char** argv) {
 	char* ip_kernel;
 	char* puerto_kernel;
+	FILE* archivo_pseudocodigo = NULL;
 
     t_log* logger = iniciar_logger();
-    t_config* config = iniciar_config();
+
+    if(argc != 2){
+    		log_error(logger, "Uso: consola path tamanio");
+    		exit(1);
+    }
 
     log_info(logger, "Hola! Se inicializo el modulo cliente Consola.");
 
-    ip_kernel = config_get_string_value(config, "IP");
+    t_config* config = iniciar_config();
+
+   	ip_kernel = config_get_string_value(config, "IP");
     puerto_kernel = config_get_string_value(config, "PUERTO");
 
-    log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
+	log_info(logger, "Se ha leido el archivo de config con exito.");
+
+	archivo_pseudocodigo = abrir_archivo_instrucciones(argv[1], logger);
 
     int conexion_kernel = crear_conexion(logger,"KERNEL" ,ip_kernel, puerto_kernel);
 
     log_info(logger, "Conexion exitosa con el Kernel.");
     enviar_mensaje(puerto_kernel, conexion_kernel);
-    paquete_pseudocodigo(conexion_kernel);
+
+    levantar_instrucciones(archivo_pseudocodigo, logger, conexion_kernel);
+    //paquete_pseudocodigo(conexion_kernel);
 
     return EXIT_SUCCESS;
 }
 
-t_log* iniciar_logger(void){
 
-	t_log* nuevo_logger;
-
-		nuevo_logger = log_create("./consola.log", "consola.log", 1, LOG_LEVEL_INFO);
-
-		if(nuevo_logger == NULL) {
-			printf("No se pudo crear al logger.\n");
-			exit(1);
-		}
-
-	return nuevo_logger;
-}
 
 t_config* iniciar_config(void)
 {

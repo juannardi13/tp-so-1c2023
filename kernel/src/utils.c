@@ -90,7 +90,7 @@ void recibir_mensaje(t_log* logger, int socket_cliente)
 {
 	int size;
 	char* buffer = recibir_buffer(&size, socket_cliente);
-	log_info(logger, "La consola me paso su puerto, y es: %s", buffer);
+	log_info(logger, "%s", buffer);
 	free(buffer);
 }
 

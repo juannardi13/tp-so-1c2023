@@ -177,3 +177,124 @@
 [INFO] 14:33:42:222 consola.log/(25181:25181): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
 
 [INFO] 14:33:42:222 consola.log/(25181:25181): Conexion exitosa con el Kernel.
+[INFO] 19:30:54:535 consola.log/(2692:2692): Hola! Se inicializo el modulo cliente Consola.
+[ERROR] 19:30:54:535 consola.log/(2692:2692): No se ha podido leer el archivo de config. 
+Finalizando Ejecucion.
+[INFO] 19:33:27:433 consola.log/(2733:2733): Hola! Se inicializo el modulo cliente Consola.
+[ERROR] 19:33:27:433 consola.log/(2733:2733): No se ha podido leer el archivo de config. 
+Finalizando Ejecucion.
+[INFO] 19:34:16:373 consola.log/(2759:2759): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:35:05:572 consola.log/(2781:2781): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:35:05:572 consola.log/(2781:2781): Blbabla
+[INFO] 19:35:34:765 consola.log/(2808:2808): Hola! Se inicializo el modulo cliente Consola.
+[WARNING] 19:35:34:765 consola.log/(2808:2808): mm
+[INFO] 19:37:25:953 consola.log/(2875:2875): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:37:25:953 consola.log/(2875:2875): Se ha leido el archivo de config con exito.
+[INFO] 19:37:57:246 consola.log/(2891:2891): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:37:57:246 consola.log/(2891:2891): Se ha leido el archivo de config con exito.
+[INFO] 19:38:28:732 consola.log/(2914:2914): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:38:28:732 consola.log/(2914:2914): Se ha leido el archivo de config con exito.
+[WARNING] 19:38:28:732 consola.log/(2914:2914): holaaaaa
+[INFO] 19:39:13:322 consola.log/(2942:2942): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:39:13:322 consola.log/(2942:2942): Se ha leido el archivo de config con exito.
+[INFO] 19:41:22:299 consola.log/(3080:3080): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:41:22:299 consola.log/(3080:3080): Se ha leido el archivo de config con exito.
+[WARNING] 19:41:22:299 consola.log/(3080:3080): IP: Ö] y PUERTO: m¥›U
+[ERROR] 19:41:22:301 consola.log/(3080:3080): Error creando el socket para ›√-≠:m¥›U
+[INFO] 19:41:22:301 consola.log/(3080:3080): Conexion exitosa con el Kernel.
+[INFO] 19:43:30:637 consola.log/(3103:3103): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:43:30:637 consola.log/(3103:3103): Se ha leido el archivo de config con exito.
+[WARNING] 19:43:30:637 consola.log/(3103:3103): IP: 127.0.0.1 y PUERTO: 9120
+[WARNING] 19:43:30:637 consola.log/(3103:3103): IP: û¡xU y PUERTO: é/aŸRU
+[ERROR] 19:43:30:637 consola.log/(3103:3103): Error creando el socket para ]<à:é/aŸRU
+[INFO] 19:43:30:638 consola.log/(3103:3103): Conexion exitosa con el Kernel.
+[INFO] 19:51:36:425 consola.log/(3153:3153): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:51:36:425 consola.log/(3153:3153): Se ha leido el archivo de config con exito.
+[WARNING] 19:51:36:425 consola.log/(3153:3153): IP: 127.0.0.1 y PUERTO: 9120
+[WARNING] 19:51:36:425 consola.log/(3153:3153): IP: 127.0.0.1 y PUERTO: 9120
+[INFO] 19:51:36:426 consola.log/(3153:3153): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 19:51:36:426 consola.log/(3153:3153): Conexion exitosa con el Kernel.
+[ERROR] 20:00:27:177 consola.log/(3343:3343): Uso: consola path tamanio
+[INFO] 20:00:57:260 consola.log/(3360:3360): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:00:57:261 consola.log/(3360:3360): Se ha leido el archivo de config con exito.
+[ERROR] 20:00:57:261 consola.log/(3360:3360): Error al conectar (a KERNEL)
+
+[INFO] 20:00:57:261 consola.log/(3360:3360): Conexion exitosa con el Kernel.
+[INFO] 20:01:12:610 consola.log/(3362:3362): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:01:12:610 consola.log/(3362:3362): Se ha leido el archivo de config con exito.
+[INFO] 20:01:12:610 consola.log/(3362:3362): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:01:12:610 consola.log/(3362:3362): Conexion exitosa con el Kernel.
+[ERROR] 20:06:37:742 consola.log/(3482:3482): Uso: consola path tamanio
+[INFO] 20:06:41:555 consola.log/(3483:3483): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:06:41:555 consola.log/(3483:3483): Se ha leido el archivo de config con exito.
+[INFO] 20:06:41:556 consola.log/(3483:3483): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:06:41:556 consola.log/(3483:3483): Conexion exitosa con el Kernel.
+[INFO] 20:07:10:497 consola.log/(3495:3495): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:07:10:497 consola.log/(3495:3495): Se ha leido el archivo de config con exito.
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 1: SET AX HOLA
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 2: MOV_OUT 120 AX
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 3: WAIT DISCO
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 4: I/O 10
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 5: SIGNAL DISCO
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 6: MOV_IN BX 120
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 7: F_OPEN ARCHIVO
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 8: YIELD
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 9: F_TRUNCATE ARCHIVO 64
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 10: F_SEEK ARCHIVO 10
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 11: CREATE_SEGMENT 1 128
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 12: F_WRITE ARCHIVO 4 4
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 13: F_READ ARCHIVO 16 4
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 14: DELETE_SEGMENT 1
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 15: F_CLOSE ARCHIVO
+[INFO] 20:07:10:497 consola.log/(3495:3495): Instruccion numero 16: EXIT
+[INFO] 20:07:10:497 consola.log/(3495:3495): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:07:10:498 consola.log/(3495:3495): Conexion exitosa con el Kernel.
+[ERROR] 20:08:50:958 consola.log/(3538:3538): Uso: consola path tamanio
+[INFO] 20:08:54:915 consola.log/(3543:3543): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:08:54:915 consola.log/(3543:3543): Se ha leido el archivo de config con exito.
+[WARNING] 20:08:54:915 consola.log/(3543:3543): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[INFO] 20:08:54:915 consola.log/(3543:3543): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:08:54:915 consola.log/(3543:3543): Conexion exitosa con el Kernel.
+[ERROR] 20:09:39:005 consola.log/(3553:3553): Uso: consola path tamanio
+[INFO] 20:09:41:798 consola.log/(3554:3554): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:09:41:798 consola.log/(3554:3554): Se ha leido el archivo de config con exito.
+[WARNING] 20:09:41:798 consola.log/(3554:3554): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[INFO] 20:09:41:798 consola.log/(3554:3554): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:09:41:798 consola.log/(3554:3554): Conexion exitosa con el Kernel.
+[INFO] 20:10:20:157 consola.log/(3566:3566): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:10:20:157 consola.log/(3566:3566): Se ha leido el archivo de config con exito.
+[WARNING] 20:10:20:157 consola.log/(3566:3566): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[INFO] 20:10:20:157 consola.log/(3566:3566): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:10:20:157 consola.log/(3566:3566): Conexion exitosa con el Kernel.
+[INFO] 20:14:11:484 consola.log/(3647:3647): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:14:11:485 consola.log/(3647:3647): Se ha leido el archivo de config con exito.
+[WARNING] 20:14:11:485 consola.log/(3647:3647): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[ERROR] 20:14:11:485 consola.log/(3647:3647): Error al conectar (a KERNEL)
+
+[INFO] 20:14:11:485 consola.log/(3647:3647): Conexion exitosa con el Kernel.
+[ERROR] 20:15:05:212 consola.log/(3670:3670): Uso: consola path tamanio
+[INFO] 20:15:09:020 consola.log/(3671:3671): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:15:09:020 consola.log/(3671:3671): Se ha leido el archivo de config con exito.
+[INFO] 20:15:09:020 consola.log/(3671:3671): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:15:09:020 consola.log/(3671:3671): Conexion exitosa con el Kernel.
+[WARNING] 20:15:09:020 consola.log/(3671:3671): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[INFO] 20:16:26:085 consola.log/(3695:3695): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:16:26:085 consola.log/(3695:3695): Se ha leido el archivo de config con exito.
+[INFO] 20:16:26:086 consola.log/(3695:3695): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 20:16:26:086 consola.log/(3695:3695): Conexion exitosa con el Kernel.
+[WARNING] 20:16:26:086 consola.log/(3695:3695): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+

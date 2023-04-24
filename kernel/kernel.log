@@ -214,3 +214,107 @@
 [INFO] 14:33:42:222 kernel.log/(25180:25180): La consola me paso su puerto, y es: 9120
 [INFO] 14:33:42:223 kernel.log/(25180:25180): Me llegaron los siguientes valores:
 
+[INFO] 19:24:09:466 kernel.log/(2487:2487): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 19:24:09:466 kernel.log/(2487:2487): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 19:24:09:466 kernel.log/(2487:2487): Entro a la función esperar cliente
+[INFO] 19:51:36:426 kernel.log/(2487:2487): Cliente conectado (a KERNEL)
+
+[INFO] 19:51:36:426 kernel.log/(2487:2487): La consola me paso su puerto, y es: 9120
+[ERROR] 19:51:36:426 kernel.log/(2487:2487): el cliente se desconecto. Terminando servidor
+[INFO] 20:01:09:577 kernel.log/(3361:3361): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:01:09:577 kernel.log/(3361:3361): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:01:09:577 kernel.log/(3361:3361): Entro a la función esperar cliente
+[INFO] 20:01:12:610 kernel.log/(3361:3361): Cliente conectado (a KERNEL)
+
+[INFO] 20:01:12:610 kernel.log/(3361:3361): La consola me paso su puerto, y es: 9120
+[ERROR] 20:01:12:610 kernel.log/(3361:3361): el cliente se desconecto. Terminando servidor
+[INFO] 20:06:34:958 kernel.log/(3481:3481): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:06:34:958 kernel.log/(3481:3481): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:06:34:959 kernel.log/(3481:3481): Entro a la función esperar cliente
+[INFO] 20:06:41:556 kernel.log/(3481:3481): Cliente conectado (a KERNEL)
+
+[INFO] 20:06:41:556 kernel.log/(3481:3481): La consola me paso su puerto, y es: 9120
+[ERROR] 20:06:41:556 kernel.log/(3481:3481): el cliente se desconecto. Terminando servidor
+[INFO] 20:07:07:283 kernel.log/(3494:3494): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:07:07:283 kernel.log/(3494:3494): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:07:07:283 kernel.log/(3494:3494): Entro a la función esperar cliente
+[INFO] 20:07:10:497 kernel.log/(3494:3494): Cliente conectado (a KERNEL)
+
+[INFO] 20:07:10:498 kernel.log/(3494:3494): La consola me paso su puerto, y es: 9120
+[ERROR] 20:07:10:498 kernel.log/(3494:3494): el cliente se desconecto. Terminando servidor
+[INFO] 20:08:45:246 kernel.log/(3537:3537): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:08:45:247 kernel.log/(3537:3537): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:08:45:247 kernel.log/(3537:3537): Entro a la función esperar cliente
+[INFO] 20:08:54:915 kernel.log/(3537:3537): Cliente conectado (a KERNEL)
+
+[INFO] 20:08:54:915 kernel.log/(3537:3537): La consola me paso su puerto, y es: 9120
+[ERROR] 20:08:54:916 kernel.log/(3537:3537): el cliente se desconecto. Terminando servidor
+[INFO] 20:09:33:075 kernel.log/(3545:3545): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:09:33:075 kernel.log/(3545:3545): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:09:33:075 kernel.log/(3545:3545): Entro a la función esperar cliente
+[INFO] 20:09:41:798 kernel.log/(3545:3545): Cliente conectado (a KERNEL)
+
+[INFO] 20:09:41:798 kernel.log/(3545:3545): La consola me paso su puerto, y es: 9120
+[ERROR] 20:09:41:799 kernel.log/(3545:3545): el cliente se desconecto. Terminando servidor
+[INFO] 20:10:16:944 kernel.log/(3565:3565): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:10:16:944 kernel.log/(3565:3565): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:10:16:944 kernel.log/(3565:3565): Entro a la función esperar cliente
+[INFO] 20:10:20:157 kernel.log/(3565:3565): Cliente conectado (a KERNEL)
+
+[INFO] 20:10:20:157 kernel.log/(3565:3565): La consola me paso su puerto, y es: 9120
+[ERROR] 20:10:20:157 kernel.log/(3565:3565): el cliente se desconecto. Terminando servidor
+[INFO] 20:15:01:883 kernel.log/(3669:3669): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:15:01:883 kernel.log/(3669:3669): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:15:01:883 kernel.log/(3669:3669): Entro a la función esperar cliente
+[INFO] 20:15:09:020 kernel.log/(3669:3669): Cliente conectado (a KERNEL)
+
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: 9120
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: SET AX HOLA
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: MOV_OUT 120 AX
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: WAIT DISCO
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: I/O 10
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: SIGNAL DISCO
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: MOV_IN BX 120
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: F_OPEN ARCHIVO
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: YIELD
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: F_TRUNCATE ARCHIVO 64
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: F_SEEK ARCHIVO 10
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: CREATE_SEGMENT 1 128
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: F_WRITE ARCHIVO 4 4
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: F_READ ARCHIVO 16 4
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: DELETE_SEGMENT 1
+[INFO] 20:15:09:020 kernel.log/(3669:3669): La consola me paso su puerto, y es: F_CLOSE ARCHIVO
+[INFO] 20:15:09:021 kernel.log/(3669:3669): La consola me paso su puerto, y es: EXIT
+[ERROR] 20:15:09:021 kernel.log/(3669:3669): el cliente se desconecto. Terminando servidor
+[INFO] 20:16:23:138 kernel.log/(3694:3694): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:16:23:138 kernel.log/(3694:3694): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:16:23:138 kernel.log/(3694:3694): Entro a la función esperar cliente
+[INFO] 20:16:26:086 kernel.log/(3694:3694): Cliente conectado (a KERNEL)
+
+[INFO] 20:16:26:086 kernel.log/(3694:3694): 9120
+[INFO] 20:16:26:086 kernel.log/(3694:3694): SET AX HOLA
+[INFO] 20:16:26:086 kernel.log/(3694:3694): MOV_OUT 120 AX
+[INFO] 20:16:26:086 kernel.log/(3694:3694): WAIT DISCO
+[INFO] 20:16:26:086 kernel.log/(3694:3694): I/O 10
+[INFO] 20:16:26:086 kernel.log/(3694:3694): SIGNAL DISCO
+[INFO] 20:16:26:086 kernel.log/(3694:3694): MOV_IN BX 120
+[INFO] 20:16:26:086 kernel.log/(3694:3694): F_OPEN ARCHIVO
+[INFO] 20:16:26:086 kernel.log/(3694:3694): YIELD
+[INFO] 20:16:26:086 kernel.log/(3694:3694): F_TRUNCATE ARCHIVO 64
+[INFO] 20:16:26:086 kernel.log/(3694:3694): F_SEEK ARCHIVO 10
+[INFO] 20:16:26:087 kernel.log/(3694:3694): CREATE_SEGMENT 1 128
+[INFO] 20:16:26:087 kernel.log/(3694:3694): F_WRITE ARCHIVO 4 4
+[INFO] 20:16:26:087 kernel.log/(3694:3694): F_READ ARCHIVO 16 4
+[INFO] 20:16:26:087 kernel.log/(3694:3694): DELETE_SEGMENT 1
+[INFO] 20:16:26:087 kernel.log/(3694:3694): F_CLOSE ARCHIVO
+[INFO] 20:16:26:087 kernel.log/(3694:3694): EXIT
+[ERROR] 20:16:26:087 kernel.log/(3694:3694): el cliente se desconecto. Terminando servidor
