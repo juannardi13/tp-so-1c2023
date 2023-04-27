@@ -14,7 +14,7 @@ t_log* iniciar_logger(void){
 
 	return nuevo_logger;
 }
-
+/*
 void cargar_datos_config(char* ip, char* puerto, t_log* logger) {
 		t_config* config = iniciar_config();
 
@@ -24,7 +24,7 @@ void cargar_datos_config(char* ip, char* puerto, t_log* logger) {
 		log_info(logger, "Se ha leido el archivo de config con exito.");
 
 		config_destroy(config);
-}
+}*/
 
 FILE* abrir_archivo_instrucciones(char * path, t_log* logger){
 

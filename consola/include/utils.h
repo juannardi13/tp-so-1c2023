@@ -32,7 +32,7 @@ typedef struct
 } t_paquete;
 
 t_log* iniciar_logger(void);
-t_config* iniciar_config(void);
+t_config* iniciar_config(char*);
 void cargar_datos_config(char*, char*, t_log*);
 void leer_valor_config(t_config*, char*, char*, t_log*);
 FILE* abrir_archivo_instrucciones(char *, t_log*);

@@ -298,3 +298,35 @@ Finalizando Ejecucion.
 [INFO] 20:16:26:086 consola.log/(3695:3695): Conexion exitosa con el Kernel.
 [WARNING] 20:16:26:086 consola.log/(3695:3695): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
 
+[ERROR] 16:26:29:698 consola.log/(4171:4171): Uso: consola path tamanio
+[INFO] 16:27:15:731 consola.log/(4174:4174): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 16:27:15:731 consola.log/(4174:4174): Se ha leido el archivo de config con exito.
+[INFO] 16:27:15:732 consola.log/(4174:4174): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 16:27:15:732 consola.log/(4174:4174): Conexion exitosa con el Kernel.
+[WARNING] 16:27:15:732 consola.log/(4174:4174): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[ERROR] 21:27:35:543 consola.log/(4572:4572): Uso: consola path tamanio
+[INFO] 21:27:47:021 consola.log/(4573:4573): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 21:27:47:021 consola.log/(4573:4573): Se ha leido el archivo de config con exito.
+[ERROR] 21:27:47:022 consola.log/(4573:4573): Error al conectar (a KERNEL)
+
+[INFO] 21:27:47:022 consola.log/(4573:4573): Conexion exitosa con el Kernel.
+[WARNING] 21:27:47:022 consola.log/(4573:4573): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[INFO] 21:28:15:778 consola.log/(4595:4595): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 21:28:15:778 consola.log/(4595:4595): Se ha leido el archivo de config con exito.
+[INFO] 21:28:15:779 consola.log/(4595:4595): Cliente conectado en 127.0.0.1:9120 (a KERNEL)
+
+[INFO] 21:28:15:779 consola.log/(4595:4595): Conexion exitosa con el Kernel.
+[WARNING] 21:28:15:779 consola.log/(4595:4595): Llegaron las siguientes instrucciones de pseudocodigo del archivo:
+
+[INFO] 21:35:59:453 consola.log/(4797:4797): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 21:35:59:453 consola.log/(4797:4797): Se ha leido el archivo de config con exito, con los valores PUERTO: (null) e IP: (null).
+[INFO] 21:52:36:017 consola.log/(5543:5543): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 21:52:36:017 consola.log/(5543:5543): Se ha leido el archivo de config con exito, con los valores PUERTO: (null) e IP: (null).
+[INFO] 21:53:08:016 consola.log/(5561:5561): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 21:53:08:016 consola.log/(5561:5561): Se ha leido el archivo de config con exito, con los valores PUERTO: (null) e IP: (null).
+[ERROR] 22:02:12:271 consola.log/(5714:5714): Uso: consola path tamanio
+[INFO] 22:02:17:311 consola.log/(5715:5715): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 22:02:17:312 consola.log/(5715:5715): Se ha leido el archivo de config con exito, con los valores PUERTO: (null) e IP: (null).

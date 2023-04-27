@@ -2,6 +2,8 @@
 #include "./include/utils.h"
 #define MAX_LEN 256
 
+void cargar_valores_config(t_config*, char**, char**);
+
 int main(int argc, char** argv) {
 	char* ip_kernel;
 	char* puerto_kernel;
@@ -9,19 +11,21 @@ int main(int argc, char** argv) {
 
     t_log* logger = iniciar_logger();
 
-    if(argc != 2){
+    if(argc != 3){
     		log_error(logger, "Uso: consola path tamanio");
     		exit(1);
     }
 
     log_info(logger, "Hola! Se inicializo el modulo cliente Consola.");
 
-    t_config* config = iniciar_config();
+    t_config* config = iniciar_config(argv[2]);
 
+    cargar_valores_config(config, &ip_kernel, &puerto_kernel);
+/*
    	ip_kernel = config_get_string_value(config, "IP");
     puerto_kernel = config_get_string_value(config, "PUERTO");
-
-	log_info(logger, "Se ha leido el archivo de config con exito.");
+*/
+	log_info(logger, "Se ha leido el archivo de config con exito, con los valores PUERTO: %s e IP: %s.", puerto_kernel, ip_kernel);
 
 	archivo_pseudocodigo = abrir_archivo_instrucciones(argv[1], logger);
 
@@ -31,23 +35,28 @@ int main(int argc, char** argv) {
     enviar_mensaje(puerto_kernel, conexion_kernel);
 
     levantar_instrucciones(archivo_pseudocodigo, logger, conexion_kernel);
-    //paquete_pseudocodigo(conexion_kernel);
+
 
     return EXIT_SUCCESS;
 }
 
 
 
-t_config* iniciar_config(void)
+t_config* iniciar_config(char* ruta)
 {
 	t_config* config;
 
-	if((config = config_create("./cfg/consola.config")) == NULL) {
+	if((config = config_create(ruta)) == NULL) {
 		printf("No se pudo crear el config. \n");
 		exit(2);
 	}
 
 	return config;
+}
+
+void cargar_valores_config(t_config* config, char** ip, char** puerto) {
+	ip = config_get_string_value(config, "IP");
+	puerto = config_get_string_value(config, "PUERTO");
 }
 
 void paquete_pseudocodigo(int conexion)
