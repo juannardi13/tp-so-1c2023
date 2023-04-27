@@ -14,6 +14,19 @@ t_log* iniciar_logger(void){
 
 	return nuevo_logger;
 }
+
+t_config* iniciar_config(char* ruta)
+{
+	t_config* config;
+
+	if((config = config_create(ruta)) == NULL) {
+		printf("No se pudo crear el config. \n");
+		exit(2);
+	}
+
+	return config;
+}
+
 /*
 void cargar_datos_config(char* ip, char* puerto, t_log* logger) {
 		t_config* config = iniciar_config();
