@@ -44,6 +44,18 @@ int main() {
     return 0;
 }
 
+typedef struct t_PCB{
+	int PID;
+	char* instrucciones; // lo dejamos en char*? o en forma de array
+	int PC;
+	char* registros_cpu; // revisar porque dice estructura
+	int segmentos[][3];
+	float est_prox_rafaga; //iniciaizar con archivo configuracion
+	float timestamp;
+	int archivos_abiertos[][2];
+	
+}
+
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
 
