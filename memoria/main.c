@@ -40,6 +40,17 @@ int main() {
 				}
 			}
 
+	free(logger);
+	// esperar conexiones de kernel
+		
+	log_info(logger, "MEMORIA inicializada, esperando a recibir al Kernel en el PUERTO %s.", puerto_memoria);
+	fd_kernel = esperar_cliente(logger, "MEMORIA", fd_memoria);
+
+	free(logger);
+	// esperar conexiones de file system
+	log_info(logger, "MEMORIA inicializada, esperando a recibir al File System en el PUERTO %s.", puerto_memoria);
+	fd_file_system = esperar_cliente(logger, "MEMORIA", fd_memoria);
+		
 
     return 0;
 }
