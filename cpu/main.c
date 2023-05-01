@@ -21,6 +21,12 @@ int main() {
     log_info(logger, "Conexion exitosa con la memoria.");
     enviar_mensaje(puerto_memoria, conexion_memoria);
 
+	//Esperar conexiones de kernel
+
+    int fd_cpu = iniciar_servidor(logger, "CPU", ip_memoria, puerto_memoria);
+    log_info(logger, "CPU inicializada, esperando a recibir al kernel en el PUERTO %s.", puerto_memoria);
+    int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
+
     return EXIT_SUCCESS;
 }
 
