@@ -13,8 +13,6 @@ SHARED = $(shell find ../shared/obj/*.o)
 build:
 	$(CC) main.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
 
-run:
-	./$(OUTFILE)
 
 LINK = -lcommons -lpthread -lm -lreadline 
 CFLAGS = -c
