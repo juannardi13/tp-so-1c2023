@@ -2,7 +2,6 @@
 #include <commons/log.h>
 #include <commons/config.h>
 
-//esto es una pruebita a ver si me deja commitear
 int main() {
 	char* ip_kernel;
 	char* puerto_kernel;
