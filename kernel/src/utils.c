@@ -1,4 +1,5 @@
 #include"../include/utils.h"
+#include"../../shared/src/main.c"
 
 t_log* logger;
 t_config* config;
@@ -116,6 +117,43 @@ t_list* recibir_paquete(int socket_cliente)
 
 	return valores;
 }
+
+
+
+bool generar_conexiones(t_config* config, t_log* logger, int* fd_file_system, int* fd_memoria, int* fd_cpu) {
+    char* puerto_cpu = config_get_string_value(config, "PUERTO_CPU");
+    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    char* puerto_file_system = config_get_string_value(config, "PUERTO_FILE_SYSTEM");
+    char* ip_cpu = config_get_string_value(config, "IP");
+    char* ip_memoria = config_get_string_value(config, "IP");
+    char* ip_file_system = config_get_string_value(config, "IP");
+
+    *fd_cpu = crear_conexion(
+            logger,
+            "CPU",
+            ip_cpu,
+            puerto_cpu
+     );
+
+
+    *fd_memoria = crear_conexion(
+        logger,
+        "MEMORIA",
+        ip_memoria,
+        puerto_memoria
+    );
+
+    *fd_file_system = crear_conexion(
+        logger,
+        "FILE_SYSTEM",
+        ip_file_system,
+        puerto_file_system
+    );
+
+    return *fd_memoria != 0 && *fd_cpu != 0 && *fd_file_system != 0;
+}
+
+
 
 
 

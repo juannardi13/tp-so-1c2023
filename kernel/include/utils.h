@@ -31,5 +31,6 @@ void recibir_mensaje(t_log*, int);
 int recibir_operacion(t_log*, int);
 t_config* iniciar_config(void);
 void iterator(char* value);
+bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
 
 #endif /* UTILS_H_ */

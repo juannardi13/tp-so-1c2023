@@ -1,0 +1,13 @@
+[INFO] 15:09:31:758 kernel.log/(11359:11359): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 15:09:31:758 kernel.log/(11359:11359): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:09:31:758 kernel.log/(11359:11359): Entro a la función esperar cliente
+[INFO] 15:09:35:112 kernel.log/(11359:11359): Cliente conectado (a KERNEL)
+
+[INFO] 15:09:35:112 kernel.log/(11359:11359): 9120
+[ERROR] 15:09:35:113 kernel.log/(11359:11359): Error al conectar (a CPU)
+
+[ERROR] 15:09:35:113 kernel.log/(11359:11359): Error al conectar (a MEMORIA)
+
+[ERROR] 15:09:35:113 kernel.log/(11359:11359): Error al conectar (a FILE_SYSTEM)
+
