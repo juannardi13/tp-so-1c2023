@@ -1,4 +1,6 @@
 #include "./include/utils.h"
+#include "../shared/include/main.h"
+#include "../shared/src/main.c"
 #include <commons/log.h>
 #include <commons/config.h>
 
@@ -7,10 +9,10 @@ int main() {
 	char* puerto_kernel;
 
 	t_log* logger = iniciar_logger();
-	t_config* config = iniciar_config();
+	t_config* config = iniciar_config("cfg/kernel.config");
 
 	ip_kernel = config_get_string_value(config, "IP");
-	puerto_kernel = config_get_string_value(config, "PUERTO");
+	puerto_kernel = config_get_string_value(config, "PUERTO_CONSOLA");
 
 	int fd_kernel = iniciar_servidor(logger, "KERNEL", ip_kernel, puerto_kernel);
 	log_info(logger, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", puerto_kernel);
@@ -42,7 +44,7 @@ int main() {
 
     return 0;
 }
-
+/*
 typedef struct t_PCB{
 	int PID;
 	char* instrucciones; // lo dejamos en char*? o en forma de array
@@ -53,32 +55,5 @@ typedef struct t_PCB{
 	float timestamp;
 	int archivos_abiertos[][2];
 	
-}
+}*/
 
-t_log* iniciar_logger(void) {
-	t_log* nuevo_logger;
-
-			nuevo_logger = log_create("./kernel.log", "kernel.log", 1, LOG_LEVEL_INFO);
-
-			if(nuevo_logger == NULL) {
-				printf("No se pudo crear al logger.\n");
-				exit(1);
-			}
-
-		return nuevo_logger;
-}
-
-t_config* iniciar_config(void) {
-	t_config* config;
-
-	if((config = config_create("./cfg/kernel.config")) == NULL) {
-		printf("No se pudo crear el config. \n");
-		exit(2);
-	}
-
-	return config;
-}
-
-void iterator(char* value) {
-	log_info(logger,"%s", value);
-}

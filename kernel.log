@@ -1,0 +1,23 @@
+[INFO] 20:08:53:416 kernel.log/(15844:15844): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 20:08:53:416 kernel.log/(15844:15844): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 20:09:02:536 kernel.log/(15844:15844): Cliente conectado (a KERNEL)
+
+[INFO] 20:09:02:536 kernel.log/(15844:15844): 9120
+[INFO] 20:09:02:536 kernel.log/(15844:15844): SET AX HOLA
+[INFO] 20:09:02:536 kernel.log/(15844:15844): MOV_OUT 120 AX
+[INFO] 20:09:02:536 kernel.log/(15844:15844): WAIT DISCO
+[INFO] 20:09:02:537 kernel.log/(15844:15844): I/O 10
+[INFO] 20:09:02:537 kernel.log/(15844:15844): SIGNAL DISCO
+[INFO] 20:09:02:537 kernel.log/(15844:15844): MOV_IN BX 120
+[INFO] 20:09:02:537 kernel.log/(15844:15844): F_OPEN ARCHIVO
+[INFO] 20:09:02:537 kernel.log/(15844:15844): YIELD
+[INFO] 20:09:02:537 kernel.log/(15844:15844): F_TRUNCATE ARCHIVO 64
+[INFO] 20:09:02:537 kernel.log/(15844:15844): F_SEEK ARCHIVO 10
+[INFO] 20:09:02:537 kernel.log/(15844:15844): CREATE_SEGMENT 1 128
+[INFO] 20:09:02:537 kernel.log/(15844:15844): F_WRITE ARCHIVO 4 4
+[INFO] 20:09:02:537 kernel.log/(15844:15844): F_READ ARCHIVO 16 4
+[INFO] 20:09:02:537 kernel.log/(15844:15844): DELETE_SEGMENT 1
+[INFO] 20:09:02:537 kernel.log/(15844:15844): F_CLOSE ARCHIVO
+[INFO] 20:09:02:537 kernel.log/(15844:15844): EXIT
+[ERROR] 20:09:02:537 kernel.log/(15844:15844): el cliente se desconecto. Terminando servidor

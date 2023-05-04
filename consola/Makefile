@@ -12,7 +12,7 @@ PARAMETERS = cfg/pseudocodigo.txt cfg/consola.config
 SHARED = $(shell find ../shared/obj/*.o)
 
 build:
-	$(CC) main.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
+	$(CC) main_consola.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
 
 run:
 	./$(OUTFILE) $(PARAMETERS)
