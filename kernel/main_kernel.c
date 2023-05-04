@@ -1,15 +1,7 @@
 #include "./include/utils.h"
-#include "../shared/include/main.h"
 #include <commons/log.h>
 #include <commons/config.h>
-#include <pthread.h>
-/*
-void* recibir_instrucciones();
-void* enviar_instrucciones();
 
-pthread_create(&hilo1, NULL, &recibir_instrucciones, NULL);
-pthread_create(&hilo3, NULL, &enviar_instrucciones, NULL);
-*/
 int main() {
 	char* ip_kernel;
 	char* puerto_kernel;
@@ -18,7 +10,7 @@ int main() {
 	t_config* config = iniciar_config();
 
 	ip_kernel = config_get_string_value(config, "IP");
-	puerto_kernel = config_get_string_value(config, "PUERTO_CONSOLA");
+	puerto_kernel = config_get_string_value(config, "PUERTO");
 
 	int fd_kernel = iniciar_servidor(logger, "KERNEL", ip_kernel, puerto_kernel);
 	log_info(logger, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", puerto_kernel);
@@ -39,25 +31,18 @@ int main() {
 					list_iterate(lista, (void*) iterator);
 					break;
 				case -1:
-					break;
+					log_error(logger, "el cliente se desconecto. Terminando servidor");
+					return EXIT_FAILURE;
 				default:
 					log_warning(logger,"Operacion desconocida. No quieras meter la pata");
 					break;
 				}
-				break;
 			}
 
-	printf("HOLAAA\n\n");
-
-	int fd_cpu = 0, fd_memoria = 0, fd_file_system = 0;
-		    if (!generar_conexiones(config, logger, &fd_file_system, &fd_memoria, &fd_cpu)) {
-
-		        return EXIT_FAILURE;
-	}
 
     return 0;
 }
-/*
+
 typedef struct t_PCB{
 	int PID;
 	char* instrucciones; // lo dejamos en char*? o en forma de array
@@ -68,7 +53,7 @@ typedef struct t_PCB{
 	float timestamp;
 	int archivos_abiertos[][2];
 	
-}*/
+}
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
@@ -97,6 +82,3 @@ t_config* iniciar_config(void) {
 void iterator(char* value) {
 	log_info(logger,"%s", value);
 }
-
-
-
