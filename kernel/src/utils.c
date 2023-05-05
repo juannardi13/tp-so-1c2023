@@ -7,7 +7,7 @@ t_config* config;
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
 
-			nuevo_logger = log_create("../kernel.log", "kernel.log", 1, LOG_LEVEL_INFO);
+			nuevo_logger = log_create("./kernel.log", "kernel.log", 1, LOG_LEVEL_INFO);
 
 			if(nuevo_logger == NULL) {
 				printf("No se pudo crear al logger.\n");
