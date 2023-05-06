@@ -11,7 +11,7 @@ DEPENDENCIES = src/utils.c
 SHARED = $(shell find ../shared/obj/*.o)
 
 build:
-	$(CC) main.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
+	$(CC) main_kernel.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
 
 
 LINK = -lcommons -lpthread -lm -lreadline 

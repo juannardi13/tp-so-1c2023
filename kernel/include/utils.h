@@ -14,22 +14,8 @@
 
 #define PUERTO "9120"
 
-typedef enum
-{
-	MENSAJE,
-	PAQUETE
-}op_code;
-
-extern t_log* logger;
-
-void* recibir_buffer(int*, int);
 t_log* iniciar_logger(void);
-int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
-int esperar_cliente(t_log* logger, const char* name, int socket_servidor);
-t_list* recibir_paquete(int);
-void recibir_mensaje(t_log*, int);
-int recibir_operacion(t_log*, int);
-t_config* iniciar_config(void);
+t_config* iniciar_config(char*);
 void iterator(char* value);
 bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
 
