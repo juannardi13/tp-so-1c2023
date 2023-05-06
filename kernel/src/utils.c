@@ -1,5 +1,5 @@
 #include"../include/utils.h"
-
+#include"../../shared/include/main.h"
 
 t_log* logger;
 t_config* config;
@@ -33,7 +33,6 @@ void iterator(char* value) {
 	log_info(logger,"%s", value);
 }
 
-/*
 bool generar_conexiones(t_config* config, t_log* logger, int* fd_file_system, int* fd_memoria, int* fd_cpu) {
     char* puerto_cpu = config_get_string_value(config, "PUERTO_CPU");
     char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
@@ -65,7 +64,7 @@ bool generar_conexiones(t_config* config, t_log* logger, int* fd_file_system, in
     );
 
     return *fd_memoria != 0 && *fd_cpu != 0 && *fd_file_system != 0;
-}*/
+}
 
 
 

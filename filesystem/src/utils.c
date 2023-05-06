@@ -1,24 +1,23 @@
-#include "utils.h"
+#include "../include/utils.h"
 
-int crear_conexion(char *ip, char* puerto)
-{
-	struct addrinfo hints;
-	struct addrinfo *server_info;
+t_log* iniciar_logger(void) {
+	t_log* nuevo_logger = log_create("file_system.log", "file_system.log", 1, LOG_LEVEL_INFO);
 
-	memset(&hints, 0, sizeof(hints));
-	hints.ai_family = AF_UNSPEC;
-	hints.ai_socktype = SOCK_STREAM;
-	hints.ai_flags = AI_PASSIVE;
+	if (nuevo_logger == NULL) {
+		printf("No se pudo crear el log\n");
+		exit(1);
+	}
 
-	getaddrinfo(ip, puerto, &hints, &server_info);
+	return nuevo_logger;
+}
 
-	int socket_cliente = socket(server_info->ai_family,
-								server_info->ai_socktype,
-								server_info->ai_protocol);
+t_config* iniciar_config(void) {
+	t_config* nuevo_config = config_create("cfg/file_system.config");
 
-	connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen);
+	if (nuevo_config == NULL) {
+		printf("No se pudo leer la config\n");
+		exit(2);
+	}
 
-	freeaddrinfo(server_info);
-
-	return socket_cliente;
+	return nuevo_config;
 }
