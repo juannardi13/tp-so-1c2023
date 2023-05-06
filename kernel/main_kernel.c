@@ -57,11 +57,11 @@ int main() {
     return 0;
 }
 /*
-typedef struct t_PCB{
+typedef struct t_pcb{
 	int PID;
-	char* instrucciones; // lo dejamos en char*? o en forma de array
+	char** instrucciones; // lo dejamos en char*?
 	int PC;
-	char* registros_cpu; // revisar porque dice estructura
+	t_registros registros_cpu;
 	int segmentos[][3];
 	float est_prox_rafaga; //iniciaizar con archivo configuracion
 	float timestamp;
