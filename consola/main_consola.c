@@ -24,6 +24,8 @@ int main(int argc, char** argv) {
    	ip_kernel = config_get_string_value(config, "IP");
     puerto_kernel = config_get_string_value(config, "PUERTO");
 
+   // cargar_valores_config(logger, argv[2], ip_kernel, puerto_kernel);
+
 	log_info(logger, "Se ha leido el archivo de config con exito, con los valores PUERTO: %s e IP: %s.", puerto_kernel, ip_kernel);
 
 	archivo_pseudocodigo = abrir_archivo_instrucciones(argv[1], logger);

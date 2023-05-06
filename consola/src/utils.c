@@ -61,3 +61,12 @@ void levantar_instrucciones(FILE* archivo, t_log* logger, int conexion) {
 
 }
 
+void cargar_valores_config(t_log* logger, char* ruta, char* ip, char* puerto) {
+	t_config* config = iniciar_config(ruta);
+
+	ip = config_get_string_value(config, "IP");
+	puerto = config_get_string_value(config, "PUERTO");
+
+	config_destroy(config);
+}
+
