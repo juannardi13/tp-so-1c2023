@@ -33,7 +33,6 @@ int main(int argc, char** argv) {
     int conexion_kernel = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
 
     log_info(logger, "Conexion exitosa con el Kernel.");
-    enviar_mensaje(puerto_kernel, conexion_kernel);
 
     levantar_instrucciones(archivo_pseudocodigo, logger, conexion_kernel);
 

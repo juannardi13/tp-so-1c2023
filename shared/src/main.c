@@ -232,3 +232,8 @@ t_list* recibir_paquete(int socket_cliente)
 
 	return valores;
 }
+
+void enviar_pcb(t_pcb un_pcb, int conexion) {
+
+}
+
