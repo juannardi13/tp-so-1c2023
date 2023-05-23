@@ -3,7 +3,7 @@
 #include "../shared/src/main_shared.c"
 #define MAX_LEN 256
 
-int fetch_instruccion(char* una_instruccion);
+int fetch_instruccion(char* una_instruccion, t_log* logger);
 
 typedef struct {
 	char* ax;
@@ -67,7 +67,7 @@ int main() {
     t_config* config = iniciar_config();
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
-/*
+
     ip_kernel = config_get_string_value(config, "IP");
     puerto_kernel = config_get_string_value(config, "PUERTO_KERNEL");
 
@@ -76,7 +76,7 @@ int main() {
     int fd_cpu = iniciar_servidor(logger, "CPU", ip_kernel, puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_kernel);
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
-*/
+
     getchar();
 
     char** instrucciones_prueba = malloc(sizeof(char*) * 5);
@@ -92,7 +92,7 @@ int main() {
     pcb_en_ejecucion.registros_pcb = registros;
 
     while(pcb_en_ejecucion.pc < 5) {
-    	int cod_op = fetch_instruccion(pcb_en_ejecucion.instrucciones[pcb_en_ejecucion.pc]);
+    	int cod_op = fetch_instruccion(pcb_en_ejecucion.instrucciones[pcb_en_ejecucion.pc], logger);
 
     	switch (cod_op) {
     		case SET:
@@ -120,7 +120,7 @@ int main() {
   	return 0;
 }
 
-int fetch_instruccion(char* una_instruccion) {
+int fetch_instruccion(char* una_instruccion, t_log* logger) {
 	int codigo_operacion;
 
 	char* nombre_instruccion = strtok(una_instruccion, " \n");
@@ -131,6 +131,8 @@ int fetch_instruccion(char* una_instruccion) {
 
 	if(strcmp(nombre_instruccion, "SET") == 0) {
 		codigo_operacion = SET;
+		log_error(logger, "Parámetro 1: %s", strtok(una_instruccion, " "));
+		log_error(logger, "Parámetro 2: %s", strtok(una_instruccion, " "));
 	}
 
 	if(strcmp(nombre_instruccion, "EXIT") == 0) {

@@ -13,12 +13,11 @@
 #include<string.h>
 #include<assert.h>
 #include <pthread.h>
-#include"../../shared/include/main.h"
+#include"../../shared/include/main_shared.h"
 
 #define PUERTO "9120"
 
-//t_queue cola_new;
-//int pid = 1000;
+
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
@@ -28,5 +27,7 @@ void agregar_instruccion_a_lista(char ** lista, char* instruccion);
 t_instruccion recibir_instruccion(t_log* logger, int conexion_consola);
 t_pcb crear_pcb(t_instruccion* instrucciones);
 int server_escuchar(t_log* logger, char* server_name, int server_socket);
+t_pcb* armar_pcb(char** lista_instrucciones, t_log* logger);
+t_pcb * alocar_memoria_pcb(t_log* logger);
 
 #endif /* UTILS_H_ */

@@ -1,7 +1,7 @@
 #include "./include/main.h"
-#include "./include/utils.h"
-#include "../shared/include/main.h"
-#include "../shared/src/main.c"
+#include "./include/utils_consola.h"
+#include "../shared/include/main_shared.h"
+#include "../shared/src/main_shared.c"
 
 #define MAX_LEN 256
 

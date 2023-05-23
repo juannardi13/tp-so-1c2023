@@ -1,5 +1,5 @@
-#include "../include/utils.h"
-#include "../../shared/include/main.h"
+#include "../include/utils_consola.h"
+#include "../../shared/include/main_shared.h"
 
 
 t_log* iniciar_logger(void){

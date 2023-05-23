@@ -1,9 +1,11 @@
-#include"../include/utils.h"
-#include"../../shared/include/main.h"
-#include"../../shared/src/main.c"
+#include"../include/utils_kernel.h"
+#include"../../shared/include/main_shared.h"
+#include"../../shared/src/main_shared.c"
 
 t_log* logger;
 t_config* config;
+t_queue* cola_new;
+int pid_global = 1000;
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
@@ -109,17 +111,6 @@ void agregar_instruccion_a_lista(char ** lista, char* instruccion){
     }
 }
 
-t_pcb crear_pcb(t_instruccion* instrucciones) {
-
-	t_pcb pcb_creado = {
-			912,
-			instrucciones,
-			0
-	};
-
-	return pcb_creado;
-}
-
 typedef struct {
     t_log* log;
     int fd;
@@ -135,43 +126,43 @@ static void procesar_conexion(void* void_args) {
 
     //Creo pcb y pongo el proceso en la cola de NEW
     int i = 0;
-    char** instrucciones;
+    char** instrucciones = malloc(sizeof(char*) * 5);
 
     op_code cop;
     while (cliente_socket != -1) {
 
         if (recv(cliente_socket, &cop, sizeof(op_code), 0) != sizeof(op_code)) {
-            log_info(logger, "DISCONNECT!");
-            return;
+            log_info(logger, "Se terminaron de leer las instrucciones recibidas");
+            break;
         }
 
         switch (cop) {
             case MENSAJE:
-            	//Revisar
-            	log_error(logger, "Antes de recibir la instruccion");
             	instrucciones[i] = recibir_mensaje(logger, cliente_socket);
             	i++;
-            	log_error(logger, "Despues de recibir la instruccion");
             // Errores
-            case -1:
+         /*   case -1:
                 log_error(logger, "Cliente desconectado de %s...", server_name);
-                return;
-            default:
+                return;*/
+          /*  default:
                 log_error(logger, "Algo anduvo mal en el server de %s", server_name);
                 log_info(logger, "Cop: %d", cop);
-                return;
+                return;*/
         }
     }
-/*
-    t_pcb pcb;
+log_error(logger, "Antes de armar el PCB");
+    t_pcb* pcb = malloc(sizeof(t_pcb*));
+    pcb = armar_pcb(instrucciones, logger);
+    log_info(logger, "%d", pcb->PID);
+    log_info(logger, "%d", pcb->PC);
 
-    armar_pcb(pcb, instrucciones);
+    log_error(logger, "Después de armar el PCB");
+
     queue_push(cola_new, pcb);
-  */
-    int j = 0;
-    while(instrucciones[j] != NULL){
-    	log_error(logger, "%s", instrucciones[j]);
-    }
+    log_error(logger, "Después de agregar el PCB a cola NEW");
+
+
+
 
     log_warning(logger, "El cliente se desconecto de %s server", server_name);
     return;
@@ -191,4 +182,42 @@ int server_escuchar(t_log* logger, char* server_name, int server_socket) {
         return 1;
     }
     return 0;
+}
+
+t_pcb* armar_pcb(char** lista_instrucciones, t_log* logger){
+    /*
+        Gestiona la generacion de un nuevo pcb
+    */
+
+    t_pcb * pcb_pointer = NULL;
+
+    t_pcb pcb_nuevo = {
+    pid_global,
+    lista_instrucciones,
+    0
+    };
+
+    if ((pcb_pointer = alocar_memoria_pcb(logger)) == NULL){
+        log_error(logger, "Error al generar_pcb()");
+        return NULL;
+    }
+
+    *pcb_pointer = pcb_nuevo;
+
+    pid_global++;
+
+
+    return pcb_pointer;
+}
+
+t_pcb * alocar_memoria_pcb(t_log* logger){
+
+    t_pcb * pcb_pointer = NULL;
+
+    if((pcb_pointer = malloc(sizeof *pcb_pointer)) == NULL){
+        log_error(logger, "Fallo al hacer malloc en 'alocar_memoria_todos_pcb()'");
+        return NULL;
+    }
+
+    return pcb_pointer;
 }

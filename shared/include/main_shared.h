@@ -57,7 +57,7 @@ typedef struct {
 
 typedef struct {
 	int PID;
-	t_instruccion* instrucciones;
+	char** instrucciones;
 	int PC;
 	//t_registros registros_cpu;
 	//int segmentos[][3];

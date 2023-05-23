@@ -6,7 +6,7 @@ OUTFILE = Consola
 
 SRC = $(shell find ./src -type f -iname "*.c" -exec basename {} \;)
 OBJ = $(SRC:%.c=./obj/%.o)
-DEPENDENCIES = src/utils.c
+DEPENDENCIES = src/utils_consola.c
 PARAMETERS = cfg/pseudocodigo.txt cfg/consola.config
 
 SHARED = $(shell find ../shared/obj/*.o)

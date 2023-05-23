@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "../include/main_shared.h"
 
 // INICIA SERVER ESCUCHANDO EN IP:PUERTO
 int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
@@ -233,7 +233,4 @@ t_list* recibir_paquete(int socket_cliente)
 	return valores;
 }
 
-void enviar_pcb(t_pcb un_pcb, int conexion) {
-
-}
 

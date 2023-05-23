@@ -1,5 +1,5 @@
-#include "./include/utils.h"
-#include "../shared/include/main.h"
+#include "./include/utils_kernel.h"
+#include "../shared/include/main_shared.h"
 #include <commons/log.h>
 #include <commons/config.h>
 
