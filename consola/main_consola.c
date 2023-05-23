@@ -34,6 +34,9 @@ int main(int argc, char** argv) {
 
     log_info(logger, "Conexion exitosa con el Kernel.");
 
+    // Es para que consola espere nuestra aprobación para mandar las instrucciones. Al ejecutarlo va a frenarse, después de eso apretar ENTER
+    getchar();
+
     levantar_instrucciones(archivo_pseudocodigo, logger, conexion_kernel);
 
     return EXIT_SUCCESS;

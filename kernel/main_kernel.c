@@ -15,38 +15,8 @@ int main() {
 
 	int fd_kernel = iniciar_servidor(logger, "KERNEL", ip_kernel, puerto_kernel);
 	log_info(logger, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", puerto_kernel);
-	int fd_consola = esperar_cliente(logger, "KERNEL", fd_kernel);
 
-	int j = 0;
-	int i = 0;
-	t_list* lista;
-	t_instruccion* instrucciones;
-
-			while (j == 0) {
-				int cod_op = recibir_operacion(logger, fd_consola);
-				switch (cod_op) {
-				case MENSAJE:
-					instrucciones[i] = recibir_instruccion(logger, fd_consola);
-					i++;
-					break;
-				case PAQUETE:
-					//TODO
-					// no puede leer el paquete pero CREO que lo recibe
-					lista = recibir_paquete(fd_consola);
-					log_info(logger, "Me llegaron los siguientes valores:\n");
-					list_iterate(lista, (void*) iterator);
-					break;
-				case -1:
-					log_error(logger, "el cliente se desconecto. Terminando servidor");
-					j = 1;
-					continue;
-				default:
-					log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-					break;
-				}
-			}
-
-	t_pcb pcb = crear_pcb(instrucciones);
+	while(server_escuchar(logger, "Kernel", fd_kernel));
 
 
 	int fd_file_system = 0, fd_cpu = 0, fd_memoria = 0;

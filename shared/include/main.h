@@ -74,7 +74,7 @@ void liberar_conexion(int* socket_cliente);
 void* recibir_buffer(int*, int);
 void crear_buffer(t_paquete*);
 t_list* recibir_paquete(int);
-void recibir_mensaje(t_log*, int);
+char* recibir_mensaje(t_log*, int);
 int recibir_operacion(t_log*, int);
 void enviar_mensaje(char* mensaje, int socket_cliente);
 t_paquete* crear_paquete(void);
