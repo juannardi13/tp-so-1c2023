@@ -6,7 +6,7 @@ OUTFILE = CPU
 
 SRC = $(shell find ./src -type f -iname "*.c" -exec basename {} \;)
 OBJ = $(SRC:%.c=./obj/%.o)
-DEPENDENCIES = src/utils.c
+DEPENDENCIES = src/utils_cpu.c
 
 SHARED = $(shell find ../shared/obj/*.o)
 

@@ -1,4 +1,4 @@
-#include "../include/utils.h"
+#include "../include/utils_cpu.h"
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger = log_create("cpu.log", "cpu.log", 1, LOG_LEVEL_INFO);
@@ -21,3 +21,4 @@ t_config* iniciar_config(void) {
 
 	return nuevo_config;
 }
+
