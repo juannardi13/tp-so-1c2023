@@ -6,7 +6,7 @@ OUTFILE = Kernel
 
 SRC = $(shell find ./src -type f -iname "*.c" -exec basename {} \;)
 OBJ = $(SRC:%.c=./obj/%.o)
-DEPENDENCIES = src/utils_kernel.c
+DEPENDENCIES = src/utils_kernel.c src/hilos_kernel.c
 
 SHARED = $(shell find ../shared/obj/*.o)
 
