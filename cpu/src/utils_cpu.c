@@ -21,4 +21,8 @@ t_config* iniciar_config(void) {
 
 	return nuevo_config;
 }
+//Revisar
+char** recibir_instrucciones(t_buffer){
+char** lista_instrucciones = deserializar_instrucciones(t_buffer);
+}
 
