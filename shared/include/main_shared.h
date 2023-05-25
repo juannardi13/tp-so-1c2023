@@ -52,12 +52,14 @@ typedef struct
 
 typedef struct {
 	nombre_instruccion nombre;
-	//parametros ???
+	char* parametro_1;
+	char* parametro_2;
+	char* parametro_3;
 } t_instruccion;
 
 typedef struct {
 	int PID;
-	char** instrucciones;
+	t_list* instrucciones;
 	int PC;
 	//t_registros registros_cpu;
 	//int segmentos[][3];
