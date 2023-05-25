@@ -150,4 +150,4 @@ t_pcb * alocar_memoria_pcb(t_log* logger){
 
     return pcb_pointer;
 }
-}
+
