@@ -16,7 +16,8 @@
 typedef enum
 {
 	MENSAJE,
-	PAQUETE
+	PAQUETE,
+	PAQUETE_CONSOLA
 }op_code;
 
 typedef enum {
@@ -58,9 +59,10 @@ typedef struct {
 } t_instruccion;
 
 typedef struct {
-	int PID;
+	int pid;
 	t_list* instrucciones;
-	int PC;
+	int pc;
+	int tamanio;
 	//t_registros registros_cpu;
 	//int segmentos[][3];
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
@@ -68,6 +70,19 @@ typedef struct {
 	//int archivos_abiertos[][2];
 
 } t_pcb;
+
+typedef struct
+{
+    uint32_t tamanio_proceso;
+    t_list* instrucciones;
+} t_consola;
+
+
+
+typedef struct {
+	int socket;
+	t_pcb* pcb;
+}t_proceso;
 
 int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
 int esperar_cliente(t_log* logger, const char* name, int socket_servidor);
@@ -85,5 +100,7 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 void enviar_paquete(t_paquete* paquete, int socket_cliente);
 void eliminar_paquete(t_paquete* paquete);
 void enviar_pcb(t_pcb un_pcb, int conexion);
+t_paquete* crear_paquete_como(op_code codigo);
+int recibir_operacion_nuevo(int socket_cliente);
 
 #endif
