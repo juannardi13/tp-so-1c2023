@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
 
     t_paquete* paquete_de_instrucciones = crear_paquete_como(PAQUETE_CONSOLA);
 
-    agregar_a_paquete(paquete_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
+    agregar_a_paquete(paquete_de_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
 
     t_list *instrucciones = parsear_instrucciones(argv[1], logger);
 

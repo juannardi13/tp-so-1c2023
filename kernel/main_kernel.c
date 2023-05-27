@@ -1,5 +1,5 @@
 #include "./include/utils_kernel.h"
-#include "../shared/include/main_shared.h"
+
 #include <commons/log.h>
 #include <commons/config.h>
 
@@ -16,7 +16,7 @@ int main() {
 	int fd_kernel = iniciar_servidor(logger, "KERNEL", ip_kernel, puerto_kernel);
 	log_info(logger, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", puerto_kernel);
 
-	while(server_escuchar(logger, "Kernel", fd_kernel));
+	while(atender_clientes_kernel(fd_kernel, logger));
 
 
 	int fd_file_system = 0, fd_cpu = 0, fd_memoria = 0;

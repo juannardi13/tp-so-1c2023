@@ -1,6 +1,4 @@
 #include"../include/utils_kernel.h"
-#include"../../shared/include/main_shared.h"
-#include"../../shared/src/main_shared.c"
 
 int pid_global = 1000;
 t_consola* consola;
