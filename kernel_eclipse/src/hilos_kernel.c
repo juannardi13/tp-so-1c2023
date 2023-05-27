@@ -21,7 +21,7 @@ void manejar_conexion(void* void_args) {
 	  		recibir_mensaje(socket_cliente, logger);
 	  		break;
 	  	case PAQUETE_CONSOLA:
-	  		log_info(logger, "Me llego el tamanio y las instrucciones\n");
+	  		log_info(logger, "Me llegaron el tamanio y las instrucciones");
 	  		//pthread_mutex_lock(&mutex_consola);
 			consola = deserializar_consola(socket_cliente);
 			//pthread_mutex_unlock(&mutex_consola);
@@ -32,7 +32,7 @@ void manejar_conexion(void* void_args) {
 	  		procesos->pcb = crear_estructura_pcb(consola);
 			//pthread_mutex_unlock(&mutex_consola);
 	  		procesos->socket = socket_cliente;
-	  		log_info(logger, "PCB id[%d] armada -> agregar proceso a new y arrancar con la planificacion\n",procesos->pcb->pid);
+	  		log_info(logger, "PCB id[%d] armada -> agregar proceso a new",procesos->pcb->pid);
 	  		//agregar_a_new_pcb(procesos);
 	  		break;
 	  	case PAQUETE:

@@ -41,7 +41,7 @@ typedef enum {
 
 typedef struct
 {
-	int size;
+	int stream_size;
 	void* stream;
 } t_buffer;
 
@@ -84,23 +84,31 @@ typedef struct {
 	t_pcb* pcb;
 }t_proceso;
 
-int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
-int esperar_cliente(t_log* logger, const char* name, int socket_servidor);
-int crear_conexion(t_log* logger, const char* server_name, char* ip, char* puerto);
-void liberar_conexion(int* socket_cliente);
+int iniciar_servidor(char* ip, char* puerto);
+int esperar_cliente(int socket_servidor);
+int crear_conexion(char* ip, char* puerto);
+void liberar_conexion(int socket_cliente);
 void* recibir_buffer(int*, int);
 void crear_buffer(t_paquete*);
 t_list* recibir_paquete(int);
-char* recibir_mensaje(t_log*, int);
-int recibir_operacion(t_log*, int);
+t_paquete* recibe_paquete(int);
+void recibir_mensaje(int, t_log*);
+int recibir_operacion(int);
+void* recibir_stream(int*, int);
+void agregar_a_buffer(t_buffer *buffer, void *src, int size);
+t_buffer *inicializar_buffer_con_parametros(uint32_t size, void *stream);
+void* serializar_paquete_con_bytes(t_paquete* paquete, int bytes);
+t_buffer* serializar_paquete(t_paquete* paquete);
+void agregar_entero_a_paquete(t_paquete *paquete, int tamanio_proceso);
 void enviar_mensaje(char* mensaje, int socket_cliente);
 t_paquete* crear_paquete(void);
-void* serializar_paquete(t_paquete*, int);
 void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 void enviar_paquete(t_paquete* paquete, int socket_cliente);
 void eliminar_paquete(t_paquete* paquete);
 void enviar_pcb(t_pcb un_pcb, int conexion);
-t_paquete* crear_paquete_como(op_code codigo);
+t_paquete* crear_paquete_consola(void);
 int recibir_operacion_nuevo(int socket_cliente);
+int enviar_datos(int socket_fd, void *source, uint32_t size);
+int recibir_datos(int socket_fd, void *source, uint32_t size);
 
 #endif

@@ -27,10 +27,6 @@ int main(int argc, char** argv) {
 
 	log_info(logger, "Se ha leido el archivo de config con exito, con los valores PUERTO: %s e IP: %s.", puerto_kernel, ip_kernel);
 
-	//Inicialización de Consola como cliente
-
-    int conexion_kernel = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
-
     // Es para que consola espere nuestra aprobación para mandar las instrucciones. Al ejecutarlo va a frenarse, después de eso apretar ENTER
     getchar();
 
@@ -38,7 +34,7 @@ int main(int argc, char** argv) {
 
     int tamanio_proceso = atoi(argv[1]); //Calcula el peso del proceso para poder serializar y deserializar
 
-    t_paquete* paquete_de_instrucciones = crear_paquete_como(PAQUETE_CONSOLA);
+    t_paquete* paquete_de_instrucciones = crear_paquete_consola();
 
     agregar_a_paquete(paquete_de_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
 
@@ -46,7 +42,13 @@ int main(int argc, char** argv) {
 
 	serializar_instrucciones(instrucciones, paquete_de_instrucciones); //Esta función ya agrega al paquete las instrucciones.
 
+	//Inicialización de Consola como cliente
+	getchar();
+	int conexion_kernel = crear_conexion(ip_kernel, puerto_kernel);
+	log_info(logger, "Se creo la conexion con el Kernel");
+
 	//Envío de instrucciones a Kernel
+	getchar();
 	log_warning(logger,"Cantidad de Instrucciones enviadas: %d", list_size(instrucciones));
 	enviar_paquete(paquete_de_instrucciones, conexion_kernel);
 	log_info(logger, "Paquete de instrucciones enviado correctamente!");

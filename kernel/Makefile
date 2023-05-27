@@ -11,7 +11,7 @@ DEPENDENCIES = src/utils_kernel.c src/hilos_kernel.c src/conexion_kernel_cpu.c
 SHARED = $(shell find ../shared/obj/*.o)
 
 build:
-	$(CC) main_kernel.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
+	$(CC) -g main_kernel.c $(DEPENDENCIES) -o $(OUTFILE) $(LINK)
 
 
 LINK = -lcommons -lpthread -lm -lreadline 
