@@ -1,6 +1,0 @@
-[INFO] 16:16:29:692 consola.log/(139484:139484): Hola! Se inicializo el modulo cliente Consola.
-[INFO] 16:16:29:692 consola.log/(139484:139484): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
-[INFO] 16:16:30:474 consola.log/(139484:139484): Las instrucciones fueron parseadas, listas para enviar a Kernel!
-[INFO] 16:16:34:076 consola.log/(139484:139484): Se creo la conexion con el Kernel
-[WARNING] 16:17:18:552 consola.log/(139484:139484): Cantidad de Instrucciones enviadas: 5
-[INFO] 16:17:18:553 consola.log/(139484:139484): Paquete de instrucciones enviado correctamente!
