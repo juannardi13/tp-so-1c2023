@@ -29,5 +29,10 @@ t_pcb crear_pcb(t_instruccion* instrucciones);
 int server_escuchar(t_log* logger, char* server_name, int server_socket);
 t_pcb* armar_pcb(char** lista_instrucciones, t_log* logger);
 t_pcb * alocar_memoria_pcb(t_log* logger);
+void manejar_conexion(void*);
+int atender_clientes_kernel(int, t_log*);
+t_list *deserializar_instrucciones(t_list*, uint32_t);
+t_consola *deserializar_consola(int);
+t_pcb* crear_estructura_pcb(t_consola*);
 
 #endif /* UTILS_H_ */
