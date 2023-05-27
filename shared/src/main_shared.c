@@ -234,4 +234,21 @@ t_list* recibir_paquete(int socket_cliente)
 	return valores;
 }
 
+t_paquete *crear_paquete_como(op_code codigo){
+    t_paquete *paquete = malloc(sizeof(t_paquete));
 
+    paquete->codigo_operacion = codigo;
+    crear_buffer(paquete);
+    return paquete;
+}
+
+int recibir_operacion_nuevo(int socket_cliente) {
+   int cod_op = 0;
+    if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) != 0)
+        return cod_op;
+    else
+    {
+        close(socket_cliente);
+        return -1;
+    }
+}
