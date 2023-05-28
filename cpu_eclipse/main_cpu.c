@@ -141,3 +141,9 @@ int fetch_instruccion(char* una_instruccion, t_log* logger) {
 
 	return codigo_operacion;
 }
+/*
+void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion contexto){
+	t_paquete paquete = serializar_contexto_de_ejecucion(contexto);
+	enviar_paquete(paquete, fd_kernel);
+}
+*/
