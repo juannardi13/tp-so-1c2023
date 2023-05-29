@@ -1,1 +1,1 @@
-cambios en cpu y en consola
+cambios en memoria, en cpu y en consola
