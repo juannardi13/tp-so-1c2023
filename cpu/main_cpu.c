@@ -143,7 +143,7 @@ int fetch_instruccion(char* una_instruccion, t_log* logger) {
 }
 /*
 void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion contexto){
-	t_paquete paquete = serializar_contexto_de_ejecucion(contexto);
+	t_paquete paquete = paquete_contexto_de_ejecucion(contexto);
 	enviar_paquete(paquete, fd_kernel);
 }
 */
