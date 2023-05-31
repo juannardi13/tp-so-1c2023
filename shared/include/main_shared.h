@@ -57,6 +57,7 @@ typedef struct {
 	char* parametro_2;
 	char* parametro_3;
 	int codigo_instruccion;
+	int valor_a_procesar;
 } t_instruccion;
 
 typedef struct {
