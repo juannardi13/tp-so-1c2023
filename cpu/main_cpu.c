@@ -120,6 +120,8 @@ int main() {
   	return 0;
 }
 
+// ver si se puede eliminar
+/*
 int fetch_instruccion(char* una_instruccion, t_log* logger) {
 	int codigo_operacion;
 
@@ -141,6 +143,67 @@ int fetch_instruccion(char* una_instruccion, t_log* logger) {
 
 	return codigo_operacion;
 }
+*/
+
+t_instruccion fetch_instruccion(t_contexto_de_ejecucion contexto){
+	t_instruccion instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
+	return instruccion_a_ejecutar;
+}
+// Falta inicializar t_instrucciones con codigos, desarrollar ejecutar_instruccion
+t_instruccion decode_instruccion(t_instruccion instruccion){
+	switch(instruccion.codigo_instruccion){
+	case 0:
+		// SET
+		ejecutar_instruccion(set(instruccion.parametro_registro, instruccion.parametro_numerico));
+	}
+	case 1:
+		// MOV_IN
+		ejecutar_instruccion(mov_in(instruccion.parametro_registro, instruccion.parametro_direccion_logica)); // ojo hay que traducir direccion logica a fisica
+	case 2:
+		// MOV_OUT
+		ejecutar_instruccion(mov_out(instruccion.parametro_direccion_logica, instruccion.parametro_registro));
+	case 3:
+		// I/O
+		ejecutar_instruccion(io(instruccion.parametro_numerico));
+	case 4:
+		// F_OPEN
+		ejecutar_instruccion(f_open(instruccion.parametro_1));
+	case 5:
+		// F_CLOSE
+		ejecutar_instruccion(f_close(instruccion.parametro_1));
+	case 6:
+		// F_SEEK
+		ejecutar_instruccion(f_seek(instruccion.parametro_1, instruccion.parametro_numerico));
+	case 7:
+		// F_READ
+		ejecutar_instruccion(f_read(instruccion.parametro_1, instruccion.parametro_direccion_logica, instruccion.parametro_numerico)); // idem anteriores
+	case 8:
+		// F_WRITE
+		ejecutar_instruccion(f_write(instruccion.parametro_1, instruccion.parametro_direccion_logica, instruccion.parametro_numerico));
+	case 9:
+		// F_TRUNCATE
+		ejecutar_instruccion(f_truncate(instruccion.parametro_1, instruccion.parametro_numerico));
+	case 10:
+		// WAIT
+		ejecutar_instruccion(wait(instruccion.parametro_recurso));
+	case 11:
+		// SIGNAL
+		ejecutar_instruccion(signal(instruccion.parametro_recurso));
+	case 12:
+		// CREATE_SEGMENT
+		ejecutar_instruccion(create_segment(instruccion.parametro_numerico, instruccion.parametro_numerico2));
+	case 13:
+		// DELETE_SEGMENT
+		ejecutar_instruccion(delete_segment(instruccion.parametro_numerico));
+	case 14:
+		// YIELD
+		ejecutar_instruccion(yield());
+	case 15:
+		// EXIT
+		ejecutar_instruccion(exit());
+}
+
+// agregye esta funcion en conexion cpu kernel - ver de donde la eliminamos
 /*
 void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion contexto){
 	t_paquete paquete = paquete_contexto_de_ejecucion(contexto);
