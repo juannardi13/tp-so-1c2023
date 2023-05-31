@@ -20,6 +20,7 @@ typedef enum
 	PAQUETE_CONSOLA
 }op_code;
 
+//puede eliminarse
 typedef enum {
 	SET,
 	MOV_IN,
@@ -51,13 +52,22 @@ typedef struct
 	t_buffer* buffer;
 } t_paquete;
 
+// creo t_recurso, ver que iria en sus campos
+typedef struct {
+	// campos del recurso
+}t_recurso;
+
+//actualizo t_instruccion para ordenar parametros y facilitar decode
 typedef struct {
 	nombre_instruccion nombre;
-	char* parametro_1;
-	char* parametro_2;
-	char* parametro_3;
 	int codigo_instruccion;
-	int valor_a_procesar;
+	char* parametro_1; //tipo char
+	char* parametro_direccion_logica;
+	char* parametro_registro;
+	int parametro_numerico;
+	int parametro_numerico2;
+	t_recurso parametro_recurso;
+
 } t_instruccion;
 
 typedef struct {
