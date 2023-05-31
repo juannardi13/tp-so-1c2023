@@ -56,6 +56,7 @@ typedef struct {
 	char* parametro_1;
 	char* parametro_2;
 	char* parametro_3;
+	int codigo_instruccion;
 } t_instruccion;
 
 typedef struct {
