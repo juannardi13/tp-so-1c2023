@@ -147,6 +147,7 @@ int fetch_instruccion(char* una_instruccion, t_log* logger) {
 
 t_instruccion fetch_instruccion(t_contexto_de_ejecucion contexto){
 	t_instruccion instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
+	contexto->pc++;
 	return instruccion_a_ejecutar;
 }
 // Falta inicializar t_instrucciones con codigos, desarrollar ejecutar_instruccion
