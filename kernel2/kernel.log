@@ -1,0 +1,4 @@
+[INFO] 13:31:09:913 kernel.log/(4855:4855): Escuchando en 127.0.0.1:9120 (KERNEL)
+
+[INFO] 13:31:09:920 kernel.log/(4855:4855): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[ERROR] 13:31:09:921 kernel.log/(4855:4855): Cerrando el módulo Kernel
