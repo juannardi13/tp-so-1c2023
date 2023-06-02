@@ -71,12 +71,28 @@ typedef struct {
 } t_instruccion;
 
 typedef struct {
+	char ax[3];
+	char bx[3];
+	char cx[3];
+	char dx[3];
+	char eax[7];
+	char ebx[7];
+	char ecx[7];
+	char edx[7];
+	char rax[15];
+	char rbx[15];
+	char rcx[15];
+	char rdx[15];
+}t_registros;
+
+
+typedef struct {
 	int pid;
 	t_list* instrucciones;
 	estado_proceso estado;
 	int pc;
 	int tamanio;
-	//t_registros registros_cpu;
+	t_registros registros;
 	//int segmentos[][3];
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//float timestamp;
