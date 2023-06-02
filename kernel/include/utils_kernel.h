@@ -34,5 +34,8 @@ int atender_clientes_kernel(int, t_log*);
 t_list *deserializar_instrucciones(t_list*, int);
 t_consola *deserializar_consola(int);
 t_pcb* crear_estructura_pcb(t_consola*);
+void iniciar_planificador_largo_plazo(void);
+void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);
+void mostrar_cola_new(t_list* lista, t_log* logger);
 
 #endif /* UTILS_H_ */

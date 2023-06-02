@@ -4,7 +4,6 @@
 
 t_log* logger;
 t_config* config;
-t_queue* cola_new;
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
@@ -67,8 +66,6 @@ t_instruccion recibir_instruccion(t_log* logger, int conexion_consola) {
 	t_instruccion instruccion;
 	char* mensaje_recibido = recibir_buffer(&tamanio, conexion_consola);
 	// solo recibe el codigo de la instrucción, no está pensada para que también reciba los parámetros, cosa del futuro jajajaj
-
-	char* codigo = mensaje_recibido;
 
 	if(strcmp(mensaje_recibido, "YIELD") == 0) {
 		printf("ENTRE A YIELD\n\n");

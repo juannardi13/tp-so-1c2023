@@ -2,6 +2,7 @@
 
 int pid_global = 1000;
 t_consola* consola;
+t_list* cola_new;
 
 typedef struct {
     t_log* log;
@@ -33,7 +34,7 @@ void manejar_conexion(void* void_args) {
 			//pthread_mutex_unlock(&mutex_consola);
 	  		procesos->socket = socket_cliente;
 	  		log_info(logger, "PCB id[%d] armada -> agregar proceso a new",procesos->pcb->pid);
-	  		//agregar_a_new_pcb(procesos);
+	  		agregar_pcb_a_new(procesos, logger);
 	  		break;
 	  	case PAQUETE:
 			log_info(logger, "Me llego el paquete:\n");
@@ -43,18 +44,20 @@ void manejar_conexion(void* void_args) {
 	          log_warning(logger, "Operacion desconocida \n");
 	          break;
 	  	}
+
 }
 
-int atender_clientes_kernel(int socket_servidor, t_log* logger){
 
-	int socket_cliente = esperar_cliente(socket_servidor); // se conecta el cliente
+int atender_clientes_kernel(int socket_servidor, t_log* logger) {
+
+	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
+	int socket_cliente = esperar_cliente(logger, "KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
 			//pthread_t hilo_cliente;
 			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
 			args->fd = socket_servidor;
 			args->log = logger;
-			printf("\n\nHOLAAAASDASD\n\n");
 			manejar_conexion(args);
 			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
 			//pthread_detach(hilo_cliente);
@@ -74,10 +77,9 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
   	for(int i = 0; i < longitud_datos; i += 4) {
   		t_instruccion *instruccion_recibida = malloc(sizeof(t_instruccion));
   		instruccion_recibida->nombre = *(nombre_instruccion *)list_get(datos, i);
-  		instruccion_recibida->parametro_1 = *(char**)list_get(datos, i + 1);
-  		instruccion_recibida->parametro_2 = *(char**)list_get(datos, i + 2);
-  		instruccion_recibida->parametro_3 = *(char**)list_get(datos, i + 3);
-  		printf("HOLAAAA INSTRUCCION: %d\n", instruccion_recibida->nombre);
+  		instruccion_recibida->parametro_1 = list_get(datos, i + 1);
+  		instruccion_recibida->parametro_2 = list_get(datos, i + 2);
+  		instruccion_recibida->parametro_3 = list_get(datos, i + 3);
   		list_add(instrucciones, instruccion_recibida);
   	}
 
@@ -135,7 +137,7 @@ t_pcb* crear_estructura_pcb(t_consola *consola) {
 	//pthread_mutex_lock(&mutex_pid);
 	un_pcb->pid = pid_global;
 	pid_global++;
-	//pthread_mutex_unlock(&mutex_generador_id);
+	//pthread_mutex_unlock(&mutex_pid);
 	un_pcb->tamanio =consola->tamanio_proceso;
 	un_pcb->instrucciones = list_duplicate(consola->instrucciones);
 	un_pcb->pc = 0;
@@ -143,3 +145,39 @@ t_pcb* crear_estructura_pcb(t_consola *consola) {
 
 	return un_pcb;
 }
+
+void iniciar_planificador_largo_plazo(void) {
+	//Aca creo todos los semáforos y las estructuras necesarias para inicializar la planificación, por ahora solo tiene esto:
+
+	cola_new = list_create();
+
+
+}
+
+void agregar_pcb_a_new(t_proceso* proceso, t_log* logger) {
+
+	list_add(cola_new, proceso);
+	proceso->pcb->estado = NEW;
+	log_info(logger, "PID[%d] ingresa a NEW \n", proceso->pcb->pid);
+	mostrar_cola_new(cola_new, logger);
+
+}
+
+void mostrar_cola_new(t_list* lista, t_log* logger) {
+
+      for (int j = 0; j < list_size(lista); j++){
+          t_proceso* proceso = list_get(lista, j);
+          log_info(logger,"PCB ID: %d\n",proceso->pcb->pid);
+          log_info(logger, "instrucciones del proceso [%d]: ", proceso->pcb->pid);
+          t_list* lista_instrucciones = list_create();
+          lista_instrucciones = list_duplicate(proceso->pcb->instrucciones);
+
+          for(int i = 0; i < list_size(lista_instrucciones); i++) {
+            		t_instruccion *instruccion_recibida = malloc(sizeof(t_instruccion));
+            		instruccion_recibida = list_get(lista_instrucciones, i);
+            		log_info(logger, "%d, %s, %s, %s.", instruccion_recibida->nombre, instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
+            		free(instruccion_recibida);
+            	}
+      }
+
+  }
