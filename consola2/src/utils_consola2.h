@@ -21,7 +21,7 @@ void levantar_instrucciones(FILE*, t_log*, int);
 void cargar_valores_config(t_log*, char*, char*, char*);
 //t_instruccion* armar_instruccion(nombre_instruccion, char*, char*, char*);
 t_list* parsear_instrucciones(char*, t_log*);
-//void serializar_instrucciones(t_list*, t_paquete*);
+void serializar_instrucciones(t_list*, t_paquete*);
 char* leer_archivo_pseudocodigo(char*, t_log*);
 
 #endif /* UTILS_H_ */

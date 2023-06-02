@@ -121,3 +121,29 @@ char* recibir_mensaje(t_log* logger, int socket_cliente)
 	log_info(logger, "%s", buffer);
 	return buffer;
 }
+
+t_paquete *crear_paquete_consola(void){
+    t_paquete *paquete = malloc(sizeof(t_paquete));
+
+    paquete->codigo_operacion = PAQUETE_CONSOLA;
+    crear_buffer(paquete);
+    return paquete;
+}
+
+void crear_buffer(t_paquete *paquete)
+{
+    paquete->buffer = malloc(sizeof(t_buffer));
+    paquete->buffer->stream_size = 0;
+    paquete->buffer->stream = NULL;
+}
+
+void agregar_a_paquete(t_paquete *paquete, void *valor, int tamanio_valor) {
+    agregar_a_buffer(paquete->buffer, &tamanio_valor, sizeof(int)); // Para que no se envie el valor del tamanio del stream size
+    agregar_a_buffer(paquete->buffer, valor, tamanio_valor);
+}
+
+void agregar_a_buffer(t_buffer *buffer, void *src, int size) {
+	buffer->stream = realloc(buffer->stream, buffer->stream_size + size);
+	memcpy(buffer->stream + buffer->stream_size, src, size);
+	buffer->stream_size+=size;
+}

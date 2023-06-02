@@ -8,3 +8,9 @@
 [INFO] 02:54:00:321 memoria.log/(4940:4940): Escuchando en 127.0.0.1:7294 (MEMORIA)
 
 [INFO] 02:54:00:322 memoria.log/(4940:4940): Memoria inicializada, esperando a recibir al Kernel en el PUERTO 7294.
+[INFO] 14:38:59:801 memoria.log/(4230:4230): Se inicializa el módulo Memoria
+[INFO] 14:38:59:809 memoria.log/(4230:4230): PUERTO KERNEL: 7294
+[INFO] 14:38:59:809 memoria.log/(4230:4230): Memoria inicializada, esperando a recibir al Kernel en el PUERTO 7294.
+[INFO] 14:39:15:182 memoria.log/(4252:4252): Se inicializa el módulo Memoria
+[INFO] 14:39:15:185 memoria.log/(4252:4252): PUERTO KERNEL: 7294
+[INFO] 14:39:15:187 memoria.log/(4252:4252): Memoria inicializada, esperando a recibir al Kernel en el PUERTO 7294.

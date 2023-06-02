@@ -21,7 +21,8 @@ typedef enum {
 typedef enum
 {
 	MENSAJE,
-	PAQUETE
+	PAQUETE,
+	PAQUETE_CONSOLA
 } op_code;
 
 typedef enum {
@@ -102,5 +103,9 @@ int esperar_cliente(t_log *, const char *, int);
 int recibir_operacion(t_log *, int);
 void* recibir_buffer(int *, int);
 char* recibir_mensaje(t_log *, int);
+t_paquete *crear_paquete_consola(void);
+void crear_buffer(t_paquete *);
+void agregar_a_paquete(t_paquete *, void *, int);
+void agregar_a_buffer(t_buffer *, void *, int);
 
 #endif /* SRC_SHARED_2_H_ */

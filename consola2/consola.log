@@ -5,3 +5,16 @@
 [ERROR] 12:30:20:029 consola.log/(2958:2958): No se ha inicializado correctamente el módulo consola
 [INFO] 12:31:21:377 consola.log/(2992:2992): Hola! Se inicializo el modulo cliente Consola.
 [INFO] 12:31:21:451 consola.log/(2992:2992): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[ERROR] 14:40:46:955 consola.log/(4329:4329): No se ha inicializado correctamente el módulo consola
+[ERROR] 14:41:07:554 consola.log/(4367:4367): No se ha inicializado correctamente el módulo consola
+[INFO] 14:42:08:792 consola.log/(4410:4410): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 14:42:08:804 consola.log/(4410:4410): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 14:43:33:516 consola.log/(4457:4457): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 14:43:33:518 consola.log/(4457:4457): Se ha leido el archivo de config con exito, con los valores PUERTO: (null) e IP: 127.0.0.1.
+[INFO] 14:43:36:970 consola.log/(4457:4457): Se creo la conexion con el Kernel
+[INFO] 14:43:40:560 consola.log/(4457:4457): Paquete de instrucciones enviado correctamente!
+[INFO] 14:53:59:704 consola.log/(5283:5283): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 14:53:59:710 consola.log/(5283:5283): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 14:54:01:719 consola.log/(5283:5283): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 14:54:05:151 consola.log/(5283:5283): Se creo la conexion con el Kernel
+[INFO] 14:54:07:047 consola.log/(5283:5283): Paquete de instrucciones enviado correctamente!
