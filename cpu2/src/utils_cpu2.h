@@ -17,6 +17,5 @@
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
-// int fetch_instruccion(char *, t_log *);
 
 #endif /* UTILS_H_ */

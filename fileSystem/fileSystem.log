@@ -9,3 +9,6 @@
 [INFO] 14:32:46:595 File System/(3784:3784): Se inicializa el módulo File System
 [INFO] 14:32:46:602 File System/(3784:3784): PUERTO ESCUCHA: 8003
 [INFO] 14:32:46:604 File System/(3784:3784): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.
+[INFO] 16:08:15:002 File System/(9674:9674): Se inicializa el módulo File System
+[INFO] 16:08:15:004 File System/(9674:9674): PUERTO ESCUCHA: 8003
+[INFO] 16:08:15:004 File System/(9674:9674): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.

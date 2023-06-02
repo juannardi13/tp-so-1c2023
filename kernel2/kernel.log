@@ -2,3 +2,5 @@
 
 [INFO] 13:31:09:920 kernel.log/(4855:4855): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
 [ERROR] 13:31:09:921 kernel.log/(4855:4855): Cerrando el módulo Kernel
+[INFO] 15:44:25:595 kernel.log/(7370:7370): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[ERROR] 15:44:25:606 kernel.log/(7370:7370): Cerrando el módulo Kernel

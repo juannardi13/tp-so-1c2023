@@ -13,7 +13,7 @@
 #include<string.h>
 #include<assert.h>
 #include <pthread.h>
-#include<shared-2.h>
+#include <shared-2.h>
 
 #define PUERTO "9120"
 

@@ -19,7 +19,7 @@ int main(void) {
 	int fd_kernel = esperar_cliente(logger, "FILE SYSTEM", fd_file_system);
 
 	while (1) {
-		int cod_op = recibir_operacion(logger, fd_kernel);
+		int cod_op = recibir_operacion(fd_kernel);
 		switch (cod_op) {
 		case MENSAJE:
 			recibir_mensaje(logger, fd_kernel);

@@ -16,7 +16,7 @@ void manejar_conexion(void* void_args) {
 	t_log* logger = args->log;
 	int socket_cliente = args->fd;
 
-//	int codigo_operacion = recibir_operacion_nuevo(socket_cliente);
+	int codigo_operacion = recibir_operacion(socket_cliente);
 
 
 //	  	switch (codigo_operacion) {

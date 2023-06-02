@@ -12,7 +12,7 @@ int main() {
 	ip_kernel = config_get_string_value(config, "IP");
 	puerto_kernel = config_get_string_value(config, "PUERTO_CONSOLA");
 
-	int fd_kernel = iniciar_servidor(logger, "KERNEL", ip_kernel, puerto_kernel);
+	int fd_kernel = iniciar_servidor(puerto_kernel);
 
 //	int fd_kernel = iniciar_servidor(ip_kernel, puerto_kernel);
 	log_info(logger, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", puerto_kernel);

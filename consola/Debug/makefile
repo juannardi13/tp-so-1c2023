@@ -24,7 +24,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := consola_eclipse
+BUILD_ARTIFACT_NAME := consola
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -35,19 +35,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: consola_eclipse
+main-build: consola
 
 # Tool invocations
-consola_eclipse: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+consola: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "consola_eclipse" $(OBJS) $(USER_OBJS) $(LIBS) -lreadline -lcommons -lm -lpthread
+	gcc  -o "consola" $(OBJS) $(USER_OBJS) $(LIBS) -lreadline -lcommons -lm -lpthread
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) consola_eclipse
+	-$(RM) consola
 	-@echo ' '
 
 .PHONY: all clean dependents main-build

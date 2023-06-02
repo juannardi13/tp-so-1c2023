@@ -4,19 +4,22 @@
 
 #define MAX_LEN 256
 
+// int fetch_instruccion(char *, t_log *);
+t_instruccion fetch_instruccion(t_contexto_de_ejecucion); // hay que crear t_contexto_de_ejecucion
+
 typedef struct {
 	char* ax;
 	char* bx;
 	char* cx;
 	char* dx;
-}t_registros;
+} t_registros;
 
 typedef struct {
 	int pid;
 	char** instrucciones;
 	int pc;
 	t_registros registros_pcb;
-}t_pcb_cpu;
+} t_pcb_cpu;
 
 t_pcb_cpu pcb_en_ejecucion;
 /*
@@ -31,7 +34,7 @@ ejecutar_proceso = 0;
 void* conexion_kernel(void* args){
 
 		//Lo que viene es pseudocodigo
-		generar_conexion_con(kernel);
+	contexto	generar_conexion_con(kernel);
 
 	while(1) {
 		wait(recibir_de_kernel);
@@ -120,14 +123,37 @@ int main() {
 
 // ver si se puede eliminar
 
-// PASÉ FETCH_INSTRUCTION A UTILS.C         !!!!!!!!!!!!!!!!!
+/*
+int fetch_instruccion(char* una_instruccion, t_log* logger) {
 
+	int codigo_operacion;
+
+	char* nombre_instruccion = strtok(una_instruccion, " \n");
+
+	if(strcmp(nombre_instruccion, "YIELD") == 0) {
+		codigo_operacion = YIELD;
+	}
+
+	if(strcmp(nombre_instruccion, "SET") == 0) {
+		codigo_operacion = SET;
+		log_error(logger, "Parámetro 1: %s", strtok(una_instruccion, " "));
+		log_error(logger, "Parámetro 2: %s", strtok(una_instruccion, " "));
+	}
+
+	if(strcmp(nombre_instruccion, "EXIT") == 0) {
+		codigo_operacion = EXIT;
+	}
+
+	return codigo_operacion;
+}
+*/
 
 t_instruccion fetch_instruccion(t_contexto_de_ejecucion contexto){
 	t_instruccion instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
 	contexto->pc++;
 	return instruccion_a_ejecutar;
 }
+
 // Falta inicializar t_instrucciones con codigos, desarrollar ejecutar_instruccion
 t_instruccion decode_instruccion(t_instruccion instruccion){
 	switch(instruccion.codigo_instruccion){

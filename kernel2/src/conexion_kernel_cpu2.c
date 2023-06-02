@@ -86,7 +86,7 @@ t_paquete* paquete_contexto_de_ejecucion(t_contexto_de_ejecucion contexto){
 	return paquete;
 }
 
-/* No se usa por ahora
+ No se usa por ahora
 char** deserializar_instrucciones(t_buffer* buffer){
 char** lista_instrucciones;
 void* stream = buffer->stream;

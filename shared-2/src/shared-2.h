@@ -100,12 +100,27 @@ typedef struct {
 void hola(void);
 int iniciar_servidor(char *);
 int esperar_cliente(t_log *, const char *, int);
-int recibir_operacion(t_log *, int);
+int recibir_operacion(int);
 void* recibir_buffer(int *, int);
 char* recibir_mensaje(t_log *, int);
 t_paquete *crear_paquete_consola(void);
 void crear_buffer(t_paquete *);
 void agregar_a_paquete(t_paquete *, void *, int);
 void agregar_a_buffer(t_buffer *, void *, int);
+void enviar_mensaje(char *, int);
+void* serializar_paquete_con_bytes(t_paquete *, int);
+void eliminar_paquete(t_paquete *);
+void *recibir_stream(int *, int);
+t_buffer *inicializar_buffer_con_parametros(uint32_t, void *);
+t_buffer* serializar_paquete(t_paquete *);
+t_paquete *crear_paquete(void);
+void agregar_entero_a_paquete(t_paquete *, int);
+void enviar_paquete(t_paquete *, int);
+t_list *recibir_paquete(int);
+t_paquete* recibe_paquete(int);
+int enviar_datos(int, void *, uint32_t);
+int recibir_datos(int, void *, uint32_t);
+int crear_conexion(t_log *, const char *, char *, char *);
+void liberar_conexion(int);
 
 #endif /* SRC_SHARED_2_H_ */

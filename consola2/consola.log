@@ -18,3 +18,5 @@
 [INFO] 14:54:01:719 consola.log/(5283:5283): Las instrucciones fueron parseadas, listas para enviar a Kernel!
 [INFO] 14:54:05:151 consola.log/(5283:5283): Se creo la conexion con el Kernel
 [INFO] 14:54:07:047 consola.log/(5283:5283): Paquete de instrucciones enviado correctamente!
+[INFO] 16:08:44:421 consola.log/(9721:9721): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 16:08:44:428 consola.log/(9721:9721): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
