@@ -157,7 +157,7 @@ t_instruccion decode_instruccion(t_instruccion instruccion, t_contexto_de_ejecuc
 		ejecutar_MOV_IN(instruccion, contexto); // ojo hay que traducir direccion logica a fisica
 	case MOV_OUT:
 		ejecutar_MOV_OUT(instruccion, contexto);
-	case I/O:
+	case IO:
 		ejecutar_IO(instruccion, contexto);
 	case F_OPEN:
 		ejecutar_F_OPEN(instruccion, contexto);

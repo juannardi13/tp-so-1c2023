@@ -113,6 +113,12 @@ typedef struct {
 	t_pcb* pcb;
 }t_proceso;
 
+typedef struct
+{
+	int block_count;
+	int block_size;
+} t_super_bloque;
+
 void hola(void);
 int iniciar_servidor(char *);
 int esperar_cliente(t_log *, const char *, int);

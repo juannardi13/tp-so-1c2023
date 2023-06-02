@@ -7,6 +7,6 @@
 #include <commons/config.h>
 
 t_log *iniciar_logger(void);
-t_config *iniciar_config(void);
+t_config *iniciar_config(char*);
 
 #endif /* UTILS_FILESYSTEM_H_ */
