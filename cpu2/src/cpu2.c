@@ -1,6 +1,7 @@
-#include "../shared/include/main_shared.h"
-#include "./include/utils_cpu.h"
-#include "../shared/src/main_shared.c"
+#include <shared-2.h>
+
+#include "utils_cpu2.h"
+
 #define MAX_LEN 256
 
 int fetch_instruccion(char* una_instruccion, t_log* logger);
