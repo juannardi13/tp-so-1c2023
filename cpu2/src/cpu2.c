@@ -158,7 +158,7 @@ t_instruccion decode_instruccion(t_instruccion instruccion, t_contexto_de_ejecuc
 	case MOV_OUT:
 		ejecutar_MOV_OUT(instruccion, contexto);
 	case I/O:
-		ejecutar_I/O(instruccion, contexto);
+		ejecutar_IO(instruccion, contexto);
 	case F_OPEN:
 		ejecutar_F_OPEN(instruccion, contexto);
 	case F_CLOSE:
@@ -241,7 +241,51 @@ void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto
 	valor = buscar_en_memoria_direccion_logica(fd_memoria, instruccion->parametro_2); //retorna la direccion
 	asignar_valor_a_registro(valor, intruccion->parametro_1, contexto->registros);
 }
-void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_MOV_OUT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 	char* valor = buscar_en_memoria_direccion_logica(fd_memoria, instruccion->parametro_1);
 	strcpy(valor, instruccion->parametro_2);
 }
+/*void ejecutar_IO(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_OPEN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_CLOSE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_SEEK(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_READ(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_WRITE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_TRUNCATE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_WAIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_SIGNAL(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_CREATE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_DELETE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_YIELD(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_EXIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+*/
