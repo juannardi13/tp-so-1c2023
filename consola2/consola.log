@@ -1,0 +1,7 @@
+[ERROR] 03:41:48:679 consola.log/(7337:7337): No se ha inicializado correctamente el módulo consola
+[ERROR] 03:45:08:146 consola.log/(7391:7391): No se ha inicializado correctamente el módulo consola
+[INFO] 03:48:14:039 consola.log/(7477:7477): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 03:48:14:046 consola.log/(7477:7477): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[ERROR] 12:30:20:029 consola.log/(2958:2958): No se ha inicializado correctamente el módulo consola
+[INFO] 12:31:21:377 consola.log/(2992:2992): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 12:31:21:451 consola.log/(2992:2992): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
