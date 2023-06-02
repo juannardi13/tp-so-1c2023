@@ -60,13 +60,10 @@ typedef struct {
 //actualizo t_instruccion para ordenar parametros y facilitar decode
 typedef struct {
 	nombre_instruccion nombre;
-	int codigo_instruccion;
+
 	char* parametro_1; //tipo char
-	char* parametro_direccion_logica;
-	char* parametro_registro;
-	int parametro_numerico;
-	int parametro_numerico2;
-	t_recurso parametro_recurso;
+	char* parametro_2;
+	char* parametro_3;
 
 } t_instruccion;
 

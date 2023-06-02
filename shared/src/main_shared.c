@@ -52,7 +52,6 @@ void enviar_mensaje(char *mensaje, int socket_cliente) //TP0
 void recibir_mensaje(int socket_cliente,t_log* logger) { //TP0
     int size;
     char* buffer = recibir_buffer(&size, socket_cliente);
-    log_info(logger, "Me llego el mensaje %s", buffer);
     free(buffer);
 }
 
