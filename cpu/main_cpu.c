@@ -5,12 +5,6 @@
 
 int fetch_instruccion(char* una_instruccion, t_log* logger);
 
-typedef struct {
-	char* ax;
-	char* bx;
-	char* cx;
-	char* dx;
-}t_registros;
 
 typedef struct {
 	int pid;
@@ -151,57 +145,43 @@ t_instruccion fetch_instruccion(t_contexto_de_ejecucion contexto){
 	return instruccion_a_ejecutar;
 }
 // Falta inicializar t_instrucciones con codigos, desarrollar ejecutar_instruccion
-t_instruccion decode_instruccion(t_instruccion instruccion){
+t_instruccion decode_instruccion(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 	switch(instruccion.codigo_instruccion){
-	case 0:
-		// SET
-		ejecutar_instruccion(set(instruccion.parametro_registro, instruccion.parametro_numerico));
+	case SET:
+		//TIENE UN RETARDO, CODEARLO USANDO LA CONFIG
+		//esperar_tiempo()
+		ejecutar_SET(instruccion, contexto);
 	}
-	case 1:
-		// MOV_IN
-		ejecutar_instruccion(mov_in(instruccion.parametro_registro, instruccion.parametro_direccion_logica)); // ojo hay que traducir direccion logica a fisica
-	case 2:
-		// MOV_OUT
-		ejecutar_instruccion(mov_out(instruccion.parametro_direccion_logica, instruccion.parametro_registro));
-	case 3:
-		// I/O
-		ejecutar_instruccion(io(instruccion.parametro_numerico));
-	case 4:
-		// F_OPEN
-		ejecutar_instruccion(f_open(instruccion.parametro_1));
-	case 5:
-		// F_CLOSE
-		ejecutar_instruccion(f_close(instruccion.parametro_1));
-	case 6:
-		// F_SEEK
-		ejecutar_instruccion(f_seek(instruccion.parametro_1, instruccion.parametro_numerico));
-	case 7:
-		// F_READ
-		ejecutar_instruccion(f_read(instruccion.parametro_1, instruccion.parametro_direccion_logica, instruccion.parametro_numerico)); // idem anteriores
-	case 8:
-		// F_WRITE
-		ejecutar_instruccion(f_write(instruccion.parametro_1, instruccion.parametro_direccion_logica, instruccion.parametro_numerico));
-	case 9:
-		// F_TRUNCATE
-		ejecutar_instruccion(f_truncate(instruccion.parametro_1, instruccion.parametro_numerico));
-	case 10:
-		// WAIT
-		ejecutar_instruccion(wait(instruccion.parametro_recurso));
-	case 11:
-		// SIGNAL
-		ejecutar_instruccion(signal(instruccion.parametro_recurso));
-	case 12:
-		// CREATE_SEGMENT
-		ejecutar_instruccion(create_segment(instruccion.parametro_numerico, instruccion.parametro_numerico2));
-	case 13:
-		// DELETE_SEGMENT
-		ejecutar_instruccion(delete_segment(instruccion.parametro_numerico));
-	case 14:
-		// YIELD
-		ejecutar_instruccion(yield());
-	case 15:
-		// EXIT
-		ejecutar_instruccion(exit());
+	case MOV_IN:
+		ejecutar_MOV_IN(instruccion, contexto); // ojo hay que traducir direccion logica a fisica
+	case MOV_OUT:
+		ejecutar_MOV_OUT(instruccion, contexto);
+	case I/O:
+		ejecutar_I/O(instruccion, contexto);
+	case F_OPEN:
+		ejecutar_F_OPEN(instruccion, contexto);
+	case F_CLOSE:
+		ejecutar_F_CLOSE(instruccion, contexto);
+	case F_SEEK:
+		ejecutar_F_SEEK(instruccion, contexto);
+	case F_READ:
+		ejecutar_F_READ(instruccion, contexto); // idem anteriores
+	case F_WRITE:
+		ejecutar_F_WRITE(instruccion, contexto);
+	case F_TRUNCATE:
+		ejecutar_F_TRUNCATE(instruccion, contexto);
+	case WAIT:
+		ejecutar_WAIT(instruccion, contexto);
+	case SIGNAL:
+		ejecutar_SIGNAL(instruccion, contexto);
+	case CREATE_SEGMENT:
+		ejecutar_CREATE_SEGMENT(instruccion, contexto);
+	case DELETE_SEGMENT:
+		ejecutar_DELETE_SEGMENT(instruccion, contexto);
+	case YIELD:
+		ejecutar_YIELD(instruccion, contexto);
+	case EXIT:
+		ejecutar_EXIT(instruccion, contexto);
 }
 
 // agregye esta funcion en conexion cpu kernel - ver de donde la eliminamos
@@ -211,3 +191,56 @@ void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion context
 	enviar_paquete(paquete, fd_kernel);
 }
 */
+
+void asignar_valor_a_registro(char* valor, char* registro, t_registros registros){
+	if (registro == "AX"){
+			strcpy(registros->ax, valor);
+		}
+	if (registro == "BX"){
+			strcpy(registros->bx, valor);
+		}
+	if (registro == "CX"){
+			strcpy(registros->cx, valor);
+		}
+	if (registro == "DX"){
+			strcpy(registros->ax, valor);
+		}
+	if (registro == "EAX"){
+			strcpy(registros->eax, valor);
+		}
+	if (registro == "EBX"){
+			strcpy(registros->ebx, valor);
+		}
+	if (registro == "ECX"){
+			strcpy(registros->ecx, valor);
+		}
+	if (registro == "EDX"){
+			strcpy(registros->edx, valor);
+		}
+	if (registro == "RAX"){
+			strcpy(registros->rax, valor);
+		}
+	if (registro == "RBX"){
+			strcpy(registros->rbx, valor);
+		}
+	if (registro == "RCX"){
+			strcpy(registros->rcx, valor);
+		}
+	if (registro == "RDX"){
+			strcpy(registros->rdx, valor);
+		}
+}
+
+void ejecutar_SET(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+	asignar_valor_a_registro(intruccion->parametro_2, intruccion->parametro_1, contexto->registros);
+}
+
+void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+	char* valor;
+	valor = buscar_en_memoria_direccion_logica(fd_memoria, instruccion->parametro_2); //retorna la direccion
+	asignar_valor_a_registro(valor, intruccion->parametro_1, contexto->registros);
+}
+void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+	char* valor = buscar_en_memoria_direccion_logica(fd_memoria, instruccion->parametro_1);
+	strcpy(valor, instruccion->parametro_2);
+}
