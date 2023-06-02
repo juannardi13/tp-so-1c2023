@@ -15,7 +15,7 @@ void manejar_conexion(void* void_args) {
 	t_log* logger = args->log;
 	int socket_cliente = args->fd;
 
-	int codigo_operacion = 2; //recibir_operacion_nuevo(socket_cliente);
+	int codigo_operacion = recibir_operacion_nuevo(socket_cliente);
 
 	  	switch (codigo_operacion) {
 	  	case MENSAJE:
@@ -51,7 +51,7 @@ void manejar_conexion(void* void_args) {
 int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 
 	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
-	int socket_cliente = esperar_cliente(logger, "KERNEL", socket_servidor); // se conecta el cliente
+	int socket_cliente = esperar_cliente(logger, socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
 			//pthread_t hilo_cliente;

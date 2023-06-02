@@ -103,8 +103,8 @@ typedef struct {
 }t_proceso;
 
 int iniciar_servidor(char* ip, char* puerto);
-int esperar_cliente(t_log*, const char*, int socket_servidor);
-int crear_conexion(char* ip, char* puerto);
+int esperar_cliente(t_log*, int socket_servidor);
+int crear_conexion(t_log* logger, const char* nombre, char* ip, char* puerto);
 void liberar_conexion(int socket_cliente);
 void* recibir_buffer(int*, int);
 void crear_buffer(t_paquete*);

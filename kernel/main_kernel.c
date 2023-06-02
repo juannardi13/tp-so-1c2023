@@ -27,7 +27,6 @@ int main() {
 
 	enviar_mensaje("Soy el Kernel y me conecté al File System", fd_file_system);
 	enviar_mensaje("Soy el Kernel y me conecté al CPU", fd_cpu);
-	//enviar_pcb(pcb, fd_cpu);
 	enviar_mensaje("Soy el Kernel y me conecté a la Memoria", fd_memoria);
 */
 	log_error(logger, "Cerrando el módulo Kernel");

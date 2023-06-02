@@ -7,7 +7,7 @@
 
 int recibir_operacion(int socket_cliente) {  // TP0
    int cod_op;
-    if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) != 0)
+    if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) > 0)
         return cod_op;
     else
     {
@@ -17,8 +17,8 @@ int recibir_operacion(int socket_cliente) {  // TP0
 }
 
 int recibir_operacion_nuevo(int socket_cliente) {
-   int cod_op = 0;
-    if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) != 0)
+   int cod_op;
+    if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) > 0)
         return cod_op;
     else
     {
@@ -241,27 +241,28 @@ int recibir_datos(int socket_fd, void *dest, uint32_t size) {
 	return recv(socket_fd, dest, size, 0); // cuantos bytes a recibir y a donde los quiero recibir
 }
 
-int crear_conexion(char *ip, char *puerto)
+int crear_conexion(t_log* logger, const char* name, char *ip, char* puerto)
 {
-    struct addrinfo hints;
-    struct addrinfo *server_info;
+	struct addrinfo hints;
+	struct addrinfo *server_info;
 
-    memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_UNSPEC;
-    hints.ai_socktype = SOCK_STREAM;
+	memset(&hints, 0, sizeof(hints));
+	hints.ai_family = AF_UNSPEC;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_flags = AI_PASSIVE;
 
-    getaddrinfo(ip, puerto, &hints, &server_info);
+	getaddrinfo(ip, puerto, &hints, &server_info);
 
-    int socket_cliente = socket(server_info->ai_family, server_info->ai_socktype, server_info->ai_protocol);
+	// Ahora vamos a crear el socket.
+	int socket_cliente = socket(server_info->ai_family, server_info->ai_socktype, server_info->ai_protocol);
 
-    if (connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen) == -1)
-    {
-        printf("error");
-    }
+	// Ahora que tenemos el socket, vamos a conectarlo
+	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen) == -1)
+		printf("error");
 
-    //freeaddrinfo(server_info);
+	freeaddrinfo(server_info);
 
-    return socket_cliente;
+	return socket_cliente;
 }
 
 
@@ -305,13 +306,11 @@ int iniciar_servidor(char *ip, char *puerto)
     return socket_servidor;
 }
 
-int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
-    struct sockaddr_in dir_cliente;
-    socklen_t tam_direccion = sizeof(struct sockaddr_in);
+int esperar_cliente(t_log* logger, int socket_servidor)
+{
+	// Aceptamos un nuevo cliente
+	int socket_cliente = accept(socket_servidor, NULL, NULL);
+	log_info(logger, "Se conecto un cliente!");
 
-    int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
-
-    log_info(logger, "Cliente conectado (a %s)\n", name);
-
-    return socket_cliente;
+	return socket_cliente;
 }
