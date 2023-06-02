@@ -3,3 +3,9 @@
 [INFO] 00:08:59:182 File System/(7294:7294): Escuchando en (null):8003 (FILE SYSTEM)
 
 [INFO] 00:08:59:184 File System/(7294:7294): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.
+[INFO] 14:27:33:670 File System/(3366:3366): Se inicializa el módulo File System
+[INFO] 14:27:33:676 File System/(3366:3366): IP: (null), PUERTO KERNEL: 8003
+[INFO] 14:27:33:677 File System/(3366:3366): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.
+[INFO] 14:32:46:595 File System/(3784:3784): Se inicializa el módulo File System
+[INFO] 14:32:46:602 File System/(3784:3784): PUERTO ESCUCHA: 8003
+[INFO] 14:32:46:604 File System/(3784:3784): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.

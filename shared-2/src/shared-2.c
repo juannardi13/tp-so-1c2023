@@ -3,7 +3,7 @@
 void hola(void) {
 	printf("Hola!");
 }
-
+/*
 int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
     int socket_servidor;
     struct addrinfo hints, *servinfo;
@@ -44,6 +44,34 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
 
     // Aviso al logger
     log_info(logger, "Escuchando en %s:%s (%s)\n", ip, puerto, name);
+
+    freeaddrinfo(servinfo);
+
+    return socket_servidor;
+}
+*/
+int iniciar_servidor(char *puerto)
+{
+
+    struct addrinfo hints, *servinfo;
+
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_PASSIVE;
+
+    getaddrinfo(NULL, puerto, &hints, &servinfo);
+
+    int socket_servidor = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol);
+
+    if (bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen) != 0)
+    {
+        perror("Fallo el bind");
+        printf("FALLO EL BIND LOSER\n\n");
+        exit(1);
+    }
+
+    listen(socket_servidor, SOMAXCONN);
 
     freeaddrinfo(servinfo);
 

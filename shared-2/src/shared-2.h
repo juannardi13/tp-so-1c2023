@@ -97,7 +97,7 @@ typedef struct {
 }t_proceso;
 
 void hola(void);
-int iniciar_servidor(t_log*, const char *, char *ip, char *);
+int iniciar_servidor(char *);
 int esperar_cliente(t_log *, const char *, int);
 int recibir_operacion(t_log *, int);
 void* recibir_buffer(int *, int);
