@@ -21,6 +21,30 @@ t_config* iniciar_config(void) {
 
 	return nuevo_config;
 }
+/*
+int fetch_instruccion(char* una_instruccion, t_log* logger) {
+
+	int codigo_operacion;
+
+	char* nombre_instruccion = strtok(una_instruccion, " \n");
+
+	if(strcmp(nombre_instruccion, "YIELD") == 0) {
+		codigo_operacion = YIELD;
+	}
+
+	if(strcmp(nombre_instruccion, "SET") == 0) {
+		codigo_operacion = SET;
+		log_error(logger, "Parámetro 1: %s", strtok(una_instruccion, " "));
+		log_error(logger, "Parámetro 2: %s", strtok(una_instruccion, " "));
+	}
+
+	if(strcmp(nombre_instruccion, "EXIT") == 0) {
+		codigo_operacion = EXIT;
+	}
+
+	return codigo_operacion;
+}
+*/
 //Revisar
 //char** recibir_instrucciones(t_buffer){
 //char** lista_instrucciones = deserializar_instrucciones(t_buffer);
