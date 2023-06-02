@@ -201,3 +201,105 @@
 [INFO] 03:03:57:453 consola.log/(46140:46140): Hola! Se inicializo el modulo cliente Consola.
 [INFO] 03:03:58:101 consola.log/(46140:46140): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
 [INFO] 03:04:01:196 consola.log/(46140:46140): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:22:15:190 consola.log/(47348:47348): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:22:15:190 consola.log/(47348:47348): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:22:16:349 consola.log/(47348:47348): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:22:18:285 consola.log/(47348:47348): Se creo la conexion con el Kernel
+[WARNING] 04:22:35:676 consola.log/(47348:47348): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:22:35:677 consola.log/(47348:47348): Paquete de instrucciones enviado correctamente!
+[INFO] 04:31:21:651 consola.log/(47943:47943): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:31:21:651 consola.log/(47943:47943): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:31:21:831 consola.log/(47943:47943): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:31:22:012 consola.log/(47943:47943): Se creo la conexion con el Kernel
+[WARNING] 04:31:24:666 consola.log/(47943:47943): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:31:24:667 consola.log/(47943:47943): Paquete de instrucciones enviado correctamente!
+[INFO] 04:37:25:034 consola.log/(48177:48177): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:37:25:034 consola.log/(48177:48177): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:37:25:675 consola.log/(48177:48177): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:37:26:919 consola.log/(48177:48177): Se creo la conexion con el Kernel
+[WARNING] 04:37:28:451 consola.log/(48177:48177): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:37:28:451 consola.log/(48177:48177): Paquete de instrucciones enviado correctamente!
+[INFO] 04:37:52:329 consola.log/(48230:48230): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:37:52:329 consola.log/(48230:48230): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:37:52:506 consola.log/(48230:48230): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:37:52:659 consola.log/(48230:48230): Se creo la conexion con el Kernel
+[WARNING] 04:37:52:810 consola.log/(48230:48230): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:37:52:810 consola.log/(48230:48230): Paquete de instrucciones enviado correctamente!
+[INFO] 04:42:10:015 consola.log/(48430:48430): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:42:10:015 consola.log/(48430:48430): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:42:10:253 consola.log/(48430:48430): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:42:10:750 consola.log/(48430:48430): Se creo la conexion con el Kernel
+[WARNING] 04:42:14:968 consola.log/(48430:48430): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:42:14:968 consola.log/(48430:48430): Paquete de instrucciones enviado correctamente!
+[INFO] 04:42:47:564 consola.log/(48483:48483): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:42:47:564 consola.log/(48483:48483): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:42:47:714 consola.log/(48483:48483): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:42:47:838 consola.log/(48483:48483): Se creo la conexion con el Kernel
+[WARNING] 04:45:36:935 consola.log/(48483:48483): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:45:36:935 consola.log/(48483:48483): Paquete de instrucciones enviado correctamente!
+[INFO] 04:45:38:564 consola.log/(48644:48644): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:45:38:564 consola.log/(48644:48644): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:45:38:974 consola.log/(48644:48644): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:45:39:356 consola.log/(48644:48644): Se creo la conexion con el Kernel
+[WARNING] 04:45:41:148 consola.log/(48644:48644): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:45:41:148 consola.log/(48644:48644): Paquete de instrucciones enviado correctamente!
+[INFO] 04:48:23:808 consola.log/(48718:48718): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:48:23:809 consola.log/(48718:48718): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:48:23:959 consola.log/(48718:48718): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:48:24:112 consola.log/(48718:48718): Se creo la conexion con el Kernel
+[WARNING] 04:48:24:235 consola.log/(48718:48718): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:48:24:235 consola.log/(48718:48718): Paquete de instrucciones enviado correctamente!
+[INFO] 04:51:04:266 consola.log/(48916:48916): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:51:04:266 consola.log/(48916:48916): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:51:04:531 consola.log/(48916:48916): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:51:05:059 consola.log/(48916:48916): Se creo la conexion con el Kernel
+[WARNING] 04:51:12:174 consola.log/(48916:48916): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:51:12:174 consola.log/(48916:48916): Paquete de instrucciones enviado correctamente!
+[INFO] 04:56:24:237 consola.log/(49029:49029): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:56:24:237 consola.log/(49029:49029): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:56:24:389 consola.log/(49029:49029): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:56:24:540 consola.log/(49029:49029): Se creo la conexion con el Kernel
+[WARNING] 04:56:31:111 consola.log/(49029:49029): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:56:31:111 consola.log/(49029:49029): Paquete de instrucciones enviado correctamente!
+[INFO] 04:58:19:371 consola.log/(49078:49078): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:58:19:371 consola.log/(49078:49078): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:58:19:637 consola.log/(49078:49078): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:58:19:818 consola.log/(49078:49078): Se creo la conexion con el Kernel
+[WARNING] 04:58:22:299 consola.log/(49078:49078): Cantidad de Instrucciones enviadas: 5
+[INFO] 04:58:22:299 consola.log/(49078:49078): Paquete de instrucciones enviado correctamente!
+[INFO] 04:58:57:590 consola.log/(49149:49149): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:58:57:590 consola.log/(49149:49149): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 04:58:58:029 consola.log/(49149:49149): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 04:58:59:274 consola.log/(49149:49149): Se creo la conexion con el Kernel
+[WARNING] 05:01:22:460 consola.log/(49149:49149): Cantidad de Instrucciones enviadas: 5
+[INFO] 05:01:22:460 consola.log/(49149:49149): Paquete de instrucciones enviado correctamente!
+[INFO] 05:01:23:801 consola.log/(49212:49212): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:01:23:801 consola.log/(49212:49212): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 05:01:24:153 consola.log/(49212:49212): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 05:01:24:564 consola.log/(49212:49212): Se creo la conexion con el Kernel
+[WARNING] 05:24:50:538 consola.log/(49212:49212): Cantidad de Instrucciones enviadas: 5
+[INFO] 05:24:50:538 consola.log/(49212:49212): Paquete de instrucciones enviado correctamente!
+[INFO] 05:24:52:511 consola.log/(49530:49530): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:24:52:512 consola.log/(49530:49530): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 05:24:53:986 consola.log/(49530:49530): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 05:24:57:274 consola.log/(49530:49530): Se creo la conexion con el Kernel
+[WARNING] 05:51:06:252 consola.log/(49530:49530): Cantidad de Instrucciones enviadas: 5
+[INFO] 05:51:06:252 consola.log/(49530:49530): Paquete de instrucciones enviado correctamente!
+[INFO] 05:52:48:825 consola.log/(49649:49649): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:52:48:826 consola.log/(49649:49649): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 05:52:53:638 consola.log/(49649:49649): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 05:52:55:171 consola.log/(49649:49649): Se creo la conexion con el Kernel
+[INFO] 05:52:58:275 consola.log/(49650:49650): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:52:58:275 consola.log/(49650:49650): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 05:52:58:829 consola.log/(49650:49650): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 05:52:59:787 consola.log/(49650:49650): Se creo la conexion con el Kernel
+[INFO] 05:53:01:436 consola.log/(49652:49652): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:53:01:436 consola.log/(49652:49652): Se ha leido el archivo de config con exito, con los valores PUERTO: 9120 e IP: 127.0.0.1.
+[INFO] 05:53:01:933 consola.log/(49652:49652): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 05:53:02:976 consola.log/(49652:49652): Se creo la conexion con el Kernel
+[WARNING] 05:53:30:376 consola.log/(49652:49652): Cantidad de Instrucciones enviadas: 5
+[INFO] 05:53:30:376 consola.log/(49652:49652): Paquete de instrucciones enviado correctamente!
+[WARNING] 05:53:31:198 consola.log/(49650:49650): Cantidad de Instrucciones enviadas: 5
+[INFO] 05:53:31:198 consola.log/(49650:49650): Paquete de instrucciones enviado correctamente!
+[WARNING] 05:53:31:962 consola.log/(49649:49649): Cantidad de Instrucciones enviadas: 5
+[INFO] 05:53:31:962 consola.log/(49649:49649): Paquete de instrucciones enviado correctamente!
