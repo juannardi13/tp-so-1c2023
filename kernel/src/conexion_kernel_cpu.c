@@ -1,12 +1,12 @@
 #include"../include/utils_kernel.h"
 #include"../../shared/include/main_shared.h"
-
+/*
 typedef enum {
 	NEW,
 	READY,
 	EXEC,
 	BLOCK,
-	EXIT
+	EXT //Queda como EXT porque si no tiene conflicto con el tipo de la instruccion.
 }t_estado
 
 // agrego registros faltantes
@@ -100,13 +100,13 @@ memcpy(lista_instrucciones, stream, tamanio_lista);
 return lista_instrucciones;
 }
 */
-
+/*
 // ENVIA CONTEXTO CPU A KERNEL, ver como implementar en ejecutar_instruccion
 void enviar_contexto(t_contexto_de_ejecucion contexto, int fd_kernel){
 	t_paquete* paquete_a_enviar = paquete_contexto_de_ejecucion(contexto);
 	enviar_paquete(paquete, fd_kernel);
 	free(paquete);
 	eliminar_paquete(paquete);
-}
+}*/
 
 

@@ -1,14 +1,47 @@
-[INFO] 16:10:06:239 kernel.log/(139372:139372): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
-[INFO] 16:11:15:081 kernel.log/(139372:139402): Me llego el tamanio y las instrucciones
+[INFO] 01:46:16:810 kernel.log/(43084:43084): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:46:41:142 kernel.log/(43084:43113): Me llegaron el tamanio y las instrucciones
+[INFO] 01:46:41:142 kernel.log/(43084:43113): Consola deserializada, se arma el PCB
 
-[INFO] 16:11:15:081 kernel.log/(139372:139402): Consola deserializada, se arma el PCB
+[INFO] 01:46:41:142 kernel.log/(43084:43113): PCB id[1000] armada -> agregar proceso a new
+[INFO] 01:48:10:660 kernel.log/(43279:43279): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:48:15:474 kernel.log/(43279:43281): Me llegaron el tamanio y las instrucciones
+[INFO] 01:48:15:474 kernel.log/(43279:43281): Consola deserializada, se arma el PCB
 
-[INFO] 16:11:15:081 kernel.log/(139372:139402): PCB id[1000] armada -> agregar proceso a new y arrancar con la planificacion
+[INFO] 01:48:15:474 kernel.log/(43279:43281): PCB id[1000] armada -> agregar proceso a new
+[INFO] 01:48:24:064 kernel.log/(43291:43291): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:48:31:059 kernel.log/(43291:43293): Me llegaron el tamanio y las instrucciones
+[INFO] 01:48:31:059 kernel.log/(43291:43293): Consola deserializada, se arma el PCB
 
-[INFO] 16:16:14:925 kernel.log/(139449:139449): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
-[INFO] 16:16:34:086 kernel.log/(139449:139485): Me llego el tamanio y las instrucciones
+[INFO] 01:48:31:059 kernel.log/(43291:43293): PCB id[1000] armada -> agregar proceso a new
+[INFO] 01:50:45:191 kernel.log/(43349:43349): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:51:03:513 kernel.log/(43349:43378): Me llegaron el tamanio y las instrucciones
+[INFO] 01:51:03:516 kernel.log/(43349:43378): Consola deserializada, se arma el PCB
 
-[INFO] 16:16:34:088 kernel.log/(139449:139485): Consola deserializada, se arma el PCB
+[INFO] 01:51:03:516 kernel.log/(43349:43378): PCB id[1000] armada -> agregar proceso a new
+[INFO] 01:53:05:651 kernel.log/(43655:43655): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:53:36:384 kernel.log/(43655:43696): Me llegaron el tamanio y las instrucciones
+[INFO] 01:53:36:452 kernel.log/(43655:43696): Consola deserializada, se arma el PCB
 
-[INFO] 16:16:34:088 kernel.log/(139449:139485): PCB id[1000] armada -> agregar proceso a new y arrancar con la planificacion
+[INFO] 01:53:36:452 kernel.log/(43655:43696): PCB id[1000] armada -> agregar proceso a new
+[INFO] 01:54:39:191 kernel.log/(43895:43895): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:56:06:107 kernel.log/(43895:43937): Me llegaron el tamanio y las instrucciones
+[INFO] 01:56:06:107 kernel.log/(43895:43937): Consola deserializada, se arma el PCB
 
+[INFO] 01:56:06:107 kernel.log/(43895:43937): PCB id[1000] armada -> agregar proceso a new
+[INFO] 01:58:03:281 kernel.log/(44263:44263): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 01:58:51:338 kernel.log/(44263:44263): Me llegaron el tamanio y las instrucciones
+[INFO] 01:59:59:808 kernel.log/(44263:44263): Consola deserializada, se arma el PCB
+
+[INFO] 02:00:00:655 kernel.log/(44263:44263): PCB id[1000] armada -> agregar proceso a new
+[INFO] 02:00:32:620 kernel.log/(44419:44419): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 02:00:57:869 kernel.log/(44419:44419): Me llegaron el tamanio y las instrucciones
+[INFO] 02:03:23:388 kernel.log/(44419:44419): Consola deserializada, se arma el PCB
+
+[INFO] 02:03:24:177 kernel.log/(44419:44419): PCB id[1000] armada -> agregar proceso a new
+[INFO] 02:07:14:503 kernel.log/(44746:44746): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 02:07:51:589 kernel.log/(44746:44746): Me llegaron el tamanio y las instrucciones
+[INFO] 02:17:04:047 kernel.log/(45193:45193): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 02:17:24:765 kernel.log/(45193:45193): Me llegaron el tamanio y las instrucciones
+[INFO] 02:18:23:484 kernel.log/(45193:45193): Consola deserializada, se arma el PCB
+
+[INFO] 02:18:25:341 kernel.log/(45193:45193): PCB id[1000] armada -> agregar proceso a new

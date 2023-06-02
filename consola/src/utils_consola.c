@@ -1,5 +1,7 @@
 #include "../include/utils_consola.h"
 #include "../../shared/include/main_shared.h"
+#include <commons/log.h>
+#include <commons/config.h>
 
 
 t_log* iniciar_logger(void){
@@ -88,11 +90,11 @@ t_list* parsear_instrucciones(char* ruta_archivo_pseudocodigo, t_log* logger) {
 		if(strcmp(palabras[0], "SET") == 0){
 			parametro1 = palabras[1];
 			parametro2 = palabras[2];
-			list_add(instrucciones, armar_instruccion(SET, parametro1, parametro2, 0));
+			list_add(instrucciones, armar_instruccion(SET, parametro1, parametro2, "0"));
 		} else if(strcmp(palabras[0], "YIELD") == 0) {
-			list_add(instrucciones, armar_instruccion(YIELD, 0, 0, 0));
+			list_add(instrucciones, armar_instruccion(YIELD, "0", "0", "0"));
 		} else if(string_equals_ignore_case(palabras[0], "EXIT")) {
-			list_add(instrucciones, armar_instruccion(EXIT, 0, 0, 0));
+			list_add(instrucciones, armar_instruccion(EXIT, "0", "0", "0"));
 		} //Cada vez que quiera agregar instrucciones anido mas else if's
 
 		indice_split++;
@@ -156,7 +158,7 @@ char* leer_archivo_pseudocodigo(char *ruta, t_log* logger) {
     }
 
     // Imprimir el string
-    printf("Contenido: %s\n", cadena);
+    printf("Contenido: \n%s\n", cadena);
 
     free(cadena);
 

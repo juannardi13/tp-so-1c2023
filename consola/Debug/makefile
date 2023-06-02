@@ -41,7 +41,7 @@ main-build: consola_eclipse
 consola_eclipse: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "consola_eclipse" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "consola_eclipse" $(OBJS) $(USER_OBJS) $(LIBS) -lreadline -lcommons -lm -lpthread
 	@echo 'Finished building target: $@'
 	@echo ' '
 
