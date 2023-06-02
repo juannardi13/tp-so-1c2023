@@ -13,6 +13,14 @@
 #include<assert.h>
 
 
+typedef enum {
+	NEW,
+	READY,
+	EXEC,
+	BLOCK,
+	EXT //Queda como EXT porque si no tiene conflicto con el tipo de la instruccion.
+}estado_proceso;
+
 typedef enum
 {
 	MENSAJE,
@@ -70,6 +78,7 @@ typedef struct {
 typedef struct {
 	int pid;
 	t_list* instrucciones;
+	estado_proceso estado;
 	int pc;
 	int tamanio;
 	//t_registros registros_cpu;
@@ -94,7 +103,7 @@ typedef struct {
 }t_proceso;
 
 int iniciar_servidor(char* ip, char* puerto);
-int esperar_cliente(int socket_servidor);
+int esperar_cliente(t_log*, const char*, int socket_servidor);
 int crear_conexion(char* ip, char* puerto);
 void liberar_conexion(int socket_cliente);
 void* recibir_buffer(int*, int);

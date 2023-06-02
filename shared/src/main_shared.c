@@ -208,7 +208,7 @@ t_paquete* recibe_paquete(int socket){
 	int size;
 	void *stream;
 
-	op_code codigo=recibir_operacion(socket);
+	//op_code codigo=recibir_operacion(socket);
 	t_paquete* paquete=crear_paquete_consola();
 
 	stream = recibir_stream(&size, socket);
@@ -305,13 +305,13 @@ int iniciar_servidor(char *ip, char *puerto)
     return socket_servidor;
 }
 
-int esperar_cliente(int socket_servidor) {
-	struct sockaddr_in dir_cliente;
-	socklen_t tam_direccion = sizeof(struct sockaddr_in);
+int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
+    struct sockaddr_in dir_cliente;
+    socklen_t tam_direccion = sizeof(struct sockaddr_in);
 
-	int socket_cliente = accept(socket_servidor, (struct sockaddr *) &dir_cliente, &tam_direccion);
-	if(socket_cliente == -1)
-		return -1;
+    int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
 
-	return socket_cliente;
+    log_info(logger, "Cliente conectado (a %s)\n", name);
+
+    return socket_cliente;
 }
