@@ -5,10 +5,8 @@
 #include <stdlib.h>
 #include <commons/log.h>
 #include <commons/config.h>
+#include <shared-2.h>
 
-#include "utils.h"
-
-t_log* iniciar_logger(void);
-t_config* iniciar_config(void);
+#include "utils-fileSystem.h"
 
 #endif /* FILESYSTEM_H_ */

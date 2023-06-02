@@ -1,0 +1,5 @@
+[INFO] 00:08:59:177 File System/(7294:7294): Se inicializa el módulo File System
+[INFO] 00:08:59:181 File System/(7294:7294): IP: (null), PUERTO KERNEL: 8003
+[INFO] 00:08:59:182 File System/(7294:7294): Escuchando en (null):8003 (FILE SYSTEM)
+
+[INFO] 00:08:59:184 File System/(7294:7294): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.
