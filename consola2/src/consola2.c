@@ -40,6 +40,7 @@ int main(int argc, char** argv) {
 	serializar_instrucciones(instrucciones, paquete_de_instrucciones); //Esta función ya agrega al paquete las instrucciones.
 
 	//Inicialización de Consola como cliente
+	// int conexion_kernel = crear_conexion(logger, "CONSOLA", ip_kernel, puerto_kernel);
 	int conexion_kernel = crear_conexion(logger, "CONSOLA", ip_kernel, puerto_kernel);
 	log_info(logger, "Se creo la conexion con el Kernel");
 

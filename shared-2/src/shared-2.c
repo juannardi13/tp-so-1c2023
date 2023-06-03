@@ -89,15 +89,16 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
     return socket_cliente;
 }
 
-int recibir_operacion(int socket_cliente) {
-   int cod_op;
-    if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) > 0)
-        return cod_op;
-    else
-    {
-        close(socket_cliente);
-        return -1;
-    }
+int recibir_operacion(int socket_cliente)
+{
+	int cod_op = 33;
+	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
+		return cod_op;
+	else
+	{
+		close(socket_cliente);
+		return -1;
+	}
 }
 
 void* recibir_buffer(int* size, int socket_cliente)
@@ -306,7 +307,7 @@ int crear_conexion(t_log* logger, const char* name, char *ip, char* puerto)
 
 	// Ahora que tenemos el socket, vamos a conectarlo
 	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen) == -1) {
-		printf("\nNo se ha podido conectar");
+		perror("\nNo se ha podido conectar");
 		exit(1);
 	}
 

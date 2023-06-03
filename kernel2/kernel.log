@@ -9,3 +9,28 @@
 [INFO] 14:48:15:006 kernel.log/(2334:2334): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
 [ERROR] 14:48:15:013 kernel.log/(2334:2334): Cerrando el módulo Kernel
 [INFO] 15:13:35:922 kernel.log/(3416:3416): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:29:36:017 kernel.log/(5293:5293): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:30:37:987 kernel.log/(5314:5314): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:31:41:986 kernel.log/(5375:5375): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:32:35:987 kernel.log/(5414:5414): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:33:14:876 kernel.log/(5470:5470): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:37:54:035 kernel.log/(5740:5740): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:38:24:996 kernel.log/(5759:5759): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:39:00:256 kernel.log/(5796:5796): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:39:25:037 kernel.log/(5859:5859): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:40:25:063 kernel.log/(5924:5924): Kernel inicializado, esperando a recibir a la consola en el PUERTO 9120.
+[INFO] 15:57:49:534 kernel.log/(7077:7077): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 15:58:17:731 kernel.log/(7077:7077): Cliente conectado (a KERNEL)
+
+[INFO] 16:08:38:579 kernel.log/(7320:7320): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:09:17:004 kernel.log/(7320:7320): Cliente conectado (a KERNEL)
+
+[INFO] 16:15:43:249 kernel.log/(7572:7572): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:15:54:296 kernel.log/(7572:7572): Cliente conectado (a KERNEL)
+
+[INFO] 16:18:40:626 kernel.log/(7783:7783): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:18:50:302 kernel.log/(7783:7783): Cliente conectado (a KERNEL)
+
+[INFO] 16:27:07:947 kernel.log/(8442:8442): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:28:04:343 kernel.log/(8442:8442): Cliente conectado (a KERNEL)
+
