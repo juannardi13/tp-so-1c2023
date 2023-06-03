@@ -20,3 +20,28 @@
 [INFO] 14:54:07:047 consola.log/(5283:5283): Paquete de instrucciones enviado correctamente!
 [INFO] 16:08:44:421 consola.log/(9721:9721): Hola! Se inicializo el modulo cliente Consola.
 [INFO] 16:08:44:428 consola.log/(9721:9721): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:17:38:589 consola.log/(3891:3891): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 15:17:38:603 consola.log/(3891:3891): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:17:44:283 consola.log/(3891:3891): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 15:17:47:405 consola.log/(3891:3891): Se creo la conexion con el Kernel
+[INFO] 15:21:08:293 consola.log/(4127:4127): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 15:21:08:297 consola.log/(4127:4127): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:21:09:585 consola.log/(4127:4127): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 15:21:10:666 consola.log/(4127:4127): Se creo la conexion con el Kernel
+[WARNING] 15:21:28:348 consola.log/(4127:4127): Cantidad de Instrucciones enviadas: 5
+[INFO] 15:21:28:348 consola.log/(4127:4127): Paquete de instrucciones enviado correctamente!
+[INFO] 15:23:02:950 consola.log/(4340:4340): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 15:23:02:958 consola.log/(4340:4340): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:23:02:960 consola.log/(4340:4340): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 15:23:02:960 consola.log/(4340:4340): Se creo la conexion con el Kernel
+[WARNING] 15:23:07:866 consola.log/(4340:4340): Cantidad de Instrucciones enviadas: 5
+[INFO] 15:23:07:866 consola.log/(4340:4340): Paquete de instrucciones enviado correctamente!
+[INFO] 15:24:49:809 consola.log/(4876:4876): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 15:24:49:815 consola.log/(4876:4876): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:24:49:822 consola.log/(4876:4876): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 15:25:35:967 consola.log/(4957:4957): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 15:25:35:973 consola.log/(4957:4957): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:25:35:974 consola.log/(4957:4957): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 15:26:24:750 consola.log/(5143:5143): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 15:26:24:753 consola.log/(5143:5143): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 15:26:24:756 consola.log/(5143:5143): Las instrucciones fueron parseadas, listas para enviar a Kernel!

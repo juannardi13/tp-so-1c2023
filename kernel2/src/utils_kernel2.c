@@ -42,29 +42,29 @@ bool generar_conexiones(t_config* config, t_log* logger, int* fd_file_system, in
     char* ip_memoria = config_get_string_value(config, "IP");
     char* ip_file_system = config_get_string_value(config, "IP");
 
-//    *fd_cpu = crear_conexion(
-//    		logger,
-//			"CPU",
-//            ip_cpu,
-//            puerto_cpu
-//     );
-//
-//
-//    *fd_memoria = crear_conexion(
-//        logger,
-//		"MEMORIA",
-//    	ip_memoria,
-//        puerto_memoria
-//    );
-//
-//    *fd_file_system = crear_conexion(
-//    	logger,
-//		"FILE SYSTEM",
-//        ip_file_system,
-//        puerto_file_system
-//    );
-//
-//    return *fd_memoria != 0 && *fd_cpu != 0 && *fd_file_system != 0;
+    *fd_cpu = crear_conexion(
+    		logger,
+			"CPU",
+            ip_cpu,
+            puerto_cpu
+     );
+
+
+    *fd_memoria = crear_conexion(
+        logger,
+		"MEMORIA",
+    	ip_memoria,
+        puerto_memoria
+    );
+
+    *fd_file_system = crear_conexion(
+    	logger,
+		"FILE SYSTEM",
+        ip_file_system,
+        puerto_file_system
+    );
+
+    return *fd_memoria != 0 && *fd_cpu != 0 && *fd_file_system != 0;
 }
 
 t_instruccion recibir_instruccion(t_log* logger, int conexion_consola) {

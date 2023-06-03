@@ -89,11 +89,11 @@ t_list* parsear_instrucciones(char* ruta_archivo_pseudocodigo, t_log* logger) {
 		if(strcmp(palabras[0], "SET") == 0){
 			parametro1 = palabras[1];
 			parametro2 = palabras[2];
-//			list_add(instrucciones, armar_instruccion(SET, parametro1, parametro2, "0"));
+			list_add(instrucciones, armar_instruccion(SET, parametro1, parametro2, "0"));
 		} else if(strcmp(palabras[0], "YIELD") == 0) {
-//			list_add(instrucciones, armar_instruccion(YIELD, "0", "0", "0"));
+			list_add(instrucciones, armar_instruccion(YIELD, "0", "0", "0"));
 		} else if(string_equals_ignore_case(palabras[0], "EXIT")) {
-//			list_add(instrucciones, armar_instruccion(EXIT, "0", "0", "0"));
+			list_add(instrucciones, armar_instruccion(EXIT, "0", "0", "0"));
 		} //Cada vez que quiera agregar instrucciones anido mas else if's
 
 		indice_split++;
@@ -106,16 +106,16 @@ t_list* parsear_instrucciones(char* ruta_archivo_pseudocodigo, t_log* logger) {
 	return instrucciones;
 }
 
-//t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char* parametro_2, char* parametro_3) {
-//	t_instruccion* instruccion= malloc(sizeof(t_instruccion));
-//	instruccion->nombre = id;
-//	instruccion->parametro_1 = parametro_1;
-//	instruccion->parametro_2 = parametro_2;
-//	instruccion->parametro_3 = parametro_3;
-//
-//	return instruccion;
-//}
-//
+t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char* parametro_2, char* parametro_3) {
+	t_instruccion* instruccion= malloc(sizeof(t_instruccion));
+	instruccion->nombre = id;
+	instruccion->parametro_1 = parametro_1;
+	instruccion->parametro_2 = parametro_2;
+	instruccion->parametro_3 = parametro_3;
+
+	return instruccion;
+}
+
 void serializar_instrucciones(t_list *instrucciones, t_paquete *paquete) {
 
 	for(int i=0; i<list_size(instrucciones); i++) {

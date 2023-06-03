@@ -19,33 +19,33 @@ void manejar_conexion(void* void_args) {
 	int codigo_operacion = recibir_operacion(socket_cliente);
 
 
-//	  	switch (codigo_operacion) {
-//	  	case MENSAJE:
-//	  		recibir_mensaje(socket_cliente, logger);
-//	  		break;
-//	  	case PAQUETE_CONSOLA:
-//	  		log_info(logger, "Me llegaron el tamanio y las instrucciones");
-//	  		//pthread_mutex_lock(&mutex_consola);
-//			consola = deserializar_consola(socket_cliente);
-//			//pthread_mutex_unlock(&mutex_consola);
-//	  		log_info(logger, "Consola deserializada, se arma el PCB\n");
-//	  		t_proceso* procesos = malloc(sizeof(t_proceso));
-//	  		procesos->pcb = malloc(sizeof(t_pcb));
-//			//pthread_mutex_lock(&mutex_consola);
-//	  		procesos->pcb = crear_estructura_pcb(consola);
-//			//pthread_mutex_unlock(&mutex_consola);
-//	  		procesos->socket = socket_cliente;
-//	  		log_info(logger, "PCB id[%d] armada -> agregar proceso a new",procesos->pcb->pid);
-//	  		agregar_pcb_a_new(procesos, logger);
-//	  		break;
-//	  	case PAQUETE:
-//			log_info(logger, "Me llego el paquete:\n");
-//	  		break;
-//
-//	      default:
-//	          log_warning(logger, "Operacion desconocida \n");
-//	          break;
-//	  	}
+	  	switch (codigo_operacion) {
+	  	case MENSAJE:
+	  		recibir_mensaje(logger, socket_cliente);
+	  		break;
+	  	case PAQUETE_CONSOLA:
+	  		log_info(logger, "Me llegaron el tamanio y las instrucciones");
+	  		//pthread_mutex_lock(&mutex_consola);
+			consola = deserializar_consola(socket_cliente);
+			//pthread_mutex_unlock(&mutex_consola);
+	  		log_info(logger, "Consola deserializada, se arma el PCB\n");
+	  		t_proceso* procesos = malloc(sizeof(t_proceso));
+	  		procesos->pcb = malloc(sizeof(t_pcb));
+			//pthread_mutex_lock(&mutex_consola);
+	  		procesos->pcb = crear_estructura_pcb(consola);
+			//pthread_mutex_unlock(&mutex_consola);
+	  		procesos->socket = socket_cliente;
+	  		log_info(logger, "PCB id[%d] armada -> agregar proceso a new",procesos->pcb->pid);
+	  		agregar_pcb_a_new(procesos, logger);
+	  		break;
+	  	case PAQUETE:
+			log_info(logger, "Me llego el paquete:\n");
+	  		break;
+
+	      default:
+	          log_warning(logger, "Operacion desconocida \n");
+	          break;
+	  	}
 
 }
 
@@ -53,20 +53,20 @@ void manejar_conexion(void* void_args) {
 int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 
 	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
-//	int socket_cliente = esperar_cliente(logger, socket_servidor); // se conecta el cliente
+	int socket_cliente = esperar_cliente(logger,"KERNEL", socket_servidor); // se conecta el cliente
 
-//		if(socket_cliente != -1) {
-//			//pthread_t hilo_cliente;
-//			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
-//			args->fd = socket_servidor;
-//			args->log = logger;
-//			manejar_conexion(args);
-//			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-//			//pthread_detach(hilo_cliente);
-//			return 1;
-//		} else {
-//			log_error(logger, "Error al escuchar clientes... Finalizando servidor \n"); // log para fallo de comunicaciones
-//		}
+		if(socket_cliente != -1) {
+			//pthread_t hilo_cliente;
+			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
+			args->fd = socket_servidor;
+			args->log = logger;
+			manejar_conexion(args);
+			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			//pthread_detach(hilo_cliente);
+			return 1;
+		} else {
+			log_error(logger, "Error al escuchar clientes... Finalizando servidor \n"); // log para fallo de comunicaciones
+		}
 
 
 	return 0;

@@ -14,7 +14,7 @@ int main() {
 
 	int fd_kernel = iniciar_servidor(puerto_kernel);
 
-//	int fd_kernel = iniciar_servidor(ip_kernel, puerto_kernel);
+	//int fd_kernel = iniciar_servidor(ip_kernel, puerto_kernel);
 	log_info(logger, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", puerto_kernel);
 
 	while(atender_clientes_kernel(fd_kernel, logger));
