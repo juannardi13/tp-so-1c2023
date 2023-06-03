@@ -20,3 +20,8 @@
 [INFO] 22:22:58:104 File System/(10941:10941): Se inicializa el módulo File System
 [INFO] 22:22:58:104 File System/(10941:10941): PUERTO ESCUCHA: 8003
 [INFO] 22:22:58:104 File System/(10941:10941): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.
+[INFO] 01:11:10:922 File System/(2527:2527): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:11:10:930 File System/(2527:2527): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:11:10:931 File System/(2527:2527): Se inicializa el módulo File System
+[INFO] 01:11:10:931 File System/(2527:2527): PUERTO ESCUCHA: 8003
+[INFO] 01:11:10:932 File System/(2527:2527): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.

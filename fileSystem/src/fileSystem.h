@@ -6,6 +6,7 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include <shared-2.h>
+#include <commons/bitarray.h>
 
 #include "utils-fileSystem.h"
 
