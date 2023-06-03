@@ -279,13 +279,15 @@ void ejecutar_SET(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 
 void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 	// par1 = registro, par2 = dir logica
-	char* valor;
-	valor = buscar_direccion_logica(fd_memoria, instruccion->parametro_2); //retorna el puntero, lo hace memoria
-	asignar_valor_a_registro(valor, intruccion->parametro_1, contexto->registros);
+	//								retorna el puntero, lo hace memoria
+	//						  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	asignar_valor_a_registro(buscar_direccion_logica(fd_memoria, instruccion->parametro_2), intruccion->parametro_1, contexto->registros);
 }
 void ejecutar_MOV_OUT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 	// par1 = direccion logica, par2 = registro
-	escribir_valor_a_partir_de_direccion_logica(fd_memoria,valor_de_registro(instruccion->parametro_2, contexto->registros), instruccion->parametro_1); //escribe el valor en la direccion fisica, pero a partir de direccion logica, esto lo hace memoria
+	//escribe el valor en la direccion fisica, pero a partir de direccion logica, lo hace memoria
+	//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	escribir_valor_a_partir_de_direccion_logica(fd_memoria,valor_de_registro(instruccion->parametro_2, contexto->registros), instruccion->parametro_1);
 }
 /*void ejecutar_IO(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 	// par1 = tiempo
