@@ -231,61 +231,104 @@ void asignar_valor_a_registro(char* valor, char* registro, t_registros registros
 			strcpy(registros->rdx, valor);
 		}
 }
+char* valor_de_registro(char* registro, t_registros registros){
+	char* valor;
+	if (registro == "AX"){
+			valor = registros->ax;
+		}
+	if (registro == "BX"){
+			valor = registros->bx;
+		}
+	if (registro == "CX"){
+			valor = registros->cx;
+		}
+	if (registro == "DX"){
+			valor = registros->ax;
+		}
+	if (registro == "EAX"){
+			valor = registros->eax;
+		}
+	if (registro == "EBX"){
+			valor = registros->ebx;
+		}
+	if (registro == "ECX"){
+			valor = registros->ecx;
+		}
+	if (registro == "EDX"){
+			valor = registros->edx;
+		}
+	if (registro == "RAX"){
+			valor = registros->rax;
+		}
+	if (registro == "RBX"){
+			valor = registros->rbx;
+		}
+	if (registro == "RCX"){
+			valor = registros->rcx;
+		}
+	if (registro == "RDX"){
+			valor = registros->rdx;
+		}
+	return valor;
+}
 
 void ejecutar_SET(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+	// par1 = registro, par2 = valor
 	asignar_valor_a_registro(intruccion->parametro_2, intruccion->parametro_1, contexto->registros);
 }
 
 void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+	// par1 = registro, par2 = dir logica
 	char* valor;
-	valor = buscar_en_memoria_direccion_logica(fd_memoria, instruccion->parametro_2); //retorna la direccion
+	valor = buscar_direccion_logica(fd_memoria, instruccion->parametro_2); //retorna el puntero, lo hace memoria
 	asignar_valor_a_registro(valor, intruccion->parametro_1, contexto->registros);
 }
 void ejecutar_MOV_OUT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	char* valor = buscar_en_memoria_direccion_logica(fd_memoria, instruccion->parametro_1);
-	strcpy(valor, instruccion->parametro_2);
+	// par1 = direccion logica, par2 = registro
+	escribir_valor_a_partir_de_direccion_logica(fd_memoria,valor_de_registro(instruccion->parametro_2, contexto->registros), instruccion->parametro_1); //escribe el valor en la direccion fisica, pero a partir de direccion logica, esto lo hace memoria
 }
 /*void ejecutar_IO(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = tiempo
+	empaquetar el contexto y enviarlo a kernel junto con el tiempo de espera
 }
 void ejecutar_F_OPEN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = nombre archivo
 }
 void ejecutar_F_CLOSE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = nombre archivo
 }
 void ejecutar_F_SEEK(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = nombre archivo, par2 = posicion
 }
 void ejecutar_F_READ(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = nombre archivo, par2 = dir logica, par3 = cant de bytes
 }
 void ejecutar_F_WRITE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = nombre archivo, par2 = dir logica, par3 = cant de bytes
 }
 void ejecutar_F_TRUNCATE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = nombre archivo, par2 = tamanio
 }
 void ejecutar_WAIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = recurso
 }
 void ejecutar_SIGNAL(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = recurso
 }
 
 void ejecutar_CREATE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
-}
+	// par1 = id del segmetno, par2 = tamanio
 
 void ejecutar_DELETE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// par1 = id del segmento
 }
 
 void ejecutar_YIELD(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+ // ningun parametro
+  *
 }
 
 void ejecutar_EXIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
+	// ningun parametro
 }
 */
