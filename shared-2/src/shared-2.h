@@ -134,7 +134,7 @@ void* serializar_paquete_con_bytes(t_paquete *, int);
 void eliminar_paquete(t_paquete *);
 void *recibir_stream(int *, int);
 t_buffer *inicializar_buffer_con_parametros(uint32_t, void *);
-t_buffer* serializar_paquete(t_paquete *);
+void* serializar_paquete(t_paquete* paquete, int bytes);
 t_paquete *crear_paquete(void);
 void agregar_entero_a_paquete(t_paquete *, int);
 void enviar_paquete(t_paquete *, int);

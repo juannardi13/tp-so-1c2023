@@ -91,7 +91,7 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
 
 int recibir_operacion(int socket_cliente)
 {
-	int cod_op = 33;
+	int cod_op;
 	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
 		return cod_op;
 	else
@@ -205,14 +205,19 @@ t_buffer *inicializar_buffer_con_parametros(uint32_t size, void *stream) {
 	return buffer;
 }
 
-t_buffer* serializar_paquete(t_paquete* paquete) {
-    t_buffer * magic = inicializar_buffer_con_parametros(0, NULL);
+void* serializar_paquete(t_paquete* paquete, int bytes)
+{
+	void * magic = malloc(bytes);
+	int desplazamiento = 0;
 
-    agregar_a_buffer(magic, &(paquete->codigo_operacion), sizeof(uint8_t));
-    agregar_a_buffer(magic, &(paquete->buffer->stream_size), sizeof(uint32_t));
-    agregar_a_buffer(magic, paquete->buffer->stream, paquete->buffer->stream_size);
+	memcpy(magic + desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	desplazamiento+= sizeof(int);
+	memcpy(magic + desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	desplazamiento+= sizeof(int);
+	memcpy(magic + desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+	desplazamiento+= paquete->buffer->stream_size;
 
-    return magic;
+	return magic;
 }
 
 t_paquete *crear_paquete(void){
@@ -232,12 +237,14 @@ void agregar_entero_a_paquete(t_paquete *paquete, int tamanio_proceso) // Agrega
     paquete->buffer->stream_size += tamanio_proceso + sizeof(int);
 }
 
-void enviar_paquete(t_paquete *paquete, int socket_cliente) //TP0
+void enviar_paquete(t_paquete* paquete, int socket_cliente)
 {
-    t_buffer *a_enviar = serializar_paquete(paquete);
-    send(socket_cliente, a_enviar->stream, a_enviar->stream_size, 0);
-    free(a_enviar->stream);
-    free(a_enviar);
+	int bytes = paquete->buffer->stream_size + 2*sizeof(int);
+	void* a_enviar = serializar_paquete(paquete, bytes);
+
+	send(socket_cliente, a_enviar, bytes, 0);
+
+	free(a_enviar);
 }
 
 t_list *recibir_paquete(int socket_cliente)  // TP0
