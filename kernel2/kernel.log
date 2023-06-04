@@ -34,3 +34,36 @@
 [INFO] 16:27:07:947 kernel.log/(8442:8442): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
 [INFO] 16:28:04:343 kernel.log/(8442:8442): Cliente conectado (a KERNEL)
 
+[INFO] 18:39:36:647 kernel.log/(53883:53883): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:52:15:505 kernel.log/(53999:53999): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:52:37:745 kernel.log/(53999:53999): Cliente conectado (a KERNEL)
+
+[WARNING] 19:52:39:996 kernel.log/(53999:53999): Operacion desconocida 
+
+[INFO] 19:53:19:487 kernel.log/(54041:54041): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:53:25:230 kernel.log/(54041:54041): Cliente conectado (a KERNEL)
+
+[WARNING] 19:54:11:768 kernel.log/(54041:54041): Operacion desconocida 
+
+[INFO] 20:13:05:619 kernel.log/(54895:54895): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:13:30:269 kernel.log/(54895:54895): Cliente conectado (a KERNEL)
+
+[WARNING] 20:14:05:614 kernel.log/(54895:54895): Operacion desconocida 
+
+[INFO] 20:29:58:532 kernel.log/(55417:55417): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:30:03:845 kernel.log/(55417:55417): Cliente conectado (a KERNEL)
+
+[INFO] 20:30:26:292 kernel.log/(55417:55417): Me llegaron el tamanio y las instrucciones
+[INFO] 20:30:48:574 kernel.log/(55417:55417): Consola deserializada, se arma el PCB
+
+[INFO] 20:30:52:959 kernel.log/(55417:55417): PCB id[1000] armada -> agregar proceso a new
+[INFO] 20:30:54:290 kernel.log/(55417:55417): PID[1000] ingresa a NEW 
+
+[INFO] 20:30:54:290 kernel.log/(55417:55417): PCB ID: 1000
+
+[INFO] 20:30:54:290 kernel.log/(55417:55417): instrucciones del proceso [1000]: 
+[INFO] 20:30:54:290 kernel.log/(55417:55417): 0, AX, HOLA, 0.
+[INFO] 20:30:54:290 kernel.log/(55417:55417): 14, 0, 0, 0.
+[INFO] 20:30:54:290 kernel.log/(55417:55417): 15, 0, 0, 0.
+[INFO] 20:30:54:290 kernel.log/(55417:55417): 0, BX, CHAU, 0.
+[INFO] 20:30:54:290 kernel.log/(55417:55417): 15, 0, 0, 0.

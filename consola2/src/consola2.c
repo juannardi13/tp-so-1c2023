@@ -45,6 +45,7 @@ int main(int argc, char** argv) {
 	log_info(logger, "Se creo la conexion con el Kernel");
 
 	//Envío de instrucciones a Kernel
+
 	getchar();
 	log_warning(logger,"Cantidad de Instrucciones enviadas: %d", list_size(instrucciones));
 	enviar_paquete(paquete_de_instrucciones, conexion_kernel);

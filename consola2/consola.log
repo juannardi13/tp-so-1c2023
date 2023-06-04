@@ -57,3 +57,21 @@
 [INFO] 15:44:54:193 consola.log/(6367:6367): Hola! Se inicializo el modulo cliente Consola.
 [INFO] 15:44:54:195 consola.log/(6367:6367): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
 [INFO] 15:44:54:200 consola.log/(6367:6367): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 19:57:07:534 consola.log/(54162:54162): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:57:44:059 consola.log/(54248:54248): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:00:27:467 consola.log/(54314:54314): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:00:57:427 consola.log/(54359:54359): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:03:59:753 consola.log/(54473:54473): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:05:04:078 consola.log/(54538:54538): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:05:04:078 consola.log/(54538:54538): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 20:05:04:078 consola.log/(54538:54538): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 20:05:19:228 consola.log/(54574:54574): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:05:23:028 consola.log/(54574:54574): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 20:05:48:161 consola.log/(54574:54574): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 20:08:39:176 consola.log/(54574:54574): Se creo la conexion con el Kernel
+[INFO] 20:09:49:825 consola.log/(54702:54702): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 20:10:14:002 consola.log/(54702:54702): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 20:10:34:892 consola.log/(54702:54702): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 20:10:51:055 consola.log/(54702:54702): Se creo la conexion con el Kernel
+[WARNING] 20:11:03:743 consola.log/(54702:54702): Cantidad de Instrucciones enviadas: 5
+[INFO] 20:11:37:642 consola.log/(54702:54702): Paquete de instrucciones enviado correctamente!

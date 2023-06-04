@@ -19,3 +19,13 @@
 [ERROR] 15:51:04:364 kernel.log/(6845:6845): Error al escuchar clientes... Finalizando servidor 
 
 [ERROR] 15:51:04:364 kernel.log/(6845:6845): Cerrando el módulo Kernel
+[INFO] 20:08:26:591 kernel.log/(54663:54663): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:08:34:219 kernel.log/(54663:54663): Cliente conectado (a KERNEL)
+
+[WARNING] 20:09:24:071 kernel.log/(54663:54663): Operacion desconocida 
+
+[INFO] 20:09:31:423 kernel.log/(54679:54679): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:10:45:293 kernel.log/(54679:54679): Cliente conectado (a KERNEL)
+
+[WARNING] 20:11:06:917 kernel.log/(54679:54679): Operacion desconocida 
+

@@ -58,7 +58,7 @@ int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 		if(socket_cliente != -1) {
 			//pthread_t hilo_cliente;
 			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
-			args->fd = socket_servidor;
+			args->fd = socket_cliente;
 			args->log = logger;
 			manejar_conexion(args);
 			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
