@@ -53,6 +53,9 @@ int main(int argc, char** argv) {
 
 	//Finalización de consola abajo...
 
+	list_destroy(instrucciones);
+	config_destroy(config);
+	log_destroy(logger);
 
     return 0;
 }

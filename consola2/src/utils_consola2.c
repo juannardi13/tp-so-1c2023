@@ -110,8 +110,11 @@ t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char*
 	t_instruccion* instruccion= malloc(sizeof(t_instruccion));
 	instruccion->nombre = id;
 	instruccion->parametro_1 = parametro_1;
+	instruccion->parametro_1_length = strlen(parametro_1) + 1;
 	instruccion->parametro_2 = parametro_2;
+	instruccion->parametro_2_length = strlen(parametro_2) + 1;
 	instruccion->parametro_3 = parametro_3;
+	instruccion->parametro_3_length = strlen(parametro_3) + 1;
 
 	return instruccion;
 }
@@ -121,9 +124,9 @@ void serializar_instrucciones(t_list *instrucciones, t_paquete *paquete) {
 	for(int i=0; i<list_size(instrucciones); i++) {
 		t_instruccion* instruccion = list_get(instrucciones, i);
 		agregar_a_paquete(paquete, &(instruccion->nombre), sizeof(nombre_instruccion));
-		agregar_a_paquete(paquete, &(instruccion->parametro_1), sizeof(char*));
-		agregar_a_paquete(paquete, &(instruccion->parametro_2), sizeof(char*));
-		agregar_a_paquete(paquete, &(instruccion->parametro_3), sizeof(char*));
+		agregar_a_paquete(paquete, &(instruccion->parametro_1), instruccion->parametro_1_length);
+		agregar_a_paquete(paquete, &(instruccion->parametro_2), instruccion->parametro_2_length);
+		agregar_a_paquete(paquete, &(instruccion->parametro_3), instruccion->parametro_3_length);
 	}
 }
 

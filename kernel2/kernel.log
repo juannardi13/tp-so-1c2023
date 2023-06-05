@@ -67,3 +67,129 @@
 [INFO] 20:30:54:290 kernel.log/(55417:55417): 15, 0, 0, 0.
 [INFO] 20:30:54:290 kernel.log/(55417:55417): 0, BX, CHAU, 0.
 [INFO] 20:30:54:290 kernel.log/(55417:55417): 15, 0, 0, 0.
+[INFO] 23:37:50:753 kernel.log/(55736:55736): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:38:19:555 kernel.log/(55736:55736): Cliente conectado (a KERNEL)
+
+[INFO] 23:38:41:211 kernel.log/(55736:55736): Me llegaron el tamanio y las instrucciones
+[INFO] 23:38:52:907 kernel.log/(55736:55736): Consola deserializada, se arma el PCB
+
+[INFO] 23:38:53:654 kernel.log/(55736:55736): PCB id[1000] armada -> agregar proceso a new
+[INFO] 23:38:53:837 kernel.log/(55736:55736): PID[1000] ingresa a NEW 
+
+[INFO] 23:38:53:837 kernel.log/(55736:55736): PCB ID: 1000
+
+[INFO] 23:38:53:837 kernel.log/(55736:55736): instrucciones del proceso [1000]: 
+[INFO] 23:38:53:837 kernel.log/(55736:55736): 0, AX, HOLA, 0.
+[INFO] 23:38:53:837 kernel.log/(55736:55736): 14, 0, 0, 0.
+[INFO] 23:38:53:837 kernel.log/(55736:55736): 15, 0, 0, 0.
+[INFO] 23:38:53:837 kernel.log/(55736:55736): 0, BX, CHAU, 0.
+[INFO] 23:38:53:837 kernel.log/(55736:55736): 15, 0, 0, 0.
+[INFO] 23:40:04:631 kernel.log/(55903:55903): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:40:11:166 kernel.log/(55903:55903): Cliente conectado (a KERNEL)
+
+[INFO] 23:40:13:101 kernel.log/(55903:55903): Me llegaron el tamanio y las instrucciones
+[INFO] 23:40:13:101 kernel.log/(55903:55903): Consola deserializada, se arma el PCB
+
+[INFO] 23:40:13:101 kernel.log/(55903:55903): PCB id[1000] armada -> agregar proceso a new
+[INFO] 23:40:13:101 kernel.log/(55903:55903): PID[1000] ingresa a NEW 
+
+[INFO] 23:40:13:101 kernel.log/(55903:55903): PCB ID: 1000
+
+[INFO] 23:40:13:101 kernel.log/(55903:55903): instrucciones del proceso [1000]: 
+[INFO] 23:40:13:101 kernel.log/(55903:55903): 0, , , ©≤ÍàV.
+[INFO] 23:40:13:101 kernel.log/(55903:55903): 14, ©≤ÍàV, ©≤ÍàV, ©≤ÍàV.
+[INFO] 23:40:13:101 kernel.log/(55903:55903): 15, ©≤ÍàV, ©≤ÍàV, ©≤ÍàV.
+[INFO] 23:40:13:101 kernel.log/(55903:55903): 14, ©≤ÍàV, ©≤ÍàV, ©≤ÍàV.
+[INFO] 23:40:13:101 kernel.log/(55903:55903): 15, ©≤ÍàV, ©≤ÍàV, ©≤ÍàV.
+[INFO] 23:44:29:162 kernel.log/(55903:55903): Cliente conectado (a KERNEL)
+
+[INFO] 23:45:10:413 kernel.log/(55903:55903): Me llegaron el tamanio y las instrucciones
+[INFO] 23:45:10:413 kernel.log/(55903:55903): Consola deserializada, se arma el PCB
+
+[INFO] 23:45:10:413 kernel.log/(55903:55903): PCB id[1001] armada -> agregar proceso a new
+[INFO] 23:45:10:413 kernel.log/(55903:55903): PID[1001] ingresa a NEW 
+
+[INFO] 23:45:10:413 kernel.log/(55903:55903): PCB ID: 1001
+
+[INFO] 23:45:10:413 kernel.log/(55903:55903): instrucciones del proceso [1001]: 
+[INFO] 23:45:10:413 kernel.log/(55903:55903): 0, , , ©bUUUU.
+[INFO] 23:45:10:413 kernel.log/(55903:55903): 14, ©bUUUU, ©bUUUU, ©bUUUU.
+[INFO] 23:45:10:413 kernel.log/(55903:55903): 15, ©bUUUU, ©bUUUU, ©bUUUU.
+[INFO] 23:45:10:413 kernel.log/(55903:55903): 14, ©bUUUU, ©bUUUU, ©bUUUU.
+[INFO] 23:45:10:413 kernel.log/(55903:55903): 15, ©bUUUU, ©bUUUU, ©bUUUU.
+[INFO] 23:47:01:736 kernel.log/(56091:56091): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:47:05:207 kernel.log/(56091:56091): Cliente conectado (a KERNEL)
+
+[INFO] 23:47:06:422 kernel.log/(56091:56091): Me llegaron el tamanio y las instrucciones
+[INFO] 23:47:06:422 kernel.log/(56091:56091): Consola deserializada, se arma el PCB
+
+[INFO] 23:47:06:422 kernel.log/(56091:56091): PCB id[1000] armada -> agregar proceso a new
+[INFO] 23:47:06:422 kernel.log/(56091:56091): PID[1000] ingresa a NEW 
+
+[INFO] 23:47:06:422 kernel.log/(56091:56091): PCB ID: 1000
+
+[INFO] 23:47:06:422 kernel.log/(56091:56091): instrucciones del proceso [1000]: 
+[INFO] 23:47:06:422 kernel.log/(56091:56091): 0, , , ©ÇÙ\¥U.
+[INFO] 23:47:06:422 kernel.log/(56091:56091): 14, ©ÇÙ\¥U, ©ÇÙ\¥U, ©ÇÙ\¥U.
+[INFO] 23:47:06:422 kernel.log/(56091:56091): 15, ©ÇÙ\¥U, ©ÇÙ\¥U, ©ÇÙ\¥U.
+[INFO] 23:47:06:422 kernel.log/(56091:56091): 14, ©ÇÙ\¥U, ©ÇÙ\¥U, ©ÇÙ\¥U.
+[INFO] 23:47:06:422 kernel.log/(56091:56091): 15, ©ÇÙ\¥U, ©ÇÙ\¥U, ©ÇÙ\¥U.
+[INFO] 23:47:51:971 kernel.log/(56106:56106): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:48:11:551 kernel.log/(56139:56139): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:48:15:514 kernel.log/(56139:56139): Cliente conectado (a KERNEL)
+
+[INFO] 23:48:30:786 kernel.log/(56139:56139): Me llegaron el tamanio y las instrucciones
+[INFO] 00:09:13:726 kernel.log/(56632:56632): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 00:09:20:152 kernel.log/(56632:56632): Cliente conectado (a KERNEL)
+
+[INFO] 00:09:21:366 kernel.log/(56632:56632): Me llegaron el tamanio y las instrucciones
+[INFO] 00:09:21:375 kernel.log/(56632:56632): Consola deserializada, se arma el PCB
+
+[INFO] 00:09:21:377 kernel.log/(56632:56632): PCB id[1000] armada -> agregar proceso a new
+[INFO] 00:09:21:377 kernel.log/(56632:56632): PID[1000] ingresa a NEW 
+
+[INFO] 00:09:21:378 kernel.log/(56632:56632): PCB ID: 1000
+
+[INFO] 00:09:21:378 kernel.log/(56632:56632): instrucciones del proceso [1000]: 
+[INFO] 00:09:21:379 kernel.log/(56632:56632): 0, , , ©‚ˆU.
+[INFO] 00:09:21:379 kernel.log/(56632:56632): 14, ©‚ˆU, ©‚ˆU, ©‚ˆU.
+[INFO] 00:09:21:379 kernel.log/(56632:56632): 15, ©‚ˆU, ©‚ˆU, ©‚ˆU.
+[INFO] 00:09:21:379 kernel.log/(56632:56632): 14, ©‚ˆU, ©‚ˆU, ©‚ˆU.
+[INFO] 00:09:21:379 kernel.log/(56632:56632): 15, ©‚ˆU, ©‚ˆU, ©‚ˆU.
+[INFO] 00:12:12:678 kernel.log/(56822:56822): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 00:12:16:034 kernel.log/(56822:56822): Cliente conectado (a KERNEL)
+
+[INFO] 00:12:17:019 kernel.log/(56822:56822): Me llegaron el tamanio y las instrucciones
+[INFO] 00:12:17:025 kernel.log/(56822:56822): Consola deserializada, se arma el PCB
+
+[INFO] 00:12:17:027 kernel.log/(56822:56822): PCB id[1000] armada -> agregar proceso a new
+[INFO] 00:12:17:028 kernel.log/(56822:56822): PID[1000] ingresa a NEW 
+
+[INFO] 00:12:17:029 kernel.log/(56822:56822): PCB ID: 1000
+
+[INFO] 00:12:17:029 kernel.log/(56822:56822): instrucciones del proceso [1000]: 
+[INFO] 00:12:17:030 kernel.log/(56822:56822): 0, , , ©¢cÏ5V.
+[INFO] 00:12:17:031 kernel.log/(56822:56822): 14, ©¢cÏ5V, ©¢cÏ5V, ©¢cÏ5V.
+[INFO] 00:12:17:031 kernel.log/(56822:56822): 15, ©¢cÏ5V, ©¢cÏ5V, ©¢cÏ5V.
+[INFO] 00:12:17:031 kernel.log/(56822:56822): 14, ©¢cÏ5V, ©¢cÏ5V, ©¢cÏ5V.
+[INFO] 00:12:17:031 kernel.log/(56822:56822): 15, ©¢cÏ5V, ©¢cÏ5V, ©¢cÏ5V.
+[INFO] 00:13:03:929 kernel.log/(56912:56912): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 00:13:07:411 kernel.log/(56912:56912): Cliente conectado (a KERNEL)
+
+[INFO] 00:13:07:935 kernel.log/(56912:56912): Me llegaron el tamanio y las instrucciones
+[INFO] 00:13:07:944 kernel.log/(56912:56912): Consola deserializada, se arma el PCB
+
+[INFO] 00:13:07:947 kernel.log/(56912:56912): PCB id[1000] armada -> agregar proceso a new
+[INFO] 00:13:07:948 kernel.log/(56912:56912): PID[1000] ingresa a NEW 
+
+[INFO] 00:13:07:948 kernel.log/(56912:56912): PCB ID: 1000
+
+[INFO] 00:13:07:949 kernel.log/(56912:56912): instrucciones del proceso [1000]: 
+[INFO] 00:13:07:950 kernel.log/(56912:56912): 0, , , ©ÚHÖ/V.
+[INFO] 00:13:07:950 kernel.log/(56912:56912): 14, ©ÚHÖ/V, ©ÚHÖ/V, ©ÚHÖ/V.
+[INFO] 00:13:07:951 kernel.log/(56912:56912): 15, ©ÚHÖ/V, ©ÚHÖ/V, ©ÚHÖ/V.
+[INFO] 00:13:07:951 kernel.log/(56912:56912): 14, ©ÚHÖ/V, ©ÚHÖ/V, ©ÚHÖ/V.
+[INFO] 00:13:07:951 kernel.log/(56912:56912): 15, ©ÚHÖ/V, ©ÚHÖ/V, ©ÚHÖ/V.
+[INFO] 00:54:06:035 kernel.log/(58730:58730): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 00:58:45:051 kernel.log/(58730:58730): Cliente conectado (a KERNEL)
+

@@ -63,6 +63,7 @@ int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 			manejar_conexion(args);
 			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
 			//pthread_detach(hilo_cliente);
+			free(args);
 			return 1;
 		} else {
 			log_error(logger, "Error al escuchar clientes... Finalizando servidor \n"); // log para fallo de comunicaciones
@@ -82,6 +83,7 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
   		instruccion_recibida->parametro_1 = list_get(datos, i + 1);
   		instruccion_recibida->parametro_2 = list_get(datos, i + 2);
   		instruccion_recibida->parametro_3 = list_get(datos, i + 3);
+  		printf("\n%s %s %s", instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
   		list_add(instrucciones, instruccion_recibida);
   	}
 
@@ -90,43 +92,11 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
 
 t_consola *deserializar_consola(int  socket_cliente) {
 
-	t_list *datos = list_create();//recibir_paquete(socket_cliente);
-
-	int valorset = SET;
-	int valoryield = YIELD;
-	int valorexit = EXIT;
-	int* set;
-	int* yield;
-	int* exit;
-
-	set = &valorset;
-	yield = &valoryield;
-	exit = &valorexit;
-
-	list_add(datos, set);
-	list_add(datos, "AX");
-	list_add(datos, "HOLA");
-	list_add(datos, "0");
-	list_add(datos, yield);
-	list_add(datos, "0");
-	list_add(datos, "0");
-	list_add(datos, "0");
-	list_add(datos, exit);
-	list_add(datos, "0");
-	list_add(datos, "0");
-	list_add(datos, "0");
-	list_add(datos, set);
-	list_add(datos, "BX");
-	list_add(datos, "CHAU");
-	list_add(datos, "0");
-	list_add(datos, exit);
-	list_add(datos, "0");
-	list_add(datos, "0");
-	list_add(datos, "0");
+	t_list *datos = recibir_paquete(socket_cliente);
 
   	t_consola *consola = malloc(sizeof(t_consola));
 
-  	//consola->tamanio_proceso = *(uint32_t *)list_remove(datos, 0);
+  	consola->tamanio_proceso = *(uint32_t *)list_remove(datos, 0);
 
   	consola->instrucciones = deserializar_instrucciones(datos, list_size(datos));
 
