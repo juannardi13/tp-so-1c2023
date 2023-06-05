@@ -65,8 +65,11 @@ typedef struct {
 	nombre_instruccion nombre;
 
 	char* parametro_1; //tipo char
+	int parametro_1_length;
 	char* parametro_2;
+	int parametro_2_length;
 	char* parametro_3;
+	int parametro_3_length;
 
 } t_instruccion;
 

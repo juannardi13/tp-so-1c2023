@@ -265,6 +265,7 @@ t_list *recibir_paquete(int socket_cliente)  // TP0
         memcpy(valor, stream + desplazamiento, tamanio);
         desplazamiento += tamanio;
         list_add(valores, valor);
+        free(valor);
     }
     free(stream);
     return valores;
