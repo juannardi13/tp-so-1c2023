@@ -63,13 +63,12 @@ typedef struct {
 
 typedef struct {
 	nombre_instruccion nombre;
-
-	char* parametro_1; //tipo char
 	int parametro_1_length;
-	char* parametro_2;
+	char* parametro_1; //tipo char
 	int parametro_2_length;
-	char* parametro_3;
+	char* parametro_2;
 	int parametro_3_length;
+	char* parametro_3;
 
 } t_instruccion;
 
@@ -122,30 +121,30 @@ typedef struct
 	int block_size;
 } t_super_bloque;
 
-void hola(void);
-int iniciar_servidor(char *);
+void agregar_a_buffer(t_buffer *, void *, int);
+void agregar_a_paquete(t_paquete *, void *, int);
+void agregar_entero_a_paquete(t_paquete *, int);
+void crear_buffer(t_paquete *);
+int crear_conexion(t_log *, const char *, char *, char *);
+t_paquete *crear_paquete(void);
+t_paquete *crear_paquete_consola(void);
+void eliminar_paquete(t_paquete *);
+int enviar_datos(int, void *, uint32_t);
+void enviar_mensaje(char *, int);
+void enviar_paquete(t_paquete *, int);
 int esperar_cliente(t_log *, const char *, int);
-int recibir_operacion(int);
+void hola(void);
+t_buffer *inicializar_buffer_con_parametros(uint32_t, void *);
+int iniciar_servidor(char *);
+void liberar_conexion(int);
+int recibir_datos(int, void *, uint32_t);
+t_paquete* recibe_paquete(int);
 void* recibir_buffer(int *, int);
 char* recibir_mensaje(t_log *, int);
-t_paquete *crear_paquete_consola(void);
-void crear_buffer(t_paquete *);
-void agregar_a_paquete(t_paquete *, void *, int);
-void agregar_a_buffer(t_buffer *, void *, int);
-void enviar_mensaje(char *, int);
-void* serializar_paquete_con_bytes(t_paquete *, int);
-void eliminar_paquete(t_paquete *);
-void *recibir_stream(int *, int);
-t_buffer *inicializar_buffer_con_parametros(uint32_t, void *);
-void* serializar_paquete(t_paquete* paquete, int bytes);
-t_paquete *crear_paquete(void);
-void agregar_entero_a_paquete(t_paquete *, int);
-void enviar_paquete(t_paquete *, int);
+int recibir_operacion(int);
 t_list *recibir_paquete(int);
-t_paquete* recibe_paquete(int);
-int enviar_datos(int, void *, uint32_t);
-int recibir_datos(int, void *, uint32_t);
-int crear_conexion(t_log *, const char *, char *, char *);
-void liberar_conexion(int);
+void *recibir_stream(int *, int);
+void* serializar_paquete(t_paquete* paquete, int bytes);
+void* serializar_paquete_con_bytes(t_paquete *, int);
 
 #endif /* SRC_SHARED_2_H_ */

@@ -83,7 +83,7 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
   		instruccion_recibida->parametro_1 = list_get(datos, i + 1);
   		instruccion_recibida->parametro_2 = list_get(datos, i + 2);
   		instruccion_recibida->parametro_3 = list_get(datos, i + 3);
-  		printf("\n%s %s %s", instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
+  		printf("%d %s %s %s\n", instruccion_recibida->nombre, instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
   		list_add(instrucciones, instruccion_recibida);
   	}
 
