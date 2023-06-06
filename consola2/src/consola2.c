@@ -29,15 +29,15 @@ int main(int argc, char** argv) {
 
     // Creacion del paquete
 
-    int tamanio_proceso = atoi(argv[1]); //Calcula el peso del proceso para poder serializar y deserializar
+    //int tamanio_proceso = atoi(argv[1]); //Calcula el peso del proceso para poder serializar y deserializar
 
-    t_paquete* paquete_de_instrucciones = crear_paquete_consola();
+    t_paquete* paquete_de_instrucciones = crear_paquete();//crear_paquete_consola();
 
-    agregar_a_paquete(paquete_de_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
+    //agregar_a_paquete(paquete_de_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
 
     t_list *instrucciones = parsear_instrucciones(argv[1], logger);
 
-	serializar_instrucciones(instrucciones, paquete_de_instrucciones); //Esta función ya agrega al paquete las instrucciones.
+	//serializar_instrucciones(instrucciones, paquete_de_instrucciones); //Esta función ya agrega al paquete las instrucciones.
 
 	//Inicialización de Consola como cliente
 	// int conexion_kernel = crear_conexion(logger, "CONSOLA", ip_kernel, puerto_kernel);
@@ -48,7 +48,8 @@ int main(int argc, char** argv) {
 
 	getchar();
 	log_warning(logger,"Cantidad de Instrucciones enviadas: %d", list_size(instrucciones));
-	enviar_paquete(paquete_de_instrucciones, conexion_kernel);
+	serializar_y_enviar_instruccion(conexion_kernel, instrucciones, paquete_de_instrucciones);
+	//enviar_paquete(paquete_de_instrucciones, conexion_kernel);
 	log_info(logger, "Paquete de instrucciones enviado correctamente!");
 
 	//Finalización de consola abajo...

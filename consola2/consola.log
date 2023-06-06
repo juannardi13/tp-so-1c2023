@@ -127,3 +127,15 @@
 [INFO] 01:04:05:503 consola.log/(59661:59661): Se creo la conexion con el Kernel
 [WARNING] 01:04:06:143 consola.log/(59661:59661): Cantidad de Instrucciones enviadas: 5
 [INFO] 01:04:06:145 consola.log/(59661:59661): Paquete de instrucciones enviado correctamente!
+[INFO] 16:48:36:146 consola.log/(67968:67968): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 16:48:50:248 consola.log/(67968:67968): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 16:49:04:304 consola.log/(67968:67968): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 16:49:11:054 consola.log/(67968:67968): Se creo la conexion con el Kernel
+[WARNING] 16:49:20:172 consola.log/(67968:67968): Cantidad de Instrucciones enviadas: 10
+[INFO] 16:50:21:058 consola.log/(67968:67968): Paquete de instrucciones enviado correctamente!
+[INFO] 16:51:14:650 consola.log/(68169:68169): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 16:51:14:650 consola.log/(68169:68169): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 16:51:14:650 consola.log/(68169:68169): Las instrucciones fueron parseadas, listas para enviar a Kernel!
+[INFO] 16:51:14:650 consola.log/(68169:68169): Se creo la conexion con el Kernel
+[WARNING] 16:51:19:773 consola.log/(68169:68169): Cantidad de Instrucciones enviadas: 10
+[INFO] 16:51:19:773 consola.log/(68169:68169): Paquete de instrucciones enviado correctamente!

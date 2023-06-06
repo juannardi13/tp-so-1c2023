@@ -46,7 +46,7 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
 int recibir_operacion(int socket_cliente)
 {
 	int cod_op;
-	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
+	if(recv(socket_cliente, &cod_op, sizeof(uint8_t), MSG_WAITALL) > 0)
 		return cod_op;
 	else
 	{

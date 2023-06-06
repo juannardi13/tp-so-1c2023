@@ -120,14 +120,75 @@ t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char*
 }
 
 void serializar_instrucciones(t_list *instrucciones, t_paquete *paquete) {
+	//	int tamanio = tamanio_instrucciones(instrucciones);
+	//	void* stream;
+	//
+	//
+	//	for(int i=0; i<list_size(instrucciones); i++) {
+	//		t_instruccion* instruccion = list_get(instrucciones, i);
+	//
+	//
+	//
 
-	for(int i=0; i<list_size(instrucciones); i++) {
-		t_instruccion* instruccion = list_get(instrucciones, i);
-		agregar_a_paquete(paquete, &(instruccion->nombre), sizeof(nombre_instruccion));
-		agregar_a_paquete(paquete, &(instruccion->parametro_1), instruccion->parametro_1_length);
-		agregar_a_paquete(paquete, &(instruccion->parametro_2), instruccion->parametro_2_length);
-		agregar_a_paquete(paquete, &(instruccion->parametro_3), instruccion->parametro_3_length);
-	}
+	//		agregar_a_paquete(paquete, &(instruccion->nombre), sizeof(nombre_instruccion));
+	//		agregar_a_paquete(paquete, &(instruccion->parametro_1), instruccion->parametro_1_length);
+	//		agregar_a_paquete(paquete, &(instruccion->parametro_2), instruccion->parametro_2_length);
+	//		agregar_a_paquete(paquete, &(instruccion->parametro_3), instruccion->parametro_3_length);
+	//	}
+}
+
+void serializar_y_enviar_instruccion(int conexion_kernel, t_list *instrucciones, t_paquete *paquete) {
+
+	//Serializo una sola instrucción primero
+
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+	t_instruccion* instruccion_a_serializar = malloc(sizeof(t_instruccion*));
+	instruccion_a_serializar = list_get(instrucciones, 0);
+
+	printf("\nLa instruccion a serializar es la siguiente: %d, %s, %s, %s\n", instruccion_a_serializar->nombre, instruccion_a_serializar->parametro_1, instruccion_a_serializar->parametro_2, instruccion_a_serializar->parametro_3);
+
+	buffer->stream_size = sizeof(nombre_instruccion)
+						  + strlen(instruccion_a_serializar->parametro_1) + 1
+						  + strlen(instruccion_a_serializar->parametro_2) + 1
+						  + strlen(instruccion_a_serializar->parametro_3) + 1;
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, &instruccion_a_serializar->nombre, sizeof(nombre_instruccion));
+	offset += sizeof(nombre_instruccion);
+	memcpy(stream + offset, &instruccion_a_serializar->parametro_1_length, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, instruccion_a_serializar->parametro_1, strlen(instruccion_a_serializar->parametro_1) + 1);
+	offset += (strlen(instruccion_a_serializar->parametro_1) + 1);
+	memcpy(stream + offset, &instruccion_a_serializar->parametro_2_length, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, instruccion_a_serializar->parametro_2, strlen(instruccion_a_serializar->parametro_2) + 1);
+	offset += (strlen(instruccion_a_serializar->parametro_2) + 1);
+	memcpy(stream + offset, &instruccion_a_serializar->parametro_3_length, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, instruccion_a_serializar->parametro_3, strlen(instruccion_a_serializar->parametro_3) + 1);
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = MENSAJE; // Para probar la serializacion
+	paquete->buffer = buffer;
+
+	void *a_enviar = malloc(buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t));
+	int desplazamiento = 0;
+
+	memcpy(a_enviar + desplazamiento, &(paquete->codigo_operacion), sizeof(uint8_t));
+	desplazamiento += sizeof(uint8_t);
+	memcpy(a_enviar + desplazamiento, &(paquete->buffer->stream_size), sizeof(uint32_t));
+	desplazamiento += sizeof(uint32_t);
+	memcpy(a_enviar + desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(conexion_kernel, a_enviar, buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t), 0);
+
+	free(a_enviar);
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
 }
 
 char* leer_archivo_pseudocodigo(char *ruta, t_log* logger) {

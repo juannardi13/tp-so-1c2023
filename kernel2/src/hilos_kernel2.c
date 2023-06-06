@@ -98,6 +98,8 @@ t_consola *deserializar_consola(int  socket_cliente) {
 
   	consola->tamanio_proceso = *(uint32_t *)list_remove(datos, 0);
 
+  	printf("\n El tamanio del proceso es: %d", consola->tamanio_proceso);
+
   	consola->instrucciones = deserializar_instrucciones(datos, list_size(datos));
 
   	return consola;

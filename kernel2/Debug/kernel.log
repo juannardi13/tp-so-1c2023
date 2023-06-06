@@ -29,3 +29,13 @@
 
 [WARNING] 20:11:06:917 kernel.log/(54679:54679): Operacion desconocida 
 
+[INFO] 16:48:07:412 kernel.log/(67929:67929): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:49:10:182 kernel.log/(67929:67929): Cliente conectado (a KERNEL)
+
+[WARNING] 16:50:09:877 kernel.log/(67929:67929): Operacion desconocida 
+
+[INFO] 16:50:56:034 kernel.log/(68141:68141): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:51:14:650 kernel.log/(68141:68141): Cliente conectado (a KERNEL)
+
+[WARNING] 16:51:19:773 kernel.log/(68141:68141): Operacion desconocida 
+
