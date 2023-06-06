@@ -4,17 +4,15 @@
 
 #define MAX_LEN 256
 
-int fetch_instruccion(char* una_instruccion, t_log* logger);
-
 
 typedef struct {
 	int pid;
-	char** instrucciones;
+	t_list* instrucciones;
 	int pc;
 	t_registros registros_pcb;
-}t_pcb_cpu;
+}t_contexto_de_ejecucion;
 
-t_pcb_cpu pcb_en_ejecucion;
+t_contexto_de_ejecucion contexto;
 /*
 //Semáforos
 
@@ -53,10 +51,10 @@ int main() {
 	char* ip_kernel;
 	char* puerto_kernel;
 	t_registros registros;
-	registros.ax = "HOLA";
-	registros.bx = "COMO";
-	registros.cx = "ESTAS";
-	registros.dx = "CHAU";
+	strncpy(registros.ax, "HOLA", length("HELLO"));
+	strncpy(registros.bx, "COMO", length("COMO"));
+	strncpy(registros.cx, "ESTAS", length("ESTAS"));
+	strncpy(registros.dx, "CHAU", length("CHAU"));
 
     t_log* logger = iniciar_logger();
     t_config* config = iniciar_config();
@@ -68,42 +66,43 @@ int main() {
 
     log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
 
-    int fd_cpu = iniciar_servidor(logger, "CPU", ip_kernel, puerto_kernel);
+    int fd_cpu = iniciar_servidor(puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_kernel);
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
 
     getchar();
 
     char** instrucciones_prueba = malloc(sizeof(char*) * 5);
-    instrucciones_prueba[0] = "SET";
-    instrucciones_prueba[1] = "YIELD";
-    instrucciones_prueba[2] = "EXIT";
-    instrucciones_prueba[3] = "YIELD";
-    instrucciones_prueba[4] = "EXIT";
+list_add_in_index(instrucciones_prueba, 0, "SET");
+    list_add_in_index(instrucciones_prueba, 1, "YIELD");
+    list_add_in_index(instrucciones_prueba, 2, "EXIT");
+    list_add_in_index(instrucciones_prueba, 3, "YIELD");
+    list_add_in_index(instrucciones_prueba, 4, "EXIT");
 
-    pcb_en_ejecucion.instrucciones = instrucciones_prueba;
-    pcb_en_ejecucion.pid = 1;
-    pcb_en_ejecucion.pc = 0;
-    pcb_en_ejecucion.registros_pcb = registros;
+  strncpy(contexto.instrucciones, instrucciones_prueba, length(instrucciones_prueba));
+    contexto.pid = 1;
+    contexto.pc = 0;
+    strncpy(contexto.registros_pcb, registros, length(registros));
+
 
     while(pcb_en_ejecucion.pc < 5) {
-    	int cod_op = fetch_instruccion(pcb_en_ejecucion.instrucciones[pcb_en_ejecucion.pc], logger);
+    	int cod_op = fetch_instruccion(contexto.pc);
 
     	switch (cod_op) {
     		case SET:
-    			log_error(logger, "La instrucción %d es SET", pcb_en_ejecucion.pc);
-    			pcb_en_ejecucion.pc++;
-    			log_warning(logger, "Se actualizo el Program Counter a %d", pcb_en_ejecucion.pc);
+    			log_error(logger, "La instrucción %d es SET", contexto.pc);
+    			contexto.pc++;
+    			log_warning(logger, "Se actualizo el Program Counter a %d", contexto.pc);
     			break;
     		case YIELD:
-    			log_error(logger, "La instrucción %d es YIELD", pcb_en_ejecucion.pc);
-    			pcb_en_ejecucion.pc++;
-    			log_warning(logger, "Se actualizo el Program Counter a %d", pcb_en_ejecucion.pc);
+    			log_error(logger, "La instrucción %d es YIELD", contexto.pc);
+    			contexto.pc++;
+    			log_warning(logger, "Se actualizo el Program Counter a %d", contexto.pc);
     			break;
     		case EXIT:
-    			log_error(logger, "La instrucción %d es EXIT", pcb_en_ejecucion.pc);
-    			pcb_en_ejecucion.pc++;
-    			log_warning(logger, "Se actualizo el Program Counter a %d", pcb_en_ejecucion.pc);
+    			log_error(logger, "La instrucción %d es EXIT", contexto.pc);
+    			contexto.pc++;
+    			log_warning(logger, "Se actualizo el Program Counter a %d", contexto.pc);
     			break;
     		default:
     			log_error(logger, "Error");
@@ -140,49 +139,64 @@ int fetch_instruccion(char* una_instruccion, t_log* logger) {
 }
 */
 
-t_instruccion fetch_instruccion(t_contexto_de_ejecucion contexto){
-	t_instruccion instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
+t_instruccion* fetch_instruccion(t_contexto_de_ejecucion* contexto){
+	t_instruccion* instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
 	contexto->pc++;
 	return instruccion_a_ejecutar;
 }
-// Falta inicializar t_instrucciones con codigos, desarrollar ejecutar_instruccion
-t_instruccion decode_instruccion(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	switch(instruccion.codigo_instruccion){
-	case SET:
-		//TIENE UN RETARDO, CODEARLO USANDO LA CONFIG
-		//esperar_tiempo()
+// Falta inicializar t_instrucciones con codigos, no me reconoce codigo_operacion VER
+void decode_instruccion(t_instruccion* instruccion, t_contexto_de_ejecucion contexto*, t_config* config){
+	if(strcmp(instruccion->codigo_operacion, "SET") == 0){
+		int tiempo_de_espera;
+		sleep(config_get_int_value(config, tiempo_de_espera));
 		ejecutar_SET(instruccion, contexto);
 	}
-	case MOV_IN:
+	else if(stcrmp(instruccion->codigo_operacion, "MOV_IN") == 0){
 		ejecutar_MOV_IN(instruccion, contexto); // ojo hay que traducir direccion logica a fisica
-	case MOV_OUT:
+	}
+	else if(stcrmp(instruccion->codigo_operacion, "MOV_OUT") == 0){
 		ejecutar_MOV_OUT(instruccion, contexto);
-	case IO:
+	}
+	else if(stcrmp(instruccion->codigo_operacion, "IO") == 0){
 		ejecutar_IO(instruccion, contexto);
-	case F_OPEN:
+	}
+	else if(stcrmp(instruccion->codigo_operacion, "F_OPEN") == 0){
 		ejecutar_F_OPEN(instruccion, contexto);
-	case F_CLOSE:
+	}
+	else if(stcrmp(instruccion->codigo_operacion, "F_CLOSE") == 0){
 		ejecutar_F_CLOSE(instruccion, contexto);
-	case F_SEEK:
-		ejecutar_F_SEEK(instruccion, contexto);
-	case F_READ:
-		ejecutar_F_READ(instruccion, contexto); // idem anteriores
-	case F_WRITE:
-		ejecutar_F_WRITE(instruccion, contexto);
-	case F_TRUNCATE:
-		ejecutar_F_TRUNCATE(instruccion, contexto);
-	case WAIT:
-		ejecutar_WAIT(instruccion, contexto);
-	case SIGNAL:
-		ejecutar_SIGNAL(instruccion, contexto);
-	case CREATE_SEGMENT:
-		ejecutar_CREATE_SEGMENT(instruccion, contexto);
-	case DELETE_SEGMENT:
-		ejecutar_DELETE_SEGMENT(instruccion, contexto);
-	case YIELD:
-		ejecutar_YIELD(instruccion, contexto);
-	case EXIT:
-		ejecutar_EXIT(instruccion, contexto);
+	}
+
+	else if(stcrmp(instruccion->codigo_operacion, "F_SEEK") == 0){
+			ejecutar_F_SEEK(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "F_READ") == 0){
+			ejecutar_F_READ(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "F_WRITE") == 0){
+			ejecutar_F_WRITE(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "F_TRUNCATE") == 0){
+			ejecutar_F_TRUNCAE(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "WAIT") == 0){
+			ejecutar_WAIT(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "SIGNAL") == 0){
+			ejecutar_SIGNAL(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "CREATE_SEGMENT") == 0){
+			ejecutar_CREATE_SEGMENT(instruccion, contexto);
+		}
+	else if(stcrmp(instruccion->codigo_operacion, "DELETE_SEGMENT") == 0){
+				ejecutar_DELETE_SEGMENT(instruccion, contexto);
+			}
+	else if(stcrmp(instruccion->codigo_operacion, "YIELD") == 0){
+				ejecutar_YIELD(instruccion, contexto);
+			}
+	else if(stcrmp(instruccion->codigo_operacion, "EXIT") == 0){
+				ejecutar_EXIT(instruccion, contexto);
+			}
 }
 
 // agregye esta funcion en conexion cpu kernel - ver de donde la eliminamos
@@ -193,42 +207,42 @@ void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion context
 }
 */
 
-void asignar_valor_a_registro(char* valor, char* registro, t_registros registros){
-	if (registro == "AX"){
-			strcpy(registros->ax, valor);
+void asignar_valor_a_registro(char* valor, char* registro, t_registros* registros){
+	if(stcrmp(registro, "AX") == 0){
+			strncpy(registros->ax, valor, length(valor));
 		}
-	if (registro == "BX"){
-			strcpy(registros->bx, valor);
+	else if(stcrmp(registro, "BX") == 0){
+			strncpy(registros->bx, valor, length(valor));
 		}
-	if (registro == "CX"){
-			strcpy(registros->cx, valor);
+	else if(stcrmp(registro, "CX") == 0){
+			strncpy(registros->cx, valor, length(valor));
 		}
-	if (registro == "DX"){
-			strcpy(registros->ax, valor);
+	else if(stcrmp(registro, "DX") == 0){
+			strncpy(registros->ax, valor, length(valor));
 		}
-	if (registro == "EAX"){
-			strcpy(registros->eax, valor);
+	else if(stcrmp(registro, "EAX") == 0){
+			strncpy(registros->eax, valor, length(valor));
 		}
-	if (registro == "EBX"){
-			strcpy(registros->ebx, valor);
+	else if(stcrmp(registro, "EBX") == 0){
+			strncpy(registros->ebx, valor, length(valor));
 		}
-	if (registro == "ECX"){
-			strcpy(registros->ecx, valor);
+	else if(stcrmp(registro, "ECX") == 0){
+			strncpy(registros->ecx, valor, length(valor));
 		}
-	if (registro == "EDX"){
-			strcpy(registros->edx, valor);
+	else if(stcrmp(registro, "EDX") == 0){
+			strncpy(registros->edx, valor, length(valor));
 		}
-	if (registro == "RAX"){
-			strcpy(registros->rax, valor);
+	else if(stcrmp(registro, "RAX") == 0){
+			strncpy(registros->rax, valor, length(valor));
 		}
-	if (registro == "RBX"){
-			strcpy(registros->rbx, valor);
+	else if(stcrmp(registro, "RBX") == 0){
+			strncpy(registros->rbx, valor, length(valor));
 		}
-	if (registro == "RCX"){
-			strcpy(registros->rcx, valor);
+	else if(stcrmp(registro, "RCX") == 0){
+			strncpy(registros->rcx, valor, length(valor));
 		}
-	if (registro == "RDX"){
-			strcpy(registros->rdx, valor);
+	else if(stcrmp(registro, "RDX") == 0){
+			strncpy(registros->rdx, valor, length(valor));
 		}
 }
 char* valor_de_registro(char* registro, t_registros registros){
@@ -272,22 +286,22 @@ char* valor_de_registro(char* registro, t_registros registros){
 	return valor;
 }
 
-void ejecutar_SET(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_SET(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
 	// par1 = registro, par2 = valor
-	asignar_valor_a_registro(intruccion->parametro_2, intruccion->parametro_1, contexto->registros);
+	asignar_valor_a_registro(intruccion->parametro_2, intruccion->parametro_1, contexto->registros_pcb);
 }
 
-void ejecutar_MOV_IN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = registro, par2 = dir logica
-	//								retorna el puntero, lo hace memoria
-	//						  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-	asignar_valor_a_registro(buscar_direccion_logica(fd_memoria, instruccion->parametro_2), intruccion->parametro_1, contexto->registros);
+void ejecutar_MOV_IN(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
+	char* valor;
+	strncpy((buscar_en_memoria_direccion_logica(int fd_memoria, instruccion->parametro_2)), valor, length(valor)); //retorna la direccion
+	strncpy(valor, intruccion->parametro_1, contexto->registros_pcb);
 }
-void ejecutar_MOV_OUT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = direccion logica, par2 = registro
-	//escribe el valor en la direccion fisica, pero a partir de direccion logica, lo hace memoria
-	//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-	escribir_valor_a_partir_de_direccion_logica(fd_memoria,valor_de_registro(instruccion->parametro_2, contexto->registros), instruccion->parametro_1);
+void ejecutar_MOV_OUT(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
+	char* valor;
+	strncpy(valor, instruccion->parametro_2, length(instruccion->parametro_2));
+	char* direccion_fisica;
+	strncpy(direccion_fisica, buscar_en_memoria_direccion_logica(int fd_memoria, instruccion->parametro_1), length(buscar_en_memoria_direccion_logica(int fd_memoria, instruccion->parametro_1));
+	strncpy(direccion_fisica, valor, length(valor));
 }
 /*void ejecutar_IO(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 	// par1 = tiempo
