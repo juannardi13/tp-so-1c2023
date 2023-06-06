@@ -37,5 +37,6 @@ t_pcb* crear_estructura_pcb(t_consola*);
 void iniciar_planificador_largo_plazo(void);
 void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);
 void mostrar_cola_new(t_list* lista, t_log* logger);
+void recibir_instruccion_serializada(int socket_cliente);
 
 #endif /* UTILS_H_ */

@@ -21,7 +21,7 @@ void manejar_conexion(void* void_args) {
 
 	  	switch (codigo_operacion) {
 	  	case MENSAJE:
-	  		recibir_mensaje(logger, socket_cliente);
+	  		recibir_instruccion_serializada(socket_cliente);
 	  		break;
 	  	case PAQUETE_CONSOLA:
 	  		log_info(logger, "Me llegaron el tamanio y las instrucciones");
@@ -155,4 +155,46 @@ void mostrar_cola_new(t_list* lista, t_log* logger) {
       }
 
   }
+
+void recibir_instruccion_serializada(int socket_cliente) {
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
+
+	recv(socket_cliente, &(paquete->buffer->stream_size), sizeof(uint32_t), 0);
+
+	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+
+	recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+	t_instruccion* instruccion_recibida = malloc(sizeof(t_instruccion));
+
+	void* stream = paquete->buffer->stream;
+	int desplazamiento = 0;
+
+	memcpy(&(instruccion_recibida->nombre), stream, sizeof(nombre_instruccion));
+	stream += sizeof(nombre_instruccion);
+	printf("\nLa isntruccion recibida fue: %d, ", instruccion_recibida->nombre);
+
+	memcpy(&(instruccion_recibida->parametro_1_length), stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(instruccion_recibida->parametro_1, stream, instruccion_recibida->parametro_1_length);
+	desplazamiento = (strlen(instruccion_recibida->parametro_1) + 1);
+	stream += desplazamiento;
+	printf("%s, ", instruccion_recibida->parametro_1);
+
+	memcpy(&(instruccion_recibida->parametro_2_length), stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(instruccion_recibida->parametro_2, stream, instruccion_recibida->parametro_2_length);
+	desplazamiento = (strlen(instruccion_recibida->parametro_2) + 1);
+	printf("El largo del string fue de %d, debería ser de %d", desplazamiento, instruccion_recibida->parametro_2_length);
+	stream += instruccion_recibida->parametro_2_length;
+
+	printf("%s, ", instruccion_recibida->parametro_2);
+	memcpy(&(instruccion_recibida->parametro_3_length), stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(instruccion_recibida->parametro_3, stream, instruccion_recibida->parametro_3_length);
+	printf("%s", instruccion_recibida->parametro_3);
+
+	printf("\nLa isntruccion recibida fue: %d, %s, %s, %s", instruccion_recibida->nombre, instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
+}
 
