@@ -4,6 +4,7 @@
 int pid_global = 1000;
 t_consola* consola;
 t_list* cola_new;
+t_list* cola_ready;
 
 typedef struct {
     t_log* log;
@@ -32,6 +33,20 @@ void manejar_conexion(void *void_args) {
 
 		log_info(logger, "PCB id[%d] armada -> agregado el proceso a NEW", proceso->pcb->pid);
 		agregar_pcb_a_new(proceso, logger);
+
+//		-------------------------------------------------------------
+//		|     														|
+//		|		OJO CON LO QUE VIENE ACÁ, ES SOLAMENTE				|
+//		|		PARA PROBARLO, EN EL FUTURO TIENE QUE SER UN HILO   |
+//		|		QUE PLANIFIQUE TODO SOLO CON SEMÁFOROS Y DEMÁS		|
+//		|															|
+//		-------------------------------------------------------------
+		// wait(cola_ready);
+		getchar();
+		agregar_proceso_a_ready(proceso, logger);
+		getchar();
+		ejecutar_proceso(socket_cpu);
+
 		break;
 	case PAQUETE_CONSOLA:
 		log_info(logger, "Me llegaron el tamanio y las instrucciones");
@@ -84,6 +99,39 @@ int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 	return 0;
 }
 
+void agregar_proceso_a_ready(t_log* logger) {
+	int grado_de_multiprogramacion = 4;
+
+
+	if(list_size(cola_ready) >= grado_de_multiprogramacion) { // Esto después tiene que ser implementado con semáforos contadores
+		list_add(cola_ready, list_remove(cola_new, 0));
+	}
+
+	log_info(logger, "Cola de Ready: ");
+
+	for(int i = 0; i < list_size(cola_ready); i++) {
+		t_proceso* un_proceso = malloc(sizeof(t_proceso)) ;
+		un_proceso = list_get(cola_ready, i);
+		log_info(logger, "PCB id[%d]", un_proceso->pcb->pid);
+		free(un_proceso);
+	}
+}
+
+void ejecutar_proceso(int socket_cpu, t_log* logger) {
+
+	t_proceso* proceso = malloc(sizeof(t_proceso));
+	proceso = obtener_proceso_cola_ready();
+
+	enviar_pcb(socket_cpu, proceso->pcb);
+
+	log_info(logger, "Proceso id[%d] enviado a CPU para ejecutar.", proceso->pcb->pid);
+
+	op_code respuesta_cpu = recibir_operacion(socket_cpu);
+
+	proceso->pcb = recibir_pcb(socket_cpu);
+
+}
+
 t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
 	t_list *instrucciones = list_create();
 
@@ -111,6 +159,8 @@ t_consola *deserializar_consola(char* instrucciones, t_log* logger) {
 
   	consola->instrucciones = string_duplicate(instrucciones);//deserializar_instrucciones(datos, list_size(datos));
 
+  	free(instrucciones);
+
   	return consola;
 }
 
@@ -136,6 +186,14 @@ void iniciar_planificador_largo_plazo(void) {
 	cola_new = list_create();
 
 
+}
+
+void iniciar_planificador_mediano_plazo(void) {
+	cola_ready = list_create();
+}
+
+void iniciar_conexion_cpu(char* ip_cpu, char* puerto_cpu, t_log* logger) {
+	socket_cpu = crear_conexion(logger, "KERNEL", ip_cpu, puerto_cpu);
 }
 
 void agregar_pcb_a_new(t_proceso* proceso, t_log* logger) {
@@ -220,3 +278,90 @@ void recibir_instruccion_serializada(int socket_cliente) {
 	printf("\nLa isntruccion recibida fue: %d, %s, %s, %s", instruccion_recibida->nombre, instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
 }
 
+void enviar_pcb(int socket_servidor, t_pcb* pcb) {
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+
+	buffer->stream_size = sizeof(int) * 4 + sizeof(estado_proceso) + sizeof(t_registros) + (strlen(pcb->instrucciones) + 1);
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, &(pcb->pid), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(pcb->tamanio_instrucciones), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, pcb->instrucciones, strlen(pcb->instrucciones) + 1);
+	offset += (strlen(pcb->instrucciones) + 1);
+	memcpy(stream + offset, &(pcb->pc), sizeof(estado_proceso));
+	offset += sizeof(estado_proceso);
+	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
+
+	buffer->stream = stream;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+
+	paquete->codigo_operacion = PCB;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t));
+	int desplazamiento = 0;
+
+	memcpy(a_enviar + desplazamiento, &(paquete->codigo_operacion), sizeof(uint8_t));
+	desplazamiento +=sizeof(uint8_t);
+	memcpy(a_enviar + desplazamiento, &(paquete->buffer->stream_size), sizeof(uint32_t));
+	desplazamiento += sizeof(uint32_t);
+	memcpy(a_enviar + desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(socket_servidor, a_enviar, buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t), 0);
+
+	free(a_enviar);
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+t_pcb* recibir_pcb(int socket_servidor) {
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
+
+	recv(socket_servidor, &(paquete->codigo_operacion), sizeof(uint8_t), 0);
+
+	recv(socket_servidor, &(paquete->buffer->stream_size), sizeof(uint32_t), 0);
+	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+	recv(socket_servidor, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+	switch(paquete->codigo_operacion) {
+	case PCB:
+		t_pcb* pcb = deserializar_pcb(paquete->buffer);
+		return pcb;
+	default:
+		printf("ERROR");
+		return 0;
+	}
+}
+
+t_pcb* deserializar_pcb(t_buffer* buffer) {
+	t_pcb* pcb = malloc(sizeof(t_pcb));
+
+	void* stream = buffer->stream;
+
+	memcpy(&(pcb->pid), stream, sizeof(int));
+	stream += sizeof(int);
+	memcpy(&(pcb->tamanio_instrucciones), stream, sizeof(int));
+	stream += sizeof(int);
+	pcb->instrucciones = malloc(pcb->tamanio_instrucciones);
+	memcpy(pcb->instrucciones, stream, pcb->tamanio_instrucciones);
+	stream += pcb->tamanio_instrucciones;
+	memcpy(&(pcb->estado), stream, sizeof(estado_proceso));
+	stream += sizeof(estado_proceso);
+	memcpy(&(pcb->pc), stream, sizeof(int));
+	stream += sizeof(int);
+	memcpy(&(pcb->tamanio), stream, sizeof(int));
+	stream += sizeof(int);
+	memcpy(&(pcb->registros), stream, sizeof(t_registros));
+
+	return pcb;
+}

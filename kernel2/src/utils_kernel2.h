@@ -18,6 +18,8 @@
 
 #define PUERTO "9120"
 
+int socket_cpu;
+
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
 void iterator(char* value);
@@ -34,6 +36,7 @@ t_list *deserializar_instrucciones(t_list*, int);
 t_consola *deserializar_consola(char*, t_log*);
 t_pcb* crear_estructura_pcb(t_consola*);
 void iniciar_planificador_largo_plazo(void);
+void iniciar_planificador_mediano_plazo(void);
 void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);
 void mostrar_cola_new(t_list* lista, t_log* logger);
 void recibir_instruccion_serializada(int socket_cliente);

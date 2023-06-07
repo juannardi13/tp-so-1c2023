@@ -23,7 +23,8 @@ typedef enum
 	MENSAJE,
 	PAQUETE,
 	PAQUETE_CONSOLA,
-	CONSOLA
+	CONSOLA,
+	PCB
 } op_code;
 
 typedef enum {
@@ -92,6 +93,7 @@ typedef struct {
 
 typedef struct {
 	int pid;
+	int tamanio_instrucciones;
 	char* instrucciones;
 	estado_proceso estado;
 	int pc;
