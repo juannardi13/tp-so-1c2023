@@ -21,7 +21,10 @@ void manejar_conexion(void* void_args) {
 
 	  	switch (codigo_operacion) {
 	  	case MENSAJE:
-	  		recibir_instruccion_serializada(socket_cliente);
+	  		char* instrucciones = string_new();
+	  		instrucciones = recibir_instrucciones_como_string(socket_cliente, logger);
+	  		log_error(logger, "%s", instrucciones);
+//	  		recibir_instruccion_serializada(socket_cliente);
 	  		break;
 	  	case PAQUETE_CONSOLA:
 	  		log_info(logger, "Me llegaron el tamanio y las instrucciones");
@@ -153,8 +156,32 @@ void mostrar_cola_new(t_list* lista, t_log* logger) {
             		free(instruccion_recibida);
             	}
       }
+}
 
-  }
+char* recibir_instrucciones_como_string(int socket_cliente, t_log* logger) {
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
+
+
+	recv(socket_cliente, &(paquete->buffer->stream_size), sizeof(uint32_t), 0);
+	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+	recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+	char* mensaje_recibido = malloc(paquete->buffer->stream_size);
+	void* stream = paquete->buffer->stream;
+
+	memcpy(mensaje_recibido, stream, paquete->buffer->stream_size);
+
+	mensaje_recibido = string_duplicate(paquete->buffer->stream);
+
+	log_warning(logger, "%s", mensaje_recibido);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+
+	return mensaje_recibido;
+}
 
 void recibir_instruccion_serializada(int socket_cliente) {
 	t_paquete* paquete = malloc(sizeof(t_paquete));

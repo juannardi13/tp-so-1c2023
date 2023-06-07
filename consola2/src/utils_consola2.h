@@ -23,5 +23,6 @@ t_instruccion* armar_instruccion(nombre_instruccion, char*, char*, char*);
 t_list* parsear_instrucciones(char*, t_log*);
 void serializar_instrucciones(t_list*, t_paquete*);
 char* leer_archivo_pseudocodigo(char*, t_log*);
+void parsear_instrucciones_y_enviar(char* ruta_archivo_pseudocodigo, int socket_servidor, t_log* logger);
 
 #endif /* UTILS_H_ */

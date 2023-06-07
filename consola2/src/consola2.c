@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 
     //int tamanio_proceso = atoi(argv[1]); //Calcula el peso del proceso para poder serializar y deserializar
 
-    t_paquete* paquete_de_instrucciones = crear_paquete();//crear_paquete_consola();
+    //t_paquete* paquete_de_instrucciones = crear_paquete();//crear_paquete_consola();
 
     //agregar_a_paquete(paquete_de_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
 
@@ -48,7 +48,8 @@ int main(int argc, char** argv) {
 
 	getchar();
 	log_warning(logger,"Cantidad de Instrucciones enviadas: %d", list_size(instrucciones));
-	serializar_y_enviar_instruccion(conexion_kernel, instrucciones, paquete_de_instrucciones);
+	parsear_instrucciones_y_enviar(argv[1], conexion_kernel, logger);
+	//serializar_y_enviar_instruccion(conexion_kernel, instrucciones, paquete_de_instrucciones);
 	//enviar_paquete(paquete_de_instrucciones, conexion_kernel);
 	log_info(logger, "Paquete de instrucciones enviado correctamente!");
 

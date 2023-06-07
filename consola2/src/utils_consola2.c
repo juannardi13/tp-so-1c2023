@@ -106,6 +106,44 @@ t_list* parsear_instrucciones(char* ruta_archivo_pseudocodigo, t_log* logger) {
 	return instrucciones;
 }
 
+void parsear_instrucciones_y_enviar(char* ruta_archivo_pseudocodigo, int socket_servidor, t_log* logger) {
+	char* pseudocodigo_leido = leer_archivo_pseudocodigo(ruta_archivo_pseudocodigo, logger);
+
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+
+	buffer->stream_size = strlen(pseudocodigo_leido) + 1;
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, pseudocodigo_leido, strlen(pseudocodigo_leido) + 1);
+
+	buffer->stream = stream;
+
+	free(pseudocodigo_leido);
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+
+	paquete->codigo_operacion = MENSAJE;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t));
+	int desplazamiento = 0;
+
+	memcpy(a_enviar + desplazamiento, &(paquete->codigo_operacion), sizeof(uint8_t));
+	desplazamiento += sizeof(uint8_t);
+	memcpy(a_enviar + desplazamiento, &(paquete->buffer->stream_size), sizeof(uint32_t));
+	desplazamiento += sizeof(uint32_t);
+	memcpy(a_enviar + desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(socket_servidor, a_enviar, buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t), 0);
+
+	free(a_enviar);
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
 t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char* parametro_2, char* parametro_3) {
 	t_instruccion* instruccion= malloc(sizeof(t_instruccion));
 	instruccion->nombre = id;

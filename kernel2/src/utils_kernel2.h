@@ -10,6 +10,7 @@
 #include<commons/config.h>
 #include<commons/collections/list.h>
 #include<commons/collections/queue.h>
+#include<commons/string.h>
 #include<string.h>
 #include<assert.h>
 #include <pthread.h>
@@ -38,5 +39,6 @@ void iniciar_planificador_largo_plazo(void);
 void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);
 void mostrar_cola_new(t_list* lista, t_log* logger);
 void recibir_instruccion_serializada(int socket_cliente);
+char* recibir_instrucciones_como_string(int socket_cliente, t_log* logger);
 
 #endif /* UTILS_H_ */

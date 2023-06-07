@@ -315,3 +315,124 @@
 [INFO] 20:08:47:632 kernel.log/(73690:73690): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
 [INFO] 20:08:49:751 kernel.log/(73690:73690): Cliente conectado (a KERNEL)
 
+[INFO] 20:15:36:829 kernel.log/(73777:73777): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:15:45:154 kernel.log/(73777:73777): Cliente conectado (a KERNEL)
+
+[INFO] 17:31:53:084 kernel.log/(74798:74798): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:32:14:035 kernel.log/(74821:74821): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:32:16:682 kernel.log/(74821:74821): Cliente conectado (a KERNEL)
+
+[INFO] 17:32:18:012 kernel.log/(74821:74821): 
+[INFO] 17:32:46:538 kernel.log/(74835:74835): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:33:00:460 kernel.log/(74865:74865): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:33:04:648 kernel.log/(74865:74865): Cliente conectado (a KERNEL)
+
+[INFO] 17:33:33:008 kernel.log/(74865:74865): 
+[INFO] 17:49:14:267 kernel.log/(75612:75612): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:49:28:959 kernel.log/(75612:75612): Cliente conectado (a KERNEL)
+
+[WARNING] 17:50:05:423 kernel.log/(75612:75612): 
+[INFO] 18:13:54:511 kernel.log/(76510:76510): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:13:57:619 kernel.log/(76510:76510): Cliente conectado (a KERNEL)
+
+[WARNING] 18:13:58:403 kernel.log/(76510:76510): K
+[INFO] 18:15:10:954 kernel.log/(76638:76638): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:15:14:366 kernel.log/(76638:76638): Cliente conectado (a KERNEL)
+
+[WARNING] 18:15:55:889 kernel.log/(76638:76638): K
+[INFO] 18:22:16:862 kernel.log/(76979:76979): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:22:19:575 kernel.log/(76979:76979): Cliente conectado (a KERNEL)
+
+[INFO] 18:22:33:592 kernel.log/(77010:77010): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:22:36:371 kernel.log/(77010:77010): Cliente conectado (a KERNEL)
+
+[INFO] 18:24:57:326 kernel.log/(77175:77175): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:25:00:509 kernel.log/(77175:77175): Cliente conectado (a KERNEL)
+
+[INFO] 18:25:11:032 kernel.log/(77198:77198): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:25:13:384 kernel.log/(77198:77198): Cliente conectado (a KERNEL)
+
+[WARNING] 18:25:13:881 kernel.log/(77198:77198): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 18:30:25:885 kernel.log/(77499:77499): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:30:28:634 kernel.log/(77499:77499): Cliente conectado (a KERNEL)
+
+[WARNING] 18:30:29:158 kernel.log/(77499:77499): Operacion desconocida 
+
+[INFO] 18:31:00:348 kernel.log/(77541:77541): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:31:04:797 kernel.log/(77541:77541): Cliente conectado (a KERNEL)
+
+[WARNING] 18:31:05:264 kernel.log/(77541:77541): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[ERROR] 18:31:05:265 kernel.log/(77541:77541): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 18:40:04:282 kernel.log/(77845:77845): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:40:07:744 kernel.log/(77845:77845): Cliente conectado (a KERNEL)
+
+[WARNING] 18:40:08:788 kernel.log/(77845:77845): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[ERROR] 18:40:08:789 kernel.log/(77845:77845): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 18:41:54:058 kernel.log/(77971:77971): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:41:55:996 kernel.log/(77971:77971): Cliente conectado (a KERNEL)
+
+[WARNING] 18:41:56:609 kernel.log/(77971:77971): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[ERROR] 18:41:56:611 kernel.log/(77971:77971): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
