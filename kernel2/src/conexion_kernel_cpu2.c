@@ -1,5 +1,5 @@
-#include"utils_kernel2.h"
-#include<shared-2.h>
+//#include"utils_kernel2.h"
+//#include<shared-2.h>
 /*
 typedef enum {
 	NEW,

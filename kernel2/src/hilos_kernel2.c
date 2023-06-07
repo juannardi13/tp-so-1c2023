@@ -10,62 +10,70 @@ typedef struct {
     int fd;
 } t_manejar_conexion_args;
 
-void manejar_conexion(void* void_args) {
+void manejar_conexion(void *void_args) {
 
-	t_manejar_conexion_args* args = (t_manejar_conexion_args*) void_args;
-	t_log* logger = args->log;
+	t_manejar_conexion_args *args = (t_manejar_conexion_args*) void_args;
+	t_log *logger = args->log;
 	int socket_cliente = args->fd;
 
 	int codigo_operacion = recibir_operacion(socket_cliente);
 
+	switch (codigo_operacion) {
+	case CONSOLA:
+		char *instrucciones = string_new();
+		instrucciones = recibir_instrucciones_como_string(socket_cliente, logger);
+		consola = deserializar_consola(instrucciones, logger);
+		log_info(logger, "Consola deserializada, armando PCB");
 
-	  	switch (codigo_operacion) {
-	  	case MENSAJE:
-	  		char* instrucciones = string_new();
-	  		instrucciones = recibir_instrucciones_como_string(socket_cliente, logger);
-	  		log_error(logger, "%s", instrucciones);
-//	  		recibir_instruccion_serializada(socket_cliente);
-	  		break;
-	  	case PAQUETE_CONSOLA:
-	  		log_info(logger, "Me llegaron el tamanio y las instrucciones");
-	  		//pthread_mutex_lock(&mutex_consola);
-			consola = deserializar_consola(socket_cliente);
-			//pthread_mutex_unlock(&mutex_consola);
-	  		log_info(logger, "Consola deserializada, se arma el PCB\n");
-	  		t_proceso* procesos = malloc(sizeof(t_proceso));
-	  		procesos->pcb = malloc(sizeof(t_pcb));
-			//pthread_mutex_lock(&mutex_consola);
-	  		procesos->pcb = crear_estructura_pcb(consola);
-			//pthread_mutex_unlock(&mutex_consola);
-	  		procesos->socket = socket_cliente;
-	  		log_info(logger, "PCB id[%d] armada -> agregar proceso a new",procesos->pcb->pid);
-	  		agregar_pcb_a_new(procesos, logger);
-	  		break;
-	  	case PAQUETE:
-			log_info(logger, "Me llego el paquete:\n");
-	  		break;
+		t_proceso *proceso = malloc(sizeof(t_proceso));
+		proceso->pcb = malloc(sizeof(t_pcb));
+		proceso->pcb = crear_estructura_pcb(consola);
+		proceso->socket = socket_cliente;
 
-	      default:
-	          log_warning(logger, "Operacion desconocida \n");
-	          break;
-	  	}
+		log_info(logger, "PCB id[%d] armada -> agregado el proceso a NEW", proceso->pcb->pid);
+		agregar_pcb_a_new(proceso, logger);
+		break;
+	case PAQUETE_CONSOLA:
+		log_info(logger, "Me llegaron el tamanio y las instrucciones");
+		//pthread_mutex_lock(&mutex_consola);
+		//consola = deserializar_consola(socket_cliente);
+		//pthread_mutex_unlock(&mutex_consola);
+		log_info(logger, "Consola deserializada, se arma el PCB\n");
+		t_proceso *procesos = malloc(sizeof(t_proceso));
+		procesos->pcb = malloc(sizeof(t_pcb));
+		//pthread_mutex_lock(&mutex_consola);
+		procesos->pcb = crear_estructura_pcb(consola);
+		//pthread_mutex_unlock(&mutex_consola);
+		procesos->socket = socket_cliente;
+		log_info(logger, "PCB id[%d] armada -> agregar proceso a new", procesos->pcb->pid);
+		agregar_pcb_a_new(procesos, logger);
+		break;
+	case PAQUETE:
+		log_info(logger, "Me llego el paquete:\n");
+		break;
+	case MENSAJE:
+		log_info(logger, "Recibí un mensaje.");
+		break;
+	default:
+		log_warning(logger, "Operacion desconocida \n");
+		break;
+	}
 
 }
 
 
 int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 
-	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
 	int socket_cliente = esperar_cliente(logger,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			//pthread_t hilo_cliente;
+			pthread_t hilo_cliente;
 			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
 			args->fd = socket_cliente;
 			args->log = logger;
-			manejar_conexion(args);
-			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			//pthread_detach(hilo_cliente);
+			//manejar_conexion(args);
+			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			pthread_detach(hilo_cliente);
 			free(args);
 			return 1;
 		} else {
@@ -93,22 +101,20 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
   	return instrucciones;
 }
 
-t_consola *deserializar_consola(int  socket_cliente) {
-
-	t_list *datos = recibir_paquete(socket_cliente);
+t_consola *deserializar_consola(char* instrucciones, t_log* logger) {
 
   	t_consola *consola = malloc(sizeof(t_consola));
 
-  	consola->tamanio_proceso = *(uint32_t *)list_remove(datos, 0);
+  	consola->tamanio_proceso = strlen(instrucciones);
 
   	printf("\n El tamanio del proceso es: %d", consola->tamanio_proceso);
 
-  	consola->instrucciones = deserializar_instrucciones(datos, list_size(datos));
+  	consola->instrucciones = string_duplicate(instrucciones);//deserializar_instrucciones(datos, list_size(datos));
 
   	return consola;
 }
 
-t_pcb* crear_estructura_pcb(t_consola *consola) {
+t_pcb* crear_estructura_pcb(t_consola* consola) {
 
 	t_pcb* un_pcb = malloc(sizeof(t_pcb));
 	//pthread_mutex_lock(&mutex_pid);
@@ -116,8 +122,9 @@ t_pcb* crear_estructura_pcb(t_consola *consola) {
 	pid_global++;
 	//pthread_mutex_unlock(&mutex_pid);
 	un_pcb->tamanio =consola->tamanio_proceso;
-	un_pcb->instrucciones = list_duplicate(consola->instrucciones);
+	un_pcb->instrucciones = string_duplicate(consola->instrucciones);
 	un_pcb->pc = 0;
+	un_pcb->estado = NEW;
 	//Cada vez que agreguemos algo nuevo al pcb lo hacemos como ariba
 
 	return un_pcb;
@@ -145,16 +152,6 @@ void mostrar_cola_new(t_list* lista, t_log* logger) {
       for (int j = 0; j < list_size(lista); j++){
           t_proceso* proceso = list_get(lista, j);
           log_info(logger,"PCB ID: %d\n",proceso->pcb->pid);
-          log_info(logger, "instrucciones del proceso [%d]: ", proceso->pcb->pid);
-          t_list* lista_instrucciones = list_create();
-          lista_instrucciones = list_duplicate(proceso->pcb->instrucciones);
-
-          for(int i = 0; i < list_size(lista_instrucciones); i++) {
-            		t_instruccion *instruccion_recibida = malloc(sizeof(t_instruccion));
-            		instruccion_recibida = list_get(lista_instrucciones, i);
-            		log_info(logger, "%d, %s, %s, %s.", instruccion_recibida->nombre, instruccion_recibida->parametro_1, instruccion_recibida->parametro_2, instruccion_recibida->parametro_3);
-            		free(instruccion_recibida);
-            	}
       }
 }
 
@@ -173,8 +170,6 @@ char* recibir_instrucciones_como_string(int socket_cliente, t_log* logger) {
 	memcpy(mensaje_recibido, stream, paquete->buffer->stream_size);
 
 	mensaje_recibido = string_duplicate(paquete->buffer->stream);
-
-	log_warning(logger, "%s", mensaje_recibido);
 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);

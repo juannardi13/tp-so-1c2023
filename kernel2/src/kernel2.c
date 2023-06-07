@@ -12,6 +12,8 @@ int main() {
 	ip_kernel = config_get_string_value(config, "IP");
 	puerto_kernel = config_get_string_value(config, "PUERTO_CONSOLA");
 
+	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
+
 	int fd_kernel = iniciar_servidor(puerto_kernel);
 
 	//int fd_kernel = iniciar_servidor(ip_kernel, puerto_kernel);

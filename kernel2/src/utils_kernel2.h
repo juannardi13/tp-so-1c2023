@@ -18,8 +18,6 @@
 
 #define PUERTO "9120"
 
-
-
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
 void iterator(char* value);
@@ -33,7 +31,7 @@ t_pcb * alocar_memoria_pcb(t_log* logger);
 void manejar_conexion(void*);
 int atender_clientes_kernel(int, t_log*);
 t_list *deserializar_instrucciones(t_list*, int);
-t_consola *deserializar_consola(int);
+t_consola *deserializar_consola(char*, t_log*);
 t_pcb* crear_estructura_pcb(t_consola*);
 void iniciar_planificador_largo_plazo(void);
 void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);

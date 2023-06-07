@@ -124,7 +124,7 @@ void parsear_instrucciones_y_enviar(char* ruta_archivo_pseudocodigo, int socket_
 
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
-	paquete->codigo_operacion = MENSAJE;
+	paquete->codigo_operacion = CONSOLA;
 	paquete->buffer = buffer;
 
 	void* a_enviar = malloc(buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t));

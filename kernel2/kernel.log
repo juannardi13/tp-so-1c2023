@@ -436,3 +436,245 @@ EXIT
 SET CX COMO
 YIELD
 EXIT
+[INFO] 19:57:01:234 kernel.log/(79933:79933): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:57:15:298 kernel.log/(79933:79933): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:28:063 kernel.log/(79956:79956): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:57:30:565 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:31:324 kernel.log/(79956:79963): Consola deserializada, armando PCB
+[INFO] 19:57:31:325 kernel.log/(79956:79963): PCB id[1000] armada -> agregado el proceso a NEW
+[INFO] 19:57:31:327 kernel.log/(79956:79963): PID[1000] ingresa a NEW 
+
+[INFO] 19:57:31:328 kernel.log/(79956:79963): PCB ID: 1000
+
+[INFO] 19:57:31:329 kernel.log/(79956:79963): instrucciones del proceso [1000]: 
+[INFO] 19:57:31:329 kernel.log/(79956:79963): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 19:57:41:263 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:43:053 kernel.log/(79956:79965): Consola deserializada, armando PCB
+[INFO] 19:57:43:053 kernel.log/(79956:79965): PCB id[1001] armada -> agregado el proceso a NEW
+[INFO] 19:57:43:054 kernel.log/(79956:79965): PID[1001] ingresa a NEW 
+
+[INFO] 19:57:43:054 kernel.log/(79956:79965): PCB ID: 1001
+
+[INFO] 19:57:43:054 kernel.log/(79956:79965): instrucciones del proceso [1001]: 
+[INFO] 19:57:43:054 kernel.log/(79956:79965): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 19:57:44:997 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:45:724 kernel.log/(79956:79967): Consola deserializada, armando PCB
+[INFO] 19:57:45:724 kernel.log/(79956:79967): PCB id[1002] armada -> agregado el proceso a NEW
+[INFO] 19:57:45:725 kernel.log/(79956:79967): PID[1002] ingresa a NEW 
+
+[INFO] 19:57:45:725 kernel.log/(79956:79967): PCB ID: 1002
+
+[INFO] 19:57:45:725 kernel.log/(79956:79967): instrucciones del proceso [1002]: 
+[INFO] 19:57:45:725 kernel.log/(79956:79967): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 19:57:46:949 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:47:330 kernel.log/(79956:79969): Consola deserializada, armando PCB
+[INFO] 19:57:47:331 kernel.log/(79956:79969): PCB id[1003] armada -> agregado el proceso a NEW
+[INFO] 19:57:47:331 kernel.log/(79956:79969): PID[1003] ingresa a NEW 
+
+[INFO] 19:57:47:331 kernel.log/(79956:79969): PCB ID: 1003
+
+[INFO] 19:57:47:331 kernel.log/(79956:79969): instrucciones del proceso [1003]: 
+[INFO] 19:57:47:332 kernel.log/(79956:79969): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 19:57:48:124 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:48:418 kernel.log/(79956:79971): Consola deserializada, armando PCB
+[INFO] 19:57:48:418 kernel.log/(79956:79971): PCB id[1004] armada -> agregado el proceso a NEW
+[INFO] 19:57:48:419 kernel.log/(79956:79971): PID[1004] ingresa a NEW 
+
+[INFO] 19:57:48:419 kernel.log/(79956:79971): PCB ID: 1004
+
+[INFO] 19:57:48:419 kernel.log/(79956:79971): instrucciones del proceso [1004]: 
+[INFO] 19:57:48:419 kernel.log/(79956:79971): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 19:57:48:954 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:49:162 kernel.log/(79956:79973): Consola deserializada, armando PCB
+[INFO] 19:57:49:162 kernel.log/(79956:79973): PCB id[1005] armada -> agregado el proceso a NEW
+[INFO] 19:57:49:163 kernel.log/(79956:79973): PID[1005] ingresa a NEW 
+
+[INFO] 19:57:49:163 kernel.log/(79956:79973): PCB ID: 1005
+
+[INFO] 19:57:49:163 kernel.log/(79956:79973): instrucciones del proceso [1005]: 
+[INFO] 19:57:49:163 kernel.log/(79956:79973): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 19:57:49:722 kernel.log/(79956:79956): Cliente conectado (a KERNEL)
+
+[INFO] 19:57:49:906 kernel.log/(79956:79975): Consola deserializada, armando PCB
+[INFO] 19:57:49:906 kernel.log/(79956:79975): PCB id[1006] armada -> agregado el proceso a NEW
+[INFO] 19:57:49:907 kernel.log/(79956:79975): PID[1006] ingresa a NEW 
+
+[INFO] 19:57:49:907 kernel.log/(79956:79975): PCB ID: 1006
+
+[INFO] 19:57:49:907 kernel.log/(79956:79975): instrucciones del proceso [1006]: 
+[INFO] 19:57:49:907 kernel.log/(79956:79975): SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+[INFO] 20:01:17:442 kernel.log/(80109:80109): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:01:20:397 kernel.log/(80109:80109): Cliente conectado (a KERNEL)
+
+[INFO] 20:01:21:961 kernel.log/(80109:80116): Consola deserializada, armando PCB
+[INFO] 20:01:21:961 kernel.log/(80109:80116): PCB id[1000] armada -> agregado el proceso a NEW
+[INFO] 20:01:21:963 kernel.log/(80109:80116): PID[1000] ingresa a NEW 
+
+[INFO] 20:01:21:963 kernel.log/(80109:80116): PCB ID: 1000
+
+[INFO] 20:01:23:817 kernel.log/(80109:80109): Cliente conectado (a KERNEL)
+
+[INFO] 20:01:24:399 kernel.log/(80109:80118): Consola deserializada, armando PCB
+[INFO] 20:01:24:400 kernel.log/(80109:80118): PCB id[1001] armada -> agregado el proceso a NEW
+[INFO] 20:01:24:400 kernel.log/(80109:80118): PID[1001] ingresa a NEW 
+
+[INFO] 20:01:24:400 kernel.log/(80109:80118): PCB ID: 1001
+
+[INFO] 20:01:32:615 kernel.log/(80109:80109): Cliente conectado (a KERNEL)
+
+[INFO] 20:01:33:228 kernel.log/(80109:80120): Consola deserializada, armando PCB
+[INFO] 20:01:33:228 kernel.log/(80109:80120): PCB id[1002] armada -> agregado el proceso a NEW
+[INFO] 20:01:33:228 kernel.log/(80109:80120): PID[1002] ingresa a NEW 
+
+[INFO] 20:01:33:229 kernel.log/(80109:80120): PCB ID: 1002
+
+[INFO] 20:04:01:610 kernel.log/(80237:80237): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:05:08:598 kernel.log/(80409:80409): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:05:12:403 kernel.log/(80409:80409): Cliente conectado (a KERNEL)
+
+[INFO] 20:05:14:137 kernel.log/(80409:80416): Consola deserializada, armando PCB
+[INFO] 20:05:14:137 kernel.log/(80409:80416): PCB id[1000] armada -> agregado el proceso a NEW
+[INFO] 20:05:14:139 kernel.log/(80409:80416): PID[1000] ingresa a NEW 
+
+[INFO] 20:05:14:140 kernel.log/(80409:80416): PCB ID: 1000
+
+[INFO] 20:05:15:273 kernel.log/(80409:80409): Cliente conectado (a KERNEL)
+
+[INFO] 20:05:16:429 kernel.log/(80409:80418): Consola deserializada, armando PCB
+[INFO] 20:05:16:430 kernel.log/(80409:80418): PCB id[1001] armada -> agregado el proceso a NEW
+[INFO] 20:05:16:430 kernel.log/(80409:80418): PID[1001] ingresa a NEW 
+
+[INFO] 20:05:16:430 kernel.log/(80409:80418): PCB ID: 1000
+
+[INFO] 20:05:16:430 kernel.log/(80409:80418): PCB ID: 1001
+
+[INFO] 20:05:17:913 kernel.log/(80409:80409): Cliente conectado (a KERNEL)
+
+[INFO] 20:05:19:128 kernel.log/(80409:80420): Consola deserializada, armando PCB
+[INFO] 20:05:19:128 kernel.log/(80409:80420): PCB id[1002] armada -> agregado el proceso a NEW
+[INFO] 20:05:19:128 kernel.log/(80409:80420): PID[1002] ingresa a NEW 
+
+[INFO] 20:05:19:129 kernel.log/(80409:80420): PCB ID: 1000
+
+[INFO] 20:05:19:129 kernel.log/(80409:80420): PCB ID: 1001
+
+[INFO] 20:05:19:130 kernel.log/(80409:80420): PCB ID: 1002
+
+[INFO] 20:05:19:548 kernel.log/(80409:80409): Cliente conectado (a KERNEL)
+
+[INFO] 20:05:19:699 kernel.log/(80409:80422): Consola deserializada, armando PCB
+[INFO] 20:05:19:699 kernel.log/(80409:80422): PCB id[1003] armada -> agregado el proceso a NEW
+[INFO] 20:05:19:699 kernel.log/(80409:80422): PID[1003] ingresa a NEW 
+
+[INFO] 20:05:19:699 kernel.log/(80409:80422): PCB ID: 1000
+
+[INFO] 20:05:19:699 kernel.log/(80409:80422): PCB ID: 1001
+
+[INFO] 20:05:19:700 kernel.log/(80409:80422): PCB ID: 1002
+
+[INFO] 20:05:19:700 kernel.log/(80409:80422): PCB ID: 1003
+
+[INFO] 20:05:20:176 kernel.log/(80409:80409): Cliente conectado (a KERNEL)
+
+[INFO] 20:05:20:356 kernel.log/(80409:80424): Consola deserializada, armando PCB
+[INFO] 20:05:20:357 kernel.log/(80409:80424): PCB id[1004] armada -> agregado el proceso a NEW
+[INFO] 20:05:20:357 kernel.log/(80409:80424): PID[1004] ingresa a NEW 
+
+[INFO] 20:05:20:357 kernel.log/(80409:80424): PCB ID: 1000
+
+[INFO] 20:05:20:357 kernel.log/(80409:80424): PCB ID: 1001
+
+[INFO] 20:05:20:358 kernel.log/(80409:80424): PCB ID: 1002
+
+[INFO] 20:05:20:358 kernel.log/(80409:80424): PCB ID: 1003
+
+[INFO] 20:05:20:358 kernel.log/(80409:80424): PCB ID: 1004
+
+[INFO] 20:05:20:776 kernel.log/(80409:80409): Cliente conectado (a KERNEL)
+
+[INFO] 20:05:20:927 kernel.log/(80409:80426): Consola deserializada, armando PCB
+[INFO] 20:05:20:927 kernel.log/(80409:80426): PCB id[1005] armada -> agregado el proceso a NEW
+[INFO] 20:05:20:927 kernel.log/(80409:80426): PID[1005] ingresa a NEW 
+
+[INFO] 20:05:20:928 kernel.log/(80409:80426): PCB ID: 1000
+
+[INFO] 20:05:20:928 kernel.log/(80409:80426): PCB ID: 1001
+
+[INFO] 20:05:20:928 kernel.log/(80409:80426): PCB ID: 1002
+
+[INFO] 20:05:20:928 kernel.log/(80409:80426): PCB ID: 1003
+
+[INFO] 20:05:20:928 kernel.log/(80409:80426): PCB ID: 1004
+
+[INFO] 20:05:20:928 kernel.log/(80409:80426): PCB ID: 1005
+
