@@ -5,6 +5,8 @@
 int main() {
 	char* ip_kernel;
 	char* puerto_kernel;
+	char* ip_cpu;
+	char* puerto_cpu;
 
 	t_log* logger = iniciar_logger();
 	t_config* config = iniciar_config("cfg/kernel.config");
@@ -12,7 +14,13 @@ int main() {
 	ip_kernel = config_get_string_value(config, "IP");
 	puerto_kernel = config_get_string_value(config, "PUERTO_CONSOLA");
 
+	ip_cpu = config_get_string_value(config, "IP");
+	puerto_kernel = config_get_string_value(config, "PUERTO_CPU")
+
 	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
+	iniciar_planificador_mediano_plazo();
+
+	iniciar_conexion_cpu(ip_cpu, puerto_kernel, logger);
 
 	int fd_kernel = iniciar_servidor(puerto_kernel);
 
