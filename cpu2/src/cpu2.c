@@ -247,41 +247,41 @@ void asignar_valor_a_registro(char* valor, char* registro, t_registros* registro
 }
 char* valor_de_registro(char* registro, t_registros registros){
 	char* valor;
-	if (registro == "AX"){
-			valor = registros->ax;
+	if (stcrmp(registro, "AX") == 0){
+		strncpy(valor, registros->ax, length(registros->ax));
 		}
-	if (registro == "BX"){
-			valor = registros->bx;
+	if (stcrmp(registro, "BX") == 0){
+		strncpy(valor, registros->bx, length(registros->bx));
 		}
-	if (registro == "CX"){
-			valor = registros->cx;
+	if (stcrmp(registro, "CX") == 0){
+		strncpy(valor, registros->cx, length(registros->cx));
 		}
-	if (registro == "DX"){
-			valor = registros->ax;
+	if (stcrmp(registro, "DX") == 0){
+		strncpy(valor, registros->dx, length(registros->dx));
 		}
-	if (registro == "EAX"){
-			valor = registros->eax;
+	if (stcrmp(registro, "EAX") == 0){
+		strncpy(valor, registros->eax, length(registros->eax));
 		}
-	if (registro == "EBX"){
-			valor = registros->ebx;
+	if (stcrmp(registro, "EBX") == 0){
+		strncpy(valor, registros->ebx, length(registros->ebx));
 		}
-	if (registro == "ECX"){
-			valor = registros->ecx;
+	if (stcrmp(registro, "ECX") == 0){
+		strncpy(valor, registros->ecx, length(registros->ecx));
 		}
-	if (registro == "EDX"){
-			valor = registros->edx;
+	if (stcrmp(registro, "EDX") == 0){
+		strncpy(valor, registros->edx, length(registros->edx));
 		}
-	if (registro == "RAX"){
-			valor = registros->rax;
+	if (stcrmp(registro, "RAX") == 0){
+		strncpy(valor, registros->rax, length(registros->rax));
 		}
-	if (registro == "RBX"){
-			valor = registros->rbx;
+	if (stcrmp(registro, "RBX") == 0){
+		strncpy(valor, registros->rbx, length(registros->rbx));
 		}
-	if (registro == "RCX"){
-			valor = registros->rcx;
+	if (stcrmp(registro, "RCX") == 0){
+		strncpy(valor, registros->rcx, length(registros->rcx));
 		}
-	if (registro == "RDX"){
-			valor = registros->rdx;
+	if (stcrmp(registro, "RDX") == 0){
+		strncpy(valor, registros->rdx, length(registros->rdx));
 		}
 	return valor;
 }
