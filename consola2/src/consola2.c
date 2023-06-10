@@ -35,20 +35,24 @@ int main(int argc, char** argv) {
 
     //agregar_a_paquete(paquete_de_instrucciones, &tamanio_proceso,sizeof(int)); //Agrega al paquete el tamanio del proceso como primer dato
 
-    t_list *instrucciones = parsear_instrucciones(argv[1], logger);
+    //t_list *instrucciones = parsear_instrucciones(argv[1], logger);
 
 	//serializar_instrucciones(instrucciones, paquete_de_instrucciones); //Esta función ya agrega al paquete las instrucciones.
 
 	//Inicialización de Consola como cliente
 	// int conexion_kernel = crear_conexion(logger, "CONSOLA", ip_kernel, puerto_kernel);
+	char* instrucciones = leer_archivo_pseudocodigo(argv[1], logger);
+
 	int conexion_kernel = crear_conexion(logger, "CONSOLA", ip_kernel, puerto_kernel);
 	log_info(logger, "Se creo la conexion con el Kernel");
 
 	//Envío de instrucciones a Kernel
 
-	getchar();
+
 	log_warning(logger,"Cantidad de Instrucciones enviadas: %d", list_size(instrucciones));
-	parsear_instrucciones_y_enviar(argv[1], conexion_kernel, logger);
+	enviar_string(conexion_kernel, instrucciones, CONSOLA);
+
+	//parsear_instrucciones_y_enviar(argv[1], conexion_kernel, logger);
 	//serializar_y_enviar_instruccion(conexion_kernel, instrucciones, paquete_de_instrucciones);
 	//enviar_paquete(paquete_de_instrucciones, conexion_kernel);
 	log_info(logger, "Paquete de instrucciones enviado correctamente!");

@@ -265,4 +265,65 @@ char* leer_archivo_pseudocodigo(char *ruta, t_log* logger) {
     return contenido;
 }
 
+void enviar_string(int conexion_servidor, char* string, op_code codigo_op) {
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	//void* string_a_enviar = serializar_string(string, paquete, codigo_op);
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+		int tamanio_string = strlen(string) + 1;
 
+		buffer->stream_size = tamanio_string;
+		void* stream = malloc(buffer->stream_size);
+		int offset = 0;
+
+		memcpy(stream + offset, string, tamanio_string);
+		offset += tamanio_string;
+
+		buffer->stream = stream;
+
+		paquete->codigo_operacion = codigo_op;
+		paquete->buffer = buffer;
+
+		void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+		offset = 0;
+
+		memcpy(a_enviar, &(paquete->codigo_operacion), sizeof(int));
+		offset += sizeof(int);
+		memcpy(a_enviar, &(paquete->buffer->stream_size), sizeof(int));
+		offset += sizeof(int);
+		memcpy(a_enviar + offset, paquete->buffer->stream, paquete->buffer->stream_size);
+		offset += paquete->buffer->stream_size;
+
+	send(conexion_servidor, a_enviar, (paquete->buffer->stream_size) + sizeof(int) + sizeof(int), 0);
+	free(a_enviar);
+	eliminar_paquete(paquete);
+}
+
+void* serializar_string(char* string, t_paquete* paquete, op_code codigo_op) {
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+	int tamanio_string = strlen(string) + 1;
+
+	buffer->stream_size = tamanio_string;
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, string, tamanio_string);
+	offset += tamanio_string;
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = codigo_op;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	offset = 0;
+
+	memcpy(a_enviar, &(paquete->codigo_operacion), sizeof(int));
+	offset += sizeof(int);
+	memcpy(a_enviar, &(paquete->buffer->stream_size), sizeof(int));
+	offset += sizeof(int);
+	memcpy(a_enviar + offset, paquete->buffer->stream, paquete->buffer->stream_size);
+	offset += paquete->buffer->stream_size;
+
+	free(string);
+	return a_enviar;
+}

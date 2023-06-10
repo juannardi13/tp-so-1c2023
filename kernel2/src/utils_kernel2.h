@@ -18,7 +18,7 @@
 
 #define PUERTO "9120"
 
-int socket_cpu;
+
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
@@ -41,5 +41,12 @@ void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);
 void mostrar_cola_new(t_list* lista, t_log* logger);
 void recibir_instruccion_serializada(int socket_cliente);
 char* recibir_instrucciones_como_string(int socket_cliente, t_log* logger);
+void ejecutar_proceso(int socket_cpu, t_log* logger);
+void agregar_proceso_a_ready(t_log* logger);
+t_proceso* obtener_proceso_cola_ready(void);
+void enviar_pcb(int, t_pcb*);
+t_pcb* recibir_pcb(int);
+t_pcb* deserializar_pcb(t_buffer*);
+char* deserializar_string(t_buffer* buffer);
 
 #endif /* UTILS_H_ */

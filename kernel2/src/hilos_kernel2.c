@@ -5,6 +5,7 @@ int pid_global = 1000;
 t_consola* consola;
 t_list* cola_new;
 t_list* cola_ready;
+int socket_cpu;
 
 typedef struct {
     t_log* log;
@@ -12,68 +13,105 @@ typedef struct {
 } t_manejar_conexion_args;
 
 void manejar_conexion(void *void_args) {
-
 	t_manejar_conexion_args *args = (t_manejar_conexion_args*) void_args;
 	t_log *logger = args->log;
 	int socket_cliente = args->fd;
 
-	int codigo_operacion = recibir_operacion(socket_cliente);
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
 
-	switch (codigo_operacion) {
+	recv(socket_cliente, &(paquete->codigo_operacion), sizeof(int), 0);
+
+	recv(socket_cliente, &(paquete->buffer->stream_size), sizeof(int), 0);
+	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+	recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+	void* data;
+
+	switch(paquete->codigo_operacion)
+	{
 	case CONSOLA:
-		char *instrucciones = string_new();
-		instrucciones = recibir_instrucciones_como_string(socket_cliente, logger);
-		consola = deserializar_consola(instrucciones, logger);
-		log_info(logger, "Consola deserializada, armando PCB");
+		log_info(logger, "Me llegó una Consola");
+		data = deserializar_string(paquete->buffer);
 
-		t_proceso *proceso = malloc(sizeof(t_proceso));
-		proceso->pcb = malloc(sizeof(t_pcb));
-		proceso->pcb = crear_estructura_pcb(consola);
-		proceso->socket = socket_cliente;
-
-		log_info(logger, "PCB id[%d] armada -> agregado el proceso a NEW", proceso->pcb->pid);
-		agregar_pcb_a_new(proceso, logger);
-
-//		-------------------------------------------------------------
-//		|     														|
-//		|		OJO CON LO QUE VIENE ACÁ, ES SOLAMENTE				|
-//		|		PARA PROBARLO, EN EL FUTURO TIENE QUE SER UN HILO   |
-//		|		QUE PLANIFIQUE TODO SOLO CON SEMÁFOROS Y DEMÁS		|
-//		|															|
-//		-------------------------------------------------------------
-		// wait(cola_ready);
-		getchar();
-		agregar_proceso_a_ready(proceso, logger);
-		getchar();
-		ejecutar_proceso(socket_cpu);
-
-		break;
-	case PAQUETE_CONSOLA:
-		log_info(logger, "Me llegaron el tamanio y las instrucciones");
-		//pthread_mutex_lock(&mutex_consola);
-		//consola = deserializar_consola(socket_cliente);
-		//pthread_mutex_unlock(&mutex_consola);
-		log_info(logger, "Consola deserializada, se arma el PCB\n");
-		t_proceso *procesos = malloc(sizeof(t_proceso));
-		procesos->pcb = malloc(sizeof(t_pcb));
-		//pthread_mutex_lock(&mutex_consola);
-		procesos->pcb = crear_estructura_pcb(consola);
-		//pthread_mutex_unlock(&mutex_consola);
-		procesos->socket = socket_cliente;
-		log_info(logger, "PCB id[%d] armada -> agregar proceso a new", procesos->pcb->pid);
-		agregar_pcb_a_new(procesos, logger);
-		break;
-	case PAQUETE:
-		log_info(logger, "Me llego el paquete:\n");
-		break;
-	case MENSAJE:
-		log_info(logger, "Recibí un mensaje.");
 		break;
 	default:
 		log_warning(logger, "Operacion desconocida \n");
 		break;
 	}
 
+
+//	t_manejar_conexion_args *args = (t_manejar_conexion_args*) void_args;
+//	t_log *logger = args->log;
+//	int socket_cliente = args->fd;
+//
+//	int codigo_operacion = recibir_operacion(socket_cliente);
+//
+//	switch (codigo_operacion) {
+//	case CONSOLA:
+//		char *instrucciones = string_new();
+//		instrucciones = recibir_instrucciones_como_string(socket_cliente, logger);
+//		consola = deserializar_consola(instrucciones, logger);
+//		log_info(logger, "Consola deserializada, armando PCB");
+//
+//		t_proceso *proceso = malloc(sizeof(t_proceso));
+//		proceso->pcb = malloc(sizeof(t_pcb));
+//		proceso->pcb = crear_estructura_pcb(consola);
+//		proceso->socket = socket_cliente;
+//
+//		log_info(logger, "PCB id[%d] armada -> agregado el proceso a NEW", proceso->pcb->pid);
+//		agregar_pcb_a_new(proceso, logger);
+//
+////		-------------------------------------------------------------
+////		|     														|
+////		|		OJO CON LO QUE VIENE ACÁ, ES SOLAMENTE				|
+////		|		PARA PROBARLO, EN EL FUTURO TIENE QUE SER UN HILO   |
+////		|		QUE PLANIFIQUE TODO SOLO CON SEMÁFOROS Y DEMÁS		|
+////		|															|
+////		-------------------------------------------------------------
+//		// wait(cola_ready);
+//		getchar();
+//		agregar_proceso_a_ready(logger);
+//		getchar();
+//		ejecutar_proceso(socket_cpu, logger);
+//
+//		break;
+//	case PAQUETE_CONSOLA:
+//		log_info(logger, "Me llegaron el tamanio y las instrucciones");
+//		//pthread_mutex_lock(&mutex_consola);
+//		//consola = deserializar_consola(socket_cliente);
+//		//pthread_mutex_unlock(&mutex_consola);
+//		log_info(logger, "Consola deserializada, se arma el PCB\n");
+//		t_proceso *procesos = malloc(sizeof(t_proceso));
+//		procesos->pcb = malloc(sizeof(t_pcb));
+//		//pthread_mutex_lock(&mutex_consola);
+//		procesos->pcb = crear_estructura_pcb(consola);
+//		//pthread_mutex_unlock(&mutex_consola);
+//		procesos->socket = socket_cliente;
+//		log_info(logger, "PCB id[%d] armada -> agregar proceso a new", procesos->pcb->pid);
+//		agregar_pcb_a_new(procesos, logger);
+//		break;
+//	case PAQUETE:
+//		log_info(logger, "Me llego el paquete:\n");
+//		break;
+//	case MENSAJE:
+//		log_info(logger, "Recibí un mensaje.");
+//		break;
+//	default:
+//		log_warning(logger, "Operacion desconocida \n");
+//		break;
+//	}
+
+}
+
+char* deserializar_string(t_buffer* buffer) {
+	char* string = malloc(buffer->stream_size);
+	memset(string, 0, buffer->stream_size);
+
+	void* stream = buffer->stream;
+	memcpy(string, stream, buffer->stream_size);
+
+	return string;
 }
 
 
@@ -82,13 +120,13 @@ int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 	int socket_cliente = esperar_cliente(logger,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			pthread_t hilo_cliente;
+			//pthread_t hilo_cliente;
 			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
 			args->fd = socket_cliente;
 			args->log = logger;
-			//manejar_conexion(args);
-			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			pthread_detach(hilo_cliente);
+			manejar_conexion(args);
+			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			//pthread_detach(hilo_cliente);
 			free(args);
 			return 1;
 		} else {
@@ -120,7 +158,7 @@ void agregar_proceso_a_ready(t_log* logger) {
 void ejecutar_proceso(int socket_cpu, t_log* logger) {
 
 	t_proceso* proceso = malloc(sizeof(t_proceso));
-	proceso = obtener_proceso_cola_ready();
+	proceso = list_get(cola_ready, 0); //obtener_proceso_cola_ready();
 
 	enviar_pcb(socket_cpu, proceso->pcb);
 

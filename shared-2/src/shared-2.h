@@ -109,7 +109,7 @@ typedef struct {
 typedef struct
 {
     uint32_t tamanio_proceso;
-    t_list* instrucciones;
+    char* instrucciones;
 } t_consola;
 
 
@@ -150,5 +150,6 @@ t_list *recibir_paquete(int);
 void *recibir_stream(int *, int);
 void* serializar_paquete(t_paquete* paquete, int bytes);
 void* serializar_paquete_con_bytes(t_paquete *, int);
+
 
 #endif /* SRC_SHARED_2_H_ */
