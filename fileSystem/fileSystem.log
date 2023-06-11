@@ -25,3 +25,28 @@
 [INFO] 01:11:10:931 File System/(2527:2527): Se inicializa el módulo File System
 [INFO] 01:11:10:931 File System/(2527:2527): PUERTO ESCUCHA: 8003
 [INFO] 01:11:10:932 File System/(2527:2527): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.
+[INFO] 20:32:45:165 File System/(2551:2551): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:32:45:178 File System/(2551:2551): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:32:45:178 File System/(2551:2551): Se inicializa el módulo File System
+[INFO] 20:32:45:178 File System/(2551:2551): PUERTO ESCUCHA: 8003
+[INFO] 20:35:34:485 File System/(2587:2587): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:35:34:492 File System/(2587:2587): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:35:34:492 File System/(2587:2587): Se inicializa el módulo File System
+[INFO] 20:35:34:493 File System/(2587:2587): PUERTO ESCUCHA: 8003
+[INFO] 20:35:43:045 File System/(2601:2601): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:35:43:049 File System/(2601:2601): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:35:43:052 File System/(2601:2601): Se inicializa el módulo File System
+[INFO] 20:35:43:052 File System/(2601:2601): PUERTO ESCUCHA: 8003
+[INFO] 20:40:40:818 File System/(2673:2673): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:40:40:823 File System/(2673:2673): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:40:40:824 File System/(2673:2673): Se inicializa el módulo File System
+[INFO] 20:40:40:825 File System/(2673:2673): PUERTO ESCUCHA: 8003
+[INFO] 20:41:20:498 File System/(2709:2709): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:41:20:502 File System/(2709:2709): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:41:20:503 File System/(2709:2709): Se inicializa el módulo File System
+[INFO] 20:41:20:503 File System/(2709:2709): PUERTO ESCUCHA: 8003
+[INFO] 20:43:13:007 File System/(3020:3020): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:43:13:009 File System/(3020:3020): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:43:13:009 File System/(3020:3020): Se inicializa el módulo File System
+[INFO] 20:43:13:009 File System/(3020:3020): PUERTO ESCUCHA: 8003
+[INFO] 20:43:13:264 File System/(3020:3020): File System inicializado, esperando a recibir al Kernel en el PUERTO 8003.

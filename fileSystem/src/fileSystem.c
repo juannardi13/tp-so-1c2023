@@ -25,9 +25,44 @@ int main(void) {
 
 	log_info(logger, "PUERTO ESCUCHA: %s", puerto_escucha);
 
+	t_bitarray* estructuraBitmap = inicializarArchivoBM(super.block_count);
+
+
+	// lleno 16 bits de 1s, por ende tengo en 8 bits el número 255 y en otros 8 el número 225 (porque 11111111 en binario es 255 en decimal)
+	for(int nroBloque = 0; nroBloque < 16; nroBloque++){
+		if(!estaOcupado(estructuraBitmap,nroBloque)){
+				usarBloque(estructuraBitmap,nroBloque);
+			}
+	}
+
+	// esta iteración es solo para ver los cambios en el archivo // más allá de pruebas, se puede borrar
+
+	FILE* f;
+	f = fopen("../fileSystem/bitmap.bin","r+");
+
+
+	if(fileno(f) == -1){
+		printf("Error al abrir archivo bitmap\n");
+	}
+
+		fseek(f,0,0);
+
+		unsigned char b;
+
+		for(int i = 0; i < super.block_count/8; i++){
+			fread(&b,1,1,f);
+			printf("%u\n",b);
+		}
+
+		fclose(f);
+
+	liberarRecursosBitmap(estructuraBitmap,super.block_count);
+
+
 	int fd_file_system = iniciar_servidor(puerto_escucha);
 	log_info(logger, "File System inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_escucha);
 	int fd_kernel = esperar_cliente(logger, "FILE SYSTEM", fd_file_system);
+
 
 	while (1) {
 		int cod_op = recibir_operacion(fd_kernel);
