@@ -381,40 +381,40 @@ void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion context
 char* valor_de_registro(char* registro, t_registros registros){
 	char* valor;
 	if (stcrmp(registro, "AX") == 0){
-		strncpy(valor, registros->ax, length(registros->ax));
+		strncpy(valor, registros->ax, strlen(registros->ax)+1);
 		}
 	if (stcrmp(registro, "BX") == 0){
-		strncpy(valor, registros->bx, length(registros->bx));
+		strncpy(valor, registros->bx, strlen(registros->bx)+1);
 		}
 	if (stcrmp(registro, "CX") == 0){
-		strncpy(valor, registros->cx, length(registros->cx));
+		strncpy(valor, registros->cx, strlen(registros->cx)+1);
 		}
 	if (stcrmp(registro, "DX") == 0){
-		strncpy(valor, registros->dx, length(registros->dx));
+		strncpy(valor, registros->dx, strlen(registros->dx)+1);
 		}
 	if (stcrmp(registro, "EAX") == 0){
-		strncpy(valor, registros->eax, length(registros->eax));
+		strncpy(valor, registros->eax, strlen(registros->eax)+1);
 		}
 	if (stcrmp(registro, "EBX") == 0){
-		strncpy(valor, registros->ebx, length(registros->ebx));
+		strncpy(valor, registros->ebx, strlen(registros->ebx)+1);
 		}
 	if (stcrmp(registro, "ECX") == 0){
-		strncpy(valor, registros->ecx, length(registros->ecx));
+		strncpy(valor, registros->ecx, strlen(registros->ecx)+1);
 		}
 	if (stcrmp(registro, "EDX") == 0){
-		strncpy(valor, registros->edx, length(registros->edx));
+		strncpy(valor, registros->edx, strlen(registros->edx)+1);
 		}
 	if (stcrmp(registro, "RAX") == 0){
-		strncpy(valor, registros->rax, length(registros->rax));
+		strncpy(valor, registros->rax, strlen(registros->rax)+1);
 		}
 	if (stcrmp(registro, "RBX") == 0){
-		strncpy(valor, registros->rbx, length(registros->rbx));
+		strncpy(valor, registros->rbx, strlen(registros->rbx)+1);
 		}
 	if (stcrmp(registro, "RCX") == 0){
-		strncpy(valor, registros->rcx, length(registros->rcx));
+		strncpy(valor, registros->rcx, strlen(registros->rcx)+1);
 		}
 	if (stcrmp(registro, "RDX") == 0){
-		strncpy(valor, registros->rdx, length(registros->rdx));
+		strncpy(valor, registros->rdx, strlen(registros->rdx)+1);
 		}
 	return valor;
 }
