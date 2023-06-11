@@ -9,7 +9,9 @@ typedef struct {
 	int pid;
 	t_list* instrucciones;
 	int pc;
-	t_registros registros_pcb;
+	t_registros* registros_pcb;
+	int tamanio_registros;
+	int tamanio_instrucciones;
 }t_contexto_de_ejecucion;
 
 t_contexto_de_ejecucion contexto;
@@ -47,14 +49,21 @@ void* ejecutar_proceso(void* args){
 	}
 }*/
 
+t_instruccion* fetch_instruccion(t_contexto_de_ejecucion* contexto){
+	t_instruccion* instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
+	contexto->pc++;
+	return instruccion_a_ejecutar;
+}
+
 int main() {
+	bool cpu_bloqueada = false;
 	char* ip_kernel;
 	char* puerto_kernel;
 	t_registros registros;
-	strncpy(registros.ax, "HOLA", length("HELLO"));
-	strncpy(registros.bx, "COMO", length("COMO"));
-	strncpy(registros.cx, "ESTAS", length("ESTAS"));
-	strncpy(registros.dx, "CHAU", length("CHAU"));
+	strncpy(registros.ax, "HOLA", strlen("HELLO")+1);
+	strncpy(registros.bx, "COMO", strlen("COMO")+1);
+	strncpy(registros.cx, "ESTAS", strlen("ESTAS")+1);
+	strncpy(registros.dx, "CHAU", strlen("CHAU")+1);
 
     t_log* logger = iniciar_logger();
     t_config* config = iniciar_config();
@@ -78,14 +87,16 @@ list_add_in_index(instrucciones_prueba, 0, "SET");
     list_add_in_index(instrucciones_prueba, 2, "EXIT");
     list_add_in_index(instrucciones_prueba, 3, "YIELD");
     list_add_in_index(instrucciones_prueba, 4, "EXIT");
-
-  strncpy(contexto.instrucciones, instrucciones_prueba, length(instrucciones_prueba));
+	
+list_add_all(contexto.instrucciones, instrucciones_prueba);
     contexto.pid = 1;
     contexto.pc = 0;
-    strncpy(contexto.registros_pcb, registros, length(registros));
+	contexto.registros_pcb = registros;
+  
+   
 
 
-    while(pcb_en_ejecucion.pc < 5) {
+    while(contexto.pc < 5) {
     	int cod_op = fetch_instruccion(contexto.pc);
 
     	switch (cod_op) {
@@ -110,7 +121,10 @@ list_add_in_index(instrucciones_prueba, 0, "SET");
     	}
 
     }
-
+int ip_memoria = config_get_string_value(config, "IP");
+    int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
+    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
   	return 0;
 }
 
@@ -139,26 +153,180 @@ int fetch_instruccion(char* una_instruccion, t_log* logger) {
 }
 */
 
-t_instruccion* fetch_instruccion(t_contexto_de_ejecucion* contexto){
-	t_instruccion* instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
-	contexto->pc++;
-	return instruccion_a_ejecutar;
+void asignar_valor_a_registro(char* valor, char* registro, t_registros* registros){
+	if(strcmp(registro, "AX") == 0){
+			strncpy(registros->ax, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "BX") == 0){
+			strncpy(registros->bx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "CX") == 0){
+			strncpy(registros->cx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "DX") == 0){
+			strncpy(registros->ax, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "EAX") == 0){
+			strncpy(registros->eax, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "EBX") == 0){
+			strncpy(registros->ebx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "ECX") == 0){
+			strncpy(registros->ecx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "EDX") == 0){
+			strncpy(registros->edx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "RAX") == 0){
+			strncpy(registros->rax, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "RBX") == 0){
+			strncpy(registros->rbx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "RCX") == 0){
+			strncpy(registros->rcx, valor, strlen(valor)+1);
+		}
+	else if(strcmp(registro, "RDX") == 0){
+			strncpy(registros->rdx, valor, strlen(valor)+1);
+		}
 }
+
+void activar_segmentation_fault(t_contexto_de_ejecucion* contexto);
+
+bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
+	int tamanio_valor = strlen(valor)+1;
+	return desplazamiento > tamanio_valor;
+}
+
+char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
+
+	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA); // IMPORTANTE ver con juani tema op_code y como crear paquete
+	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
+
+	enviar_paquete_a_servidor(paquete, fd_memoria);
+
+	char* valor;
+	strncpy(valor, get_string_value(fd_memoria), strlen(get_string_value(fd_memoria)));
+	free(valor);
+	eliminar_paquete(paquete);
+	return valor; // antes o despues del free?
+}
+
+
+int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
+	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	int numero_segmento = floor((float)direccion_logica / (float)tamanio_segmento);
+	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
+	int direccion_fisica = numero_segmento + desplazamiento_segmento;
+	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
+			activar_segmentation_fault(contexto);
+		}
+	return direccion_fisica;
+}
+
+
+
+void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria){
+	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA); // IDEM leer_de_memoria
+	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
+	agregar_a_paquete(paquete, &valor, sizeof(int));
+	enviar_paquete_a_servidor(paquete, fd_memoria);
+	eliminar_paquete(paquete);
+}
+
+char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config){
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
+	char* valor = leer_de_memoria(direccion_fisica, config, fd_memoria);
+	return valor;
+}
+
+
+void ejecutar_SET(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
+	asignar_valor_a_registro(instruccion->parametro_2, instruccion->parametro_1, contexto->registros_pcb);
+}
+
+void ejecutar_MOV_IN(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
+	char* valor = mmu_valor_buscado(contexto, instruccion->parametro_2, fd_memoria, config);
+	asignar_valor_a_registro(valor, instruccion->parametro_1, contexto->registros_pcb);
+}
+
+void ejecutar_MOV_OUT(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
+	char* valor;
+	strncpy(valor, instruccion->parametro_2, strlen(instruccion->parametro_2));
+	int direccion_fisica = obtener_direccion_fisica(instruccion->parametro_1, fd_memoria, config, contexto);
+	escribir_en_memoria(direccion_fisica, valor, fd_memoria);
+}
+void ejecutar_IO(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada){
+	t_paquete* paquete = crear_paquete(EJECUTAR_IO); // IDEM leer_de_memoria
+	agregar_a_paquete(paquete, &(instruccion->parametro_1), sizeof(int));
+	agregar_a_paquete(paquete, &contexto, (sizeof(int)+sizeof(int)+contexto->tamanio_registros+contexto->tamanio_instrucciones));
+	enviar_paquete_a_servidor(paquete, fd_kernel);
+	eliminar_paquete(paquete);
+	cpu_bloqueada = true;
+}
+/*
+void ejecutar_F_OPEN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_CLOSE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_SEEK(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_READ(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_WRITE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_F_TRUNCATE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_WAIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+void ejecutar_SIGNAL(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_CREATE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_DELETE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_YIELD(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_EXIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+
+}
+*/
+
+
+
+
 // Falta inicializar t_instrucciones con codigos, no me reconoce codigo_operacion VER
-void decode_instruccion(t_instruccion* instruccion, t_contexto_de_ejecucion contexto*, t_config* config){
+void decode_instruccion(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
 	if(strcmp(instruccion->codigo_operacion, "SET") == 0){
 		int tiempo_de_espera;
-		sleep(config_get_int_value(config, tiempo_de_espera));
+		tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
+		sleep(tiempo_de_espera);
 		ejecutar_SET(instruccion, contexto);
 	}
-	else if(stcrmp(instruccion->codigo_operacion, "MOV_IN") == 0){
-		ejecutar_MOV_IN(instruccion, contexto); // ojo hay que traducir direccion logica a fisica
+	else if(strcmp(instruccion->codigo_operacion, "MOV_IN") == 0){
+		ejecutar_MOV_IN(instruccion, contexto, fd_memoria, config); 
 	}
-	else if(stcrmp(instruccion->codigo_operacion, "MOV_OUT") == 0){
-		ejecutar_MOV_OUT(instruccion, contexto);
+	else if(strcmp(instruccion->codigo_operacion, "MOV_OUT") == 0){
+		ejecutar_MOV_OUT(instruccion, contexto, fd_memoria, config);
 	}
-	else if(stcrmp(instruccion->codigo_operacion, "IO") == 0){
-		ejecutar_IO(instruccion, contexto);
+	else if(strcmp(instruccion->codigo_operacion, "IO") == 0){
+		ejecutar_IO(instruccion, contexto, fd_kernel, cpu_bloqueada);
 	}
 	else if(stcrmp(instruccion->codigo_operacion, "F_OPEN") == 0){
 		ejecutar_F_OPEN(instruccion, contexto);
@@ -207,44 +375,9 @@ void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion context
 }
 */
 
-void asignar_valor_a_registro(char* valor, char* registro, t_registros* registros){
-	if(stcrmp(registro, "AX") == 0){
-			strncpy(registros->ax, valor, length(valor));
-		}
-	else if(stcrmp(registro, "BX") == 0){
-			strncpy(registros->bx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "CX") == 0){
-			strncpy(registros->cx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "DX") == 0){
-			strncpy(registros->ax, valor, length(valor));
-		}
-	else if(stcrmp(registro, "EAX") == 0){
-			strncpy(registros->eax, valor, length(valor));
-		}
-	else if(stcrmp(registro, "EBX") == 0){
-			strncpy(registros->ebx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "ECX") == 0){
-			strncpy(registros->ecx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "EDX") == 0){
-			strncpy(registros->edx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "RAX") == 0){
-			strncpy(registros->rax, valor, length(valor));
-		}
-	else if(stcrmp(registro, "RBX") == 0){
-			strncpy(registros->rbx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "RCX") == 0){
-			strncpy(registros->rcx, valor, length(valor));
-		}
-	else if(stcrmp(registro, "RDX") == 0){
-			strncpy(registros->rdx, valor, length(valor));
-		}
-}
+
+
+
 char* valor_de_registro(char* registro, t_registros registros){
 	char* valor;
 	if (stcrmp(registro, "AX") == 0){
@@ -286,65 +419,5 @@ char* valor_de_registro(char* registro, t_registros registros){
 	return valor;
 }
 
-void ejecutar_SET(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
-	// par1 = registro, par2 = valor
-	asignar_valor_a_registro(intruccion->parametro_2, intruccion->parametro_1, contexto->registros_pcb);
-}
 
-void ejecutar_MOV_IN(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
-	char* valor;
-	strncpy((buscar_en_memoria_direccion_logica(int fd_memoria, instruccion->parametro_2)), valor, length(valor)); //retorna la direccion
-	strncpy(valor, intruccion->parametro_1, contexto->registros_pcb);
-}
-void ejecutar_MOV_OUT(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
-	char* valor;
-	strncpy(valor, instruccion->parametro_2, length(instruccion->parametro_2));
-	char* direccion_fisica;
-	strncpy(direccion_fisica, buscar_en_memoria_direccion_logica(int fd_memoria, instruccion->parametro_1), length(buscar_en_memoria_direccion_logica(int fd_memoria, instruccion->parametro_1));
-	strncpy(direccion_fisica, valor, length(valor));
-}
-/*void ejecutar_IO(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = tiempo
-	empaquetar el contexto y enviarlo a kernel junto con el tiempo de espera
-}
-void ejecutar_F_OPEN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = nombre archivo
-}
-void ejecutar_F_CLOSE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = nombre archivo
-}
-void ejecutar_F_SEEK(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = nombre archivo, par2 = posicion
-}
-void ejecutar_F_READ(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = nombre archivo, par2 = dir logica, par3 = cant de bytes
-}
-void ejecutar_F_WRITE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = nombre archivo, par2 = dir logica, par3 = cant de bytes
-}
-void ejecutar_F_TRUNCATE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = nombre archivo, par2 = tamanio
-}
-void ejecutar_WAIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = recurso
-}
-void ejecutar_SIGNAL(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = recurso
-}
 
-void ejecutar_CREATE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = id del segmetno, par2 = tamanio
-
-void ejecutar_DELETE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// par1 = id del segmento
-}
-
-void ejecutar_YIELD(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
- // ningun parametro
-  *
-}
-
-void ejecutar_EXIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-	// ningun parametro
-}
-*/
