@@ -64,18 +64,6 @@ typedef struct {
 }t_recurso;
 
 typedef struct {
-	nombre_instruccion nombre;
-	char* codigo_operacion;
-	int parametro_1_length;
-	char* parametro_1; //tipo char
-	int parametro_2_length;
-	char* parametro_2;
-	int parametro_3_length;
-	char* parametro_3;
-
-} t_instruccion;
-
-typedef struct {
 	char ax[3];
 	char bx[3];
 	char cx[3];
@@ -89,7 +77,6 @@ typedef struct {
 	char rcx[15];
 	char rdx[15];
 }t_registros;
-
 
 typedef struct {
 	int pid;
@@ -106,12 +93,20 @@ typedef struct {
 
 } t_pcb;
 
+typedef struct {
+	int pid;
+	char** instrucciones;// en el tp dice que están a modo de lista []
+	int pc;
+	t_registros* registros_pcb;
+	int tamanio_registros;
+	int tamanio_instrucciones;
+}t_contexto_de_ejecucion;
+
 typedef struct
 {
     uint32_t tamanio_proceso;
     char* instrucciones;
 } t_consola;
-
 
 
 typedef struct {

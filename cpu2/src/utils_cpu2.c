@@ -23,41 +23,16 @@ t_config* iniciar_config(void) {
 }
 
 //--------------------
-
-t_instruccion* fetch_instruccion(t_contexto_de_ejecucion* contexto){
-	t_instruccion* instruccion_a_ejecutar = list_get(contexto->instrucciones, contexto->pc);
+// intrucciones = ["instruccion1 par1 par2", "instruccion2"..]
+char* fetch_instruccion(t_contexto_de_ejecucion* contexto){
+	char* instruccion_a_ejecutar = contexto->instrucciones[contexto->pc];
 	contexto->pc++;
 	return instruccion_a_ejecutar;
 }
 
-//Revisar
-//char** recibir_instrucciones(t_buffer){
-//char** lista_instrucciones = deserializar_instrucciones(t_buffer);
-//}
-
-
-// ver si se puede eliminar
-/*
-int fetch_instruccion(char* una_instruccion, t_log* logger) {
-	int codigo_operacion;
-
-	char* nombre_instruccion = strtok(una_instruccion, " \n");
-
-	if(strcmp(nombre_instruccion, "YIELD") == 0) {
-		codigo_operacion = YIELD;
-	}
-
-	if(strcmp(nombre_instruccion, "SET") == 0) {
-		codigo_operacion = SET;
-		log_error(logger, "Parámetro 1: %s", strtok(una_instruccion, " "));
-		log_error(logger, "Parámetro 2: %s", strtok(una_instruccion, " "));
-	}
-
-	if(strcmp(nombre_instruccion, "EXIT") == 0) {
-		codigo_operacion = EXIT;
-	}
-
-	return codigo_operacion;
+/*//Revisar
+char** recibir_instrucciones(t_buffer){
+char** lista_instrucciones = deserializar_instrucciones(t_buffer);
 }
 */
 
@@ -146,17 +121,16 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 	return valor;
 }
 
-
-void ejecutar_SET(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto){
+void ejecutar_SET(char* instruccion, t_contexto_de_ejecucion* contexto){
 	asignar_valor_a_registro(instruccion->parametro_2, instruccion->parametro_1, contexto->registros_pcb);
 }
 
-void ejecutar_MOV_IN(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
+void ejecutar_MOV_IN(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
 	char* valor = mmu_valor_buscado(contexto, instruccion->parametro_2, fd_memoria, config);
 	asignar_valor_a_registro(valor, instruccion->parametro_1, contexto->registros_pcb);
 }
 
-void ejecutar_MOV_OUT(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
+void ejecutar_MOV_OUT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
 	char* valor;
 	strncpy(valor, instruccion->parametro_2, strlen(instruccion->parametro_2));
 	int direccion_fisica = obtener_direccion_fisica(instruccion->parametro_1, fd_memoria, config, contexto);
@@ -214,61 +188,61 @@ void ejecutar_EXIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
 */
 
 
-
-
 // Falta inicializar t_instrucciones con codigos, no me reconoce codigo_operacion VER
-void decode_instruccion(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
-	if(strcmp(instruccion->codigo_operacion, "SET") == 0){
+void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
+
+	char** instruccion_parseada = string_split(instruccion, " ");
+
+	if(strcmp(instruccion_parseada[0], "SET") == 0){
 		int tiempo_de_espera;
 		tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
 		sleep(tiempo_de_espera);
-		ejecutar_SET(instruccion, contexto);
+		ejecutar_SET(instruccion_parseada, contexto);
 	}
-	else if(strcmp(instruccion->codigo_operacion, "MOV_IN") == 0){
-		ejecutar_MOV_IN(instruccion, contexto, fd_memoria, config);
+	else if(strcmp(instruccion_parseada[0], "MOV_IN") == 0){
+		ejecutar_MOV_IN(instruccion_parseada, contexto, fd_memoria, config);
 	}
-	else if(strcmp(instruccion->codigo_operacion, "MOV_OUT") == 0){
-		ejecutar_MOV_OUT(instruccion, contexto, fd_memoria, config);
+	else if(strcmp(instruccion_parseada[0], "MOV_OUT") == 0){
+		ejecutar_MOV_OUT(instruccion_parseada, contexto, fd_memoria, config);
 	}
-	else if(strcmp(instruccion->codigo_operacion, "IO") == 0){
-		ejecutar_IO(instruccion, contexto, fd_kernel, cpu_bloqueada);
+	else if(strcmp(instruccion_parseada[0], "IO") == 0){
+		ejecutar_IO(instruccion_parseada, contexto, fd_kernel, cpu_bloqueada);
 	}
-	else if(stcrmp(instruccion->codigo_operacion, "F_OPEN") == 0){
-		ejecutar_F_OPEN(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "F_OPEN") == 0){
+		ejecutar_F_OPEN(instruccion_parseada, contexto);
 	}
-	else if(stcrmp(instruccion->codigo_operacion, "F_CLOSE") == 0){
-		ejecutar_F_CLOSE(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "F_CLOSE") == 0){
+		ejecutar_F_CLOSE(instruccion_parseada, contexto);
 	}
-
-	else if(stcrmp(instruccion->codigo_operacion, "F_SEEK") == 0){
-			ejecutar_F_SEEK(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "F_SEEK") == 0){
+			ejecutar_F_SEEK(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "F_READ") == 0){
-			ejecutar_F_READ(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "F_READ") == 0){
+			ejecutar_F_READ(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "F_WRITE") == 0){
-			ejecutar_F_WRITE(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "F_WRITE") == 0){
+			ejecutar_F_WRITE(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "F_TRUNCATE") == 0){
-			ejecutar_F_TRUNCAE(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "F_TRUNCATE") == 0){
+			ejecutar_F_TRUNCAE(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "WAIT") == 0){
-			ejecutar_WAIT(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "WAIT") == 0){
+			ejecutar_WAIT(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "SIGNAL") == 0){
-			ejecutar_SIGNAL(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "SIGNAL") == 0){
+			ejecutar_SIGNAL(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "CREATE_SEGMENT") == 0){
-			ejecutar_CREATE_SEGMENT(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "CREATE_SEGMENT") == 0){
+			ejecutar_CREATE_SEGMENT(instruccion_parseada, contexto);
 		}
-	else if(stcrmp(instruccion->codigo_operacion, "DELETE_SEGMENT") == 0){
-				ejecutar_DELETE_SEGMENT(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "DELETE_SEGMENT") == 0){
+				ejecutar_DELETE_SEGMENT(instruccion_parseada, contexto);
 			}
-	else if(stcrmp(instruccion->codigo_operacion, "YIELD") == 0){
-				ejecutar_YIELD(instruccion, contexto);
+	else if(stcrmp(instruccion_parseada[0], "YIELD") == 0){
+				ejecutar_YIELD(instruccion_parseada, contexto);
 			}
-	else if(stcrmp(instruccion->codigo_operacion, "EXIT") == 0){
-				ejecutar_EXIT(instruccion, contexto);
+	else(stcrmp(instruccion_parseada[0], "EXIT") == 0){
+				ejecutar_EXIT(instruccion_parseada, contexto);
 			}
 }
 
