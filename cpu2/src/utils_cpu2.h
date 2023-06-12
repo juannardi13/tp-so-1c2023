@@ -26,8 +26,8 @@ int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*);
 void escribir_en_memoria(int, char*, int);
 char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_SET(char**, t_contexto_de_ejecucion*);
-//void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
-//void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
-//void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
+void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
+void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
+void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
 
 #endif /* UTILS_H_ */

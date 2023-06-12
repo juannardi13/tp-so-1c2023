@@ -24,10 +24,7 @@ typedef enum
 	PAQUETE,
 	PAQUETE_CONSOLA,
 	CONSOLA,
-	PCB
-} op_code;
-
-typedef enum {
+	PCB,
 	SET,
 	MOV_IN,
 	MOV_OUT,
@@ -43,8 +40,10 @@ typedef enum {
 	CREATE_SEGMENT,
 	DELETE_SEGMENT,
 	YIELD,
-	EXIT
-} nombre_instruccion;
+	EXIT,
+	ESCRIBIR_EN_MEMORIA,
+	LEER_DE_MEMORIA
+}op_code;
 
 typedef struct
 {
@@ -78,6 +77,13 @@ typedef struct {
 	char rdx[15];
 }t_registros;
 
+typedef struct{
+	int id;
+	int base;
+	int tamanio;
+	char* proteccion;
+}t_segmento;
+
 typedef struct {
 	int pid;
 	int tamanio_instrucciones;
@@ -86,7 +92,7 @@ typedef struct {
 	int pc;
 	int tamanio;
 	t_registros registros;
-	//int segmentos[][3];
+	t_list* segmentos;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//float timestamp;
 	//int archivos_abiertos[][2];
@@ -95,11 +101,12 @@ typedef struct {
 
 typedef struct {
 	int pid;
+	int tamanio_instrucciones;
 	char** instrucciones;// en el tp dice que están a modo de lista []
 	int pc;
 	t_registros* registros_pcb;
 	int tamanio_registros;
-	int tamanio_instrucciones;
+	t_segmento segmento;
 }t_contexto_de_ejecucion;
 
 typedef struct

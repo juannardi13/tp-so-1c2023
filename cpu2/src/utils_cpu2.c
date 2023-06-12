@@ -98,7 +98,7 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 
 int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
-	int numero_segmento = floor((float)direccion_logica / (float)tamanio_segmento);
+	int numero_segmento = floor((float)contexto->segmento->base / (float)tamanio_segmento);
 	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
 	int direccion_fisica = numero_segmento + desplazamiento_segmento;
 	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
@@ -121,74 +121,72 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 	return valor;
 }
 
-void ejecutar_SET(char* instruccion, t_contexto_de_ejecucion* contexto){
-	asignar_valor_a_registro(instruccion->parametro_2, instruccion->parametro_1, contexto->registros_pcb);
+void ejecutar_SET(char** instruccion, t_contexto_de_ejecucion* contexto){
+	asignar_valor_a_registro(instruccion[2], instruccion[1], contexto->registros_pcb);
 }
 
-void ejecutar_MOV_IN(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
-	char* valor = mmu_valor_buscado(contexto, instruccion->parametro_2, fd_memoria, config);
-	asignar_valor_a_registro(valor, instruccion->parametro_1, contexto->registros_pcb);
+void ejecutar_MOV_IN(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
+	char* valor = mmu_valor_buscado(contexto, instruccion[2], fd_memoria, config);
+	asignar_valor_a_registro(valor, instruccion[1], contexto->registros_pcb);
 }
 
-void ejecutar_MOV_OUT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
+void ejecutar_MOV_OUT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
 	char* valor;
-	strncpy(valor, instruccion->parametro_2, strlen(instruccion->parametro_2));
-	int direccion_fisica = obtener_direccion_fisica(instruccion->parametro_1, fd_memoria, config, contexto);
+	strncpy(valor, instruccion[2], strlen(instruccion[2]));
+	int direccion_fisica = obtener_direccion_fisica(instruccion[1], fd_memoria, config, contexto);
 	escribir_en_memoria(direccion_fisica, valor, fd_memoria);
 }
-void ejecutar_IO(t_instruccion* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada){
-	t_paquete* paquete = crear_paquete(EJECUTAR_IO); // IDEM leer_de_memoria
-	agregar_a_paquete(paquete, &(instruccion->parametro_1), sizeof(int));
+void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada){
+	t_paquete* paquete = crear_paquete(IO); // IDEM leer_de_memoria
+	agregar_a_paquete(paquete, &(instruccion[1]), sizeof(int));
 	agregar_a_paquete(paquete, &contexto, (sizeof(int)+sizeof(int)+contexto->tamanio_registros+contexto->tamanio_instrucciones));
 	enviar_paquete_a_servidor(paquete, fd_kernel);
 	eliminar_paquete(paquete);
 	cpu_bloqueada = true;
 }
 /*
-void ejecutar_F_OPEN(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_OPEN(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_F_CLOSE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_F_SEEK(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_F_READ(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_F_WRITE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_F_TRUNCATE(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_WAIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
-void ejecutar_SIGNAL(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
-
-}
-
-void ejecutar_CREATE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_SIGNAL(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
 
-void ejecutar_DELETE_SEGMENT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_CREATE_SEGMENT(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
 
-void ejecutar_YIELD(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
 
-void ejecutar_EXIT(t_instruccion instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion contexto){
+
+}
+
+void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion contexto){
 
 }
 */
 
-
-// Falta inicializar t_instrucciones con codigos, no me reconoce codigo_operacion VER
 void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
 
 	char** instruccion_parseada = string_split(instruccion, " ");
@@ -253,9 +251,6 @@ void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion context
 	enviar_paquete(paquete, fd_kernel);
 }
 */
-
-
-
 
 char* valor_de_registro(char* registro, t_registros registros){
 	char* valor;

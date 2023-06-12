@@ -37,8 +37,6 @@ void* ejecutar_proceso(void* args){
 
 	}
 }*/
-
-
 int main() {
 	bool cpu_bloqueada = false;
 	char* ip_kernel;
