@@ -26,5 +26,6 @@ char* leer_archivo_pseudocodigo(char*, t_log*);
 void parsear_instrucciones_y_enviar(char* ruta_archivo_pseudocodigo, int socket_servidor, t_log* logger);
 void enviar_string(int conexion_servidor, char* string, op_code codigo_op);
 void* serializar_string(char* string, t_paquete* paquete, op_code codigo_op);
+int agregar_a_stream(void *stream, int* offset, void *src, int size);
 
 #endif /* UTILS_H_ */

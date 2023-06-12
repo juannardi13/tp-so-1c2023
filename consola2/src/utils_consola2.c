@@ -286,16 +286,19 @@ void enviar_string(int conexion_servidor, char* string, op_code codigo_op) {
 		void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
 		offset = 0;
 
-		memcpy(a_enviar, &(paquete->codigo_operacion), sizeof(int));
-		offset += sizeof(int);
-		memcpy(a_enviar, &(paquete->buffer->stream_size), sizeof(int));
-		offset += sizeof(int);
-		memcpy(a_enviar + offset, paquete->buffer->stream, paquete->buffer->stream_size);
-		offset += paquete->buffer->stream_size;
+
+	agregar_a_stream(a_enviar, &offset, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &offset, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &offset, paquete->buffer->stream, paquete->buffer->stream_size);
 
 	send(conexion_servidor, a_enviar, (paquete->buffer->stream_size) + sizeof(int) + sizeof(int), 0);
 	free(a_enviar);
 	eliminar_paquete(paquete);
+}
+
+int agregar_a_stream(void *stream, int* offset, void *src, int size) {
+  memcpy(stream + *offset, src, size);
+  *offset += size;
 }
 
 void* serializar_string(char* string, t_paquete* paquete, op_code codigo_op) {

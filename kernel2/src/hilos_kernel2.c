@@ -111,6 +111,8 @@ char* deserializar_string(t_buffer* buffer) {
 	void* stream = buffer->stream;
 	memcpy(string, stream, buffer->stream_size);
 
+	printf("Las instrucciones que llegaronson: %s", string);
+
 	return string;
 }
 
