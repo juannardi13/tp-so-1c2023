@@ -9,9 +9,11 @@
 
 t_log *iniciar_logger(void);
 t_config *iniciar_config(char*);
-t_bitarray *inicializarArchivoBM(int);
-bool estaOcupado(t_bitarray*,int);
-void usarBloque(t_bitarray*,int);
-void liberarRecursosBitmap(t_bitarray*,int);
+t_bitarray *inicializar_archivo_bm(int);
+bool esta_ocupado(t_bitarray*,int);
+void usar_bloque(t_bitarray*,int);
+void liberar_recursos_bitmap(t_bitarray*,int);
+void levantar_fcb_nuevo_archivo(const char*,int,t_bitarray*);
+void levantar_archivo_bloques(int,int);
 
 #endif /* UTILS_FILESYSTEM_H_ */

@@ -1,42 +1,71 @@
 #include "fileSystem.h"
 
 int main(void) {
-	// char* ip_kernel;
+
 	char* puerto_escucha;
 
+
+	//  Inicialización logger //
+	// --- INICIO --- //
 	t_log* logger = iniciar_logger();
+	// --- FIN --- //
+
+	//  Inicialización config //
+	// --- INICIO --- //
 	t_config* config = iniciar_config("fileSystem.config");
+	// --- FIN --- //
 
+
+	//  Inicialización super bloque //
+	// --- INICIO --- //
 	t_config* config_super_bloque = iniciar_config("fileSystem.superbloque");
+	// --- FIN --- //
 
+
+	// Obtención información superbloque //
+	// --- INICIO --- //
 	t_super_bloque super;
-
 	super.block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
 	super.block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
+	// --- FIN --- //
 
+	//  Inicialización bitmap //
+	// --- INICIO --- //
+	t_bitarray* estructuraBitmap = inicializar_archivo_bm(super.block_count);
+	// --- FIN --- //
 
+	// Inicialización archivo de bloques
+	// --- INICIO --- //
+	levantar_archivo_bloques(super.block_count,super.block_size);
+	// --- FIN --- //
+
+	// Loggear información fileSystem //
+	// --- INICIO --- //
 	log_info(logger, "El fileSystem posee una cantidad de %d bloques",super.block_count);
 	log_info(logger, "Los bloques del fileSystem tiene un tamaño de %d bytes",super.block_size);
-
 	log_info(logger, "Se inicializa el módulo File System");
-
-    // ip_kernel = config_get_string_value(config, "IP");
     puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-
 	log_info(logger, "PUERTO ESCUCHA: %s", puerto_escucha);
+	// --- FIN --- //
 
-	t_bitarray* estructuraBitmap = inicializarArchivoBM(super.block_count);
 
 
-	// lleno 16 bits de 1s, por ende tengo en 8 bits el número 255 y en otros 8 el número 225 (porque 11111111 en binario es 255 en decimal)
-	for(int nroBloque = 0; nroBloque < 16; nroBloque++){
-		if(!estaOcupado(estructuraBitmap,nroBloque)){
-				usarBloque(estructuraBitmap,nroBloque);
-			}
-	}
+	// Prueba respuesta a petición de creación de archivo (SEGUIR) //
+	// --- INICIO --- //
+	levantar_fcb_nuevo_archivo("fcbPrueba",super.block_size,estructuraBitmap);
+	t_config* configTCB = iniciar_config("fcbPrueba");
+	t_fcb fcb;
 
-	// esta iteración es solo para ver los cambios en el archivo // más allá de pruebas, se puede borrar
+	fcb.puntero_directo = config_get_int_value(configTCB,"PUNTERO_DIRECTO");
+	fcb.nombre_archivo = config_get_string_value(configTCB,"NOMBRE_ARCHIVO");
 
+	printf("Puntero directo: %d \n",fcb.puntero_directo);
+	printf("Nombre archivo:  %s \n",fcb.nombre_archivo);
+	// --- FIN --- //
+
+
+	// Verificación bloques asignados a archivo creado se indican como ocupados //
+	// --- INICIO --- //
 	FILE* f;
 	f = fopen("../fileSystem/bitmap.bin","r+");
 
@@ -55,14 +84,13 @@ int main(void) {
 		}
 
 		fclose(f);
+	// --- FIN --- //
 
-	liberarRecursosBitmap(estructuraBitmap,super.block_count);
-
-
+	// Inicialización del file system como servidor cuyo ciente será el kernel //
+	// --- INICIO --- //
 	int fd_file_system = iniciar_servidor(puerto_escucha);
 	log_info(logger, "File System inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_escucha);
 	int fd_kernel = esperar_cliente(logger, "FILE SYSTEM", fd_file_system);
-
 
 	while (1) {
 		int cod_op = recibir_operacion(fd_kernel);
@@ -78,6 +106,12 @@ int main(void) {
 			break;
 		}
 	}
+	// --- FIN --- //
+
+	// Liberar recursos usados //
+	// --- INICIO --- //
+	liberar_recursos_bitmap(estructuraBitmap,super.block_count);
+	// --- FIN --- //
 
 	return 0;
 }

@@ -127,6 +127,14 @@ typedef struct
 	int block_size;
 } t_super_bloque;
 
+typedef struct
+{
+	char* nombre_archivo;
+	int tamanio_archivo;
+	uint32_t puntero_directo;
+	uint32_t puntero_indirecto;
+}t_fcb;
+
 void agregar_a_buffer(t_buffer *, void *, int);
 void agregar_a_paquete(t_paquete *, void *, int);
 void agregar_entero_a_paquete(t_paquete *, int);
