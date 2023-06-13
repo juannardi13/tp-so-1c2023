@@ -23,9 +23,12 @@ t_config* iniciar_config(void) {
 }
 
 //--------------------
-// intrucciones = ["instruccion1 par1 par2", "instruccion2"..]
+
 char* fetch_instruccion(t_contexto_de_ejecucion* contexto){
-	char* instruccion_a_ejecutar = contexto->instrucciones[contexto->pc];
+	char* unas_intrucciones;
+	strncpy(unas_intrucciones, contexto->instrucciones, strlen(contexto->instrucciones)+1);
+	char** intrucciones_parseadas = string_split(unas_intrucciones, "\n");
+	char* instruccion_a_ejecutar = intrucciones_parseadas[contexto->pc];
 	contexto->pc++;
 	return instruccion_a_ejecutar;
 }
@@ -81,19 +84,39 @@ bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 	int tamanio_valor = strlen(valor)+1;
 	return desplazamiento > tamanio_valor;
 }
-
+char* deserializar_paquete_de_memoria(t_buffer* buffer){
+	char* valor = malloc (buffer->stream_size);
+	memset(valor, 0, buffer->stream_size);
+	void* stream = buffer->stream;
+	memcpy(valor, stream, buffer->stream_size);
+	return valor;
+}
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 
 	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA); // IMPORTANTE ver con juani tema op_code y como crear paquete
 	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
-
-	enviar_paquete_a_servidor(paquete, fd_memoria);
-
-	char* valor;
-	strncpy(valor, get_string_value(fd_memoria), strlen(get_string_value(fd_memoria)));
-	free(valor);
-	eliminar_paquete(paquete);
-	return valor; // antes o despues del free?
+	enviar_paquete(paquete, fd_memoria);
+	//crear op_code RESPUESTA_MEMORIA, lo igualo a recibir_operacion => se bloquea proceso hasta que reciba algo con el mismo codigo
+	free(paquete);
+	t_paquete* paquete2 = malloc(sizeof(t_paquete));
+	paquete2->buffer = malloc(sizeof(t_buffer));
+	recv(fd_memoria, &(paquete2->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+	recv(fd_memoria, &(paquete2->buffer->stream_size), sizeof(int), 0);
+	paquete2->buffer->stream = malloc(paquete2->buffer->stream_size);
+	recv(fd_memoria, paquete2->buffer->stream, paquete2->buffer->stream_size, 0);
+	void* valor;
+	switch(paquete2->codigo_operacion){
+		case LEIDO :
+			valor = deserializar_paquete_de_memoria(paquete2->buffer);
+			break;
+		case NO_LEIDO :
+			printf("No se pudo leer el valor del registro dado");
+			break;
+		default :
+			printf("Operacion desconocida");
+			break;
+	}
+	return valor;
 }
 
 int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
@@ -111,7 +134,7 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria){
 	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA); // IDEM leer_de_memoria
 	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
 	agregar_a_paquete(paquete, &valor, sizeof(int));
-	enviar_paquete_a_servidor(paquete, fd_memoria);
+	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
 }
 
@@ -140,7 +163,7 @@ void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_k
 	t_paquete* paquete = crear_paquete(IO); // IDEM leer_de_memoria
 	agregar_a_paquete(paquete, &(instruccion[1]), sizeof(int));
 	agregar_a_paquete(paquete, &contexto, (sizeof(int)+sizeof(int)+contexto->tamanio_registros+contexto->tamanio_instrucciones));
-	enviar_paquete_a_servidor(paquete, fd_kernel);
+	enviar_paquete(paquete, fd_kernel);
 	eliminar_paquete(paquete);
 	cpu_bloqueada = true;
 }
@@ -239,7 +262,7 @@ void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_
 	else if(stcrmp(instruccion_parseada[0], "YIELD") == 0){
 				ejecutar_YIELD(instruccion_parseada, contexto);
 			}
-	else(stcrmp(instruccion_parseada[0], "EXIT") == 0){
+	else if(stcrmp(instruccion_parseada[0], "EXIT") == 0){
 				ejecutar_EXIT(instruccion_parseada, contexto);
 			}
 }
@@ -251,46 +274,4 @@ void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion context
 	enviar_paquete(paquete, fd_kernel);
 }
 */
-
-char* valor_de_registro(char* registro, t_registros registros){
-	char* valor;
-	if (stcrmp(registro, "AX") == 0){
-		strncpy(valor, registros->ax, strlen(registros->ax)+1);
-		}
-	if (stcrmp(registro, "BX") == 0){
-		strncpy(valor, registros->bx, strlen(registros->bx)+1);
-		}
-	if (stcrmp(registro, "CX") == 0){
-		strncpy(valor, registros->cx, strlen(registros->cx)+1);
-		}
-	if (stcrmp(registro, "DX") == 0){
-		strncpy(valor, registros->dx, strlen(registros->dx)+1);
-		}
-	if (stcrmp(registro, "EAX") == 0){
-		strncpy(valor, registros->eax, strlen(registros->eax)+1);
-		}
-	if (stcrmp(registro, "EBX") == 0){
-		strncpy(valor, registros->ebx, strlen(registros->ebx)+1);
-		}
-	if (stcrmp(registro, "ECX") == 0){
-		strncpy(valor, registros->ecx, strlen(registros->ecx)+1);
-		}
-	if (stcrmp(registro, "EDX") == 0){
-		strncpy(valor, registros->edx, strlen(registros->edx)+1);
-		}
-	if (stcrmp(registro, "RAX") == 0){
-		strncpy(valor, registros->rax, strlen(registros->rax)+1);
-		}
-	if (stcrmp(registro, "RBX") == 0){
-		strncpy(valor, registros->rbx, strlen(registros->rbx)+1);
-		}
-	if (stcrmp(registro, "RCX") == 0){
-		strncpy(valor, registros->rcx, strlen(registros->rcx)+1);
-		}
-	if (stcrmp(registro, "RDX") == 0){
-		strncpy(valor, registros->rdx, strlen(registros->rdx)+1);
-		}
-	return valor;
-}
-
 

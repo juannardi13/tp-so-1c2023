@@ -18,6 +18,13 @@ typedef enum {
 	EXT //Queda como EXT porque si no tiene conflicto con el tipo de la instruccion.
 }estado_proceso;
 
+typedef enum {
+	READ,
+	WRITE,
+	EXECUTE,
+	READ_WRITE
+}proteccion;
+
 typedef enum
 {
 	MENSAJE,
@@ -42,7 +49,9 @@ typedef enum
 	YIELD,
 	EXIT,
 	ESCRIBIR_EN_MEMORIA,
-	LEER_DE_MEMORIA
+	LEER_DE_MEMORIA,
+	LEIDO,
+	NO_LEIDO
 }op_code;
 
 typedef struct
@@ -81,7 +90,7 @@ typedef struct{
 	int id;
 	int base;
 	int tamanio;
-	char* proteccion;
+	proteccion proteccion;
 }t_segmento;
 
 typedef struct {
@@ -96,17 +105,16 @@ typedef struct {
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//float timestamp;
 	//int archivos_abiertos[][2];
-
 } t_pcb;
 
 typedef struct {
 	int pid;
 	int tamanio_instrucciones;
-	char** instrucciones;// en el tp dice que están a modo de lista []
+	char* instrucciones;// recibimos el choclo entero de las intrucciones, sin parsear nada "SET AX HOLA/nIO 12/nEXIT/n"
 	int pc;
 	t_registros* registros_pcb;
 	int tamanio_registros;
-	t_segmento segmento;
+	t_list* segmentos;
 }t_contexto_de_ejecucion;
 
 typedef struct
@@ -140,7 +148,7 @@ void agregar_a_paquete(t_paquete *, void *, int);
 void agregar_entero_a_paquete(t_paquete *, int);
 void crear_buffer(t_paquete *);
 int crear_conexion(t_log *, const char *, char *, char *);
-t_paquete *crear_paquete(void);
+t_paquete *crear_paquete(int);
 t_paquete *crear_paquete_consola(void);
 void eliminar_paquete(t_paquete *);
 int enviar_datos(int, void *, uint32_t);

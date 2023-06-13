@@ -174,10 +174,10 @@ void* serializar_paquete(t_paquete* paquete, int bytes)
 	return magic;
 }
 
-t_paquete *crear_paquete(void){
+t_paquete *crear_paquete(int codigo){
     t_paquete *paquete = malloc(sizeof(t_paquete));
 
-    paquete->codigo_operacion = PAQUETE;
+    paquete->codigo_operacion = codigo;
     crear_buffer(paquete);
     return paquete;
 }
