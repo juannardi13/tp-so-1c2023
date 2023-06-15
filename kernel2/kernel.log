@@ -863,3 +863,984 @@ SET CX COMO
 YIELD
 EXIT
 SET DX ESTAS
+[INFO] 21:51:18:211 kernel.log/(7878:7878): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 21:51:21:710 kernel.log/(7878:7878): Cliente conectado (a KERNEL)
+
+[INFO] 21:51:21:710 kernel.log/(7878:7878): Me llegó una Consola
+[INFO] 21:51:21:710 kernel.log/(7878:7878): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:51:21:710 kernel.log/(7878:7878): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:52:58:814 kernel.log/(7904:7904): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 21:53:04:621 kernel.log/(7904:7904): Cliente conectado (a KERNEL)
+
+[INFO] 21:53:04:624 kernel.log/(7904:7904): Me llegó una Consola
+[INFO] 21:53:04:625 kernel.log/(7904:7904): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:53:04:628 kernel.log/(7904:7904): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:54:53:914 kernel.log/(8022:8022): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 21:54:59:157 kernel.log/(8022:8022): Cliente conectado (a KERNEL)
+
+[INFO] 21:55:12:662 kernel.log/(8022:8022): Me llegó una Consola
+[INFO] 21:55:19:791 kernel.log/(8022:8022): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:55:25:462 kernel.log/(8022:8022): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:57:53:531 kernel.log/(8207:8207): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 21:57:57:396 kernel.log/(8207:8207): Cliente conectado (a KERNEL)
+
+[INFO] 21:58:03:514 kernel.log/(8207:8207): Me llegó una Consola
+[INFO] 21:58:08:303 kernel.log/(8207:8207): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:58:16:514 kernel.log/(8207:8207): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:58:57:645 kernel.log/(8207:8207): PCB id[1431662680] armada, agregando a cola NEW
+[INFO] 21:59:01:013 kernel.log/(8207:8207): PID[1000] ingresa a NEW 
+
+[INFO] 21:59:01:013 kernel.log/(8207:8207): PCB ID: 1000
+
+[INFO] 21:59:10:903 kernel.log/(8207:8207): Cliente conectado (a KERNEL)
+
+[INFO] 21:59:10:903 kernel.log/(8207:8207): Me llegó una Consola
+[INFO] 21:59:10:903 kernel.log/(8207:8207): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:59:10:903 kernel.log/(8207:8207): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:59:10:903 kernel.log/(8207:8207): PCB id[1431662680] armada, agregando a cola NEW
+[INFO] 21:59:10:903 kernel.log/(8207:8207): PID[1001] ingresa a NEW 
+
+[INFO] 21:59:10:903 kernel.log/(8207:8207): PCB ID: 1000
+
+[INFO] 21:59:10:903 kernel.log/(8207:8207): PCB ID: 1001
+
+[INFO] 21:59:34:085 kernel.log/(8328:8328): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 21:59:36:156 kernel.log/(8328:8328): Cliente conectado (a KERNEL)
+
+[INFO] 21:59:36:156 kernel.log/(8328:8328): Me llegó una Consola
+[INFO] 21:59:36:156 kernel.log/(8328:8328): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:59:36:156 kernel.log/(8328:8328): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:59:36:156 kernel.log/(8328:8328): PCB id[-1921572776] armada, agregando a cola NEW
+[INFO] 21:59:36:156 kernel.log/(8328:8328): PID[1000] ingresa a NEW 
+
+[INFO] 21:59:36:156 kernel.log/(8328:8328): PCB ID: 1000
+
+[INFO] 21:59:37:178 kernel.log/(8328:8328): Cliente conectado (a KERNEL)
+
+[INFO] 21:59:37:178 kernel.log/(8328:8328): Me llegó una Consola
+[INFO] 21:59:37:178 kernel.log/(8328:8328): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 21:59:37:178 kernel.log/(8328:8328): Consola deserializada, se arma el PCB a continuación
+[INFO] 21:59:37:178 kernel.log/(8328:8328): PCB id[-1921572776] armada, agregando a cola NEW
+[INFO] 21:59:37:178 kernel.log/(8328:8328): PID[1001] ingresa a NEW 
+
+[INFO] 21:59:37:178 kernel.log/(8328:8328): PCB ID: 1000
+
+[INFO] 21:59:37:178 kernel.log/(8328:8328): PCB ID: 1001
+
+[INFO] 21:59:58:726 kernel.log/(8346:8346): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:00:00:994 kernel.log/(8346:8346): Cliente conectado (a KERNEL)
+
+[INFO] 22:00:00:998 kernel.log/(8346:8346): Me llegó una Consola
+[INFO] 22:00:00:999 kernel.log/(8346:8346): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:00:01:000 kernel.log/(8346:8346): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:00:01:003 kernel.log/(8346:8346): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:00:01:005 kernel.log/(8346:8346): PID[1000] ingresa a NEW 
+
+[INFO] 22:00:01:006 kernel.log/(8346:8346): PCB ID: 1000
+
+[INFO] 22:00:02:246 kernel.log/(8346:8346): Cliente conectado (a KERNEL)
+
+[INFO] 22:00:02:246 kernel.log/(8346:8346): Me llegó una Consola
+[INFO] 22:00:02:246 kernel.log/(8346:8346): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:00:02:247 kernel.log/(8346:8346): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:00:02:247 kernel.log/(8346:8346): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:00:02:247 kernel.log/(8346:8346): PID[1001] ingresa a NEW 
+
+[INFO] 22:00:02:248 kernel.log/(8346:8346): PCB ID: 1000
+
+[INFO] 22:00:02:248 kernel.log/(8346:8346): PCB ID: 1001
+
+[INFO] 22:02:37:158 kernel.log/(8468:8468): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:02:40:621 kernel.log/(8468:8468): Cliente conectado (a KERNEL)
+
+[INFO] 22:02:40:624 kernel.log/(8468:8468): Me llegó una Consola
+[INFO] 22:02:40:625 kernel.log/(8468:8468): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:02:40:625 kernel.log/(8468:8468): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:02:40:627 kernel.log/(8468:8468): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:02:40:628 kernel.log/(8468:8468): PID[1000] ingresa a NEW 
+
+[INFO] 22:02:40:629 kernel.log/(8468:8468): PCB ID: 1000
+
+[INFO] 22:02:42:392 kernel.log/(8468:8468): Cliente conectado (a KERNEL)
+
+[INFO] 22:02:42:392 kernel.log/(8468:8468): Me llegó una Consola
+[INFO] 22:02:42:392 kernel.log/(8468:8468): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:02:42:392 kernel.log/(8468:8468): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:02:42:393 kernel.log/(8468:8468): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:02:42:393 kernel.log/(8468:8468): PID[1001] ingresa a NEW 
+
+[INFO] 22:02:42:394 kernel.log/(8468:8468): PCB ID: 1000
+
+[INFO] 22:02:42:394 kernel.log/(8468:8468): PCB ID: 1001
+
+[INFO] 22:02:43:212 kernel.log/(8468:8468): Cliente conectado (a KERNEL)
+
+[INFO] 22:02:43:212 kernel.log/(8468:8468): Me llegó una Consola
+[INFO] 22:02:43:213 kernel.log/(8468:8468): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:02:43:213 kernel.log/(8468:8468): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:02:43:213 kernel.log/(8468:8468): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:02:43:213 kernel.log/(8468:8468): PID[1002] ingresa a NEW 
+
+[INFO] 22:02:43:213 kernel.log/(8468:8468): PCB ID: 1000
+
+[INFO] 22:02:43:213 kernel.log/(8468:8468): PCB ID: 1001
+
+[INFO] 22:02:43:213 kernel.log/(8468:8468): PCB ID: 1002
+
+[INFO] 22:06:38:765 kernel.log/(8805:8805): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:06:42:009 kernel.log/(8805:8805): Cliente conectado (a KERNEL)
+
+[INFO] 22:06:42:045 kernel.log/(8805:8812): Me llegó una Consola
+[INFO] 22:06:42:048 kernel.log/(8805:8812): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:06:42:048 kernel.log/(8805:8812): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:06:42:049 kernel.log/(8805:8812): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:06:42:053 kernel.log/(8805:8812): PID[1000] ingresa a NEW 
+
+[INFO] 22:06:42:053 kernel.log/(8805:8812): PCB ID: 1000
+
+[INFO] 22:06:43:893 kernel.log/(8805:8805): Cliente conectado (a KERNEL)
+
+[INFO] 22:06:43:896 kernel.log/(8805:8814): Me llegó una Consola
+[INFO] 22:06:43:896 kernel.log/(8805:8814): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:06:43:896 kernel.log/(8805:8814): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:06:43:896 kernel.log/(8805:8814): PCB id[1093720] armada, agregando a cola NEW
+[INFO] 22:06:43:897 kernel.log/(8805:8814): PID[1001] ingresa a NEW 
+
+[INFO] 22:06:43:897 kernel.log/(8805:8814): PCB ID: 1000
+
+[INFO] 22:06:43:897 kernel.log/(8805:8814): PCB ID: 1001
+
+[INFO] 22:07:28:583 kernel.log/(9097:9097): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:07:32:413 kernel.log/(9097:9097): Cliente conectado (a KERNEL)
+
+[INFO] 22:07:32:415 kernel.log/(9097:9104): Me llegó una Consola
+[INFO] 22:07:32:415 kernel.log/(9097:9104): Las instrucciones que llegaron son: SET AX HOLA
+YIELD
+EXIT
+SET BX CHAU
+YIELD
+YIELD
+EXIT
+SET CX COMO
+YIELD
+EXIT
+SET DX ESTAS
+[INFO] 22:07:32:415 kernel.log/(9097:9104): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:07:32:415 kernel.log/(9097:9104): PCB id[1461993560] armada, agregando a cola NEW
+[INFO] 22:07:32:415 kernel.log/(9097:9104): PID[1000] ingresa a NEW 
+
+[INFO] 22:07:32:415 kernel.log/(9097:9104): PCB ID: 1000
+
+[INFO] 22:08:44:932 kernel.log/(9195:9195): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:08:48:374 kernel.log/(9195:9195): Cliente conectado (a KERNEL)
+
+[INFO] 22:08:48:375 kernel.log/(9195:9202): Me llegó una Consola
+[INFO] 22:08:48:375 kernel.log/(9195:9202): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:08:48:375 kernel.log/(9195:9202): PCB id[1000] armada, agregando a cola NEW
+[INFO] 22:08:48:375 kernel.log/(9195:9202): PID[1000] ingresa a NEW 
+
+[INFO] 22:08:48:375 kernel.log/(9195:9202): PCB ID: 1000
+
+[INFO] 22:08:49:224 kernel.log/(9195:9195): Cliente conectado (a KERNEL)
+
+[INFO] 22:08:49:230 kernel.log/(9195:9204): Me llegó una Consola
+[INFO] 22:08:49:230 kernel.log/(9195:9204): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:08:49:230 kernel.log/(9195:9204): PCB id[1001] armada, agregando a cola NEW
+[INFO] 22:08:49:230 kernel.log/(9195:9204): PID[1001] ingresa a NEW 
+
+[INFO] 22:08:49:230 kernel.log/(9195:9204): PCB ID: 1000
+
+[INFO] 22:08:49:230 kernel.log/(9195:9204): PCB ID: 1001
+
+[INFO] 22:35:42:930 kernel.log/(9268:9268): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:35:46:361 kernel.log/(9268:9268): Cliente conectado (a KERNEL)
+
+[INFO] 22:35:46:362 kernel.log/(9268:9276): Me llegó una Consola
+[INFO] 22:35:46:362 kernel.log/(9268:9276): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:35:46:362 kernel.log/(9268:9276): PCB id[1000] armada, agregando a cola NEW
+[INFO] 22:35:46:362 kernel.log/(9268:9276): PID[1000] ingresa a NEW 
+
+[INFO] 22:35:46:362 kernel.log/(9268:9276): PCB ID: 1000
+
+[INFO] 22:35:47:241 kernel.log/(9268:9268): Cliente conectado (a KERNEL)
+
+[INFO] 22:35:47:245 kernel.log/(9268:9278): Me llegó una Consola
+[INFO] 22:35:47:245 kernel.log/(9268:9278): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:35:47:245 kernel.log/(9268:9278): PCB id[1001] armada, agregando a cola NEW
+[INFO] 22:35:47:245 kernel.log/(9268:9278): PID[1001] ingresa a NEW 
+
+[INFO] 22:35:47:245 kernel.log/(9268:9278): PCB ID: 1000
+
+[INFO] 22:35:47:245 kernel.log/(9268:9278): PCB ID: 1001
+
+[INFO] 22:41:42:828 kernel.log/(9416:9416): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 22:41:44:627 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:44:627 kernel.log/(9416:9423): Me llegó una Consola
+[INFO] 22:41:44:627 kernel.log/(9416:9423): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:44:627 kernel.log/(9416:9423): PCB id[1000] armada, agregando a cola NEW
+[INFO] 22:41:44:627 kernel.log/(9416:9423): PID[1000] ingresa a NEW 
+
+[WARNING] 22:41:44:627 kernel.log/(9416:9423): PCBs en lista NEW:
+[INFO] 22:41:44:627 kernel.log/(9416:9423): PCB ID: 1000
+[INFO] 22:41:45:706 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:45:706 kernel.log/(9416:9425): Me llegó una Consola
+[INFO] 22:41:45:706 kernel.log/(9416:9425): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:45:706 kernel.log/(9416:9425): PCB id[1001] armada, agregando a cola NEW
+[INFO] 22:41:45:706 kernel.log/(9416:9425): PID[1001] ingresa a NEW 
+
+[WARNING] 22:41:45:706 kernel.log/(9416:9425): PCBs en lista NEW:
+[INFO] 22:41:45:707 kernel.log/(9416:9425): PCB ID: 1000
+[INFO] 22:41:45:707 kernel.log/(9416:9425): PCB ID: 1001
+[INFO] 22:41:46:929 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:46:929 kernel.log/(9416:9427): Me llegó una Consola
+[INFO] 22:41:46:929 kernel.log/(9416:9427): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:46:929 kernel.log/(9416:9427): PCB id[1002] armada, agregando a cola NEW
+[INFO] 22:41:46:929 kernel.log/(9416:9427): PID[1002] ingresa a NEW 
+
+[WARNING] 22:41:46:930 kernel.log/(9416:9427): PCBs en lista NEW:
+[INFO] 22:41:46:930 kernel.log/(9416:9427): PCB ID: 1000
+[INFO] 22:41:46:930 kernel.log/(9416:9427): PCB ID: 1001
+[INFO] 22:41:46:930 kernel.log/(9416:9427): PCB ID: 1002
+[INFO] 22:41:47:522 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:47:522 kernel.log/(9416:9429): Me llegó una Consola
+[INFO] 22:41:47:522 kernel.log/(9416:9429): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:47:522 kernel.log/(9416:9429): PCB id[1003] armada, agregando a cola NEW
+[INFO] 22:41:47:522 kernel.log/(9416:9429): PID[1003] ingresa a NEW 
+
+[WARNING] 22:41:47:522 kernel.log/(9416:9429): PCBs en lista NEW:
+[INFO] 22:41:47:522 kernel.log/(9416:9429): PCB ID: 1000
+[INFO] 22:41:47:522 kernel.log/(9416:9429): PCB ID: 1001
+[INFO] 22:41:47:522 kernel.log/(9416:9429): PCB ID: 1002
+[INFO] 22:41:47:522 kernel.log/(9416:9429): PCB ID: 1003
+[INFO] 22:41:47:740 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:47:740 kernel.log/(9416:9431): Me llegó una Consola
+[INFO] 22:41:47:740 kernel.log/(9416:9431): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PCB id[1004] armada, agregando a cola NEW
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PID[1004] ingresa a NEW 
+
+[WARNING] 22:41:47:740 kernel.log/(9416:9431): PCBs en lista NEW:
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PCB ID: 1000
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PCB ID: 1001
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PCB ID: 1002
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PCB ID: 1003
+[INFO] 22:41:47:740 kernel.log/(9416:9431): PCB ID: 1004
+[INFO] 22:41:47:952 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:47:953 kernel.log/(9416:9433): Me llegó una Consola
+[INFO] 22:41:47:953 kernel.log/(9416:9433): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB id[1005] armada, agregando a cola NEW
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PID[1005] ingresa a NEW 
+
+[WARNING] 22:41:47:953 kernel.log/(9416:9433): PCBs en lista NEW:
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB ID: 1000
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB ID: 1001
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB ID: 1002
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB ID: 1003
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB ID: 1004
+[INFO] 22:41:47:953 kernel.log/(9416:9433): PCB ID: 1005
+[INFO] 22:41:48:174 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:48:175 kernel.log/(9416:9435): Me llegó una Consola
+[INFO] 22:41:48:175 kernel.log/(9416:9435): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:48:175 kernel.log/(9416:9435): PCB id[1006] armada, agregando a cola NEW
+[INFO] 22:41:48:175 kernel.log/(9416:9435): PID[1006] ingresa a NEW 
+
+[WARNING] 22:41:48:175 kernel.log/(9416:9435): PCBs en lista NEW:
+[INFO] 22:41:48:175 kernel.log/(9416:9435): PCB ID: 1000
+[INFO] 22:41:48:175 kernel.log/(9416:9435): PCB ID: 1001
+[INFO] 22:41:48:175 kernel.log/(9416:9435): PCB ID: 1002
+[INFO] 22:41:48:176 kernel.log/(9416:9435): PCB ID: 1003
+[INFO] 22:41:48:176 kernel.log/(9416:9435): PCB ID: 1004
+[INFO] 22:41:48:176 kernel.log/(9416:9435): PCB ID: 1005
+[INFO] 22:41:48:176 kernel.log/(9416:9435): PCB ID: 1006
+[INFO] 22:41:48:360 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:48:360 kernel.log/(9416:9437): Me llegó una Consola
+[INFO] 22:41:48:360 kernel.log/(9416:9437): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB id[1007] armada, agregando a cola NEW
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PID[1007] ingresa a NEW 
+
+[WARNING] 22:41:48:360 kernel.log/(9416:9437): PCBs en lista NEW:
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1000
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1001
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1002
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1003
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1004
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1005
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1006
+[INFO] 22:41:48:360 kernel.log/(9416:9437): PCB ID: 1007
+[INFO] 22:41:48:549 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:48:549 kernel.log/(9416:9439): Me llegó una Consola
+[INFO] 22:41:48:549 kernel.log/(9416:9439): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:48:549 kernel.log/(9416:9439): PCB id[1008] armada, agregando a cola NEW
+[INFO] 22:41:48:549 kernel.log/(9416:9439): PID[1008] ingresa a NEW 
+
+[WARNING] 22:41:48:550 kernel.log/(9416:9439): PCBs en lista NEW:
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1000
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1001
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1002
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1003
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1004
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1005
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1006
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1007
+[INFO] 22:41:48:550 kernel.log/(9416:9439): PCB ID: 1008
+[INFO] 22:41:48:770 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:48:771 kernel.log/(9416:9441): Me llegó una Consola
+[INFO] 22:41:48:771 kernel.log/(9416:9441): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB id[1009] armada, agregando a cola NEW
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PID[1009] ingresa a NEW 
+
+[WARNING] 22:41:48:771 kernel.log/(9416:9441): PCBs en lista NEW:
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1000
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1001
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1002
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1003
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1004
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1005
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1006
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1007
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1008
+[INFO] 22:41:48:771 kernel.log/(9416:9441): PCB ID: 1009
+[INFO] 22:41:48:988 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:48:988 kernel.log/(9416:9443): Me llegó una Consola
+[INFO] 22:41:48:989 kernel.log/(9416:9443): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB id[1010] armada, agregando a cola NEW
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PID[1010] ingresa a NEW 
+
+[WARNING] 22:41:48:989 kernel.log/(9416:9443): PCBs en lista NEW:
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1000
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1001
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1002
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1003
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1004
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1005
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1006
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1007
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1008
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1009
+[INFO] 22:41:48:989 kernel.log/(9416:9443): PCB ID: 1010
+[INFO] 22:41:49:173 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:49:173 kernel.log/(9416:9445): Me llegó una Consola
+[INFO] 22:41:49:173 kernel.log/(9416:9445): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB id[1011] armada, agregando a cola NEW
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PID[1011] ingresa a NEW 
+
+[WARNING] 22:41:49:173 kernel.log/(9416:9445): PCBs en lista NEW:
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB ID: 1000
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB ID: 1001
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB ID: 1002
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB ID: 1003
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB ID: 1004
+[INFO] 22:41:49:173 kernel.log/(9416:9445): PCB ID: 1005
+[INFO] 22:41:49:174 kernel.log/(9416:9445): PCB ID: 1006
+[INFO] 22:41:49:174 kernel.log/(9416:9445): PCB ID: 1007
+[INFO] 22:41:49:174 kernel.log/(9416:9445): PCB ID: 1008
+[INFO] 22:41:49:174 kernel.log/(9416:9445): PCB ID: 1009
+[INFO] 22:41:49:174 kernel.log/(9416:9445): PCB ID: 1010
+[INFO] 22:41:49:174 kernel.log/(9416:9445): PCB ID: 1011
+[INFO] 22:41:49:362 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:49:362 kernel.log/(9416:9447): Me llegó una Consola
+[INFO] 22:41:49:362 kernel.log/(9416:9447): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB id[1012] armada, agregando a cola NEW
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PID[1012] ingresa a NEW 
+
+[WARNING] 22:41:49:362 kernel.log/(9416:9447): PCBs en lista NEW:
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB ID: 1000
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB ID: 1001
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB ID: 1002
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB ID: 1003
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB ID: 1004
+[INFO] 22:41:49:362 kernel.log/(9416:9447): PCB ID: 1005
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1006
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1007
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1008
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1009
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1010
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1011
+[INFO] 22:41:49:363 kernel.log/(9416:9447): PCB ID: 1012
+[INFO] 22:41:49:551 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:49:552 kernel.log/(9416:9449): Me llegó una Consola
+[INFO] 22:41:49:552 kernel.log/(9416:9449): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB id[1013] armada, agregando a cola NEW
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PID[1013] ingresa a NEW 
+
+[WARNING] 22:41:49:552 kernel.log/(9416:9449): PCBs en lista NEW:
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1000
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1001
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1002
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1003
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1004
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1005
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1006
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1007
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1008
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1009
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1010
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1011
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1012
+[INFO] 22:41:49:552 kernel.log/(9416:9449): PCB ID: 1013
+[INFO] 22:41:49:744 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:49:746 kernel.log/(9416:9451): Me llegó una Consola
+[INFO] 22:41:49:746 kernel.log/(9416:9451): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB id[1014] armada, agregando a cola NEW
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PID[1014] ingresa a NEW 
+
+[WARNING] 22:41:49:746 kernel.log/(9416:9451): PCBs en lista NEW:
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1000
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1001
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1002
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1003
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1004
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1005
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1006
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1007
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1008
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1009
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1010
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1011
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1012
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1013
+[INFO] 22:41:49:746 kernel.log/(9416:9451): PCB ID: 1014
+[INFO] 22:41:49:933 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:49:934 kernel.log/(9416:9453): Me llegó una Consola
+[INFO] 22:41:49:934 kernel.log/(9416:9453): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB id[1015] armada, agregando a cola NEW
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PID[1015] ingresa a NEW 
+
+[WARNING] 22:41:49:934 kernel.log/(9416:9453): PCBs en lista NEW:
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1000
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1001
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1002
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1003
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1004
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1005
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1006
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1007
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1008
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1009
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1010
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1011
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1012
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1013
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1014
+[INFO] 22:41:49:934 kernel.log/(9416:9453): PCB ID: 1015
+[INFO] 22:41:50:120 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:50:121 kernel.log/(9416:9455): Me llegó una Consola
+[INFO] 22:41:50:121 kernel.log/(9416:9455): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB id[1016] armada, agregando a cola NEW
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PID[1016] ingresa a NEW 
+
+[WARNING] 22:41:50:121 kernel.log/(9416:9455): PCBs en lista NEW:
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1000
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1001
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1002
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1003
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1004
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1005
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1006
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1007
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1008
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1009
+[INFO] 22:41:50:121 kernel.log/(9416:9455): PCB ID: 1010
+[INFO] 22:41:50:122 kernel.log/(9416:9455): PCB ID: 1011
+[INFO] 22:41:50:122 kernel.log/(9416:9455): PCB ID: 1012
+[INFO] 22:41:50:122 kernel.log/(9416:9455): PCB ID: 1013
+[INFO] 22:41:50:122 kernel.log/(9416:9455): PCB ID: 1014
+[INFO] 22:41:50:122 kernel.log/(9416:9455): PCB ID: 1015
+[INFO] 22:41:50:122 kernel.log/(9416:9455): PCB ID: 1016
+[INFO] 22:41:50:305 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:50:305 kernel.log/(9416:9457): Me llegó una Consola
+[INFO] 22:41:50:305 kernel.log/(9416:9457): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:50:305 kernel.log/(9416:9457): PCB id[1017] armada, agregando a cola NEW
+[INFO] 22:41:50:305 kernel.log/(9416:9457): PID[1017] ingresa a NEW 
+
+[WARNING] 22:41:50:305 kernel.log/(9416:9457): PCBs en lista NEW:
+[INFO] 22:41:50:305 kernel.log/(9416:9457): PCB ID: 1000
+[INFO] 22:41:50:305 kernel.log/(9416:9457): PCB ID: 1001
+[INFO] 22:41:50:305 kernel.log/(9416:9457): PCB ID: 1002
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1003
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1004
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1005
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1006
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1007
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1008
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1009
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1010
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1011
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1012
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1013
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1014
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1015
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1016
+[INFO] 22:41:50:306 kernel.log/(9416:9457): PCB ID: 1017
+[INFO] 22:41:50:499 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:50:500 kernel.log/(9416:9459): Me llegó una Consola
+[INFO] 22:41:50:500 kernel.log/(9416:9459): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB id[1018] armada, agregando a cola NEW
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PID[1018] ingresa a NEW 
+
+[WARNING] 22:41:50:500 kernel.log/(9416:9459): PCBs en lista NEW:
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1000
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1001
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1002
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1003
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1004
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1005
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1006
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1007
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1008
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1009
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1010
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1011
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1012
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1013
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1014
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1015
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1016
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1017
+[INFO] 22:41:50:500 kernel.log/(9416:9459): PCB ID: 1018
+[INFO] 22:41:50:717 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:50:717 kernel.log/(9416:9461): Me llegó una Consola
+[INFO] 22:41:50:717 kernel.log/(9416:9461): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB id[1019] armada, agregando a cola NEW
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PID[1019] ingresa a NEW 
+
+[WARNING] 22:41:50:717 kernel.log/(9416:9461): PCBs en lista NEW:
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1000
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1001
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1002
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1003
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1004
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1005
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1006
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1007
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1008
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1009
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1010
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1011
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1012
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1013
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1014
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1015
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1016
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1017
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1018
+[INFO] 22:41:50:717 kernel.log/(9416:9461): PCB ID: 1019
+[INFO] 22:41:50:905 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:50:905 kernel.log/(9416:9463): Me llegó una Consola
+[INFO] 22:41:50:905 kernel.log/(9416:9463): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB id[1020] armada, agregando a cola NEW
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PID[1020] ingresa a NEW 
+
+[WARNING] 22:41:50:905 kernel.log/(9416:9463): PCBs en lista NEW:
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1000
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1001
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1002
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1003
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1004
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1005
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1006
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1007
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1008
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1009
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1010
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1011
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1012
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1013
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1014
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1015
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1016
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1017
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1018
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1019
+[INFO] 22:41:50:905 kernel.log/(9416:9463): PCB ID: 1020
+[INFO] 22:41:51:090 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:51:090 kernel.log/(9416:9465): Me llegó una Consola
+[INFO] 22:41:51:090 kernel.log/(9416:9465): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB id[1021] armada, agregando a cola NEW
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PID[1021] ingresa a NEW 
+
+[WARNING] 22:41:51:090 kernel.log/(9416:9465): PCBs en lista NEW:
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1000
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1001
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1002
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1003
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1004
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1005
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1006
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1007
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1008
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1009
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1010
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1011
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1012
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1013
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1014
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1015
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1016
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1017
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1018
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1019
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1020
+[INFO] 22:41:51:090 kernel.log/(9416:9465): PCB ID: 1021
+[INFO] 22:41:51:279 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:51:279 kernel.log/(9416:9467): Me llegó una Consola
+[INFO] 22:41:51:279 kernel.log/(9416:9467): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB id[1022] armada, agregando a cola NEW
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PID[1022] ingresa a NEW 
+
+[WARNING] 22:41:51:279 kernel.log/(9416:9467): PCBs en lista NEW:
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1000
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1001
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1002
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1003
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1004
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1005
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1006
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1007
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1008
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1009
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1010
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1011
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1012
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1013
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1014
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1015
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1016
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1017
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1018
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1019
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1020
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1021
+[INFO] 22:41:51:279 kernel.log/(9416:9467): PCB ID: 1022
+[INFO] 22:41:51:500 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:51:501 kernel.log/(9416:9469): Me llegó una Consola
+[INFO] 22:41:51:501 kernel.log/(9416:9469): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB id[1023] armada, agregando a cola NEW
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PID[1023] ingresa a NEW 
+
+[WARNING] 22:41:51:501 kernel.log/(9416:9469): PCBs en lista NEW:
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1000
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1001
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1002
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1003
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1004
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1005
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1006
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1007
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1008
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1009
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1010
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1011
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1012
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1013
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1014
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1015
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1016
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1017
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1018
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1019
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1020
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1021
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1022
+[INFO] 22:41:51:501 kernel.log/(9416:9469): PCB ID: 1023
+[INFO] 22:41:51:685 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:51:685 kernel.log/(9416:9471): Me llegó una Consola
+[INFO] 22:41:51:686 kernel.log/(9416:9471): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB id[1024] armada, agregando a cola NEW
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PID[1024] ingresa a NEW 
+
+[WARNING] 22:41:51:686 kernel.log/(9416:9471): PCBs en lista NEW:
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1000
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1001
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1002
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1003
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1004
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1005
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1006
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1007
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1008
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1009
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1010
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1011
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1012
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1013
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1014
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1015
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1016
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1017
+[INFO] 22:41:51:686 kernel.log/(9416:9471): PCB ID: 1018
+[INFO] 22:41:51:687 kernel.log/(9416:9471): PCB ID: 1019
+[INFO] 22:41:51:687 kernel.log/(9416:9471): PCB ID: 1020
+[INFO] 22:41:51:687 kernel.log/(9416:9471): PCB ID: 1021
+[INFO] 22:41:51:687 kernel.log/(9416:9471): PCB ID: 1022
+[INFO] 22:41:51:687 kernel.log/(9416:9471): PCB ID: 1023
+[INFO] 22:41:51:687 kernel.log/(9416:9471): PCB ID: 1024
+[INFO] 22:41:51:879 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:51:879 kernel.log/(9416:9473): Me llegó una Consola
+[INFO] 22:41:51:879 kernel.log/(9416:9473): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB id[1025] armada, agregando a cola NEW
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PID[1025] ingresa a NEW 
+
+[WARNING] 22:41:51:879 kernel.log/(9416:9473): PCBs en lista NEW:
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1000
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1001
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1002
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1003
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1004
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1005
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1006
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1007
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1008
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1009
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1010
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1011
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1012
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1013
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1014
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1015
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1016
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1017
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1018
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1019
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1020
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1021
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1022
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1023
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1024
+[INFO] 22:41:51:879 kernel.log/(9416:9473): PCB ID: 1025
+[INFO] 22:41:52:068 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:52:068 kernel.log/(9416:9475): Me llegó una Consola
+[INFO] 22:41:52:068 kernel.log/(9416:9475): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB id[1026] armada, agregando a cola NEW
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PID[1026] ingresa a NEW 
+
+[WARNING] 22:41:52:068 kernel.log/(9416:9475): PCBs en lista NEW:
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1000
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1001
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1002
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1003
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1004
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1005
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1006
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1007
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1008
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1009
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1010
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1011
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1012
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1013
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1014
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1015
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1016
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1017
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1018
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1019
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1020
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1021
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1022
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1023
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1024
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1025
+[INFO] 22:41:52:068 kernel.log/(9416:9475): PCB ID: 1026
+[INFO] 22:41:52:196 kernel.log/(9416:9416): Cliente conectado (a KERNEL)
+
+[INFO] 22:41:52:196 kernel.log/(9416:9477): Me llegó una Consola
+[INFO] 22:41:52:196 kernel.log/(9416:9477): Consola deserializada, se arma el PCB a continuación
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB id[1027] armada, agregando a cola NEW
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PID[1027] ingresa a NEW 
+
+[WARNING] 22:41:52:196 kernel.log/(9416:9477): PCBs en lista NEW:
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1000
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1001
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1002
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1003
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1004
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1005
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1006
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1007
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1008
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1009
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1010
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1011
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1012
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1013
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1014
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1015
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1016
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1017
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1018
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1019
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1020
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1021
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1022
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1023
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1024
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1025
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1026
+[INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1027

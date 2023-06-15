@@ -64,4 +64,5 @@ void cargar_valores_config(char* ruta_config) {
 	config_kernel.alfa_hrrn = config_get_double_value(config, "HRRN_ALFA");
 	config_kernel.grado_multiprogramacion = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
 	//TODO ver que hacer con el tema de los recursos
+
 }

@@ -9,7 +9,7 @@ char* deserializar_string(t_buffer* buffer) {
 	void* stream = buffer->stream;
 	memcpy(string, stream, buffer->stream_size);
 
-	log_info(logger_kernel, "Las instrucciones que llegaron son: %s", string);
+	//log_info(logger_kernel, "Las instrucciones que llegaron son: %s", string);
 
 	return string;
 }

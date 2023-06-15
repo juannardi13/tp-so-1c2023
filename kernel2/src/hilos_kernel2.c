@@ -28,6 +28,18 @@ void manejar_conexion(int socket_cliente) {
 	case CONSOLA:
 		log_info(logger_kernel, "Me llegó una Consola");
 		data = deserializar_string(paquete->buffer);
+		log_info(logger_kernel, "Consola deserializada, se arma el PCB a continuación");
+
+		t_proceso* proceso = malloc(sizeof(t_proceso));
+		proceso->pcb = malloc(sizeof(t_pcb));
+
+		proceso->pcb = crear_estructura_pcb(data);
+		proceso->socket = socket_cliente;
+
+		log_info(logger_kernel, "PCB id[%d] armada, agregando a cola NEW", proceso->pcb->pid);
+
+		agregar_proceso_a_new(proceso);
+
 		break;
 	default:
 		log_warning(logger_kernel, "Operacion desconocida \n");
@@ -41,10 +53,10 @@ int atender_clientes_kernel(int socket_servidor) {
 	int socket_cliente = esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			//pthread_t hilo_cliente;
-			manejar_conexion(socket_cliente);
-			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			//pthread_detach(hilo_cliente);
+			pthread_t hilo_cliente;
+			//manejar_conexion(socket_cliente);
+			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			pthread_detach(hilo_cliente);
 
 			return 1;
 		} else {
@@ -87,19 +99,23 @@ void ejecutar_proceso(int socket_cpu) {
 
 }
 
-t_pcb* crear_estructura_pcb(t_consola* consola) {
+t_pcb* crear_estructura_pcb(char* instrucciones) {
+
+	int tamanio_proceso = strlen(instrucciones) + 1;
 
 	t_pcb* un_pcb = malloc(sizeof(t_pcb));
 	//pthread_mutex_lock(&mutex_pid);
 	un_pcb->pid = pid_global;
 	pid_global++;
 	//pthread_mutex_unlock(&mutex_pid);
-	un_pcb->tamanio =consola->tamanio_proceso;
-	un_pcb->instrucciones = string_duplicate(consola->instrucciones);
+	un_pcb->tamanio_instrucciones = tamanio_proceso;
+	un_pcb->instrucciones = string_duplicate(instrucciones);
 	un_pcb->pc = 0;
 	un_pcb->estado = NEW;
+	un_pcb->tamanio = tamanio_proceso;
 	//Cada vez que agreguemos algo nuevo al pcb lo hacemos como ariba
 
+	//free(instrucciones); ??????????
 	return un_pcb;
 }
 
@@ -119,10 +135,10 @@ void iniciar_conexion_cpu(char* ip_cpu, char* puerto_cpu) {
 	socket_cpu = crear_conexion(logger_kernel, "KERNEL", ip_cpu, puerto_cpu);
 }
 
-void agregar_pcb_a_new(t_proceso* proceso) {
+void agregar_proceso_a_new(t_proceso* proceso) {
 
-	list_add(cola_new, proceso);
 	proceso->pcb->estado = NEW;
+	list_add(cola_new, proceso);
 	log_info(logger_kernel, "PID[%d] ingresa a NEW \n", proceso->pcb->pid);
 	mostrar_cola_new(cola_new);
 
@@ -130,8 +146,10 @@ void agregar_pcb_a_new(t_proceso* proceso) {
 
 void mostrar_cola_new(t_list* lista) {
 
-      for (int j = 0; j < list_size(lista); j++){
-          t_proceso* proceso = list_get(lista, j);
-          log_info(logger_kernel,"PCB ID: %d\n",proceso->pcb->pid);
-      }
+	log_warning(logger_kernel, "PCBs en lista NEW:");
+
+    for (int j = 0; j < list_size(lista); j++){
+    	t_proceso* proceso = list_get(lista, j);
+        log_info(logger_kernel,"PCB ID: %d",proceso->pcb->pid);
+    }
 }

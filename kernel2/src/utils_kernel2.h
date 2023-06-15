@@ -75,10 +75,10 @@ bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
 t_instruccion recibir_instruccion(t_log*, int);
 
 //Funciones para tratar con la PCB
-void agregar_pcb_a_new(t_proceso*);
+void agregar_proceso_a_new(t_proceso*);
 t_pcb * alocar_memoria_pcb(t_log*);
 t_pcb* armar_pcb(char**, t_log*);
-t_pcb* crear_estructura_pcb(t_consola*);
+t_pcb* crear_estructura_pcb(char*);
 t_pcb crear_pcb(t_instruccion*);
 t_pcb* deserializar_pcb(t_buffer*);
 void enviar_pcb(int, t_pcb*);
