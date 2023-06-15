@@ -207,7 +207,7 @@ void parsear_instrucciones_y_enviar(char* ruta_archivo_pseudocodigo, int socket_
 	free(paquete);
 }
 
-t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char* parametro_2, char* parametro_3) {
+t_instruccion* armar_instruccion(op_code id, char* parametro_1, char* parametro_2, char* parametro_3) {
 	t_instruccion* instruccion= malloc(sizeof(t_instruccion));
 	instruccion->nombre = id;
 	instruccion->parametro_1 = parametro_1;
@@ -221,13 +221,11 @@ t_instruccion* armar_instruccion(nombre_instruccion id, char* parametro_1, char*
 }
 
 void serializar_instrucciones(t_list *instrucciones, t_paquete *paquete) {
-	int tamanio = tamanio_instrucciones(instrucciones);
-	void* stream;
 		
 	for(int i=0; i<list_size(instrucciones); i++) {
 		t_instruccion* instruccion = list_get(instrucciones, i);
 	
-		agregar_a_paquete(paquete, &(instruccion->nombre), sizeof(nombre_instruccion));
+		agregar_a_paquete(paquete, &(instruccion->nombre), sizeof(op_code));
 		agregar_a_paquete(paquete, &(instruccion->parametro_1), instruccion->parametro_1_length);
 		agregar_a_paquete(paquete, &(instruccion->parametro_2), instruccion->parametro_2_length);
 		agregar_a_paquete(paquete, &(instruccion->parametro_3), instruccion->parametro_3_length);
@@ -244,7 +242,7 @@ void serializar_y_enviar_instruccion(int conexion_kernel, t_list *instrucciones,
 
 	printf("\nLa instruccion a serializar es la siguiente: %d, %s, %s, %s\n", instruccion_a_serializar->nombre, instruccion_a_serializar->parametro_1, instruccion_a_serializar->parametro_2, instruccion_a_serializar->parametro_3);
 
-	buffer->stream_size = sizeof(nombre_instruccion)
+	buffer->stream_size = sizeof(op_code)
 			  + strlen(instruccion_a_serializar->parametro_1) + 1
 			  + strlen(instruccion_a_serializar->parametro_2) + 1
 			  + strlen(instruccion_a_serializar->parametro_3) + 1;
@@ -252,8 +250,8 @@ void serializar_y_enviar_instruccion(int conexion_kernel, t_list *instrucciones,
 	void* stream = malloc(buffer->stream_size);
 	int offset = 0;
 
-	memcpy(stream + offset, &instruccion_a_serializar->nombre, sizeof(nombre_instruccion));
-	offset += sizeof(nombre_instruccion);
+	memcpy(stream + offset, &instruccion_a_serializar->nombre, sizeof(op_code));
+	offset += sizeof(op_code);
 	memcpy(stream + offset, &instruccion_a_serializar->parametro_1_length, sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, instruccion_a_serializar->parametro_1, strlen(instruccion_a_serializar->parametro_1) + 1);

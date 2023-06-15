@@ -1,17 +1,6 @@
 #include"utils_kernel2.h"
 #include<shared-2.h>
 
-int pid_global = 1000;
-t_consola* consola;
-t_list* cola_new;
-t_list* cola_ready;
-int socket_cpu;
-
-typedef struct {
-    t_log* log;
-    int fd;
-} t_manejar_conexion_args;
-
 void manejar_conexion(void *void_args) {
 	t_manejar_conexion_args *args = (t_manejar_conexion_args*) void_args;
 	t_log *logger = args->log;
@@ -33,74 +22,11 @@ void manejar_conexion(void *void_args) {
 	case CONSOLA:
 		log_info(logger, "Me llegó una Consola");
 		data = deserializar_string(paquete->buffer);
-
 		break;
 	default:
 		log_warning(logger, "Operacion desconocida \n");
 		break;
 	}
-
-
-//	t_manejar_conexion_args *args = (t_manejar_conexion_args*) void_args;
-//	t_log *logger = args->log;
-//	int socket_cliente = args->fd;
-//
-//	int codigo_operacion = recibir_operacion(socket_cliente);
-//
-//	switch (codigo_operacion) {
-//	case CONSOLA:
-//		char *instrucciones = string_new();
-//		instrucciones = recibir_instrucciones_como_string(socket_cliente, logger);
-//		consola = deserializar_consola(instrucciones, logger);
-//		log_info(logger, "Consola deserializada, armando PCB");
-//
-//		t_proceso *proceso = malloc(sizeof(t_proceso));
-//		proceso->pcb = malloc(sizeof(t_pcb));
-//		proceso->pcb = crear_estructura_pcb(consola);
-//		proceso->socket = socket_cliente;
-//
-//		log_info(logger, "PCB id[%d] armada -> agregado el proceso a NEW", proceso->pcb->pid);
-//		agregar_pcb_a_new(proceso, logger);
-//
-////		-------------------------------------------------------------
-////		|     														|
-////		|		OJO CON LO QUE VIENE ACÁ, ES SOLAMENTE				|
-////		|		PARA PROBARLO, EN EL FUTURO TIENE QUE SER UN HILO   |
-////		|		QUE PLANIFIQUE TODO SOLO CON SEMÁFOROS Y DEMÁS		|
-////		|															|
-////		-------------------------------------------------------------
-//		// wait(cola_ready);
-//		getchar();
-//		agregar_proceso_a_ready(logger);
-//		getchar();
-//		ejecutar_proceso(socket_cpu, logger);
-//
-//		break;
-//	case PAQUETE_CONSOLA:
-//		log_info(logger, "Me llegaron el tamanio y las instrucciones");
-//		//pthread_mutex_lock(&mutex_consola);
-//		//consola = deserializar_consola(socket_cliente);
-//		//pthread_mutex_unlock(&mutex_consola);
-//		log_info(logger, "Consola deserializada, se arma el PCB\n");
-//		t_proceso *procesos = malloc(sizeof(t_proceso));
-//		procesos->pcb = malloc(sizeof(t_pcb));
-//		//pthread_mutex_lock(&mutex_consola);
-//		procesos->pcb = crear_estructura_pcb(consola);
-//		//pthread_mutex_unlock(&mutex_consola);
-//		procesos->socket = socket_cliente;
-//		log_info(logger, "PCB id[%d] armada -> agregar proceso a new", procesos->pcb->pid);
-//		agregar_pcb_a_new(procesos, logger);
-//		break;
-//	case PAQUETE:
-//		log_info(logger, "Me llego el paquete:\n");
-//		break;
-//	case MENSAJE:
-//		log_info(logger, "Recibí un mensaje.");
-//		break;
-//	default:
-//		log_warning(logger, "Operacion desconocida \n");
-//		break;
-//	}
 
 }
 
@@ -111,7 +37,7 @@ char* deserializar_string(t_buffer* buffer) {
 	void* stream = buffer->stream;
 	memcpy(string, stream, buffer->stream_size);
 
-	printf("Las instrucciones que llegaronson: %s", string);
+	printf("Las instrucciones que llegaron son: %s", string);
 
 	return string;
 }
@@ -122,13 +48,12 @@ int atender_clientes_kernel(int socket_servidor, t_log* logger) {
 	int socket_cliente = esperar_cliente(logger,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			//pthread_t hilo_cliente;
+			pthread_t hilo_cliente;
 			t_manejar_conexion_args* args = malloc(sizeof(t_manejar_conexion_args));
 			args->fd = socket_cliente;
 			args->log = logger;
-			manejar_conexion(args);
-			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			//pthread_detach(hilo_cliente);
+			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) args); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			pthread_detach(hilo_cliente);
 			free(args);
 			return 1;
 		} else {
@@ -178,7 +103,7 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
 
   	for(int i = 0; i < longitud_datos; i += 4) {
   		t_instruccion *instruccion_recibida = malloc(sizeof(t_instruccion));
-  		instruccion_recibida->nombre = *(nombre_instruccion *)list_get(datos, i);
+  		instruccion_recibida->nombre = *(op_code *)list_get(datos, i);
   		instruccion_recibida->parametro_1 = list_get(datos, i + 1);
   		instruccion_recibida->parametro_2 = list_get(datos, i + 2);
   		instruccion_recibida->parametro_3 = list_get(datos, i + 3);
@@ -291,8 +216,8 @@ void recibir_instruccion_serializada(int socket_cliente) {
 	void* stream = paquete->buffer->stream;
 	int desplazamiento = 0;
 
-	memcpy(&(instruccion_recibida->nombre), stream, sizeof(nombre_instruccion));
-	stream += sizeof(nombre_instruccion);
+	memcpy(&(instruccion_recibida->nombre), stream, sizeof(op_code));
+	stream += sizeof(op_code);
 	printf("\nLa isntruccion recibida fue: %d, ", instruccion_recibida->nombre);
 
 	memcpy(&(instruccion_recibida->parametro_1_length), stream, sizeof(uint32_t));

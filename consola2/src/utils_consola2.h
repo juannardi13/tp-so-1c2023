@@ -14,6 +14,16 @@
 #include<readline/readline.h>
 #include<shared-2.h>
 
+typedef struct
+{
+	op_code nombre;
+	int parametro_1_length;
+	char* parametro_1;
+	int parametro_2_length;
+	char* parametro_2;
+	int parametro_3_length;
+	char* parametro_3;
+}t_instruccion;
 
 //Iniciación estructuras (Logger, Config)
 FILE* abrir_archivo_instrucciones(char *, t_log*);
@@ -22,9 +32,9 @@ t_config* iniciar_config(char*);
 t_log* iniciar_logger(void);
 
 //Armado de Instrucciones con la estructura t_instruccion (Quedó obsoleto, optamos por usar char* para las instrucciones)
-t_instruccion* armar_instruccion(nombre_instruccion, char*, char*, char*);
+t_instruccion* armar_instruccion(op_code, char*, char*, char*);
 t_list* parsear_instrucciones(char*, t_log*);
-void parsear_instrucciones_y_enviar(char*, int, t_log);
+void parsear_instrucciones_y_enviar(char*, int, t_log*);
 void serializar_instrucciones(t_list*, t_paquete*);
 
 //Apertura y lectura de Pseudocodigo desde un archivo .txt
