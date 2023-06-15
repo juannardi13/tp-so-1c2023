@@ -7,18 +7,21 @@ C_SRCS += \
 ../src/conexion_kernel_cpu2.c \
 ../src/hilos_kernel2.c \
 ../src/kernel2.c \
+../src/serializacion_y_deserializacion.c \
 ../src/utils_kernel2.c 
 
 C_DEPS += \
 ./src/conexion_kernel_cpu2.d \
 ./src/hilos_kernel2.d \
 ./src/kernel2.d \
+./src/serializacion_y_deserializacion.d \
 ./src/utils_kernel2.d 
 
 OBJS += \
 ./src/conexion_kernel_cpu2.o \
 ./src/hilos_kernel2.o \
 ./src/kernel2.o \
+./src/serializacion_y_deserializacion.o \
 ./src/utils_kernel2.o 
 
 
@@ -34,7 +37,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/conexion_kernel_cpu2.d ./src/conexion_kernel_cpu2.o ./src/hilos_kernel2.d ./src/hilos_kernel2.o ./src/kernel2.d ./src/kernel2.o ./src/utils_kernel2.d ./src/utils_kernel2.o
+	-$(RM) ./src/conexion_kernel_cpu2.d ./src/conexion_kernel_cpu2.o ./src/hilos_kernel2.d ./src/hilos_kernel2.o ./src/kernel2.d ./src/kernel2.o ./src/serializacion_y_deserializacion.d ./src/serializacion_y_deserializacion.o ./src/utils_kernel2.d ./src/utils_kernel2.o
 
 .PHONY: clean-src
 

@@ -206,3 +206,7 @@
 [INFO] 18:02:36:595 consola.log/(182253:182253): Se creo la conexion con el Kernel
 [WARNING] 18:02:36:595 consola.log/(182253:182253): Cantidad de Instrucciones enviadas: 172051535
 [INFO] 18:02:36:595 consola.log/(182253:182253): Paquete de instrucciones enviado correctamente!
+[INFO] 19:23:38:018 consola.log/(5938:5938): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 19:23:38:020 consola.log/(5938:5938): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 19:23:38:023 consola.log/(5938:5938): Se creo la conexion con el Kernel
+[INFO] 19:23:38:023 consola.log/(5938:5938): Paquete de instrucciones enviado correctamente!

@@ -18,8 +18,7 @@
 
 #define PUERTO "9120"
 
-typedef struct
-{
+typedef struct {
 	op_code nombre;
 	int parametro_1_length;
 	char* parametro_1;
@@ -29,12 +28,36 @@ typedef struct
 	char* parametro_3;
 }t_instruccion;
 
+typedef enum {
+	HRRN,
+	FIFO
+}tipo_algoritmo;
+
+typedef struct {
+	char* ip_memoria;
+	char* puerto_memoria;
+	char* ip_filesystem;
+	char* puerto_filesystem;
+	char* ip_cpu;
+	char* puerto_cpu;
+	char* puerto_escucha;
+	tipo_algoritmo algoritmo_planificacion;
+	int estimacion_inicial;
+	float alfa_hrrn;
+	int grado_multiprogramacion;
+	//TODO ver como es el tema de los recursos más adelante
+}archivo_config;
+
 //Variables globales:
-int socket_cpu;
-int pid_global = 1000;
-t_consola* consola;
-t_list* cola_new;
-t_list* cola_ready;
+extern archivo_config config_kernel;
+extern t_log* logger_kernel;
+extern int socket_cpu;
+extern int socket_memoria;
+extern int socket_filesystem;
+extern int pid_global;
+extern t_consola* consola;
+extern t_list* cola_new;
+extern t_list* cola_ready;
 
 //Estructura para pasarle a la función de los hilos:
 typedef struct {
@@ -43,40 +66,41 @@ typedef struct {
 } t_manejar_conexion_args;
 
 //Funciones que crean las estructuras(Logger, Config)
+void cargar_valores_config(char*);
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
 
 //Funciones sobre conexiones
 bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
-t_instruccion recibir_instruccion(t_log* logger, int conexion_consola);
+t_instruccion recibir_instruccion(t_log*, int);
 
 //Funciones para tratar con la PCB
-void agregar_pcb_a_new(t_proceso* proceso, t_log* logger);
-t_pcb * alocar_memoria_pcb(t_log* logger);
-t_pcb* armar_pcb(char** lista_instrucciones, t_log* logger);
+void agregar_pcb_a_new(t_proceso*, t_log*);
+t_pcb * alocar_memoria_pcb(t_log*);
+t_pcb* armar_pcb(char**, t_log*);
 t_pcb* crear_estructura_pcb(t_consola*);
-t_pcb crear_pcb(t_instruccion* instrucciones);
+t_pcb crear_pcb(t_instruccion*);
 t_pcb* deserializar_pcb(t_buffer*);
 void enviar_pcb(int, t_pcb*);
 t_pcb* recibir_pcb(int);
 
 //Funciones de clientes
-int atender_clientes_kernel(int, t_log*);
-void manejar_conexion(void*);
-int server_escuchar(t_log* logger, char* server_name, int server_socket);
+int atender_clientes_kernel(int);
+void manejar_conexion(int);
+int server_escuchar(t_log*, char*, int);
 
 //Serialización y deserialización de datos
-void agregar_instruccion_a_lista(char ** lista, char* instruccion);
+void agregar_instruccion_a_lista(char**, char*);
 t_consola *deserializar_consola(char*, t_log*);
 t_list *deserializar_instrucciones(t_list*, int);
-char* deserializar_string(t_buffer* buffer);
-void recibir_instruccion_serializada(int socket_cliente);
-char* recibir_instrucciones_como_string(int socket_cliente, t_log* logger);
+char* deserializar_string(t_buffer*);
+void recibir_instruccion_serializada(int);
+char* recibir_instrucciones_como_string(int, t_log*);
 
 //Manejo de procesos
-void agregar_proceso_a_ready(t_log* logger);
-void ejecutar_proceso(int socket_cpu, t_log* logger);
-void mostrar_cola_new(t_list* lista, t_log* logger);
+void agregar_proceso_a_ready(t_log*);
+void ejecutar_proceso(int, t_log*);
+void mostrar_cola_new(t_list*, t_log*);
 t_proceso* obtener_proceso_cola_ready(void);
 
 //Planificadores
