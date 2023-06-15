@@ -37,9 +37,19 @@ int main(int argc, char** argv) {
 
 	enviar_string(conexion_kernel, instrucciones, CONSOLA);
 	
-	log_info(logger, "Paquete de instrucciones enviado correctamente!");
+	log_info(logger, "Paquete de instrucciones enviado correctamente!\n");
 
-	//TODO Finalización de consola acá abajo...
+	//TODO Finalización de consola acá abajo... Comento lo que quizás sirva para terminar la consola, cuando implemente la instruccion EXIT correctamente en Kernel
+
+	log_info(logger, "Esperando respuesta de Kernel para finalizar.");
+
+//	op_code respuesta_kernel = recibir_operacion(conexion_kernel);
+//
+//	if(respuesta_kernel != FINALIZAR_CONSOLA)
+//		log_error(logger, "Error al querer finalizar la consola");
+
+	log_info(logger, "Finalizó el proceso, terminando programa");
+	finalizar_programa(conexion_kernel, logger, config);
 
 	return 0;
 }

@@ -138,7 +138,7 @@ t_list* parsear_instrucciones(char* ruta_archivo_pseudocodigo, t_log* logger) {
 	t_list* instrucciones = list_create();
 	char* parametro1;
 	char* parametro2;
-	char* parametro3;
+	//char* parametro3; COMENTO PARA QUE NO JODA EL WARNING DE QUE NO LO USO, ESTA FUNCIÓN QUEDÓ OBSOLETA POR LA FORMA EN LA QUE LO PENSAMOS
 
 	char* pseudo_codigo_leido = leer_archivo_pseudocodigo(ruta_archivo_pseudocodigo, logger); //Lee el archivo de pseudocodigo y lo transforma en una cadena
 	char** lista_instrucciones = string_split(pseudo_codigo_leido, "\n"); //Divide la cadena creada arriba en un array de Strings donde cada String es una función con sus parámetros
@@ -321,4 +321,10 @@ char* leer_archivo_pseudocodigo(char *ruta, t_log* logger) {
     free(cadena);
 
     return contenido;
+}
+
+void finalizar_programa(int conexion, t_log* logger, t_config* config) {
+	log_destroy(logger);
+	config_destroy(config);
+	liberar_conexion(conexion);
 }
