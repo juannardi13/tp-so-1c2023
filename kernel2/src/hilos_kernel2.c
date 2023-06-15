@@ -36,8 +36,6 @@ void manejar_conexion(int socket_cliente) {
 
 }
 
-
-
 int atender_clientes_kernel(int socket_servidor) {
 
 	int socket_cliente = esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
@@ -56,7 +54,7 @@ int atender_clientes_kernel(int socket_servidor) {
 	return 0;
 }
 
-void agregar_proceso_a_ready(t_log* logger) {
+void agregar_proceso_a_ready(void) {
 	int grado_de_multiprogramacion = 4;
 
 
@@ -64,34 +62,30 @@ void agregar_proceso_a_ready(t_log* logger) {
 		list_add(cola_ready, list_remove(cola_new, 0));
 	}
 
-	log_info(logger, "Cola de Ready: ");
+	log_info(logger_kernel, "Cola de Ready: ");
 
 	for(int i = 0; i < list_size(cola_ready); i++) {
 		t_proceso* un_proceso = malloc(sizeof(t_proceso)) ;
 		un_proceso = list_get(cola_ready, i);
-		log_info(logger, "PCB id[%d]", un_proceso->pcb->pid);
+		log_info(logger_kernel, "PCB id[%d]", un_proceso->pcb->pid);
 		free(un_proceso);
 	}
 }
 
-void ejecutar_proceso(int socket_cpu, t_log* logger) {
+void ejecutar_proceso(int socket_cpu) {
 
 	t_proceso* proceso = malloc(sizeof(t_proceso));
 	proceso = list_get(cola_ready, 0); //obtener_proceso_cola_ready();
 
 	enviar_pcb(socket_cpu, proceso->pcb);
 
-	log_info(logger, "Proceso id[%d] enviado a CPU para ejecutar.", proceso->pcb->pid);
+	log_info(logger_kernel, "Proceso id[%d] enviado a CPU para ejecutar.", proceso->pcb->pid);
 
 	op_code respuesta_cpu = recibir_operacion(socket_cpu);
 
 	proceso->pcb = recibir_pcb(socket_cpu);
 
 }
-
-
-
-
 
 t_pcb* crear_estructura_pcb(t_consola* consola) {
 
@@ -121,29 +115,23 @@ void iniciar_planificador_mediano_plazo(void) {
 	cola_ready = list_create();
 }
 
-void iniciar_conexion_cpu(char* ip_cpu, char* puerto_cpu, t_log* logger) {
-	socket_cpu = crear_conexion(logger, "KERNEL", ip_cpu, puerto_cpu);
+void iniciar_conexion_cpu(char* ip_cpu, char* puerto_cpu) {
+	socket_cpu = crear_conexion(logger_kernel, "KERNEL", ip_cpu, puerto_cpu);
 }
 
-void agregar_pcb_a_new(t_proceso* proceso, t_log* logger) {
+void agregar_pcb_a_new(t_proceso* proceso) {
 
 	list_add(cola_new, proceso);
 	proceso->pcb->estado = NEW;
-	log_info(logger, "PID[%d] ingresa a NEW \n", proceso->pcb->pid);
-	mostrar_cola_new(cola_new, logger);
+	log_info(logger_kernel, "PID[%d] ingresa a NEW \n", proceso->pcb->pid);
+	mostrar_cola_new(cola_new);
 
 }
 
-void mostrar_cola_new(t_list* lista, t_log* logger) {
+void mostrar_cola_new(t_list* lista) {
 
       for (int j = 0; j < list_size(lista); j++){
           t_proceso* proceso = list_get(lista, j);
-          log_info(logger,"PCB ID: %d\n",proceso->pcb->pid);
+          log_info(logger_kernel,"PCB ID: %d\n",proceso->pcb->pid);
       }
 }
-
-
-
-
-
-

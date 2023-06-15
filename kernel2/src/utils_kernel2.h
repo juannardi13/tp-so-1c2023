@@ -75,7 +75,7 @@ bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
 t_instruccion recibir_instruccion(t_log*, int);
 
 //Funciones para tratar con la PCB
-void agregar_pcb_a_new(t_proceso*, t_log*);
+void agregar_pcb_a_new(t_proceso*);
 t_pcb * alocar_memoria_pcb(t_log*);
 t_pcb* armar_pcb(char**, t_log*);
 t_pcb* crear_estructura_pcb(t_consola*);
@@ -91,16 +91,16 @@ int server_escuchar(t_log*, char*, int);
 
 //Serialización y deserialización de datos
 void agregar_instruccion_a_lista(char**, char*);
-t_consola *deserializar_consola(char*, t_log*);
+t_consola *deserializar_consola(char*);
 t_list *deserializar_instrucciones(t_list*, int);
 char* deserializar_string(t_buffer*);
 void recibir_instruccion_serializada(int);
-char* recibir_instrucciones_como_string(int, t_log*);
+char* recibir_instrucciones_como_string(int);
 
 //Manejo de procesos
-void agregar_proceso_a_ready(t_log*);
-void ejecutar_proceso(int, t_log*);
-void mostrar_cola_new(t_list*, t_log*);
+void agregar_proceso_a_ready(void);
+void ejecutar_proceso(int);
+void mostrar_cola_new(t_list*);
 t_proceso* obtener_proceso_cola_ready(void);
 
 //Planificadores

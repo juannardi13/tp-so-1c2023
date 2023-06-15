@@ -9,7 +9,7 @@ char* deserializar_string(t_buffer* buffer) {
 	void* stream = buffer->stream;
 	memcpy(string, stream, buffer->stream_size);
 
-	printf("Las instrucciones que llegaron son: %s", string);
+	log_info(logger_kernel, "Las instrucciones que llegaron son: %s", string);
 
 	return string;
 }
@@ -123,13 +123,13 @@ t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {
   	return instrucciones;
 }
 
-t_consola *deserializar_consola(char* instrucciones, t_log* logger) {
+t_consola *deserializar_consola(char* instrucciones) {
 
   	t_consola *consola = malloc(sizeof(t_consola));
 
   	consola->tamanio_proceso = strlen(instrucciones);
 
-  	printf("\n El tamanio del proceso es: %d", consola->tamanio_proceso);
+  	log_info(logger_kernel, "\n El tamanio del proceso es: %d", consola->tamanio_proceso);
 
   	consola->instrucciones = string_duplicate(instrucciones);//deserializar_instrucciones(datos, list_size(datos));
 
@@ -138,7 +138,7 @@ t_consola *deserializar_consola(char* instrucciones, t_log* logger) {
   	return consola;
 }
 
-char* recibir_instrucciones_como_string(int socket_cliente, t_log* logger) {
+char* recibir_instrucciones_como_string(int socket_cliente) {
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	paquete->buffer = malloc(sizeof(t_buffer));
 
