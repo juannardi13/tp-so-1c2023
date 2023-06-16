@@ -101,6 +101,7 @@ typedef struct {
 	int pc;
 	int tamanio;
 	t_registros registros;
+	int tamanio_segmentos;
 	t_list* segmentos;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//float timestamp;

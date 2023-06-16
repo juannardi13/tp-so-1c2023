@@ -16,9 +16,17 @@ char* deserializar_string(t_buffer* buffer) {
 
 //Serialización y deserialización de PCBs
 void enviar_pcb(int socket_servidor, t_pcb* pcb) {
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
 	t_buffer* buffer = malloc(sizeof(t_buffer));
 
-	buffer->stream_size = sizeof(int) * 4 + sizeof(estado_proceso) + sizeof(t_registros) + (strlen(pcb->instrucciones) + 1);
+	int tamanio_instrucciones = pcb->tamanio_instrucciones;
+
+	buffer->stream_size = sizeof(int) * 4
+			+ sizeof(estado_proceso)
+			+ sizeof(t_registros)
+//			+ tamanio_segmentos  <-- Agregar el tamaño de los segmentos cuando sepamos que carajo es
+			+ tamanio_instrucciones; //El tamaño del String con todas las instrucciones
 
 	void* stream = malloc(buffer->stream_size);
 	int offset = 0;
@@ -34,29 +42,32 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
+//	offset += sizeof(t_registros);
+//	memcpy(stream + offset, &(pcb->tamanio_segmentos), sizeof(int));
+//	offset += sizeof(int);
+//	memcpy(stream + offset, pcb->segmentos, pcb->tamanio_segmentos);
 
 	buffer->stream = stream;
-
-	t_paquete* paquete = malloc(sizeof(t_paquete));
 
 	paquete->codigo_operacion = PCB;
 	paquete->buffer = buffer;
 
-	void* a_enviar = malloc(buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t));
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
 	int desplazamiento = 0;
 
-	memcpy(a_enviar + desplazamiento, &(paquete->codigo_operacion), sizeof(uint8_t));
-	desplazamiento +=sizeof(uint8_t);
-	memcpy(a_enviar + desplazamiento, &(paquete->buffer->stream_size), sizeof(uint32_t));
-	desplazamiento += sizeof(uint32_t);
-	memcpy(a_enviar + desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
 
-	send(socket_servidor, a_enviar, buffer->stream_size + sizeof(uint8_t) + sizeof(uint32_t), 0);
+	send(socket_servidor, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
+	eliminar_paquete(paquete);
+}
+
+int agregar_a_stream(void *stream, int* offset, void *src, int size) {
+	memcpy(stream + *offset, src, size);
+	*offset += size;
 }
 
 t_pcb* recibir_pcb(int socket_servidor) {

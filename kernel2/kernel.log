@@ -2077,3 +2077,15 @@ SET DX ESTAS
 [INFO] 03:08:02:400 kernel.log/(13240:13240): PCB id[1000]
 [INFO] 03:08:02:400 kernel.log/(13240:13240): PCB id[1000] saliendo de Cola de Ready para ejecutar.
 [INFO] 03:08:02:401 kernel.log/(13240:13240): Proceso id[1000] enviado a CPU para ejecutar.
+[INFO] 03:12:44:098 kernel.log/(13398:13398): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:12:45:990 kernel.log/(13398:13398): Cliente conectado (a KERNEL)
+
+[INFO] 03:12:45:990 kernel.log/(13398:13398): Me llegó una Consola
+[INFO] 03:12:45:990 kernel.log/(13398:13398): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:12:45:990 kernel.log/(13398:13398): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:12:45:990 kernel.log/(13398:13398): PID[1000] ingresa a NEW 
+
+[WARNING] 03:12:45:990 kernel.log/(13398:13398): PCBs en lista NEW:
+[INFO] 03:12:45:990 kernel.log/(13398:13398): PCB ID: 1000
+[INFO] 03:12:45:990 kernel.log/(13398:13398): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:12:45:990 kernel.log/(13398:13398): Cola de Ready: 

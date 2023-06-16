@@ -90,6 +90,7 @@ void manejar_conexion(int);
 int server_escuchar(t_log*, char*, int);
 
 //Serialización y deserialización de datos
+int agregar_a_stream(void*, int*, void*, int);
 void agregar_instruccion_a_lista(char**, char*);
 t_consola *deserializar_consola(char*);
 t_list *deserializar_instrucciones(t_list*, int);
