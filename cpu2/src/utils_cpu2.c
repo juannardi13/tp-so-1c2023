@@ -1,4 +1,5 @@
 #include "utils_cpu2.h"
+#include <shared-2.h>
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger = log_create("cpu.log", "cpu.log", 1, LOG_LEVEL_INFO);
@@ -38,6 +39,24 @@ char** recibir_instrucciones(t_buffer){
 char** lista_instrucciones = deserializar_instrucciones(t_buffer);
 }
 */
+
+t_registros registros;
+
+void inicializar_registros(void){
+	registros->ax = string_duplicate("0000");
+	registros->bx = string_duplicate("0000");
+	registros->cx = string_duplicate("0000");
+	registros->dx = string_duplicate("0000");
+	registros->eax = string_duplicate("00000000");
+	registros->ebx = string_duplicate("00000000");
+	registros->ecx = string_duplicate("00000000");
+	registros->edx = string_duplicate("00000000");
+	registros->rax = string_duplicate("0000000000000000");
+	registros->rbx = string_duplicate("0000000000000000");
+	registros->rcx = string_duplicate("0000000000000000");
+	registros->rdx = string_duplicate("0000000000000000");
+}
+
 
 void asignar_valor_a_registro(char* valor, char* registro, t_registros* registros){
 	if(strcmp(registro, "AX") == 0){
@@ -97,7 +116,7 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
 	enviar_paquete(paquete, fd_memoria);
 	//crear op_code RESPUESTA_MEMORIA, lo igualo a recibir_operacion => se bloquea proceso hasta que reciba algo con el mismo codigo
-	free(paquete);
+	eliminar_paquete(paquete);
 	t_paquete* paquete2 = malloc(sizeof(t_paquete));
 	paquete2->buffer = malloc(sizeof(t_buffer));
 	recv(fd_memoria, &(paquete2->codigo_operacion), sizeof(op_code), MSG_WAITALL);
@@ -133,7 +152,6 @@ int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* con
 void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria){
 	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA); // IDEM leer_de_memoria
 	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
-	agregar_a_paquete(paquete, &valor, sizeof(int));
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
 }

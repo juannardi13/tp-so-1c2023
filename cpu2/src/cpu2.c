@@ -39,11 +39,17 @@ void* ejecutar_proceso(void* args){
 }*/
 int main() {
 	bool cpu_bloqueada = false;
+	inicializar_registros();
 	char* ip_kernel;
 	char* puerto_kernel;
-	t_registros registros;
     t_log* logger = iniciar_logger();
     t_config* config = iniciar_config();
+
+    //creo paquete para recibir info
+    t_paquete* paquete;
+    t_paquete* paquete2 = malloc(sizeof(t_paquete));
+    paquete2->buffer = malloc(sizeof(t_buffer));
+    //---
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
 
@@ -55,11 +61,12 @@ int main() {
     int fd_cpu = iniciar_servidor(puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_kernel);
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
-	
-	int ip_memoria = config_get_string_value(config, "IP");
+    int ip_memoria = config_get_string_value(config, "IP");
     int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
     int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
     int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
+
+
 
     return 0;
 }

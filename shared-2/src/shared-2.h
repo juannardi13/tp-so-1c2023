@@ -32,6 +32,7 @@ typedef enum
 	PAQUETE_CONSOLA,
 	CONSOLA,
 	PCB,
+	CONTEXTO_DE_EJECUCION,
 	SET,
 	MOV_IN,
 	MOV_OUT,
@@ -72,18 +73,18 @@ typedef struct {
 }t_recurso;
 
 typedef struct {
-	char ax[3];
-	char bx[3];
-	char cx[3];
-	char dx[3];
-	char eax[7];
-	char ebx[7];
-	char ecx[7];
-	char edx[7];
-	char rax[15];
-	char rbx[15];
-	char rcx[15];
-	char rdx[15];
+	char ax[4];
+	char bx[4];
+	char cx[4];
+	char dx[4];
+	char eax[8];
+	char ebx[8];
+	char ecx[8];
+	char edx[8];
+	char rax[16];
+	char rbx[16];
+	char rcx[16];
+	char rdx[16]; //tienen en cuenta el \0
 }t_registros;
 
 typedef struct{

@@ -14,6 +14,8 @@
 #include<readline/readline.h>
 #include <shared-2.h>
 
+extern t_registros registros;
+
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void decode_instruccion(char*, t_contexto_de_ejecucion*, t_config*, int, int, bool);
@@ -30,4 +32,5 @@ void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
 char* deserializar_paquete_de_memoria(t_buffer*);
+void inicializar_registros(void);
 #endif /* UTILS_H_ */
