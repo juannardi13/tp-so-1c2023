@@ -1844,3 +1844,236 @@ SET DX ESTAS
 [INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1025
 [INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1026
 [INFO] 22:41:52:196 kernel.log/(9416:9477): PCB ID: 1027
+[INFO] 02:37:27:814 kernel.log/(11155:11155): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:37:34:102 kernel.log/(11155:11155): Cliente conectado (a KERNEL)
+
+[INFO] 02:37:34:102 kernel.log/(11155:11155): Me llegó una Consola
+[INFO] 02:37:34:102 kernel.log/(11155:11155): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:37:34:102 kernel.log/(11155:11155): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:37:34:102 kernel.log/(11155:11155): PID[1000] ingresa a NEW 
+
+[WARNING] 02:37:34:102 kernel.log/(11155:11155): PCBs en lista NEW:
+[INFO] 02:37:34:102 kernel.log/(11155:11155): PCB ID: 1000
+[INFO] 02:37:34:102 kernel.log/(11155:11155): Cola de Ready: 
+[INFO] 02:37:34:102 kernel.log/(11155:11155): PCB id[1000]
+[INFO] 02:37:59:376 kernel.log/(11176:11176): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:38:03:255 kernel.log/(11176:11176): Cliente conectado (a KERNEL)
+
+[INFO] 02:38:03:258 kernel.log/(11176:11176): Me llegó una Consola
+[INFO] 02:38:03:258 kernel.log/(11176:11176): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:38:03:259 kernel.log/(11176:11176): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:38:03:261 kernel.log/(11176:11176): PID[1000] ingresa a NEW 
+
+[WARNING] 02:38:03:261 kernel.log/(11176:11176): PCBs en lista NEW:
+[INFO] 02:38:03:262 kernel.log/(11176:11176): PCB ID: 1000
+[INFO] 02:38:03:263 kernel.log/(11176:11176): Cola de Ready: 
+[INFO] 02:38:03:264 kernel.log/(11176:11176): PCB id[1000]
+[INFO] 02:38:44:434 kernel.log/(11265:11265): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:38:47:804 kernel.log/(11265:11265): Cliente conectado (a KERNEL)
+
+[INFO] 02:38:47:805 kernel.log/(11265:11265): Me llegó una Consola
+[INFO] 02:38:47:805 kernel.log/(11265:11265): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:38:47:805 kernel.log/(11265:11265): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:38:47:805 kernel.log/(11265:11265): PID[1000] ingresa a NEW 
+
+[WARNING] 02:38:47:805 kernel.log/(11265:11265): PCBs en lista NEW:
+[INFO] 02:38:47:805 kernel.log/(11265:11265): PCB ID: 1000
+[INFO] 02:38:47:805 kernel.log/(11265:11265): Cola de Ready: 
+[INFO] 02:38:47:805 kernel.log/(11265:11265): PCB id[1000]
+[INFO] 02:39:03:373 kernel.log/(11299:11299): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:39:08:475 kernel.log/(11299:11299): Cliente conectado (a KERNEL)
+
+[INFO] 02:39:17:444 kernel.log/(11299:11299): Me llegó una Consola
+[INFO] 02:39:22:114 kernel.log/(11299:11299): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:39:23:968 kernel.log/(11299:11299): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:39:24:153 kernel.log/(11299:11299): PID[1000] ingresa a NEW 
+
+[WARNING] 02:39:24:154 kernel.log/(11299:11299): PCBs en lista NEW:
+[INFO] 02:39:24:154 kernel.log/(11299:11299): PCB ID: 1000
+[INFO] 02:39:54:351 kernel.log/(11299:11299): Cola de Ready: 
+[INFO] 02:39:59:965 kernel.log/(11299:11299): PCB id[1000]
+[INFO] 02:40:56:834 kernel.log/(11427:11427): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:41:03:402 kernel.log/(11427:11427): Cliente conectado (a KERNEL)
+
+[INFO] 02:41:08:945 kernel.log/(11427:11427): Me llegó una Consola
+[INFO] 02:41:09:392 kernel.log/(11427:11427): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:41:10:547 kernel.log/(11427:11427): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:41:13:255 kernel.log/(11427:11427): PID[1000] ingresa a NEW 
+
+[WARNING] 02:41:13:255 kernel.log/(11427:11427): PCBs en lista NEW:
+[INFO] 02:41:13:255 kernel.log/(11427:11427): PCB ID: 1000
+[INFO] 02:41:19:530 kernel.log/(11427:11427): Cola de Ready: 
+[INFO] 02:41:19:530 kernel.log/(11427:11427): PCB id[1000]
+[INFO] 02:44:16:650 kernel.log/(11669:11669): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:44:20:602 kernel.log/(11669:11669): Cliente conectado (a KERNEL)
+
+[INFO] 02:44:25:224 kernel.log/(11669:11669): Me llegó una Consola
+[INFO] 02:44:25:583 kernel.log/(11669:11669): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:44:26:774 kernel.log/(11669:11669): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:44:27:247 kernel.log/(11669:11669): PID[1000] ingresa a NEW 
+
+[WARNING] 02:44:27:247 kernel.log/(11669:11669): PCBs en lista NEW:
+[INFO] 02:44:27:247 kernel.log/(11669:11669): PCB ID: 1000
+[INFO] 02:44:29:291 kernel.log/(11669:11669): Cola de Ready: 
+[INFO] 02:44:29:291 kernel.log/(11669:11669): PCB id[1000]
+[INFO] 02:44:56:410 kernel.log/(11788:11788): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:44:59:472 kernel.log/(11788:11788): Cliente conectado (a KERNEL)
+
+[INFO] 02:45:03:749 kernel.log/(11788:11788): Me llegó una Consola
+[INFO] 02:45:04:084 kernel.log/(11788:11788): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:45:05:358 kernel.log/(11788:11788): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:45:05:771 kernel.log/(11788:11788): PID[1000] ingresa a NEW 
+
+[WARNING] 02:45:05:772 kernel.log/(11788:11788): PCBs en lista NEW:
+[INFO] 02:45:05:772 kernel.log/(11788:11788): PCB ID: 1000
+[INFO] 02:45:06:870 kernel.log/(11788:11788): Cola de Ready: 
+[INFO] 02:45:06:870 kernel.log/(11788:11788): PCB id[1000]
+[INFO] 02:51:02:917 kernel.log/(12098:12098): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:51:06:370 kernel.log/(12098:12098): Cliente conectado (a KERNEL)
+
+[INFO] 02:51:06:371 kernel.log/(12098:12098): Me llegó una Consola
+[INFO] 02:51:06:371 kernel.log/(12098:12098): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:51:06:371 kernel.log/(12098:12098): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:51:06:371 kernel.log/(12098:12098): PID[1000] ingresa a NEW 
+
+[WARNING] 02:51:06:371 kernel.log/(12098:12098): PCBs en lista NEW:
+[INFO] 02:51:06:371 kernel.log/(12098:12098): PCB ID: 1000
+[INFO] 02:51:06:371 kernel.log/(12098:12098): PCB id[1000] agregado a Cola de Ready
+[INFO] 02:51:06:371 kernel.log/(12098:12098): Cola de Ready: 
+[INFO] 02:51:06:371 kernel.log/(12098:12098): PCB id[1000]
+[INFO] 02:52:06:092 kernel.log/(12124:12124): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:52:08:798 kernel.log/(12124:12124): Cliente conectado (a KERNEL)
+
+[INFO] 02:52:08:800 kernel.log/(12124:12124): Me llegó una Consola
+[INFO] 02:52:08:801 kernel.log/(12124:12124): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:52:08:802 kernel.log/(12124:12124): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:52:08:804 kernel.log/(12124:12124): PID[1000] ingresa a NEW 
+
+[WARNING] 02:52:08:804 kernel.log/(12124:12124): PCBs en lista NEW:
+[INFO] 02:52:08:805 kernel.log/(12124:12124): PCB ID: 1000
+[INFO] 02:52:08:806 kernel.log/(12124:12124): PCB id[1000] agregado a Cola de Ready
+[INFO] 02:52:08:807 kernel.log/(12124:12124): Cola de Ready: 
+[INFO] 02:52:08:807 kernel.log/(12124:12124): PCB id[1000]
+[INFO] 02:52:08:808 kernel.log/(12124:12124): PCB id[1000] saliendo de Cola de Ready para ejecutar.
+[INFO] 02:52:08:810 kernel.log/(12124:12124): Proceso id[1000] enviado a CPU para ejecutar.
+[INFO] 02:54:59:358 kernel.log/(12318:12318): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:55:01:777 kernel.log/(12318:12318): Cliente conectado (a KERNEL)
+
+[INFO] 02:55:01:779 kernel.log/(12318:12318): Me llegó una Consola
+[INFO] 02:55:01:780 kernel.log/(12318:12318): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:55:01:782 kernel.log/(12318:12318): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:55:01:784 kernel.log/(12318:12318): PID[1000] ingresa a NEW 
+
+[WARNING] 02:55:01:786 kernel.log/(12318:12318): PCBs en lista NEW:
+[INFO] 02:55:01:788 kernel.log/(12318:12318): PCB ID: 1000
+[INFO] 02:55:01:791 kernel.log/(12318:12318): PCB id[1000] agregado a Cola de Ready
+[INFO] 02:55:01:792 kernel.log/(12318:12318): Cola de Ready: 
+[INFO] 02:55:01:793 kernel.log/(12318:12318): PCB id[1000]
+[INFO] 02:55:01:794 kernel.log/(12318:12318): PCB id[1000] saliendo de Cola de Ready para ejecutar.
+[INFO] 02:55:01:795 kernel.log/(12318:12318): Proceso id[1000] enviado a CPU para ejecutar.
+[INFO] 02:56:22:807 kernel.log/(12554:12554): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:56:25:431 kernel.log/(12554:12554): Cliente conectado (a KERNEL)
+
+[INFO] 02:56:25:433 kernel.log/(12554:12554): Me llegó una Consola
+[INFO] 02:56:25:434 kernel.log/(12554:12554): Consola deserializada, se arma el PCB a continuación
+[INFO] 02:56:25:435 kernel.log/(12554:12554): PCB id[1000] armada, agregando a cola NEW
+[INFO] 02:56:25:436 kernel.log/(12554:12554): PID[1000] ingresa a NEW 
+
+[WARNING] 02:56:25:437 kernel.log/(12554:12554): PCBs en lista NEW:
+[INFO] 02:56:25:438 kernel.log/(12554:12554): PCB ID: 1000
+[INFO] 02:56:25:439 kernel.log/(12554:12554): PCB id[1000] agregado a Cola de Ready
+[INFO] 02:56:25:440 kernel.log/(12554:12554): Cola de Ready: 
+[INFO] 02:56:25:440 kernel.log/(12554:12554): PCB id[1000]
+[INFO] 02:56:25:441 kernel.log/(12554:12554): PCB id[1000] saliendo de Cola de Ready para ejecutar.
+[INFO] 02:56:25:442 kernel.log/(12554:12554): Proceso id[1000] enviado a CPU para ejecutar.
+[INFO] 03:00:19:430 kernel.log/(12764:12764): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:00:21:455 kernel.log/(12764:12764): Cliente conectado (a KERNEL)
+
+[INFO] 03:00:21:455 kernel.log/(12764:12764): Me llegó una Consola
+[INFO] 03:00:21:455 kernel.log/(12764:12764): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:00:21:456 kernel.log/(12764:12764): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:00:21:456 kernel.log/(12764:12764): PID[1000] ingresa a NEW 
+
+[WARNING] 03:00:21:456 kernel.log/(12764:12764): PCBs en lista NEW:
+[INFO] 03:00:21:456 kernel.log/(12764:12764): PCB ID: 1000
+[INFO] 03:00:21:456 kernel.log/(12764:12764): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:00:21:456 kernel.log/(12764:12764): Cola de Ready: 
+[INFO] 03:01:02:823 kernel.log/(12803:12803): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:01:06:776 kernel.log/(12803:12803): Cliente conectado (a KERNEL)
+
+[INFO] 03:01:11:663 kernel.log/(12803:12803): Me llegó una Consola
+[INFO] 03:01:12:457 kernel.log/(12803:12803): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:01:14:366 kernel.log/(12803:12803): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:01:14:751 kernel.log/(12803:12803): PID[1000] ingresa a NEW 
+
+[WARNING] 03:01:14:751 kernel.log/(12803:12803): PCBs en lista NEW:
+[INFO] 03:01:14:751 kernel.log/(12803:12803): PCB ID: 1000
+[INFO] 03:01:37:489 kernel.log/(12803:12803): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:01:39:898 kernel.log/(12803:12803): Cola de Ready: 
+[INFO] 03:03:45:678 kernel.log/(13062:13062): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:03:48:990 kernel.log/(13062:13062): Cliente conectado (a KERNEL)
+
+[INFO] 03:03:48:990 kernel.log/(13062:13062): Me llegó una Consola
+[INFO] 03:03:48:990 kernel.log/(13062:13062): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:03:48:990 kernel.log/(13062:13062): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:03:48:990 kernel.log/(13062:13062): PID[1000] ingresa a NEW 
+
+[WARNING] 03:03:48:990 kernel.log/(13062:13062): PCBs en lista NEW:
+[INFO] 03:03:48:990 kernel.log/(13062:13062): PCB ID: 1000
+[INFO] 03:03:48:990 kernel.log/(13062:13062): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:03:48:990 kernel.log/(13062:13062): Cola de Ready: 
+[INFO] 03:04:20:142 kernel.log/(13095:13095): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:04:25:376 kernel.log/(13095:13095): Cliente conectado (a KERNEL)
+
+[INFO] 03:04:25:377 kernel.log/(13095:13095): Me llegó una Consola
+[INFO] 03:04:25:377 kernel.log/(13095:13095): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:04:25:377 kernel.log/(13095:13095): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:04:25:377 kernel.log/(13095:13095): PID[1000] ingresa a NEW 
+
+[WARNING] 03:04:25:377 kernel.log/(13095:13095): PCBs en lista NEW:
+[INFO] 03:04:25:377 kernel.log/(13095:13095): PCB ID: 1000
+[INFO] 03:04:25:377 kernel.log/(13095:13095): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:04:25:377 kernel.log/(13095:13095): Cola de Ready: 
+[INFO] 03:06:34:340 kernel.log/(13175:13175): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:06:36:367 kernel.log/(13175:13175): Cliente conectado (a KERNEL)
+
+[INFO] 03:06:36:367 kernel.log/(13175:13175): Me llegó una Consola
+[INFO] 03:06:36:367 kernel.log/(13175:13175): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:06:36:367 kernel.log/(13175:13175): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:06:36:367 kernel.log/(13175:13175): PID[1000] ingresa a NEW 
+
+[WARNING] 03:06:36:367 kernel.log/(13175:13175): PCBs en lista NEW:
+[INFO] 03:06:36:367 kernel.log/(13175:13175): PCB ID: 1000
+[INFO] 03:06:36:367 kernel.log/(13175:13175): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:06:36:367 kernel.log/(13175:13175): Cola de Ready: 
+[INFO] 03:06:36:367 kernel.log/(13175:13175): PCB id[1000]
+[INFO] 03:07:06:113 kernel.log/(13219:13219): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:07:09:230 kernel.log/(13219:13219): Cliente conectado (a KERNEL)
+
+[INFO] 03:07:09:230 kernel.log/(13219:13219): Me llegó una Consola
+[INFO] 03:07:09:230 kernel.log/(13219:13219): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:07:09:230 kernel.log/(13219:13219): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:07:09:230 kernel.log/(13219:13219): PID[1000] ingresa a NEW 
+
+[WARNING] 03:07:09:230 kernel.log/(13219:13219): PCBs en lista NEW:
+[INFO] 03:07:09:230 kernel.log/(13219:13219): PCB ID: 1000
+[INFO] 03:07:09:230 kernel.log/(13219:13219): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:07:09:230 kernel.log/(13219:13219): Cola de Ready: 
+[INFO] 03:07:09:230 kernel.log/(13219:13219): PCB id[1000]
+[INFO] 03:07:09:230 kernel.log/(13219:13219): PCB id[1000] saliendo de Cola de Ready para ejecutar.
+[INFO] 03:07:09:230 kernel.log/(13219:13219): Proceso id[1000] enviado a CPU para ejecutar.
+[INFO] 03:07:59:532 kernel.log/(13240:13240): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:08:02:389 kernel.log/(13240:13240): Cliente conectado (a KERNEL)
+
+[INFO] 03:08:02:392 kernel.log/(13240:13240): Me llegó una Consola
+[INFO] 03:08:02:393 kernel.log/(13240:13240): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:08:02:394 kernel.log/(13240:13240): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:08:02:396 kernel.log/(13240:13240): PID[1000] ingresa a NEW 
+
+[WARNING] 03:08:02:397 kernel.log/(13240:13240): PCBs en lista NEW:
+[INFO] 03:08:02:398 kernel.log/(13240:13240): PCB ID: 1000
+[INFO] 03:08:02:399 kernel.log/(13240:13240): PCB id[1000] agregado a Cola de Ready
+[INFO] 03:08:02:399 kernel.log/(13240:13240): Cola de Ready: 
+[INFO] 03:08:02:400 kernel.log/(13240:13240): PCB id[1000]
+[INFO] 03:08:02:400 kernel.log/(13240:13240): PCB id[1000] saliendo de Cola de Ready para ejecutar.
+[INFO] 03:08:02:401 kernel.log/(13240:13240): Proceso id[1000] enviado a CPU para ejecutar.

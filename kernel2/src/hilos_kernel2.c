@@ -39,6 +39,18 @@ void manejar_conexion(int socket_cliente) {
 		log_info(logger_kernel, "PCB id[%d] armada, agregando a cola NEW", proceso->pcb->pid);
 
 		agregar_proceso_a_new(proceso);
+//
+//		-----------------------------------------------------------------
+//		|																 |
+//		|		CUIDADO! LO QUE VIENE A PARTIR DE AHORA LO TENDRÍAN	     |
+//		|		QUE MANEJAR LOS HILOS QUE TODAVÍA NO SE CREARON			 |
+//		|		PARA PROBAR SOLAMENTE SE HACE ESTO.						 |
+//		|																 |
+//		------------------------------------------------------------------
+//
+		agregar_proceso_a_ready();
+
+		ejecutar_proceso();
 
 		break;
 	default:
@@ -53,10 +65,10 @@ int atender_clientes_kernel(int socket_servidor) {
 	int socket_cliente = esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			pthread_t hilo_cliente;
-			//manejar_conexion(socket_cliente);
-			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			pthread_detach(hilo_cliente);
+			//pthread_t hilo_cliente;
+			manejar_conexion(socket_cliente);
+			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			//pthread_detach(hilo_cliente);
 
 			return 1;
 		} else {
@@ -67,11 +79,14 @@ int atender_clientes_kernel(int socket_servidor) {
 }
 
 void agregar_proceso_a_ready(void) {
-	int grado_de_multiprogramacion = 4;
 
+	if(list_size(cola_ready) <= config_kernel.grado_multiprogramacion) { // TODO Esto después tiene que ser implementado con semáforos contadores
+		t_proceso* proceso_auxiliar = malloc(sizeof(t_proceso));
+		proceso_auxiliar = list_remove(cola_new, 0);
+		list_add(cola_ready, proceso_auxiliar);
 
-	if(list_size(cola_ready) >= grado_de_multiprogramacion) { // Esto después tiene que ser implementado con semáforos contadores
-		list_add(cola_ready, list_remove(cola_new, 0));
+		log_info(logger_kernel, "PCB id[%d] agregado a Cola de Ready", proceso_auxiliar->pcb->pid);
+		//free(proceso_auxiliar);
 	}
 
 	log_info(logger_kernel, "Cola de Ready: ");
@@ -80,16 +95,15 @@ void agregar_proceso_a_ready(void) {
 		t_proceso* un_proceso = malloc(sizeof(t_proceso)) ;
 		un_proceso = list_get(cola_ready, i);
 		log_info(logger_kernel, "PCB id[%d]", un_proceso->pcb->pid);
-		free(un_proceso);
 	}
 }
 
-void ejecutar_proceso(int socket_cpu) {
+void ejecutar_proceso(void) {
 
 	t_proceso* proceso = malloc(sizeof(t_proceso));
-	proceso = list_get(cola_ready, 0); //obtener_proceso_cola_ready();
+	proceso = obtener_proceso_cola_ready();
 
-	enviar_pcb(socket_cpu, proceso->pcb);
+	//enviar_pcb(socket_cpu, proceso->pcb);
 
 	log_info(logger_kernel, "Proceso id[%d] enviado a CPU para ejecutar.", proceso->pcb->pid);
 
@@ -97,6 +111,27 @@ void ejecutar_proceso(int socket_cpu) {
 
 	proceso->pcb = recibir_pcb(socket_cpu);
 
+}
+
+t_proceso* obtener_proceso_cola_ready(void) {
+
+	t_proceso* proceso = malloc(sizeof(t_proceso));
+
+
+	switch(config_kernel.algoritmo_planificacion){
+	case FIFO:
+		proceso = list_remove(cola_ready, 0);
+		log_info(logger_kernel, "PCB id[%d] saliendo de Cola de Ready para ejecutar.", proceso->pcb->pid);
+		break;
+	case HRRN:
+		//Lógica de selección del proceso mediante el HRRN
+		break;
+	default:
+		log_error(logger_kernel, "Error al elegir un proceso de la cola de Ready para ejecutar");
+		break;
+	}
+
+	return proceso;
 }
 
 t_pcb* crear_estructura_pcb(char* instrucciones) {
@@ -115,7 +150,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	un_pcb->tamanio = tamanio_proceso;
 	//Cada vez que agreguemos algo nuevo al pcb lo hacemos como ariba
 
-	//free(instrucciones); ??????????
+	free(instrucciones);
 	return un_pcb;
 }
 

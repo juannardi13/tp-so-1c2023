@@ -44,7 +44,7 @@ void cargar_valores_config(char* ruta_config) {
 	algoritmo_literal = config_get_string_value(config, "ALGORITMO_PLANIFICACION");
 	if(strcmp(algoritmo_literal, "HRRN") == 0) {
 		algoritmo_auxiliar = HRRN;
-	} else if(strcmp(algoritmo_literal, "FIFO")) {
+	} else if(strcmp(algoritmo_literal, "FIFO") == 0) {
 		algoritmo_auxiliar = FIFO;
 	} else {
 		perror("Algoritmo de planificación en CONFIG no válido");

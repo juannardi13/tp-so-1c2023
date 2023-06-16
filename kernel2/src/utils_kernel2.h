@@ -99,7 +99,7 @@ char* recibir_instrucciones_como_string(int);
 
 //Manejo de procesos
 void agregar_proceso_a_ready(void);
-void ejecutar_proceso(int);
+void ejecutar_proceso(void);
 void mostrar_cola_new(t_list*);
 t_proceso* obtener_proceso_cola_ready(void);
 
