@@ -14,7 +14,7 @@
 #include<readline/readline.h>
 #include <shared-2.h>
 
-extern t_registros registros;
+extern t_registros* registros;
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);

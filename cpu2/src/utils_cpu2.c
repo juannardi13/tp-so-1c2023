@@ -35,30 +35,6 @@ char* fetch_instruccion(t_contexto_de_ejecucion* contexto){
 	return instruccion_a_ejecutar;
 }
 
-/*//Revisar
-char** recibir_instrucciones(t_buffer){
-char** lista_instrucciones = deserializar_instrucciones(t_buffer);
-}
-*/
-
-t_registros registros;
-
-void inicializar_registros(void){
-	registros->ax = string_duplicate("0000");
-	registros->bx = string_duplicate("0000");
-	registros->cx = string_duplicate("0000");
-	registros->dx = string_duplicate("0000");
-	registros->eax = string_duplicate("00000000");
-	registros->ebx = string_duplicate("00000000");
-	registros->ecx = string_duplicate("00000000");
-	registros->edx = string_duplicate("00000000");
-	registros->rax = string_duplicate("0000000000000000");
-	registros->rbx = string_duplicate("0000000000000000");
-	registros->rcx = string_duplicate("0000000000000000");
-	registros->rdx = string_duplicate("0000000000000000");
-}
-
-
 void asignar_valor_a_registro(char* valor, char* registro, t_registros* registros){
 	if(strcmp(registro, "AX") == 0){
 			strncpy(registros->ax, valor, strlen(valor)+1);
@@ -98,6 +74,20 @@ void asignar_valor_a_registro(char* valor, char* registro, t_registros* registro
 		}
 }
 
+void inicializar_registros(void){
+	strncpy(registros->ax, "0000", strlen("0000")+1);
+	strncpy(registros->bx, "0000", strlen("0000")+1);
+	strncpy(registros->cx, "0000", strlen("0000")+1);
+	strncpy(registros->dx, "0000", strlen("0000")+1);
+	strncpy(registros->eax, "00000000", strlen("00000000")+1);
+	strncpy(registros->ebx, "00000000", strlen("00000000")+1);
+	strncpy(registros->ecx, "00000000", strlen("00000000")+1);
+	strncpy(registros->edx, "00000000", strlen("00000000")+1);
+	strncpy(registros->rax, "0000000000000000", strlen("0000000000000000")+1);
+	strncpy(registros->rbx, "0000000000000000", strlen("0000000000000000")+1);
+	strncpy(registros->rcx, "0000000000000000", strlen("0000000000000000")+1);
+	strncpy(registros->rdx, "0000000000000000", strlen("0000000000000000")+1);
+}
 void activar_segmentation_fault(t_contexto_de_ejecucion* contexto);
 
 bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
@@ -115,15 +105,14 @@ t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer* buffer){
 	t_contexto_de_ejecucion* contexto = malloc (buffer->stream_size);
 	void* stream = buffer->stream;
 	memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
-	stream+=contexto->tamanio_instrucciones;
+	stream += contexto->tamanio_instrucciones;
 	memcpy(&(contexto->pc), stream, sizeof(int));
-	stream+=sizeof(int);
+	stream += sizeof(int);
 	memcpy(&(contexto->pid), stream, sizeof(int));
-	stream+=sizeof(int);
+	stream += sizeof(int);
 	memcpy(&(contexto->registros_pcb), stream, contexto->tamanio_registros);
-	stream+=contexto->tamanio_registros;
-	memcpy(&(contexto->segmentos), stream, contexto->tamanio_segmentos);
-	stream+=contexto->contexto->tamanio_segmentos;
+	stream += contexto->tamanio_registros;
+	memcpy(&(contexto->segmentos), deserializar_segmentos(), contexto->tamanio_segmentos);//PROBLEMAS
 	return contexto;
 }
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
@@ -154,11 +143,15 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 	return valor;
 }
 
-int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
+int obtener_direccion_fisica(char* direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
-	int numero_segmento = floor((float)contexto->segmento->base / (float)tamanio_segmento);
-	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
-	int direccion_fisica = numero_segmento + desplazamiento_segmento;
+	int dir_logica_entera = (int) strtol(direccion_logica, NULL, 10);
+	int numero_segmento = floor(dir_logica_entera/ (float)tamanio_segmento);
+	int desplazamiento_segmento = dir_logica_entera % tamanio_segmento;
+	int base;
+	t_segmento* un_segmento = list_get(contexto->segmentos, numero_segmento);
+	base = un_segmento->base;
+	int direccion_fisica = base + desplazamiento_segmento;
 	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
 			activar_segmentation_fault(contexto);
 		}
