@@ -33,4 +33,5 @@ void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
 char* deserializar_paquete_de_memoria(t_buffer*);
 void inicializar_registros(void);
+t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer*);
 #endif /* UTILS_H_ */

@@ -27,12 +27,12 @@ typedef enum {
 
 typedef enum
 {
+	CONTEXTO_DE_EJECUCION,
 	MENSAJE,
 	PAQUETE,
 	PAQUETE_CONSOLA,
 	CONSOLA,
 	PCB,
-	CONTEXTO_DE_EJECUCION,
 	SET,
 	MOV_IN,
 	MOV_OUT,
@@ -117,6 +117,7 @@ typedef struct {
 	t_registros* registros_pcb;
 	int tamanio_registros;
 	t_list* segmentos;
+	int tamanio_segmentos;
 }t_contexto_de_ejecucion;
 
 typedef struct

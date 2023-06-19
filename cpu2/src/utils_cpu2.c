@@ -1,5 +1,6 @@
-#include "utils_cpu2.h"
-#include <shared-2.h>
+#include"utils_cpu2.h"
+#include <math.h>
+#include<shared-2.h>
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger = log_create("cpu.log", "cpu.log", 1, LOG_LEVEL_INFO);
@@ -109,6 +110,21 @@ char* deserializar_paquete_de_memoria(t_buffer* buffer){
 	void* stream = buffer->stream;
 	memcpy(valor, stream, buffer->stream_size);
 	return valor;
+}
+t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer* buffer){
+	t_contexto_de_ejecucion* contexto = malloc (buffer->stream_size);
+	void* stream = buffer->stream;
+	memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
+	stream+=contexto->tamanio_instrucciones;
+	memcpy(&(contexto->pc), stream, sizeof(int));
+	stream+=sizeof(int);
+	memcpy(&(contexto->pid), stream, sizeof(int));
+	stream+=sizeof(int);
+	memcpy(&(contexto->registros_pcb), stream, contexto->tamanio_registros);
+	stream+=contexto->tamanio_registros;
+	memcpy(&(contexto->segmentos), stream, contexto->tamanio_segmentos);
+	stream+=contexto->contexto->tamanio_segmentos;
+	return contexto;
 }
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 

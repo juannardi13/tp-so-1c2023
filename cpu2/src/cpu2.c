@@ -1,5 +1,3 @@
-#include <shared-2.h>
-
 #include "utils_cpu2.h"
 
 #define MAX_LEN 256
@@ -44,12 +42,8 @@ int main() {
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
     t_config* config = iniciar_config();
-
     //creo paquete para recibir info
-    t_paquete* paquete;
-    t_paquete* paquete2 = malloc(sizeof(t_paquete));
-    paquete2->buffer = malloc(sizeof(t_buffer));
-    //---
+    t_paquete* paquete = malloc(sizeof(t_paquete));
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
 
@@ -61,10 +55,33 @@ int main() {
     int fd_cpu = iniciar_servidor(puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_kernel);
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
+
+
     int ip_memoria = config_get_string_value(config, "IP");
     int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
     int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
     int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
+
+
+    paquete->buffer = malloc(sizeof(t_buffer));
+    recv(fd_kernel, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+    recv(fd_kernel, &(paquete->buffer->stream_size), sizeof(int), 0);
+    paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+    recv(fd_kernel, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+    t_contexto_de_ejecucion* contexto;
+    switch(paquete->codigo_operacion){
+    	case CONTEXTO_DE_EJECUCION :
+    		contexto = deserializar_contexto_de_ejecucion(paquete->buffer);
+    		char* instruccion_a_ejecutar;
+    		strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
+    		decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
+    		break;
+    	default:
+    		log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+    		break;
+    }
+
+
 
 
 
