@@ -9,6 +9,7 @@ int pid_global = 1000;
 t_consola* consola;
 t_list* cola_new;
 t_list* cola_ready;
+t_list* cola_exit;
 
 void manejar_conexion(int socket_cliente) {
 
@@ -111,6 +112,64 @@ void ejecutar_proceso(void) {
 
 	proceso->pcb = recibir_pcb(socket_cpu);
 
+	switch(respuesta_cpu) {
+	case IO:
+		// Bloquear la cantidad de tiempo indicada
+		log_warning(logger_kernel, "La última instrucción ejecutada fue IO");
+		break;
+	case F_OPEN:
+		//Abrir o crear el archivo pasado por parámetro
+		log_warning(logger_kernel, "La última instrucción ejecutada fue F_OPEN");
+		break;
+	case F_CLOSE:
+		//Cerrar el archivo pasado por parámetro
+		log_warning(logger_kernel, "La última instrucción ejecutada fue F_CLOSE");
+		break;
+	case F_SEEK:
+		//Actualizar el puntero del archivo a la posición pasada por parámetro
+		log_warning(logger_kernel, "La última instrucción ejecutada fue F_SEEK");
+		break;
+	case F_READ:
+		//Leer del archivo indicado la cantidad de bytes pasados por parámetro y escribirlo en la dirección física de memoria
+		log_warning(logger_kernel, "La última instrucción ejecutada fue F_READ");
+		break;
+	case F_WRITE:
+		//Esta instrucción solicita al Kernel que se escriba en el archivo indicado la cantidad de bytes pasados por parámetro cuya información es obtenida a partir de la dirección física de Memoria.
+		log_warning(logger_kernel, "La última instrucción ejecutada fue F_WRITE");
+		break;
+	case F_TRUNCATE:
+		//Modificar el tamaño del archivo al indicado por parámetro.
+		log_warning(logger_kernel, "La última instrucción ejecutada fue F_TRUNCATE");
+		break;
+	case WAIT:
+		//Se asigne una instancia del recurso indicado por parámetro
+		log_warning(logger_kernel, "La última instrucción ejecutada fue WAIT");
+		break;
+	case SIGNAL:
+		//Libera una instancia del recurso indicado por parámetro.
+		log_warning(logger_kernel, "La última instrucción ejecutada fue SIGNAL");
+		break;
+	case YIELD:
+		//Se pone en cola de ready al proceso de nuevo.
+		log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
+		break;
+	case EXIT:
+		//Finalización del proceso.
+		//pthread_mutex_lock(&mutex_exit);
+		proceso->pcb->estado = EXT;
+		list_add(cola_exit, proceso);
+		//pthread_mutex_unlock(&mutex_exit);
+		log_info(logger_kernel, "PCB id[%d] sale de EXEC y entra a EXIT", proceso->pcb->pid);
+		//sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
+		//sem_post(&sem_ready);
+
+		log_warning(logger_kernel, "La última instrucción ejecutada fue EXIT");
+		break;
+	default:
+		log_error(logger_kernel, "Instrucción desconocida, ocurrió un error");
+		break;
+	}
+
 }
 
 t_proceso* obtener_proceso_cola_ready(void) {
@@ -148,6 +207,9 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	un_pcb->pc = 0;
 	un_pcb->estado = NEW;
 	un_pcb->tamanio = tamanio_proceso;
+	un_pcb->registros = registros_iniciados;
+	//un_pcb->estimado_proxima_rafaga = config_kernel.estimacion_inicial;
+	//un_pcb->llegada_ready = ; //ver función get_time()
 	//Cada vez que agreguemos algo nuevo al pcb lo hacemos como ariba
 
 	free(instrucciones);
@@ -156,14 +218,80 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 
 void iniciar_planificador_largo_plazo(void) {
 	//Aca creo todos los semáforos y las estructuras necesarias para inicializar la planificación, por ahora solo tiene esto:
+	//pthread_mutex_init(&mutex_new, NULL);
+	//pthread_mutex_init(&mutex_exit, NULL);
+	//pthread_mutex_init(&mutex_pid, NULL);
+	//sem_init(&sem_exit, 0, 0);
+	//sem_init(&sem_grado_multiprogramacion, 0, config_kernel.grado_multiprogramacion); //semaforo contador para la cantidad de procesos en ready
+
 
 	cola_new = list_create();
+	cola_exit = list_create();
 
-
+	//pthread_create(&thread_exit, NULL, (void*)estado_exit, NULL);
+	//pthread_detach(thread_exit);
 }
 
-void iniciar_planificador_mediano_plazo(void) {
+void estado_exit(void) {
+	while(1) {
+		sem_wait(&sem_exit);
+		t_proceso* proceso;
+		pthread_mutex_lock(&mutex_exit);
+		proceso = list_remove(cola_exit, 0);
+		pthread_mutex_unlock(&mutex_exit);
+
+		log_info(logger_kernel, "[EXIT] PCB id[%d] sale de Exit y finaliza el proceso", proceso->pcb->pid);
+
+		//Liberar las estructuras del proceso en memoria
+		//enviar_pcb(socket_memoria, proceso->pcb);
+		//log_info(logger_kernel, "Enviando pcb a memoria para liberar estructuras
+		//op_code codigo = esperar_respuesta_memoria(socket_memoria);
+		//if(codigo != ESTRUCTURAS_LIBERADAS) {
+		//	log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
+		//}
+
+		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
+		log_info(logger_kernel, "Ordenando a Consola la finalización del proceso");
+		eliminar_pcb(proceso->pcb);
+		free(proceso);
+		//sem_post(&sem_grado_multiprogramacion);
+	}
+}
+
+void eliminar_pcb(t_pcb pcb) {
+	//list_destroy_and_destroy_elements(pcb->segmentos, free);
+	//TODO seguir destruyendo las eventuales listas de la pcb.
+}
+
+void avisar_a_modulo(int socket, op_code codigo) {
+	enviar_datos(socket, &codigo, sizeof(op_code));
+}
+
+int enviar_datos(int socket, void* datos, int size) {
+	return send(socket, datos, size, 0);
+}
+
+int recibir_datos(int socket, void* destino, int size) {
+	return send(socket, destino, size, 0);
+}
+
+void iniciar_planificador_corto_plazo(void) {
+	//pthread_mutex_init(&mutex_ready, NULL);
+	//pthread_mutex_init(&mutex_block_io, NULL);
+	//pthread_mutex_init(&mutex_exec, NULL);
+	//sem_init(&sem_ready, 0, 0);
+	//sem_init(&sem_exec, 0, 0);
+	//sem_init(&sem_blocked, 0, 0);
 	cola_ready = list_create();
+	cola_exec = list_create();
+	cola_block = list_create();
+	//TODO inicializar colas de recursos
+	//pthread_create(&thread_ready, NULL, (void*) estado_ready, NULL);
+//	pthread_create(&thread_exec, NULL, (void*) ejecutar_proceso, NULL);
+//	pthread_create(&thread_blocked, NULL, (void*) estado_bloqueado, NULL);
+//	pthread_detach(&thread_ready);
+//	pthread_detach(&thread_exec);
+//	pthread_detach(&thread_blocked);
 }
 
 void iniciar_conexion_cpu(char* ip_cpu, char* puerto_cpu) {

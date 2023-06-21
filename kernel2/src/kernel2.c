@@ -10,7 +10,7 @@ int main() {
 	cargar_valores_config("cfg/kernel.config");
 
 	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c
-	iniciar_planificador_mediano_plazo();
+	iniciar_planificador_corto_plazo();
 
 	//Iniciarse como cliente de los siguientes servidores: (COMENTAR PARA PROBAR EL KERNEL, SI NO TENÉS QUE INICIAR TODO)
 	//socket_filesystem = crear_conexion(logger, "KERNEL", config_kernel.ip_filesystem, config_kernel.puerto_filesystem);

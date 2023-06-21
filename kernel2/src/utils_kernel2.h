@@ -58,6 +58,9 @@ extern int pid_global;
 extern t_consola* consola;
 extern t_list* cola_new;
 extern t_list* cola_ready;
+extern t_list* cola_exit;
+extern t_list* cola_exec;
+extern t_list* cola_block;
 
 //Estructura para pasarle a la función de los hilos:
 typedef struct {
@@ -71,7 +74,10 @@ t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
 
 //Funciones sobre conexiones
+void avisar_a_modulo(int, op_code);
+int enviar_datos(int, void*, int);
 bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
+int recibir_datos(int, void*, int);
 t_instruccion recibir_instruccion(t_log*, int);
 
 //Funciones para tratar con la PCB
@@ -81,6 +87,7 @@ t_pcb* armar_pcb(char**, t_log*);
 t_pcb* crear_estructura_pcb(char*);
 t_pcb crear_pcb(t_instruccion*);
 t_pcb* deserializar_pcb(t_buffer*);
+void eliminar_pcb(t_pcb);
 void enviar_pcb(int, t_pcb*);
 t_pcb* recibir_pcb(int);
 
@@ -106,6 +113,6 @@ t_proceso* obtener_proceso_cola_ready(void);
 
 //Planificadores
 void iniciar_planificador_largo_plazo(void);
-void iniciar_planificador_mediano_plazo(void);
+void iniciar_planificador_corto_plazo(void);
 
 #endif /* UTILS_H_ */
