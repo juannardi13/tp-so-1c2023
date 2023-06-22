@@ -52,7 +52,8 @@ typedef enum
 	ESCRIBIR_EN_MEMORIA,
 	LEER_DE_MEMORIA,
 	LEIDO,
-	NO_LEIDO
+	NO_LEIDO,
+	FINALIZAR_CONSOLA
 }op_code;
 
 typedef struct

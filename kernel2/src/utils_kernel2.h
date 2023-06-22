@@ -115,4 +115,10 @@ t_proceso* obtener_proceso_cola_ready(void);
 void iniciar_planificador_largo_plazo(void);
 void iniciar_planificador_corto_plazo(void);
 
+//Finalización y destrucción Kernel
+void destruir_listas(void);
+void destruir_semaforos(void);
+void finalizar_kernel(void);
+void sighandler(int);
+
 #endif /* UTILS_H_ */

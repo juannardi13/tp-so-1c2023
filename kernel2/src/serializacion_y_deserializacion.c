@@ -114,7 +114,17 @@ t_pcb* deserializar_pcb(t_buffer* buffer) {
 	return pcb;
 }
 
+void avisar_a_modulo(int socket, op_code codigo) {
+	enviar_datos(socket, &codigo, sizeof(op_code));
+}
 
+int enviar_datos(int socket, void* datos, int size) {
+	return send(socket, datos, size, 0);
+}
+
+int recibir_datos(int socket, void* destino, int size) {
+	return send(socket, destino, size, 0);
+}
 
 //Funciones de deserialización de estructuras que ya no se usan, como t_instruccion (NO ANDAN DEL TODO BIEN)
 t_list *deserializar_instrucciones(t_list *datos, int longitud_datos) {

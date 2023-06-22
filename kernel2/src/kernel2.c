@@ -5,6 +5,11 @@
 archivo_config config_kernel;
 t_log* logger_kernel;
 
+void sighandler(int signal) {
+	finalizar_kernel();
+	exit(0);
+}
+
 int main() {
 	logger_kernel = log_create("./kernel.log", "kernel.log", 1, LOG_LEVEL_INFO);
 	cargar_valores_config("cfg/kernel.config");
@@ -21,7 +26,6 @@ int main() {
 
 	int fd_kernel = iniciar_servidor(config_kernel.puerto_escucha);
 
-	//int fd_kernel = iniciar_servidor(ip_kernel, puerto_kernel);
 	log_info(logger_kernel, "Kernel inicializado, esperando a recibir a la consola en el PUERTO %s.", config_kernel.puerto_escucha);
 
 	while(atender_clientes_kernel(fd_kernel));

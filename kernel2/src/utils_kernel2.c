@@ -84,3 +84,33 @@ t_instruccion recibir_instruccion(t_log* logger, int conexion_consola) {
 
 	return instruccion;
 }
+
+void finalizar_kernel(void) {
+	log_error(logger_kernel, "Finalizando módulo Kernel");
+	log_destroy(logger_kernel);
+	destruir_semaforos();
+	destruir_listas();
+	liberar_conexion(socket_cpu);
+	liberar_conexion(socket_memoria);
+	liberar_conexion(socket_filesystem);
+}
+
+void destruir_semaforos(void) {
+	pthread_mutex_destroy(&mutex_new);
+	pthread_mutex_destroy(&mutex_ready);
+	pthread_mutex_destroy(&mutex_block_io);
+	pthread_mutex_destroy(&mutex_exec);
+	pthread_mutex_destroy(&mutex_exit);
+	pthread_mutex_destroy(&mutex_pid);
+	sem_destroy(&sem_ready);
+	sem_destroy(&sem_blocked);
+	sem_destroy(&sem_exit);
+	sem_destroy(&sem_grado_multiprogramacion);
+}
+
+void destruir_listas(void) {
+	list_destroy_and_destroy_elements(cola_new, free);
+	list_destroy_and_destroy_elements(cola_ready, free);
+	list_destroy_and_destroy_elements(cola_block, free);
+	list_destroy_and_destroy_elements(cola_exit, free);
+}
