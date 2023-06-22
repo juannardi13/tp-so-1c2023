@@ -43,10 +43,10 @@ int main(int argc, char** argv) {
 
 	log_info(logger, "Esperando respuesta de Kernel para finalizar.");
 
-//	op_code respuesta_kernel = recibir_operacion(conexion_kernel);
-//
-//	if(respuesta_kernel != FINALIZAR_CONSOLA)
-//		log_error(logger, "Error al querer finalizar la consola");
+	op_code respuesta_kernel = recibir_operacion(conexion_kernel);
+
+	if(respuesta_kernel != FINALIZAR_CONSOLA)
+		log_error(logger, "Error al querer finalizar la consola");
 
 	log_info(logger, "Finalizó el proceso, terminando programa");
 	finalizar_programa(conexion_kernel, logger, config);
