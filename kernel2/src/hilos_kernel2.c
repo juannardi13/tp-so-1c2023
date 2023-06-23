@@ -51,9 +51,9 @@ void manejar_conexion(int socket_cliente) {
 //		|																 |
 //		------------------------------------------------------------------
 //
-		agregar_proceso_a_ready();
+	//	agregar_proceso_a_ready();
 
-		ejecutar_proceso();
+	//	ejecutar_proceso();
 
 		break;
 	default:
@@ -101,77 +101,94 @@ void agregar_proceso_a_ready(void) {
 	}
 }
 
-void ejecutar_proceso(void) {
+void estado_ejecutar(void) {
 
-	t_proceso* proceso = malloc(sizeof(t_proceso));
-	proceso = obtener_proceso_cola_ready();
+	while (1) {
+		sem_wait(&sem_exec);
+		pthread_mutex_lock(&mutex_exec);
+		t_proceso* proceso_a_ejecutar = list_get(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
+		pthread_mutex_unlock(&mutex_exec);
 
-	//enviar_pcb(socket_cpu, proceso->pcb);
+		enviar_pcb(socket_cpu, proceso->pcb);
+		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
-	log_info(logger_kernel, "Proceso id[%d] enviado a CPU para ejecutar.", proceso->pcb->pid);
+		op_code respuesta_cpu = recibir_operacion(socket_cpu);
 
-	op_code respuesta_cpu = recibir_operacion(socket_cpu);
+		proceso_a_ejecutar->pcb = recibir_pcb(socket_cpu);
 
-	proceso->pcb = recibir_pcb(socket_cpu);
+		switch (respuesta_cpu) {
+		case IO:
+			pthread_mutex_lock(&mutex_block);
+			proceso_a_ejecutar->pcb->estado = BLOCK;
+			log_warning(logger_kernel, "La última instrucción ejecutada fue IO");
+			break;
+		case F_OPEN:
+			//Abrir o crear el archivo pasado por parámetro
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue F_OPEN");
+			break;
+		case F_CLOSE:
+			//Cerrar el archivo pasado por parámetro
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue F_CLOSE");
+			break;
+		case F_SEEK:
+			//Actualizar el puntero del archivo a la posición pasada por parámetro
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue F_SEEK");
+			break;
+		case F_READ:
+			//Leer del archivo indicado la cantidad de bytes pasados por parámetro y escribirlo en la dirección física de memoria
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue F_READ");
+			break;
+		case F_WRITE:
+			//Esta instrucción solicita al Kernel que se escriba en el archivo indicado la cantidad de bytes pasados por parámetro cuya información es obtenida a partir de la dirección física de Memoria.
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue F_WRITE");
+			break;
+		case F_TRUNCATE:
+			//Modificar el tamaño del archivo al indicado por parámetro.
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue F_TRUNCATE");
+			break;
+		case WAIT:
+			//Se asigne una instancia del recurso indicado por parámetro
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue WAIT");
+			break;
+		case SIGNAL:
+			//Libera una instancia del recurso indicado por parámetro.
+			log_warning(logger_kernel,
+					"La última instrucción ejecutada fue SIGNAL");
+			break;
+		case YIELD:
+			//Se pone en cola de ready al proceso de nuevo.
+			log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
+			pthread_mutex_lock(&mutex_ready);
+			proceso->pcb->estado = READY;
+			list_add(cola_ready, proceso);
+			pthread_mutex_unlock(&mutex_ready);
 
-	switch(respuesta_cpu) {
-	case IO:
-		// Bloquear la cantidad de tiempo indicada
-		log_warning(logger_kernel, "La última instrucción ejecutada fue IO");
-		break;
-	case F_OPEN:
-		//Abrir o crear el archivo pasado por parámetro
-		log_warning(logger_kernel, "La última instrucción ejecutada fue F_OPEN");
-		break;
-	case F_CLOSE:
-		//Cerrar el archivo pasado por parámetro
-		log_warning(logger_kernel, "La última instrucción ejecutada fue F_CLOSE");
-		break;
-	case F_SEEK:
-		//Actualizar el puntero del archivo a la posición pasada por parámetro
-		log_warning(logger_kernel, "La última instrucción ejecutada fue F_SEEK");
-		break;
-	case F_READ:
-		//Leer del archivo indicado la cantidad de bytes pasados por parámetro y escribirlo en la dirección física de memoria
-		log_warning(logger_kernel, "La última instrucción ejecutada fue F_READ");
-		break;
-	case F_WRITE:
-		//Esta instrucción solicita al Kernel que se escriba en el archivo indicado la cantidad de bytes pasados por parámetro cuya información es obtenida a partir de la dirección física de Memoria.
-		log_warning(logger_kernel, "La última instrucción ejecutada fue F_WRITE");
-		break;
-	case F_TRUNCATE:
-		//Modificar el tamaño del archivo al indicado por parámetro.
-		log_warning(logger_kernel, "La última instrucción ejecutada fue F_TRUNCATE");
-		break;
-	case WAIT:
-		//Se asigne una instancia del recurso indicado por parámetro
-		log_warning(logger_kernel, "La última instrucción ejecutada fue WAIT");
-		break;
-	case SIGNAL:
-		//Libera una instancia del recurso indicado por parámetro.
-		log_warning(logger_kernel, "La última instrucción ejecutada fue SIGNAL");
-		break;
-	case YIELD:
-		//Se pone en cola de ready al proceso de nuevo.
-		log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
-		proceso->pcb->estado = READY;
-		list_add(cola_ready, proceso);
-		break;
-	case EXIT:
-		//Finalización del proceso.
-		//pthread_mutex_lock(&mutex_exit);
-		proceso->pcb->estado = EXT;
-		list_add(cola_exit, proceso);
-		//pthread_mutex_unlock(&mutex_exit);
-		log_info(logger_kernel, "PCB id[%d] sale de EXEC y entra a EXIT", proceso->pcb->pid);
-		//sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
-		//sem_post(&sem_ready);
+			sem_post(&sem_ready);
+			break;
+		case EXIT:
+			//Finalización del proceso.
+			pthread_mutex_lock(&mutex_exit);
+			proceso->pcb->estado = EXT;
+			list_add(cola_exit, proceso);
+			pthread_mutex_unlock(&mutex_exit);
 
-		log_warning(logger_kernel, "La última instrucción ejecutada fue EXIT");
-		break;
-	default:
-		log_error(logger_kernel, "Instrucción desconocida, ocurrió un error");
-		break;
+			log_info(logger_kernel, "PCB id[%d] sale de EXEC y entra a EXIT", proceso->pcb->pid);
+			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
+			sem_post(&sem_ready);
+
+			log_warning(logger_kernel, "La última instrucción ejecutada fue EXIT");
+			break;
+		default:
+			log_error(logger_kernel, "Instrucción desconocida, ocurrió un error");
+			break;
+		}
 	}
 
 }
@@ -179,7 +196,6 @@ void ejecutar_proceso(void) {
 t_proceso* obtener_proceso_cola_ready(void) {
 
 	t_proceso* proceso = malloc(sizeof(t_proceso));
-
 
 	switch(config_kernel.algoritmo_planificacion){
 	case FIFO:
@@ -202,10 +218,10 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	int tamanio_proceso = strlen(instrucciones) + 1;
 
 	t_pcb* un_pcb = malloc(sizeof(t_pcb));
-	//pthread_mutex_lock(&mutex_pid);
+	pthread_mutex_lock(&mutex_pid);
 	un_pcb->pid = pid_global;
 	pid_global++;
-	//pthread_mutex_unlock(&mutex_pid);
+	pthread_mutex_unlock(&mutex_pid);
 	un_pcb->tamanio_instrucciones = tamanio_proceso;
 	un_pcb->instrucciones = string_duplicate(instrucciones);
 	un_pcb->pc = 0;
@@ -221,9 +237,11 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 }
 
 void estado_exit(void) {
+
 	while(1) {
 		sem_wait(&sem_exit);
 		t_proceso* proceso;
+
 		pthread_mutex_lock(&mutex_exit);
 		proceso = list_remove(cola_exit, 0);
 		pthread_mutex_unlock(&mutex_exit);
@@ -239,7 +257,9 @@ void estado_exit(void) {
 		//}
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
+
 		log_info(logger_kernel, "Ordenando a Consola la finalización del proceso");
+
 		eliminar_pcb(proceso->pcb);
 		free(proceso);
 		//sem_post(&sem_grado_multiprogramacion);
@@ -257,10 +277,66 @@ void iniciar_conexion_cpu(char* ip_cpu, char* puerto_cpu) {
 
 void agregar_proceso_a_new(t_proceso* proceso) {
 
+	pthread_mutex_lock(&mutex_new);
 	proceso->pcb->estado = NEW;
 	list_add(cola_new, proceso);
-	log_info(logger_kernel, "PID[%d] ingresa a NEW \n", proceso->pcb->pid);
+
+	log_info(logger_kernel, "PCB id[%d] ingresa a NEW", proceso->pcb->pid);
+
 	mostrar_cola_new(cola_new);
+	pthread_mutex_unlock(&mutex_new);
+
+	//ATENCAO EMPIEZO A TIRAR MAGIA Y FILOSOFAR CREO QUE ES POR ACA
+	sem_post(&sem_admitir);
+
+}
+
+void admitir_procesos_a_ready(void) { //hilo
+
+	while(1) {
+		sem_wait(&sem_admitir);
+		sem_wait(&sem_grado_multiprogramacion);
+
+		t_proceso* proceso;
+
+		pthread_mutex_lock(&mutex_new);
+		proceso = list_remove(cola_new, 0);
+		pthread_mutex_unlock(&mutex_new);
+
+		//Puedo hacer que los segmentos de memoria se los demos al proceso acá o apenas entra a cola new TODO
+
+		log_info(logger_kernel, "PCB id[%d] ingresa a READY desde NEW", proceso->pcb->pid);
+
+		pthread_mutex_lock(&mutex_ready);
+		list_add(cola_ready, proceso);
+		pthread_mutex_unlock(&mutex_ready);
+
+		sem_post(&sem_ready);
+	}
+
+}
+
+void estado_ready(void) {
+
+	while(1) {
+		sem_wait(&sem_ready);
+
+		pthread_mutex_lock(&mutex_ready);
+		if(list_is_empty(cola_ready)) { //Si la lista de ready está vacía vuelve y vuelve a entrar al while hasta que haya procesos.
+			pthread_mutex_unlock(&mutex_ready);
+			continue;
+		}
+		pthread_mutex_unlock(&mutex_ready);
+
+		t_proceso* siguiente_proceso = obtener_proceso_cola_ready();
+
+		pthread_mutex_lock(&mutex_exec);
+		list_add(cola_exec, siguiente_proceso);
+		pthread_mutex_unlock(&mutex_exec);
+
+		log_info(logger_kernel, "PCB id[%d] ingresa a EXECUTE", siguiente_proceso->pcb->pid);
+		sem_post(&sem_exec);
+	}
 
 }
 

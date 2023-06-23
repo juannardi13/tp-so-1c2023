@@ -61,6 +61,7 @@ extern t_list* cola_ready;
 extern t_list* cola_exit;
 extern t_list* cola_exec;
 extern t_list* cola_block;
+extern t_registros* registros_iniciados;
 
 //Estructura para pasarle a la función de los hilos:
 typedef struct {
@@ -70,8 +71,9 @@ typedef struct {
 
 //Funciones que crean las estructuras(Logger, Config)
 void cargar_valores_config(char*);
-t_log* iniciar_logger(void);
 t_config* iniciar_config(char*);
+t_log* iniciar_logger(void);
+void iniciar_registros(void)
 
 //Funciones sobre conexiones
 void avisar_a_modulo(int, op_code);

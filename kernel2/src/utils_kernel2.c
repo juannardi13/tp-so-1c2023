@@ -4,6 +4,7 @@
 
 t_log* logger;
 t_config* config;
+t_registros* registros_iniciados;
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
@@ -83,6 +84,21 @@ t_instruccion recibir_instruccion(t_log* logger, int conexion_consola) {
 	}
 
 	return instruccion;
+}
+
+void iniciar_registros(void) {
+	registros_iniciados->ax  = "0000";
+	registros_iniciados->bx  = "0000";
+	registros_iniciados->cx  = "0000";
+	registros_iniciados->dx  = "0000";
+	registros_iniciados->eax = "00000000";
+	registros_iniciados->ebx = "00000000";
+	registros_iniciados->ecx = "00000000";
+	registros_iniciados->edx = "00000000";
+	registros_iniciados->rax = "0000000000000000";
+	registros_iniciados->rbx = "0000000000000000";
+	registros_iniciados->rcx = "0000000000000000";
+	registros_iniciados->rdx = "0000000000000000";
 }
 
 void finalizar_kernel(void) {
