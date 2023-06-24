@@ -40,7 +40,7 @@ main-build: cpu2
 cpu2: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/Documents/tp-2023-1c-DeLorean/shared-2/Debug" -o "cpu2" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lshared-2
+	gcc -L"/home/utnso/tp-2023-1c-DeLorean/shared-2/Debug" -o "cpu2" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lshared-2
 	@echo 'Finished building target: $@'
 	@echo ' '
 
