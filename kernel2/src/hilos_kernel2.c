@@ -193,26 +193,6 @@ void estado_ejecutar(void) {
 
 }
 
-t_proceso* obtener_proceso_cola_ready(void) {
-
-	t_proceso* proceso = malloc(sizeof(t_proceso));
-
-	switch(config_kernel.algoritmo_planificacion){
-	case FIFO:
-		proceso = list_remove(cola_ready, 0);
-		log_info(logger_kernel, "PCB id[%d] saliendo de Cola de Ready para ejecutar.", proceso->pcb->pid);
-		break;
-	case HRRN:
-		//Lógica de selección del proceso mediante el HRRN
-		break;
-	default:
-		log_error(logger_kernel, "Error al elegir un proceso de la cola de Ready para ejecutar");
-		break;
-	}
-
-	return proceso;
-}
-
 t_pcb* crear_estructura_pcb(char* instrucciones) {
 
 	int tamanio_proceso = strlen(instrucciones) + 1;
@@ -228,8 +208,11 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	un_pcb->estado = NEW;
 	un_pcb->tamanio = tamanio_proceso;
 	un_pcb->registros = registros_iniciados;
-	//un_pcb->estimado_proxima_rafaga = config_kernel.estimacion_inicial;
-	//un_pcb->llegada_ready = ; //ver función get_time()
+	un_pcb->rafaga_estimada = config_kernel.estimacion_inicial;
+	un_pcb->rafaga_anterior = 0;
+	un_pcb->llegada_ready = 0; //ver función get_time()
+	un_pcb->response_ratio = 0;
+	un_pcb->tiempo_espera = 0;
 	//Cada vez que agreguemos algo nuevo al pcb lo hacemos como ariba
 
 	free(instrucciones);
@@ -308,6 +291,7 @@ void admitir_procesos_a_ready(void) { //hilo
 		log_info(logger_kernel, "PCB id[%d] ingresa a READY desde NEW", proceso->pcb->pid);
 
 		pthread_mutex_lock(&mutex_ready);
+		//proceso->pcb->llegada_ready = ; TODO poner el tiempo en el que llega a ready
 		list_add(cola_ready, proceso);
 		pthread_mutex_unlock(&mutex_ready);
 
@@ -348,4 +332,60 @@ void mostrar_cola_new(t_list* lista) {
     	t_proceso* proceso = list_get(lista, j);
         log_info(logger_kernel,"PCB ID: %d",proceso->pcb->pid);
     }
+}
+
+t_proceso* obtener_proceso_cola_ready(void) {
+
+	t_proceso* proceso = malloc(sizeof(t_proceso));
+
+	switch(config_kernel.algoritmo_planificacion){
+	case FIFO:
+		proceso = list_remove(cola_ready, 0);
+		log_info(logger_kernel, "PCB id[%d] saliendo de Cola de Ready por FIFO para ejecutar.", proceso->pcb->pid);
+		break;
+	case HRRN:
+		aplicar_hrrn();
+		proceso = list_remove(cola_ready, 0);
+		log_info(logger_kernel, "PCB id[%d] saliendo de Cola de Ready por HRRN para ejecutar.", proceso->pcb->pid);
+		break;
+	default:
+		log_error(logger_kernel, "Error al elegir un proceso de la cola de Ready para ejecutar");
+		break;
+	}
+
+	return proceso;
+}
+
+void aplicar_hrrn(void) {
+
+	list_iterate(cola_ready, (void*) calcular_response_ratio);
+	list_iterate(cola_ready, (void*) mostrar_response_ratio);
+
+	list_sort(cola_ready, (void*) comparador_response_ratio);
+}
+
+void calcular_response_ratio(t_proceso* proceso) {
+	//ATENCIÓN CON LO QUE VIENE ES UNA MAGIC JOHNSON, DESPUÉS INDAGAR BIEN TODO SOBRE FUNCIONES DE CLOCK
+	struct timespec end;
+	clock_gettime(CLOCK_REALTIME, &end);
+
+	long seconds = end.tv_sec - proceso->pcb->llegada_ready.tv_sec;
+	long nanoseconds = end.tv_nsec - proceso->pcb->llegada_ready.tv_sec;
+	double elapsed = seconds + nanoseconds * 1e-9;
+
+	proceso->pcb->tiempo_espera = elapsed; //TODO poner tiempo de llegada a ready en el hilo correspondiente estado_ready y estado_block
+	proceso->pcb->response_ratio = 1 + (proceso->pcb->tiempo_espera / proceso->pcb->rafaga_estimada);
+}
+
+bool comparador_response_ratio(t_proceso* un_proceso, t_proceso* otro_proceso) {
+	return un_proceso->pcb->response_ratio >= otro_proceso->pcb->response_ratio;
+}
+
+void mostrar_response_ratio(t_proceso* un_proceso) {
+	log_info(logger_kernel, "PCB id[%d] tiene un RR de: %f", un_proceso->pcb->response_ratio);
+}
+
+void calcular_estimacion(t_proceso* un_proceso) {
+	double nueva_rafaga = (config_kernel.alfa_hrrn * un_proceso->pcb->rafaga_estimada) + ((un_proceso->pcb->rafaga_anterior) * (1 - config_kernel.alfa_hrrn));
+	un_proceso->pcb->rafaga_estimada = nueva_rafaga;
 }
