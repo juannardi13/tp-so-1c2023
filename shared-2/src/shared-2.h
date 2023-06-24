@@ -105,9 +105,11 @@ typedef struct {
 	t_registros registros;
 	int tamanio_segmentos;
 	t_list* segmentos;
-	//float est_prox_rafaga; //iniciaizar con archivo configuracion
-	//float timestamp;
-	//int archivos_abiertos[][2];
+	double rafaga_estimada;
+	double rafaga_anterior;
+	double response_ratio;
+	double tiempo_espera;
+	struct timespec llegada_ready;
 } t_pcb;
 
 typedef struct {
