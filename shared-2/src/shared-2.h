@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <string.h>
-#include <commons/string.h>
 #include <netdb.h>
 #include <commons/log.h>
 #include<commons/collections/list.h>
@@ -54,7 +53,7 @@ typedef enum
 	LEER_DE_MEMORIA,
 	LEIDO,
 	NO_LEIDO,
-	FINALIZAR_CONSOLA
+	SEG_FAULT
 }op_code;
 
 typedef struct
@@ -102,15 +101,13 @@ typedef struct {
 	char* instrucciones;
 	estado_proceso estado;
 	int pc;
-	int tamanio;
+	int tamanio_registros;
 	t_registros registros;
 	int tamanio_segmentos;
-	t_list* segmentos;
-	double rafaga_estimada;
-	double rafaga_anterior;
-	double response_ratio;
-	double tiempo_espera;
-	struct timespec llegada_ready;
+	t_list* tabla_segmentos;
+	//float est_prox_rafaga; //iniciaizar con archivo configuracion
+	//float timestamp;
+	//int archivos_abiertos[][2];
 } t_pcb;
 
 typedef struct {
@@ -120,8 +117,8 @@ typedef struct {
 	int pc;
 	t_registros* registros_pcb;
 	int tamanio_registros;
-	t_list* segmentos;
 	int tamanio_segmentos;
+	t_list* tabla_segmentos;
 }t_contexto_de_ejecucion;
 
 typedef struct
