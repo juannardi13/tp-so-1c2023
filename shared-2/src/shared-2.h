@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <string.h>
+#include <commons/string.h>
 #include <netdb.h>
 #include <commons/log.h>
 #include<commons/collections/list.h>
