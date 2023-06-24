@@ -73,7 +73,6 @@ void asignar_valor_a_registro(char* valor, char* registro, t_registros* registro
 			strncpy(registros->rdx, valor, strlen(valor)+1);
 		}
 }
-
 void inicializar_registros(void){
 	strncpy(registros->ax, "0000", strlen("0000")+1);
 	strncpy(registros->bx, "0000", strlen("0000")+1);
@@ -88,7 +87,12 @@ void inicializar_registros(void){
 	strncpy(registros->rcx, "0000000000000000", strlen("0000000000000000")+1);
 	strncpy(registros->rdx, "0000000000000000", strlen("0000000000000000")+1);
 }
-void activar_segmentation_fault(t_contexto_de_ejecucion* contexto);
+void activar_segmentation_fault(t_contexto_de_ejecucion* contexto, fd_kernel){
+	t_paquete* paquete = crear_paquete(SEG_FAULT);
+		//serializar_contexto_ejecucion(contexto);
+		enviar_paquete(paquete, fd_kernel);
+		eliminar_paquete(paquete);
+}
 
 bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 	int tamanio_valor = strlen(valor)+1;
@@ -112,7 +116,7 @@ t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer* buffer){
 	stream += sizeof(int);
 	memcpy(&(contexto->registros_pcb), stream, contexto->tamanio_registros);
 	stream += contexto->tamanio_registros;
-	memcpy(&(contexto->segmentos), deserializar_segmentos(), contexto->tamanio_segmentos);//PROBLEMAS
+	memcpy(&(contexto->tabla_segmentos), deserializar_segmentos(), contexto->tamanio_segmentos);
 	return contexto;
 }
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
@@ -145,11 +149,11 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 
 int obtener_direccion_fisica(char* direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
-	int dir_logica_entera = (int) strtol(direccion_logica, NULL, 10);
+	int dir_logica_entera = strtol(direccion_logica, NULL, 10);
 	int numero_segmento = floor(dir_logica_entera/ (float)tamanio_segmento);
 	int desplazamiento_segmento = dir_logica_entera % tamanio_segmento;
 	int base;
-	t_segmento* un_segmento = list_get(contexto->segmentos, numero_segmento);
+	t_segmento* un_segmento = list_get(contexto->tabla_segmentos, numero_segmento);
 	base = un_segmento->base;
 	int direccion_fisica = base + desplazamiento_segmento;
 	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
