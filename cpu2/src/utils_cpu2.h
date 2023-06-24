@@ -24,7 +24,7 @@ void asignar_valor_a_registro(char*, char*, t_registros*);
 void activar_segmentation_fault(t_contexto_de_ejecucion*);
 bool desplazamiento_supera_tamanio(int, char*);
 char* leer_de_memoria(int, t_config*, int);
-int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*);
+int obtener_direccion_fisica(char*, int, t_config*, t_contexto_de_ejecucion*);
 void escribir_en_memoria(int, char*, int);
 char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_SET(char**, t_contexto_de_ejecucion*);
