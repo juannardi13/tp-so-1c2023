@@ -109,6 +109,12 @@ void estado_ejecutar(void) {
 		t_proceso* proceso_a_ejecutar = list_get(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
 		pthread_mutex_unlock(&mutex_exec);
 
+		struct timespec inicio, final; //Estructuras y definiciones necesarias para calcular el HRRN
+		clock_gettime(CLOCK_REALTIME, &inicio);
+		long seconds; 
+		long nanoseconds;
+		double elapsed;
+		
 		enviar_pcb(socket_cpu, proceso->pcb);
 		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
@@ -118,8 +124,34 @@ void estado_ejecutar(void) {
 
 		switch (respuesta_cpu) {
 		case IO:
-			pthread_mutex_lock(&mutex_block);
+			clock_gettime(CLOCK_REALTIME, &final);
+			seconds = final.tv_sec - inicio.tv_sec;
+			nanoseconds = final.tv_nsec - inicio.tv_nsec;
+			elapsed = seconds + nanoseconds * 1e - 9;
+			proceso_a_ejecutar->ultima_rafaga = elapsed;
+			
+			//TODO buscar la manera de ejecutar IO
+			//Quizas convenga mandarlo a dormir con usleep en estado block
+			//Tambien ver si conviene crear la funcion get_time();
+			//Otra forma de hacerlo puede ser:
+
+			struct timespec inicio_bloqueo;
+			clock_gettime(CLOCK_REALTIME, &inicio_bloqueo);
+			long segundos_inicio_bloqueo = inicio_bloqueo.tv_sec;
+			long nanosegundos_inicio_bloqueo = inicio_bloqueo.tv_nsec;
+			double comienzo_bloqueo = segundos_inicio_bloqueo + nanosegundos_inicio_bloqueo * 1e - 9;
+			proceso_a_ejecutar->inicio_block = comienzo_bloqueo;
+
+			//Una forma de resolverlo:
+			proceso_a_ejecutar->tiempo_bloqueo = recibir_parametro_instruccion(); //Implementar esta fuincion y fijarse si es en microsegundos nanosegundos o lo que sea
+
+			pthread_mutex_lock(&mutex_block_io);
 			proceso_a_ejecutar->pcb->estado = BLOCK;
+			list_add(cola_block_io, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_block_io);
+
+			sem_post(&sem_block_io);
+			
 			log_warning(logger_kernel, "La última instrucción ejecutada fue IO");
 			break;
 		case F_OPEN:
@@ -164,6 +196,12 @@ void estado_ejecutar(void) {
 			break;
 		case YIELD:
 			//Se pone en cola de ready al proceso de nuevo.
+			clock_gettime(CLOCK_REALTIME, &final);
+			seconds = final.tv_sec - inicio.tv_sec;
+			nanoseconds = final.tv_nsec - inicio.tv_nsec;
+			elapsed = seconds + nanoseconds * 1e - 9;
+			proceso_a_ejecutar->ultima_rafaga = elapsed;
+			
 			log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
 			pthread_mutex_lock(&mutex_ready);
 			proceso->pcb->estado = READY;
@@ -324,6 +362,25 @@ void estado_ready(void) {
 
 }
 
+void estado_block_io(void) {
+
+	while(1) {
+		sem_wait(&sem_block_io);
+
+		pthread_mutex_lock(&mutex_block_io);
+		t_proceso* proceso = list_remove(cola_block_io, 0);
+		pthread_mutex_unlock(&mutex_block_io);
+
+		usleep(proceso->tiempo_bloqueo);
+
+		pthread_mutex_lock(&mutex_ready);
+		list_add(cola_ready, proceso);
+		pthread_mutex_unlock(&mutex_ready);
+
+		sem_post(&sem_ready);
+	}
+}
+
 void mostrar_cola_new(t_list* lista) {
 
 	log_warning(logger_kernel, "PCBs en lista NEW:");
@@ -386,6 +443,6 @@ void mostrar_response_ratio(t_proceso* un_proceso) {
 }
 
 void calcular_estimacion(t_proceso* un_proceso) {
-	double nueva_rafaga = (config_kernel.alfa_hrrn * un_proceso->pcb->rafaga_estimada) + ((un_proceso->pcb->rafaga_anterior) * (1 - config_kernel.alfa_hrrn));
+	double nueva_rafaga = (config_kernel.alfa_hrrn * un_proceso->pcb->rafaga_estimada) + ((un_proceso->pcb->ultima_rafaga) * (1 - config_kernel.alfa_hrrn));
 	un_proceso->pcb->rafaga_estimada = nueva_rafaga;
 }
