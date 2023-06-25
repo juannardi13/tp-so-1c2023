@@ -2,47 +2,12 @@
 
 #define MAX_LEN 256
 
-/*
-//Semáforos
-
-recibir_de_kernel = 1; //Semáforo Binario
-devolver_pcb = 0; //Semáforo Binario
-ejecutar_proceso = 0;
-
-//Hilos
-
-void* conexion_kernel(void* args){
-
-		//Lo que viene es pseudocodigo
-		generar_conexion_con(kernel);
-
-	while(1) {
-		wait(recibir_de_kernel);
-		recibir_pcb(kernel);
-		signal(ejecutar_proceso);
-		wait(devolver_pcb);
-		devolver_pcb(kernel);
-	}
-}
-
-void* conexion_memoria(void* args){
-	generar_conexion_con(memoria);
-}
-
-void* ejecutar_proceso(void* args){
-	while(1) {
-		wait(ejecutar_proceso);
-
-	}
-}*/
 int main() {
 	bool cpu_bloqueada = false;
 	char* ip_kernel;
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
     t_config* config = iniciar_config();
-    //creo paquete para recibir info
-    t_paquete* paquete = malloc(sizeof(t_paquete));
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
 
@@ -61,29 +26,30 @@ int main() {
     int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
     int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
 
+    while(1) {
+    	t_paquete* paquete = malloc(sizeof(t_paquete));
+    	paquete->buffer = malloc(sizeof(t_buffer));
+    	recv(fd_kernel, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+    	recv(fd_kernel, &(paquete->buffer->stream_size), sizeof(int), 0);
+    	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+    	recv(fd_kernel, paquete->buffer->stream, paquete->buffer->stream_size, 0);
 
-    paquete->buffer = malloc(sizeof(t_buffer));
-    recv(fd_kernel, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
-    recv(fd_kernel, &(paquete->buffer->stream_size), sizeof(int), 0);
-    paquete->buffer->stream = malloc(paquete->buffer->stream_size);
-    recv(fd_kernel, paquete->buffer->stream, paquete->buffer->stream_size, 0);
-    t_contexto_de_ejecucion* contexto;
-    switch(paquete->codigo_operacion){
+    	t_contexto_de_ejecucion* contexto;
+
+    	switch(paquete->codigo_operacion){
     	case CONTEXTO_DE_EJECUCION :
     		contexto = deserializar_contexto_de_ejecucion(paquete->buffer);
-		inicializar_registros(contexto->registros_pcb);
+    		inicializar_registros(contexto->registros_pcb);
     		char* instruccion_a_ejecutar;
     		strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
-    		decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
-    		break;
+    	 	decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
+    	    break;
     	default:
     		log_warning(logger,"Operacion desconocida. No quieras meter la pata");
     		break;
+    	}
+
     }
-
-
-
-
 
     return 0;
 }
