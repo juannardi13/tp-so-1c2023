@@ -53,7 +53,8 @@ typedef enum
 	LEER_DE_MEMORIA,
 	LEIDO,
 	NO_LEIDO,
-	SEG_FAULT
+	SEG_FAULT,
+	FINALIZAR_CONSOLA
 }op_code;
 
 typedef struct
