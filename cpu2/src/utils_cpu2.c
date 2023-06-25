@@ -147,17 +147,15 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 	return valor;
 }
 
-int obtener_direccion_fisica(char* direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
+int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
-	int dir_logica_entera = strtol(direccion_logica, NULL, 10);
-	int numero_segmento = floor(dir_logica_entera/ (float)tamanio_segmento);
-	int desplazamiento_segmento = dir_logica_entera % tamanio_segmento;
-	int base;
-	t_segmento* un_segmento = list_get(contexto->tabla_segmentos, numero_segmento);
-	base = un_segmento->base;
-	int direccion_fisica = base + desplazamiento_segmento;
+	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
+	int numero_segmento = floor(direccion_logica / tamanio_segmento);
+	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
+	t_segmento* segmento_buscado = list_get(contexto->segmentos, numero_segmento);
+	int direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
 	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
-			activar_segmentation_fault(contexto);
+		//	activar_segmentation_fault(contexto);
 		}
 	return direccion_fisica;
 }
@@ -171,7 +169,8 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria){
 
 char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config){
 	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
-	char* valor = leer_de_memoria(direccion_fisica, config, fd_memoria);
+	char* valor;
+	strncpy(valor, leer_de_memoria(direccion_fisica, config, fd_memoria), strlen(leer_de_memoria(direccion_fisica, config, fd_memoria)) + 1);
 	return valor;
 }
 
@@ -180,66 +179,326 @@ void ejecutar_SET(char** instruccion, t_contexto_de_ejecucion* contexto){
 }
 
 void ejecutar_MOV_IN(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
-	char* valor = mmu_valor_buscado(contexto, instruccion[2], fd_memoria, config);
+	char* valor;
+	strncpy(valor, mmu_valor_buscado(contexto, instruccion[2], fd_memoria, config), strlen(mmu_valor_buscado(contexto, instruccion[2], fd_memoria, config))+1);
 	asignar_valor_a_registro(valor, instruccion[1], contexto->registros_pcb);
 }
 
 void ejecutar_MOV_OUT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
 	char* valor;
 	strncpy(valor, instruccion[2], strlen(instruccion[2]));
-	int direccion_fisica = obtener_direccion_fisica(instruccion[1], fd_memoria, config, contexto);
+	int direccion_fisica = obtener_direccion_fisica(&instruccion[1], fd_memoria, config, contexto);
 	escribir_en_memoria(direccion_fisica, valor, fd_memoria);
 }
+
+void serializar_segmentos(t_segmento* segmento_actual, void* stream, int offset){
+	memcpy(stream + offset, &segmento_actual->base, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &segmento_actual->id, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &segmento_actual->proteccion, sizeof(proteccion));
+	offset += sizeof(proteccion);
+	memcpy(stream + offset, &segmento_actual->tamanio, sizeof(int));
+	offset += sizeof(int);
+}
+
+
 void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada){
-	t_paquete* paquete = crear_paquete(IO); // IDEM leer_de_memoria
-	agregar_a_paquete(paquete, &(instruccion[1]), sizeof(int));
-	agregar_a_paquete(paquete, &contexto, (sizeof(int)+sizeof(int)+contexto->tamanio_registros+contexto->tamanio_instrucciones));
-	enviar_paquete(paquete, fd_kernel);
-	eliminar_paquete(paquete);
-	cpu_bloqueada = true;
-}
-/*
-void ejecutar_F_OPEN(char** instruccion, t_contexto_de_ejecucion contexto){
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+	buffer->stream_size = sizeof(int)*6 + contexto->tamanio_instrucciones + contexto->tamanio_segmentos + contexto->tamanio_registros;
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+	memcpy(stream + offset, &contexto->pid, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->tamanio_instrucciones, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->pc, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->tamanio_registros, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->tamanio_segmentos, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+	memcpy(stream + offset, &contexto->instrucciones, contexto->tamanio_instrucciones);
+	offset += contexto->tamanio_instrucciones;
+
+	t_registros* registro_actual = contexto->registros_pcb;
+	for(int i=0; i<(contexto->tamanio_registros); i++){
+		memcpy(stream + offset, registro_actual, sizeof(t_registros));
+		offset += sizeof(t_registros);
+		registro_actual++;
+	}
+	t_segmento* segmento_actual = contexto->segmentos;
+	for(int a=0; a<(contexto->tamanio_segmentos); a++){
+		serializar_segmentos(segmento_actual, stream, offset);
+		segmento_actual++;
+	}
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = IO;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
 
 }
-void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion contexto){
 
-}
-void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion contexto){
+void serializar_contexto(t_contexto_de_ejecucion* contexto, t_buffer* buffer, void* stream, int offset){
+	buffer = malloc(sizeof(t_buffer));
+	buffer->stream_size += sizeof(int)*5 + contexto->tamanio_instrucciones + contexto->tamanio_segmentos + contexto->tamanio_registros;
+	stream = malloc(buffer->stream_size);
+	memcpy(stream + offset, &contexto->pid, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->tamanio_instrucciones, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->pc, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->tamanio_registros, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->tamanio_segmentos, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &contexto->instrucciones, contexto->tamanio_instrucciones);
+	offset += contexto->tamanio_instrucciones;
 
-}
-void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-void ejecutar_SIGNAL(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-
-void ejecutar_CREATE_SEGMENT(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-
-void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion contexto){
-
-}
-
-void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion contexto){
-
+	t_registros* registro_actual = contexto->registros_pcb;
+	for(int i=0; i<(contexto->tamanio_registros); i++){
+		memcpy(stream + offset, registro_actual, sizeof(t_registros));
+		offset += sizeof(t_registros);
+		registro_actual++;
+	}
+	t_segmento* segmento_actual = contexto->segmentos;
+	for(int a=0; a<(contexto->tamanio_segmentos); a++){
+		serializar_segmentos(segmento_actual, stream, offset);
+		segmento_actual++;
+	}
 }
 
-void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion contexto){
+void ejecutar_F_OPEN(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+1;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = F_OPEN;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
 
 }
-*/
+void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+1;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = F_CLOSE;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+ 2 + strlen(instruccion[2]);
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+	memcpy(stream + offset, &instruccion[2], strlen(instruccion[2])+1);
+	offset += strlen(instruccion[2])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = F_SEEK;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+	}
+
+void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+	int direccion_fisica = obtener_direccion_fisica(&instruccion[2], fd_memoria, config, contexto);
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
+	offset += strlen(instruccion[2])+1;
+	memcpy(stream + offset, &instruccion[3], strlen(instruccion[3])+1);
+	offset += strlen(instruccion[3])+1;
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = F_READ;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+
+}
+void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+	int direccion_fisica = obtener_direccion_fisica(instruccion[2], fd_memoria, config, contexto);
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
+	offset += strlen(instruccion[2])+1;
+	memcpy(stream + offset, &instruccion[3], strlen(instruccion[3])+1);
+	offset += strlen(instruccion[3])+1;
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = F_WRITE;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1]) + strlen(instruccion[2]) + 2;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+	memcpy(stream + offset, &instruccion[2], strlen(instruccion[2])+1);
+	offset += strlen(instruccion[2])+1;
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = F_TRUNCATE;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+1;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = WAIT;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_SIGNAL(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+1;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = SIGNAL;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_CREATE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+ 2 + strlen(instruccion[2]);
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+	memcpy(stream + offset, &instruccion[2], strlen(instruccion[2])+1);
+	offset += strlen(instruccion[2])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = CREATE_SEGMENT;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer;
+	buffer->stream_size = strlen(instruccion[1])+1;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
+	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
+	offset += strlen(instruccion[1])+1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = DELETE_SEGMENT;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion* contexto){
+
+}
+
+void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion* contexto){
+
+}
+
 
 void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
 
@@ -260,49 +519,43 @@ void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_
 	else if(strcmp(instruccion_parseada[0], "IO") == 0){
 		ejecutar_IO(instruccion_parseada, contexto, fd_kernel, cpu_bloqueada);
 	}
-	else if(stcrmp(instruccion_parseada[0], "F_OPEN") == 0){
-		ejecutar_F_OPEN(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "F_OPEN") == 0){
+		ejecutar_F_OPEN(instruccion_parseada, contexto, fd_kernel);
 	}
-	else if(stcrmp(instruccion_parseada[0], "F_CLOSE") == 0){
-		ejecutar_F_CLOSE(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "F_CLOSE") == 0){
+		ejecutar_F_CLOSE(instruccion_parseada, contexto, fd_kernel);
 	}
-	else if(stcrmp(instruccion_parseada[0], "F_SEEK") == 0){
-			ejecutar_F_SEEK(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "F_SEEK") == 0){
+			ejecutar_F_SEEK(instruccion_parseada, contexto, fd_kernel);
 		}
-	else if(stcrmp(instruccion_parseada[0], "F_READ") == 0){
-			ejecutar_F_READ(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "F_READ") == 0){
+			ejecutar_F_READ(instruccion_parseada, contexto, fd_kernel, fd_memoria, config);
 		}
-	else if(stcrmp(instruccion_parseada[0], "F_WRITE") == 0){
-			ejecutar_F_WRITE(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "F_WRITE") == 0){
+			ejecutar_F_WRITE(instruccion_parseada, contexto, fd_kernel, fd_memoria, config);
 		}
-	else if(stcrmp(instruccion_parseada[0], "F_TRUNCATE") == 0){
-			ejecutar_F_TRUNCAE(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "F_TRUNCATE") == 0){
+			ejecutar_F_TRUNCATE(instruccion_parseada, contexto, fd_kernel);
 		}
-	else if(stcrmp(instruccion_parseada[0], "WAIT") == 0){
-			ejecutar_WAIT(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "WAIT") == 0){
+			ejecutar_WAIT(instruccion_parseada, contexto, fd_kernel);
 		}
-	else if(stcrmp(instruccion_parseada[0], "SIGNAL") == 0){
-			ejecutar_SIGNAL(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "SIGNAL") == 0){
+			ejecutar_SIGNAL(instruccion_parseada, contexto, fd_kernel);
 		}
-	else if(stcrmp(instruccion_parseada[0], "CREATE_SEGMENT") == 0){
-			ejecutar_CREATE_SEGMENT(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "CREATE_SEGMENT") == 0){
+			ejecutar_CREATE_SEGMENT(instruccion_parseada, contexto, fd_kernel);
 		}
-	else if(stcrmp(instruccion_parseada[0], "DELETE_SEGMENT") == 0){
-				ejecutar_DELETE_SEGMENT(instruccion_parseada, contexto);
+	else if(strcmp(instruccion_parseada[0], "DELETE_SEGMENT") == 0){
+				ejecutar_DELETE_SEGMENT(instruccion_parseada, contexto, fd_kernel);
 			}
-	else if(stcrmp(instruccion_parseada[0], "YIELD") == 0){
+	else if(strcmp(instruccion_parseada[0], "YIELD") == 0){
 				ejecutar_YIELD(instruccion_parseada, contexto);
 			}
-	else if(stcrmp(instruccion_parseada[0], "EXIT") == 0){
+	else if(strcmp(instruccion_parseada[0], "EXIT") == 0){
 				ejecutar_EXIT(instruccion_parseada, contexto);
 			}
 }
 
-// agregye esta funcion en conexion cpu kernel - ver de donde la eliminamos
-/*
-void enviar_contexto_de_ejecucion(int fd_kernel, t_contexto_de_ejecucion contexto){
-	t_paquete paquete = paquete_contexto_de_ejecucion(contexto);
-	enviar_paquete(paquete, fd_kernel);
-}
-*/
+
 
