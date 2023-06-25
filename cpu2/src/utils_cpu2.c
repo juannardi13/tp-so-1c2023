@@ -105,20 +105,58 @@ char* deserializar_paquete_de_memoria(t_buffer* buffer){
 	memcpy(valor, stream, buffer->stream_size);
 	return valor;
 }
-t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer* buffer){
-	t_contexto_de_ejecucion* contexto = malloc (buffer->stream_size);
-	void* stream = buffer->stream;
-	memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
-	stream += contexto->tamanio_instrucciones;
-	memcpy(&(contexto->pc), stream, sizeof(int));
+
+void deserializar_segmentos(t_segmento* segmento_actual, void* stream){
+	memcpy(&(segmento_actual->base), stream, sizeof(int));
 	stream += sizeof(int);
-	memcpy(&(contexto->pid), stream, sizeof(int));
+	memcpy(&(segmento_actual->id), stream, sizeof(int));
 	stream += sizeof(int);
-	memcpy(&(contexto->registros_pcb), stream, contexto->tamanio_registros);
-	stream += contexto->tamanio_registros;
-	memcpy(&(contexto->tabla_segmentos), deserializar_segmentos(), contexto->tamanio_segmentos);
+	memcpy(&(segmento_actual->proteccion), stream, sizeof(proteccion));
+	stream += sizeof(proteccion);
+	memcpy(&(segmento_actual->tamanio), stream, sizeof(int));
+	stream += sizeof(int);
+}
+
+t_contexto_de_ejecucion* recibir_contexto(int fd_kernel, t_contexto_de_ejecucion* contexto){
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
+
+	recv(fd_kernel, &(paquete->buffer->stream_size), sizeof(int), 0);
+	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+	recv(fd_kernel, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+	switch(paquete->codigo_operacion){
+	case CONTEXTO_DE_EJECUCION:
+		void* stream = paquete->buffer->stream;
+		memcpy(&(contexto->pid), stream, sizeof(int));
+		stream += sizeof(int);
+		memcpy(&(contexto->tamanio_instrucciones), stream, sizeof(int));
+		stream += sizeof(int);
+		memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
+		stream += contexto->tamanio_instrucciones;
+		memcpy(&(contexto->pc), stream, sizeof(int));
+		stream += sizeof(int);
+
+		t_registros* registro_actual = contexto->registros_pcb;
+		for(int i=0; i<(contexto->tamanio_registros); i++){
+			memcpy(&(registro_actual), stream, sizeof(t_registros));
+			stream += sizeof(t_registros);
+			registro_actual++;
+		}
+
+		t_segmento* segmento_actual = contexto->segmentos;
+		for(int a=0; a<(contexto->tamanio_segmentos); a++){
+			deserializar_segmentos(segmento_actual, stream);
+			segmento_actual++;
+		}
+	}
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+
 	return contexto;
 }
+
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 
 	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA); // IMPORTANTE ver con juani tema op_code y como crear paquete
@@ -246,6 +284,7 @@ void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_k
 	free(paquete->buffer);
 	free(paquete);
 
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void serializar_contexto(t_contexto_de_ejecucion* contexto, t_buffer* buffer, void* stream, int offset){
@@ -297,7 +336,9 @@ void ejecutar_F_OPEN(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer);
 	free(paquete);
 
+	recibir_contexto(fd_kernel, contexto);
 }
+
 void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
 	t_buffer* buffer;
 	buffer->stream_size = strlen(instruccion[1])+1;
@@ -316,6 +357,8 @@ void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion* contexto, int
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -338,6 +381,8 @@ void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+
+	recibir_contexto(fd_kernel, contexto);
 	}
 
 void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
@@ -362,8 +407,9 @@ void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
+	recibir_contexto(fd_kernel, contexto);
 }
+
 void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
 	t_buffer* buffer;
 	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
@@ -386,6 +432,7 @@ void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -407,6 +454,7 @@ void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion* contexto, 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -427,6 +475,8 @@ void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_SIGNAL(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -447,6 +497,8 @@ void ejecutar_SIGNAL(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_CREATE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -469,6 +521,8 @@ void ejecutar_CREATE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contex
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -489,14 +543,44 @@ void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contex
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
+
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion* contexto){
+	t_buffer* buffer;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
 
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = YIELD;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion* contexto){
+	t_buffer* buffer;
+	void* stream;
+	int offset = 0;
+	serializar_contexto(contexto, buffer, stream, offset);
 
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = EXIT;
+	paquete->buffer = buffer;
+
+	send(fd_kernel, stream, buffer->stream_size, 0);
+
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+	recibir_contexto(fd_kernel, contexto);
 }
 
 
@@ -550,10 +634,10 @@ void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_
 				ejecutar_DELETE_SEGMENT(instruccion_parseada, contexto, fd_kernel);
 			}
 	else if(strcmp(instruccion_parseada[0], "YIELD") == 0){
-				ejecutar_YIELD(instruccion_parseada, contexto);
+				ejecutar_YIELD(instruccion_parseada, contexto, fd_kernel);
 			}
 	else if(strcmp(instruccion_parseada[0], "EXIT") == 0){
-				ejecutar_EXIT(instruccion_parseada, contexto);
+				ejecutar_EXIT(instruccion_parseada, contexto, fd_kernel);
 			}
 }
 
