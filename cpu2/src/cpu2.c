@@ -37,7 +37,6 @@ void* ejecutar_proceso(void* args){
 }*/
 int main() {
 	bool cpu_bloqueada = false;
-	inicializar_registros();
 	char* ip_kernel;
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
@@ -72,6 +71,7 @@ int main() {
     switch(paquete->codigo_operacion){
     	case CONTEXTO_DE_EJECUCION :
     		contexto = deserializar_contexto_de_ejecucion(paquete->buffer);
+		inicializar_registros(contexto->registros_pcb);
     		char* instruccion_a_ejecutar;
     		strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
     		decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
