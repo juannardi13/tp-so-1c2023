@@ -16,22 +16,35 @@
 
 extern t_registros* registros;
 
-t_log* iniciar_logger(void);
-t_config* iniciar_config(void);
-void decode_instruccion(char*, t_contexto_de_ejecucion*, t_config*, int, int, bool);
-char* fetch_instruccion(t_contexto_de_ejecucion*);
 void asignar_valor_a_registro(char*, char*, t_registros*);
 void activar_segmentation_fault(t_contexto_de_ejecucion*);
 bool desplazamiento_supera_tamanio(int, char*);
-char* leer_de_memoria(int, t_config*, int);
-int obtener_direccion_fisica(char*, int, t_config*, t_contexto_de_ejecucion*);
-void escribir_en_memoria(int, char*, int);
-char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
+char* deserializar_paquete_de_memoria(t_buffer*);
+t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer*);
+void decode_instruccion(char*, t_contexto_de_ejecucion*, t_config*, int, int, bool);
 void ejecutar_SET(char**, t_contexto_de_ejecucion*);
 void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
-char* deserializar_paquete_de_memoria(t_buffer*);
-void inicializar_registros(void);
-t_contexto_de_ejecucion* deserializar_contexto_de_ejecucion(t_buffer*);
+void ejecutar_F_OPEN(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_F_CLOSE(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_F_SEEK(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_F_READ(char**, t_contexto_de_ejecucion*, int, int, t_config*);
+void ejecutar_F_WRITE(char**, t_contexto_de_ejecucion*, int, int, t_config*);
+void ejecutar_F_TRUNCATE(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_WAIT(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_CREATE_SEGMENT(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_DELETE_SEGMENT(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_YIELD(char**, t_contexto_de_ejecucion*);
+void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion*);
+void escribir_en_memoria(int, char*, int);
+char* fetch_instruccion(t_contexto_de_ejecucion*);
+t_log* iniciar_logger(void);
+void inicializar_registros(t_registros*);
+t_config* iniciar_config(void);
+char* leer_de_memoria(int, t_config*, int);
+char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
+int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*);
+void serializar_contexto(t_contexto_de_ejecucion*, t_buffer*, void*, int);
+void serializar_segmentos(t_segmento*, void*, int);
 #endif /* UTILS_H_ */
