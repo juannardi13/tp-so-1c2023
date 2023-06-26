@@ -17,7 +17,7 @@
 extern t_registros* registros;
 
 void asignar_valor_a_registro(char*, char*, t_registros*);
-void activar_segmentation_fault(t_contexto_de_ejecucion*);
+void activar_segmentation_fault(t_contexto_de_ejecucion*, int);
 bool desplazamiento_supera_tamanio(int, char*);
 char* deserializar_paquete_de_memoria(t_buffer*);
 void deserializar_segmentos(t_segmento*, void*);

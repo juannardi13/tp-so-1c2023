@@ -26,10 +26,17 @@ t_config* iniciar_config(void) {
 
 //--------------------
 
+int convertirAEntero(char *cadena) {
+    int resultado = 0;
+
+    for (int i = 0; cadena[i] != '\0'; ++i) {
+            resultado = resultado * 10 + (cadena[i] - '0');
+    }
+    return resultado;
+}
+
 char* fetch_instruccion(t_contexto_de_ejecucion* contexto){
-	char* unas_intrucciones;
-	strncpy(unas_intrucciones, contexto->instrucciones, strlen(contexto->instrucciones)+1);
-	char** intrucciones_parseadas = string_split(unas_intrucciones, "\n");
+	char** intrucciones_parseadas = string_split(contexto->instrucciones, "\n");
 	char* instruccion_a_ejecutar = intrucciones_parseadas[contexto->pc];
 	contexto->pc++;
 	return instruccion_a_ejecutar;
@@ -73,7 +80,7 @@ void asignar_valor_a_registro(char* valor, char* registro, t_registros* registro
 			strncpy(registros->rdx, valor, strlen(valor)+1);
 		}
 }
-void inicializar_registros(void){
+void inicializar_registros(t_registros* registros){
 	strncpy(registros->ax, "0000", strlen("0000")+1);
 	strncpy(registros->bx, "0000", strlen("0000")+1);
 	strncpy(registros->cx, "0000", strlen("0000")+1);
@@ -87,7 +94,7 @@ void inicializar_registros(void){
 	strncpy(registros->rcx, "0000000000000000", strlen("0000000000000000")+1);
 	strncpy(registros->rdx, "0000000000000000", strlen("0000000000000000")+1);
 }
-void activar_segmentation_fault(t_contexto_de_ejecucion* contexto, fd_kernel){
+void activar_segmentation_fault(t_contexto_de_ejecucion* contexto, int fd_kernel){
 	t_paquete* paquete = crear_paquete(SEG_FAULT);
 		//serializar_contexto_ejecucion(contexto);
 		enviar_paquete(paquete, fd_kernel);
@@ -217,9 +224,8 @@ void ejecutar_SET(char** instruccion, t_contexto_de_ejecucion* contexto){
 }
 
 void ejecutar_MOV_IN(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
-	char* valor;
-	strncpy(valor, mmu_valor_buscado(contexto, instruccion[2], fd_memoria, config), strlen(mmu_valor_buscado(contexto, instruccion[2], fd_memoria, config))+1);
-	asignar_valor_a_registro(valor, instruccion[1], contexto->registros_pcb);
+	int direccion_logica = convertirAEntero(instruccion[2]);
+	asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, fd_memoria, config), instruccion[1], contexto->registros_pcb);
 }
 
 void ejecutar_MOV_OUT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
