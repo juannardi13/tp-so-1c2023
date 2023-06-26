@@ -144,7 +144,7 @@ t_contexto_de_ejecucion* recibir_contexto(int fd_kernel, t_contexto_de_ejecucion
 			registro_actual++;
 		}
 
-		t_segmento* segmento_actual = contexto->segmentos;
+		t_segmento* segmento_actual = contexto->tabla_segmentos;
 		for(int a=0; a<(contexto->tamanio_segmentos); a++){
 			deserializar_segmentos(segmento_actual, stream);
 			segmento_actual++;
@@ -190,7 +190,7 @@ int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* con
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
 	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
-	t_segmento* segmento_buscado = list_get(contexto->segmentos, numero_segmento);
+	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
 	int direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
 	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
 		//	activar_segmentation_fault(contexto);
@@ -268,7 +268,7 @@ void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_k
 		offset += sizeof(t_registros);
 		registro_actual++;
 	}
-	t_segmento* segmento_actual = contexto->segmentos;
+	t_segmento* segmento_actual = contexto->tabla_segmentos;
 	for(int a=0; a<(contexto->tamanio_segmentos); a++){
 		serializar_segmentos(segmento_actual, stream, offset);
 		segmento_actual++;
@@ -310,7 +310,7 @@ void serializar_contexto(t_contexto_de_ejecucion* contexto, t_buffer* buffer, vo
 		offset += sizeof(t_registros);
 		registro_actual++;
 	}
-	t_segmento* segmento_actual = contexto->segmentos;
+	t_segmento* segmento_actual = contexto->tabla_segmentos;
 	for(int a=0; a<(contexto->tamanio_segmentos); a++){
 		serializar_segmentos(segmento_actual, stream, offset);
 		segmento_actual++;
@@ -547,7 +547,7 @@ void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contex
 	recibir_contexto(fd_kernel, contexto);
 }
 
-void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion* contexto){
+void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
 	t_buffer* buffer;
 	void* stream;
 	int offset = 0;
@@ -565,7 +565,7 @@ void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion* contexto){
 	recibir_contexto(fd_kernel, contexto);
 }
 
-void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion* contexto){
+void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
 	t_buffer* buffer;
 	void* stream;
 	int offset = 0;
