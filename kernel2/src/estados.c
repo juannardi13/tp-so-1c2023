@@ -11,11 +11,16 @@ void estado_ejecutar(void) {
 		t_proceso* proceso_a_ejecutar = list_get(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
 		pthread_mutex_unlock(&mutex_exec);
 
-		struct timespec inicio, final; //Estructuras y definiciones necesarias para calcular el HRRN
-		clock_gettime(CLOCK_REALTIME, &inicio);
-		long seconds; 
-		long nanoseconds;
-		double elapsed;
+//		struct timespec inicio, final; //Estructuras y definiciones necesarias para calcular el HRRN
+	//	clock_gettime(CLOCK_REALTIME, &inicio);
+	//	long seconds; 
+	//	long nanoseconds;
+	//	double elapsed;
+
+	// 	if(proceso_a_ejecutar no viene de una instrucción que lo desalojó del CPU) 
+
+		int inicio_cpu = get_time();
+		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
 		
 		enviar_pcb(socket_cpu, proceso->pcb);
 		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
@@ -26,26 +31,35 @@ void estado_ejecutar(void) {
 
 		switch (respuesta_cpu) {
 		case IO:
-			clock_gettime(CLOCK_REALTIME, &final);
-			seconds = final.tv_sec - inicio.tv_sec;
-			nanoseconds = final.tv_nsec - inicio.tv_nsec;
-			elapsed = seconds + nanoseconds * 1e - 9;
-			proceso_a_ejecutar->ultima_rafaga = elapsed;
+		//	clock_gettime(CLOCK_REALTIME, &final);
+		//	seconds = final.tv_sec - inicio.tv_sec;
+		//	nanoseconds = final.tv_nsec - inicio.tv_nsec;
+		//	elapsed = seconds + nanoseconds * 1e - 9;
+		//	proceso_a_ejecutar->ultima_rafaga = elapsed;
 			
 			//TODO buscar la manera de ejecutar IO
 			//Quizas convenga mandarlo a dormir con usleep en estado block
 			//Tambien ver si conviene crear la funcion get_time();
 			//Otra forma de hacerlo puede ser:
 
-			struct timespec inicio_bloqueo;
-			clock_gettime(CLOCK_REALTIME, &inicio_bloqueo);
-			long segundos_inicio_bloqueo = inicio_bloqueo.tv_sec;
-			long nanosegundos_inicio_bloqueo = inicio_bloqueo.tv_nsec;
-			double comienzo_bloqueo = segundos_inicio_bloqueo + nanosegundos_inicio_bloqueo * 1e - 9;
-			proceso_a_ejecutar->inicio_block = comienzo_bloqueo;
+			int finalizacion_cpu = get_time();
+			proceso_a_ejecutar->fin_ultima_rafaga = finalizacion_cpu;
+			proceso_a_ejecutar->pcb->ultima_rafaga = proceso_a_ejecutar->fin_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
+			proceso_a_ejecutar->ultima_instruccion = IO;
+			
+		//	struct timespec inicio_bloqueo;
+		//	clock_gettime(CLOCK_REALTIME, &inicio_bloqueo);
+		//	long segundos_inicio_bloqueo = inicio_bloqueo.tv_sec;
+		//	long nanosegundos_inicio_bloqueo = inicio_bloqueo.tv_nsec;
+		//	double comienzo_bloqueo = segundos_inicio_bloqueo + nanosegundos_inicio_bloqueo * 1e - 9;
+		//	proceso_a_ejecutar->inicio_block = comienzo_bloqueo;
+
+			int inicio_block = get_time();
+			proceso_a_ejecutar->inicio_bloqueo = inicio_block;
+			
 			//Una forma de resolverlo:
-			proceso_a_ejecutar->tiempo_bloqueo = recibir_parametro_instruccion(); //Implementar esta fuincion y fijarse si es en microsegundos nanosegundos o lo que sea
+			proceso_a_ejecutar->tiempo_bloqueo = recibir_parametro_instruccion(); //Implementar esta función y fijarse si es en microsegundos nanosegundos o lo que sea TODO
 
 			pthread_mutex_lock(&mutex_block_io);
 			proceso_a_ejecutar->pcb->estado = BLOCK;
@@ -58,51 +72,81 @@ void estado_ejecutar(void) {
 			break;
 		case F_OPEN:
 			//Abrir o crear el archivo pasado por parámetro
+
+			proceso_a_ejecutar->ultima_instruccion = F_OPEN;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue F_OPEN");
 			break;
 		case F_CLOSE:
 			//Cerrar el archivo pasado por parámetro
+			proceso_a_ejecutar->ultima_instruccion = F_CLOSE;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue F_CLOSE");
 			break;
 		case F_SEEK:
 			//Actualizar el puntero del archivo a la posición pasada por parámetro
+
+			proceso_a_ejecutar->ultima_instruccion = F_SEEK;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue F_SEEK");
 			break;
 		case F_READ:
 			//Leer del archivo indicado la cantidad de bytes pasados por parámetro y escribirlo en la dirección física de memoria
+
+			proceso_a_ejecutar->ultima_instruccion = F_READ;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue F_READ");
 			break;
 		case F_WRITE:
 			//Esta instrucción solicita al Kernel que se escriba en el archivo indicado la cantidad de bytes pasados por parámetro cuya información es obtenida a partir de la dirección física de Memoria.
+
+			proceso_a_ejecutar->ultima_instruccion = F_WRITE;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue F_WRITE");
 			break;
 		case F_TRUNCATE:
 			//Modificar el tamaño del archivo al indicado por parámetro.
+
+			proceso_a_ejecutar->ultima_instruccion = F_TRUNCATE;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue F_TRUNCATE");
 			break;
 		case WAIT:
 			//Se asigne una instancia del recurso indicado por parámetro
+
+			proceso_a_ejecutar->ultima_instruccion = WAIT;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue WAIT");
 			break;
 		case SIGNAL:
 			//Libera una instancia del recurso indicado por parámetro.
+
+			proceso_a_ejecutar->ultima_instruccion = SIGNAL;
+			
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue SIGNAL");
 			break;
 		case YIELD:
 			//Se pone en cola de ready al proceso de nuevo.
-			clock_gettime(CLOCK_REALTIME, &final);
-			seconds = final.tv_sec - inicio.tv_sec;
-			nanoseconds = final.tv_nsec - inicio.tv_nsec;
-			elapsed = seconds + nanoseconds * 1e - 9;
-			proceso_a_ejecutar->ultima_rafaga = elapsed;
+
+			proceso_a_ejecutar->ultima_instruccion = YIELD;
+			
+		//	clock_gettime(CLOCK_REALTIME, &final);
+		//	seconds = final.tv_sec - inicio.tv_sec;
+		//	nanoseconds = final.tv_nsec - inicio.tv_nsec;
+		//	elapsed = seconds + nanoseconds * 1e - 9;
+		//	proceso_a_ejecutar->ultima_rafaga = elapsed;
+
+			int fin_cpu = get_time();
+			proceso_a_ejecutar->fin_ultima_rafaga = fin_cpu;
+			proceso_a_ejecutar->pcb->ultima_rafaga = proceso_a_ejecutar->fin_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 			
 			log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
 			pthread_mutex_lock(&mutex_ready);
@@ -158,7 +202,7 @@ void estado_exit(void) {
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
 
-		log_info(logger_kernel, "Ordenando a Consola la finalización del proceso");
+		log_info(logger_kernel, "Ordenando a Consola la finalización del proceso PCB id[%d]", proceso->pcb->pid);
 
 		eliminar_pcb(proceso->pcb);
 		free(proceso);
@@ -230,28 +274,31 @@ void aplicar_hrrn(void) {
 
 void calcular_response_ratio(t_proceso* proceso) {
 	//ATENCIÓN CON LO QUE VIENE ES UNA MAGIC JOHNSON, DESPUÉS INDAGAR BIEN TODO SOBRE FUNCIONES DE CLOCK
-	struct timespec end;
-	clock_gettime(CLOCK_REALTIME, &end);
+//	struct timespec end;
+//	clock_gettime(CLOCK_REALTIME, &end);
+//
+//	long seconds = end.tv_sec - proceso->pcb->llegada_ready.tv_sec;
+//	long nanoseconds = end.tv_nsec - proceso->pcb->llegada_ready.tv_sec;
+//	double elapsed = seconds + nanoseconds * 1e-9;
 
-	long seconds = end.tv_sec - proceso->pcb->llegada_ready.tv_sec;
-	long nanoseconds = end.tv_nsec - proceso->pcb->llegada_ready.tv_sec;
-	double elapsed = seconds + nanoseconds * 1e-9;
+	int fin_espera = get_time();
+	int elapsed = fin_espera - proceso->llegada_ready;
 
-	proceso->pcb->tiempo_espera = elapsed; //TODO poner tiempo de llegada a ready en el hilo correspondiente estado_ready y estado_block
-	proceso->pcb->response_ratio = 1 + (proceso->pcb->tiempo_espera / proceso->pcb->rafaga_estimada);
+	proceso->tiempo_espera = elapsed; //TODO poner tiempo de llegada a ready en el hilo correspondiente estado_ready y estado_block
+	proceso->response_ratio = 1 + (proceso->tiempo_espera / proceso->rafaga_estimada);
 }
 
 bool comparador_response_ratio(t_proceso* un_proceso, t_proceso* otro_proceso) {
-	return un_proceso->pcb->response_ratio >= otro_proceso->pcb->response_ratio;
+	return un_proceso->response_ratio >= otro_proceso->response_ratio;
 }
 
 void mostrar_response_ratio(t_proceso* un_proceso) {
-	log_info(logger_kernel, "PCB id[%d] tiene un RR de: %f", un_proceso->pcb->response_ratio);
+	log_info(logger_kernel, "PCB id[%d] tiene un RR de: %f", un_proceso->response_ratio);
 }
 
 void calcular_estimacion(t_proceso* un_proceso) {
-	double nueva_rafaga = (config_kernel.alfa_hrrn * un_proceso->pcb->rafaga_estimada) + ((un_proceso->pcb->ultima_rafaga) * (1 - config_kernel.alfa_hrrn));
-	un_proceso->pcb->rafaga_estimada = nueva_rafaga;
+	double nueva_rafaga = (config_kernel.alfa_hrrn * un_proceso->rafaga_estimada) + ((un_proceso->ultima_rafaga) * (1 - config_kernel.alfa_hrrn));
+	un_proceso->rafaga_estimada = nueva_rafaga;
 }
 
 //-----------------------------------------ESTADO BLOCK POR IO--------------------------------------------------------------------------------------
@@ -272,6 +319,8 @@ void estado_block_io(void) {
 		list_add(cola_ready, proceso);
 		pthread_mutex_unlock(&mutex_ready);
 
-		sem_post(&sem_ready);
+		proceso->llegada_ready = get_time();
+		
+		sem_post(&sem_ready); 
 	}
 }
