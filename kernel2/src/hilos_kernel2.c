@@ -95,11 +95,11 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	un_pcb->estado = NEW;
 	un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
 	un_pcb->registros = registros_iniciados;
-	un_pcb->rafaga_estimada = config_kernel.estimacion_inicial;
-	un_pcb->rafaga_anterior = 0;
-	un_pcb->llegada_ready = 0; //ver función get_time()
-	un_pcb->response_ratio = 0;
-	un_pcb->tiempo_espera = 0;
+	//un_pcb->rafaga_estimada = config_kernel.estimacion_inicial; // TODO las rafagas y todos los tiempos que necesita el proceso para calcular el HRRN ahora estan en la estructura del proceso.
+	//un_pcb->rafaga_anterior = 0;
+	//un_pcb->llegada_ready = 0; //ver función get_time()
+	//un_pcb->response_ratio = 0;
+	//un_pcb->tiempo_espera = 0;
 	//Cada vez que agreguemos algo nuevo al pcb lo hacemos como ariba
 
 	free(instrucciones);
@@ -138,10 +138,11 @@ void admitir_procesos_a_ready(void) { //hilo
 		log_info(logger_kernel, "PCB id[%d] ingresa a READY desde NEW", proceso->pcb->pid);
 
 		pthread_mutex_lock(&mutex_ready);
-		//proceso->pcb->llegada_ready = ; TODO poner el tiempo en el que llega a ready
 		list_add(cola_ready, proceso);
 		pthread_mutex_unlock(&mutex_ready);
 
+		proceso->llegada_ready = get_time();
+		
 		sem_post(&sem_ready);
 	}
 }
