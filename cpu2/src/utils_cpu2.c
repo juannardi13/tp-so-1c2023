@@ -153,10 +153,11 @@ t_contexto_de_ejecucion* recibir_contexto(int fd_kernel, t_contexto_de_ejecucion
 
 		t_segmento* segmento_actual = contexto->tabla_segmentos;
 		for(int a=0; a<(contexto->tamanio_segmentos); a++){
-			deserializar_segmentos(segmento_actual, stream);
-			segmento_actual++;
-		}
-	}
+					deserializar_segmentos(segmento_actual, stream);
+					segmento_actual++;
+				}
+			}
+
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
@@ -229,10 +230,9 @@ void ejecutar_MOV_IN(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 }
 
 void ejecutar_MOV_OUT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
-	char* valor;
-	strncpy(valor, instruccion[2], strlen(instruccion[2]));
-	int direccion_fisica = obtener_direccion_fisica(&instruccion[1], fd_memoria, config, contexto);
-	escribir_en_memoria(direccion_fisica, valor, fd_memoria);
+	int direccion_logica = convertirAEntero(instruccion[1]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
+	escribir_en_memoria(direccion_fisica, instruccion[2], fd_memoria);
 }
 
 void serializar_segmentos(t_segmento* segmento_actual, void* stream, int offset){
@@ -399,7 +399,8 @@ void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	serializar_contexto(contexto, buffer, stream, offset);
 	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
 	offset += strlen(instruccion[1])+1;
-	int direccion_fisica = obtener_direccion_fisica(&instruccion[2], fd_memoria, config, contexto);
+	int direccion_logica = convertirAEntero(instruccion[2]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
 	memcpy(stream + offset, &direccion_fisica, sizeof(int));
 	offset += strlen(instruccion[2])+1;
 	memcpy(stream + offset, &instruccion[3], strlen(instruccion[3])+1);
@@ -424,7 +425,8 @@ void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int
 	serializar_contexto(contexto, buffer, stream, offset);
 	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
 	offset += strlen(instruccion[1])+1;
-	int direccion_fisica = obtener_direccion_fisica(instruccion[2], fd_memoria, config, contexto);
+	int direccion_logica = convertirAEntero(instruccion[2]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
 	memcpy(stream + offset, &direccion_fisica, sizeof(int));
 	offset += strlen(instruccion[2])+1;
 	memcpy(stream + offset, &instruccion[3], strlen(instruccion[3])+1);
