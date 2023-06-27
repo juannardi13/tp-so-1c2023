@@ -45,7 +45,7 @@ t_config* iniciar_config(void);
 char* leer_de_memoria(int, t_config*, int);
 char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
 int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*);
-t_contexto_de_ejecucion* recibir_contexto(int, t_contexto_de_ejecucion*);
+void recibir_contexto(int, t_contexto_de_ejecucion*);
 void serializar_contexto(t_contexto_de_ejecucion*, t_buffer*, void*, int);
 void serializar_segmentos(t_segmento*, void*, int);
 #endif /* UTILS_H_ */

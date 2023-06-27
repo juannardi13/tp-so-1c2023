@@ -80,20 +80,7 @@ void asignar_valor_a_registro(char* valor, char* registro, t_registros* registro
 			strncpy(registros->rdx, valor, strlen(valor)+1);
 		}
 }
-void inicializar_registros(t_registros* registros){
-	strncpy(registros->ax, "0000", strlen("0000")+1);
-	strncpy(registros->bx, "0000", strlen("0000")+1);
-	strncpy(registros->cx, "0000", strlen("0000")+1);
-	strncpy(registros->dx, "0000", strlen("0000")+1);
-	strncpy(registros->eax, "00000000", strlen("00000000")+1);
-	strncpy(registros->ebx, "00000000", strlen("00000000")+1);
-	strncpy(registros->ecx, "00000000", strlen("00000000")+1);
-	strncpy(registros->edx, "00000000", strlen("00000000")+1);
-	strncpy(registros->rax, "0000000000000000", strlen("0000000000000000")+1);
-	strncpy(registros->rbx, "0000000000000000", strlen("0000000000000000")+1);
-	strncpy(registros->rcx, "0000000000000000", strlen("0000000000000000")+1);
-	strncpy(registros->rdx, "0000000000000000", strlen("0000000000000000")+1);
-}
+
 void activar_segmentation_fault(t_contexto_de_ejecucion* contexto, int fd_kernel){
 	t_paquete* paquete = crear_paquete(SEG_FAULT);
 		//serializar_contexto_ejecucion(contexto);
@@ -124,7 +111,7 @@ void deserializar_segmentos(t_segmento* segmento_actual, void* stream){
 	stream += sizeof(int);
 }
 
-t_contexto_de_ejecucion* recibir_contexto(int fd_kernel, t_contexto_de_ejecucion* contexto){
+void recibir_contexto(int fd_kernel, t_contexto_de_ejecucion* contexto){
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	paquete->buffer = malloc(sizeof(t_buffer));
 
@@ -151,18 +138,16 @@ t_contexto_de_ejecucion* recibir_contexto(int fd_kernel, t_contexto_de_ejecucion
 			registro_actual++;
 		}
 
-		t_segmento* segmento_actual = contexto->tabla_segmentos;
-		for(int a=0; a<(contexto->tamanio_segmentos); a++){
-					deserializar_segmentos(segmento_actual, stream);
-					segmento_actual++;
+		for(int a=0; a<(list_size(contexto->tabla_segmentos)); a++){
+			t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
+			deserializar_segmentos(segmento_actual, stream);
 				}
 			}
-
+	/*
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
-	free(paquete);
+	free(paquete);*/
 
-	return contexto;
 }
 
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
@@ -274,8 +259,9 @@ void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_k
 		offset += sizeof(t_registros);
 		registro_actual++;
 	}
-	t_segmento* segmento_actual = contexto->tabla_segmentos;
+
 	for(int a=0; a<(contexto->tamanio_segmentos); a++){
+		t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
 		serializar_segmentos(segmento_actual, stream, offset);
 		segmento_actual++;
 	}

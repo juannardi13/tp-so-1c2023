@@ -38,21 +38,49 @@ int main() {
 
     	switch(paquete->codigo_operacion){
     	case CONTEXTO_DE_EJECUCION :
-    		contexto = deserializar_contexto_de_ejecucion(paquete->buffer);
-    		inicializar_registros(contexto->registros_pcb);
-    		char* instruccion_a_ejecutar;
-    		strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
-    	 	decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
-    	    break;
-    	default:
-    		log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-    		break;
+    		void* stream = paquete->buffer->stream;
+    				memcpy(&(contexto->pid), stream, sizeof(int));
+    				stream += sizeof(int);
+    				memcpy(&(contexto->tamanio_instrucciones), stream, sizeof(int));
+    				stream += sizeof(int);
+    				memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
+    				stream += contexto->tamanio_instrucciones;
+    				memcpy(&(contexto->pc), stream, sizeof(int));
+    				stream += sizeof(int);
+
+    				t_registros* registro_actual = contexto->registros_pcb;
+    				for(int i=0; i<(contexto->tamanio_registros); i++){
+    					memcpy(&(registro_actual), stream, sizeof(t_registros));
+    					stream += sizeof(t_registros);
+    					registro_actual++;
+    				}
+
+    				for(int a=0; a<(list_size(contexto->tabla_segmentos)); a++){
+    					t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
+    					deserializar_segmentos(segmento_actual, stream);
+    						}
+    				int i = 0;
+    				    		char** intrucciones_parseadas = string_split(contexto->instrucciones, "\n");
+    				    		int cantidad_intrucciones = sizeof(intrucciones_parseadas);
+    				    		while(i < cantidad_intrucciones){
+    				    			char* instruccion_a_ejecutar;
+    				    			strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
+    				    			decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
+    				    			i++;
+    				    		}
+
+    				    	    break;
+    			default:
+    	    		log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+    	    		break;
+    					}
+
     	}
 
+    return 0;
     }
 
-    return 0;
-}
+
 
 
 
