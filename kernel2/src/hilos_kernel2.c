@@ -95,6 +95,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	un_pcb->estado = NEW;
 	un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
 	un_pcb->registros = registros_iniciados;
+	un_pcb->recursos_asignados = list_create();
 	//un_pcb->rafaga_estimada = config_kernel.estimacion_inicial; // TODO las rafagas y todos los tiempos que necesita el proceso para calcular el HRRN ahora estan en la estructura del proceso.
 	//un_pcb->rafaga_anterior = 0;
 	//un_pcb->llegada_ready = 0; //ver función get_time()
