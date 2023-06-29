@@ -39,8 +39,8 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 	offset += (strlen(pcb->instrucciones) + 1);
 	memcpy(stream + offset, &(pcb->pc), sizeof(estado_proceso));
 	offset += sizeof(estado_proceso);
-	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
-	offset += sizeof(int);
+//	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
+//	offset += sizeof(int);
 	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
 //	offset += sizeof(t_registros);
 //	memcpy(stream + offset, &(pcb->tamanio_segmentos), sizeof(int));
@@ -107,8 +107,8 @@ t_pcb* deserializar_pcb(t_buffer* buffer) {
 	stream += sizeof(estado_proceso);
 	memcpy(&(pcb->pc), stream, sizeof(int));
 	stream += sizeof(int);
-	memcpy(&(pcb->tamanio), stream, sizeof(int));
-	stream += sizeof(int);
+	//memcpy(&(pcb->tamanio), stream, sizeof(int));
+	//stream += sizeof(int);
 	memcpy(&(pcb->registros), stream, sizeof(t_registros));
 
 	return pcb;
@@ -116,14 +116,6 @@ t_pcb* deserializar_pcb(t_buffer* buffer) {
 
 void avisar_a_modulo(int socket, op_code codigo) {
 	enviar_datos(socket, &codigo, sizeof(op_code));
-}
-
-int enviar_datos(int socket, void* datos, int size) {
-	return send(socket, datos, size, 0);
-}
-
-int recibir_datos(int socket, void* destino, int size) {
-	return send(socket, destino, size, 0);
 }
 
 //Funciones de deserialización de estructuras que ya no se usan, como t_instruccion (NO ANDAN DEL TODO BIEN)

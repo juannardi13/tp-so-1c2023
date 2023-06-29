@@ -10,6 +10,8 @@ t_consola* consola;
 t_list* cola_new;
 t_list* cola_ready;
 t_list* cola_exit;
+t_list* cola_block_io;
+t_list* cola_exec;
 
 void manejar_conexion(int socket_cliente) {
 
@@ -93,7 +95,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	un_pcb->instrucciones = string_duplicate(instrucciones);
 	un_pcb->pc = 0;
 	un_pcb->estado = NEW;
-	un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
+	//un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
 	un_pcb->registros = registros_iniciados;
 	un_pcb->recursos_asignados = list_create();
 	//un_pcb->rafaga_estimada = config_kernel.estimacion_inicial; // TODO las rafagas y todos los tiempos que necesita el proceso para calcular el HRRN ahora estan en la estructura del proceso.

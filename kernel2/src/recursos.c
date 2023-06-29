@@ -1,9 +1,11 @@
 #include"utils_kernel2.h"
 #include<shared-2.h>
 
-t_dictionary* inicializar_recursos(void) {
+t_dictionary* recursos;
 
-	t_dictionary* recursos = dictionary_create();
+void iniciar_recursos(void) {
+
+	recursos = dictionary_create();
 	log_debug(logger_kernel, "Se crea el diccionario con los recursos.");
 
 	t_recurso* recurso;
@@ -16,15 +18,14 @@ t_dictionary* inicializar_recursos(void) {
 		recurso->instancias_totales = atoi(config_kernel.instancias_recursos[i]);
 		recurso->cola_espera = queue_create();
 
-		pthread_mutex_t *mutex_cola_espera = malloc(sizeof(pthread_mutex_t));
+		pthread_mutex_t* mutex_cola_espera = malloc(sizeof(pthread_mutex_t));
 		if (pthread_mutex_init(mutex_cola_espera, NULL) != 0) {
 			log_error(logger_kernel, "Error al iniciar el Mutex");
 			exit(3);
 		}
 		recurso->mutex_cola_espera = mutex_cola_espera;
 
-		pthread_mutex_t *mutex_instancia_usada = malloc(
-				sizeof(pthread_mutex_t));
+		pthread_mutex_t* mutex_instancia_usada = malloc(sizeof(pthread_mutex_t));
 		if (pthread_mutex_init(mutex_instancia_usada, NULL) != 0) {
 			log_error(logger_kernel, "Error al iniciar el Mutex");
 			exit(3);
@@ -35,10 +36,9 @@ t_dictionary* inicializar_recursos(void) {
 		log_debug(logger_kernel, "Se agrego el recurso %s al diccionario", recurso->nombre);
 	}
 
-	return recursos; //TODO hacerla global
 }
 
-void liberar_recursos(t_dictionary* recursos) {
+void liberar_recursos(void) {
 	dictionary_iterator(recursos, liberar_recurso);
 }
 
@@ -71,13 +71,13 @@ void funcion_recurso(char* key, void* elemento) {
 
 	t_recurso* recurso = (t_recurso*) elemento;
 
-	pthread_mutex_lock(&(recurso->mutex_instancia_usada));
+	pthread_mutex_lock(recurso->mutex_instancia_usada);
 	if(recurso->instancias_totales > recurso->instancias_usadas && !queue_is_empty(recurso->cola_espera)) {
 
-		pthread_mutex_lock(&(recurso->mutex_cola_espera));
+		pthread_mutex_lock(recurso->mutex_cola_espera);
 		t_proceso* proceso = queue_pop(recurso->cola_espera);
 		recurso->instancias_usadas++;
-		pthread_mutex_unlock(&(recurso->mutex_cola_espera));
+		pthread_mutex_unlock(recurso->mutex_cola_espera);
 
 		proceso->pcb->estado = READY;
 
@@ -92,10 +92,10 @@ void funcion_recurso(char* key, void* elemento) {
 		proceso->llegada_ready = get_time();
 		pthread_mutex_unlock(&mutex_ready);
 
-		sem_post(sem_ready); //TODO ??? esta bien que sea este semaforo?
+		sem_post(&sem_ready); //TODO ??? esta bien que sea este semaforo?
 	}
 
-	pthread_mutex_unlock(&(recurso->mutex_instancia_usada));
+	pthread_mutex_unlock(recurso->mutex_instancia_usada);
 }
 
 int asignar_recurso(t_recurso* recurso, t_proceso* proceso) { // devuelve 0 = false o 1 = true
@@ -104,11 +104,11 @@ int asignar_recurso(t_recurso* recurso, t_proceso* proceso) { // devuelve 0 = fa
 
 	if(recurso->instancias_totales > recurso->instancias_usadas) {
 
-		pthread_mutex_lock(&(recurso->mutex_instancia_usada));
+		pthread_mutex_lock(recurso->mutex_instancia_usada);
 		recurso->instancias_usadas++;
-		pthread_mutex_unlock(&(recurso->mutex_instancia_usada));
+		pthread_mutex_unlock(recurso->mutex_instancia_usada);
 
-		int length = strnlen(recurso->nombre) + 1;
+		int length = strlen(recurso->nombre) + 1;
 		char* aux = malloc(length);
 		memcpy(aux, recurso->nombre, length);
 
@@ -121,11 +121,11 @@ int asignar_recurso(t_recurso* recurso, t_proceso* proceso) { // devuelve 0 = fa
 }
 
 void liberar_instancia_recurso(t_recurso* recurso) { // TODO esto no saca el recurso del proceso, así que lo tengo que implementar en el execute
-	pthread_mutex_lock(&(recurso->mutex_instancia_usada));
+	pthread_mutex_lock(recurso->mutex_instancia_usada);
 	recurso->instancias_usadas--;
-	pthread_mutex_unlock(&(recurso->mutex_instancia_usada));
+	pthread_mutex_unlock(recurso->mutex_instancia_usada);
 
-	sem_post(sem_recursos);
+	sem_post(&sem_recursos);
 }
 
 void liberar_recursos_asignados(t_list* lista) {

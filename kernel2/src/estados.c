@@ -22,7 +22,7 @@ void estado_ejecutar(void) {
 		int inicio_cpu = get_time();
 		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
 		
-		enviar_pcb(socket_cpu, proceso->pcb);
+		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
 		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
 		op_code respuesta_cpu = recibir_operacion(socket_cpu);
@@ -43,8 +43,8 @@ void estado_ejecutar(void) {
 			//Otra forma de hacerlo puede ser:
 
 			int finalizacion_cpu = get_time();
-			proceso_a_ejecutar->fin_ultima_rafaga = finalizacion_cpu;
-			proceso_a_ejecutar->pcb->ultima_rafaga = proceso_a_ejecutar->fin_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+			proceso_a_ejecutar->final_ultima_rafaga = finalizacion_cpu;
+			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
 			proceso_a_ejecutar->ultima_instruccion = IO;
 			
@@ -59,7 +59,7 @@ void estado_ejecutar(void) {
 			proceso_a_ejecutar->inicio_bloqueo = inicio_block;
 			
 			//Una forma de resolverlo:
-			proceso_a_ejecutar->tiempo_bloqueo = recibir_parametro_instruccion(); //Implementar esta función y fijarse si es en microsegundos nanosegundos o lo que sea TODO
+			//proceso_a_ejecutar->tiempo_bloqueo = recibir_parametro_instruccion(); //Implementar esta función y fijarse si es en microsegundos nanosegundos o lo que sea TODO
 
 			pthread_mutex_lock(&mutex_block_io);
 			proceso_a_ejecutar->pcb->estado = BLOCK;
@@ -145,13 +145,13 @@ void estado_ejecutar(void) {
 		//	proceso_a_ejecutar->ultima_rafaga = elapsed;
 
 			int fin_cpu = get_time();
-			proceso_a_ejecutar->fin_ultima_rafaga = fin_cpu;
-			proceso_a_ejecutar->pcb->ultima_rafaga = proceso_a_ejecutar->fin_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+			proceso_a_ejecutar->final_ultima_rafaga = fin_cpu;
+			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 			
 			log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
 			pthread_mutex_lock(&mutex_ready);
-			proceso->pcb->estado = READY;
-			list_add(cola_ready, proceso);
+			proceso_a_ejecutar->pcb->estado = READY;
+			list_add(cola_ready, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_ready);
 
 			sem_post(&sem_ready);
@@ -159,11 +159,11 @@ void estado_ejecutar(void) {
 		case EXIT:
 			//Finalización del proceso.
 			pthread_mutex_lock(&mutex_exit);
-			proceso->pcb->estado = EXT;
-			list_add(cola_exit, proceso);
+			proceso_a_ejecutar->pcb->estado = EXT;
+			list_add(cola_exit, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exit);
 
-			log_info(logger_kernel, "PCB id[%d] sale de EXEC y entra a EXIT", proceso->pcb->pid);
+			log_info(logger_kernel, "PCB id[%d] sale de EXEC y entra a EXIT", proceso_a_ejecutar->pcb->pid);
 			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 			sem_post(&sem_ready);
 
@@ -192,6 +192,8 @@ void estado_exit(void) {
 
 		log_info(logger_kernel, "[EXIT] PCB id[%d] sale de Exit y finaliza el proceso", proceso->pcb->pid);
 
+		liberar_recursos_asignados(proceso->pcb->recursos_asignados);
+
 		//Liberar las estructuras del proceso en memoria
 		//enviar_pcb(socket_memoria, proceso->pcb);
 		//log_info(logger_kernel, "Enviando pcb a memoria para liberar estructuras");
@@ -210,8 +212,9 @@ void estado_exit(void) {
 	}
 }
 
-void eliminar_pcb(t_pcb pcb) {
+void eliminar_pcb(t_pcb* pcb) {
 	//list_destroy_and_destroy_elements(pcb->segmentos, free);
+	//list_destroy_and_destroy_elements(pcb->recursos_asignados, free);
 	//TODO seguir destruyendo las eventuales listas de la pcb.
 }
 
@@ -293,7 +296,7 @@ bool comparador_response_ratio(t_proceso* un_proceso, t_proceso* otro_proceso) {
 }
 
 void mostrar_response_ratio(t_proceso* un_proceso) {
-	log_info(logger_kernel, "PCB id[%d] tiene un RR de: %f", un_proceso->response_ratio);
+	log_info(logger_kernel, "PCB id[%d] tiene un RR de: %f", un_proceso->pcb->pid, un_proceso->response_ratio);
 }
 
 void calcular_estimacion(t_proceso* un_proceso) {

@@ -5,7 +5,7 @@
 
 t_log* logger;
 t_config* config;
-t_registros* registros_iniciados;
+t_registros registros_iniciados;
 
 t_log* iniciar_logger(void) {
 	t_log* nuevo_logger;
@@ -37,26 +37,26 @@ void iterator(char* value) {
 }
 
 void iniciar_registros(void) {
-	registros_iniciados->ax  = "0000";
-	registros_iniciados->bx  = "0000";
-	registros_iniciados->cx  = "0000";
-	registros_iniciados->dx  = "0000";
-	registros_iniciados->eax = "00000000";
-	registros_iniciados->ebx = "00000000";
-	registros_iniciados->ecx = "00000000";
-	registros_iniciados->edx = "00000000";
-	registros_iniciados->rax = "0000000000000000";
-	registros_iniciados->rbx = "0000000000000000";
-	registros_iniciados->rcx = "0000000000000000";
-	registros_iniciados->rdx = "0000000000000000";
+	strcpy(registros_iniciados.ax, "0000");
+	strcpy(registros_iniciados.bx, "0000");
+	strcpy(registros_iniciados.cx, "0000");
+	strcpy(registros_iniciados.dx, "0000");
+	strcpy(registros_iniciados.eax, "00000000");
+	strcpy(registros_iniciados.ebx, "00000000");
+	strcpy(registros_iniciados.ecx, "00000000");
+	strcpy(registros_iniciados.edx, "00000000");
+	strcpy(registros_iniciados.rax, "0000000000000000");
+	strcpy(registros_iniciados.rbx, "0000000000000000");
+	strcpy(registros_iniciados.rcx, "0000000000000000");
+	strcpy(registros_iniciados.rdx, "0000000000000000");
 }
 
 //--------------------------------------------------------------FUNCIONES DE TIEMPO-------------------------------------------------------------
 
-uint32_t get_time() { //Esto te devuelve el tiempo en milisegundos
+int get_time(void) { //Esto te devuelve el tiempo en milisegundos
     struct timeval te;
     gettimeofday(&te, NULL); // get current time
-    uint32_t milliseconds = te.tv_sec*1000LL + te.tv_usec/1000; // calculate milliseconds
+    int milliseconds = te.tv_sec*1000LL + te.tv_usec/1000; // calculate milliseconds
  
     return milliseconds;
 }
@@ -81,7 +81,7 @@ void destruir_semaforos(void) {
 	pthread_mutex_destroy(&mutex_exit);
 	pthread_mutex_destroy(&mutex_pid);
 	sem_destroy(&sem_ready);
-	sem_destroy(&sem_blocked);
+	sem_destroy(&sem_block_io);
 	sem_destroy(&sem_exit);
 	sem_destroy(&sem_grado_multiprogramacion);
 }
@@ -89,7 +89,7 @@ void destruir_semaforos(void) {
 void destruir_listas(void) {
 	list_destroy_and_destroy_elements(cola_new, free);
 	list_destroy_and_destroy_elements(cola_ready, free);
-	list_destroy_and_destroy_elements(cola_block, free);
+	list_destroy_and_destroy_elements(cola_block_io, free);
 	list_destroy_and_destroy_elements(cola_exit, free);
 }
 
