@@ -103,7 +103,6 @@ typedef struct {
 	t_list* tabla_segmentos;
 	t_list* recursos_asignados;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
-	//float timestamp;
 	//int archivos_abiertos[][2];
 } t_pcb;
 
@@ -118,8 +117,7 @@ typedef struct {
 	t_list* tabla_segmentos;
 }t_contexto_de_ejecucion;
 
-typedef struct
-{
+typedef struct {
     uint32_t tamanio_proceso;
     char* instrucciones;
 } t_consola;
@@ -128,6 +126,16 @@ typedef struct
 typedef struct {
 	int socket;
 	t_pcb* pcb;
+	int llegada_ready;
+	int tiempo_espera;
+	int inicio_bloqueo;
+	int tiempo_bloqueo;
+	int principio_ultima_rafaga;
+	int final_ultima_rafaga;
+	int ultima_rafaga;
+	int rafaga_estimada;
+	double response_ratio;
+	op_code ultima_instruccion;
 }t_proceso;
 
 typedef struct
