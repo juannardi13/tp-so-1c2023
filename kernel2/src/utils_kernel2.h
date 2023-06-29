@@ -11,10 +11,11 @@
 #include<commons/collections/list.h>
 #include<commons/collections/queue.h>
 #include<commons/string.h>
+#include<semaphore.h>
 #include<string.h>
 #include<assert.h>
-#include <pthread.h>
-#include <shared-2.h>
+#include<pthread.h>
+#include<shared-2.h>
 
 #define PUERTO "9120"
 
@@ -55,24 +56,46 @@ typedef struct {
 	int instancias_usadas;
 	int instancias_totales;
 	t_queue* cola_espera;
-	pthread_mutex_t mutex_cola_espera;
-	pthread_mutex_t mutex_instancia_usada;
+	pthread_mutex_t* mutex_cola_espera;
+	pthread_mutex_t* mutex_instancia_usada;
 }t_recurso;
 
 //Variables globales:
 extern archivo_config config_kernel;
 extern t_log* logger_kernel;
+extern int pid_global;
 extern int socket_cpu;
 extern int socket_memoria;
 extern int socket_filesystem;
-extern int pid_global;
 extern t_consola* consola;
+extern t_list* cola_block_io;
+extern t_list* cola_exec;
+extern t_list* cola_exit;
 extern t_list* cola_new;
 extern t_list* cola_ready;
-extern t_list* cola_exit;
-extern t_list* cola_exec;
-extern t_list* cola_block;
-extern t_registros* registros_iniciados;
+extern t_registros registros_iniciados;
+extern t_dictionary* recursos;
+
+extern pthread_mutex_t mutex_block_io;
+extern pthread_mutex_t mutex_exec;
+extern pthread_mutex_t mutex_exit;
+extern pthread_mutex_t mutex_new;
+extern pthread_mutex_t mutex_pid;
+extern pthread_mutex_t mutex_ready;
+extern sem_t sem_admitir;
+extern sem_t sem_block_io;
+extern sem_t sem_exec;
+extern sem_t sem_exit;
+extern sem_t sem_grado_multiprogramacion;
+extern sem_t sem_ready;
+extern sem_t sem_recursos;
+
+extern pthread_t thread_ready;
+extern pthread_t thread_exit;
+extern pthread_t thread_exec;
+extern pthread_t thread_ready;
+extern pthread_t thread_blocked;
+
 
 //Estructura para pasarle a la función de los hilos:
 typedef struct {
@@ -84,13 +107,11 @@ typedef struct {
 void cargar_valores_config(char*);
 t_config* iniciar_config(char*);
 t_log* iniciar_logger(void);
-void iniciar_registros(void)
+void iniciar_registros(void);
 
 //Funciones sobre conexiones
 void avisar_a_modulo(int, op_code);
-int enviar_datos(int, void*, int);
 bool generar_conexiones(t_config*, t_log*, int*, int*, int*);
-int recibir_datos(int, void*, int);
 t_instruccion recibir_instruccion(t_log*, int);
 
 //Funciones para tratar con la PCB
@@ -100,7 +121,7 @@ t_pcb* armar_pcb(char**, t_log*);
 t_pcb* crear_estructura_pcb(char*);
 t_pcb crear_pcb(t_instruccion*);
 t_pcb* deserializar_pcb(t_buffer*);
-void eliminar_pcb(t_pcb);
+void eliminar_pcb(t_pcb*);
 void enviar_pcb(int, t_pcb*);
 t_pcb* recibir_pcb(int);
 
@@ -120,8 +141,11 @@ char* recibir_instrucciones_como_string(int);
 
 //Manejo de procesos
 void agregar_proceso_a_ready(void);
-void ejecutar_proceso(void);
-void mostrar_cola_new(t_list*);
+void estado_block_io(void);
+void estado_ejecutar(void);
+void estado_exit(void);
+void estado_ready(void);
+void mostrar_cola(t_list*);
 t_proceso* obtener_proceso_cola_ready(void);
 
 //Planificadores
@@ -132,6 +156,25 @@ void iniciar_planificador_corto_plazo(void);
 void destruir_listas(void);
 void destruir_semaforos(void);
 void finalizar_kernel(void);
+void liberar_recurso(char*, void*);
+void liberar_recursos(void);
 void sighandler(int);
+
+//Funciones para el manejo de los recursos
+int asignar_recurso(t_recurso*, t_proceso*);
+void funcion_recurso(char*, void*);
+void* hilo_recursos(void*);
+void iniciar_recursos(void);
+void liberar_instancia_recurso(t_recurso*);
+void liberar_recursos_asignados(t_list*);
+int string_to_int(char*);
+
+//Funciones de planificación HRRN y FIFO
+void aplicar_hrrn(void);
+void calcular_estimacion(t_proceso*);
+void calcular_response_ratio(t_proceso*);
+bool comparador_response_ratio(t_proceso*, t_proceso*);
+void mostrar_response_ratio(t_proceso*);
+int get_time(void);
 
 #endif /* UTILS_H_ */
