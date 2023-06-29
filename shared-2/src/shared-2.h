@@ -69,11 +69,6 @@ typedef struct
 	t_buffer* buffer;
 } t_paquete;
 
-// creo t_recurso, ver que iria en sus campos
-typedef struct {
-	// campos del recurso
-}t_recurso;
-
 typedef struct {
 	char ax[4];
 	char bx[4];
@@ -106,6 +101,7 @@ typedef struct {
 	t_registros registros;
 	int tamanio_segmentos;
 	t_list* tabla_segmentos;
+	t_list* recursos_asignados;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//float timestamp;
 	//int archivos_abiertos[][2];
