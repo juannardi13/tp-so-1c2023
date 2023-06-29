@@ -46,7 +46,18 @@ typedef struct {
 	float alfa_hrrn;
 	int grado_multiprogramacion;
 	//TODO ver como es el tema de los recursos más adelante
+	char** recursos;
+	char** instancias_recursos;
 }archivo_config;
+
+typedef struct {
+	char* nombre;
+	int instancias_usadas;
+	int instancias_totales;
+	t_queue* cola_espera;
+	pthread_mutex_t mutex_cola_espera;
+	pthread_mutex_t mutex_instancia_usada;
+}t_recurso;
 
 //Variables globales:
 extern archivo_config config_kernel;
