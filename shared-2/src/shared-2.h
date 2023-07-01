@@ -54,7 +54,8 @@ typedef enum
 	LEIDO,
 	NO_LEIDO,
 	SEG_FAULT,
-	FINALIZAR_CONSOLA
+	FINALIZAR_CONSOLA,
+	SIN_INSTRUCCION
 }op_code;
 
 typedef struct
