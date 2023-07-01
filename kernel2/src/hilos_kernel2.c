@@ -38,6 +38,8 @@ void manejar_conexion(int socket_cliente) {
 
 		proceso->pcb = crear_estructura_pcb(data);
 		proceso->socket = socket_cliente;
+		proceso->rafaga_estimada = config_kernel.estimacion_inicial;
+		proceso->ultima_instruccion = SIN_INSTRUCCION;
 
 		log_info(logger_kernel, "PCB id[%d] armada, agregando a cola NEW", proceso->pcb->pid);
 
