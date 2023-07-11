@@ -22,7 +22,7 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 
 	int tamanio_instrucciones = pcb->tamanio_instrucciones;
 
-	buffer->stream_size = sizeof(int) * 4
+	buffer->stream_size = sizeof(int) * 2
 			+ sizeof(estado_proceso)
 			+ sizeof(t_registros)
 //			+ tamanio_segmentos  <-- Agregar el tamaño de los segmentos cuando sepamos que carajo es
@@ -42,7 +42,7 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 //	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
 //	offset += sizeof(int);
 	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
-//	offset += sizeof(t_registros);
+	offset += sizeof(t_registros);
 //	memcpy(stream + offset, &(pcb->tamanio_segmentos), sizeof(int));
 //	offset += sizeof(int);
 //	memcpy(stream + offset, pcb->segmentos, pcb->tamanio_segmentos);
