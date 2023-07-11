@@ -19,6 +19,33 @@ pthread_t thread_exit;
 pthread_t thread_exec;
 pthread_t thread_ready;
 pthread_t thread_blocked;
+pthread_t thread_admitir_ready;
+
+void admitir_procesos_a_ready(void) { //hilo
+
+	while(1) {
+		sem_wait(&sem_admitir);
+		sem_wait(&sem_grado_multiprogramacion);
+
+		t_proceso* proceso;
+
+		pthread_mutex_lock(&mutex_new);
+		proceso = list_remove(cola_new, 0);
+		pthread_mutex_unlock(&mutex_new);
+
+		//Puedo hacer que los segmentos de memoria se los demos al proceso acá o apenas entra a cola new TODO
+
+		log_info(logger_kernel, "PCB id[%d] ingresa a READY desde NEW", proceso->pcb->pid);
+
+		pthread_mutex_lock(&mutex_ready);
+		list_add(cola_ready, proceso);
+		pthread_mutex_unlock(&mutex_ready);
+
+		proceso->llegada_ready = get_time();
+
+		sem_post(&sem_ready);
+	}
+}
 
 void iniciar_planificador_largo_plazo(void) {
 	//Aca creo todos los semáforos y las estructuras necesarias para inicializar la planificación, por ahora solo tiene esto:
@@ -51,7 +78,9 @@ void iniciar_planificador_corto_plazo(void) {
 	pthread_create(&thread_ready, NULL, (void*) estado_ready, NULL);
 	pthread_create(&thread_exec, NULL, (void*) estado_ejecutar, NULL);
 	pthread_create(&thread_blocked, NULL, (void*) estado_block_io, NULL);
+	pthread_create(&thread_admitir_ready, NULL, (void*) admitir_procesos_a_ready, NULL);
 	pthread_detach(thread_ready);
 	pthread_detach(thread_exec);
 	pthread_detach(thread_blocked);
+	pthread_detach(thread_admitir_ready);
 }

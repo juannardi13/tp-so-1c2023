@@ -38,8 +38,6 @@ void manejar_conexion(int socket_cliente) {
 
 		proceso->pcb = crear_estructura_pcb(data);
 		proceso->socket = socket_cliente;
-		proceso->rafaga_estimada = config_kernel.estimacion_inicial;
-		proceso->ultima_instruccion = SIN_INSTRUCCION;
 
 		log_info(logger_kernel, "PCB id[%d] armada, agregando a cola NEW", proceso->pcb->pid);
 
@@ -71,10 +69,10 @@ int atender_clientes_kernel(int socket_servidor) {
 	int socket_cliente = esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			pthread_t hilo_cliente;
-			//manejar_conexion(socket_cliente);
-			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			pthread_detach(hilo_cliente);
+			//pthread_t hilo_cliente;
+			manejar_conexion(socket_cliente);
+			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			//pthread_detach(hilo_cliente);
 
 			return 1;
 		} else {
@@ -124,32 +122,6 @@ void agregar_proceso_a_new(t_proceso* proceso) {
 
 	//ATENCAO EMPIEZO A TIRAR MAGIA Y FILOSOFAR CREO QUE ES POR ACA
 	sem_post(&sem_admitir);
-}
-
-void admitir_procesos_a_ready(void) { //hilo
-
-	while(1) {
-		sem_wait(&sem_admitir);
-		sem_wait(&sem_grado_multiprogramacion);
-
-		t_proceso* proceso;
-
-		pthread_mutex_lock(&mutex_new);
-		proceso = list_remove(cola_new, 0);
-		pthread_mutex_unlock(&mutex_new);
-
-		//Puedo hacer que los segmentos de memoria se los demos al proceso acá o apenas entra a cola new TODO
-
-		log_info(logger_kernel, "PCB id[%d] ingresa a READY desde NEW", proceso->pcb->pid);
-
-		pthread_mutex_lock(&mutex_ready);
-		list_add(cola_ready, proceso);
-		pthread_mutex_unlock(&mutex_ready);
-
-		proceso->llegada_ready = get_time();
-		
-		sem_post(&sem_ready);
-	}
 }
 
 void mostrar_cola(t_list* lista) {

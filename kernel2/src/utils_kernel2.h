@@ -95,7 +95,7 @@ extern pthread_t thread_exit;
 extern pthread_t thread_exec;
 extern pthread_t thread_ready;
 extern pthread_t thread_blocked;
-
+extern pthread_t thread_admitir_ready;
 
 //Estructura para pasarle a la función de los hilos:
 typedef struct {

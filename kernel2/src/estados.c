@@ -17,11 +17,10 @@ void estado_ejecutar(void) {
 	//	long nanoseconds;
 	//	double elapsed;
 
-	 	if(proceso_a_ejecutar->ultima_instruccion == SIN_INSTRUCCION || proceso_a_ejecutar->ultima_instruccion == IO || proceso_a_ejecutar->ultima_instruccion == YIELD) {
-			int inicio_cpu = get_time();
-			proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;			
-		} // TODO, cuando un proceso vuelve de bloqueo, en la última instrucción ejecutada vamos a ponerle SIN_INSTRUCCION
-		//TODO, ver cuando poner el fin de la ráfaga en casos particulares en los que el proceso se bloquee y tal
+	// 	if(proceso_a_ejecutar no viene de una instrucción que lo desalojó del CPU)
+
+		int inicio_cpu = get_time();
+		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
 		
 		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
 		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
