@@ -2,12 +2,15 @@
 
 #define MAX_LEN 256
 
+
+
 int main() {
 	bool cpu_bloqueada = false;
 	char* ip_kernel;
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
     t_config* config = iniciar_config();
+    inicializar_registros();
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
 
@@ -37,31 +40,32 @@ int main() {
 
     	t_contexto_de_ejecucion* contexto = malloc(sizeof(t_contexto_de_ejecucion));
 
-    	switch(paquete->codigo_operacion){
-    	case CONTEXTO_DE_EJECUCION :
-    		void* stream = paquete->buffer->stream;
-    				memcpy(&(contexto->pid), stream, sizeof(int));
-    				stream += sizeof(int);
-    				memcpy(&(contexto->tamanio_instrucciones), stream, sizeof(int));
-    				stream += sizeof(int);
+		switch (paquete->codigo_operacion) {
+		case CONTEXTO_DE_EJECUCION:
+			void *stream = paquete->buffer->stream;
 
-    				char* instrucciones = malloc(contexto->tamanio_instrucciones);
-    				memset(instrucciones, 0, contexto->tamanio_instrucciones);
+			//--------------------------------------------------------------------RECIBO EL PID DEL PROCESO
+			memcpy(&(contexto->pid), stream, sizeof(int));
+			stream += sizeof(int);
 
-    				memcpy(instrucciones, stream, contexto->tamanio_instrucciones);
-    				stream += contexto->tamanio_instrucciones;
+			//--------------------------------------------------------------------RECIBO LAS INSTRUCCIONES
+			memcpy(&(contexto->tamanio_instrucciones), stream, sizeof(int));
+			stream += sizeof(int);
 
-    				contexto->instrucciones = malloc(strlen(instrucciones) + 1);
-    				strcpy(contexto->instrucciones, instrucciones);
+			char *instrucciones = malloc(contexto->tamanio_instrucciones);
+			memset(instrucciones, 0, contexto->tamanio_instrucciones);
 
-    //				contexto->instrucciones = malloc(contexto->tamanio_instrucciones);
-    //				memset(&(contexto->instrucciones), 0, contexto->tamanio_instrucciones);
+			memcpy(instrucciones, stream, contexto->tamanio_instrucciones);
+			stream += contexto->tamanio_instrucciones;
 
-   // 				memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
-   // 				stream += contexto->tamanio_instrucciones;
-    				memcpy(&(contexto->pc), stream, sizeof(int));
-    				stream += sizeof(int);
+			contexto->instrucciones = malloc(strlen(instrucciones) + 1);
+			strcpy(contexto->instrucciones, instrucciones);
 
+			//--------------------------------------------------------------------RECIBO EL PROGRAM COUNTER
+			memcpy(&(contexto->pc), stream, sizeof(int));
+			stream += sizeof(int);
+
+			//--------------------------------------------------------------------DESERIALIZACIÓN DE SEGMENTOS Y DE REGISTROS, FALTA ARREGLARLO
 //    				t_registros* registro_actual = contexto->registros_pcb;
 //    				for(int i=0; i<(contexto->tamanio_registros); i++){
 //    					memcpy(&(registro_actual), stream, sizeof(t_registros));
@@ -73,27 +77,40 @@ int main() {
 //    					t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
 //    					deserializar_segmentos(segmento_actual, stream);
 //    						}
-    				int i = 0;
-    				    		char** instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
-    				    		int cantidad_intrucciones = 20; //sizeof(intrucciones_parseadas);
-    				    		while(i < cantidad_intrucciones){
-    				    			char* instruccion_a_ejecutar = malloc(strlen(instrucciones_parseadas[contexto->pc]) + 1);
-    				    			strcpy(instruccion_a_ejecutar, instrucciones_parseadas[contexto->pc]);
-    				    			//strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
-    				    			decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
-    				    			i++;
-    				    		}
 
-    				    	    break;
-    			default:
-    	    		log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-    	    		break;
-    					}
 
-    	}
+			int i = 0;
+			int cantidad_instrucciones = 0;
+			char **instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
 
-    return 0;
-    }
+			for(int j = 0; instrucciones_parseadas[j] != NULL; j++) {
+				cantidad_instrucciones++;
+			}
+
+			//esto de acá no sé que onda por qué está? Lo cambio por lo de arriba?
+			//cantidad_instrucciones = sizeof(intrucciones_parseadas);
+
+			while (i < cantidad_instrucciones) {
+				char *instruccion_a_ejecutar = malloc(strlen(instrucciones_parseadas[contexto->pc]) + 1);
+
+				strcpy(instruccion_a_ejecutar, instrucciones_parseadas[contexto->pc]);
+
+				//Lo de abajo puede desaparecer porque está lo de arriba :))
+				//strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
+				decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
+				i++;
+			}
+
+			break;
+		default:
+			log_warning(logger, "Operacion desconocida. No quieras meter la pata");
+			break;
+		}
+
+	}
+
+	return 0;
+}
 
 
 
