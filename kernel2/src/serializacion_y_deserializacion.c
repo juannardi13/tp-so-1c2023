@@ -74,20 +74,14 @@ t_pcb* recibir_pcb(int socket_servidor) {
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	paquete->buffer = malloc(sizeof(t_buffer));
 
-	recv(socket_servidor, &(paquete->codigo_operacion), sizeof(uint8_t), 0);
+	recv(socket_servidor, &(paquete->codigo_operacion), sizeof(int), 0);
 
-	recv(socket_servidor, &(paquete->buffer->stream_size), sizeof(uint32_t), 0);
+	recv(socket_servidor, &(paquete->buffer->stream_size), sizeof(int), 0);
 	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
 	recv(socket_servidor, paquete->buffer->stream, paquete->buffer->stream_size, 0);
 
-	switch(paquete->codigo_operacion) {
-	case PCB:
-		t_pcb* pcb = deserializar_pcb(paquete->buffer);
-		return pcb;
-	default:
-		printf("ERROR");
-		return 0;
-	}
+
+	return 0;
 }
 
 t_pcb* deserializar_pcb(t_buffer* buffer) {

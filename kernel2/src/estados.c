@@ -25,9 +25,41 @@ void estado_ejecutar(void) {
 		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
 		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
-		op_code respuesta_cpu = recibir_operacion(socket_cpu);
 
-		proceso_a_ejecutar->pcb = recibir_pcb(socket_cpu);
+		//proceso_a_ejecutar->pcb = recibir_pcb(socket_cpu);
+
+		t_paquete* paquete = malloc(sizeof(t_paquete));
+		paquete->buffer = malloc(sizeof(t_buffer));
+		recv(socket_cpu, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+		recv(socket_cpu, &(paquete->buffer->stream_size), sizeof(int), 0);
+		paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+		recv(socket_cpu, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+		op_code respuesta_cpu = paquete->codigo_operacion;
+
+		void *stream = paquete->buffer->stream;
+		//-------------------------------------------------------------RECIBO EL PID
+		memcpy(&(proceso_a_ejecutar->pcb->pid), stream, sizeof(int));
+		stream += sizeof(int);
+
+		//-------------------------------------------------------------RECIBO INSTRUCCIONES
+		memcpy(&(proceso_a_ejecutar->pcb->tamanio_instrucciones), stream, sizeof(int));
+		stream += sizeof(int);
+
+		char* instrucciones = malloc(proceso_a_ejecutar->pcb->tamanio_instrucciones);
+		memset(instrucciones, 0, proceso_a_ejecutar->pcb->tamanio_instrucciones);
+
+		memcpy(instrucciones, stream, proceso_a_ejecutar->pcb->tamanio_instrucciones);
+		stream += proceso_a_ejecutar->pcb->tamanio_instrucciones;
+
+		proceso_a_ejecutar->pcb->instrucciones = malloc(strlen(instrucciones) + 1);
+		strcpy(proceso_a_ejecutar->pcb->instrucciones, instrucciones);
+
+		//-------------------------------------------------------------RECIBO EL PROGRAM COUNTER
+		memcpy(&(proceso_a_ejecutar->pcb->pc), stream, sizeof(int));
+		stream += sizeof(int);
+
+		//--- FALTA SERIALIZAR SEGMENTOS Y REGISTROS
 
 		switch (respuesta_cpu) {
 		case IO:
