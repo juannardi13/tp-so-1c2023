@@ -75,3 +75,23 @@
 [INFO] 03:40:22:195 cpu.log/(41182:41182): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
 [INFO] 03:40:36:520 cpu.log/(41182:41182): Cliente conectado (a CPU)
 
+[INFO] 04:27:19:278 cpu.log/(41921:41921): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 04:27:19:906 cpu.log/(41921:41921): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 04:27:20:382 cpu.log/(41921:41921): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 04:27:27:907 cpu.log/(41921:41921): Cliente conectado (a CPU)
+
+[INFO] 04:31:41:955 cpu.log/(42147:42147): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 04:31:42:537 cpu.log/(42147:42147): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 04:31:43:205 cpu.log/(42147:42147): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 04:31:49:307 cpu.log/(42147:42147): Cliente conectado (a CPU)
+
+[INFO] 04:32:28:763 cpu.log/(42215:42215): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 04:32:29:271 cpu.log/(42215:42215): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 04:32:29:916 cpu.log/(42215:42215): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 04:32:36:483 cpu.log/(42215:42215): Cliente conectado (a CPU)
+
+[INFO] 05:02:29:671 cpu.log/(42947:42947): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 05:02:30:222 cpu.log/(42947:42947): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 05:02:30:695 cpu.log/(42947:42947): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 05:02:37:111 cpu.log/(42947:42947): Cliente conectado (a CPU)
+
