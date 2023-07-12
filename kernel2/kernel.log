@@ -2102,3 +2102,104 @@ SET DX ESTAS
 [INFO] 04:46:50:585 kernel.log/(36360:36367): PCB id[1000] ingresa a EXECUTE
 [INFO] 04:46:50:585 kernel.log/(36360:36368): PCB id[1000] enviada a CPU
 [ERROR] 04:46:50:585 kernel.log/(36360:36368): Instrucción desconocida, ocurrió un error
+[INFO] 18:02:35:183 kernel.log/(36774:36774): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:28:00:514 kernel.log/(38101:38101): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:28:09:784 kernel.log/(38101:38101): Cliente conectado (a KERNEL)
+
+[INFO] 18:28:09:784 kernel.log/(38101:38101): Me llegó una Consola
+[INFO] 18:28:09:784 kernel.log/(38101:38101): Consola deserializada, se arma el PCB a continuación
+[INFO] 18:28:09:784 kernel.log/(38101:38101): PCB id[1000] armada, agregando a cola NEW
+[INFO] 18:28:09:784 kernel.log/(38101:38101): PCB id[1000] ingresa a NEW
+[INFO] 18:28:09:784 kernel.log/(38101:38101): PCB id[1000]
+[INFO] 18:28:09:785 kernel.log/(38101:38111): PCB id[1000] ingresa a READY desde NEW
+[INFO] 18:28:09:785 kernel.log/(38101:38108): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:28:09:785 kernel.log/(38101:38108): PCB id[1000] ingresa a EXECUTE
+[INFO] 18:28:09:785 kernel.log/(38101:38109): PCB id[1000] enviada a CPU
+[ERROR] 18:28:40:259 kernel.log/(38101:38109): Instrucción desconocida, ocurrió un error
+[INFO] 18:33:00:685 kernel.log/(38415:38415): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:33:07:630 kernel.log/(38415:38415): Cliente conectado (a KERNEL)
+
+[INFO] 18:33:25:453 kernel.log/(38415:38415): Me llegó una Consola
+[INFO] 18:33:26:275 kernel.log/(38415:38415): Consola deserializada, se arma el PCB a continuación
+[INFO] 18:33:31:866 kernel.log/(38415:38415): PCB id[1000] armada, agregando a cola NEW
+[INFO] 18:33:34:203 kernel.log/(38415:38415): PCB id[1000] ingresa a NEW
+[INFO] 18:33:34:203 kernel.log/(38415:38415): PCB id[1000]
+[INFO] 18:33:34:204 kernel.log/(38415:38433): PCB id[1000] ingresa a READY desde NEW
+[INFO] 18:33:34:204 kernel.log/(38415:38430): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:33:34:204 kernel.log/(38415:38430): PCB id[1000] ingresa a EXECUTE
+[INFO] 18:33:34:204 kernel.log/(38415:38431): PCB id[1000] enviada a CPU
+[INFO] 18:35:23:084 kernel.log/(38561:38561): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:35:29:032 kernel.log/(38561:38561): Cliente conectado (a KERNEL)
+
+[INFO] 18:35:35:580 kernel.log/(38561:38561): Me llegó una Consola
+[INFO] 18:35:35:970 kernel.log/(38561:38561): Consola deserializada, se arma el PCB a continuación
+[INFO] 18:35:37:393 kernel.log/(38561:38561): PCB id[1000] armada, agregando a cola NEW
+[INFO] 18:36:03:690 kernel.log/(38561:38561): PCB id[1000] ingresa a NEW
+[INFO] 18:36:03:690 kernel.log/(38561:38561): PCB id[1000]
+[INFO] 18:36:03:690 kernel.log/(38561:38578): PCB id[1000] ingresa a READY desde NEW
+[INFO] 18:36:03:691 kernel.log/(38561:38575): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:36:03:691 kernel.log/(38561:38575): PCB id[1000] ingresa a EXECUTE
+[INFO] 18:36:03:691 kernel.log/(38561:38576): PCB id[1000] enviada a CPU
+[ERROR] 18:36:03:791 kernel.log/(38561:38576): Instrucción desconocida, ocurrió un error
+[INFO] 18:36:20:852 kernel.log/(38561:38561): Cliente conectado (a KERNEL)
+
+[INFO] 18:36:20:852 kernel.log/(38561:38561): Me llegó una Consola
+[INFO] 18:36:20:852 kernel.log/(38561:38561): Consola deserializada, se arma el PCB a continuación
+[INFO] 18:36:20:852 kernel.log/(38561:38561): PCB id[1001] armada, agregando a cola NEW
+[INFO] 18:36:20:852 kernel.log/(38561:38561): PCB id[1001] ingresa a NEW
+[INFO] 18:36:20:852 kernel.log/(38561:38561): PCB id[1001]
+[INFO] 18:36:20:852 kernel.log/(38561:38578): PCB id[1001] ingresa a READY desde NEW
+[INFO] 18:36:20:852 kernel.log/(38561:38575): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:36:20:852 kernel.log/(38561:38575): PCB id[1001] ingresa a EXECUTE
+[INFO] 18:53:17:573 kernel.log/(39225:39225): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:53:30:480 kernel.log/(39225:39225): Cliente conectado (a KERNEL)
+
+[INFO] 18:53:30:480 kernel.log/(39225:39225): Me llegó una Consola
+[INFO] 18:53:30:480 kernel.log/(39225:39225): Consola deserializada, se arma el PCB a continuación
+[INFO] 18:53:30:481 kernel.log/(39225:39225): PCB id[1000] armada, agregando a cola NEW
+[INFO] 18:53:30:481 kernel.log/(39225:39225): PCB id[1000] ingresa a NEW
+[INFO] 18:53:30:481 kernel.log/(39225:39225): PCB id[1000]
+[INFO] 18:53:30:481 kernel.log/(39225:39235): PCB id[1000] ingresa a READY desde NEW
+[INFO] 18:53:30:481 kernel.log/(39225:39232): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:53:30:481 kernel.log/(39225:39232): PCB id[1000] ingresa a EXECUTE
+[INFO] 18:53:30:481 kernel.log/(39225:39233): PCB id[1000] enviada a CPU
+[ERROR] 18:54:05:971 kernel.log/(39225:39233): Instrucción desconocida, ocurrió un error
+[INFO] 18:56:01:228 kernel.log/(39411:39411): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:56:09:238 kernel.log/(39411:39411): Cliente conectado (a KERNEL)
+
+[INFO] 18:56:09:238 kernel.log/(39411:39411): Me llegó una Consola
+[INFO] 18:56:09:238 kernel.log/(39411:39411): Consola deserializada, se arma el PCB a continuación
+[INFO] 18:56:09:238 kernel.log/(39411:39411): PCB id[1000] armada, agregando a cola NEW
+[INFO] 18:56:09:239 kernel.log/(39411:39411): PCB id[1000] ingresa a NEW
+[INFO] 18:56:09:239 kernel.log/(39411:39411): PCB id[1000]
+[INFO] 18:56:09:239 kernel.log/(39411:39420): PCB id[1000] ingresa a READY desde NEW
+[INFO] 18:56:09:239 kernel.log/(39411:39417): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:09:239 kernel.log/(39411:39417): PCB id[1000] ingresa a EXECUTE
+[INFO] 18:56:09:239 kernel.log/(39411:39418): PCB id[1000] enviada a CPU
+[ERROR] 18:59:04:950 kernel.log/(39411:39418): Instrucción desconocida, ocurrió un error
+[INFO] 19:43:19:690 kernel.log/(40663:40663): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:43:42:503 kernel.log/(40663:40663): Cliente conectado (a KERNEL)
+
+[INFO] 19:43:42:503 kernel.log/(40663:40663): Me llegó una Consola
+[INFO] 19:43:42:503 kernel.log/(40663:40663): Consola deserializada, se arma el PCB a continuación
+[INFO] 19:43:42:503 kernel.log/(40663:40663): PCB id[1000] armada, agregando a cola NEW
+[INFO] 19:43:42:503 kernel.log/(40663:40663): PCB id[1000] ingresa a NEW
+[INFO] 19:43:42:503 kernel.log/(40663:40663): PCB id[1000]
+[INFO] 19:43:42:503 kernel.log/(40663:40673): PCB id[1000] ingresa a READY desde NEW
+[INFO] 19:43:42:503 kernel.log/(40663:40670): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 19:43:42:503 kernel.log/(40663:40670): PCB id[1000] ingresa a EXECUTE
+[INFO] 19:43:42:504 kernel.log/(40663:40671): PCB id[1000] enviada a CPU
+[ERROR] 03:31:51:962 kernel.log/(40663:40671): Instrucción desconocida, ocurrió un error
+[INFO] 03:40:36:520 kernel.log/(41236:41236): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:40:44:157 kernel.log/(41236:41236): Cliente conectado (a KERNEL)
+
+[INFO] 03:40:44:157 kernel.log/(41236:41236): Me llegó una Consola
+[INFO] 03:40:44:157 kernel.log/(41236:41236): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:40:44:157 kernel.log/(41236:41236): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:40:44:157 kernel.log/(41236:41236): PCB id[1000] ingresa a NEW
+[INFO] 03:40:44:157 kernel.log/(41236:41236): PCB id[1000]
+[INFO] 03:40:44:158 kernel.log/(41236:41246): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:40:44:158 kernel.log/(41236:41243): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:44:158 kernel.log/(41236:41243): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:44:158 kernel.log/(41236:41244): PCB id[1000] enviada a CPU
+[ERROR] 03:42:00:455 kernel.log/(41236:41244): Instrucción desconocida, ocurrió un error
