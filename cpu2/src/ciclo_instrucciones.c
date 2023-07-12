@@ -2,6 +2,63 @@
 #include <math.h>
 #include<shared-2.h>
 
+op_code encontrar_instruccion(char* instruccion) {
+
+	op_code codigo_operacion;
+	char** instruccion_parseada = string_split(instruccion, " ");
+
+	if(strcmp(instruccion_parseada[0], "SET") == 0) {
+		codigo_operacion = SET;
+	}
+	else if(strcmp(instruccion_parseada[0], "MOV_IN") == 0) {
+		codigo_operacion = MOV_IN;
+	}
+	else if(strcmp(instruccion_parseada[0], "MOV_OUT") == 0) {
+		codigo_operacion = MOV_OUT;
+	}
+	else if(strcmp(instruccion_parseada[0], "IO") == 0) {
+		codigo_operacion = IO;
+	}
+	else if (strcmp(instruccion_parseada[0], "F_OPEN") == 0) {
+		codigo_operacion = F_OPEN;
+	}
+	else if (strcmp(instruccion_parseada[0], "F_CLOSE") == 0) {
+		codigo_operacion = F_CLOSE;
+	}
+	else if (strcmp(instruccion_parseada[0], "F_SEEK") == 0) {
+		codigo_operacion = F_SEEK;
+	}
+	else if (strcmp(instruccion_parseada[0], "F_READ") == 0) {
+		codigo_operacion = F_READ;
+	}
+	else if (strcmp(instruccion_parseada[0], "F_WRITE") == 0) {
+		codigo_operacion = F_WRITE;
+	}
+	else if (strcmp(instruccion_parseada[0], "F_TRUNCATE") == 0) {
+		codigo_operacion = F_TRUNCATE;
+	}
+	else if (strcmp(instruccion_parseada[0], "WAIT") == 0) {
+		codigo_operacion = WAIT;
+	}
+	else if (strcmp(instruccion_parseada[0], "SIGNAL") == 0) {
+		codigo_operacion = SIGNAL;
+	}
+	else if (strcmp(instruccion_parseada[0], "CREATE_SEGMENT") == 0) {
+		codigo_operacion = CREATE_SEGMENT;
+	}
+	else if (strcmp(instruccion_parseada[0], "DELETE_SEGMENT") == 0) {
+		codigo_operacion = DELETE_SEGMENT;
+	}
+	else if (strcmp(instruccion_parseada[0], "YIELD") == 0) {
+		codigo_operacion = YIELD;
+	}
+	else if (strcmp(instruccion_parseada[0], "EXIT") == 0) {
+		codigo_operacion = EXIT;
+	}
+
+	return codigo_operacion;
+}
+
 void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
 
 	char** instruccion_parseada = string_split(instruccion, " ");
