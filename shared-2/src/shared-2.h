@@ -71,25 +71,25 @@ typedef struct
 } t_paquete;
 
 typedef struct {
-	char ax[4];
-	char bx[4];
-	char cx[4];
-	char dx[4];
-	char eax[8];
-	char ebx[8];
-	char ecx[8];
-	char edx[8];
-	char rax[16];
-	char rbx[16];
-	char rcx[16];
-	char rdx[16]; //tienen en cuenta el \0
+	char ax[5];
+	char bx[5];
+	char cx[5];
+	char dx[5];
+	char eax[9];
+	char ebx[9];
+	char ecx[9];
+	char edx[9];
+	char rax[17];
+	char rbx[17];
+	char rcx[17];
+	char rdx[17]; //tienen en cuenta el \0
 }t_registros;
 
 typedef struct{
 	int id;
 	int base;
 	int tamanio;
-	proteccion proteccion;
+	//proteccion proteccion;
 }t_segmento;
 
 typedef struct {
