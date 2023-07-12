@@ -94,7 +94,7 @@ int main() {
 					contexto->pc++;
 					int tiempo_de_espera;
 					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
-				//	sleep(tiempo_de_espera);
+					usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
 					ejecutar_SET(instruccion_a_ejecutar, contexto);
 					log_warning(logger, "Se ejecuta la instruccion SET");
 					break;
@@ -104,9 +104,9 @@ int main() {
 					log_warning(logger, "Se ejecuta la instruccion MOV_IN");
 					break;
 				case MOV_OUT:
+					contexto->pc++;
 //					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config);
 					log_warning(logger, "Se ejecuta la instruccion MOV_OUT");
-					contexto->pc++;
 					break;
 				case IO:
 					contexto->pc++;
@@ -115,54 +115,54 @@ int main() {
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_OPEN:
+					contexto->pc++;
 //					ejecutar_F_OPEN(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion F_OPEN");
-					contexto->pc++;
 					break;
 				case F_CLOSE:
+					contexto->pc++;
 //					ejecutar_F_CLOSE(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion F_CLOSE");
-					contexto->pc++;
 					break;
 				case F_SEEK:
+					contexto->pc++;
 //					ejecutar_F_SEEK(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion F_SEEK");
-					contexto->pc++;
 					break;
 				case F_READ:
+					contexto->pc++;
 //					ejecutar_F_READ(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
 					log_warning(logger, "Se ejecuta la instruccion F_READ");
-					contexto->pc++;
 					break;
 				case F_WRITE:
+					contexto->pc++;
 //					ejecutar_F_WRITE(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
 					log_warning(logger, "Se ejecuta la instruccion F_WRITE");
-					contexto->pc++;
 					break;
 				case F_TRUNCATE:
+					contexto->pc++;
 //					ejecutar_F_TRUNCATE(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion F_TRUNCATE");
-					contexto->pc++;
 					break;
 				case WAIT:
+					contexto->pc++;
 //					ejecutar_WAIT(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion WAIT");
-					contexto->pc++;
 					break;
 				case SIGNAL:
+					contexto->pc++;
 //					ejecutar_SIGNAL(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion SIGNAL");
-					contexto->pc++;
 					break;
 				case CREATE_SEGMENT:
+					contexto->pc++;
 //					ejecutar_CREATE_SEGMENT(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion CREATE_SEGMENT");
-					contexto->pc++;
 					break;
 				case DELETE_SEGMENT:
+					contexto->pc++;
 //					ejecutar_DELETE_SEGMENT(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion DELETE_SEGMENT");
-					contexto->pc++;
 					break;
 				case YIELD:
 					contexto->pc++;
