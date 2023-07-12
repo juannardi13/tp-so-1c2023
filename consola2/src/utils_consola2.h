@@ -14,8 +14,7 @@
 #include<readline/readline.h>
 #include<shared-2.h>
 
-typedef struct
-{
+typedef struct {
 	op_code nombre;
 	int parametro_1_length;
 	char* parametro_1;
@@ -23,7 +22,7 @@ typedef struct
 	char* parametro_2;
 	int parametro_3_length;
 	char* parametro_3;
-}t_instruccion;
+} t_instruccion;
 
 //Iniciación estructuras (Logger, Config)
 FILE* abrir_archivo_instrucciones(char *, t_log*);
