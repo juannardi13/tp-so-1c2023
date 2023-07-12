@@ -105,8 +105,6 @@ void deserializar_segmentos(t_segmento* segmento_actual, void* stream){
 	stream += sizeof(int);
 	memcpy(&(segmento_actual->id), stream, sizeof(int));
 	stream += sizeof(int);
-	memcpy(&(segmento_actual->proteccion), stream, sizeof(proteccion));
-	stream += sizeof(proteccion);
 	memcpy(&(segmento_actual->tamanio), stream, sizeof(int));
 	stream += sizeof(int);
 }
@@ -126,22 +124,30 @@ void recibir_contexto(int fd_kernel, t_contexto_de_ejecucion* contexto){
 		stream += sizeof(int);
 		memcpy(&(contexto->tamanio_instrucciones), stream, sizeof(int));
 		stream += sizeof(int);
+
+		contexto->instrucciones = malloc(contexto->tamanio_instrucciones);
+		memset(&(contexto->instrucciones), 0, contexto->tamanio_instrucciones);
+
 		memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
 		stream += contexto->tamanio_instrucciones;
+
 		memcpy(&(contexto->pc), stream, sizeof(int));
 		stream += sizeof(int);
 
-		t_registros* registro_actual = contexto->registros_pcb;
-		for(int i=0; i<(contexto->tamanio_registros); i++){
-			memcpy(&(registro_actual), stream, sizeof(t_registros));
-			stream += sizeof(t_registros);
-			registro_actual++;
-		}
+		memcpy(&(contexto->registros_pcb), stream, sizeof(t_registros));
+		stream += sizeof(t_registros);
 
-		for(int a=0; a<(list_size(contexto->tabla_segmentos)); a++){
-			t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
-			deserializar_segmentos(segmento_actual, stream);
-				}
+//		t_registros* registro_actual = contexto->registros_pcb;
+//		for(int i=0; i<(contexto->tamanio_registros); i++){
+//			memcpy(&(registro_actual), stream, sizeof(t_registros));
+//			stream += sizeof(t_registros);
+//			registro_actual++;
+//		}
+
+//		for(int a=0; a<(list_size(contexto->tabla_segmentos)); a++){
+//			t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
+//			deserializar_segmentos(segmento_actual, stream);
+//				}
 			}
 	/*
 	free(paquete->buffer->stream);
@@ -225,8 +231,6 @@ void serializar_segmentos(t_segmento* segmento_actual, void* stream, int offset)
 	offset += sizeof(int);
 	memcpy(stream + offset, &segmento_actual->id, sizeof(int));
 	offset += sizeof(int);
-	memcpy(stream + offset, &segmento_actual->proteccion, sizeof(proteccion));
-	offset += sizeof(proteccion);
 	memcpy(stream + offset, &segmento_actual->tamanio, sizeof(int));
 	offset += sizeof(int);
 }
@@ -634,6 +638,3 @@ void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_
 				ejecutar_EXIT(instruccion_parseada, contexto, fd_kernel);
 			}
 }
-
-
-

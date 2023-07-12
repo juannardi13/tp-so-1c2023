@@ -1,0 +1,5 @@
+[INFO] 18:01:59:470 cpu.log/(36751:36751): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 18:01:59:470 cpu.log/(36751:36751): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 18:01:59:471 cpu.log/(36751:36751): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 18:02:17:172 cpu.log/(36751:36751): Cliente conectado (a CPU)
+

@@ -21,10 +21,11 @@ int main() {
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
 
 
-    int ip_memoria = config_get_string_value(config, "IP");
-    int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-    int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
-    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
+    //int ip_memoria = config_get_string_value(config, "IP");
+    //int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    int fd_memoria = 4; //crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
+//    int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
+//    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
 
     while(1) {
     	t_paquete* paquete = malloc(sizeof(t_paquete));
@@ -34,7 +35,7 @@ int main() {
     	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
     	recv(fd_kernel, paquete->buffer->stream, paquete->buffer->stream_size, 0);
 
-    	t_contexto_de_ejecucion* contexto;
+    	t_contexto_de_ejecucion* contexto = malloc(sizeof(t_contexto_de_ejecucion));
 
     	switch(paquete->codigo_operacion){
     	case CONTEXTO_DE_EJECUCION :
@@ -43,22 +44,31 @@ int main() {
     				stream += sizeof(int);
     				memcpy(&(contexto->tamanio_instrucciones), stream, sizeof(int));
     				stream += sizeof(int);
-    				memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
-    				stream += contexto->tamanio_instrucciones;
+
+    				char* instrucciones = malloc(contexto->tamanio_instrucciones);
+    				memset(instrucciones, 0, contexto->tamanio_instrucciones);
+
+    				memcpy(instrucciones, stream, contexto->tamanio_instrucciones);
+
+    //				contexto->instrucciones = malloc(contexto->tamanio_instrucciones);
+    //				memset(&(contexto->instrucciones), 0, contexto->tamanio_instrucciones);
+
+   // 				memcpy(&(contexto->instrucciones), stream, contexto->tamanio_instrucciones);
+   // 				stream += contexto->tamanio_instrucciones;
     				memcpy(&(contexto->pc), stream, sizeof(int));
     				stream += sizeof(int);
 
-    				t_registros* registro_actual = contexto->registros_pcb;
-    				for(int i=0; i<(contexto->tamanio_registros); i++){
-    					memcpy(&(registro_actual), stream, sizeof(t_registros));
-    					stream += sizeof(t_registros);
-    					registro_actual++;
-    				}
-
-    				for(int a=0; a<(list_size(contexto->tabla_segmentos)); a++){
-    					t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
-    					deserializar_segmentos(segmento_actual, stream);
-    						}
+//    				t_registros* registro_actual = contexto->registros_pcb;
+//    				for(int i=0; i<(contexto->tamanio_registros); i++){
+//    					memcpy(&(registro_actual), stream, sizeof(t_registros));
+//    					stream += sizeof(t_registros);
+//    					registro_actual++;
+//    				}
+//
+//    				for(int a=0; a<(list_size(contexto->tabla_segmentos)); a++){
+//    					t_segmento* segmento_actual = list_get(contexto->tabla_segmentos, a);
+//    					deserializar_segmentos(segmento_actual, stream);
+//    						}
     				int i = 0;
     				    		char** intrucciones_parseadas = string_split(contexto->instrucciones, "\n");
     				    		int cantidad_intrucciones = sizeof(intrucciones_parseadas);
