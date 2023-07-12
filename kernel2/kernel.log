@@ -2242,3 +2242,29 @@ SET DX ESTAS
 [INFO] 05:02:40:823 kernel.log/(42977:42984): PCB id[1000] ingresa a EXECUTE
 [INFO] 05:02:40:823 kernel.log/(42977:42985): PCB id[1000] enviada a CPU
 [ERROR] 05:03:20:793 kernel.log/(42977:42985): Instrucción desconocida, ocurrió un error
+[INFO] 07:14:05:592 kernel.log/(47473:47473): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 07:14:20:570 kernel.log/(47473:47473): Cliente conectado (a KERNEL)
+
+[INFO] 07:14:20:570 kernel.log/(47473:47473): Me llegó una Consola
+[INFO] 07:14:20:570 kernel.log/(47473:47473): Consola deserializada, se arma el PCB a continuación
+[INFO] 07:14:20:570 kernel.log/(47473:47473): PCB id[1000] armada, agregando a cola NEW
+[INFO] 07:14:20:570 kernel.log/(47473:47473): PCB id[1000] ingresa a NEW
+[INFO] 07:14:20:570 kernel.log/(47473:47473): PCB id[1000]
+[INFO] 07:14:20:570 kernel.log/(47473:47483): PCB id[1000] ingresa a READY desde NEW
+[INFO] 07:14:20:571 kernel.log/(47473:47480): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:14:20:571 kernel.log/(47473:47480): PCB id[1000] ingresa a EXECUTE
+[INFO] 07:14:20:571 kernel.log/(47473:47481): PCB id[1000] enviada a CPU
+[ERROR] 07:15:37:254 kernel.log/(47473:47481): Instrucción desconocida, ocurrió un error
+[INFO] 07:17:05:439 kernel.log/(47736:47736): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 07:17:09:127 kernel.log/(47736:47736): Cliente conectado (a KERNEL)
+
+[INFO] 07:17:09:128 kernel.log/(47736:47736): Me llegó una Consola
+[INFO] 07:17:09:128 kernel.log/(47736:47736): Consola deserializada, se arma el PCB a continuación
+[INFO] 07:17:09:128 kernel.log/(47736:47736): PCB id[1000] armada, agregando a cola NEW
+[INFO] 07:17:09:128 kernel.log/(47736:47736): PCB id[1000] ingresa a NEW
+[INFO] 07:17:09:128 kernel.log/(47736:47736): PCB id[1000]
+[INFO] 07:17:09:128 kernel.log/(47736:47746): PCB id[1000] ingresa a READY desde NEW
+[INFO] 07:17:09:128 kernel.log/(47736:47743): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:17:09:128 kernel.log/(47736:47743): PCB id[1000] ingresa a EXECUTE
+[INFO] 07:17:09:128 kernel.log/(47736:47744): PCB id[1000] enviada a CPU
+[ERROR] 07:18:05:074 kernel.log/(47736:47744): Instrucción desconocida, ocurrió un error

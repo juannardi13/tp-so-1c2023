@@ -95,3 +95,34 @@
 [INFO] 05:02:30:695 cpu.log/(42947:42947): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
 [INFO] 05:02:37:111 cpu.log/(42947:42947): Cliente conectado (a CPU)
 
+[INFO] 07:13:54:390 cpu.log/(47435:47435): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 07:13:55:062 cpu.log/(47435:47435): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 07:13:55:955 cpu.log/(47435:47435): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 07:14:05:590 cpu.log/(47435:47435): Cliente conectado (a CPU)
+
+[INFO] 07:14:24:719 cpu.log/(47435:47435): CPU esperando a recibir un nuevo contexto de ejecución
+[INFO] 07:14:45:917 cpu.log/(47435:47435): Recibido Proceso id[1000] desde Kernel
+[WARNING] 07:15:17:640 cpu.log/(47435:47435): Se ejecuta la instruccion SET
+[WARNING] 07:15:24:853 cpu.log/(47435:47435): Se ejecuta la instruccion SET
+[WARNING] 07:15:26:912 cpu.log/(47435:47435): Se ejecuta la instruccion SET
+[WARNING] 07:15:28:572 cpu.log/(47435:47435): Se ejecuta la instruccion SET
+[WARNING] 07:15:29:885 cpu.log/(47435:47435): Se ejecuta la instruccion SET
+[WARNING] 07:15:31:260 cpu.log/(47435:47435): Se ejecuta la instruccion SET
+[INFO] 07:16:57:608 cpu.log/(47708:47708): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 07:16:58:091 cpu.log/(47708:47708): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 07:16:58:430 cpu.log/(47708:47708): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+[INFO] 07:17:05:436 cpu.log/(47708:47708): Cliente conectado (a CPU)
+
+[INFO] 07:17:12:272 cpu.log/(47708:47708): CPU esperando a recibir un nuevo contexto de ejecución
+[INFO] 07:17:21:310 cpu.log/(47708:47708): Recibido Proceso id[1000] desde Kernel
+[WARNING] 07:17:35:170 cpu.log/(47708:47708): Se ejecuta la instruccion SET
+[WARNING] 07:17:44:084 cpu.log/(47708:47708): Se ejecuta la instruccion YIELD
+[WARNING] 07:17:45:991 cpu.log/(47708:47708): Se ejecuta la instruccion EXIT
+[WARNING] 07:17:47:391 cpu.log/(47708:47708): Se ejecuta la instruccion SET
+[WARNING] 07:17:48:973 cpu.log/(47708:47708): Se ejecuta la instruccion YIELD
+[WARNING] 07:17:50:447 cpu.log/(47708:47708): Se ejecuta la instruccion YIELD
+[WARNING] 07:17:53:067 cpu.log/(47708:47708): Se ejecuta la instruccion EXIT
+[WARNING] 07:17:55:994 cpu.log/(47708:47708): Se ejecuta la instruccion SET
+[WARNING] 07:17:57:951 cpu.log/(47708:47708): Se ejecuta la instruccion YIELD
+[WARNING] 07:18:00:169 cpu.log/(47708:47708): Se ejecuta la instruccion EXIT
+[WARNING] 07:18:03:478 cpu.log/(47708:47708): Se ejecuta la instruccion SET
