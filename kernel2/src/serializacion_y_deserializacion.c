@@ -22,9 +22,8 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 
 	int tamanio_instrucciones = pcb->tamanio_instrucciones;
 
-	buffer->stream_size = sizeof(int) * 2
-			+ sizeof(estado_proceso)
-			+ sizeof(t_registros)
+	buffer->stream_size = sizeof(int) * 3
+//			+ sizeof(t_registros)
 //			+ tamanio_segmentos  <-- Agregar el tamaño de los segmentos cuando sepamos que carajo es
 			+ tamanio_instrucciones; //El tamaño del String con todas las instrucciones
 
@@ -35,21 +34,21 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 	offset += sizeof(int);
 	memcpy(stream + offset, &(pcb->tamanio_instrucciones), sizeof(int));
 	offset += sizeof(int);
-	memcpy(stream + offset, pcb->instrucciones, strlen(pcb->instrucciones) + 1);
-	offset += (strlen(pcb->instrucciones) + 1);
-	memcpy(stream + offset, &(pcb->pc), sizeof(estado_proceso));
-	offset += sizeof(estado_proceso);
+	memcpy(stream + offset, pcb->instrucciones, tamanio_instrucciones);
+	offset += tamanio_instrucciones;
+	memcpy(stream + offset, &(pcb->pc), sizeof(int));
+	offset += sizeof(int);
 //	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
 //	offset += sizeof(int);
-	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
-	offset += sizeof(t_registros);
+//	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
+//	offset += sizeof(t_registros);
 //	memcpy(stream + offset, &(pcb->tamanio_segmentos), sizeof(int));
 //	offset += sizeof(int);
 //	memcpy(stream + offset, pcb->segmentos, pcb->tamanio_segmentos);
 
 	buffer->stream = stream;
 
-	paquete->codigo_operacion = PCB;
+	paquete->codigo_operacion = CONTEXTO_DE_EJECUCION;
 	paquete->buffer = buffer;
 
 	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
