@@ -49,6 +49,10 @@ int main() {
     				memset(instrucciones, 0, contexto->tamanio_instrucciones);
 
     				memcpy(instrucciones, stream, contexto->tamanio_instrucciones);
+    				stream += contexto->tamanio_instrucciones;
+
+    				contexto->instrucciones = malloc(strlen(instrucciones) + 1);
+    				strcpy(contexto->instrucciones, instrucciones);
 
     //				contexto->instrucciones = malloc(contexto->tamanio_instrucciones);
     //				memset(&(contexto->instrucciones), 0, contexto->tamanio_instrucciones);
@@ -70,11 +74,12 @@ int main() {
 //    					deserializar_segmentos(segmento_actual, stream);
 //    						}
     				int i = 0;
-    				    		char** intrucciones_parseadas = string_split(contexto->instrucciones, "\n");
-    				    		int cantidad_intrucciones = sizeof(intrucciones_parseadas);
+    				    		char** instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
+    				    		int cantidad_intrucciones = 20; //sizeof(intrucciones_parseadas);
     				    		while(i < cantidad_intrucciones){
-    				    			char* instruccion_a_ejecutar;
-    				    			strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
+    				    			char* instruccion_a_ejecutar = malloc(strlen(instrucciones_parseadas[contexto->pc]) + 1);
+    				    			strcpy(instruccion_a_ejecutar, instrucciones_parseadas[contexto->pc]);
+    				    			//strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
     				    			decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
     				    			i++;
     				    		}
