@@ -2,8 +2,6 @@
 
 #define MAX_LEN 256
 
-
-
 int main() {
 	bool cpu_bloqueada = false;
 	char* ip_kernel;
@@ -79,49 +77,31 @@ int main() {
 //    					deserializar_segmentos(segmento_actual, stream);
 //    						}
 
-
-//			int i = 0;
-//			int cantidad_instrucciones = 0;
-
 			log_info(logger, "Recibido Proceso id[%d] desde Kernel", contexto->pid);
 
 			int contexto_sigue_en_cpu = 1; // Es para el while de abajo, si queremos que el contexto vuelva al kernel va a ser 0, rompiendo el ciclo y quedandose el cpu en espera a recibir de nuevo el contexto de ejecución
 			char **instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
 
-
-
-			//esto de acá no sé que onda por qué está? Si lo seguimos usando, lo cambiamos por lo de más abajo
-			//cantidad_instrucciones = sizeof(intrucciones_parseadas);
-//			for(int j = 0; instrucciones_parseadas[j] != NULL; j++) {
-//				cantidad_instrucciones++;
-//			}
-
-			while (contexto_sigue_en_cpu/*i < cantidad_instrucciones*/) {
+			while(contexto_sigue_en_cpu) {
 				char *instruccion_a_ejecutar = malloc(strlen(instrucciones_parseadas[contexto->pc]) + 1);
 
 				strcpy(instruccion_a_ejecutar, instrucciones_parseadas[contexto->pc]);
 
-				//Lo de abajo puede desaparecer porque está lo de arriba :))
-				//strncpy(instruccion_a_ejecutar, fetch_instruccion(contexto), strlen(fetch_instruccion(contexto))+1);
-
-				// Comento para probar, pero es probable que terminemos sacando decode_instruccion
-				//decode_instruccion(instruccion_a_ejecutar, contexto, config, fd_memoria, fd_kernel, cpu_bloqueada);
-
-				op_code codigo_instruccion = encontrar_instruccion(instruccion_a_ejecutar);
+				op_code codigo_instruccion = fetch_instruccion(instruccion_a_ejecutar);
 
 				switch(codigo_instruccion) {
-				case SET:
-//					int tiempo_de_espera;
-//					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
-//					sleep(tiempo_de_espera);
-//					ejecutar_SET(instruccion_a_ejecutar, contexto);
-					log_warning(logger, "Se ejecuta la instruccion SET");
+				case SET: //TERMINADO
 					contexto->pc++;
+					int tiempo_de_espera;
+					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
+				//	sleep(tiempo_de_espera);
+					ejecutar_SET(instruccion_a_ejecutar, contexto);
+					log_warning(logger, "Se ejecuta la instruccion SET");
 					break;
 				case MOV_IN:
+					contexto->pc++;
 //					ejecutar_MOV_IN(instruccion_a_ejecutar, contexto, fd_memoria, config);
 					log_warning(logger, "Se ejecuta la instruccion MOV_IN");
-					contexto->pc++;
 					break;
 				case MOV_OUT:
 //					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config);
@@ -129,9 +109,10 @@ int main() {
 					contexto->pc++;
 					break;
 				case IO:
+					contexto->pc++;
 //					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel, cpu_bloqueada);
 					log_warning(logger, "Se ejecuta la instruccion IO");
-					contexto->pc++;
+					contexto_sigue_en_cpu = 0;
 					break;
 				case F_OPEN:
 //					ejecutar_F_OPEN(instruccion_a_ejecutar, contexto, fd_kernel);
@@ -184,14 +165,15 @@ int main() {
 					contexto->pc++;
 					break;
 				case YIELD:
-//					ejecutar_YIELD(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion YIELD");
 					contexto->pc++;
+					ejecutar_YIELD(instruccion_a_ejecutar, contexto, fd_kernel);
+					log_warning(logger, "Se ejecuta la instruccion YIELD");
+					contexto_sigue_en_cpu = 0;
 					break;
 				case EXIT:
-//					ejecutar_EXIT(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion EXIT");
 					contexto->pc++;
+					ejecutar_EXIT(instruccion_a_ejecutar, contexto, fd_kernel);
+					log_warning(logger, "Se ejecuta la instruccion EXIT");
 					break;
 				default:
 					log_error(logger, "instruccion desconocida");
@@ -200,18 +182,16 @@ int main() {
 
 			}
 
-			break;
-		default:
-			log_warning(logger, "Operacion desconocida. No quieras meter la pata");
-			break;
-		}
+			log_warning(logger, "AX: %s", registros_cpu.ax);
+			log_warning(logger, "BX: %s", registros_cpu.bx);
+			log_warning(logger, "CX: %s", registros_cpu.cx);
+			log_warning(logger, "DX: %s", registros_cpu.dx);
+			log_warning(logger, "EAX: %s", registros_cpu.eax);
+			log_warning(logger, "EBX: %s", registros_cpu.ebx);
 
+		}
 	}
 
 	return 0;
 }
-
-
-
-
 

@@ -48,22 +48,53 @@ void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contex
 	recibir_contexto(fd_kernel, contexto);
 }
 
-void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
-	t_buffer* buffer;
-	void* stream;
-	int offset = 0;
-	serializar_contexto(contexto, buffer, stream, offset);
+void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer *buffer = malloc(sizeof(t_buffer));
+	t_paquete *paquete = malloc(sizeof(t_paquete));
 
-	t_paquete* paquete = malloc(sizeof(t_paquete));
+	int tamanio_instrucciones = contexto->tamanio_instrucciones;
+
+	buffer->stream_size = sizeof(int) * 3 //PID, PC, TAMANIO_INSTRUCCIONES
+	//		+ sizeof(t_registros)
+	//			+ tamanio_segmentos
+			+ tamanio_instrucciones;
+
+	void *stream = malloc(buffer->stream_size);
+	int offset = 0;
+	//	serializar_contexto(contexto, buffer, stream, offset);
+
+	memcpy(stream + offset, &(contexto->pid), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
+	offset += tamanio_instrucciones;
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
+
+	// SERIALIZAR DESPUÉS LOS REGISTROS
+
+	buffer->stream = stream;
+
 	paquete->codigo_operacion = EXIT;
 	paquete->buffer = buffer;
 
+	void *a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion),
+			sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size),
+			sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream,
+			paquete->buffer->stream_size);
+
 	send(fd_kernel, stream, buffer->stream_size, 0);
 
+	free(a_enviar);
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -266,7 +297,9 @@ void ejecutar_MOV_OUT(char** instruccion, t_contexto_de_ejecucion* contexto, int
 	escribir_en_memoria(direccion_fisica, instruccion[2], fd_memoria);
 }
 
-void ejecutar_SET(char** instruccion, t_contexto_de_ejecucion* contexto){
+void ejecutar_SET(char* instruccion_grande, t_contexto_de_ejecucion* contexto){
+	char** instruccion = string_split(instruccion_grande, " ");
+
 	asignar_valor_a_registro(instruccion[2], instruccion[1], contexto->registros_pcb);
 }
 
@@ -314,25 +347,56 @@ void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd
 	recibir_contexto(fd_kernel, contexto);
 }
 
-void ejecutar_YIELD(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
-	t_buffer* buffer;
-	void* stream;
-	int offset = 0;
-	serializar_contexto(contexto, buffer, stream, offset);
-
+void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
+	t_buffer* buffer = malloc(sizeof(t_buffer));
 	t_paquete* paquete = malloc(sizeof(t_paquete));
+
+	int tamanio_instrucciones = contexto->tamanio_instrucciones;
+
+	buffer->stream_size = sizeof(int) * 3 //PID, PC, TAMANIO_INSTRUCCIONES
+	//		+ sizeof(t_registros)
+//			+ tamanio_segmentos
+			+ tamanio_instrucciones;
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+//	serializar_contexto(contexto, buffer, stream, offset);
+
+	memcpy(stream + offset, &(contexto->pid), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
+	offset += tamanio_instrucciones;
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
+
+	// SERIALIZAR DESPUÉS LOS REGISTROS
+
+	buffer->stream = stream;
+
 	paquete->codigo_operacion = YIELD;
 	paquete->buffer = buffer;
 
-	send(fd_kernel, stream, buffer->stream_size, 0);
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
 
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_kernel, a_enviar, buffer->stream_size, 0);
+
+	free(a_enviar);
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-	recibir_contexto(fd_kernel, contexto);
 }
 
-
+int agregar_a_stream(void* stream, int* offset, void* src, int size) {
+	memcpy(stream + *offset, src, size);
+	*offset +=size;
+}
 
 
 

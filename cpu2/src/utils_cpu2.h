@@ -38,13 +38,15 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
 int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*);
 
 // Funciones para tratar con las instrucciones
+int agregar_a_stream(void*, int*, void*, int);
 void decode_instruccion(char*, t_contexto_de_ejecucion*, t_config*, int, int, bool);
-char* fetch_instruccion(t_contexto_de_ejecucion*);
+char* encontrar_instruccion(t_contexto_de_ejecucion*);
+op_code fetch_instruccion(char*);
 
 // Ejecución de instrucciones
 void ejecutar_CREATE_SEGMENT(char**, t_contexto_de_ejecucion*, int);
 void ejecutar_DELETE_SEGMENT(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_EXIT(char** instruccion, t_contexto_de_ejecucion*, int);
+void ejecutar_EXIT(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_F_CLOSE(char**, t_contexto_de_ejecucion*, int);
 void ejecutar_F_OPEN(char**, t_contexto_de_ejecucion*, int);
 void ejecutar_F_READ(char**, t_contexto_de_ejecucion*, int, int, t_config*);
@@ -54,9 +56,9 @@ void ejecutar_F_WRITE(char**, t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
 void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
-void ejecutar_SET(char**, t_contexto_de_ejecucion*);
+void ejecutar_SET(char*, t_contexto_de_ejecucion*);
 void ejecutar_SIGNAL(char**, t_contexto_de_ejecucion*, int);
 void ejecutar_WAIT(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_YIELD(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_YIELD(char*, t_contexto_de_ejecucion*, int);
 
 #endif /* UTILS_H_ */

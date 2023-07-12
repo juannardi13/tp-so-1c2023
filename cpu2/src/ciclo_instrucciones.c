@@ -2,7 +2,7 @@
 #include <math.h>
 #include<shared-2.h>
 
-op_code encontrar_instruccion(char* instruccion) {
+op_code fetch_instruccion(char* instruccion) {
 
 	op_code codigo_operacion;
 	char** instruccion_parseada = string_split(instruccion, " ");
@@ -116,7 +116,10 @@ void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_
 			}
 }
 
-char* fetch_instruccion(t_contexto_de_ejecucion* contexto){
+
+//----------FUNCIONES EN DESUSO-----------------------------------------------------
+
+char* encontrar_instruccion(t_contexto_de_ejecucion* contexto){
 	char** intrucciones_parseadas = string_split(contexto->instrucciones, "\n");
 	char* instruccion_a_ejecutar = intrucciones_parseadas[contexto->pc];
 	contexto->pc++;
