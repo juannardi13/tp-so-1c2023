@@ -82,6 +82,10 @@ int main() {
 			int contexto_sigue_en_cpu = 1; // Es para el while de abajo, si queremos que el contexto vuelva al kernel va a ser 0, rompiendo el ciclo y quedandose el cpu en espera a recibir de nuevo el contexto de ejecución
 			char **instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
 
+			for(int g = 0; instrucciones_parseadas[g] != NULL; g++) {
+				log_warning(logger, "%s", instrucciones_parseadas[g]);
+			}
+
 			while(contexto_sigue_en_cpu) {
 				char *instruccion_a_ejecutar = malloc(strlen(instrucciones_parseadas[contexto->pc]) + 1);
 
@@ -92,9 +96,10 @@ int main() {
 				switch(codigo_instruccion) {
 				case SET: //TERMINADO
 					contexto->pc++;
+					log_warning(logger, "Actualizado el Program Counter: %d", contexto->pc);
 					int tiempo_de_espera;
 					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
-					usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
+					//usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
 					ejecutar_SET(instruccion_a_ejecutar, contexto);
 					log_warning(logger, "Se ejecuta la instruccion SET");
 					break;
@@ -166,17 +171,20 @@ int main() {
 					break;
 				case YIELD:
 					contexto->pc++;
+					log_warning(logger, "Actualizado el Program Counter: %d", contexto->pc);
 					ejecutar_YIELD(instruccion_a_ejecutar, contexto, fd_kernel);
 					log_warning(logger, "Se ejecuta la instruccion YIELD");
 					contexto_sigue_en_cpu = 0;
 					break;
 				case EXIT:
 					contexto->pc++;
-					ejecutar_EXIT(instruccion_a_ejecutar, contexto, fd_kernel);
+					log_warning(logger, "Actualizado el Program Counter: %d", contexto->pc);
 					log_warning(logger, "Se ejecuta la instruccion EXIT");
+					ejecutar_EXIT(instruccion_a_ejecutar, contexto, fd_kernel);
+					contexto_sigue_en_cpu = 0;
 					break;
 				default:
-					log_error(logger, "instruccion desconocida");
+					log_error(logger, "[ERROR] Instruccion desconocida, finalizando el módulo CPU");
 					break;
 				}
 
@@ -188,6 +196,12 @@ int main() {
 			log_warning(logger, "DX: %s", registros_cpu.dx);
 			log_warning(logger, "EAX: %s", registros_cpu.eax);
 			log_warning(logger, "EBX: %s", registros_cpu.ebx);
+			log_warning(logger, "ECX: %s", registros_cpu.ecx);
+			log_warning(logger, "EDX: %s", registros_cpu.edx);
+			log_warning(logger, "RAX: %s", registros_cpu.rax);
+			log_warning(logger, "RBX: %s", registros_cpu.rbx);
+			log_warning(logger, "RCX: %s", registros_cpu.rcx);
+			log_warning(logger, "RDX: %s", registros_cpu.rdx);
 
 		}
 	}

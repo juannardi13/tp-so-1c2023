@@ -61,12 +61,12 @@ void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_
 
 	memcpy(stream + offset, &(contexto->pid), sizeof(int));
 	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
 	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
 	offset += tamanio_instrucciones;
-	memcpy(stream + offset, &(contexto->pc), sizeof(int));
-	offset += sizeof(int);
 
 	// SERIALIZAR DESPUÉS LOS REGISTROS
 
@@ -85,7 +85,7 @@ void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_
 	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream,
 			paquete->buffer->stream_size);
 
-	send(fd_kernel, stream, buffer->stream_size, 0);
+	send(fd_kernel, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
 	free(paquete->buffer->stream);
@@ -345,12 +345,13 @@ void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd
 
 	memcpy(stream + offset, &(contexto->pid), sizeof(int));
 	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
 	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
 	offset += tamanio_instrucciones;
-	memcpy(stream + offset, &(contexto->pc), sizeof(int));
-	offset += sizeof(int);
+
 
 	// SERIALIZAR DESPUÉS LOS REGISTROS
 
@@ -366,12 +367,10 @@ void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
 	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
 
-	send(fd_kernel, a_enviar, buffer->stream_size, 0);
+	send(fd_kernel, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
+	eliminar_paquete(paquete);
 }
 
 int agregar_a_stream(void* stream, int* offset, void* src, int size) {
