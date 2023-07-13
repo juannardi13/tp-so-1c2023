@@ -38,8 +38,13 @@ void estado_ejecutar(void) {
 		op_code respuesta_cpu = paquete->codigo_operacion;
 
 		void *stream = paquete->buffer->stream;
+
 		//-------------------------------------------------------------RECIBO EL PID
 		memcpy(&(proceso_a_ejecutar->pcb->pid), stream, sizeof(int));
+		stream += sizeof(int);
+
+		//-------------------------------------------------------------RECIBO EL PROGRAM COUNTER
+		memcpy(&(proceso_a_ejecutar->pcb->pc), stream, sizeof(int));
 		stream += sizeof(int);
 
 		//-------------------------------------------------------------RECIBO INSTRUCCIONES
@@ -54,10 +59,6 @@ void estado_ejecutar(void) {
 
 		proceso_a_ejecutar->pcb->instrucciones = malloc(strlen(instrucciones) + 1);
 		strcpy(proceso_a_ejecutar->pcb->instrucciones, instrucciones);
-
-		//-------------------------------------------------------------RECIBO EL PROGRAM COUNTER
-		memcpy(&(proceso_a_ejecutar->pcb->pc), stream, sizeof(int));
-		stream += sizeof(int);
 
 		//--- FALTA SERIALIZAR SEGMENTOS Y REGISTROS
 
