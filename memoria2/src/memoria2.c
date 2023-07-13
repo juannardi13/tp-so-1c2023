@@ -1,39 +1,62 @@
-#include "utils_memoria.h"
-#include <shared-2.h>
-
+#include "memoria.h"
 
 int main(void) {
-	// char* ip_kernel;
-	char* puerto_kernel;
 
-	t_log* logger = iniciar_logger();
-	t_config* config = iniciar_config();
+	inicializar_config();
 
-	log_info(logger, "Se inicializa el módulo Memoria");
+	logger = log_create("memoria.log", "MEMORIA", 1, LOG_LEVEL_INFO);
 
-    // ip_kernel = config_get_string_value(config, "IP");
-    puerto_kernel = config_get_string_value(config, "PUERTO_KERNEL");
+	int memoria_fd = iniciar_servidor(config_memoria->puerto_escucha);
+	log_info(logger, "Servidor Memoria iniciado, esperando conexiones entrantes");
 
-	log_info(logger, "PUERTO ESCUCHA DE KERNEL: %s", puerto_kernel);
+	esperar_conexiones(memoria_fd); // 1-FileSystem 2-CPU 3-Kernel
 
-	int fd_memoria = iniciar_servidor(puerto_kernel);
-	log_info(logger, "Memoria inicializada, esperando a recibir al Kernel en el PUERTO %s.", puerto_kernel);
-	int fd_kernel = esperar_cliente(logger, "MEMORIA", fd_memoria);
+	iniciar_memoria(); // se reserva memoria y crea el bitmap para huecos libres
+//	log_info(logger, "Se inicializaron las estructuras de Memoria");
 
-	while (1) {
-		int cod_op = recibir_operacion(fd_kernel);
-		switch (cod_op) {
-			case MENSAJE:
-				recibir_mensaje(logger, fd_kernel);
-				break;
-			case -1:
-				log_error(logger, "el cliente se desconecto. Terminando servidor");
-				return EXIT_FAILURE;
-			default:
-				log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-				break;
-			}
+	pthread_join(hilos[0], NULL); // Memoria termina cuando terminan los hilos
+
+	// terminar_memoria()
+
+	return EXIT_SUCCESS;
+}
+
+void inicializar_config(void) {
+
+	t_config *config = config_create("memoria.config");
+
+	if (config == NULL) {
+		perror("No se encontró el path de la config");
+		exit(1);
 	}
 
-	return 0;
+	config_memoria = malloc(sizeof(t_config_memoria));
+
+	config_memoria->puerto_escucha 		 = config_get_string_value(config, "PUERTO_ESCUCHA");
+	config_memoria->tam_memoria 		 = config_get_int_value	  (config, "TAM_MEMORIA");
+	config_memoria->tam_segmento_0 		 = config_get_int_value	  (config, "TAM_SEGMENTO_0");
+	config_memoria->cant_segmentos 		 = config_get_int_value	  (config, "CANT_SEGMENTOS"); //max x proceso
+	config_memoria->retardo_memoria 	 = config_get_int_value	  (config, "RETARDO_MEMORIA");
+	config_memoria->retardo_compactacion = config_get_int_value	  (config, "RETARDO_COMPACTACION");
+	config_memoria->algoritmo_asignacion = config_get_string_value(config, "ALGORITMO_ASIGNACION");
+
+	config_destroy(config);
+}
+
+void esperar_conexiones(int socket_servidor) {
+
+	conexiones[0] = malloc(sizeof(int));
+	*conexiones[0] = esperar_cliente(logger, "Memoria", socket_servidor);
+	pthread_create(&hilos[0], NULL, (void *) atender_File_System, conexiones[0]);
+	log_info(logger, "Se conectó el File System!");
+
+//	conexiones[1] = malloc(sizeof(int));
+//	*conexiones[1] = esperar_cliente(socket_servidor);
+//	pthread_create(&hilos[1], NULL, (void *) atender_File_System, (void *) *conexiones[1]);
+//	log_info(logger, "Se conectó la CPU!");
+//
+//	conexiones[2] = malloc(sizeof(int));
+//	*conexiones[2] = esperar_cliente(socket_servidor);
+//	pthread_create(&hilos[2], NULL, (void *) atender_File_System, (void *) *conexiones[2]);
+//	log_info(logger, "Se conectó el Kernel!");
 }

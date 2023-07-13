@@ -283,3 +283,8 @@ void liberar_conexion(int socket_cliente) {
     close(socket_cliente);
 }
 
+int bits_to_bytes(int bits) {
+
+	return bits / 8;
+}
+

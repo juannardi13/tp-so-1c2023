@@ -156,6 +156,7 @@ typedef struct
 void agregar_a_buffer(t_buffer *, void *, int);
 void agregar_a_paquete(t_paquete *, void *, int);
 void agregar_entero_a_paquete(t_paquete *, int);
+int bits_to_bytes(int);
 void crear_buffer(t_paquete *);
 int crear_conexion(t_log *, const char *, char *, char *);
 t_paquete *crear_paquete(int);
