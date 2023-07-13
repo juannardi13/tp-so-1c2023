@@ -22,8 +22,6 @@ void ejecutar_CREATE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contex
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -44,8 +42,6 @@ void ejecutar_DELETE_SEGMENT(char** instruccion, t_contexto_de_ejecucion* contex
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -115,8 +111,6 @@ void ejecutar_F_CLOSE(char** instruccion, t_contexto_de_ejecucion* contexto, int
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_OPEN(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -137,8 +131,6 @@ void ejecutar_F_OPEN(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
@@ -164,7 +156,6 @@ void ejecutar_F_READ(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -187,8 +178,6 @@ void ejecutar_F_SEEK(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 	}
 
 void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -210,7 +199,6 @@ void ejecutar_F_TRUNCATE(char** instruccion, t_contexto_de_ejecucion* contexto, 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
@@ -236,7 +224,6 @@ void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada){
@@ -282,8 +269,6 @@ void ejecutar_IO(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_k
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_MOV_IN(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config){
@@ -321,8 +306,6 @@ void ejecutar_SIGNAL(char** instruccion, t_contexto_de_ejecucion* contexto, int 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
@@ -343,8 +326,6 @@ void ejecutar_WAIT(char** instruccion, t_contexto_de_ejecucion* contexto, int fd
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
 	free(paquete);
-
-	recibir_contexto(fd_kernel, contexto);
 }
 
 void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel){
