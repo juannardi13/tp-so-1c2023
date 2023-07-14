@@ -35,6 +35,7 @@ int main(int argc, char** argv) {
 
 	//Envío de instrucciones a Kernel
 
+	getchar();
 	enviar_string(conexion_kernel, instrucciones, CONSOLA);
 	
 	log_info(logger, "Paquete de instrucciones enviado correctamente!\n");
@@ -43,13 +44,14 @@ int main(int argc, char** argv) {
 
 	log_info(logger, "Esperando respuesta de Kernel para finalizar.");
 
-	op_code respuesta_kernel = recibir_operacion(conexion_kernel);
+	op_code respuesta_kernel;
+	recv(conexion_kernel, &respuesta_kernel, sizeof(op_code), MSG_WAITALL);
 
 	if(respuesta_kernel != FINALIZAR_CONSOLA)
 		log_error(logger, "Error al querer finalizar la consola");
 
-	log_info(logger, "Finalizó el proceso, terminando programa");
-	finalizar_programa(conexion_kernel, logger, config);
+	log_info(logger, "Finalizó el proceso, terminando consola");
+//	finalizar_programa(conexion_kernel, logger, config);
 
 	return 0;
 }
