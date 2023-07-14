@@ -107,6 +107,7 @@ int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* con
 void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria){
 	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA); // IDEM leer_de_memoria
 	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
+	agregar_a_paquete(paquete, &valor, strlen(valor)+1); // No le estabamos pasando el valor que queriamos que escriba en la direccion fisica
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
 }
