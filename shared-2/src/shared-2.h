@@ -112,7 +112,7 @@ typedef struct {
 	int tamanio_instrucciones;
 	char* instrucciones;// recibimos el choclo entero de las intrucciones, sin parsear nada "SET AX HOLA/nIO 12/nEXIT/n"
 	int pc;
-	t_registros* registros_pcb;
+	t_registros registros_pcb;
 	int tamanio_registros;
 	int tamanio_segmentos;
 	t_list* tabla_segmentos;
