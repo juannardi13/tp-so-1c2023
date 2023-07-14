@@ -13048,3 +13048,787 @@ SET DX ESTAS
 [WARNING] 21:02:54:811 kernel.log/(66054:66062): La última instrucción ejecutada fue EXIT
 [INFO] 21:02:54:812 kernel.log/(66054:66060): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
 [INFO] 21:02:54:812 kernel.log/(66054:66060): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:18:25:467 kernel.log/(68486:68486): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:18:56:719 kernel.log/(68486:68486): Cliente conectado (a KERNEL)
+
+[INFO] 03:19:04:155 kernel.log/(68486:68486): Me llegó una Consola
+[INFO] 03:19:04:155 kernel.log/(68486:68486): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:19:04:155 kernel.log/(68486:68486): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:19:04:155 kernel.log/(68486:68486): PCB id[1000] ingresa a NEW
+[INFO] 03:19:04:155 kernel.log/(68486:68486): PCB id[1000]
+[INFO] 03:19:04:155 kernel.log/(68486:68495): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:19:04:156 kernel.log/(68486:68492): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:04:156 kernel.log/(68486:68492): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:19:04:156 kernel.log/(68486:68493): PCB id[1000] enviada a CPU
+[WARNING] 03:19:04:156 kernel.log/(68486:68493): La última instrucción ejecutada fue YIELD
+[INFO] 03:19:04:156 kernel.log/(68486:68492): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:04:156 kernel.log/(68486:68492): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:19:04:157 kernel.log/(68486:68493): PCB id[1000] enviada a CPU
+[WARNING] 03:19:04:158 kernel.log/(68486:68493): La última instrucción ejecutada fue YIELD
+[INFO] 03:19:04:158 kernel.log/(68486:68492): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:04:158 kernel.log/(68486:68492): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:19:04:158 kernel.log/(68486:68493): PCB id[1000] enviada a CPU
+[WARNING] 03:19:04:159 kernel.log/(68486:68493): La última instrucción ejecutada fue YIELD
+[INFO] 03:19:04:159 kernel.log/(68486:68492): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:04:159 kernel.log/(68486:68492): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:19:04:159 kernel.log/(68486:68493): PCB id[1000] enviada a CPU
+[WARNING] 03:19:04:159 kernel.log/(68486:68493): La última instrucción ejecutada fue YIELD
+[INFO] 03:19:04:159 kernel.log/(68486:68492): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:04:159 kernel.log/(68486:68492): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:19:04:159 kernel.log/(68486:68493): PCB id[1000] enviada a CPU
+[WARNING] 03:19:04:159 kernel.log/(68486:68493): La última instrucción ejecutada fue YIELD
+[INFO] 03:19:04:159 kernel.log/(68486:68492): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:04:159 kernel.log/(68486:68492): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:19:04:159 kernel.log/(68486:68493): PCB id[1000] enviada a CPU
+[INFO] 03:19:04:160 kernel.log/(68486:68493): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:19:04:160 kernel.log/(68486:68493): La última instrucción ejecutada fue EXIT
+[INFO] 03:19:04:160 kernel.log/(68486:68491): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:19:04:160 kernel.log/(68486:68491): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:19:39:191 kernel.log/(68486:68486): Cliente conectado (a KERNEL)
+
+[INFO] 03:19:39:191 kernel.log/(68486:68486): Me llegó una Consola
+[INFO] 03:19:39:191 kernel.log/(68486:68486): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:19:39:191 kernel.log/(68486:68486): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:19:39:191 kernel.log/(68486:68486): PCB id[1001] ingresa a NEW
+[INFO] 03:19:39:191 kernel.log/(68486:68486): PCB id[1001]
+[INFO] 03:19:39:191 kernel.log/(68486:68495): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:19:39:191 kernel.log/(68486:68492): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:19:39:191 kernel.log/(68486:68492): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:21:28:576 kernel.log/(68710:68710): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:21:42:283 kernel.log/(68710:68710): Cliente conectado (a KERNEL)
+
+[INFO] 03:21:42:283 kernel.log/(68710:68722): Me llegó una Consola
+[INFO] 03:21:42:283 kernel.log/(68710:68722): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:21:42:283 kernel.log/(68710:68722): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:21:42:283 kernel.log/(68710:68722): PCB id[1000] ingresa a NEW
+[INFO] 03:21:42:284 kernel.log/(68710:68722): PCB id[1000]
+[INFO] 03:21:42:284 kernel.log/(68710:68720): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:21:42:284 kernel.log/(68710:68717): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:42:284 kernel.log/(68710:68717): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:21:42:284 kernel.log/(68710:68718): PCB id[1000] enviada a CPU
+[WARNING] 03:21:42:284 kernel.log/(68710:68718): La última instrucción ejecutada fue YIELD
+[INFO] 03:21:42:284 kernel.log/(68710:68717): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:42:285 kernel.log/(68710:68717): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:21:42:285 kernel.log/(68710:68718): PCB id[1000] enviada a CPU
+[WARNING] 03:21:42:285 kernel.log/(68710:68718): La última instrucción ejecutada fue YIELD
+[INFO] 03:21:42:285 kernel.log/(68710:68717): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:42:285 kernel.log/(68710:68717): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:21:42:285 kernel.log/(68710:68718): PCB id[1000] enviada a CPU
+[WARNING] 03:21:42:285 kernel.log/(68710:68718): La última instrucción ejecutada fue YIELD
+[INFO] 03:21:42:285 kernel.log/(68710:68717): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:42:285 kernel.log/(68710:68717): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:21:42:285 kernel.log/(68710:68718): PCB id[1000] enviada a CPU
+[WARNING] 03:21:42:286 kernel.log/(68710:68718): La última instrucción ejecutada fue YIELD
+[INFO] 03:21:42:286 kernel.log/(68710:68717): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:42:286 kernel.log/(68710:68717): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:21:42:286 kernel.log/(68710:68718): PCB id[1000] enviada a CPU
+[WARNING] 03:21:42:286 kernel.log/(68710:68718): La última instrucción ejecutada fue YIELD
+[INFO] 03:21:42:286 kernel.log/(68710:68717): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:42:286 kernel.log/(68710:68717): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:21:42:286 kernel.log/(68710:68718): PCB id[1000] enviada a CPU
+[INFO] 03:21:42:286 kernel.log/(68710:68718): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:21:42:286 kernel.log/(68710:68718): La última instrucción ejecutada fue EXIT
+[INFO] 03:21:42:286 kernel.log/(68710:68716): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:21:42:289 kernel.log/(68710:68716): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:21:44:515 kernel.log/(68710:68710): Cliente conectado (a KERNEL)
+
+[INFO] 03:21:44:515 kernel.log/(68710:68724): Me llegó una Consola
+[INFO] 03:21:44:515 kernel.log/(68710:68724): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:21:44:515 kernel.log/(68710:68724): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:21:44:515 kernel.log/(68710:68724): PCB id[1001] ingresa a NEW
+[INFO] 03:21:44:515 kernel.log/(68710:68724): PCB id[1001]
+[INFO] 03:21:44:515 kernel.log/(68710:68720): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:21:44:515 kernel.log/(68710:68717): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:21:44:515 kernel.log/(68710:68717): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:25:54:753 kernel.log/(68785:68785): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:26:10:052 kernel.log/(68785:68785): Cliente conectado (a KERNEL)
+
+[INFO] 03:26:59:909 kernel.log/(68785:68860): Me llegó una Consola
+[INFO] 03:26:59:909 kernel.log/(68785:68860): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:26:59:909 kernel.log/(68785:68860): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:26:59:909 kernel.log/(68785:68860): PCB id[1000] ingresa a NEW
+[INFO] 03:26:59:909 kernel.log/(68785:68860): PCB id[1000]
+[INFO] 03:26:59:909 kernel.log/(68785:68801): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:26:59:909 kernel.log/(68785:68798): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:26:59:909 kernel.log/(68785:68798): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:26:59:909 kernel.log/(68785:68799): PCB id[1000] enviada a CPU
+[WARNING] 03:26:59:909 kernel.log/(68785:68799): La última instrucción ejecutada fue YIELD
+[INFO] 03:26:59:909 kernel.log/(68785:68798): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:26:59:910 kernel.log/(68785:68798): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:26:59:910 kernel.log/(68785:68799): PCB id[1000] enviada a CPU
+[WARNING] 03:26:59:910 kernel.log/(68785:68799): La última instrucción ejecutada fue YIELD
+[INFO] 03:26:59:910 kernel.log/(68785:68798): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:26:59:910 kernel.log/(68785:68798): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:26:59:910 kernel.log/(68785:68799): PCB id[1000] enviada a CPU
+[WARNING] 03:26:59:912 kernel.log/(68785:68799): La última instrucción ejecutada fue YIELD
+[INFO] 03:26:59:912 kernel.log/(68785:68798): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:26:59:912 kernel.log/(68785:68798): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:26:59:913 kernel.log/(68785:68799): PCB id[1000] enviada a CPU
+[WARNING] 03:26:59:914 kernel.log/(68785:68799): La última instrucción ejecutada fue YIELD
+[INFO] 03:26:59:914 kernel.log/(68785:68798): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:26:59:914 kernel.log/(68785:68798): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:26:59:914 kernel.log/(68785:68799): PCB id[1000] enviada a CPU
+[WARNING] 03:26:59:915 kernel.log/(68785:68799): La última instrucción ejecutada fue YIELD
+[INFO] 03:26:59:915 kernel.log/(68785:68798): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:26:59:915 kernel.log/(68785:68798): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:26:59:915 kernel.log/(68785:68799): PCB id[1000] enviada a CPU
+[INFO] 03:26:59:916 kernel.log/(68785:68799): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:26:59:916 kernel.log/(68785:68799): La última instrucción ejecutada fue EXIT
+[INFO] 03:26:59:916 kernel.log/(68785:68796): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:26:59:916 kernel.log/(68785:68796): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:27:04:806 kernel.log/(68785:68785): Cliente conectado (a KERNEL)
+
+[INFO] 03:27:04:812 kernel.log/(68785:68871): Me llegó una Consola
+[INFO] 03:27:04:813 kernel.log/(68785:68871): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:27:04:813 kernel.log/(68785:68871): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:27:04:813 kernel.log/(68785:68871): PCB id[1001] ingresa a NEW
+[INFO] 03:27:04:813 kernel.log/(68785:68871): PCB id[1001]
+[INFO] 03:27:04:813 kernel.log/(68785:68801): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:27:04:813 kernel.log/(68785:68798): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:27:04:813 kernel.log/(68785:68798): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:36:01:053 kernel.log/(68981:68981): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:36:16:021 kernel.log/(68981:68981): Cliente conectado (a KERNEL)
+
+[INFO] 03:36:32:404 kernel.log/(68981:69024): Me llegó una Consola
+[INFO] 03:36:32:404 kernel.log/(68981:69024): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:36:32:404 kernel.log/(68981:69024): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:36:32:404 kernel.log/(68981:69024): PCB id[1000] ingresa a NEW
+[INFO] 03:36:32:404 kernel.log/(68981:69024): PCB id[1000]
+[INFO] 03:36:32:404 kernel.log/(68981:69001): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:36:32:405 kernel.log/(68981:68998): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:36:32:405 kernel.log/(68981:68998): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:36:32:405 kernel.log/(68981:68999): PCB id[1000] enviada a CPU
+[WARNING] 03:36:32:405 kernel.log/(68981:68999): La última instrucción ejecutada fue YIELD
+[INFO] 03:36:32:405 kernel.log/(68981:68998): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:36:32:405 kernel.log/(68981:68998): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:36:32:405 kernel.log/(68981:68999): PCB id[1000] enviada a CPU
+[WARNING] 03:36:32:406 kernel.log/(68981:68999): La última instrucción ejecutada fue YIELD
+[INFO] 03:36:32:406 kernel.log/(68981:68998): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:36:32:406 kernel.log/(68981:68998): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:36:32:406 kernel.log/(68981:68999): PCB id[1000] enviada a CPU
+[WARNING] 03:36:32:406 kernel.log/(68981:68999): La última instrucción ejecutada fue YIELD
+[INFO] 03:36:32:406 kernel.log/(68981:68998): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:36:32:406 kernel.log/(68981:68998): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:36:32:406 kernel.log/(68981:68999): PCB id[1000] enviada a CPU
+[WARNING] 03:36:32:409 kernel.log/(68981:68999): La última instrucción ejecutada fue YIELD
+[INFO] 03:36:32:409 kernel.log/(68981:68998): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:36:32:409 kernel.log/(68981:68998): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:36:32:409 kernel.log/(68981:68999): PCB id[1000] enviada a CPU
+[WARNING] 03:36:32:409 kernel.log/(68981:68999): La última instrucción ejecutada fue YIELD
+[INFO] 03:36:32:409 kernel.log/(68981:68998): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:36:32:409 kernel.log/(68981:68998): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:36:32:409 kernel.log/(68981:68999): PCB id[1000] enviada a CPU
+[INFO] 03:36:32:410 kernel.log/(68981:68999): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:36:32:410 kernel.log/(68981:68999): La última instrucción ejecutada fue EXIT
+[INFO] 03:36:32:410 kernel.log/(68981:68994): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:36:32:410 kernel.log/(68981:68994): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:37:14:557 kernel.log/(68981:68981): Cliente conectado (a KERNEL)
+
+[INFO] 03:37:14:560 kernel.log/(68981:69039): Me llegó una Consola
+[INFO] 03:37:14:560 kernel.log/(68981:69039): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:37:14:560 kernel.log/(68981:69039): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:37:14:560 kernel.log/(68981:69039): PCB id[1001] ingresa a NEW
+[INFO] 03:37:14:560 kernel.log/(68981:69039): PCB id[1001]
+[INFO] 03:37:14:560 kernel.log/(68981:69001): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:37:14:560 kernel.log/(68981:68998): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:37:14:560 kernel.log/(68981:68998): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:40:37:384 kernel.log/(69131:69131): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:40:42:142 kernel.log/(69131:69131): Cliente conectado (a KERNEL)
+
+[INFO] 03:40:42:172 kernel.log/(69131:69144): Me llegó una Consola
+[INFO] 03:40:42:173 kernel.log/(69131:69144): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:40:42:175 kernel.log/(69131:69144): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:40:42:177 kernel.log/(69131:69144): PCB id[1000] ingresa a NEW
+[INFO] 03:40:42:178 kernel.log/(69131:69144): PCB id[1000]
+[INFO] 03:40:42:183 kernel.log/(69131:69141): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:40:42:185 kernel.log/(69131:69138): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:42:185 kernel.log/(69131:69138): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:42:189 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[WARNING] 03:40:42:191 kernel.log/(69131:69139): La última instrucción ejecutada fue YIELD
+[INFO] 03:40:42:191 kernel.log/(69131:69138): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:42:192 kernel.log/(69131:69138): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:42:193 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[WARNING] 03:40:42:193 kernel.log/(69131:69139): La última instrucción ejecutada fue YIELD
+[INFO] 03:40:42:194 kernel.log/(69131:69138): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:42:194 kernel.log/(69131:69138): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:42:195 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[WARNING] 03:40:42:195 kernel.log/(69131:69139): La última instrucción ejecutada fue YIELD
+[INFO] 03:40:42:196 kernel.log/(69131:69138): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:42:196 kernel.log/(69131:69138): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:42:197 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[WARNING] 03:40:42:197 kernel.log/(69131:69139): La última instrucción ejecutada fue YIELD
+[INFO] 03:40:42:198 kernel.log/(69131:69138): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:42:198 kernel.log/(69131:69138): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:42:199 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[WARNING] 03:40:42:199 kernel.log/(69131:69139): La última instrucción ejecutada fue YIELD
+[INFO] 03:40:42:199 kernel.log/(69131:69138): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:42:200 kernel.log/(69131:69138): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:40:42:201 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[INFO] 03:40:42:201 kernel.log/(69131:69139): PCB id[1000] sale de EXEC y entra a EXIT
+[INFO] 03:40:42:202 kernel.log/(69131:69137): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:40:42:203 kernel.log/(69131:69137): Ordenando a Consola la finalización del proceso PCB id[1000]
+[WARNING] 03:40:42:203 kernel.log/(69131:69139): La última instrucción ejecutada fue EXIT
+[INFO] 03:40:43:941 kernel.log/(69131:69131): Cliente conectado (a KERNEL)
+
+[INFO] 03:40:43:943 kernel.log/(69131:69146): Me llegó una Consola
+[INFO] 03:40:43:943 kernel.log/(69131:69146): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:40:43:944 kernel.log/(69131:69146): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:40:43:945 kernel.log/(69131:69146): PCB id[1001] ingresa a NEW
+[INFO] 03:40:43:945 kernel.log/(69131:69146): PCB id[1001]
+[INFO] 03:40:43:946 kernel.log/(69131:69141): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:40:43:947 kernel.log/(69131:69138): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:40:43:947 kernel.log/(69131:69138): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:40:43:947 kernel.log/(69131:69139): PCB id[1000] enviada a CPU
+[ERROR] 03:40:44:036 kernel.log/(69131:69139): Instrucción desconocida, ocurrió un error
+[INFO] 03:42:37:310 kernel.log/(69526:69526): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:42:40:558 kernel.log/(69526:69526): Cliente conectado (a KERNEL)
+
+[INFO] 03:42:44:803 kernel.log/(69526:69526): Cliente conectado (a KERNEL)
+
+[INFO] 03:42:56:256 kernel.log/(69526:69540): Me llegó una Consola
+[INFO] 03:42:56:256 kernel.log/(69526:69540): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:42:56:256 kernel.log/(69526:69540): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:42:56:256 kernel.log/(69526:69540): PCB id[1000] ingresa a NEW
+[INFO] 03:42:56:256 kernel.log/(69526:69540): PCB id[1000]
+[INFO] 03:42:56:256 kernel.log/(69526:69536): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:42:56:256 kernel.log/(69526:69533): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:56:256 kernel.log/(69526:69533): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:42:56:256 kernel.log/(69526:69534): PCB id[1000] enviada a CPU
+[WARNING] 03:42:56:256 kernel.log/(69526:69534): La última instrucción ejecutada fue YIELD
+[INFO] 03:42:56:256 kernel.log/(69526:69533): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:56:256 kernel.log/(69526:69533): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:42:56:256 kernel.log/(69526:69534): PCB id[1000] enviada a CPU
+[WARNING] 03:42:56:257 kernel.log/(69526:69534): La última instrucción ejecutada fue YIELD
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:42:56:257 kernel.log/(69526:69534): PCB id[1000] enviada a CPU
+[WARNING] 03:42:56:257 kernel.log/(69526:69534): La última instrucción ejecutada fue YIELD
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:42:56:257 kernel.log/(69526:69534): PCB id[1000] enviada a CPU
+[WARNING] 03:42:56:257 kernel.log/(69526:69534): La última instrucción ejecutada fue YIELD
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:42:56:257 kernel.log/(69526:69534): PCB id[1000] enviada a CPU
+[WARNING] 03:42:56:257 kernel.log/(69526:69534): La última instrucción ejecutada fue YIELD
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:56:257 kernel.log/(69526:69533): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:42:56:257 kernel.log/(69526:69534): PCB id[1000] enviada a CPU
+[INFO] 03:42:56:257 kernel.log/(69526:69534): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:42:56:257 kernel.log/(69526:69534): La última instrucción ejecutada fue EXIT
+[INFO] 03:42:56:257 kernel.log/(69526:69532): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:42:56:257 kernel.log/(69526:69532): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:42:59:658 kernel.log/(69526:69538): Me llegó una Consola
+[INFO] 03:42:59:658 kernel.log/(69526:69538): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:42:59:658 kernel.log/(69526:69538): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:42:59:658 kernel.log/(69526:69538): PCB id[1001] ingresa a NEW
+[INFO] 03:42:59:658 kernel.log/(69526:69538): PCB id[1001]
+[INFO] 03:42:59:658 kernel.log/(69526:69536): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:42:59:658 kernel.log/(69526:69533): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:42:59:658 kernel.log/(69526:69533): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:44:19:930 kernel.log/(69600:69600): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:44:29:445 kernel.log/(69600:69600): Cliente conectado (a KERNEL)
+
+[INFO] 03:44:50:663 kernel.log/(69600:69642): Me llegó una Consola
+[INFO] 03:44:50:663 kernel.log/(69600:69642): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:44:50:663 kernel.log/(69600:69642): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:44:50:663 kernel.log/(69600:69642): PCB id[1000] ingresa a NEW
+[INFO] 03:44:50:663 kernel.log/(69600:69642): PCB id[1000]
+[INFO] 03:44:50:664 kernel.log/(69600:69616): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:44:50:664 kernel.log/(69600:69613): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:50:664 kernel.log/(69600:69613): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:44:50:665 kernel.log/(69600:69614): PCB id[1000] enviada a CPU
+[WARNING] 03:44:50:665 kernel.log/(69600:69614): La última instrucción ejecutada fue YIELD
+[INFO] 03:44:50:665 kernel.log/(69600:69613): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:50:665 kernel.log/(69600:69613): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:44:50:666 kernel.log/(69600:69614): PCB id[1000] enviada a CPU
+[WARNING] 03:44:50:667 kernel.log/(69600:69614): La última instrucción ejecutada fue YIELD
+[INFO] 03:44:50:667 kernel.log/(69600:69613): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:50:667 kernel.log/(69600:69613): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:44:50:667 kernel.log/(69600:69614): PCB id[1000] enviada a CPU
+[WARNING] 03:44:50:668 kernel.log/(69600:69614): La última instrucción ejecutada fue YIELD
+[INFO] 03:44:50:669 kernel.log/(69600:69613): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:50:669 kernel.log/(69600:69613): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:44:50:669 kernel.log/(69600:69614): PCB id[1000] enviada a CPU
+[WARNING] 03:44:50:670 kernel.log/(69600:69614): La última instrucción ejecutada fue YIELD
+[INFO] 03:44:50:670 kernel.log/(69600:69613): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:50:670 kernel.log/(69600:69613): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:44:50:670 kernel.log/(69600:69614): PCB id[1000] enviada a CPU
+[WARNING] 03:44:50:671 kernel.log/(69600:69614): La última instrucción ejecutada fue YIELD
+[INFO] 03:44:50:671 kernel.log/(69600:69613): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:50:671 kernel.log/(69600:69613): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:44:50:671 kernel.log/(69600:69614): PCB id[1000] enviada a CPU
+[INFO] 03:44:50:672 kernel.log/(69600:69614): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:44:50:672 kernel.log/(69600:69614): La última instrucción ejecutada fue EXIT
+[INFO] 03:44:50:672 kernel.log/(69600:69611): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:44:50:672 kernel.log/(69600:69611): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:45:13:519 kernel.log/(69600:69600): Cliente conectado (a KERNEL)
+
+[INFO] 03:45:13:522 kernel.log/(69600:69651): Me llegó una Consola
+[INFO] 03:45:13:522 kernel.log/(69600:69651): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:45:13:522 kernel.log/(69600:69651): PCB id[1001] armada, agregando a cola NEW
+[INFO] 03:45:13:522 kernel.log/(69600:69651): PCB id[1001] ingresa a NEW
+[INFO] 03:45:13:522 kernel.log/(69600:69651): PCB id[1001]
+[INFO] 03:45:13:522 kernel.log/(69600:69616): PCB id[1001] ingresa a READY desde NEW
+[INFO] 03:45:13:522 kernel.log/(69600:69613): PCB id[1001] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:45:13:522 kernel.log/(69600:69613): PCB id[1001] ingresa a EXECUTE
+[INFO] 03:52:48:849 kernel.log/(69999:69999): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:52:54:648 kernel.log/(69999:69999): Cliente conectado (a KERNEL)
+
+[INFO] 03:52:55:604 kernel.log/(69999:70011): Me llegó una Consola
+[INFO] 03:52:55:604 kernel.log/(69999:70011): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:52:55:604 kernel.log/(69999:70011): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:52:55:604 kernel.log/(69999:70011): PCB id[1000] ingresa a NEW
+[INFO] 03:52:55:604 kernel.log/(69999:70011): PCB id[1000]
+[INFO] 03:52:55:604 kernel.log/(69999:70009): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:52:55:604 kernel.log/(69999:70006): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:52:55:604 kernel.log/(69999:70006): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:52:55:604 kernel.log/(69999:70007): PCB id[1000] enviada a CPU
+[WARNING] 03:52:55:605 kernel.log/(69999:70007): La última instrucción ejecutada fue IO
+[INFO] 03:52:55:605 kernel.log/(69999:70006): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:52:55:605 kernel.log/(69999:70006): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:52:55:605 kernel.log/(69999:70007): PCB id[1000] enviada a CPU
+[WARNING] 03:52:55:606 kernel.log/(69999:70007): La última instrucción ejecutada fue YIELD
+[INFO] 03:52:55:606 kernel.log/(69999:70006): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:52:55:606 kernel.log/(69999:70006): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:52:55:606 kernel.log/(69999:70007): PCB id[1000] enviada a CPU
+[WARNING] 03:52:55:607 kernel.log/(69999:70007): La última instrucción ejecutada fue IO
+[INFO] 03:52:55:607 kernel.log/(69999:70006): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:52:55:607 kernel.log/(69999:70006): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:52:55:607 kernel.log/(69999:70007): PCB id[1000] enviada a CPU
+[WARNING] 03:52:55:607 kernel.log/(69999:70007): La última instrucción ejecutada fue YIELD
+[INFO] 03:52:55:608 kernel.log/(69999:70006): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:52:55:608 kernel.log/(69999:70006): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:52:55:608 kernel.log/(69999:70007): PCB id[1000] enviada a CPU
+[WARNING] 03:52:55:609 kernel.log/(69999:70007): La última instrucción ejecutada fue IO
+[INFO] 03:52:55:609 kernel.log/(69999:70006): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:52:55:609 kernel.log/(69999:70006): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:52:55:609 kernel.log/(69999:70007): PCB id[1000] enviada a CPU
+[INFO] 03:52:55:611 kernel.log/(69999:70007): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 03:52:55:611 kernel.log/(69999:70007): La última instrucción ejecutada fue EXIT
+[INFO] 03:52:55:611 kernel.log/(69999:70005): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 03:52:55:611 kernel.log/(69999:70005): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 03:59:00:911 kernel.log/(70261:70261): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:59:13:837 kernel.log/(70261:70261): Cliente conectado (a KERNEL)
+
+[INFO] 03:59:15:368 kernel.log/(70261:70273): Me llegó una Consola
+[INFO] 03:59:15:368 kernel.log/(70261:70273): Consola deserializada, se arma el PCB a continuación
+[INFO] 03:59:15:368 kernel.log/(70261:70273): PCB id[1000] armada, agregando a cola NEW
+[INFO] 03:59:15:368 kernel.log/(70261:70273): PCB id[1000] ingresa a NEW
+[INFO] 03:59:15:368 kernel.log/(70261:70273): PCB id[1000]
+[INFO] 03:59:15:368 kernel.log/(70261:70271): PCB id[1000] ingresa a READY desde NEW
+[INFO] 03:59:15:368 kernel.log/(70261:70268): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:59:15:368 kernel.log/(70261:70268): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:59:15:369 kernel.log/(70261:70269): PCB id[1000] enviada a CPU
+[INFO] 03:59:15:369 kernel.log/(70261:70269): PID: <1000> - Bloqueado por: <IO>
+[WARNING] 03:59:15:369 kernel.log/(70261:70269): La última instrucción ejecutada fue IO
+[INFO] 03:59:15:369 kernel.log/(70261:70270): PID: <1000> - Ejecuta IO: <0>
+[INFO] 03:59:15:369 kernel.log/(70261:70268): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:59:15:369 kernel.log/(70261:70268): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:59:15:369 kernel.log/(70261:70269): PCB id[1000] enviada a CPU
+[WARNING] 03:59:15:369 kernel.log/(70261:70269): La última instrucción ejecutada fue YIELD
+[INFO] 03:59:15:369 kernel.log/(70261:70268): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:59:15:369 kernel.log/(70261:70268): PCB id[1000] ingresa a EXECUTE
+[INFO] 03:59:15:369 kernel.log/(70261:70269): PCB id[1000] enviada a CPU
+[INFO] 03:59:15:369 kernel.log/(70261:70269): PID: <1000> - Bloqueado por: <IO>
+[WARNING] 03:59:15:369 kernel.log/(70261:70269): La última instrucción ejecutada fue IO
+[INFO] 03:59:15:369 kernel.log/(70261:70270): PID: <1000> - Ejecuta IO: <5523800>
+[INFO] 04:00:35:208 kernel.log/(70345:70345): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:00:47:222 kernel.log/(70345:70345): Cliente conectado (a KERNEL)
+
+[INFO] 04:00:47:947 kernel.log/(70345:70359): Me llegó una Consola
+[INFO] 04:00:47:947 kernel.log/(70345:70359): Consola deserializada, se arma el PCB a continuación
+[INFO] 04:00:47:947 kernel.log/(70345:70359): PCB id[1000] armada, agregando a cola NEW
+[INFO] 04:00:47:947 kernel.log/(70345:70359): PCB id[1000] ingresa a NEW
+[INFO] 04:00:47:947 kernel.log/(70345:70359): PCB id[1000]
+[INFO] 04:00:47:947 kernel.log/(70345:70355): PCB id[1000] ingresa a READY desde NEW
+[INFO] 04:00:47:947 kernel.log/(70345:70352): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:00:47:947 kernel.log/(70345:70352): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:00:47:947 kernel.log/(70345:70353): PCB id[1000] enviada a CPU
+[INFO] 04:03:17:449 kernel.log/(70580:70580): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:03:21:632 kernel.log/(70580:70580): Cliente conectado (a KERNEL)
+
+[INFO] 04:03:22:242 kernel.log/(70580:70595): Me llegó una Consola
+[INFO] 04:03:22:242 kernel.log/(70580:70595): Consola deserializada, se arma el PCB a continuación
+[INFO] 04:03:22:242 kernel.log/(70580:70595): PCB id[1000] armada, agregando a cola NEW
+[INFO] 04:03:22:242 kernel.log/(70580:70595): PCB id[1000] ingresa a NEW
+[INFO] 04:03:22:242 kernel.log/(70580:70595): PCB id[1000]
+[INFO] 04:03:22:242 kernel.log/(70580:70591): PCB id[1000] ingresa a READY desde NEW
+[INFO] 04:03:22:242 kernel.log/(70580:70588): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:03:22:242 kernel.log/(70580:70588): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:03:22:242 kernel.log/(70580:70589): PCB id[1000] enviada a CPU
+[INFO] 04:03:22:243 kernel.log/(70580:70589): PID: <1000> - Bloqueado por: <IO>
+[WARNING] 04:03:22:243 kernel.log/(70580:70589): La última instrucción ejecutada fue IO
+[INFO] 04:03:22:243 kernel.log/(70580:70590): PID: <1000> - Ejecuta IO: <5000000>
+[INFO] 04:05:05:183 kernel.log/(70657:70657): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:05:09:084 kernel.log/(70657:70657): Cliente conectado (a KERNEL)
+
+[INFO] 04:05:09:723 kernel.log/(70657:70669): Me llegó una Consola
+[INFO] 04:05:09:724 kernel.log/(70657:70669): Consola deserializada, se arma el PCB a continuación
+[INFO] 04:05:09:724 kernel.log/(70657:70669): PCB id[1000] armada, agregando a cola NEW
+[INFO] 04:05:09:724 kernel.log/(70657:70669): PCB id[1000] ingresa a NEW
+[INFO] 04:05:09:724 kernel.log/(70657:70669): PCB id[1000]
+[INFO] 04:05:09:724 kernel.log/(70657:70667): PCB id[1000] ingresa a READY desde NEW
+[INFO] 04:05:09:724 kernel.log/(70657:70664): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:05:09:724 kernel.log/(70657:70664): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:05:09:724 kernel.log/(70657:70665): PCB id[1000] enviada a CPU
+[INFO] 04:05:09:724 kernel.log/(70657:70665): PID: <1000> - Bloqueado por: <IO>
+[WARNING] 04:05:09:724 kernel.log/(70657:70665): La última instrucción ejecutada fue IO
+[INFO] 04:05:09:724 kernel.log/(70657:70666): PID: <1000> - Ejecuta IO: <5>
+[INFO] 04:05:14:725 kernel.log/(70657:70664): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:05:14:725 kernel.log/(70657:70664): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:05:14:726 kernel.log/(70657:70665): PCB id[1000] enviada a CPU
+[WARNING] 04:05:14:726 kernel.log/(70657:70665): La última instrucción ejecutada fue YIELD
+[INFO] 04:05:14:726 kernel.log/(70657:70664): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:05:14:726 kernel.log/(70657:70664): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:05:14:727 kernel.log/(70657:70665): PCB id[1000] enviada a CPU
+[INFO] 04:05:14:727 kernel.log/(70657:70665): PID: <1000> - Bloqueado por: <IO>
+[WARNING] 04:05:14:728 kernel.log/(70657:70665): La última instrucción ejecutada fue IO
+[INFO] 04:05:14:728 kernel.log/(70657:70666): PID: <1000> - Ejecuta IO: <5>
+[INFO] 04:05:19:732 kernel.log/(70657:70664): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:05:19:733 kernel.log/(70657:70664): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:05:19:733 kernel.log/(70657:70665): PCB id[1000] enviada a CPU
+[WARNING] 04:05:19:734 kernel.log/(70657:70665): La última instrucción ejecutada fue YIELD
+[INFO] 04:05:19:734 kernel.log/(70657:70664): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:05:19:735 kernel.log/(70657:70664): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:05:19:735 kernel.log/(70657:70665): PCB id[1000] enviada a CPU
+[INFO] 04:05:19:736 kernel.log/(70657:70665): PID: <1000> - Bloqueado por: <IO>
+[WARNING] 04:05:19:736 kernel.log/(70657:70665): La última instrucción ejecutada fue IO
+[INFO] 04:05:19:737 kernel.log/(70657:70666): PID: <1000> - Ejecuta IO: <5>
+[INFO] 04:05:24:737 kernel.log/(70657:70664): PCB id[1000] saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:05:24:737 kernel.log/(70657:70664): PCB id[1000] ingresa a EXECUTE
+[INFO] 04:05:24:737 kernel.log/(70657:70665): PCB id[1000] enviada a CPU
+[INFO] 04:05:24:738 kernel.log/(70657:70665): PCB id[1000] sale de EXEC y entra a EXIT
+[WARNING] 04:05:24:738 kernel.log/(70657:70665): La última instrucción ejecutada fue EXIT
+[INFO] 04:05:24:738 kernel.log/(70657:70663): [EXIT] PCB id[1000] sale de Exit y finaliza el proceso
+[INFO] 04:05:24:738 kernel.log/(70657:70663): Ordenando a Consola la finalización del proceso PCB id[1000]
+[INFO] 06:34:11:597 kernel.log/(77740:77740): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:34:15:935 kernel.log/(77740:77740): Cliente conectado (a KERNEL)
+
+[INFO] 06:34:17:379 kernel.log/(77740:77753): Se crea el proceso <1000> en NEW
+[INFO] 06:34:17:379 kernel.log/(77740:77753): Cola NEW: 
+[INFO] 06:34:17:379 kernel.log/(77740:77753): PID: <1000>
+[INFO] 06:34:17:379 kernel.log/(77740:77750): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:34:17:379 kernel.log/(77740:77750): Cola READY: 
+[INFO] 06:34:17:379 kernel.log/(77740:77750): PID: <1000>
+[INFO] 06:34:17:379 kernel.log/(77740:77747): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:34:17:379 kernel.log/(77740:77747): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:34:17:379 kernel.log/(77740:77748): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:34:17:379 kernel.log/(77740:77748): PID: <1000> enviada a CPU
+[INFO] 06:35:45:112 kernel.log/(77832:77832): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:35:49:961 kernel.log/(77832:77832): Cliente conectado (a KERNEL)
+
+[INFO] 06:35:54:885 kernel.log/(77832:77846): Se crea el proceso <1000> en NEW
+[INFO] 06:35:54:885 kernel.log/(77832:77846): Cola NEW: 
+[INFO] 06:35:54:885 kernel.log/(77832:77846): PID: <1000>
+[INFO] 06:35:54:885 kernel.log/(77832:77842): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:35:54:885 kernel.log/(77832:77842): Cola READY: 
+[INFO] 06:35:54:885 kernel.log/(77832:77842): PID: <1000>
+[INFO] 06:35:54:885 kernel.log/(77832:77839): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:35:54:885 kernel.log/(77832:77839): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:35:54:885 kernel.log/(77832:77840): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:35:54:885 kernel.log/(77832:77840): PID: <1000> enviada a CPU
+[INFO] 06:43:36:220 kernel.log/(78308:78308): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:43:42:069 kernel.log/(78308:78308): Cliente conectado (a KERNEL)
+
+[INFO] 06:43:43:197 kernel.log/(78308:78321): Se crea el proceso <1000> en NEW
+[INFO] 06:43:43:197 kernel.log/(78308:78321): Cola NEW: 
+[INFO] 06:43:43:197 kernel.log/(78308:78321): PID: <1000>
+[INFO] 06:43:43:197 kernel.log/(78308:78318): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:43:43:197 kernel.log/(78308:78318): Cola READY: 
+[INFO] 06:43:43:197 kernel.log/(78308:78318): PID: <1000>
+[INFO] 06:43:43:197 kernel.log/(78308:78315): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:43:43:197 kernel.log/(78308:78315): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:43:43:197 kernel.log/(78308:78316): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:43:43:197 kernel.log/(78308:78316): PID: <1000> enviada a CPU
+[INFO] 06:46:34:796 kernel.log/(78658:78658): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:46:42:948 kernel.log/(78658:78658): Cliente conectado (a KERNEL)
+
+[INFO] 06:46:43:328 kernel.log/(78658:78681): Se crea el proceso <1000> en NEW
+[INFO] 06:46:43:329 kernel.log/(78658:78681): Cola NEW: 
+[INFO] 06:46:43:329 kernel.log/(78658:78681): PID: <1000>
+[INFO] 06:46:43:329 kernel.log/(78658:78668): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:46:43:329 kernel.log/(78658:78668): Cola READY: 
+[INFO] 06:46:43:329 kernel.log/(78658:78668): PID: <1000>
+[INFO] 06:46:43:329 kernel.log/(78658:78665): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:46:43:329 kernel.log/(78658:78665): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:46:43:329 kernel.log/(78658:78666): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:46:43:329 kernel.log/(78658:78666): PID: <1000> enviada a CPU
+[INFO] 06:47:20:798 kernel.log/(78658:78666): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:47:20:798 kernel.log/(78658:78666): COMO
+[INFO] 06:47:20:798 kernel.log/(78658:78666): DERE
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 0000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 0000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 00000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 00000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 00000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 00000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 0000000000000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 0000000000000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 0000000000000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): 0000000000000000
+[INFO] 06:47:20:798 kernel.log/(78658:78666): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:47:20:798 kernel.log/(78658:78666): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:47:20:799 kernel.log/(78658:78667): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:47:25:799 kernel.log/(78658:78665): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:47:25:799 kernel.log/(78658:78665): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:47:25:799 kernel.log/(78658:78666): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:47:25:799 kernel.log/(78658:78666): PID: <1000> enviada a CPU
+[INFO] 06:50:25:495 kernel.log/(79178:79178): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:50:29:104 kernel.log/(79178:79178): Cliente conectado (a KERNEL)
+
+[INFO] 06:50:30:060 kernel.log/(79178:79190): Se crea el proceso <1000> en NEW
+[INFO] 06:50:30:060 kernel.log/(79178:79190): Cola NEW: 
+[INFO] 06:50:30:060 kernel.log/(79178:79190): PID: <1000>
+[INFO] 06:50:30:060 kernel.log/(79178:79188): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:50:30:060 kernel.log/(79178:79188): Cola READY: 
+[INFO] 06:50:30:060 kernel.log/(79178:79188): PID: <1000>
+[INFO] 06:50:30:060 kernel.log/(79178:79185): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:50:30:060 kernel.log/(79178:79185): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:50:30:060 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:50:30:060 kernel.log/(79178:79186): PID: <1000> enviada a CPU
+[INFO] 06:50:30:060 kernel.log/(79178:79186): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:50:30:060 kernel.log/(79178:79186): COMO
+[INFO] 06:50:30:060 kernel.log/(79178:79186): DERE
+[INFO] 06:50:30:060 kernel.log/(79178:79186): 0000
+[INFO] 06:50:30:060 kernel.log/(79178:79186): 0000
+[INFO] 06:50:30:060 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:30:060 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:30:060 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:30:061 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:30:061 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:30:061 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:30:061 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:30:061 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:30:061 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:50:30:061 kernel.log/(79178:79186): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:50:30:061 kernel.log/(79178:79187): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:50:35:062 kernel.log/(79178:79185): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:50:35:062 kernel.log/(79178:79185): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:50:35:062 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:50:35:062 kernel.log/(79178:79186): PID: <1000> enviada a CPU
+[INFO] 06:50:35:062 kernel.log/(79178:79186): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:50:35:062 kernel.log/(79178:79186): COMO
+[INFO] 06:50:35:062 kernel.log/(79178:79186): DERE
+[INFO] 06:50:35:062 kernel.log/(79178:79186): PENT
+[INFO] 06:50:35:062 kernel.log/(79178:79186): ETOD
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:062 kernel.log/(79178:79186): 0000000000000000
+[WARNING] 06:50:35:062 kernel.log/(79178:79186): La última instrucción ejecutada fue YIELD
+[INFO] 06:50:35:062 kernel.log/(79178:79185): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:50:35:062 kernel.log/(79178:79185): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:50:35:062 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:50:35:062 kernel.log/(79178:79186): PID: <1000> enviada a CPU
+[INFO] 06:50:35:063 kernel.log/(79178:79186): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:50:35:063 kernel.log/(79178:79186): COMO
+[INFO] 06:50:35:063 kernel.log/(79178:79186): DERE
+[INFO] 06:50:35:063 kernel.log/(79178:79186): PENT
+[INFO] 06:50:35:063 kernel.log/(79178:79186): ETOD
+[INFO] 06:50:35:063 kernel.log/(79178:79186): OESORDEN
+[INFO] 06:50:35:063 kernel.log/(79178:79186): ADODESDE
+[INFO] 06:50:35:063 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:35:063 kernel.log/(79178:79186): 00000000
+[INFO] 06:50:35:063 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:063 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:063 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:063 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:35:063 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:50:35:063 kernel.log/(79178:79186): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:50:35:063 kernel.log/(79178:79187): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:50:40:063 kernel.log/(79178:79185): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:50:40:063 kernel.log/(79178:79185): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:50:40:064 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:50:40:064 kernel.log/(79178:79186): PID: <1000> enviada a CPU
+[INFO] 06:50:40:064 kernel.log/(79178:79186): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:50:40:064 kernel.log/(79178:79186): COMO
+[INFO] 06:50:40:064 kernel.log/(79178:79186): DERE
+[INFO] 06:50:40:064 kernel.log/(79178:79186): PENT
+[INFO] 06:50:40:064 kernel.log/(79178:79186): ETOD
+[INFO] 06:50:40:064 kernel.log/(79178:79186): OESORDEN
+[INFO] 06:50:40:064 kernel.log/(79178:79186): ADODESDE
+[INFO] 06:50:40:064 kernel.log/(79178:79186): QUEHASLL
+[INFO] 06:50:40:064 kernel.log/(79178:79186): EGADOMIV
+[INFO] 06:50:40:065 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:40:065 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:40:065 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:40:065 kernel.log/(79178:79186): 0000000000000000
+[WARNING] 06:50:40:065 kernel.log/(79178:79186): La última instrucción ejecutada fue YIELD
+[INFO] 06:50:40:065 kernel.log/(79178:79185): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:50:40:065 kernel.log/(79178:79185): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:50:40:065 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:50:40:065 kernel.log/(79178:79186): PID: <1000> enviada a CPU
+[INFO] 06:50:40:065 kernel.log/(79178:79186): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:50:40:065 kernel.log/(79178:79186): COMO
+[INFO] 06:50:40:065 kernel.log/(79178:79186): DERE
+[INFO] 06:50:40:065 kernel.log/(79178:79186): PENT
+[INFO] 06:50:40:065 kernel.log/(79178:79186): ETOD
+[INFO] 06:50:40:065 kernel.log/(79178:79186): OESORDEN
+[INFO] 06:50:40:065 kernel.log/(79178:79186): ADODESDE
+[INFO] 06:50:40:065 kernel.log/(79178:79186): QUEHASLL
+[INFO] 06:50:40:065 kernel.log/(79178:79186): EGADOMIV
+[INFO] 06:50:40:065 kernel.log/(79178:79186): IDACAMBIOYANOSOY
+[INFO] 06:50:40:065 kernel.log/(79178:79186): LAMISMAQUETUCONO
+[INFO] 06:50:40:065 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:40:065 kernel.log/(79178:79186): 0000000000000000
+[INFO] 06:50:40:065 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:50:40:065 kernel.log/(79178:79186): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:50:40:065 kernel.log/(79178:79187): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:50:45:066 kernel.log/(79178:79185): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:50:45:066 kernel.log/(79178:79185): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:50:45:067 kernel.log/(79178:79186): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:50:45:067 kernel.log/(79178:79186): PID: <1000> enviada a CPU
+[INFO] 06:50:45:193 kernel.log/(79178:79186): Los registros que trajo PID: <0> de la CPU son: 
+[INFO] 06:50:45:193 kernel.log/(79178:79186): 
+[INFO] 06:50:45:193 kernel.log/(79178:79186): 
+[INFO] 06:50:45:193 kernel.log/(79178:79186): 
+[INFO] 06:50:45:193 kernel.log/(79178:79186): 
+[INFO] 06:50:45:193 kernel.log/(79178:79186): 
+[INFO] 06:50:45:193 kernel.log/(79178:79186): 
+[INFO] 06:50:45:194 kernel.log/(79178:79186): 
+[INFO] 06:50:45:194 kernel.log/(79178:79186): 
+[INFO] 06:50:45:194 kernel.log/(79178:79186): 
+[INFO] 06:50:45:194 kernel.log/(79178:79186): 
+[INFO] 06:50:45:194 kernel.log/(79178:79186): 
+[INFO] 06:50:45:194 kernel.log/(79178:79186): 
+[ERROR] 06:50:45:194 kernel.log/(79178:79186): Instrucción desconocida, ocurrió un error
+[INFO] 06:55:09:683 kernel.log/(79439:79439): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:55:14:776 kernel.log/(79439:79439): Cliente conectado (a KERNEL)
+
+[INFO] 06:55:16:390 kernel.log/(79439:79451): Se crea el proceso <1000> en NEW
+[INFO] 06:55:16:390 kernel.log/(79439:79451): Cola NEW: 
+[INFO] 06:55:16:390 kernel.log/(79439:79451): PID: <1000>
+[INFO] 06:55:16:390 kernel.log/(79439:79449): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:55:16:390 kernel.log/(79439:79449): Cola READY: 
+[INFO] 06:55:16:390 kernel.log/(79439:79449): PID: <1000>
+[INFO] 06:55:16:391 kernel.log/(79439:79446): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:16:391 kernel.log/(79439:79446): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:55:16:391 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:55:16:391 kernel.log/(79439:79447): PID: <1000> enviada a CPU
+[INFO] 06:55:16:391 kernel.log/(79439:79447): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:55:16:391 kernel.log/(79439:79447): COMO
+[INFO] 06:55:16:391 kernel.log/(79439:79447): DERE
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 0000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 0000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:16:391 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:55:16:391 kernel.log/(79439:79447): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:55:16:391 kernel.log/(79439:79448): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:55:21:392 kernel.log/(79439:79446): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:21:392 kernel.log/(79439:79446): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:55:21:392 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:55:21:392 kernel.log/(79439:79447): PID: <1000> enviada a CPU
+[INFO] 06:55:21:393 kernel.log/(79439:79447): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:55:21:393 kernel.log/(79439:79447): COMO
+[INFO] 06:55:21:393 kernel.log/(79439:79447): DERE
+[INFO] 06:55:21:393 kernel.log/(79439:79447): PENT
+[INFO] 06:55:21:393 kernel.log/(79439:79447): ETOD
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:393 kernel.log/(79439:79447): 0000000000000000
+[WARNING] 06:55:21:393 kernel.log/(79439:79447): La última instrucción ejecutada fue YIELD
+[INFO] 06:55:21:393 kernel.log/(79439:79446): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:21:393 kernel.log/(79439:79446): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:55:21:393 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:55:21:393 kernel.log/(79439:79447): PID: <1000> enviada a CPU
+[INFO] 06:55:21:395 kernel.log/(79439:79447): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:55:21:395 kernel.log/(79439:79447): COMO
+[INFO] 06:55:21:395 kernel.log/(79439:79447): DERE
+[INFO] 06:55:21:395 kernel.log/(79439:79447): PENT
+[INFO] 06:55:21:395 kernel.log/(79439:79447): ETOD
+[INFO] 06:55:21:395 kernel.log/(79439:79447): OESORDEN
+[INFO] 06:55:21:395 kernel.log/(79439:79447): ADODESDE
+[INFO] 06:55:21:395 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:21:395 kernel.log/(79439:79447): 00000000
+[INFO] 06:55:21:395 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:395 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:395 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:395 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:21:395 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:55:21:395 kernel.log/(79439:79447): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:55:21:395 kernel.log/(79439:79448): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:55:26:400 kernel.log/(79439:79446): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:26:401 kernel.log/(79439:79446): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:55:26:401 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:55:26:401 kernel.log/(79439:79447): PID: <1000> enviada a CPU
+[INFO] 06:55:26:402 kernel.log/(79439:79447): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:55:26:402 kernel.log/(79439:79447): COMO
+[INFO] 06:55:26:402 kernel.log/(79439:79447): DERE
+[INFO] 06:55:26:402 kernel.log/(79439:79447): PENT
+[INFO] 06:55:26:402 kernel.log/(79439:79447): ETOD
+[INFO] 06:55:26:402 kernel.log/(79439:79447): OESORDEN
+[INFO] 06:55:26:402 kernel.log/(79439:79447): ADODESDE
+[INFO] 06:55:26:402 kernel.log/(79439:79447): QUEHASLL
+[INFO] 06:55:26:402 kernel.log/(79439:79447): EGADOMIV
+[INFO] 06:55:26:402 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:26:402 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:26:402 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:26:402 kernel.log/(79439:79447): 0000000000000000
+[WARNING] 06:55:26:402 kernel.log/(79439:79447): La última instrucción ejecutada fue YIELD
+[INFO] 06:55:26:402 kernel.log/(79439:79446): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:26:402 kernel.log/(79439:79446): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:55:26:402 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:55:26:402 kernel.log/(79439:79447): PID: <1000> enviada a CPU
+[INFO] 06:55:26:402 kernel.log/(79439:79447): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:55:26:402 kernel.log/(79439:79447): COMO
+[INFO] 06:55:26:402 kernel.log/(79439:79447): DERE
+[INFO] 06:55:26:402 kernel.log/(79439:79447): PENT
+[INFO] 06:55:26:402 kernel.log/(79439:79447): ETOD
+[INFO] 06:55:26:402 kernel.log/(79439:79447): OESORDEN
+[INFO] 06:55:26:402 kernel.log/(79439:79447): ADODESDE
+[INFO] 06:55:26:402 kernel.log/(79439:79447): QUEHASLL
+[INFO] 06:55:26:402 kernel.log/(79439:79447): EGADOMIV
+[INFO] 06:55:26:402 kernel.log/(79439:79447): IDACAMBIOYANOSOY
+[INFO] 06:55:26:402 kernel.log/(79439:79447): LAMISMAQUETUCONO
+[INFO] 06:55:26:402 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:26:402 kernel.log/(79439:79447): 0000000000000000
+[INFO] 06:55:26:402 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:55:26:402 kernel.log/(79439:79447): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:55:26:402 kernel.log/(79439:79448): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:55:31:402 kernel.log/(79439:79446): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:31:403 kernel.log/(79439:79446): PCB id[1000] ingresa a EXECUTE
+[INFO] 06:55:31:403 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:55:31:403 kernel.log/(79439:79447): PID: <1000> enviada a CPU
+[INFO] 06:55:31:403 kernel.log/(79439:79447): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:55:31:403 kernel.log/(79439:79447): COMO
+[INFO] 06:55:31:403 kernel.log/(79439:79447): DERE
+[INFO] 06:55:31:403 kernel.log/(79439:79447): PENT
+[INFO] 06:55:31:403 kernel.log/(79439:79447): ETOD
+[INFO] 06:55:31:403 kernel.log/(79439:79447): OESORDEN
+[INFO] 06:55:31:403 kernel.log/(79439:79447): ADODESDE
+[INFO] 06:55:31:403 kernel.log/(79439:79447): QUEHASLL
+[INFO] 06:55:31:403 kernel.log/(79439:79447): EGADOMIV
+[INFO] 06:55:31:403 kernel.log/(79439:79447): IDACAMBIOYANOSOY
+[INFO] 06:55:31:403 kernel.log/(79439:79447): LAMISMAQUETUCONO
+[INFO] 06:55:31:403 kernel.log/(79439:79447): CISTEENTONCESAHO
+[INFO] 06:55:31:403 kernel.log/(79439:79447): RASOYMUCHOMEJOR!
+[INFO] 06:55:31:403 kernel.log/(79439:79447): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 06:55:31:403 kernel.log/(79439:79447): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 06:55:31:403 kernel.log/(79439:79445): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 06:55:38:630 kernel.log/(79439:79439): Cliente conectado (a KERNEL)
+
+[INFO] 06:55:46:289 kernel.log/(79439:79457): Se crea el proceso <1001> en NEW
+[INFO] 06:55:46:289 kernel.log/(79439:79457): Cola NEW: 
+[INFO] 06:55:46:289 kernel.log/(79439:79457): PID: <1001>
+[INFO] 06:55:46:289 kernel.log/(79439:79449): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:55:46:289 kernel.log/(79439:79449): Cola READY: 
+[INFO] 06:55:46:289 kernel.log/(79439:79449): PID: <1001>
+[INFO] 06:55:46:289 kernel.log/(79439:79446): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:55:46:289 kernel.log/(79439:79446): PCB id[1001] ingresa a EXECUTE
