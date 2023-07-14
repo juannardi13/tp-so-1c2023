@@ -67,7 +67,7 @@ int atender_clientes_kernel(int socket_servidor) {
 		if(socket_cliente != -1) {
 			pthread_t hilo_cliente;
 			//manejar_conexion(socket_cliente);
-			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
 			pthread_detach(hilo_cliente);
 
 			return 1;

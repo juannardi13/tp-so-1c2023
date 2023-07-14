@@ -8,7 +8,8 @@ void estado_ejecutar(void) {
 	while (1) {
 		sem_wait(&sem_exec);
 		pthread_mutex_lock(&mutex_exec);
-		t_proceso* proceso_a_ejecutar = list_get(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
+		t_proceso* proceso_a_ejecutar = list_remove(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
+		// ME CAGÓ LA VIDA DURANTE UN BUEN RATO EL LIST_REMOVE HABÍA PUESTO LIST_GET Y NO ANDABA LA CONCHA DE LA LORA!"!!!!!!!!!"°!"°!"
 		pthread_mutex_unlock(&mutex_exec);
 
 		proceso_a_ejecutar->pcb->estado = EXEC;
