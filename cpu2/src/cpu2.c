@@ -7,6 +7,7 @@ int main() {
 	char* ip_kernel;
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
+    t_log* logger_principal = iniciar_logger_principal();
     t_config* config = iniciar_config();
     inicializar_registros();
 
@@ -18,7 +19,7 @@ int main() {
     log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
 
     int fd_cpu = iniciar_servidor(puerto_kernel);
-    log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_kernel);
+    log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.\n", puerto_kernel);
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
 
 
@@ -29,7 +30,7 @@ int main() {
 //    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
 
     while(1) {
-    	log_info(logger, "CPU esperando a recibir un nuevo contexto de ejecución");
+    	log_info(logger, "CPU esperando a recibir un nuevo proceso para ejecutar.");
     	t_paquete* paquete = malloc(sizeof(t_paquete));
     	paquete->buffer = malloc(sizeof(t_buffer));
     	recv(fd_kernel, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
@@ -77,14 +78,14 @@ int main() {
 //    					deserializar_segmentos(segmento_actual, stream);
 //    						}
 
-			log_info(logger, "Recibido Proceso id[%d] desde Kernel", contexto->pid);
+			log_info(logger, "PID: <%d> recibido desde el Kernel para ejecutar.", contexto->pid);
 
 			int contexto_sigue_en_cpu = 1; // Es para el while de abajo, si queremos que el contexto vuelva al kernel va a ser 0, rompiendo el ciclo y quedandose el cpu en espera a recibir de nuevo el contexto de ejecución
 			char **instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
 
-			for(int g = 0; instrucciones_parseadas[g] != NULL; g++) {
-				log_warning(logger, "%s", instrucciones_parseadas[g]);
-			}
+//			for(int g = 0; instrucciones_parseadas[g] != NULL; g++) {
+//				log_warning(logger, "%s", instrucciones_parseadas[g]);
+//			}
 
 			while(contexto_sigue_en_cpu) {
 				char *instruccion_a_ejecutar = malloc(strlen(instrucciones_parseadas[contexto->pc]) + 1);
@@ -94,92 +95,89 @@ int main() {
 				op_code codigo_instruccion = fetch_instruccion(instruccion_a_ejecutar);
 
 				switch(codigo_instruccion) {
-				case SET: //TERMINADO
+				case SET: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
-					log_warning(logger, "Actualizado el Program Counter: %d", contexto->pc);
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					int tiempo_de_espera;
 					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
 					//usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
 					ejecutar_SET(instruccion_a_ejecutar, contexto);
-					log_warning(logger, "Se ejecuta la instruccion SET");
 					break;
 				case MOV_IN:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_MOV_IN(instruccion_a_ejecutar, contexto, fd_memoria, config);
-					log_warning(logger, "Se ejecuta la instruccion MOV_IN");
 					break;
 				case MOV_OUT:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config);
-					log_warning(logger, "Se ejecuta la instruccion MOV_OUT");
 					break;
 				case IO:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel, cpu_bloqueada);
-					log_warning(logger, "Se ejecuta la instruccion IO");
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_OPEN:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_OPEN(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion F_OPEN");
 					break;
 				case F_CLOSE:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_CLOSE(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion F_CLOSE");
 					break;
 				case F_SEEK:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_SEEK(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion F_SEEK");
 					break;
 				case F_READ:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_READ(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
-					log_warning(logger, "Se ejecuta la instruccion F_READ");
 					break;
 				case F_WRITE:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_WRITE(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
-					log_warning(logger, "Se ejecuta la instruccion F_WRITE");
 					break;
 				case F_TRUNCATE:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_TRUNCATE(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion F_TRUNCATE");
 					break;
 				case WAIT:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_WAIT(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion WAIT");
 					break;
 				case SIGNAL:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_SIGNAL(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion SIGNAL");
 					break;
 				case CREATE_SEGMENT:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_CREATE_SEGMENT(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion CREATE_SEGMENT");
 					break;
 				case DELETE_SEGMENT:
 					contexto->pc++;
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_DELETE_SEGMENT(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion DELETE_SEGMENT");
 					break;
-				case YIELD:
+				case YIELD: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
-					log_warning(logger, "Actualizado el Program Counter: %d", contexto->pc);
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_YIELD(instruccion_a_ejecutar, contexto, fd_kernel);
-					log_warning(logger, "Se ejecuta la instruccion YIELD");
 					contexto_sigue_en_cpu = 0;
 					break;
-				case EXIT:
+				case EXIT: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
-					log_warning(logger, "Actualizado el Program Counter: %d", contexto->pc);
-					log_warning(logger, "Se ejecuta la instruccion EXIT");
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_EXIT(instruccion_a_ejecutar, contexto, fd_kernel);
 					contexto_sigue_en_cpu = 0;
 					break;

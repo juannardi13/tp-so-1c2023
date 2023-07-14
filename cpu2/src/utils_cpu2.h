@@ -18,6 +18,7 @@ extern t_registros registros_cpu;
 
 // Funciones para la inicialización de CPU
 t_log* iniciar_logger(void);
+t_log* iniciar_logger_principal(void);
 void inicializar_registros(void);
 t_config* iniciar_config(void);
 
