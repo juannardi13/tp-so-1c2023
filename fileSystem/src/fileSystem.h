@@ -11,4 +11,11 @@
 
 #include "utils-fileSystem.h"
 
+t_log* logger;
+t_config_valores *config_valores;
+t_super_bloque_valores *config_super_bloque_valores;
+t_bitarray* estructura_bitmap;
+char* mapping_archivo_bloques;
+FILE* archivo_bloques;
+
 #endif /* FILESYSTEM_H_ */

@@ -28,7 +28,88 @@ t_config* iniciar_config(char* ruta) {
 	return nuevo_config;
 }
 
-void manejar_conexion(int socket_cliente,t_log* logger,t_config* config,t_bitarray* estructura_bitmap){
+void inicializar_estructuras()
+{
+	//  Inicialización logger //
+		// --- INICIO --- //
+		logger = iniciar_logger();
+		// --- FIN --- //
+
+		//  Inicialización config //
+		// --- INICIO --- //
+		t_config* config = iniciar_config("fileSystem.config");
+
+//		IP_MEMORIA=127.0.0.1
+//		PUERTO_MEMORIA=8002
+//		PUERTO_ESCUCHA=8003
+//		PATH_SUPERBLOQUE=../fileSystem/grupoDeBloques/fileSystem.superbloque
+//		PATH_BITMAP=../fileSystem/grupoDeBloques/bitmap.bin
+//		PATH_BLOQUES=../fileSystem/grupoDeBloques/archivoBloques
+//		PATH_FCB=/home/utnso/fs/fcb
+//		RETARDO_ACCESO_BLOQUE=15000
+
+		config_valores = malloc(sizeof(t_config_valores));
+		config_valores->ip = config_get_string_value(config,"IP_MEMORIA");
+		config_valores->puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
+		config_valores->puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
+		config_valores->retardo_acceso_bloque = config_get_int_value(config,"RETARDO_ACCESO_BLOQUE");
+		config_valores->path_superbloque = config_get_string_value(config,"PATH_SUPERBLOQUE");
+		config_valores->path_bitmap = config_get_string_value(config,"PATH_BITMAP");
+		config_valores->path_bloques = config_get_string_value(config,"PATH_BLOQUES");
+		config_valores->path_fcb = config_get_string_value(config,"PATH_FCB");
+
+
+		// --- FIN --- //
+
+
+		//  Inicialización super bloque //
+		// --- INICIO --- //
+		t_config* config_super_bloque = iniciar_config(config_get_string_value(config,"PATH_SUPERBLOQUE"));
+
+		config_super_bloque_valores = malloc(sizeof(t_super_bloque_valores));
+		config_super_bloque_valores->block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
+		config_super_bloque_valores->block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
+
+
+		// --- FIN --- //
+
+
+		// Obtención información superbloque //
+		// --- INICIO --- //
+		t_super_bloque super;
+		super.block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
+		super.block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
+		// --- FIN --- //
+
+		//  Inicialización bitmap //
+		// --- INICIO --- //
+		FILE* archivo_bm;
+		estructura_bitmap = inicializar_archivo_bm(archivo_bm);
+
+
+		// --- FIN --- //
+
+		// Inicialización archivo de bloques
+		// --- INICIO --- //
+		levantar_archivo_bloques(archivo_bloques,mapping_archivo_bloques);
+		// --- FIN --- //
+
+		// Loggear información fileSystem //
+		// --- INICIO --- //
+
+		char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
+
+		log_info(logger, "El fileSystem posee una cantidad de %d bloques",super.block_count);
+		log_info(logger, "Los bloques del fileSystem tiene un tamaño de %d bytes",super.block_size);
+		log_info(logger, "Se inicializa el módulo File System");
+	    puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
+		log_info(logger, "PUERTO ESCUCHA: %s", puerto_escucha);
+		// --- FIN --- //
+
+
+}
+
+void manejar_conexion(int socket_cliente){
 
 	// un paquete es un codigo de un operación más un buffer
 	// un buffer es un tamaño de buffer seguido de un stream con todos los apartados correspondientes al struct enviado
@@ -79,19 +160,19 @@ void manejar_conexion(int socket_cliente,t_log* logger,t_config* config,t_bitarr
 }
 
 
-int atender_clientes_file_system(int socket_fs,t_log* logger_fs,t_config* config,t_bitarray* estructura_bitmap){
-	int socket_consola = esperar_cliente(logger_fs, "FILE SYSTEM", socket_fs);
+int atender_clientes_file_system(int socket_fs){
+	int socket_consola = esperar_cliente(logger, "FILE SYSTEM", socket_fs);
 
 	int ret = 0;
 
 	if(socket_consola != -1)
 	{
-		manejar_conexion(socket_consola,logger_fs,config,estructura_bitmap);
+		manejar_conexion(socket_consola);
 		ret = 1;
 	}
 	else
 	{
-		log_error(logger_fs,"Error al escuchar cliente... Finalizando servidor \n");
+		log_error(logger,"Error al escuchar cliente... Finalizando servidor \n");
 	}
 
 	return ret;
@@ -122,9 +203,11 @@ int abrir_archivo(char* nombre_archivo){
 
 
 
-t_bitarray* inicializar_archivo_bm(FILE* f,int cantidad_bloques,t_config* config){
+t_bitarray* inicializar_archivo_bm(FILE* f){
 
-	f = fopen(config_get_string_value(config,"PATH_BITMAP"),"w+");
+//	f = fopen(config_get_string_value(config,"PATH_BITMAP"),"w+");
+
+	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","w+");
 
 	int fd = fileno(f);
 
@@ -134,6 +217,8 @@ t_bitarray* inicializar_archivo_bm(FILE* f,int cantidad_bloques,t_config* config
 	}
 
 	unsigned char byte = 0;
+
+	int cantidad_bloques = config_super_bloque_valores->block_count;
 
 	int byte_adicional = (cantidad_bloques % 8 != 0)?1:0;
 
@@ -156,23 +241,24 @@ t_bitarray* inicializar_archivo_bm(FILE* f,int cantidad_bloques,t_config* config
 	return estructura_aux;
 }
 
-bool esta_ocupado(t_bitarray* estructura_bitmap,int nro_bloque){
+bool esta_ocupado(int nro_bloque){
 	return bitarray_test_bit(estructura_bitmap,nro_bloque);
 }
 
-int primer_bloque_disponible(t_bitarray* estructura_bitmap)
+int primer_bloque_disponible()
 {
 	int i = 0;
+
 	int limite = estructura_bitmap->size * 8;
 
-	while(i < limite && esta_ocupado(estructura_bitmap,i)){
+	while(i < limite && esta_ocupado(i)){
 		i++;
 	}
 
 	return i;
 }
 
-void asignar_bloques_iniciales(t_bitarray* estructura_bitmap,FILE* fcb){
+void asignar_bloques_iniciales(FILE* fcb){
 	FILE* f;
 	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
 
@@ -196,7 +282,11 @@ void asignar_bloques_iniciales(t_bitarray* estructura_bitmap,FILE* fcb){
 	fclose(fcb);
 }
 
-void liberar_recursos_bitmap(t_bitarray* estructura_bitmap,int cantidad_bloques,int tamanio_bloques,FILE* archivo_bm,FILE* archivo_bloques,char* mapping_archivo_bloques){
+void liberar_recursos_bitmap(FILE* archivo_bm,FILE* archivo_bloques,char* mapping_archivo_bloques){
+
+	int cantidad_bloques = config_super_bloque_valores->block_count;
+	int tamanio_bloques = config_super_bloque_valores->block_size;
+
 	int cantidad_bytes = cantidad_bloques / 8;
 	munmap(estructura_bitmap->bitarray,cantidad_bytes+1);
 	munmap(mapping_archivo_bloques,tamanio_bloques*cantidad_bloques);
@@ -217,8 +307,13 @@ void liberar_recursos_bitmap(t_bitarray* estructura_bitmap,int cantidad_bloques,
 
 // cada registro de archivo será un bloque, por ende cada registro del archivo consiste de 64 bytes (o lo que se indique en el archivo de config que ocupan los bloques)
 //
-void levantar_archivo_bloques(FILE*f,int cantidad_bloques,int tamanio_bloques,t_config* config,char* mapping){
-	f = fopen(config_get_string_value(config,"PATH_BLOQUES"),"w+");
+void levantar_archivo_bloques(FILE*f,char* mapping){
+
+	int cantidad_bloques = config_super_bloque_valores->block_count;
+	int tamanio_bloques = config_super_bloque_valores->block_size;
+	// - //
+
+	f = fopen(config_valores->path_bloques,"w+");
 
 	int fd = fileno(f);
 
@@ -239,9 +334,10 @@ void levantar_archivo_bloques(FILE*f,int cantidad_bloques,int tamanio_bloques,t_
 
 }
 
-int obtener_posicion_archivo_bloques(int indice,int tamanio_bloques)
+int obtener_posicion_archivo_bloques(int indice)
 {
-	return indice*tamanio_bloques;
+	int tamanio_bloques = config_super_bloque_valores->block_size;
+	return indice  * tamanio_bloques;
 }
 
 
@@ -285,7 +381,7 @@ int crear_archivo(char* nombre_archivo)
 	return 1;
 }
 
-void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio,t_config* config_super_bloque,t_bitarray* estructura_bitmap,char* mapping_archivo_bloques)
+void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio,char* mapping_archivo_bloques)
 {
 	int nuevo_tamanio_entero = atoi(nuevo_tamanio);
 
@@ -303,9 +399,9 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio,t_config* config_s
 
 	int tamanio_fcb = config_get_int_value(config_fcb_archivo,"TAMANIO_ARCHIVO");
 
-	int tamanio_bloque = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
+	int tamanio_bloque = config_super_bloque_valores->block_size;
 
-	int cantidad_bloques = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
+	int cantidad_bloques = config_super_bloque_valores->block_count;
 
 	if(nuevo_tamanio_entero > tamanio_fcb)
 	{
@@ -347,7 +443,7 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio,t_config* config_s
 
 				// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
 
-				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_directo,tamanio_bloque),&bloque_datos,sizeof(uint32_t));
+				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_directo),&bloque_datos,sizeof(uint32_t));
 
 				msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
 			}
@@ -367,8 +463,10 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio,t_config* config_s
 
 }
 
-void levantar_fcb_nuevo_archivo(const char* nombre_archivo, int tamanio_bloques,t_bitarray* estructura_bitmap){
+void levantar_fcb_nuevo_archivo(const char* nombre_archivo){
 	FILE* f;
+
+	int tamanio_bloques = config_super_bloque_valores->block_size;
 
 	char* ruta = obtener_ruta_archivo(nombre_archivo);
 
@@ -384,6 +482,91 @@ void levantar_fcb_nuevo_archivo(const char* nombre_archivo, int tamanio_bloques,
 	fprintf(f,"NOMBRE_ARCHIVO=%s\n",nombre_archivo);
 	fprintf(f,"TAMANIO_ARCHIVO=%i\n",tamanio_bloques*2);
 
-	asignar_bloques_iniciales(estructura_bitmap,f);
+	asignar_bloques_iniciales(f);
 	free(ruta);
+}
+
+
+
+void probando_cositas(){
+	// Prueba respuesta a petición de creación de archivo (SEGUIR) //
+	// --- INICIO --- //
+	printf("%i\n",(int)estructura_bitmap->size);
+
+	levantar_fcb_nuevo_archivo("fcbPrueba");
+	t_config* configTCB = iniciar_config("../fileSystem/grupoDeBloques/fcbPrueba");
+	t_fcb fcb;
+
+
+
+	fcb.puntero_directo = config_get_int_value(configTCB,"PUNTERO_DIRECTO");
+	fcb.nombre_archivo = config_get_string_value(configTCB,"NOMBRE_ARCHIVO");
+
+	printf("Puntero directo: %d \n",fcb.puntero_directo);
+	printf("Nombre archivo:  %s \n",fcb.nombre_archivo);
+
+	if(abrir_archivo("fcbPrueba"))
+	{
+		printf("Existe el archivo solicitado fcbPrueba \n");
+	}
+	else
+	{
+		printf("No existe el archivo solicitado fcbPrueba \n");
+	}
+
+	crear_archivo("campeonesF1");
+
+	if(abrir_archivo("campeonesF1"))
+	{
+		printf("Existe el archivo solicitado campeonesF1 \n");
+	}
+	else
+	{
+		printf("No existe el archivo solicitado campeonesF1 \n");
+	}
+
+
+//	truncar_archivo("campeonesF1","125",mapping_archivo_bloques);
+
+	int a = mapping_archivo_bloques;
+
+	printf("%i \n",a);
+
+	obtener_ruta_archivo("ArchivoEjemplo");
+
+	// --- FIN --- //
+
+
+	// Verificación bloques asignados a archivo creado se indican como ocupados //
+	// --- INICIO --- //
+	FILE* f;
+	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
+
+
+	if(fileno(f) == -1){
+		printf("Error al abrir archivo bitmap\n");
+	}
+
+		fseek(f,0,0);
+
+		unsigned char b;
+
+		for(int i = 0; i < config_super_bloque_valores->block_count/8; i++){
+			fread(&b,1,1,f);
+			printf("%u\n",b);
+		}
+
+		fclose(f);
+	// --- FIN --- //
+}
+
+void inicializar_servidor(){
+	char* puerto_escucha = config_valores->puerto_escucha;
+	int fd_file_system = iniciar_servidor(puerto_escucha);
+	log_info(logger, "File System inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_escucha);
+
+	while(atender_clientes_file_system(fd_file_system));
+
+	liberar_recursos_bitmap(archivo_bloques,archivo_bloques,mapping_archivo_bloques);
+
 }
