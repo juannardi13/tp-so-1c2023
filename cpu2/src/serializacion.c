@@ -91,16 +91,4 @@ void serializar_contexto(t_contexto_de_ejecucion* contexto, t_buffer* buffer, vo
 	offset += sizeof(int);
 	memcpy(stream + offset, &contexto->instrucciones, contexto->tamanio_instrucciones);
 	offset += contexto->tamanio_instrucciones;
-
-	t_registros* registro_actual = contexto->registros_pcb;
-	for(int i=0; i<(contexto->tamanio_registros); i++){
-		memcpy(stream + offset, registro_actual, sizeof(t_registros));
-		offset += sizeof(t_registros);
-		registro_actual++;
-	}
-	t_segmento* segmento_actual = contexto->tabla_segmentos;
-	for(int a=0; a<(contexto->tamanio_segmentos); a++){
-		serializar_segmentos(segmento_actual, stream, offset);
-		segmento_actual++;
-	}
 }

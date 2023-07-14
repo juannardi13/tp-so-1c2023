@@ -11,6 +11,9 @@ void estado_ejecutar(void) {
 		t_proceso* proceso_a_ejecutar = list_get(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
 		pthread_mutex_unlock(&mutex_exec);
 
+		proceso_a_ejecutar->pcb->estado = EXEC;
+		log_info(logger_kernel, "PID: <%d> - Estado Anterior: <READY> - Estado Actual: <EXEC>", proceso_a_ejecutar->pcb->pid);
+
 //		struct timespec inicio, final; //Estructuras y definiciones necesarias para calcular el HRRN
 	//	clock_gettime(CLOCK_REALTIME, &inicio);
 	//	long seconds; 
@@ -23,7 +26,7 @@ void estado_ejecutar(void) {
 		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
 		
 		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
-		log_info(logger_kernel, "PCB id[%d] enviada a CPU", proceso_a_ejecutar->pcb->pid);
+		log_info(logger_kernel, "PID: <%d> enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
 
 		//proceso_a_ejecutar->pcb = recibir_pcb(socket_cpu);
@@ -60,48 +63,77 @@ void estado_ejecutar(void) {
 		proceso_a_ejecutar->pcb->instrucciones = malloc(strlen(instrucciones) + 1);
 		strcpy(proceso_a_ejecutar->pcb->instrucciones, instrucciones);
 
-		//--- FALTA SERIALIZAR SEGMENTOS Y REGISTROS
+		//-------------------------------------------------------------RECIBO REGISTROS
+		int tamanio_registro_chico = strlen(registros_iniciados.ax) + 1;
+		int tamanio_registro_mediano = strlen(registros_iniciados.eax) + 1;
+		int tamanio_registro_grande = strlen(registros_iniciados.rax) + 1;
+
+		memcpy(&(proceso_a_ejecutar->pcb->registros.ax), stream, tamanio_registro_chico);
+		stream += tamanio_registro_chico;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.bx), stream, tamanio_registro_chico);
+		stream += tamanio_registro_chico;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.cx), stream, tamanio_registro_chico);
+		stream += tamanio_registro_chico;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.dx), stream, tamanio_registro_chico);
+		stream += tamanio_registro_chico;
+
+		memcpy(&(proceso_a_ejecutar->pcb->registros.eax), stream, tamanio_registro_mediano);
+		stream += tamanio_registro_mediano;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.ebx), stream, tamanio_registro_mediano);
+		stream += tamanio_registro_mediano;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.ecx), stream, tamanio_registro_mediano);
+		stream += tamanio_registro_mediano;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.edx), stream, tamanio_registro_mediano);
+		stream += tamanio_registro_mediano;
+
+		memcpy(&(proceso_a_ejecutar->pcb->registros.rax), stream, tamanio_registro_grande);
+		stream += tamanio_registro_grande;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.rbx), stream, tamanio_registro_grande);
+		stream += tamanio_registro_grande;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.rcx), stream, tamanio_registro_grande);
+		stream += tamanio_registro_grande;
+		memcpy(&(proceso_a_ejecutar->pcb->registros.rdx), stream, tamanio_registro_grande);
+		stream += tamanio_registro_grande;
+
+		log_info(logger_kernel, "Los registros que trajo PID: <%d> de la CPU son: ", proceso_a_ejecutar->pcb->pid);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ax);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.bx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.cx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.dx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.eax);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ebx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ecx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.edx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rax);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rbx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rcx);
+		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rdx);
+
+		//--- FALTA DESERIALIZAR SEGMENTOS
 
 		switch (respuesta_cpu) {
 		case IO:
-		//	clock_gettime(CLOCK_REALTIME, &final);
-		//	seconds = final.tv_sec - inicio.tv_sec;
-		//	nanoseconds = final.tv_nsec - inicio.tv_nsec;
-		//	elapsed = seconds + nanoseconds * 1e - 9;
-		//	proceso_a_ejecutar->ultima_rafaga = elapsed;
-			
-			//TODO buscar la manera de ejecutar IO
-			//Quizas convenga mandarlo a dormir con usleep en estado block
-			//Tambien ver si conviene crear la funcion get_time();
-			//Otra forma de hacerlo puede ser:
-
 			int finalizacion_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = finalizacion_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
 			proceso_a_ejecutar->ultima_instruccion = IO;
-			
-		//	struct timespec inicio_bloqueo;
-		//	clock_gettime(CLOCK_REALTIME, &inicio_bloqueo);
-		//	long segundos_inicio_bloqueo = inicio_bloqueo.tv_sec;
-		//	long nanosegundos_inicio_bloqueo = inicio_bloqueo.tv_nsec;
-		//	double comienzo_bloqueo = segundos_inicio_bloqueo + nanosegundos_inicio_bloqueo * 1e - 9;
-		//	proceso_a_ejecutar->inicio_block = comienzo_bloqueo;
 
 			int inicio_block = get_time();
 			proceso_a_ejecutar->inicio_bloqueo = inicio_block;
 			
-			//Una forma de resolverlo:
-			//proceso_a_ejecutar->tiempo_bloqueo = recibir_parametro_instruccion(); //Implementar esta función y fijarse si es en microsegundos nanosegundos o lo que sea TODO
+			memcpy(&(proceso_a_ejecutar->tiempo_bloqueo), stream, sizeof(int));
+			stream += sizeof(int);
 
 			pthread_mutex_lock(&mutex_block_io);
 			proceso_a_ejecutar->pcb->estado = BLOCK;
 			list_add(cola_block_io, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_block_io);
 
+			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
+			log_info(logger_kernel, "PID: <%d> - Bloqueado por: <IO>", proceso_a_ejecutar->pcb->pid);
+
 			sem_post(&sem_block_io);
-			
-			log_warning(logger_kernel, "La última instrucción ejecutada fue IO");
 			break;
 		case F_OPEN:
 			//Abrir o crear el archivo pasado por parámetro
@@ -155,6 +187,31 @@ void estado_ejecutar(void) {
 
 			proceso_a_ejecutar->ultima_instruccion = WAIT;
 			
+			int tamanio_parametro_wait = 0;
+
+			memcpy(&tamanio_parametro_wait, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char* recurso_wait = malloc(tamanio_parametro_wait);
+			memset(recurso_wait, 0, tamanio_parametro_wait);
+
+			memcpy(recurso_wait, stream, tamanio_parametro_wait);
+			stream += tamanio_parametro_wait;
+
+			if (dictionary_has_key(recursos, recurso_wait)) {
+				//Lógica de asignar el recurso TODO
+			} else {
+				pthread_mutex_lock(&mutex_exit);
+				proceso_a_ejecutar->pcb->estado = EXT;
+				list_add(cola_exit, proceso_a_ejecutar);
+				pthread_mutex_unlock(&mutex_exit);
+
+				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
+				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
+				sem_post(&sem_ready);
+			}
+
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue WAIT");
 			break;
@@ -163,19 +220,36 @@ void estado_ejecutar(void) {
 
 			proceso_a_ejecutar->ultima_instruccion = SIGNAL;
 			
+			int tamanio_parametro_signal = 0;
+
+			memcpy(&tamanio_parametro_signal, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char *recurso_signal = malloc(tamanio_parametro_signal);
+			memset(recurso_signal, 0, tamanio_parametro_signal);
+
+			memcpy(recurso_signal, stream, tamanio_parametro_signal);
+			stream += tamanio_parametro_signal;
+
+			if(dictionary_has_key(recursos, recurso_signal)) {
+				//Lógica de liberar el recurso TODO
+			} else {
+				pthread_mutex_lock(&mutex_exit);
+				proceso_a_ejecutar->pcb->estado = EXT;
+				list_add(cola_exit, proceso_a_ejecutar);
+				pthread_mutex_unlock(&mutex_exit);
+
+				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
+				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
+				sem_post(&sem_ready);
+			}
+
 			log_warning(logger_kernel,
 					"La última instrucción ejecutada fue SIGNAL");
 			break;
-		case YIELD:
-			//Se pone en cola de ready al proceso de nuevo.
-
+		case YIELD: //TERMINADO
 			proceso_a_ejecutar->ultima_instruccion = YIELD;
-			
-		//	clock_gettime(CLOCK_REALTIME, &final);
-		//	seconds = final.tv_sec - inicio.tv_sec;
-		//	nanoseconds = final.tv_nsec - inicio.tv_nsec;
-		//	elapsed = seconds + nanoseconds * 1e - 9;
-		//	proceso_a_ejecutar->ultima_rafaga = elapsed;
 
 			int fin_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = fin_cpu;
@@ -189,18 +263,16 @@ void estado_ejecutar(void) {
 
 			sem_post(&sem_ready);
 			break;
-		case EXIT:
-			//Finalización del proceso.
+		case EXIT: //TERMINADO
 			pthread_mutex_lock(&mutex_exit);
 			proceso_a_ejecutar->pcb->estado = EXT;
 			list_add(cola_exit, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exit);
 
-			log_info(logger_kernel, "PCB id[%d] sale de EXEC y entra a EXIT", proceso_a_ejecutar->pcb->pid);
+			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+			log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso_a_ejecutar->pcb->pid);
 			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 			sem_post(&sem_ready);
-
-			log_warning(logger_kernel, "La última instrucción ejecutada fue EXIT");
 			break;
 		default:
 			log_error(logger_kernel, "Instrucción desconocida, ocurrió un error");
@@ -223,8 +295,6 @@ void estado_exit(void) {
 		proceso = list_remove(cola_exit, 0);
 		pthread_mutex_unlock(&mutex_exit);
 
-		log_info(logger_kernel, "[EXIT] PCB id[%d] sale de Exit y finaliza el proceso", proceso->pcb->pid);
-
 		liberar_recursos_asignados(proceso->pcb->recursos_asignados);
 
 		//Liberar las estructuras del proceso en memoria
@@ -237,7 +307,7 @@ void estado_exit(void) {
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
 
-		log_info(logger_kernel, "Ordenando a Consola la finalización del proceso PCB id[%d]", proceso->pcb->pid);
+		log_info(logger_kernel, "Ordenando a Consola la finalización del PID: <%d>", proceso->pcb->pid);
 
 		eliminar_pcb(proceso->pcb);
 		free(proceso);
@@ -285,12 +355,12 @@ t_proceso* obtener_proceso_cola_ready(void) {
 	switch(config_kernel.algoritmo_planificacion){
 	case FIFO:
 		proceso = list_remove(cola_ready, 0);
-		log_info(logger_kernel, "PCB id[%d] saliendo de Cola de Ready por FIFO para ejecutar.", proceso->pcb->pid);
+		log_info(logger_kernel, "PID: <%d> saliendo de Cola de Ready por FIFO para ejecutar.", proceso->pcb->pid);
 		break;
 	case HRRN:
 		aplicar_hrrn();
 		proceso = list_remove(cola_ready, 0);
-		log_info(logger_kernel, "PCB id[%d] saliendo de Cola de Ready por HRRN para ejecutar.", proceso->pcb->pid);
+		log_info(logger_kernel, "PID: <%d> saliendo de Cola de Ready por HRRN para ejecutar.", proceso->pcb->pid);
 		break;
 	default:
 		log_error(logger_kernel, "Error al elegir un proceso de la cola de Ready para ejecutar");
@@ -349,7 +419,8 @@ void estado_block_io(void) {
 		t_proceso* proceso = list_remove(cola_block_io, 0);
 		pthread_mutex_unlock(&mutex_block_io);
 
-		usleep(proceso->tiempo_bloqueo);
+		log_info(logger_kernel, "PID: <%d> - Ejecuta IO: <%d>", proceso->pcb->pid, proceso->tiempo_bloqueo);
+		sleep(proceso->tiempo_bloqueo);
 
 		pthread_mutex_lock(&mutex_ready);
 		list_add(cola_ready, proceso);

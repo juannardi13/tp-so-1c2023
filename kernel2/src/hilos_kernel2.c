@@ -29,17 +29,13 @@ void manejar_conexion(int socket_cliente) {
 	switch(paquete->codigo_operacion)
 	{
 	case CONSOLA:
-		log_info(logger_kernel, "Me llegó una Consola");
 		data = deserializar_string(paquete->buffer);
-		log_info(logger_kernel, "Consola deserializada, se arma el PCB a continuación");
 
 		t_proceso* proceso = malloc(sizeof(t_proceso));
 		proceso->pcb = malloc(sizeof(t_pcb));
 
 		proceso->pcb = crear_estructura_pcb(data);
 		proceso->socket = socket_cliente;
-
-		log_info(logger_kernel, "PCB id[%d] armada, agregando a cola NEW", proceso->pcb->pid);
 
 //		avisar_a_memoria_crear_estructuras();
 
@@ -69,10 +65,10 @@ int atender_clientes_kernel(int socket_servidor) {
 	int socket_cliente = esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
 
 		if(socket_cliente != -1) {
-			//pthread_t hilo_cliente;
-			manejar_conexion(socket_cliente);
-			//pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-			//pthread_detach(hilo_cliente);
+			pthread_t hilo_cliente;
+			//manejar_conexion(socket_cliente);
+			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, (void *) socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+			pthread_detach(hilo_cliente);
 
 			return 1;
 		} else {
@@ -115,8 +111,9 @@ void agregar_proceso_a_new(t_proceso* proceso) {
 	proceso->pcb->estado = NEW;
 	list_add(cola_new, proceso);
 
-	log_info(logger_kernel, "PCB id[%d] ingresa a NEW", proceso->pcb->pid);
+	log_info(logger_kernel, "Se crea el proceso <%d> en NEW", proceso->pcb->pid);
 
+	log_info(logger_kernel, "Cola NEW: ");
 	mostrar_cola(cola_new);
 	pthread_mutex_unlock(&mutex_new);
 
@@ -128,7 +125,7 @@ void mostrar_cola(t_list* lista) {
 
     for (int j = 0; j < list_size(lista); j++){
     	t_proceso* proceso = list_get(lista, j);
-        log_info(logger_kernel,"PCB id[%d]",proceso->pcb->pid);
+        log_info(logger_kernel,"PID: <%d>",proceso->pcb->pid);
     }
 }
 

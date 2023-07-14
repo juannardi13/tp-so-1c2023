@@ -2,6 +2,8 @@
 
 #define MAX_LEN 256
 
+
+
 int main() {
 	bool cpu_bloqueada = false;
 	char* ip_kernel;
@@ -10,6 +12,10 @@ int main() {
     t_log* logger_principal = iniciar_logger_principal();
     t_config* config = iniciar_config();
     inicializar_registros();
+
+	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
+	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
+	int tamanio_registro_grande = strlen(registros_cpu.rax) + 1;
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
 
@@ -66,6 +72,46 @@ int main() {
 			stream += sizeof(int);
 
 			//--------------------------------------------------------------------DESERIALIZACIÓN DE SEGMENTOS Y DE REGISTROS, FALTA ARREGLARLO
+			memcpy(&(contexto->registros_pcb.ax), stream, tamanio_registro_chico);
+			stream += tamanio_registro_chico;
+			memcpy(&(contexto->registros_pcb.bx), stream, tamanio_registro_chico);
+			stream += tamanio_registro_chico;
+			memcpy(&(contexto->registros_pcb.cx), stream, tamanio_registro_chico);
+			stream += tamanio_registro_chico;
+			memcpy(&(contexto->registros_pcb.dx), stream, tamanio_registro_chico);
+			stream += tamanio_registro_chico;
+
+			memcpy(&(contexto->registros_pcb.eax), stream, tamanio_registro_mediano);
+			stream += tamanio_registro_mediano;
+			memcpy(&(contexto->registros_pcb.ebx), stream, tamanio_registro_mediano);
+			stream += tamanio_registro_mediano;
+			memcpy(&(contexto->registros_pcb.ecx), stream, tamanio_registro_mediano);
+			stream += tamanio_registro_mediano;
+			memcpy(&(contexto->registros_pcb.edx), stream, tamanio_registro_mediano);
+			stream += tamanio_registro_mediano;
+
+			memcpy(&(contexto->registros_pcb.rax), stream, tamanio_registro_grande);
+			stream += tamanio_registro_grande;
+			memcpy(&(contexto->registros_pcb.rbx), stream, tamanio_registro_grande);
+			stream += tamanio_registro_grande;
+			memcpy(&(contexto->registros_pcb.rcx), stream, tamanio_registro_grande);
+			stream += tamanio_registro_grande;
+			memcpy(&(contexto->registros_pcb.rdx), stream, tamanio_registro_grande);
+			stream += tamanio_registro_grande;
+
+			log_info(logger, "Los registros que trajo PID: <%d> son: ", contexto->pid);
+			log_info(logger, "%s", contexto->registros_pcb.ax);
+			log_info(logger, "%s", contexto->registros_pcb.bx);
+			log_info(logger, "%s", contexto->registros_pcb.cx);
+			log_info(logger, "%s", contexto->registros_pcb.dx);
+			log_info(logger, "%s", contexto->registros_pcb.eax);
+			log_info(logger, "%s", contexto->registros_pcb.ebx);
+			log_info(logger, "%s", contexto->registros_pcb.ecx);
+			log_info(logger, "%s", contexto->registros_pcb.edx);
+			log_info(logger, "%s", contexto->registros_pcb.rax);
+			log_info(logger, "%s", contexto->registros_pcb.rbx);
+			log_info(logger, "%s", contexto->registros_pcb.rcx);
+			log_info(logger, "%s", contexto->registros_pcb.rdx);
 //    				t_registros* registro_actual = contexto->registros_pcb;
 //    				for(int i=0; i<(contexto->tamanio_registros); i++){
 //    					memcpy(&(registro_actual), stream, sizeof(t_registros));
@@ -97,10 +143,10 @@ int main() {
 				switch(codigo_instruccion) {
 				case SET: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
-					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					int tiempo_de_espera;
 					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
 					//usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
+					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_SET(instruccion_a_ejecutar, contexto);
 					break;
 				case MOV_IN:
@@ -116,7 +162,7 @@ int main() {
 				case IO:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel, cpu_bloqueada);
+					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel, cpu_bloqueada);
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_OPEN:
@@ -152,12 +198,14 @@ int main() {
 				case WAIT:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_WAIT(instruccion_a_ejecutar, contexto, fd_kernel);
+					ejecutar_WAIT(instruccion_a_ejecutar, contexto, fd_kernel);
+					contexto_sigue_en_cpu = 0;
 					break;
 				case SIGNAL:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_SIGNAL(instruccion_a_ejecutar, contexto, fd_kernel);
+					ejecutar_SIGNAL(instruccion_a_ejecutar, contexto, fd_kernel);
+					contexto_sigue_en_cpu = 0;
 					break;
 				case CREATE_SEGMENT:
 					contexto->pc++;

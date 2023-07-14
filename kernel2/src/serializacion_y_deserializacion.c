@@ -21,27 +21,63 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 	t_buffer* buffer = malloc(sizeof(t_buffer));
 
 	int tamanio_instrucciones = pcb->tamanio_instrucciones;
+	int tamanio_registro_chico = strlen(pcb->registros.ax) + 1;
+	int tamanio_registro_mediano = strlen(pcb->registros.eax) + 1;
+	int tamanio_registro_grande = strlen(pcb->registros.rax) + 1;
 
 	buffer->stream_size = sizeof(int) * 3
 //			+ sizeof(t_registros)
 //			+ tamanio_segmentos  <-- Agregar el tamaño de los segmentos cuando sepamos que carajo es
-			+ tamanio_instrucciones; //El tamaño del String con todas las instrucciones
+			+ tamanio_instrucciones
+			+ tamanio_registro_chico * 4
+			+ tamanio_registro_mediano * 4
+			+ tamanio_registro_grande * 4; //El tamaño del String con todas las instrucciones
 
 	void* stream = malloc(buffer->stream_size);
 	int offset = 0;
 
+	//---------------------------------------------------------------------SERIALIZACIÓN DEL PID
 	memcpy(stream + offset, &(pcb->pid), sizeof(int));
 	offset += sizeof(int);
+
+	//---------------------------------------------------------------------SERIALIZACIÓN DE LAS INSTRUCCIONES
 	memcpy(stream + offset, &(pcb->tamanio_instrucciones), sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, pcb->instrucciones, tamanio_instrucciones);
 	offset += tamanio_instrucciones;
+
+	//---------------------------------------------------------------------SERIALIZACIÓN DEL PROGRAM COUNTER
 	memcpy(stream + offset, &(pcb->pc), sizeof(int));
 	offset += sizeof(int);
-//	memcpy(stream + offset, &(pcb->tamanio), sizeof(int));
-//	offset += sizeof(int);
-//	memcpy(stream + offset, &(pcb->registros), sizeof(t_registros));
-//	offset += sizeof(t_registros);
+
+	//---------------------------------------------------------------------SERIALIZACIÓN DE LOS REGISTROS
+	memcpy(stream + offset, &(pcb->registros.ax), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(pcb->registros.bx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(pcb->registros.cx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(pcb->registros.dx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+
+	memcpy(stream + offset, &(pcb->registros.eax), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(pcb->registros.ebx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(pcb->registros.ecx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(pcb->registros.edx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+
+	memcpy(stream + offset, &(pcb->registros.rax), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(pcb->registros.rbx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(pcb->registros.rcx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(pcb->registros.rdx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+
 //	memcpy(stream + offset, &(pcb->tamanio_segmentos), sizeof(int));
 //	offset += sizeof(int);
 //	memcpy(stream + offset, pcb->segmentos, pcb->tamanio_segmentos);
@@ -108,7 +144,12 @@ t_pcb* deserializar_pcb(t_buffer* buffer) {
 }
 
 void avisar_a_modulo(int socket, op_code codigo) {
-	enviar_datos(socket, &codigo, sizeof(op_code));
+	void* a_enviar = malloc(sizeof(op_code));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &codigo, sizeof(op_code));
+
+	send(socket, a_enviar, sizeof(op_code), 0);
 }
 
 //Funciones de deserialización de estructuras que ya no se usan, como t_instruccion (NO ANDAN DEL TODO BIEN)

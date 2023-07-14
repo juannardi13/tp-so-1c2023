@@ -11,7 +11,7 @@ int convertirAEntero(char *cadena) {
     return resultado;
 }
 
-void asignar_valor_a_registro(char *valor, char *registro, t_registros *registros) {
+void asignar_valor_a_registro(char *valor, char *registro) {
 
 	if (strcmp(registro, "AX") == 0) {
 		strcpy(registros_cpu.ax, valor);

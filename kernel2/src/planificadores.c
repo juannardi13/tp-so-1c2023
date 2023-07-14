@@ -35,11 +35,15 @@ void admitir_procesos_a_ready(void) { //hilo
 
 		//Puedo hacer que los segmentos de memoria se los demos al proceso acá o apenas entra a cola new TODO
 
-		log_info(logger_kernel, "PCB id[%d] ingresa a READY desde NEW", proceso->pcb->pid);
-
 		pthread_mutex_lock(&mutex_ready);
 		list_add(cola_ready, proceso);
 		pthread_mutex_unlock(&mutex_ready);
+
+		proceso->pcb->estado = READY;
+		log_info(logger_kernel, "PID: <%d> - Estado Anterior: <NEW> - Estado Actual: <READY>", proceso->pcb->pid);
+
+		log_info(logger_kernel,"Cola READY: ");
+		mostrar_cola(cola_ready);
 
 		proceso->llegada_ready = get_time();
 

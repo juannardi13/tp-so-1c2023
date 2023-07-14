@@ -15,6 +15,7 @@
 #include <shared-2.h>
 
 extern t_registros registros_cpu;
+extern t_log* logger_principal;
 
 // Funciones para la inicialización de CPU
 t_log* iniciar_logger(void);
@@ -30,7 +31,7 @@ void serializar_contexto(t_contexto_de_ejecucion*, t_buffer*, void*, int);
 void serializar_segmentos(t_segmento*, void*, int);
 
 // Funciones que usan las instrucciones
-void asignar_valor_a_registro(char*, char*, t_registros*);
+void asignar_valor_a_registro(char*, char*);
 void activar_segmentation_fault(t_contexto_de_ejecucion*, int);
 bool desplazamiento_supera_tamanio(int, char*);
 void escribir_en_memoria(int, char*, int);
@@ -54,12 +55,12 @@ void ejecutar_F_READ(char**, t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_F_SEEK(char**, t_contexto_de_ejecucion*, int);
 void ejecutar_F_TRUNCATE(char**, t_contexto_de_ejecucion*, int);
 void ejecutar_F_WRITE(char**, t_contexto_de_ejecucion*, int, int, t_config*);
-void ejecutar_IO(char**, t_contexto_de_ejecucion*, int, bool);
+void ejecutar_IO(char*, t_contexto_de_ejecucion*, int, bool);
 void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
 void ejecutar_SET(char*, t_contexto_de_ejecucion*);
-void ejecutar_SIGNAL(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_WAIT(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_SIGNAL(char*, t_contexto_de_ejecucion*, int);
+void ejecutar_WAIT(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_YIELD(char*, t_contexto_de_ejecucion*, int);
 
 #endif /* UTILS_H_ */
