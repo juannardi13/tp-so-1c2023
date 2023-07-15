@@ -1,0 +1,169 @@
+[INFO] 18:34:43:355 kernel.log/(93125:93125): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:34:51:442 kernel.log/(93125:93125): Cliente conectado (a KERNEL)
+
+[INFO] 18:34:52:514 kernel.log/(93125:93139): Se crea el proceso <1000> en NEW
+[INFO] 18:34:52:515 kernel.log/(93125:93139): Cola NEW: 
+[INFO] 18:34:52:515 kernel.log/(93125:93139): PID: <1000>
+[INFO] 18:34:52:515 kernel.log/(93125:93135): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:34:52:515 kernel.log/(93125:93135): Cola Ready <FIFO>:
+[INFO] 18:34:52:515 kernel.log/(93125:93135): PID: <1000>
+[INFO] 18:37:13:800 kernel.log/(93238:93238): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:37:18:473 kernel.log/(93238:93238): Cliente conectado (a KERNEL)
+
+[INFO] 18:37:19:427 kernel.log/(93238:93252): Se crea el proceso <1000> en NEW
+[INFO] 18:37:19:427 kernel.log/(93238:93252): Cola NEW: 
+[INFO] 18:37:19:427 kernel.log/(93238:93252): PID: <1000>
+[INFO] 18:37:19:427 kernel.log/(93238:93250): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:37:19:427 kernel.log/(93238:93250): Cola Ready <FIFO>:
+[INFO] 18:37:19:427 kernel.log/(93238:93250): PID: <1000>
+[INFO] 18:39:42:704 kernel.log/(93311:93311): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:39:51:986 kernel.log/(93311:93311): Cliente conectado (a KERNEL)
+
+[INFO] 18:40:39:469 kernel.log/(93311:93360): Se crea el proceso <1000> en NEW
+[INFO] 18:40:39:469 kernel.log/(93311:93360): Cola NEW: 
+[INFO] 18:40:39:469 kernel.log/(93311:93360): PID: <1000>
+[INFO] 18:40:55:820 kernel.log/(93311:93329): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:41:02:394 kernel.log/(93311:93329): Cola Ready <FIFO>:
+[INFO] 18:41:04:159 kernel.log/(93311:93329): PID: <1000>
+[INFO] 18:42:20:587 kernel.log/(93524:93524): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:42:24:895 kernel.log/(93524:93524): Cliente conectado (a KERNEL)
+
+[INFO] 18:42:37:758 kernel.log/(93524:93563): Se crea el proceso <1000> en NEW
+[INFO] 18:42:37:758 kernel.log/(93524:93563): Cola NEW: 
+[INFO] 18:42:37:758 kernel.log/(93524:93563): PID: <1000>
+[INFO] 18:43:01:689 kernel.log/(93524:93541): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:43:02:599 kernel.log/(93524:93541): Cola Ready <FIFO>:
+[INFO] 18:43:03:065 kernel.log/(93524:93541): PID: <1000>
+[INFO] 18:43:04:052 kernel.log/(93524:93541): Cola Ready <HRRN>:
+[INFO] 18:43:05:557 kernel.log/(93524:93541): PID: <1000>
+[INFO] 18:46:24:262 kernel.log/(94029:94029): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:46:33:929 kernel.log/(94029:94029): Cliente conectado (a KERNEL)
+
+[INFO] 18:46:46:798 kernel.log/(94029:94063): Se crea el proceso <1000> en NEW
+[INFO] 18:46:46:799 kernel.log/(94029:94063): Cola NEW: 
+[INFO] 18:46:46:799 kernel.log/(94029:94063): PID: <1000>
+[INFO] 18:46:58:333 kernel.log/(94029:94043): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:47:00:187 kernel.log/(94029:94043): Cola Ready <FIFO>:
+[INFO] 18:47:00:683 kernel.log/(94029:94043): PID: <1000>
+[INFO] 18:47:17:256 kernel.log/(94029:94040): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:47:19:270 kernel.log/(94029:94040): PID: <1000> ingresa a EXECUTE
+[INFO] 18:47:33:353 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:47:50:586 kernel.log/(94029:94041): PID: <1000> enviada a CPU
+[INFO] 18:48:17:913 kernel.log/(94029:94041): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:48:18:233 kernel.log/(94029:94041): COMO
+[INFO] 18:48:18:383 kernel.log/(94029:94041): DERE
+[INFO] 18:48:18:535 kernel.log/(94029:94041): 0000
+[INFO] 18:48:18:689 kernel.log/(94029:94041): 0000
+[INFO] 18:48:18:813 kernel.log/(94029:94041): 00000000
+[INFO] 18:48:18:934 kernel.log/(94029:94041): 00000000
+[INFO] 18:48:19:056 kernel.log/(94029:94041): 00000000
+[INFO] 18:48:19:181 kernel.log/(94029:94041): 00000000
+[INFO] 18:48:19:304 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:48:19:657 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:48:19:810 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:48:20:307 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:48:30:672 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 18:48:31:015 kernel.log/(94029:94041): PID: <1000> - Bloqueado por: <IO>
+[INFO] 18:48:43:466 kernel.log/(94029:94042): PID: <1000> - Ejecuta IO: <5>
+[INFO] 18:48:53:714 kernel.log/(94029:94042): Cola Ready <FIFO>:
+[INFO] 18:48:54:124 kernel.log/(94029:94042): PID: <1000>
+[INFO] 18:49:02:621 kernel.log/(94029:94040): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:49:02:621 kernel.log/(94029:94040): PID: <1000> ingresa a EXECUTE
+[INFO] 18:49:02:621 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:49:02:621 kernel.log/(94029:94041): PID: <1000> enviada a CPU
+[INFO] 18:49:03:142 kernel.log/(94029:94041): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:49:03:142 kernel.log/(94029:94041): COMO
+[INFO] 18:49:03:142 kernel.log/(94029:94041): DERE
+[INFO] 18:49:03:142 kernel.log/(94029:94041): PENT
+[INFO] 18:49:03:142 kernel.log/(94029:94041): ETOD
+[INFO] 18:49:03:142 kernel.log/(94029:94041): 00000000
+[INFO] 18:49:03:142 kernel.log/(94029:94041): 00000000
+[INFO] 18:49:03:143 kernel.log/(94029:94041): 00000000
+[INFO] 18:49:03:143 kernel.log/(94029:94041): 00000000
+[INFO] 18:49:03:143 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:03:143 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:03:143 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:03:143 kernel.log/(94029:94041): 0000000000000000
+[WARNING] 18:49:03:144 kernel.log/(94029:94041): La última instrucción ejecutada fue YIELD
+[INFO] 18:49:13:476 kernel.log/(94029:94040): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:49:14:804 kernel.log/(94029:94040): PID: <1000> ingresa a EXECUTE
+[INFO] 18:49:23:085 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:49:24:122 kernel.log/(94029:94041): PID: <1000> enviada a CPU
+[INFO] 18:49:33:038 kernel.log/(94029:94041): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:49:33:191 kernel.log/(94029:94041): COMO
+[INFO] 18:49:33:385 kernel.log/(94029:94041): DERE
+[INFO] 18:49:33:532 kernel.log/(94029:94041): PENT
+[INFO] 18:49:33:684 kernel.log/(94029:94041): ETOD
+[INFO] 18:49:33:807 kernel.log/(94029:94041): OESORDEN
+[INFO] 18:49:33:961 kernel.log/(94029:94041): ADODESDE
+[INFO] 18:49:34:113 kernel.log/(94029:94041): 00000000
+[INFO] 18:49:34:264 kernel.log/(94029:94041): 00000000
+[INFO] 18:49:34:768 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:34:864 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:34:964 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:35:432 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:49:46:869 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 18:49:47:254 kernel.log/(94029:94041): PID: <1000> - Bloqueado por: <IO>
+[INFO] 18:49:47:805 kernel.log/(94029:94042): PID: <1000> - Ejecuta IO: <5>
+[INFO] 18:49:52:806 kernel.log/(94029:94042): Cola Ready <FIFO>:
+[INFO] 18:49:52:806 kernel.log/(94029:94042): PID: <1000>
+[INFO] 18:49:52:806 kernel.log/(94029:94040): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:49:52:807 kernel.log/(94029:94040): PID: <1000> ingresa a EXECUTE
+[INFO] 18:49:55:465 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:49:59:125 kernel.log/(94029:94041): PID: <1000> enviada a CPU
+[INFO] 18:50:13:291 kernel.log/(94029:94041): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:50:13:481 kernel.log/(94029:94041): COMO
+[INFO] 18:50:13:655 kernel.log/(94029:94041): DERE
+[INFO] 18:50:13:805 kernel.log/(94029:94041): PENT
+[INFO] 18:50:13:958 kernel.log/(94029:94041): ETOD
+[INFO] 18:50:14:109 kernel.log/(94029:94041): OESORDEN
+[INFO] 18:50:14:264 kernel.log/(94029:94041): ADODESDE
+[INFO] 18:50:14:385 kernel.log/(94029:94041): QUEHASLL
+[INFO] 18:50:14:509 kernel.log/(94029:94041): EGADOMIV
+[INFO] 18:50:14:634 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:50:14:753 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:50:14:913 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:50:15:031 kernel.log/(94029:94041): 0000000000000000
+[WARNING] 18:50:16:871 kernel.log/(94029:94041): La última instrucción ejecutada fue YIELD
+[INFO] 18:50:18:555 kernel.log/(94029:94040): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:50:18:556 kernel.log/(94029:94040): PID: <1000> ingresa a EXECUTE
+[INFO] 18:50:21:751 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:50:22:388 kernel.log/(94029:94041): PID: <1000> enviada a CPU
+[INFO] 18:50:31:966 kernel.log/(94029:94041): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:50:32:068 kernel.log/(94029:94041): COMO
+[INFO] 18:50:32:169 kernel.log/(94029:94041): DERE
+[INFO] 18:50:32:277 kernel.log/(94029:94041): PENT
+[INFO] 18:50:32:378 kernel.log/(94029:94041): ETOD
+[INFO] 18:50:32:481 kernel.log/(94029:94041): OESORDEN
+[INFO] 18:50:32:580 kernel.log/(94029:94041): ADODESDE
+[INFO] 18:50:32:680 kernel.log/(94029:94041): QUEHASLL
+[INFO] 18:50:32:782 kernel.log/(94029:94041): EGADOMIV
+[INFO] 18:50:32:883 kernel.log/(94029:94041): IDACAMBIOYANOSOY
+[INFO] 18:50:32:986 kernel.log/(94029:94041): LAMISMAQUETUCONO
+[INFO] 18:50:33:087 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:50:33:190 kernel.log/(94029:94041): 0000000000000000
+[INFO] 18:50:36:911 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 18:50:37:063 kernel.log/(94029:94041): PID: <1000> - Bloqueado por: <IO>
+[INFO] 18:50:37:797 kernel.log/(94029:94042): PID: <1000> - Ejecuta IO: <5>
+[INFO] 18:50:42:797 kernel.log/(94029:94042): Cola Ready <FIFO>:
+[INFO] 18:50:42:799 kernel.log/(94029:94042): PID: <1000>
+[INFO] 18:50:42:799 kernel.log/(94029:94040): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:50:42:800 kernel.log/(94029:94040): PID: <1000> ingresa a EXECUTE
+[INFO] 18:50:44:614 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:50:45:488 kernel.log/(94029:94041): PID: <1000> enviada a CPU
+[INFO] 18:50:56:192 kernel.log/(94029:94041): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:50:56:294 kernel.log/(94029:94041): COMO
+[INFO] 18:50:56:393 kernel.log/(94029:94041): DERE
+[INFO] 18:50:56:492 kernel.log/(94029:94041): PENT
+[INFO] 18:50:56:597 kernel.log/(94029:94041): ETOD
+[INFO] 18:50:56:698 kernel.log/(94029:94041): OESORDEN
+[INFO] 18:50:56:798 kernel.log/(94029:94041): ADODESDE
+[INFO] 18:50:56:901 kernel.log/(94029:94041): QUEHASLL
+[INFO] 18:50:57:003 kernel.log/(94029:94041): EGADOMIV
+[INFO] 18:50:57:104 kernel.log/(94029:94041): IDACAMBIOYANOSOY
+[INFO] 18:50:57:209 kernel.log/(94029:94041): LAMISMAQUETUCONO
+[INFO] 18:50:57:309 kernel.log/(94029:94041): CISTEENTONCESAHO
+[INFO] 18:50:57:413 kernel.log/(94029:94041): RASOYMUCHOMEJOR!
+[INFO] 18:50:58:028 kernel.log/(94029:94041): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 18:50:58:129 kernel.log/(94029:94041): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 18:50:58:230 kernel.log/(94029:94038): Ordenando a Consola la finalización del PID: <1000>
