@@ -51,6 +51,7 @@ void admitir_procesos_a_ready(void) { //hilo
 			break;
 		default:
 			break;
+		}
 		pthread_mutex_unlock(&mutex_ready);
 
 
@@ -58,6 +59,7 @@ void admitir_procesos_a_ready(void) { //hilo
 
 		sem_post(&sem_ready);
 	}
+
 }
 
 void iniciar_planificador_largo_plazo(void) {

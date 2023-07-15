@@ -536,11 +536,11 @@ void calcular_estimacion(t_proceso* un_proceso) {
 
 void estado_block_io(void) {
 
-	while(1) {
+	while (1) {
 		sem_wait(&sem_block_io);
 
 		pthread_mutex_lock(&mutex_block_io);
-		t_proceso* proceso = list_remove(cola_block_io, 0);
+		t_proceso *proceso = list_remove(cola_block_io, 0);
 		pthread_mutex_unlock(&mutex_block_io);
 
 		log_info(logger_kernel, "PID: <%d> - Ejecuta IO: <%d>", proceso->pcb->pid, proceso->tiempo_bloqueo);
@@ -560,10 +560,12 @@ void estado_block_io(void) {
 			break;
 		default:
 			break;
-		pthread_mutex_unlock(&mutex_ready);
+		}
+			pthread_mutex_unlock(&mutex_ready);
 
-		proceso->llegada_ready = get_time();
-		
-		sem_post(&sem_ready); 
+			proceso->llegada_ready = get_time();
+
+			sem_post(&sem_ready);
+
 	}
 }
