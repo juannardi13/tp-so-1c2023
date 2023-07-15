@@ -2,8 +2,6 @@
 
 #define MAX_LEN 256
 
-
-
 int main() {
 	bool cpu_bloqueada = false;
 	char* ip_kernel;
@@ -145,21 +143,21 @@ int main() {
 					contexto->pc++;
 					int tiempo_de_espera;
 					tiempo_de_espera = config_get_int_value(config, "RETARDO_INSTRUCCION");
-					//usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
+					usleep(tiempo_de_espera); //Usamos usleep que esta recibe el parámetro en milisegundos, como pedía el enunciado.
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_SET(instruccion_a_ejecutar, contexto);
 					break;
-				case MOV_IN:
+				case MOV_IN: //TERMINADA, FALTA PROBARLA DEBUGEANDO Y TODO ESO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_MOV_IN(instruccion_a_ejecutar, contexto, fd_memoria, config);
+					ejecutar_MOV_IN(instruccion_a_ejecutar, contexto, fd_memoria, config, logger_principal);
 					break;
-				case MOV_OUT:
+				case MOV_OUT: //TERMINADA, FALTA PROBARLA DEBUGEANDO Y TODO ESO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config);
+					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config, logger_principal);
 					break;
-				case IO:
+				case IO: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel, cpu_bloqueada);
@@ -195,24 +193,24 @@ int main() {
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_F_TRUNCATE(instruccion_a_ejecutar, contexto, fd_kernel);
 					break;
-				case WAIT:
+				case WAIT: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_WAIT(instruccion_a_ejecutar, contexto, fd_kernel);
 					contexto_sigue_en_cpu = 0;
 					break;
-				case SIGNAL:
+				case SIGNAL: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 					ejecutar_SIGNAL(instruccion_a_ejecutar, contexto, fd_kernel);
 					contexto_sigue_en_cpu = 0;
 					break;
-				case CREATE_SEGMENT:
+				case CREATE_SEGMENT: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_CREATE_SEGMENT(instruccion_a_ejecutar, contexto, fd_kernel);
 					break;
-				case DELETE_SEGMENT:
+				case DELETE_SEGMENT: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
 //					ejecutar_DELETE_SEGMENT(instruccion_a_ejecutar, contexto, fd_kernel);

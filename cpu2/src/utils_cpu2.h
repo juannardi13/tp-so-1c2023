@@ -15,7 +15,6 @@
 #include <shared-2.h>
 
 extern t_registros registros_cpu;
-extern t_log* logger_principal;
 
 // Funciones para la inicialización de CPU
 t_log* iniciar_logger(void);

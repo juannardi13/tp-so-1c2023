@@ -52,10 +52,79 @@ void asignar_valor_a_registro(char *valor, char *registro) {
 }
 
 void activar_segmentation_fault(t_contexto_de_ejecucion* contexto, int fd_kernel){
-	t_paquete* paquete = crear_paquete(SEG_FAULT);
-		//serializar_contexto_ejecucion(contexto);
-		enviar_paquete(paquete, fd_kernel);
-		eliminar_paquete(paquete);
+	t_buffer *buffer = malloc(sizeof(t_buffer));
+	t_paquete *paquete = malloc(sizeof(t_paquete));
+
+	int tamanio_instrucciones = contexto->tamanio_instrucciones;
+	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
+	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
+	int tamanio_registro_grande = strlen(registros_cpu.rax) + 1;
+
+	buffer->stream_size = sizeof(int) * 3 //PID, PC, TAMANIO_INSTRUCCIONES
+	//		+ sizeof(t_registros)
+	//		+ tamanio_segmentos
+	+ tamanio_instrucciones
+	+ tamanio_registro_chico * 4
+	+ tamanio_registro_mediano * 4
+	+ tamanio_registro_grande * 4;
+
+	void *stream = malloc(buffer->stream_size);
+	int offset = 0;
+	//	serializar_contexto(contexto, buffer, stream, offset);
+
+	memcpy(stream + offset, &(contexto->pid), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
+	offset += tamanio_instrucciones;
+
+	// SERIALIZAR DESPUÉS LOS REGISTROS
+	memcpy(stream + offset, &(registros_cpu.ax), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.bx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.cx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.dx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+
+	memcpy(stream + offset, &(registros_cpu.eax), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.ebx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.ecx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.edx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+
+	memcpy(stream + offset, &(registros_cpu.rax), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rbx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rcx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rdx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = SEG_FAULT;
+	paquete->buffer = buffer;
+
+	void *a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_kernel, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
+	eliminar_paquete(paquete);
 }
 
 bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
@@ -63,23 +132,126 @@ bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 	return desplazamiento > tamanio_valor;
 }
 
-char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
+int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal) {
+	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
+	int numero_segmento = floor(direccion_logica / tamanio_segmento);
+	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
+	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
 
-	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA); // IMPORTANTE ver con juani tema op_code y como crear paquete
-	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
-	enviar_paquete(paquete, fd_memoria);
-	//crear op_code RESPUESTA_MEMORIA, lo igualo a recibir_operacion => se bloquea proceso hasta que reciba algo con el mismo codigo
-	eliminar_paquete(paquete);
-	t_paquete* paquete2 = malloc(sizeof(t_paquete));
-	paquete2->buffer = malloc(sizeof(t_buffer));
-	recv(fd_memoria, &(paquete2->codigo_operacion), sizeof(op_code), MSG_WAITALL);
-	recv(fd_memoria, &(paquete2->buffer->stream_size), sizeof(int), 0);
-	paquete2->buffer->stream = malloc(paquete2->buffer->stream_size);
-	recv(fd_memoria, paquete2->buffer->stream, paquete2->buffer->stream_size, 0);
-	void* valor;
-	switch(paquete2->codigo_operacion){
+	if(desplazamiento_segmento > tamanio_segmento) {
+		log_info(logger_principal, "PID: <%d> - Error SEG_FAULT- Segmento: <%d> - Offset: <%d> - Tamaño: <%d>", contexto->pid, numero_segmento, desplazamiento_segmento, tamanio_segmento);
+		activar_segmentation_fault(contexto);
+	}
+
+	int direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
+
+	return direccion_fisica;
+}
+
+void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_log* logger_principal, t_contexto_de_ejecucion* contexto, int direccion_logica, t_config* config) {
+	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
+	int numero_segmento = floor(direccion_logica / tamanio_segmento);
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+
+	int tamanio_valor = strlen(valor) + 1;
+
+	buffer->stream_size = sizeof(int) * 2 //ESTE ES EL TAMAÑO DE DIRECCION_FISICA Y EL DE TAMANIO_VALOR
+			+ tamanio_valor;
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &tamanio_valor, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, valor, tamanio_valor);
+	offset += tamanio_valor;
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = ESCRIBIR_EN_MEMORIA;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_memoria, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	log_info(logger_principal, "PID: <%d> - Acción: <LEER> - Segmento: <%d> - Dirección Física: <%d> - Valor: <%s>", contexto->pid, numero_segmento, direccion_fisica, valor);
+
+	free(a_enviar);
+	free(stream);
+	free(buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
+}
+
+char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config, t_log* logger_principal) {
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
+	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
+	int numero_segmento = floor(direccion_logica / tamanio_segmento);
+
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+
+	buffer->stream_size = sizeof(int);
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
+	offset += sizeof(int);
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = LEER_DE_MEMORIA;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_memoria, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
+	free(stream);
+	free(buffer->stream);
+	free(paquete);
+
+	op_code respuesta_memoria;
+	int tamanio_respuesta;
+
+	recv(fd_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);
+	recv(fd_memoria, &tamanio_respuesta, sizeof(int), 0);
+	void* recibido = malloc(tamanio_respuesta);
+	recv(fd_memoria, recibido, tamanio_respuesta, 0);
+
+	char* valor;
+	switch(respuesta_memoria){
 		case LEIDO :
-			valor = deserializar_paquete_de_memoria(paquete2->buffer);
+			int tamanio_valor_memoria;
+			memcpy(&tamanio_valor_memoria, recibido, sizeof(int));
+			recibido += sizeof(int);
+
+			valor = malloc(tamanio_valor_memoria);
+			memset(valor, 0, tamanio_valor_memoria);
+
+			memcpy(valor, recibido, tamanio_valor_memoria);
+			recibido += tamanio_valor_memoria;
+
 			break;
 		case NO_LEIDO :
 			printf("No se pudo leer el valor del registro dado");
@@ -88,33 +260,72 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria){
 			printf("Operacion desconocida");
 			break;
 	}
+
+	log_info(logger_principal, "PID: <%d> - Acción: <LEER> - Segmento: <%d> - Dirección Física: <%d> - Valor: <%s>", contexto->pid, numero_segmento, direccion_fisica, valor);
+
 	return valor;
 }
 
-int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto){
-	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
-	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
-	int numero_segmento = floor(direccion_logica / tamanio_segmento);
-	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
-	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
-	int direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
-	if(desplazamiento_supera_tamanio(desplazamiento_segmento, leer_de_memoria(direccion_fisica, config, fd_memoria))){
-		//	activar_segmentation_fault(contexto);
-		}
-	return direccion_fisica;
-}
+//------LA FUNCION LEER_DE_MEMORIA() Y MMU_VALOR_BUSCADO CUMPLÍAN LA MISMA FUNCIÓN, DECIDÍ QUEDARME CON LA DE ARRIBA
 
-void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria){
-	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA); // IDEM leer_de_memoria
-	agregar_a_paquete(paquete, &direccion_fisica, sizeof(int));
-	agregar_a_paquete(paquete, &valor, strlen(valor)+1); // No le estabamos pasando el valor que queriamos que escriba en la direccion fisica
-	enviar_paquete(paquete, fd_memoria);
-	eliminar_paquete(paquete);
-}
+char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria, int numero_segmento){
 
-char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config){
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+
+	buffer->stream_size = sizeof(int);
+
+	void* stream = malloc(sizeof(buffer->stream_size));
+	int offset = 0;
+
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
+	offset += sizeof(int);
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = LEER_DE_MEMORIA;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, (&paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, (&paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_memoria, a_enviar, buffer->stream_size, sizeof(int), sizeof(int));
+
+	free(a_enviar);
+
+	op_code respuesta_memoria;
+	int tamanio_respuesta;
+
+	recv(fd_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);
+	recv(fd_memoria, &tamanio_respuesta, sizeof(int), 0);
+	void* recibido = malloc(tamanio_respuesta);
+	recv(fd_memoria, recibido, tamanio_respuesta, 0);
+
 	char* valor;
-	strncpy(valor, leer_de_memoria(direccion_fisica, config, fd_memoria), strlen(leer_de_memoria(direccion_fisica, config, fd_memoria)) + 1);
+	switch(respuesta_memoria){
+		case LEIDO :
+			int tamanio_valor_memoria;
+			memcpy(&tamanio_valor_memoria, recibido, sizeof(int));
+			recibido += sizeof(int);
+
+			valor = malloc(tamanio_valor_memoria);
+			memset(valor, 0, tamanio_valor_memoria);
+
+			memcpy(valor, recibido, tamanio_valor_memoria);
+			recibido += tamanio_valor_memoria;
+
+			break;
+		case NO_LEIDO :
+			printf("No se pudo leer el valor del registro dado");
+			break;
+		default :
+			printf("Operacion desconocida");
+			break;
+	}
+
 	return valor;
 }
