@@ -33,10 +33,10 @@ void serializar_segmentos(t_segmento*, void*, int);
 void asignar_valor_a_registro(char*, char*);
 void activar_segmentation_fault(t_contexto_de_ejecucion*, int);
 bool desplazamiento_supera_tamanio(int, char*);
-void escribir_en_memoria(int, char*, int);
-char* leer_de_memoria(int, t_config*, int);
-char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*);
-int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*);
+void escribir_en_memoria(int, char*, int, t_log*, t_contexto_de_ejecucion*, int, t_config*);
+char* leer_de_memoria(int, t_config*, int, int);
+char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*, t_log*, int);
+int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*, t_log*, int);
 
 // Funciones para tratar con las instrucciones
 int agregar_a_stream(void*, int*, void*, int);
@@ -45,18 +45,18 @@ char* encontrar_instruccion(t_contexto_de_ejecucion*);
 op_code fetch_instruccion(char*);
 
 // Ejecución de instrucciones
-void ejecutar_CREATE_SEGMENT(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_DELETE_SEGMENT(char**, t_contexto_de_ejecucion*, int);
+void ejecutar_CREATE_SEGMENT(char*, t_contexto_de_ejecucion*, int);
+void ejecutar_DELETE_SEGMENT(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_EXIT(char*, t_contexto_de_ejecucion*, int);
-void ejecutar_F_CLOSE(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_F_OPEN(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_F_READ(char**, t_contexto_de_ejecucion*, int, int, t_config*);
-void ejecutar_F_SEEK(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_F_TRUNCATE(char**, t_contexto_de_ejecucion*, int);
-void ejecutar_F_WRITE(char**, t_contexto_de_ejecucion*, int, int, t_config*);
+void ejecutar_F_CLOSE(char*, t_contexto_de_ejecucion*, int);
+void ejecutar_F_OPEN(char*, t_contexto_de_ejecucion*, int);
+void ejecutar_F_READ(char*, t_contexto_de_ejecucion*, int, int, t_config*);
+void ejecutar_F_SEEK(char*, t_contexto_de_ejecucion*, int);
+void ejecutar_F_TRUNCATE(char*, t_contexto_de_ejecucion*, int);
+void ejecutar_F_WRITE(char*, t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_IO(char*, t_contexto_de_ejecucion*, int, bool);
-void ejecutar_MOV_IN(char**, t_contexto_de_ejecucion*, int, t_config*);
-void ejecutar_MOV_OUT(char**, t_contexto_de_ejecucion*, int, t_config*);
+void ejecutar_MOV_IN(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
+void ejecutar_MOV_OUT(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
 void ejecutar_SET(char*, t_contexto_de_ejecucion*);
 void ejecutar_SIGNAL(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_WAIT(char*, t_contexto_de_ejecucion*, int);

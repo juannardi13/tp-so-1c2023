@@ -132,7 +132,7 @@ bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 	return desplazamiento > tamanio_valor;
 }
 
-int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal) {
+int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal, int fd_kernel) {
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
@@ -141,7 +141,7 @@ int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* con
 
 	if(desplazamiento_segmento > tamanio_segmento) {
 		log_info(logger_principal, "PID: <%d> - Error SEG_FAULT- Segmento: <%d> - Offset: <%d> - Tamaño: <%d>", contexto->pid, numero_segmento, desplazamiento_segmento, tamanio_segmento);
-		activar_segmentation_fault(contexto);
+		activar_segmentation_fault(contexto, fd_kernel);
 	}
 
 	int direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
@@ -195,8 +195,8 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_lo
 	free(paquete);
 }
 
-char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config, t_log* logger_principal) {
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
+char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel);
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
@@ -293,7 +293,7 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria, in
 	agregar_a_stream(a_enviar, &desplazamiento, (&paquete->buffer->stream_size), sizeof(int));
 	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
 
-	send(fd_memoria, a_enviar, buffer->stream_size, sizeof(int), sizeof(int));
+	send(fd_memoria, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
 

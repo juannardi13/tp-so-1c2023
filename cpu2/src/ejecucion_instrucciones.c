@@ -433,7 +433,7 @@ void ejecutar_F_OPEN(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 }
 
 void ejecutar_F_READ(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
-	t_buffer* buffer;
+	/*t_buffer* buffer;
 	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
 	void* stream;
 	int offset = 0;
@@ -454,7 +454,7 @@ void ejecutar_F_READ(char* instruccion, t_contexto_de_ejecucion* contexto, int f
 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
-	free(paquete);
+	free(paquete);*/
 }
 
 void ejecutar_F_SEEK(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel) {
@@ -639,8 +639,8 @@ void ejecutar_F_TRUNCATE(char* instruccion_grande, t_contexto_de_ejecucion* cont
 	free(paquete);
 }
 
-void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
-	t_buffer* buffer;
+void ejecutar_F_WRITE(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+	/*t_buffer* buffer;
 	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
 	void* stream;
 	int offset = 0;
@@ -661,7 +661,7 @@ void ejecutar_F_WRITE(char** instruccion, t_contexto_de_ejecucion* contexto, int
 
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
-	free(paquete);
+	free(paquete);*/
 }
 
 void ejecutar_IO(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada) {
@@ -749,19 +749,19 @@ void ejecutar_IO(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_ke
 	eliminar_paquete(paquete);
 }
 
-void ejecutar_MOV_IN(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal) {
-	char** instruccion = string_split(instruccion_grande, " ")
-
-	int direccion_logica = convertirAEntero(instruccion[2]);
-
-	asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, fd_memoria, config, logger_principal), instruccion[1]);
-}
-
-void ejecutar_MOV_OUT(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal) {
+void ejecutar_MOV_IN(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
 	char** instruccion = string_split(instruccion_grande, " ");
 
-	int direccion_logica = convertirAEntero(instruccion[1]);
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
+	int direccion_logica = atoi(instruccion[2]);
+
+	asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, fd_memoria, config, logger_principal, fd_kernel), instruccion[1]);
+}
+
+void ejecutar_MOV_OUT(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
+	char** instruccion = string_split(instruccion_grande, " ");
+
+	int direccion_logica = atoi(instruccion[1]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel);
 	escribir_en_memoria(direccion_fisica, instruccion[2], fd_memoria, logger_principal, contexto, direccion_logica, config);
 }
 

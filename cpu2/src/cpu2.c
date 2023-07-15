@@ -150,12 +150,12 @@ int main() {
 				case MOV_IN: //TERMINADA, FALTA PROBARLA DEBUGEANDO Y TODO ESO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-					ejecutar_MOV_IN(instruccion_a_ejecutar, contexto, fd_memoria, config, logger_principal);
+					ejecutar_MOV_IN(instruccion_a_ejecutar, contexto, fd_memoria, config, logger_principal, fd_kernel);
 					break;
 				case MOV_OUT: //TERMINADA, FALTA PROBARLA DEBUGEANDO Y TODO ESO
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config, logger_principal);
+					ejecutar_MOV_OUT(instruccion_a_ejecutar, contexto, fd_memoria, config, logger_principal, fd_kernel);
 					break;
 				case IO: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
@@ -229,6 +229,7 @@ int main() {
 					break;
 				default:
 					log_error(logger, "[ERROR] Instruccion desconocida, finalizando el módulo CPU");
+					return 1;
 					break;
 				}
 

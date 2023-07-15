@@ -58,7 +58,7 @@ op_code fetch_instruccion(char* instruccion) {
 
 	return codigo_operacion;
 }
-
+/*
 void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_config* config, int fd_memoria, int fd_kernel, bool cpu_bloqueada){
 
 	char** instruccion_parseada = string_split(instruccion, " ");
@@ -114,7 +114,7 @@ void decode_instruccion(char* instruccion, t_contexto_de_ejecucion* contexto, t_
 	else if(strcmp(instruccion_parseada[0], "EXIT") == 0){
 				ejecutar_EXIT(instruccion_parseada, contexto, fd_kernel);
 			}
-}
+}*/
 
 
 //----------FUNCIONES EN DESUSO-----------------------------------------------------
