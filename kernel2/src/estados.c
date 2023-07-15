@@ -113,7 +113,7 @@ void estado_ejecutar(void) {
 		//--- FALTA DESERIALIZAR SEGMENTOS
 
 		switch (respuesta_cpu) {
-		case IO:
+		case IO: //TERMINADO
 			int finalizacion_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = finalizacion_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
@@ -136,28 +136,116 @@ void estado_ejecutar(void) {
 
 			sem_post(&sem_block_io);
 			break;
+		case CREATE_SEGMENT:
+			proceso_a_ejecutar->ultima_instruccion = CREATE_SEGMENT;
+
+			int id_segmento;
+			int tamanio_segmento;
+
+			memcpy(&id_segmento, stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&tamanio_segmento, stream, sizeof(int));
+			stream += sizeof(int);
+
+			log_info(logger_kernel, "PID: <%d> solicita crear el Segmento <%d> - Tamanio: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
+			//TODO implementar con Memoria
+
+			break;
+		case DELETE_SEGMENT:
+			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;
+
+			int id_segmento_a_borrar;
+
+			memcpy(&id_segmento_a_borrar, stream, sizeof(int));
+			stream += sizeof(int);
+
+			log_info(logger_kernel, "PID: <%d> solicita eliminar el Segmento <%d>", proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
+			//TODO implementar con Memoria
+			break;
 		case F_OPEN:
 			//Abrir o crear el archivo pasado por parámetro
 
 			proceso_a_ejecutar->ultima_instruccion = F_OPEN;
 			
-			log_warning(logger_kernel,
-					"La última instrucción ejecutada fue F_OPEN");
+			int tamanio_archivo_a_abrir;
+
+			memcpy(&tamanio_archivo_a_abrir, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char* nombre_archivo_a_abrir = malloc(tamanio_archivo_a_abrir);
+			memset(nombre_archivo_a_abrir, 0, tamanio_archivo_a_abrir);
+
+			memcpy(nombre_archivo_a_abrir, stream, tamanio_archivo_a_abrir);
+			stream += tamanio_archivo_a_abrir;
+
+			log_warning(logger_kernel, "PID: <%d> solicita abrir o crear el archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
 			break;
 		case F_CLOSE:
 			//Cerrar el archivo pasado por parámetro
 			proceso_a_ejecutar->ultima_instruccion = F_CLOSE;
 			
-			log_warning(logger_kernel,
-					"La última instrucción ejecutada fue F_CLOSE");
+			int tamanio_archivo_a_cerrar;
+
+			memcpy(&tamanio_archivo_a_cerrar, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char* nombre_archivo_a_cerrar = malloc(tamanio_archivo_a_cerrar);
+			memset(nombre_archivo_a_cerrar, 0, tamanio_archivo_a_cerrar);
+
+			memcpy(nombre_archivo_a_cerrar, stream, tamanio_archivo_a_cerrar);
+			stream += tamanio_archivo_a_cerrar;
+
+			log_warning(logger_kernel, "PID: <%d> solicita cerrar el archivo <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_cerrar);
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
 			break;
 		case F_SEEK:
 			//Actualizar el puntero del archivo a la posición pasada por parámetro
-
 			proceso_a_ejecutar->ultima_instruccion = F_SEEK;
 			
-			log_warning(logger_kernel,
-					"La última instrucción ejecutada fue F_SEEK");
+			int tamanio_archivo_seek;
+			int tamanio_en_bytes;
+
+			memcpy(&tamanio_archivo_seek, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char* nombre_archivo_seek = malloc(tamanio_archivo_seek);
+			memset(nombre_archivo_seek, 0, tamanio_archivo_seek);
+
+			memcpy(nombre_archivo_seek, stream, tamanio_archivo_seek);
+			stream += tamanio_archivo_seek;
+
+			memcpy(&tamanio_en_bytes, stream, sizeof(int));
+			stream += sizeof(int);
+
+			log_warning(logger_kernel, "PID: <%d> solicita actualizar el puntero del archivo <%s> a <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
 			break;
 		case F_READ:
 			//Leer del archivo indicado la cantidad de bytes pasados por parámetro y escribirlo en la dirección física de memoria
@@ -178,10 +266,24 @@ void estado_ejecutar(void) {
 		case F_TRUNCATE:
 			//Modificar el tamaño del archivo al indicado por parámetro.
 
+			int tamanio_archivo_a_truncar;
+			int nuevo_tamanio;
+
+			memcpy(&tamanio_archivo_a_truncar, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char* nombre_archivo_a_truncar = malloc(tamanio_archivo_a_truncar);
+			memset(nombre_archivo_a_truncar, 0, tamanio_archivo_a_truncar);
+
+			memcpy(nombre_archivo_a_truncar, stream, tamanio_archivo_a_truncar);
+			stream += tamanio_archivo_a_truncar;
+
+			memcpy(&nuevo_tamanio, stream, sizeof(int));
+			stream += sizeof(int);
+
 			proceso_a_ejecutar->ultima_instruccion = F_TRUNCATE;
 			
-			log_warning(logger_kernel,
-					"La última instrucción ejecutada fue F_TRUNCATE");
+			log_warning(logger_kernel, "PID: <%d> solicita actualiazar el tamaño del archivo <%s> a <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_truncar, nuevo_tamanio);
 			break;
 		case WAIT:
 			//Se asigne una instancia del recurso indicado por parámetro
@@ -199,6 +301,8 @@ void estado_ejecutar(void) {
 			memcpy(recurso_wait, stream, tamanio_parametro_wait);
 			stream += tamanio_parametro_wait;
 
+			log_warning(logger_kernel, "PID: <%d> solicita una instancia del Recurso: <&s>", proceso_a_ejecutar->pcb->pid, recurso_wait);
+			/*
 			if (dictionary_has_key(recursos, recurso_wait)) {
 				//Lógica de asignar el recurso TODO
 			} else {
@@ -211,10 +315,13 @@ void estado_ejecutar(void) {
 				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 				sem_post(&sem_ready);
-			}
+			}*/ //está comentado para que se puedan probar las cosas TODO
 
-			log_warning(logger_kernel,
-					"La última instrucción ejecutada fue WAIT");
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
 			break;
 		case SIGNAL:
 			//Libera una instancia del recurso indicado por parámetro.
@@ -232,6 +339,8 @@ void estado_ejecutar(void) {
 			memcpy(recurso_signal, stream, tamanio_parametro_signal);
 			stream += tamanio_parametro_signal;
 
+			log_warning(logger_kernel, "PID: <%d> solicita liberar una instancia del Recurso <%s>", proceso_a_ejecutar->pcb->pid, recurso_signal);
+			/*
 			if(dictionary_has_key(recursos, recurso_signal)) {
 				//Lógica de liberar el recurso TODO
 			} else {
@@ -244,10 +353,13 @@ void estado_ejecutar(void) {
 				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 				sem_post(&sem_ready);
-			}
+			}*/ //está comentado para que se puedan probar las cosas TODO
 
-			log_warning(logger_kernel,
-					"La última instrucción ejecutada fue SIGNAL");
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
 			break;
 		case YIELD: //TERMINADO
 			proceso_a_ejecutar->ultima_instruccion = YIELD;
@@ -272,6 +384,17 @@ void estado_ejecutar(void) {
 
 			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
 			log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso_a_ejecutar->pcb->pid);
+			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
+			sem_post(&sem_ready);
+			break;
+		case SEG_FAULT:
+			pthread_mutex_lock(&mutex_exit);
+			proceso_a_ejecutar->pcb->estado = EXT;
+			list_add(cola_exit, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exit);
+
+			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+			log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <SEG_FAULT>", proceso_a_ejecutar->pcb->pid);
 			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 			sem_post(&sem_ready);
 			break;
@@ -343,7 +466,7 @@ void estado_ready(void) {
 		list_add(cola_exec, siguiente_proceso);
 		pthread_mutex_unlock(&mutex_exec);
 
-		log_info(logger_kernel, "PCB id[%d] ingresa a EXECUTE", siguiente_proceso->pcb->pid);
+		log_info(logger_kernel, "PID: <%d> ingresa a EXECUTE", siguiente_proceso->pcb->pid);
 		sem_post(&sem_exec);
 	}
 
@@ -425,6 +548,18 @@ void estado_block_io(void) {
 
 		pthread_mutex_lock(&mutex_ready);
 		list_add(cola_ready, proceso);
+
+		switch (config_kernel.algoritmo_planificacion) {
+		case FIFO:
+			log_info(logger_kernel, "Cola Ready <FIFO>:");
+			mostrar_cola(cola_ready);
+			break;
+		case HRRN:
+			log_info(logger_kernel, "Cola Ready <HRRN>:");
+			mostrar_cola(cola_ready);
+			break;
+		default:
+			break;
 		pthread_mutex_unlock(&mutex_ready);
 
 		proceso->llegada_ready = get_time();

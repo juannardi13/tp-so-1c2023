@@ -37,13 +37,22 @@ void admitir_procesos_a_ready(void) { //hilo
 
 		pthread_mutex_lock(&mutex_ready);
 		list_add(cola_ready, proceso);
-		pthread_mutex_unlock(&mutex_ready);
-
 		proceso->pcb->estado = READY;
 		log_info(logger_kernel, "PID: <%d> - Estado Anterior: <NEW> - Estado Actual: <READY>", proceso->pcb->pid);
 
-		log_info(logger_kernel,"Cola READY: ");
-		mostrar_cola(cola_ready);
+		switch (config_kernel.algoritmo_planificacion) {
+		case FIFO:
+			log_info(logger_kernel, "Cola Ready <FIFO>:");
+			mostrar_cola(cola_ready);
+			break;
+		case HRRN:
+			log_info(logger_kernel, "Cola Ready <HRRN>:");
+			mostrar_cola(cola_ready);
+			break;
+		default:
+			break;
+		pthread_mutex_unlock(&mutex_ready);
+
 
 		proceso->llegada_ready = get_time();
 
