@@ -165,7 +165,7 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 	}
 	else
 	{
-
+			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,tamanio_bloque,cantidad_punteros_bloque,config_fcb_archivo);
 	}
 
 	msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
@@ -176,6 +176,57 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 
 	fclose(f);
 
+}
+
+void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque,t_config* config_fcb_archivo)
+{
+if(tamanio_fcb <= tamanio_bloque)
+		{
+			// no hace nada, solo cambio numero indicado en fcb
+		}
+		else
+		{
+			// tamanio nuevo menor a tamanio fcb y tamanio fcb mayor a tamanio bloque
+			// ver con tamanio nuevo cuantos bloques voy a necesitar
+
+			int nro_bloque_punteros_indirectos = config_get_int_value(config_fcb_archivo,"PUNTERO_INDIRECTO");
+
+			int nro_ultima_entrada_bloque_pind = ceil((tamanio_fcb - tamanio_bloque) / tamanio_bloque) -1;
+
+			if(nuevo_tamanio_entero <= tamanio_bloque)
+			{
+				// liberar a todos bloques apuntados por punteros indirectos
+
+				for(int i = 0; i <= nro_ultima_entrada_bloque_pind; i++)
+				{
+					int off = sizeof(uint32_t) * i;
+
+					int nro_bloque;
+
+					memcpy(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t));
+
+					bitarray_clean_bit(estructura_bitmap,nro_bloque);
+				}
+
+			}
+			else
+			{
+				int cantidad_bloques_apuntados_necesarios = ceil(nuevo_tamanio_entero / tamanio_bloque) - 1;
+
+				for(int i = nro_ultima_entrada_bloque_pind; i >= cantidad_bloques_apuntados_necesarios;i--)
+				{
+					int off = sizeof(uint32_t) * i;
+
+					int nro_bloque;
+
+					memcpy(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t));
+
+					bitarray_clean_bit(estructura_bitmap,nro_bloque);
+				}
+
+			}
+
+		}
 }
 
 void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque,int cantidad_punteros_bloque,int cantidad_bloques,t_config* config_fcb_archivo)
@@ -235,7 +286,7 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 	{
 		if(tamanio_fcb <= tamanio_bloque)
 		{
-			if(nuevo_tamanio_entero <= tamanio _ bloque)
+			if(nuevo_tamanio_entero <= tamanio_bloque)
 			{
 				// no se hace nada pues ya tiene bloque necesario, solo se reescribe tamanio en fcb
 			}
@@ -256,8 +307,11 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 
 				config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(puntero_indirecto));
 
+
 				for(int i = 0; i <  cantidad_punteros_bloque;i++)
 				{
+
+					int off = sizeof(uint32_t) * i;
 
 					if(i < cantidad_bloques_puntero_indirecto)
 					{
@@ -268,11 +322,11 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 
 						// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
 
-						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),&bloque_datos,sizeof(uint32_t));
+						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
 					}
 					else
 					{
-						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),-1,sizeof(uint32_t));
+						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,-1,sizeof(uint32_t));
 					}
 				}
 			}
@@ -290,15 +344,23 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 
 			int cantidad_punteros_indirectos = ceil(tamanio_necesario / tamanio_bloque);
 
+			int nro_bloque_punteros_indirectos = config_get_int_value(config_fcb_archivo,"PUNTERO_INDIRECTO");
+
+			int j = 0;
+
 			for(int i = cantidad_indirecciones_usadas; i < (cantidad_indirecciones_usadas + cantidad_punteros_indirectos) ;i++)
 			{
+				int off = sizeof(uint32_t) * j;
+
 				int bloque_datos = primer_bloque_disponible();
 
 				bitarray_set_bit(estructura_bitmap,bloque_datos);
 
 				// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
 
-				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(i),&bloque_datos,sizeof(uint32_t));
+				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,&bloque_datos,sizeof(uint32_t));
+
+				j++;
 			}
 
 		}
