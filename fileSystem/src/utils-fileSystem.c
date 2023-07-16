@@ -2,186 +2,94 @@
 #include <commons/bitarray.h>
 #include <sys/mman.h>
 #include <stdio.h>
+#include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
 
-t_log* iniciar_logger(void) {
-	t_log* nuevo_logger = log_create("fileSystem.log", "File System", 1, LOG_LEVEL_INFO);
+void probando_cositas(){
+	// Prueba respuesta a petición de creación de archivo (SEGUIR) //
+	// --- INICIO --- //
+	printf("%i\n",(int)estructura_bitmap->size);
 
-	if (nuevo_logger == NULL) {
-		printf("No se pudo crear el log\n");
-		exit(1);
-	}
-
-	return nuevo_logger;
-}
-
-t_config* iniciar_config(char* ruta) {
-	t_config* nuevo_config = config_create(ruta);
-
-	if (nuevo_config == NULL) {
-		printf("No se pudo leer la config\n");
-		exit(2);
-	}
-
-	return nuevo_config;
-}
-
-void inicializar_estructuras()
-{
-	//  Inicialización logger //
-		// --- INICIO --- //
-		logger = iniciar_logger();
-		// --- FIN --- //
-
-		//  Inicialización config //
-		// --- INICIO --- //
-		t_config* config = iniciar_config("fileSystem.config");
-
-//		IP_MEMORIA=127.0.0.1
-//		PUERTO_MEMORIA=8002
-//		PUERTO_ESCUCHA=8003
-//		PATH_SUPERBLOQUE=../fileSystem/grupoDeBloques/fileSystem.superbloque
-//		PATH_BITMAP=../fileSystem/grupoDeBloques/bitmap.bin
-//		PATH_BLOQUES=../fileSystem/grupoDeBloques/archivoBloques
-//		PATH_FCB=/home/utnso/fs/fcb
-//		RETARDO_ACCESO_BLOQUE=15000
-
-		config_valores = malloc(sizeof(t_config_valores));
-		config_valores->ip = config_get_string_value(config,"IP_MEMORIA");
-		config_valores->puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
-		config_valores->puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
-		config_valores->retardo_acceso_bloque = config_get_int_value(config,"RETARDO_ACCESO_BLOQUE");
-		config_valores->path_superbloque = config_get_string_value(config,"PATH_SUPERBLOQUE");
-		config_valores->path_bitmap = config_get_string_value(config,"PATH_BITMAP");
-		config_valores->path_bloques = config_get_string_value(config,"PATH_BLOQUES");
-		config_valores->path_fcb = config_get_string_value(config,"PATH_FCB");
+	levantar_fcb_nuevo_archivo("fcbPrueba");
+	t_config* configTCB = iniciar_config("../fileSystem/grupoDeBloques/fcbPrueba");
+	t_fcb fcb;
 
 
-		// --- FIN --- //
 
+	fcb.puntero_directo = config_get_int_value(configTCB,"PUNTERO_DIRECTO");
+	fcb.nombre_archivo = config_get_string_value(configTCB,"NOMBRE_ARCHIVO");
 
-		//  Inicialización super bloque //
-		// --- INICIO --- //
-		t_config* config_super_bloque = iniciar_config(config_get_string_value(config,"PATH_SUPERBLOQUE"));
+	printf("Puntero directo: %d \n",fcb.puntero_directo);
+	printf("Nombre archivo:  %s \n",fcb.nombre_archivo);
 
-		config_super_bloque_valores = malloc(sizeof(t_super_bloque_valores));
-		config_super_bloque_valores->block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
-		config_super_bloque_valores->block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
-
-
-		// --- FIN --- //
-
-
-		// Obtención información superbloque //
-		// --- INICIO --- //
-		t_super_bloque super;
-		super.block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
-		super.block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
-		// --- FIN --- //
-
-		//  Inicialización bitmap //
-		// --- INICIO --- //
-		FILE* archivo_bm;
-		estructura_bitmap = inicializar_archivo_bm(archivo_bm);
-
-
-		// --- FIN --- //
-
-		// Inicialización archivo de bloques
-		// --- INICIO --- //
-		levantar_archivo_bloques(archivo_bloques,mapping_archivo_bloques);
-		// --- FIN --- //
-
-		// Loggear información fileSystem //
-		// --- INICIO --- //
-
-		char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
-
-		log_info(logger, "El fileSystem posee una cantidad de %d bloques",super.block_count);
-		log_info(logger, "Los bloques del fileSystem tiene un tamaño de %d bytes",super.block_size);
-		log_info(logger, "Se inicializa el módulo File System");
-	    puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-		log_info(logger, "PUERTO ESCUCHA: %s", puerto_escucha);
-		// --- FIN --- //
-
-
-}
-
-void manejar_conexion(int socket_cliente){
-
-	// un paquete es un codigo de un operación más un buffer
-	// un buffer es un tamaño de buffer seguido de un stream con todos los apartados correspondientes al struct enviado
-
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-	paquete->buffer = malloc(sizeof(t_buffer));
-
-	recv(socket_cliente,&(paquete->codigo_operacion),sizeof(int),0);
-	recv(socket_cliente,(paquete->buffer->stream_size),sizeof(int),0);
-
-	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
-
-	recv(socket_cliente,paquete->buffer->stream,paquete->buffer->stream_size,0);
-
-	void* stream;
-
-	switch(paquete->codigo_operacion)
+	if(abrir_archivo("fcbPrueba"))
 	{
-
-	case F_OPEN:
-		log_info(logger,"File System recibe fopen");
-		break;
-
-	case F_CLOSE:
-			log_info(logger,"File System recibe fclose");
-			break;
-
-	case F_SEEK:
-			log_info(logger,"File System recibe fseek");
-			break;
-
-	case F_READ:
-			log_info(logger,"File System recibe fread");
-			break;
-
-	case F_WRITE:
-			log_info(logger,"File System recibe fwrite");
-			break;
-
-	case F_TRUNCATE:
-			log_info(logger,"File System recibe ftruncate");
-			break;
-
-	default:
-		log_warning(logger,"Operacion desconocida\n");
-	}
-
-}
-
-
-int atender_clientes_file_system(int socket_fs){
-	int socket_consola = esperar_cliente(logger, "FILE SYSTEM", socket_fs);
-
-	int ret = 0;
-
-	if(socket_consola != -1)
-	{
-		manejar_conexion(socket_consola);
-		ret = 1;
+		printf("Existe el archivo solicitado fcbPrueba \n");
 	}
 	else
 	{
-		log_error(logger,"Error al escuchar cliente... Finalizando servidor \n");
+		printf("No existe el archivo solicitado fcbPrueba \n");
 	}
 
-	return ret;
+	crear_archivo("campeonesF1");
+
+	if(abrir_archivo("campeonesF1"))
+	{
+		printf("Existe el archivo solicitado campeonesF1 \n");
+	}
+	else
+	{
+		printf("No existe el archivo solicitado campeonesF1 \n");
+	}
+
+
+//	truncar_archivo("campeonesF1","125",mapping_archivo_bloques);
+
+	int a = mapping_archivo_bloques;
+
+	printf("%i \n",a);
+
+	obtener_ruta_archivo("ArchivoEjemplo");
+
+	// --- FIN --- //
+
+
+	// Verificación bloques asignados a archivo creado se indican como ocupados //
+	// --- INICIO --- //
+	FILE* f;
+	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
+
+
+	if(fileno(f) == -1){
+		printf("Error al abrir archivo bitmap\n");
+	}
+
+		fseek(f,0,0);
+
+		unsigned char b;
+
+		for(int i = 0; i < config_super_bloque_valores->block_count/8; i++){
+			fread(&b,1,1,f);
+			printf("%u\n",b);
+		}
+
+		fclose(f);
+	// --- FIN --- //
 }
 
-void concatenar_strings(const char* s1, const char* s2,char* buffer){
-	memccpy(memccpy(buffer,s1,'\0',100)-1,s2,'\0',100);
-}
 
+
+// |								   |
+// |   	FUNCIONES MÁS "ALTO NIVEL"     |
+// |								   |
+
+
+
+// |								   |
+// |   	FUNCIONES DE MANEJO DE FS	   |
+// |								   |
 
 int abrir_archivo(char* nombre_archivo){
 	// busco archivo, si no existe f será nula y fd será -1, devolver fd
@@ -201,6 +109,211 @@ int abrir_archivo(char* nombre_archivo){
 }
 
 
+int crear_archivo(char* nombre_archivo)
+{
+	FILE* f;
+
+	char* ruta = obtener_ruta_archivo(nombre_archivo);
+
+	f = fopen(ruta,"w+");
+
+	int fd = fileno(f);
+
+	if(fd == -1){
+		printf("Error al crear archivo de config\n");
+		fclose(f);
+	}
+
+	fprintf(f,"NOMBRE_ARCHIVO=%s\n",nombre_archivo);
+	fprintf(f,"TAMANIO_ARCHIVO=%s\n","0");
+	fprintf(f,"PUNTERO_DIRECTO=%s\n","-1");
+	fprintf(f,"PUNTERO_INDIRECTO=%s\n","-1");
+
+	fclose(f);
+	free(ruta);
+
+	return 1;
+}
+
+void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
+{
+	int nuevo_tamanio_entero = atoi(nuevo_tamanio);
+
+	FILE* f;
+
+	char* ruta = obtener_ruta_archivo(nombre_archivo);
+
+	f = fopen(ruta,"r+");
+
+	if (fileno(f) == -1){
+		printf("Error relacionado al archivo %s \n",nombre_archivo);
+	}
+
+	t_config* config_fcb_archivo = iniciar_config(ruta);
+
+	int tamanio_fcb = config_get_int_value(config_fcb_archivo,"TAMANIO_ARCHIVO");
+
+	int tamanio_bloque = config_super_bloque_valores->block_size;
+
+	int cantidad_bloques = config_super_bloque_valores->block_count;
+
+	int cantidad_punteros_bloque = config_super_bloque_valores->block_count / sizeof(uint32_t);
+
+	if(nuevo_tamanio_entero > tamanio_fcb)
+	{
+			ampliar_tamanio(tamanio_fcb,nuevo_tamanio_entero,tamanio_bloque,cantidad_punteros_bloque,cantidad_bloques,config_fcb_archivo);
+	}
+	else
+	{
+
+	}
+
+	msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
+
+	config_set_value(config_fcb_archivo,"TAMANIO_ARCHIVO",nuevo_tamanio);
+
+	config_save(config_fcb_archivo);
+
+	fclose(f);
+
+}
+
+void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque,int cantidad_punteros_bloque,int cantidad_bloques,t_config* config_fcb_archivo)
+{
+	if(tamanio_fcb == 0)
+	{
+		if(nuevo_tamanio_entero <= tamanio_bloque)
+		{
+			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
+
+			bitarray_set_bit(estructura_bitmap,puntero_directo);
+
+			char* puntero_directo_string = string_itoa(puntero_directo);
+
+			config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",puntero_directo_string);
+		}
+		else
+		{
+			int cantidad_bloques_puntero_indirecto = ceil((nuevo_tamanio_entero - tamanio_bloque) / tamanio_bloque);
+
+			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
+
+			bitarray_set_bit(estructura_bitmap,puntero_directo);
+
+			char* puntero_directo_string = string_itoa(puntero_directo);
+
+			config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",puntero_directo_string);
+
+			int puntero_indirecto = primer_bloque_disponible(estructura_bitmap);
+
+			bitarray_set_bit(estructura_bitmap,puntero_indirecto);
+
+			config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(puntero_indirecto));
+
+			for(int i = 0; i <  cantidad_punteros_bloque;i++)
+			{
+
+				if(i < cantidad_bloques_puntero_indirecto)
+				{
+
+					int bloque_datos = primer_bloque_disponible(estructura_bitmap);
+
+					bitarray_set_bit(estructura_bitmap,bloque_datos);
+
+					// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
+
+					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),&bloque_datos,sizeof(uint32_t));
+				}
+				else
+				{
+					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),-1,sizeof(uint32_t));
+				}
+			}
+		}
+	}
+	else
+	{
+		if(tamanio_fcb <= tamanio_bloque)
+		{
+			if(nuevo_tamanio_entero <= tamanio _ bloque)
+			{
+				// no se hace nada pues ya tiene bloque necesario, solo se reescribe tamanio en fcb
+			}
+			else
+			{
+				// resto a nuevo tam el tam actual. Con lo que me queda veo cuantos bloques extra necesito.
+				// dps asigno bloque para punteros indirectos y sobre ese bloque escribo la cantidad de punteros
+				// correspondiente a la cantidad de bloques extra que se necesitaron
+				//				int tamanio_necesario = nuevo_tamanio_entero - tamanio_fcb;
+				//
+				//				int bloques_nuevos_necesarios = ceil(tamanio_necesario / tamanio_bloque);
+
+				int cantidad_bloques_puntero_indirecto = ceil((nuevo_tamanio_entero - tamanio_bloque) / tamanio_bloque);
+
+				int puntero_indirecto = primer_bloque_disponible(estructura_bitmap);
+
+				bitarray_set_bit(estructura_bitmap,puntero_indirecto);
+
+				config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(puntero_indirecto));
+
+				for(int i = 0; i <  cantidad_punteros_bloque;i++)
+				{
+
+					if(i < cantidad_bloques_puntero_indirecto)
+					{
+
+						int bloque_datos = primer_bloque_disponible(estructura_bitmap);
+
+						bitarray_set_bit(estructura_bitmap,bloque_datos);
+
+						// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
+
+						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),&bloque_datos,sizeof(uint32_t));
+					}
+					else
+					{
+						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),-1,sizeof(uint32_t));
+					}
+				}
+			}
+		}
+		else
+		{
+			// coincide con número de entrada dentro de bloque de punteros indirectos siguiente a usar.
+			// por ejemplo si el tam fcb es de 16390, le resto 1024 del puntero directo
+			//  me quedan 15366. Dividido 1024 es 15.005 osea se usaron 16 entradas del bloque, de la 0 a la 15
+			// si el tamanio necesario me queda por ejemplo 2056 necesito 3 bloque nuevos. Serán el 16, 17, 18 osea cant_ind_usadas + 2
+
+			int cantidad_indirecciones_usadas = ceil((tamanio_fcb - tamanio_bloque)/tamanio_bloque);
+
+			int tamanio_necesario = nuevo_tamanio_entero - tamanio_fcb;
+
+			int cantidad_punteros_indirectos = ceil(tamanio_necesario / tamanio_bloque);
+
+			for(int i = cantidad_indirecciones_usadas; i < (cantidad_indirecciones_usadas + cantidad_punteros_indirectos) ;i++)
+			{
+				int bloque_datos = primer_bloque_disponible();
+
+				bitarray_set_bit(estructura_bitmap,bloque_datos);
+
+				// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
+
+				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(i),&bloque_datos,sizeof(uint32_t));
+			}
+
+		}
+	}
+
+
+}
+
+
+
+
+
+void concatenar_strings(const char* s1, const char* s2,char* buffer){
+	memccpy(memccpy(buffer,s1,'\0',100)-1,s2,'\0',100);
+}
 
 
 t_bitarray* inicializar_archivo_bm(FILE* f){
@@ -355,113 +468,6 @@ char* obtener_ruta_archivo(const char* nombre_archivo)
 	return ruta;
 }
 
-int crear_archivo(char* nombre_archivo)
-{
-	FILE* f;
-
-	char* ruta = obtener_ruta_archivo(nombre_archivo);
-
-	f = fopen(ruta,"w+");
-
-	int fd = fileno(f);
-
-	if(fd == -1){
-		printf("Error al crear archivo de config\n");
-		fclose(f);
-	}
-
-	fprintf(f,"NOMBRE_ARCHIVO=%s\n",nombre_archivo);
-	fprintf(f,"TAMANIO_ARCHIVO=%s\n","0");
-	fprintf(f,"PUNTERO_DIRECTO=%s\n","-1");
-	fprintf(f,"PUNTERO_INDIRECTO=%s\n","-1");
-
-	fclose(f);
-	free(ruta);
-
-	return 1;
-}
-
-void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio,char* mapping_archivo_bloques)
-{
-	int nuevo_tamanio_entero = atoi(nuevo_tamanio);
-
-	FILE* f;
-
-	char* ruta = obtener_ruta_archivo(nombre_archivo);
-
-	f = fopen(ruta,"r+");
-
-	if (fileno(f) == -1){
-		printf("Error relacionado al archivo %s \n",nombre_archivo);
-	}
-
-	t_config* config_fcb_archivo = iniciar_config(ruta);
-
-	int tamanio_fcb = config_get_int_value(config_fcb_archivo,"TAMANIO_ARCHIVO");
-
-	int tamanio_bloque = config_super_bloque_valores->block_size;
-
-	int cantidad_bloques = config_super_bloque_valores->block_count;
-
-	if(nuevo_tamanio_entero > tamanio_fcb)
-	{
-		if(tamanio_fcb == 0 && nuevo_tamanio_entero <= tamanio_bloque){
-			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
-
-			bitarray_set_bit(estructura_bitmap,puntero_directo);
-
-			char* puntero_directo_string = string_itoa(puntero_directo);
-
-			config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",puntero_directo_string);
-		}
-		if(tamanio_fcb == 0 && nuevo_tamanio_entero > tamanio_bloque)
-		{
-			int cantidad_bloques_puntero_indirecto_parcial = (nuevo_tamanio_entero - tamanio_bloque) / tamanio_bloque;
-
-			int bloque_adicional = (cantidad_bloques_puntero_indirecto_parcial % tamanio_bloque != 0)?1:0;
-
-			int cantidad_bloques_puntero_indirecto_final = cantidad_bloques_puntero_indirecto_parcial + bloque_adicional;
-
-			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
-
-			bitarray_set_bit(estructura_bitmap,puntero_directo);
-
-			char* puntero_directo_string = string_itoa(puntero_directo);
-
-			config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",puntero_directo_string);
-
-			int puntero_indirecto = primer_bloque_disponible(estructura_bitmap);
-
-			bitarray_set_bit(estructura_bitmap,puntero_indirecto);
-
-			config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(puntero_indirecto));
-
-			for(int i = 0; i < cantidad_bloques_puntero_indirecto_final;i++){
-				int bloque_datos = primer_bloque_disponible(estructura_bitmap);
-
-				bitarray_set_bit(estructura_bitmap,bloque_datos);
-
-				// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
-
-				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_directo),&bloque_datos,sizeof(uint32_t));
-
-				msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
-			}
-
-		}
-		else
-		{
-
-		}
-	}
-
-	config_set_value(config_fcb_archivo,"TAMANIO_ARCHIVO",nuevo_tamanio);
-
-	config_save(config_fcb_archivo);
-
-	fclose(f);
-
-}
 
 void levantar_fcb_nuevo_archivo(const char* nombre_archivo){
 	FILE* f;
@@ -484,89 +490,4 @@ void levantar_fcb_nuevo_archivo(const char* nombre_archivo){
 
 	asignar_bloques_iniciales(f);
 	free(ruta);
-}
-
-
-
-void probando_cositas(){
-	// Prueba respuesta a petición de creación de archivo (SEGUIR) //
-	// --- INICIO --- //
-	printf("%i\n",(int)estructura_bitmap->size);
-
-	levantar_fcb_nuevo_archivo("fcbPrueba");
-	t_config* configTCB = iniciar_config("../fileSystem/grupoDeBloques/fcbPrueba");
-	t_fcb fcb;
-
-
-
-	fcb.puntero_directo = config_get_int_value(configTCB,"PUNTERO_DIRECTO");
-	fcb.nombre_archivo = config_get_string_value(configTCB,"NOMBRE_ARCHIVO");
-
-	printf("Puntero directo: %d \n",fcb.puntero_directo);
-	printf("Nombre archivo:  %s \n",fcb.nombre_archivo);
-
-	if(abrir_archivo("fcbPrueba"))
-	{
-		printf("Existe el archivo solicitado fcbPrueba \n");
-	}
-	else
-	{
-		printf("No existe el archivo solicitado fcbPrueba \n");
-	}
-
-	crear_archivo("campeonesF1");
-
-	if(abrir_archivo("campeonesF1"))
-	{
-		printf("Existe el archivo solicitado campeonesF1 \n");
-	}
-	else
-	{
-		printf("No existe el archivo solicitado campeonesF1 \n");
-	}
-
-
-//	truncar_archivo("campeonesF1","125",mapping_archivo_bloques);
-
-	int a = mapping_archivo_bloques;
-
-	printf("%i \n",a);
-
-	obtener_ruta_archivo("ArchivoEjemplo");
-
-	// --- FIN --- //
-
-
-	// Verificación bloques asignados a archivo creado se indican como ocupados //
-	// --- INICIO --- //
-	FILE* f;
-	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
-
-
-	if(fileno(f) == -1){
-		printf("Error al abrir archivo bitmap\n");
-	}
-
-		fseek(f,0,0);
-
-		unsigned char b;
-
-		for(int i = 0; i < config_super_bloque_valores->block_count/8; i++){
-			fread(&b,1,1,f);
-			printf("%u\n",b);
-		}
-
-		fclose(f);
-	// --- FIN --- //
-}
-
-void inicializar_servidor(){
-	char* puerto_escucha = config_valores->puerto_escucha;
-	int fd_file_system = iniciar_servidor(puerto_escucha);
-	log_info(logger, "File System inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_escucha);
-
-	while(atender_clientes_file_system(fd_file_system));
-
-	liberar_recursos_bitmap(archivo_bloques,archivo_bloques,mapping_archivo_bloques);
-
 }

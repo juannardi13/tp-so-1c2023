@@ -34,7 +34,7 @@ void levantar_fcb_nuevo_archivo(const char*);
 void levantar_archivo_bloques(FILE* f,char *);
 int atender_clientes_file_system(int);
 char* obtener_ruta_archivo(const char*);
-void truncar_archivo(char*,char*,char*);
+void truncar_archivo(char*,char*);
 int abrir_archivo(char*);
 int crear_archivo(char*);
 void inicializar_estructuras();

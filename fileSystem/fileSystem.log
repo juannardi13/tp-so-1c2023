@@ -401,3 +401,15 @@
 [INFO] 21:55:46:336 File System/(11858:11858): Los bloques del fileSystem tiene un tamaño de 64 bytes
 [INFO] 21:55:46:336 File System/(11858:11858): Se inicializa el módulo File System
 [INFO] 21:55:46:336 File System/(11858:11858): PUERTO ESCUCHA: 8003
+[INFO] 17:39:37:693 File System/(15675:15675): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 17:39:37:702 File System/(15675:15675): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 17:39:37:703 File System/(15675:15675): Se inicializa el módulo File System
+[INFO] 17:39:37:703 File System/(15675:15675): PUERTO ESCUCHA: 8003
+[INFO] 17:41:13:389 File System/(16775:16775): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 17:41:13:399 File System/(16775:16775): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 17:41:13:402 File System/(16775:16775): Se inicializa el módulo File System
+[INFO] 17:41:13:402 File System/(16775:16775): PUERTO ESCUCHA: 8003
+[INFO] 17:44:19:201 File System/(28248:28248): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 17:44:19:222 File System/(28248:28248): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 17:44:19:222 File System/(28248:28248): Se inicializa el módulo File System
+[INFO] 17:44:19:222 File System/(28248:28248): PUERTO ESCUCHA: 8003
