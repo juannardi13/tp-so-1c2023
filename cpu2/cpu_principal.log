@@ -16,3 +16,91 @@
 [INFO] 18:50:45:272 cpu_principal.log/(93998:93998): PID: <1000> - Ejecutando: <SET RCX CISTEENTONCESAHO>
 [INFO] 18:50:45:273 cpu_principal.log/(93998:93998): PID: <1000> - Ejecutando: <SET RDX RASOYMUCHOMEJOR!>
 [INFO] 18:50:45:273 cpu_principal.log/(93998:93998): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 06:21:51:883 cpu_principal.log/(95823:95823): PID: <1000> - Ejecutando: <SET AX HOLA>
+[INFO] 06:22:03:542 cpu_principal.log/(95823:95823): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:23:44:089 cpu_principal.log/(95823:95823): PID: <1000> - Ejecutando: <SIGNAL DISCO>
+[INFO] 06:24:13:359 cpu_principal.log/(95823:95823): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:24:38:749 cpu_principal.log/(95823:95823): PID: <1000> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 06:25:31:026 cpu_principal.log/(95823:95823): PID: <1000> - Ejecutando: <WAIT NO_EXISTO>
+[INFO] 06:26:04:783 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET AX SOYL>
+[INFO] 06:26:04:784 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET BX ACON>
+[INFO] 06:26:04:785 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET CX SOLA>
+[INFO] 06:26:04:787 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET DX LIMP>
+[INFO] 06:26:04:788 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET EAX IADORA!P>
+[INFO] 06:26:04:789 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET EBX ONGOTODO>
+[INFO] 06:26:04:790 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET ECX CON0DENU>
+[INFO] 06:26:04:791 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET EDX EVO!0000>
+[INFO] 06:26:04:793 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET RAX 0000000000000000>
+[INFO] 06:26:04:794 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET RBX 0000000000000000>
+[INFO] 06:26:04:795 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET RCX 0000000000000000>
+[INFO] 06:26:04:796 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET RDX 0000000000000000>
+[INFO] 06:26:04:796 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <IO 5>
+[INFO] 06:26:09:808 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET AX 0000>
+[INFO] 06:26:09:809 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET BX 0000>
+[INFO] 06:26:09:811 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET CX 0000>
+[INFO] 06:26:09:813 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET DX 0000>
+[INFO] 06:26:09:815 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET EAX 00000000>
+[INFO] 06:26:09:817 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET EBX 00000000>
+[INFO] 06:26:09:819 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET ECX 00000000>
+[INFO] 06:26:09:821 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <SET EDX 00000000>
+[INFO] 06:26:09:821 cpu_principal.log/(95823:95823): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 06:45:47:506 cpu_principal.log/(96862:96862): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:45:56:931 cpu_principal.log/(96862:96862): PID: <1000> - Ejecutando: <SET BX OPEN>
+[INFO] 06:46:05:914 cpu_principal.log/(96862:96862): PID: <1000> - Ejecutando: <F_OPEN CHARLY_GARCIA.MP3>
+[INFO] 06:46:59:092 cpu_principal.log/(96862:96862): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:55:36:227 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:55:51:638 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <SET BX OPEN>
+[INFO] 06:55:56:162 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <F_OPEN CHARLY_GARCIA.MP3>
+[INFO] 06:56:25:367 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:56:32:597 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <SET DX SEEK>
+[INFO] 06:56:36:311 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <F_SEEK CHARLY_GARCIA.MP3 16>
+[INFO] 06:57:09:093 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <SET EAX EJECUTAR>
+[INFO] 06:57:12:160 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <SET EBX TRUNCATE>
+[INFO] 06:57:14:344 cpu_principal.log/(97520:97520): PID: <1000> - Ejecutando: <F_TRUNCATE CHARLY_GARCIA.MP3 64>
+[INFO] 07:00:39:141 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 07:00:40:171 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <SET BX OPEN>
+[INFO] 07:00:40:172 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <F_OPEN CHARLY_GARCIA.MP3>
+[INFO] 07:01:37:577 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 07:01:38:577 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <SET DX SEEK>
+[INFO] 07:01:38:577 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <F_SEEK CHARLY_GARCIA.MP3 16>
+[INFO] 07:02:38:731 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <SET EAX EJECUTAR>
+[INFO] 07:02:39:731 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <SET EBX TRUNCATE>
+[INFO] 07:02:39:731 cpu_principal.log/(98088:98088): PID: <1000> - Ejecutando: <F_TRUNCATE CHARLY_GARCIA.MP3 64>
+[INFO] 07:05:06:041 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 07:05:07:044 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET BX OPEN>
+[INFO] 07:05:07:044 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <F_OPEN CHARLY_GARCIA.MP3>
+[INFO] 07:05:08:049 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 07:05:09:050 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET DX SEEK>
+[INFO] 07:05:09:051 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <F_SEEK CHARLY_GARCIA.MP3 16>
+[INFO] 07:05:10:057 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET EAX EJECUTAR>
+[INFO] 07:05:11:058 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET EBX TRUNCATE>
+[INFO] 07:05:11:058 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <F_TRUNCATE CHARLY_GARCIA.MP3 64>
+[INFO] 07:05:12:062 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET ECX EJECUTAR>
+[INFO] 07:05:13:072 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET EDX F_CLOSE_>
+[INFO] 07:05:13:072 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <F_CLOSE CHARLY_GARCIA.MP3>
+[INFO] 07:05:13:073 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:05:19:082 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET RAX TERMINAR_PROCESO>
+[INFO] 07:05:20:082 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <SET RBX CHARLY_GARCIA.MP>
+[INFO] 07:05:20:083 cpu_principal.log/(98708:98708): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 07:05:38:411 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET AX SOYL>
+[INFO] 07:05:39:412 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET BX ACON>
+[INFO] 07:05:40:413 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET CX SOLA>
+[INFO] 07:05:41:418 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET DX LIMP>
+[INFO] 07:05:42:424 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET EAX IADORA!P>
+[INFO] 07:05:43:432 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET EBX ONGOTODO>
+[INFO] 07:05:44:439 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET ECX CON0DENU>
+[INFO] 07:05:45:440 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET EDX EVO!0000>
+[INFO] 07:05:46:440 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET RAX 0000000000000000>
+[INFO] 07:05:47:448 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET RBX 0000000000000000>
+[INFO] 07:05:48:449 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET RCX 0000000000000000>
+[INFO] 07:05:49:452 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET RDX 0000000000000000>
+[INFO] 07:05:49:452 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <IO 5>
+[INFO] 07:05:55:462 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET AX 0000>
+[INFO] 07:05:56:463 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET BX 0000>
+[INFO] 07:05:57:464 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET CX 0000>
+[INFO] 07:05:58:467 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET DX 0000>
+[INFO] 07:05:59:469 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET EAX 00000000>
+[INFO] 07:06:00:470 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET EBX 00000000>
+[INFO] 07:06:01:485 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET ECX 00000000>
+[INFO] 07:06:02:486 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <SET EDX 00000000>
+[INFO] 07:06:02:486 cpu_principal.log/(98708:98708): PID: <1001> - Ejecutando: <EXIT>
