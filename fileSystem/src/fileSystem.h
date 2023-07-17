@@ -17,5 +17,6 @@ t_super_bloque_valores *config_super_bloque_valores;
 t_bitarray* estructura_bitmap;
 char* mapping_archivo_bloques;
 FILE* archivo_bloques;
+FILE* archivo_bm;
 
 #endif /* FILESYSTEM_H_ */

@@ -31,7 +31,7 @@ bool esta_ocupado(int);
 void usar_bloque(t_bitarray*,int);
 void liberar_recursos_bitmap(FILE*,FILE*,char*);
 void levantar_fcb_nuevo_archivo(const char*);
-void levantar_archivo_bloques(FILE* f,char *);
+void levantar_archivo_bloques();
 int atender_clientes_file_system(int);
 char* obtener_ruta_archivo(const char*);
 void truncar_archivo(char*,char*);
@@ -47,5 +47,6 @@ extern t_super_bloque_valores *config_super_bloque_valores;
 extern t_bitarray* estructura_bitmap;
 extern char* mapping_archivo_bloques;
 extern FILE* archivo_bloques;
+extern FILE* archivo_bm;
 
 #endif /* UTILS_FILESYSTEM_H_ */

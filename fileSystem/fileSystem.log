@@ -413,3 +413,848 @@
 [INFO] 17:44:19:222 File System/(28248:28248): Los bloques del fileSystem tiene un tamaño de 64 bytes
 [INFO] 17:44:19:222 File System/(28248:28248): Se inicializa el módulo File System
 [INFO] 17:44:19:222 File System/(28248:28248): PUERTO ESCUCHA: 8003
+[INFO] 22:03:08:825 File System/(66262:66262): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:03:08:825 File System/(66262:66262): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:03:08:825 File System/(66262:66262): Se inicializa el módulo File System
+[INFO] 22:03:08:825 File System/(66262:66262): PUERTO ESCUCHA: 8003
+[INFO] 22:03:08:825 File System/(66262:66262): Abrir Archivo: <fcbPrueba>
+[INFO] 22:03:08:825 File System/(66262:66262): Crear Archivo: <campeonesF1>
+[INFO] 22:03:08:825 File System/(66262:66262): Abrir Archivo: <campeonesF1>
+[INFO] 22:13:33:571 File System/(66526:66526): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:13:33:595 File System/(66526:66526): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:13:33:595 File System/(66526:66526): Se inicializa el módulo File System
+[INFO] 22:13:33:595 File System/(66526:66526): PUERTO ESCUCHA: 8003
+[INFO] 22:13:33:596 File System/(66526:66526): Abrir Archivo: <fcbPrueba>
+[INFO] 22:13:33:596 File System/(66526:66526): Crear Archivo: <campeonesF1>
+[INFO] 22:13:33:596 File System/(66526:66526): Abrir Archivo: <campeonesF1>
+[INFO] 22:14:40:233 File System/(66615:66615): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:14:40:245 File System/(66615:66615): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:14:40:245 File System/(66615:66615): Se inicializa el módulo File System
+[INFO] 22:14:40:245 File System/(66615:66615): PUERTO ESCUCHA: 8003
+[INFO] 22:14:40:245 File System/(66615:66615): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Acceso de Lectura a Bitmap - Bloque <%i> - Estado: <%s>>
+[INFO] 22:14:40:246 File System/(66615:66615): Abrir Archivo: <fcbPrueba>
+[INFO] 22:14:40:246 File System/(66615:66615): Crear Archivo: <campeonesF1>
+[INFO] 22:14:40:246 File System/(66615:66615): Abrir Archivo: <campeonesF1>
+[INFO] 22:14:40:247 File System/(66615:66615): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Acceso de Lectura a Bitmap - Bloque <%i> - Estado: <%s>>
+[INFO] 22:16:16:307 File System/(66684:66684): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:16:16:312 File System/(66684:66684): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:16:16:312 File System/(66684:66684): Se inicializa el módulo File System
+[INFO] 22:16:16:313 File System/(66684:66684): PUERTO ESCUCHA: 8003
+[INFO] 22:16:16:313 File System/(66684:66684): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Libre>
+[INFO] 22:16:16:314 File System/(66684:66684): Abrir Archivo: <fcbPrueba>
+[INFO] 22:16:16:314 File System/(66684:66684): Crear Archivo: <campeonesF1>
+[INFO] 22:16:16:315 File System/(66684:66684): Abrir Archivo: <campeonesF1>
+[INFO] 22:16:16:315 File System/(66684:66684): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Ocupado>
+[INFO] 22:16:45:265 File System/(66721:66721): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:16:45:268 File System/(66721:66721): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:16:45:269 File System/(66721:66721): Se inicializa el módulo File System
+[INFO] 22:16:45:269 File System/(66721:66721): PUERTO ESCUCHA: 8003
+[INFO] 22:16:45:269 File System/(66721:66721): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Libre>
+[INFO] 22:16:45:271 File System/(66721:66721): Abrir Archivo: <fcbPrueba>
+[INFO] 22:16:45:271 File System/(66721:66721): Crear Archivo: <campeonesF1>
+[INFO] 22:16:45:272 File System/(66721:66721): Abrir Archivo: <campeonesF1>
+[INFO] 22:16:45:272 File System/(66721:66721): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Ocupado>
+[INFO] 22:19:18:647 File System/(66785:66785): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:19:18:652 File System/(66785:66785): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:19:18:652 File System/(66785:66785): Se inicializa el módulo File System
+[INFO] 22:19:18:652 File System/(66785:66785): PUERTO ESCUCHA: 8003
+[INFO] 22:19:18:652 File System/(66785:66785): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Libre>
+[INFO] 22:19:18:658 File System/(66785:66785): Abrir Archivo: <fcbPrueba>
+[INFO] 22:19:18:658 File System/(66785:66785): Crear Archivo: <campeonesF1>
+[INFO] 22:19:18:658 File System/(66785:66785): Abrir Archivo: <campeonesF1>
+[INFO] 22:19:18:659 File System/(66785:66785): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Ocupado>
+[INFO] 22:20:29:382 File System/(66848:66848): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:20:29:387 File System/(66848:66848): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:20:29:387 File System/(66848:66848): Se inicializa el módulo File System
+[INFO] 22:20:29:388 File System/(66848:66848): PUERTO ESCUCHA: 8003
+[INFO] 22:20:29:388 File System/(66848:66848): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Libre>
+[INFO] 22:20:29:389 File System/(66848:66848): Abrir Archivo: <fcbPrueba>
+[INFO] 22:20:29:389 File System/(66848:66848): Crear Archivo: <campeonesF1>
+[INFO] 22:20:29:389 File System/(66848:66848): Abrir Archivo: <campeonesF1>
+[INFO] 22:20:29:389 File System/(66848:66848): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Ocupado>
+[INFO] 22:22:13:857 File System/(66900:66900): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:22:13:867 File System/(66900:66900): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:22:13:868 File System/(66900:66900): Se inicializa el módulo File System
+[INFO] 22:22:13:868 File System/(66900:66900): PUERTO ESCUCHA: 8003
+[INFO] 22:29:01:605 File System/(66982:66982): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:29:01:610 File System/(66982:66982): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:29:01:613 File System/(66982:66982): Se inicializa el módulo File System
+[INFO] 22:29:01:613 File System/(66982:66982): PUERTO ESCUCHA: 8003
+[INFO] 22:29:01:616 File System/(66982:66982): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:29:51:489 File System/(66998:66998): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:29:51:494 File System/(66998:66998): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:29:51:496 File System/(66998:66998): Se inicializa el módulo File System
+[INFO] 22:29:51:496 File System/(66998:66998): PUERTO ESCUCHA: 8003
+[INFO] 22:29:51:496 File System/(66998:66998): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:30:42:155 File System/(67034:67034): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:30:42:156 File System/(67034:67034): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:30:42:156 File System/(67034:67034): Se inicializa el módulo File System
+[INFO] 22:30:42:156 File System/(67034:67034): PUERTO ESCUCHA: 8003
+[INFO] 22:30:47:377 File System/(67034:67034): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:31:44:351 File System/(67136:67136): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:31:44:357 File System/(67136:67136): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:31:44:358 File System/(67136:67136): Se inicializa el módulo File System
+[INFO] 22:31:44:358 File System/(67136:67136): PUERTO ESCUCHA: 8003
+[INFO] 22:31:44:359 File System/(67136:67136): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:31:44:359 File System/(67136:67136): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:00:339 File System/(67172:67172): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:32:00:344 File System/(67172:67172): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:32:00:345 File System/(67172:67172): Se inicializa el módulo File System
+[INFO] 22:32:00:345 File System/(67172:67172): PUERTO ESCUCHA: 8003
+[INFO] 22:32:00:345 File System/(67172:67172): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:00:347 File System/(67172:67172): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:10:834 File System/(67206:67206): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:32:10:838 File System/(67206:67206): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:32:10:839 File System/(67206:67206): Se inicializa el módulo File System
+[INFO] 22:32:10:840 File System/(67206:67206): PUERTO ESCUCHA: 8003
+[INFO] 22:32:10:840 File System/(67206:67206): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:10:840 File System/(67206:67206): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:24:751 File System/(67242:67242): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:32:24:755 File System/(67242:67242): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:32:24:757 File System/(67242:67242): Se inicializa el módulo File System
+[INFO] 22:32:24:757 File System/(67242:67242): PUERTO ESCUCHA: 8003
+[INFO] 22:32:24:757 File System/(67242:67242): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:24:757 File System/(67242:67242): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:32:24:757 File System/(67242:67242): Crear Archivo: <campeonesFormula1>
+[INFO] 22:39:57:649 File System/(67673:67673): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:39:57:652 File System/(67673:67673): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:39:57:656 File System/(67673:67673): Se inicializa el módulo File System
+[INFO] 22:39:57:656 File System/(67673:67673): PUERTO ESCUCHA: 8003
+[INFO] 22:39:57:656 File System/(67673:67673): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:40:20:398 File System/(67700:67700): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:40:20:400 File System/(67700:67700): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:40:20:400 File System/(67700:67700): Se inicializa el módulo File System
+[INFO] 22:40:20:401 File System/(67700:67700): PUERTO ESCUCHA: 8003
+[INFO] 22:40:26:135 File System/(67700:67700): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:41:03:000 File System/(67731:67731): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:41:03:001 File System/(67731:67731): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:41:03:001 File System/(67731:67731): Se inicializa el módulo File System
+[INFO] 22:41:03:001 File System/(67731:67731): PUERTO ESCUCHA: 8003
+[INFO] 22:41:03:001 File System/(67731:67731): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:41:03:003 File System/(67731:67731): Crear Archivo: <campeonesFormula1>
+[INFO] 22:41:03:003 File System/(67731:67731): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 22:41:03:005 File System/(67731:67731): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 22:47:48:418 File System/(68145:68145): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:47:48:421 File System/(68145:68145): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:47:48:424 File System/(68145:68145): Se inicializa el módulo File System
+[INFO] 22:47:48:424 File System/(68145:68145): PUERTO ESCUCHA: 8003
+[INFO] 22:47:48:424 File System/(68145:68145): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:47:48:425 File System/(68145:68145): Crear Archivo: <campeonesFormula1>
+[INFO] 22:47:48:425 File System/(68145:68145): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 22:48:50:511 File System/(68184:68184): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:48:50:517 File System/(68184:68184): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:48:50:517 File System/(68184:68184): Se inicializa el módulo File System
+[INFO] 22:48:50:517 File System/(68184:68184): PUERTO ESCUCHA: 8003
+[INFO] 22:48:50:517 File System/(68184:68184): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:48:50:518 File System/(68184:68184): Crear Archivo: <campeonesFormula1>
+[INFO] 22:50:47:851 File System/(68307:68307): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:50:47:862 File System/(68307:68307): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:50:47:862 File System/(68307:68307): Se inicializa el módulo File System
+[INFO] 22:50:47:862 File System/(68307:68307): PUERTO ESCUCHA: 8003
+[INFO] 22:50:47:863 File System/(68307:68307): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:50:47:863 File System/(68307:68307): Crear Archivo: <campeonesFormula1>
+[INFO] 22:50:47:863 File System/(68307:68307): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 22:50:47:863 File System/(68307:68307): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 22:53:25:716 File System/(68413:68413): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 22:53:25:720 File System/(68413:68413): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 22:53:25:725 File System/(68413:68413): Se inicializa el módulo File System
+[INFO] 22:53:25:725 File System/(68413:68413): PUERTO ESCUCHA: 8003
+[INFO] 22:53:25:725 File System/(68413:68413): Abrir Archivo: <campeonesFormula1>
+[INFO] 22:53:25:725 File System/(68413:68413): Crear Archivo: <campeonesFormula1>
+[INFO] 22:53:25:725 File System/(68413:68413): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 22:53:25:725 File System/(68413:68413): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:02:43:796 File System/(68649:68649): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:02:43:805 File System/(68649:68649): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:02:43:805 File System/(68649:68649): Se inicializa el módulo File System
+[INFO] 23:02:43:805 File System/(68649:68649): PUERTO ESCUCHA: 8003
+[INFO] 23:02:43:805 File System/(68649:68649): Abrir Archivo: <campeonesFormula1>
+[INFO] 23:02:43:806 File System/(68649:68649): Crear Archivo: <campeonesFormula1>
+[INFO] 23:02:43:806 File System/(68649:68649): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:02:43:806 File System/(68649:68649): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:03:00:098 File System/(68686:68686): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:03:00:107 File System/(68686:68686): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:03:00:107 File System/(68686:68686): Se inicializa el módulo File System
+[INFO] 23:03:00:107 File System/(68686:68686): PUERTO ESCUCHA: 8003
+[INFO] 23:03:00:107 File System/(68686:68686): Abrir Archivo: <campeonesFormula1>
+[INFO] 23:03:00:107 File System/(68686:68686): Crear Archivo: <campeonesFormula1>
+[INFO] 23:03:00:108 File System/(68686:68686): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:03:00:108 File System/(68686:68686): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:04:23:701 File System/(68766:68766): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:04:23:702 File System/(68766:68766): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:04:23:702 File System/(68766:68766): Se inicializa el módulo File System
+[INFO] 23:04:23:702 File System/(68766:68766): PUERTO ESCUCHA: 8003
+[INFO] 23:04:23:702 File System/(68766:68766): Abrir Archivo: <campeonesFormula1>
+[INFO] 23:04:23:702 File System/(68766:68766): Crear Archivo: <campeonesFormula1>
+[INFO] 23:04:23:702 File System/(68766:68766): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:04:23:703 File System/(68766:68766): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:05:40:732 File System/(68784:68784): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:05:40:741 File System/(68784:68784): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:05:40:741 File System/(68784:68784): Se inicializa el módulo File System
+[INFO] 23:05:40:741 File System/(68784:68784): PUERTO ESCUCHA: 8003
+[INFO] 23:05:40:741 File System/(68784:68784): Abrir Archivo: <campeonesFormula1>
+[INFO] 23:06:03:634 File System/(68824:68824): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:06:03:639 File System/(68824:68824): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:06:03:641 File System/(68824:68824): Se inicializa el módulo File System
+[INFO] 23:06:03:641 File System/(68824:68824): PUERTO ESCUCHA: 8003
+[INFO] 23:06:03:641 File System/(68824:68824): Crear Archivo: <campeonesFormula1>
+[INFO] 23:06:03:641 File System/(68824:68824): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:06:03:641 File System/(68824:68824): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:10:46:283 File System/(69019:69019): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:10:46:283 File System/(69019:69019): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:10:46:284 File System/(69019:69019): Se inicializa el módulo File System
+[INFO] 23:10:46:284 File System/(69019:69019): PUERTO ESCUCHA: 8003
+[INFO] 23:10:46:284 File System/(69019:69019): Crear Archivo: <campeonesFormula1>
+[INFO] 23:10:46:284 File System/(69019:69019): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:10:46:284 File System/(69019:69019): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:12:26:074 File System/(69063:69063): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:12:26:078 File System/(69063:69063): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:12:26:078 File System/(69063:69063): Se inicializa el módulo File System
+[INFO] 23:12:26:078 File System/(69063:69063): PUERTO ESCUCHA: 8003
+[INFO] 23:12:28:901 File System/(69063:69063): Crear Archivo: <campeonesFormula1>
+[INFO] 23:12:28:902 File System/(69063:69063): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:12:28:902 File System/(69063:69063): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:13:49:033 File System/(69102:69102): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:13:49:038 File System/(69102:69102): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:13:49:038 File System/(69102:69102): Se inicializa el módulo File System
+[INFO] 23:13:49:038 File System/(69102:69102): PUERTO ESCUCHA: 8003
+[INFO] 23:13:56:907 File System/(69102:69102): Crear Archivo: <campeonesFormula1>
+[INFO] 23:14:01:011 File System/(69102:69102): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:14:12:604 File System/(69102:69102): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:16:12:220 File System/(69259:69259): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:16:12:223 File System/(69259:69259): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:16:12:226 File System/(69259:69259): Se inicializa el módulo File System
+[INFO] 23:16:12:226 File System/(69259:69259): PUERTO ESCUCHA: 8003
+[INFO] 23:16:12:226 File System/(69259:69259): Crear Archivo: <campeonesFormula1>
+[INFO] 23:16:12:227 File System/(69259:69259): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:16:12:227 File System/(69259:69259): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:17:25:455 File System/(69305:69305): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:17:25:458 File System/(69305:69305): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:17:25:461 File System/(69305:69305): Se inicializa el módulo File System
+[INFO] 23:17:25:461 File System/(69305:69305): PUERTO ESCUCHA: 8003
+[INFO] 23:17:25:461 File System/(69305:69305): Crear Archivo: <campeonesFormula1>
+[INFO] 23:17:25:461 File System/(69305:69305): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:17:25:461 File System/(69305:69305): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:19:13:257 File System/(69860:69860): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:19:13:287 File System/(69860:69860): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:19:13:287 File System/(69860:69860): Se inicializa el módulo File System
+[INFO] 23:19:13:287 File System/(69860:69860): PUERTO ESCUCHA: 8003
+[INFO] 23:19:13:287 File System/(69860:69860): Crear Archivo: <campeonesFormula1>
+[INFO] 23:19:13:287 File System/(69860:69860): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:19:44:384 File System/(69914:69914): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:19:44:391 File System/(69914:69914): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:19:44:392 File System/(69914:69914): Se inicializa el módulo File System
+[INFO] 23:19:44:392 File System/(69914:69914): PUERTO ESCUCHA: 8003
+[INFO] 23:19:44:392 File System/(69914:69914): Crear Archivo: <campeonesFormula1>
+[INFO] 23:19:44:392 File System/(69914:69914): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:19:44:392 File System/(69914:69914): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:21:39:373 File System/(70269:70269): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:21:39:376 File System/(70269:70269): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:21:39:379 File System/(70269:70269): Se inicializa el módulo File System
+[INFO] 23:21:39:379 File System/(70269:70269): PUERTO ESCUCHA: 8003
+[INFO] 23:21:39:379 File System/(70269:70269): Crear Archivo: <campeonesFormula1>
+[INFO] 23:21:39:380 File System/(70269:70269): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:21:59:871 File System/(70313:70313): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:21:59:872 File System/(70313:70313): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:21:59:872 File System/(70313:70313): Se inicializa el módulo File System
+[INFO] 23:21:59:872 File System/(70313:70313): PUERTO ESCUCHA: 8003
+[INFO] 23:21:59:872 File System/(70313:70313): Crear Archivo: <campeonesFormula1>
+[INFO] 23:21:59:872 File System/(70313:70313): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:21:59:872 File System/(70313:70313): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:22:32:691 File System/(70350:70350): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:22:32:693 File System/(70350:70350): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:22:32:697 File System/(70350:70350): Se inicializa el módulo File System
+[INFO] 23:22:32:697 File System/(70350:70350): PUERTO ESCUCHA: 8003
+[INFO] 23:22:32:697 File System/(70350:70350): Crear Archivo: <campeonesFormula1>
+[INFO] 23:22:32:697 File System/(70350:70350): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:23:10:226 File System/(70419:70419): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:23:10:230 File System/(70419:70419): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:23:10:230 File System/(70419:70419): Se inicializa el módulo File System
+[INFO] 23:23:10:230 File System/(70419:70419): PUERTO ESCUCHA: 8003
+[INFO] 23:23:10:230 File System/(70419:70419): Crear Archivo: <campeonesFormula1>
+[INFO] 23:23:10:230 File System/(70419:70419): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:23:31:542 File System/(70457:70457): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:23:31:545 File System/(70457:70457): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:23:31:548 File System/(70457:70457): Se inicializa el módulo File System
+[INFO] 23:23:31:548 File System/(70457:70457): PUERTO ESCUCHA: 8003
+[INFO] 23:23:31:548 File System/(70457:70457): Crear Archivo: <campeonesFormula1>
+[INFO] 23:23:31:549 File System/(70457:70457): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:23:47:123 File System/(70473:70473): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:23:47:124 File System/(70473:70473): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:23:47:124 File System/(70473:70473): Se inicializa el módulo File System
+[INFO] 23:23:47:124 File System/(70473:70473): PUERTO ESCUCHA: 8003
+[INFO] 23:23:47:124 File System/(70473:70473): Crear Archivo: <campeonesFormula1>
+[INFO] 23:23:47:124 File System/(70473:70473): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:24:13:952 File System/(70514:70514): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:24:13:956 File System/(70514:70514): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:24:13:958 File System/(70514:70514): Se inicializa el módulo File System
+[INFO] 23:24:13:958 File System/(70514:70514): PUERTO ESCUCHA: 8003
+[INFO] 23:24:13:958 File System/(70514:70514): Crear Archivo: <campeonesFormula1>
+[INFO] 23:24:13:958 File System/(70514:70514): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:24:13:958 File System/(70514:70514): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:24:50:345 File System/(70566:70566): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:24:50:349 File System/(70566:70566): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:24:50:351 File System/(70566:70566): Se inicializa el módulo File System
+[INFO] 23:24:50:352 File System/(70566:70566): PUERTO ESCUCHA: 8003
+[INFO] 23:24:50:352 File System/(70566:70566): Crear Archivo: <campeonesFormula1>
+[INFO] 23:24:50:352 File System/(70566:70566): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:25:11:384 File System/(70618:70618): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:25:11:387 File System/(70618:70618): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:25:11:390 File System/(70618:70618): Se inicializa el módulo File System
+[INFO] 23:25:11:390 File System/(70618:70618): PUERTO ESCUCHA: 8003
+[INFO] 23:25:11:390 File System/(70618:70618): Crear Archivo: <campeonesFormula1>
+[INFO] 23:25:11:390 File System/(70618:70618): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:25:51:567 File System/(70689:70689): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:25:51:570 File System/(70689:70689): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:25:51:571 File System/(70689:70689): Se inicializa el módulo File System
+[INFO] 23:25:51:572 File System/(70689:70689): PUERTO ESCUCHA: 8003
+[INFO] 23:25:51:572 File System/(70689:70689): Crear Archivo: <campeonesFormula1>
+[INFO] 23:25:51:572 File System/(70689:70689): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:25:53:212 File System/(70703:70703): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:25:53:215 File System/(70703:70703): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:25:53:218 File System/(70703:70703): Se inicializa el módulo File System
+[INFO] 23:25:53:219 File System/(70703:70703): PUERTO ESCUCHA: 8003
+[INFO] 23:25:53:219 File System/(70703:70703): Crear Archivo: <campeonesFormula1>
+[INFO] 23:25:53:219 File System/(70703:70703): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:26:27:584 File System/(70756:70756): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:26:27:585 File System/(70756:70756): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:26:27:587 File System/(70756:70756): Se inicializa el módulo File System
+[INFO] 23:26:27:587 File System/(70756:70756): PUERTO ESCUCHA: 8003
+[INFO] 23:26:27:587 File System/(70756:70756): Crear Archivo: <campeonesFormula1>
+[INFO] 23:26:27:588 File System/(70756:70756): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:26:27:589 File System/(70756:70756): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:27:33:189 File System/(70816:70816): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:27:33:193 File System/(70816:70816): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:27:33:193 File System/(70816:70816): Se inicializa el módulo File System
+[INFO] 23:27:33:194 File System/(70816:70816): PUERTO ESCUCHA: 8003
+[INFO] 23:27:33:194 File System/(70816:70816): Crear Archivo: <campeonesFormula1>
+[INFO] 23:27:33:194 File System/(70816:70816): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:32:04:348 File System/(71080:71080): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:32:04:354 File System/(71080:71080): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:32:04:354 File System/(71080:71080): Se inicializa el módulo File System
+[INFO] 23:32:04:354 File System/(71080:71080): PUERTO ESCUCHA: 8003
+[INFO] 23:32:04:354 File System/(71080:71080): Crear Archivo: <campeonesFormula1>
+[INFO] 23:32:04:354 File System/(71080:71080): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:33:06:040 File System/(71161:71161): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:33:06:040 File System/(71161:71161): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:33:06:040 File System/(71161:71161): Se inicializa el módulo File System
+[INFO] 23:33:06:040 File System/(71161:71161): PUERTO ESCUCHA: 8003
+[INFO] 23:33:06:040 File System/(71161:71161): Crear Archivo: <campeonesFormula1>
+[INFO] 23:33:06:040 File System/(71161:71161): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:33:38:667 File System/(71226:71226): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:33:38:670 File System/(71226:71226): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:33:38:674 File System/(71226:71226): Se inicializa el módulo File System
+[INFO] 23:33:38:674 File System/(71226:71226): PUERTO ESCUCHA: 8003
+[INFO] 23:33:38:674 File System/(71226:71226): Crear Archivo: <campeonesFormula1>
+[INFO] 23:33:38:674 File System/(71226:71226): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:34:26:156 File System/(71272:71272): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:34:26:159 File System/(71272:71272): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:34:26:163 File System/(71272:71272): Se inicializa el módulo File System
+[INFO] 23:34:26:163 File System/(71272:71272): PUERTO ESCUCHA: 8003
+[INFO] 23:34:26:163 File System/(71272:71272): Crear Archivo: <campeonesFormula1>
+[INFO] 23:34:26:163 File System/(71272:71272): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:35:19:331 File System/(71341:71341): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:35:19:335 File System/(71341:71341): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:35:19:336 File System/(71341:71341): Se inicializa el módulo File System
+[INFO] 23:35:19:336 File System/(71341:71341): PUERTO ESCUCHA: 8003
+[INFO] 23:35:19:336 File System/(71341:71341): Crear Archivo: <campeonesFormula1>
+[INFO] 23:35:19:336 File System/(71341:71341): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:36:25:703 File System/(71450:71450): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:36:25:706 File System/(71450:71450): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:36:25:709 File System/(71450:71450): Se inicializa el módulo File System
+[INFO] 23:36:25:709 File System/(71450:71450): PUERTO ESCUCHA: 8003
+[INFO] 23:36:25:709 File System/(71450:71450): Crear Archivo: <campeonesFormula1>
+[INFO] 23:36:25:709 File System/(71450:71450): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:36:25:709 File System/(71450:71450): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:36:56:148 File System/(71515:71515): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:36:56:151 File System/(71515:71515): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:36:56:152 File System/(71515:71515): Se inicializa el módulo File System
+[INFO] 23:36:56:152 File System/(71515:71515): PUERTO ESCUCHA: 8003
+[INFO] 23:36:56:153 File System/(71515:71515): Crear Archivo: <campeonesFormula1>
+[INFO] 23:36:56:153 File System/(71515:71515): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:36:56:153 File System/(71515:71515): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:39:52:550 File System/(71921:71921): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:39:52:557 File System/(71921:71921): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:39:52:560 File System/(71921:71921): Se inicializa el módulo File System
+[INFO] 23:39:52:560 File System/(71921:71921): PUERTO ESCUCHA: 8003
+[INFO] 23:39:52:560 File System/(71921:71921): Crear Archivo: <campeonesFormula1>
+[INFO] 23:39:52:560 File System/(71921:71921): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:40:25:012 File System/(71957:71957): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:40:25:018 File System/(71957:71957): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:40:25:018 File System/(71957:71957): Se inicializa el módulo File System
+[INFO] 23:40:25:018 File System/(71957:71957): PUERTO ESCUCHA: 8003
+[INFO] 23:40:25:019 File System/(71957:71957): Crear Archivo: <campeonesFormula1>
+[INFO] 23:40:25:019 File System/(71957:71957): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:40:25:019 File System/(71957:71957): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:42:08:388 File System/(72030:72030): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:42:08:388 File System/(72030:72030): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:42:08:388 File System/(72030:72030): Se inicializa el módulo File System
+[INFO] 23:42:08:388 File System/(72030:72030): PUERTO ESCUCHA: 8003
+[INFO] 23:42:08:388 File System/(72030:72030): Crear Archivo: <campeonesFormula1>
+[INFO] 23:42:08:388 File System/(72030:72030): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:42:08:388 File System/(72030:72030): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:42:20:468 File System/(72067:72067): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:42:20:471 File System/(72067:72067): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:42:20:475 File System/(72067:72067): Se inicializa el módulo File System
+[INFO] 23:42:20:475 File System/(72067:72067): PUERTO ESCUCHA: 8003
+[INFO] 23:42:20:475 File System/(72067:72067): Crear Archivo: <campeonesFormula1>
+[INFO] 23:42:38:446 File System/(72102:72102): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:42:38:452 File System/(72102:72102): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:42:38:452 File System/(72102:72102): Se inicializa el módulo File System
+[INFO] 23:42:38:452 File System/(72102:72102): PUERTO ESCUCHA: 8003
+[INFO] 23:42:38:452 File System/(72102:72102): Crear Archivo: <campeonesFormula1>
+[INFO] 23:42:38:453 File System/(72102:72102): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:42:38:453 File System/(72102:72102): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 23:44:16:753 File System/(72227:72227): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:44:16:756 File System/(72227:72227): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:44:16:759 File System/(72227:72227): Se inicializa el módulo File System
+[INFO] 23:44:16:759 File System/(72227:72227): PUERTO ESCUCHA: 8003
+[INFO] 23:44:16:759 File System/(72227:72227): Crear Archivo: <campeonesFormula1>
+[INFO] 23:44:16:759 File System/(72227:72227): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:45:13:468 File System/(72271:72271): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:45:13:472 File System/(72271:72271): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:45:13:472 File System/(72271:72271): Se inicializa el módulo File System
+[INFO] 23:45:13:472 File System/(72271:72271): PUERTO ESCUCHA: 8003
+[INFO] 23:45:13:473 File System/(72271:72271): Crear Archivo: <campeonesFormula1>
+[INFO] 23:45:13:473 File System/(72271:72271): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:46:47:713 File System/(72366:72366): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:46:47:717 File System/(72366:72366): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:46:47:719 File System/(72366:72366): Se inicializa el módulo File System
+[INFO] 23:46:47:719 File System/(72366:72366): PUERTO ESCUCHA: 8003
+[INFO] 23:46:47:720 File System/(72366:72366): Crear Archivo: <campeonesFormula1>
+[INFO] 23:46:47:720 File System/(72366:72366): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:48:39:157 File System/(72621:72621): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:48:39:162 File System/(72621:72621): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:48:39:162 File System/(72621:72621): Se inicializa el módulo File System
+[INFO] 23:48:39:162 File System/(72621:72621): PUERTO ESCUCHA: 8003
+[INFO] 23:48:50:717 File System/(72621:72621): Crear Archivo: <campeonesFormula1>
+[INFO] 23:48:56:640 File System/(72621:72621): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:50:19:035 File System/(72707:72707): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:50:19:037 File System/(72707:72707): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:50:19:037 File System/(72707:72707): Se inicializa el módulo File System
+[INFO] 23:50:19:037 File System/(72707:72707): PUERTO ESCUCHA: 8003
+[INFO] 23:50:19:037 File System/(72707:72707): Crear Archivo: <campeonesFormula1>
+[INFO] 23:50:19:037 File System/(72707:72707): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 23:50:44:409 File System/(72737:72737): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 23:50:44:409 File System/(72737:72737): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 23:50:44:409 File System/(72737:72737): Se inicializa el módulo File System
+[INFO] 23:50:44:409 File System/(72737:72737): PUERTO ESCUCHA: 8003
+[INFO] 23:50:44:410 File System/(72737:72737): Crear Archivo: <campeonesFormula1>
+[INFO] 23:50:44:410 File System/(72737:72737): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:41:19:647 File System/(73028:73028): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 00:41:19:692 File System/(73028:73028): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 00:41:19:692 File System/(73028:73028): Se inicializa el módulo File System
+[INFO] 00:41:19:692 File System/(73028:73028): PUERTO ESCUCHA: 8003
+[INFO] 00:41:19:692 File System/(73028:73028): Crear Archivo: <campeonesFormula1>
+[INFO] 00:41:19:692 File System/(73028:73028): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:43:47:121 File System/(73167:73167): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 00:43:47:127 File System/(73167:73167): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 00:43:47:127 File System/(73167:73167): Se inicializa el módulo File System
+[INFO] 00:43:47:128 File System/(73167:73167): PUERTO ESCUCHA: 8003
+[INFO] 00:43:47:128 File System/(73167:73167): Crear Archivo: <campeonesFormula1>
+[INFO] 00:43:47:129 File System/(73167:73167): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:43:47:129 File System/(73167:73167): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 00:45:31:741 File System/(73281:73281): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 00:45:31:746 File System/(73281:73281): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 00:45:31:746 File System/(73281:73281): Se inicializa el módulo File System
+[INFO] 00:45:31:746 File System/(73281:73281): PUERTO ESCUCHA: 8003
+[INFO] 00:45:31:746 File System/(73281:73281): Crear Archivo: <campeonesFormula1>
+[INFO] 00:45:31:746 File System/(73281:73281): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:50:28:355 File System/(73386:73386): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 00:50:28:358 File System/(73386:73386): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 00:50:28:370 File System/(73386:73386): Se inicializa el módulo File System
+[INFO] 00:50:28:370 File System/(73386:73386): PUERTO ESCUCHA: 8003
+[INFO] 00:50:28:370 File System/(73386:73386): Crear Archivo: <campeonesFormula1>
+[INFO] 00:50:28:370 File System/(73386:73386): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:50:28:370 File System/(73386:73386): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 00:51:02:039 File System/(73424:73424): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 00:51:02:048 File System/(73424:73424): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 00:51:02:049 File System/(73424:73424): Se inicializa el módulo File System
+[INFO] 00:51:02:049 File System/(73424:73424): PUERTO ESCUCHA: 8003
+[INFO] 00:51:02:049 File System/(73424:73424): Crear Archivo: <campeonesFormula1>
+[INFO] 00:51:02:049 File System/(73424:73424): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:51:02:051 File System/(73424:73424): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 00:53:26:434 File System/(73594:73594): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 00:53:26:438 File System/(73594:73594): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 00:53:26:441 File System/(73594:73594): Se inicializa el módulo File System
+[INFO] 00:53:26:441 File System/(73594:73594): PUERTO ESCUCHA: 8003
+[INFO] 00:53:26:441 File System/(73594:73594): Crear Archivo: <campeonesFormula1>
+[INFO] 00:53:26:441 File System/(73594:73594): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 00:53:26:441 File System/(73594:73594): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:00:09:261 File System/(74070:74070): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:00:09:265 File System/(74070:74070): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:00:09:267 File System/(74070:74070): Se inicializa el módulo File System
+[INFO] 01:00:09:267 File System/(74070:74070): PUERTO ESCUCHA: 8003
+[INFO] 01:00:55:615 File System/(74164:74164): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:00:55:618 File System/(74164:74164): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:00:55:621 File System/(74164:74164): Se inicializa el módulo File System
+[INFO] 01:00:55:621 File System/(74164:74164): PUERTO ESCUCHA: 8003
+[INFO] 01:07:01:371 File System/(74429:74429): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:07:01:374 File System/(74429:74429): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:07:01:376 File System/(74429:74429): Se inicializa el módulo File System
+[INFO] 01:07:01:377 File System/(74429:74429): PUERTO ESCUCHA: 8003
+[INFO] 01:07:01:382 File System/(74429:74429): Crear Archivo: <campeonesFormula1>
+[INFO] 01:07:01:384 File System/(74429:74429): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:08:10:302 File System/(74470:74470): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:08:10:308 File System/(74470:74470): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:08:10:308 File System/(74470:74470): Se inicializa el módulo File System
+[INFO] 01:08:10:309 File System/(74470:74470): PUERTO ESCUCHA: 8003
+[INFO] 01:08:10:309 File System/(74470:74470): Crear Archivo: <campeonesFormula1>
+[INFO] 01:08:10:309 File System/(74470:74470): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:08:33:859 File System/(74507:74507): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:08:33:865 File System/(74507:74507): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:08:33:868 File System/(74507:74507): Se inicializa el módulo File System
+[INFO] 01:08:33:868 File System/(74507:74507): PUERTO ESCUCHA: 8003
+[INFO] 01:08:33:868 File System/(74507:74507): Crear Archivo: <campeonesFormula1>
+[INFO] 01:08:33:869 File System/(74507:74507): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:14:52:772 File System/(74576:74576): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:14:52:778 File System/(74576:74576): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:14:52:778 File System/(74576:74576): Se inicializa el módulo File System
+[INFO] 01:14:52:778 File System/(74576:74576): PUERTO ESCUCHA: 8003
+[INFO] 01:14:52:778 File System/(74576:74576): Crear Archivo: <campeonesFormula1>
+[INFO] 01:14:52:778 File System/(74576:74576): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:14:52:778 File System/(74576:74576): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:20:16:273 File System/(74801:74801): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:20:16:277 File System/(74801:74801): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:20:16:279 File System/(74801:74801): Se inicializa el módulo File System
+[INFO] 01:20:16:279 File System/(74801:74801): PUERTO ESCUCHA: 8003
+[INFO] 01:20:16:279 File System/(74801:74801): Crear Archivo: <campeonesFormula1>
+[INFO] 01:20:16:279 File System/(74801:74801): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:20:16:279 File System/(74801:74801): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:26:27:350 File System/(75215:75215): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:26:27:352 File System/(75215:75215): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:26:27:352 File System/(75215:75215): Se inicializa el módulo File System
+[INFO] 01:26:27:352 File System/(75215:75215): PUERTO ESCUCHA: 8003
+[INFO] 01:26:27:352 File System/(75215:75215): Crear Archivo: <campeonesFormula1>
+[INFO] 01:26:27:352 File System/(75215:75215): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:26:27:352 File System/(75215:75215): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:28:47:980 File System/(75306:75306): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:28:47:984 File System/(75306:75306): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:28:47:986 File System/(75306:75306): Se inicializa el módulo File System
+[INFO] 01:28:47:987 File System/(75306:75306): PUERTO ESCUCHA: 8003
+[INFO] 01:28:47:987 File System/(75306:75306): Crear Archivo: <campeonesFormula1>
+[INFO] 01:28:47:987 File System/(75306:75306): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:28:47:987 File System/(75306:75306): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:29:16:634 File System/(75341:75341): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:29:16:637 File System/(75341:75341): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:29:16:640 File System/(75341:75341): Se inicializa el módulo File System
+[INFO] 01:29:16:640 File System/(75341:75341): PUERTO ESCUCHA: 8003
+[INFO] 01:29:16:640 File System/(75341:75341): Crear Archivo: <campeonesFormula1>
+[INFO] 01:29:16:640 File System/(75341:75341): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:29:16:640 File System/(75341:75341): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:29:57:134 File System/(75448:75448): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:29:57:137 File System/(75448:75448): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:29:57:142 File System/(75448:75448): Se inicializa el módulo File System
+[INFO] 01:29:57:142 File System/(75448:75448): PUERTO ESCUCHA: 8003
+[INFO] 01:29:57:143 File System/(75448:75448): Crear Archivo: <campeonesFormula1>
+[INFO] 01:29:57:143 File System/(75448:75448): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:29:57:143 File System/(75448:75448): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:31:18:395 File System/(75508:75508): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:31:18:396 File System/(75508:75508): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:31:18:396 File System/(75508:75508): Se inicializa el módulo File System
+[INFO] 01:31:18:396 File System/(75508:75508): PUERTO ESCUCHA: 8003
+[INFO] 01:31:18:396 File System/(75508:75508): Crear Archivo: <campeonesFormula1>
+[INFO] 01:31:18:396 File System/(75508:75508): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:31:18:396 File System/(75508:75508): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:31:48:668 File System/(75561:75561): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:31:48:674 File System/(75561:75561): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:31:48:675 File System/(75561:75561): Se inicializa el módulo File System
+[INFO] 01:31:48:675 File System/(75561:75561): PUERTO ESCUCHA: 8003
+[INFO] 01:31:48:676 File System/(75561:75561): Crear Archivo: <campeonesFormula1>
+[INFO] 01:31:48:676 File System/(75561:75561): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:31:48:677 File System/(75561:75561): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:32:07:631 File System/(75616:75616): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:32:07:632 File System/(75616:75616): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:32:07:632 File System/(75616:75616): Se inicializa el módulo File System
+[INFO] 01:32:07:632 File System/(75616:75616): PUERTO ESCUCHA: 8003
+[INFO] 01:32:07:633 File System/(75616:75616): Crear Archivo: <campeonesFormula1>
+[INFO] 01:32:07:633 File System/(75616:75616): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:32:07:633 File System/(75616:75616): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:32:36:823 File System/(75692:75692): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:32:36:831 File System/(75692:75692): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:32:36:833 File System/(75692:75692): Se inicializa el módulo File System
+[INFO] 01:32:36:833 File System/(75692:75692): PUERTO ESCUCHA: 8003
+[INFO] 01:32:36:834 File System/(75692:75692): Crear Archivo: <campeonesFormula1>
+[INFO] 01:32:36:835 File System/(75692:75692): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:32:36:835 File System/(75692:75692): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:32:52:066 File System/(75715:75715): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:32:52:071 File System/(75715:75715): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:32:52:072 File System/(75715:75715): Se inicializa el módulo File System
+[INFO] 01:32:52:072 File System/(75715:75715): PUERTO ESCUCHA: 8003
+[INFO] 01:32:52:072 File System/(75715:75715): Crear Archivo: <campeonesFormula1>
+[INFO] 01:32:52:072 File System/(75715:75715): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 01:32:52:072 File System/(75715:75715): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 01:36:22:219 File System/(75812:75812): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:36:22:223 File System/(75812:75812): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:36:22:225 File System/(75812:75812): Se inicializa el módulo File System
+[INFO] 01:36:22:225 File System/(75812:75812): PUERTO ESCUCHA: 8003
+[INFO] 01:36:22:226 File System/(75812:75812): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:37:36:345 File System/(75960:75960): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:37:36:348 File System/(75960:75960): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:37:36:350 File System/(75960:75960): Se inicializa el módulo File System
+[INFO] 01:37:36:350 File System/(75960:75960): PUERTO ESCUCHA: 8003
+[INFO] 01:37:36:350 File System/(75960:75960): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:40:54:168 File System/(75995:75995): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:40:54:173 File System/(75995:75995): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:40:54:173 File System/(75995:75995): Se inicializa el módulo File System
+[INFO] 01:40:54:173 File System/(75995:75995): PUERTO ESCUCHA: 8003
+[INFO] 01:40:55:974 File System/(75995:75995): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:48:11:534 File System/(76293:76293): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:48:11:534 File System/(76293:76293): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:48:11:534 File System/(76293:76293): Se inicializa el módulo File System
+[INFO] 01:48:11:534 File System/(76293:76293): PUERTO ESCUCHA: 8003
+[INFO] 01:48:11:534 File System/(76293:76293): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:51:15:024 File System/(76528:76528): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:51:15:027 File System/(76528:76528): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:51:15:029 File System/(76528:76528): Se inicializa el módulo File System
+[INFO] 01:51:15:029 File System/(76528:76528): PUERTO ESCUCHA: 8003
+[INFO] 01:51:15:029 File System/(76528:76528): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:51:53:051 File System/(76557:76557): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:51:53:051 File System/(76557:76557): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:51:53:051 File System/(76557:76557): Se inicializa el módulo File System
+[INFO] 01:51:53:051 File System/(76557:76557): PUERTO ESCUCHA: 8003
+[INFO] 01:51:53:051 File System/(76557:76557): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:53:02:546 File System/(76697:76697): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:53:02:551 File System/(76697:76697): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:53:02:552 File System/(76697:76697): Se inicializa el módulo File System
+[INFO] 01:53:02:552 File System/(76697:76697): PUERTO ESCUCHA: 8003
+[INFO] 01:53:02:552 File System/(76697:76697): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:54:41:129 File System/(76827:76827): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:54:41:133 File System/(76827:76827): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:54:41:135 File System/(76827:76827): Se inicializa el módulo File System
+[INFO] 01:54:41:135 File System/(76827:76827): PUERTO ESCUCHA: 8003
+[INFO] 01:54:41:135 File System/(76827:76827): Abrir Archivo: <campeonesFormula1>
+[INFO] 01:59:18:016 File System/(76922:76922): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 01:59:18:016 File System/(76922:76922): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 01:59:18:016 File System/(76922:76922): Se inicializa el módulo File System
+[INFO] 01:59:18:016 File System/(76922:76922): PUERTO ESCUCHA: 8003
+[INFO] 01:59:18:016 File System/(76922:76922): Abrir Archivo: <campeonesFormula1>
+[INFO] 02:00:39:693 File System/(77098:77098): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:00:39:695 File System/(77098:77098): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:00:39:695 File System/(77098:77098): Se inicializa el módulo File System
+[INFO] 02:00:39:695 File System/(77098:77098): PUERTO ESCUCHA: 8003
+[INFO] 02:00:39:695 File System/(77098:77098): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Libre>
+[INFO] 02:00:39:695 File System/(77098:77098): Abrir Archivo: <fcbPrueba>
+[INFO] 02:00:39:696 File System/(77098:77098): Crear Archivo: <campeonesF1>
+[INFO] 02:00:39:697 File System/(77098:77098): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:00:39:697 File System/(77098:77098): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:00:39:698 File System/(77098:77098): Abrir Archivo: <campeonesF1>
+[INFO] 02:00:39:698 File System/(77098:77098): Acceso de Lectura a Bitmap - Bloque <0> - Estado: <Ocupado>
+[INFO] 02:02:52:131 File System/(77277:77277): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:02:52:141 File System/(77277:77277): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:02:52:141 File System/(77277:77277): Se inicializa el módulo File System
+[INFO] 02:02:52:141 File System/(77277:77277): PUERTO ESCUCHA: 8003
+[INFO] 02:03:06:128 File System/(77317:77317): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:03:06:129 File System/(77317:77317): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:03:06:129 File System/(77317:77317): Se inicializa el módulo File System
+[INFO] 02:03:06:129 File System/(77317:77317): PUERTO ESCUCHA: 8003
+[INFO] 02:03:06:129 File System/(77317:77317): Abrir Archivo: <campeonesFormula1>
+[INFO] 02:04:14:962 File System/(77378:77378): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:04:14:965 File System/(77378:77378): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:04:14:967 File System/(77378:77378): Se inicializa el módulo File System
+[INFO] 02:04:14:967 File System/(77378:77378): PUERTO ESCUCHA: 8003
+[INFO] 02:04:14:968 File System/(77378:77378): Crear Archivo: <campeonesF1>
+[INFO] 02:04:14:969 File System/(77378:77378): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:04:14:969 File System/(77378:77378): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:04:14:969 File System/(77378:77378): Abrir Archivo: <campeonesF1>
+[INFO] 02:04:14:969 File System/(77378:77378): Abrir Archivo: <campeonesFormula1>
+[INFO] 02:05:23:871 File System/(77434:77434): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:05:23:874 File System/(77434:77434): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:05:23:876 File System/(77434:77434): Se inicializa el módulo File System
+[INFO] 02:05:23:876 File System/(77434:77434): PUERTO ESCUCHA: 8003
+[INFO] 02:05:23:876 File System/(77434:77434): Crear Archivo: <campeonesFormula1>
+[INFO] 02:05:23:877 File System/(77434:77434): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:05:23:877 File System/(77434:77434): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:05:32:167 File System/(77469:77469): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:05:32:173 File System/(77469:77469): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:05:32:173 File System/(77469:77469): Se inicializa el módulo File System
+[INFO] 02:05:32:173 File System/(77469:77469): PUERTO ESCUCHA: 8003
+[INFO] 02:05:32:174 File System/(77469:77469): Crear Archivo: <campeonesFormula1>
+[INFO] 02:05:32:174 File System/(77469:77469): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:05:32:174 File System/(77469:77469): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:06:03:583 File System/(77517:77517): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:06:03:590 File System/(77517:77517): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:06:03:590 File System/(77517:77517): Se inicializa el módulo File System
+[INFO] 02:06:03:590 File System/(77517:77517): PUERTO ESCUCHA: 8003
+[INFO] 02:06:03:591 File System/(77517:77517): Crear Archivo: <campeonesFormula1>
+[INFO] 02:06:03:591 File System/(77517:77517): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:06:03:591 File System/(77517:77517): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:07:42:444 File System/(77703:77703): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:07:42:447 File System/(77703:77703): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:07:42:450 File System/(77703:77703): Se inicializa el módulo File System
+[INFO] 02:07:42:450 File System/(77703:77703): PUERTO ESCUCHA: 8003
+[INFO] 02:07:42:450 File System/(77703:77703): Crear Archivo: <campeonesFormula1>
+[INFO] 02:07:42:450 File System/(77703:77703): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:07:42:451 File System/(77703:77703): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:07:42:484 File System/(77703:77703): Crear Archivo: <campeonesF1>
+[INFO] 02:07:42:484 File System/(77703:77703): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:07:42:484 File System/(77703:77703): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:09:26:700 File System/(77817:77817): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:09:26:704 File System/(77817:77817): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:09:26:706 File System/(77817:77817): Se inicializa el módulo File System
+[INFO] 02:09:26:706 File System/(77817:77817): PUERTO ESCUCHA: 8003
+[INFO] 02:09:26:706 File System/(77817:77817): Crear Archivo: <campeonesFormula1>
+[INFO] 02:09:26:707 File System/(77817:77817): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:09:26:707 File System/(77817:77817): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:09:26:733 File System/(77817:77817): Crear Archivo: <campeonesF1>
+[INFO] 02:09:26:733 File System/(77817:77817): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:09:26:733 File System/(77817:77817): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:50:36:070 File System/(78333:78333): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:50:36:074 File System/(78333:78333): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:50:36:074 File System/(78333:78333): Se inicializa el módulo File System
+[INFO] 02:50:36:074 File System/(78333:78333): PUERTO ESCUCHA: 8003
+[INFO] 02:50:36:074 File System/(78333:78333): Crear Archivo: <campeonesFormula1>
+[INFO] 02:50:36:074 File System/(78333:78333): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:50:36:074 File System/(78333:78333): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:50:36:084 File System/(78333:78333): Crear Archivo: <campeonesF1>
+[INFO] 02:50:36:084 File System/(78333:78333): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:50:36:084 File System/(78333:78333): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:50:58:239 File System/(78371:78371): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:50:58:245 File System/(78371:78371): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:50:58:245 File System/(78371:78371): Se inicializa el módulo File System
+[INFO] 02:50:58:245 File System/(78371:78371): PUERTO ESCUCHA: 8003
+[INFO] 02:50:58:245 File System/(78371:78371): Crear Archivo: <campeonesFormula1>
+[INFO] 02:50:58:245 File System/(78371:78371): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:50:58:245 File System/(78371:78371): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:50:58:246 File System/(78371:78371): Crear Archivo: <campeonesF1>
+[INFO] 02:50:58:246 File System/(78371:78371): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:50:58:246 File System/(78371:78371): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:51:06:871 File System/(78405:78405): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:51:06:880 File System/(78405:78405): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:51:06:880 File System/(78405:78405): Se inicializa el módulo File System
+[INFO] 02:51:06:880 File System/(78405:78405): PUERTO ESCUCHA: 8003
+[INFO] 02:51:06:881 File System/(78405:78405): Crear Archivo: <campeonesFormula1>
+[INFO] 02:51:06:881 File System/(78405:78405): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:51:06:881 File System/(78405:78405): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:51:06:881 File System/(78405:78405): Crear Archivo: <campeonesF1>
+[INFO] 02:51:06:881 File System/(78405:78405): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:51:06:881 File System/(78405:78405): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:51:27:326 File System/(78448:78448): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:51:27:327 File System/(78448:78448): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:51:27:328 File System/(78448:78448): Se inicializa el módulo File System
+[INFO] 02:51:27:328 File System/(78448:78448): PUERTO ESCUCHA: 8003
+[INFO] 02:51:27:328 File System/(78448:78448): Crear Archivo: <campeonesFormula1>
+[INFO] 02:51:27:330 File System/(78448:78448): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:51:27:330 File System/(78448:78448): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:51:27:337 File System/(78448:78448): Crear Archivo: <campeonesF1>
+[INFO] 02:51:27:337 File System/(78448:78448): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:51:27:337 File System/(78448:78448): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:51:40:637 File System/(78486:78486): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:51:40:640 File System/(78486:78486): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:51:40:640 File System/(78486:78486): Se inicializa el módulo File System
+[INFO] 02:51:40:640 File System/(78486:78486): PUERTO ESCUCHA: 8003
+[INFO] 02:51:40:640 File System/(78486:78486): Crear Archivo: <campeonesFormula1>
+[INFO] 02:51:40:641 File System/(78486:78486): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:51:40:641 File System/(78486:78486): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:51:40:642 File System/(78486:78486): Crear Archivo: <campeonesF1>
+[INFO] 02:51:40:642 File System/(78486:78486): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:51:40:642 File System/(78486:78486): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:52:11:267 File System/(78516:78516): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:52:11:267 File System/(78516:78516): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:52:11:267 File System/(78516:78516): Se inicializa el módulo File System
+[INFO] 02:52:11:267 File System/(78516:78516): PUERTO ESCUCHA: 8003
+[INFO] 02:52:13:669 File System/(78516:78516): Crear Archivo: <campeonesFormula1>
+[INFO] 02:52:13:672 File System/(78516:78516): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:52:13:672 File System/(78516:78516): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:52:17:343 File System/(78516:78516): Crear Archivo: <campeonesF1>
+[INFO] 02:52:17:344 File System/(78516:78516): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:52:17:344 File System/(78516:78516): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:53:40:634 File System/(78734:78734): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:53:40:637 File System/(78734:78734): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:53:40:641 File System/(78734:78734): Se inicializa el módulo File System
+[INFO] 02:53:40:641 File System/(78734:78734): PUERTO ESCUCHA: 8003
+[INFO] 02:53:40:642 File System/(78734:78734): Crear Archivo: <campeonesFormula1>
+[INFO] 02:53:40:642 File System/(78734:78734): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:53:40:643 File System/(78734:78734): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:53:40:644 File System/(78734:78734): Crear Archivo: <campeonesF1>
+[INFO] 02:53:40:644 File System/(78734:78734): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:53:40:644 File System/(78734:78734): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:53:55:610 File System/(78772:78772): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:53:55:615 File System/(78772:78772): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:53:55:616 File System/(78772:78772): Se inicializa el módulo File System
+[INFO] 02:53:55:616 File System/(78772:78772): PUERTO ESCUCHA: 8003
+[INFO] 02:53:55:617 File System/(78772:78772): Crear Archivo: <campeonesFormula1>
+[INFO] 02:53:55:617 File System/(78772:78772): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:53:55:618 File System/(78772:78772): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:53:55:644 File System/(78772:78772): Crear Archivo: <campeonesF1>
+[INFO] 02:53:55:644 File System/(78772:78772): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:53:55:644 File System/(78772:78772): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:54:06:209 File System/(78807:78807): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:54:06:212 File System/(78807:78807): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:54:06:212 File System/(78807:78807): Se inicializa el módulo File System
+[INFO] 02:54:06:212 File System/(78807:78807): PUERTO ESCUCHA: 8003
+[INFO] 02:54:06:213 File System/(78807:78807): Crear Archivo: <campeonesFormula1>
+[INFO] 02:54:06:215 File System/(78807:78807): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:54:06:216 File System/(78807:78807): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:54:06:233 File System/(78807:78807): Crear Archivo: <campeonesF1>
+[INFO] 02:54:06:233 File System/(78807:78807): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:54:06:235 File System/(78807:78807): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:54:22:962 File System/(78852:78852): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:54:22:970 File System/(78852:78852): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:54:22:970 File System/(78852:78852): Se inicializa el módulo File System
+[INFO] 02:54:22:970 File System/(78852:78852): PUERTO ESCUCHA: 8003
+[INFO] 02:54:22:971 File System/(78852:78852): Crear Archivo: <campeonesFormula1>
+[INFO] 02:54:22:971 File System/(78852:78852): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:54:22:971 File System/(78852:78852): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:54:22:971 File System/(78852:78852): Crear Archivo: <campeonesF1>
+[INFO] 02:54:22:971 File System/(78852:78852): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:54:22:971 File System/(78852:78852): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:55:36:411 File System/(78934:78934): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:55:36:418 File System/(78934:78934): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:55:36:418 File System/(78934:78934): Se inicializa el módulo File System
+[INFO] 02:55:36:418 File System/(78934:78934): PUERTO ESCUCHA: 8003
+[INFO] 02:55:36:418 File System/(78934:78934): Crear Archivo: <campeonesFormula1>
+[INFO] 02:55:36:418 File System/(78934:78934): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:55:36:418 File System/(78934:78934): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:55:36:420 File System/(78934:78934): Crear Archivo: <campeonesF1>
+[INFO] 02:55:36:420 File System/(78934:78934): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:55:36:420 File System/(78934:78934): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:56:12:201 File System/(78970:78970): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:56:12:204 File System/(78970:78970): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:56:12:207 File System/(78970:78970): Se inicializa el módulo File System
+[INFO] 02:56:12:207 File System/(78970:78970): PUERTO ESCUCHA: 8003
+[INFO] 02:56:12:207 File System/(78970:78970): Crear Archivo: <campeonesFormula1>
+[INFO] 02:56:12:208 File System/(78970:78970): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:56:12:208 File System/(78970:78970): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:56:12:239 File System/(78970:78970): Crear Archivo: <campeonesF1>
+[INFO] 02:56:12:239 File System/(78970:78970): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:56:12:239 File System/(78970:78970): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:56:41:045 File System/(79004:79004): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:56:41:051 File System/(79004:79004): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:56:41:051 File System/(79004:79004): Se inicializa el módulo File System
+[INFO] 02:56:41:051 File System/(79004:79004): PUERTO ESCUCHA: 8003
+[INFO] 02:56:41:051 File System/(79004:79004): Crear Archivo: <campeonesFormula1>
+[INFO] 02:56:41:052 File System/(79004:79004): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:56:41:052 File System/(79004:79004): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:56:41:053 File System/(79004:79004): Crear Archivo: <campeonesF1>
+[INFO] 02:56:41:054 File System/(79004:79004): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:56:41:054 File System/(79004:79004): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:57:47:347 File System/(79092:79092): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:57:47:352 File System/(79092:79092): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:57:47:355 File System/(79092:79092): Se inicializa el módulo File System
+[INFO] 02:57:47:356 File System/(79092:79092): PUERTO ESCUCHA: 8003
+[INFO] 02:57:47:356 File System/(79092:79092): Crear Archivo: <campeonesFormula1>
+[INFO] 02:57:47:356 File System/(79092:79092): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:57:47:356 File System/(79092:79092): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:57:47:381 File System/(79092:79092): Crear Archivo: <campeonesF1>
+[INFO] 02:57:47:382 File System/(79092:79092): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:57:47:382 File System/(79092:79092): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 02:59:30:184 File System/(79201:79201): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 02:59:30:184 File System/(79201:79201): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 02:59:30:184 File System/(79201:79201): Se inicializa el módulo File System
+[INFO] 02:59:30:184 File System/(79201:79201): PUERTO ESCUCHA: 8003
+[INFO] 02:59:30:184 File System/(79201:79201): Crear Archivo: <campeonesFormula1>
+[INFO] 02:59:30:184 File System/(79201:79201): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 02:59:30:184 File System/(79201:79201): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 02:59:30:185 File System/(79201:79201): Crear Archivo: <campeonesF1>
+[INFO] 02:59:30:185 File System/(79201:79201): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 02:59:30:185 File System/(79201:79201): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 03:00:19:780 File System/(79263:79263): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 03:00:19:790 File System/(79263:79263): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 03:00:19:790 File System/(79263:79263): Se inicializa el módulo File System
+[INFO] 03:00:19:790 File System/(79263:79263): PUERTO ESCUCHA: 8003
+[INFO] 03:00:19:794 File System/(79263:79263): Crear Archivo: <campeonesFormula1>
+[INFO] 03:00:19:796 File System/(79263:79263): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 03:00:19:797 File System/(79263:79263): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 03:00:19:798 File System/(79263:79263): Crear Archivo: <campeonesF1>
+[INFO] 03:00:19:798 File System/(79263:79263): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 03:00:19:799 File System/(79263:79263): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>

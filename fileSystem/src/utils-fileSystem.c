@@ -1,95 +1,138 @@
 #include "utils-fileSystem.h"
 #include <commons/bitarray.h>
+#include <commons/string.h>
 #include <sys/mman.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
+// dps cambiar log_info a donde esta el manejo de conexión, están en las funciones de manera provisional
 
 void probando_cositas(){
-	// Prueba respuesta a petición de creación de archivo (SEGUIR) //
-	// --- INICIO --- //
-	printf("%i\n",(int)estructura_bitmap->size);
+////	 Prueba respuesta a petición de creación de archivo (SEGUIR) //
+////	 --- INICIO --- //
+//	printf("%i\n",(int)estructura_bitmap->size);
+//
+//	acceso_lectura_bitmap(0);
+//
+////	levantar_fcb_nuevo_archivo("fcbPrueba");
+////	t_config* configTCB = iniciar_config("../fileSystem/grupoDeBloques/fcbPrueba");
+////	t_fcb fcb;
+//
+//
+////
+////	fcb.puntero_directo = config_get_int_value(configTCB,"PUNTERO_DIRECTO");
+////	fcb.nombre_archivo = config_get_string_value(configTCB,"NOMBRE_ARCHIVO");
+////
+////	printf("Puntero directo: %d \n",fcb.puntero_directo);
+////	printf("Nombre archivo:  %s \n",fcb.nombre_archivo);
+//
+//	if(abrir_archivo("fcbPrueba"))
+//	{
+//		printf("Existe el archivo solicitado fcbPrueba \n");
+//	}
+//	else
+//	{
+//		printf("No existe el archivo solicitado fcbPrueba \n");
+//	}
+//
+//	crear_archivo("campeonesF1");
+//
+//	if(abrir_archivo("campeonesF1"))
+//	{
+//		printf("Existe el archivo solicitado campeonesF1 \n");
+//	}
+//	else
+//	{
+//		printf("No existe el archivo solicitado campeonesF1 \n");
+//	}
 
-	levantar_fcb_nuevo_archivo("fcbPrueba");
-	t_config* configTCB = iniciar_config("../fileSystem/grupoDeBloques/fcbPrueba");
-	t_fcb fcb;
+//	acceso_lectura_bitmap(0);
+//
+////	truncar_archivo("campeonesF1","125",mapping_archivo_bloques);
+//
+//	int a = mapping_archivo_bloques;
+//
+//	printf("%i \n",a);
+//
+//	obtener_ruta_archivo("ArchivoEjemplo");
+//
+////	 --- FIN --- //
+////
+////
+////	 Verificación bloques asignados a archivo creado se indican como ocupados //
+////	 --- INICIO --- //
+//	FILE* f;
+//	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
+//
+//
+//	if(fileno(f) == -1){
+//		printf("Error al abrir archivo bitmap\n");
+//	}
+//
+//		fseek(f,0,0);
+//
+//		unsigned char b;
+//
+//
+//			fread(&b,1,1,f);
+//			printf("%u\n",b);
+//
+//
+//		fclose(f);
+	// --- FIN --- //
+
+	crear_archivo("campeonesFormula1");
+
+//
+//	// veo si con asignación de bloques cambié archivo de bloques
+//	// 0 y 1 ocupados, osea primer byte es 00000011, osea 3
 
 
+	unsigned char b;
+	fseek(archivo_bm,0,0);
+	fread(&b,1,1,archivo_bm);
+	printf("%u\n",b);
 
-	fcb.puntero_directo = config_get_int_value(configTCB,"PUNTERO_DIRECTO");
-	fcb.nombre_archivo = config_get_string_value(configTCB,"NOMBRE_ARCHIVO");
+	// funco :)
 
-	printf("Puntero directo: %d \n",fcb.puntero_directo);
-	printf("Nombre archivo:  %s \n",fcb.nombre_archivo);
-
-	if(abrir_archivo("fcbPrueba"))
-	{
-		printf("Existe el archivo solicitado fcbPrueba \n");
-	}
-	else
-	{
-		printf("No existe el archivo solicitado fcbPrueba \n");
-	}
+// luego si creo otro archivo asigna bloques 2,3
+// tendría como primer byte 00001111, considerar que cada unsigned byte son 4 bits se obtendrán dos 3
 
 	crear_archivo("campeonesF1");
 
-	if(abrir_archivo("campeonesF1"))
-	{
-		printf("Existe el archivo solicitado campeonesF1 \n");
-	}
-	else
-	{
-		printf("No existe el archivo solicitado campeonesF1 \n");
-	}
+	fseek(archivo_bm,0,0);
+	fread(&b,1,1,archivo_bm);
+	printf("%u\n",b);
 
+// funco
 
-//	truncar_archivo("campeonesF1","125",mapping_archivo_bloques);
+// pruebo si al escribir en direcc memoria mappeada por ejemplo en bloque de puntero indirecto , se efectua sobre archivo
+// por ejempl para campeonesF1 el bloque de punteros indirectos es el bloque nro 3.
 
-	int a = mapping_archivo_bloques;
+	int nro_bloque = 99;
 
-	printf("%i \n",a);
+	memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(3),&nro_bloque,sizeof(uint32_t));
 
-	obtener_ruta_archivo("ArchivoEjemplo");
+	uint32_t p = *(mapping_archivo_bloques + obtener_posicion_archivo_bloques(3));
 
-	// --- FIN --- //
+	printf("%ld\n",p);
 
+	// ARRIBA MUESTRO QUE SE ESCRIBIÓ 99 EN MEMORIA
 
-	// Verificación bloques asignados a archivo creado se indican como ocupados //
-	// --- INICIO --- //
-	FILE* f;
-	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
+	uint32_t lectura;
+	fseek(archivo_bloques,obtener_posicion_archivo_bloques(3),0);
+	fread(&lectura,4,1,archivo_bloques);
+	// tendría que sacar 99
+	printf("%ld\n",lectura);
 
+	// ARRIBA MUESTRO QUE SE ESCRIBIÓ 99 EN EL ARCHIVO
 
-	if(fileno(f) == -1){
-		printf("Error al abrir archivo bitmap\n");
-	}
+	truncar_archivo("campeonesFormula1",string_itoa(128));
 
-		fseek(f,0,0);
-
-		unsigned char b;
-
-		for(int i = 0; i < config_super_bloque_valores->block_count/8; i++){
-			fread(&b,1,1,f);
-			printf("%u\n",b);
-		}
-
-		fclose(f);
-	// --- FIN --- //
 }
 
-
-
-// |								   |
-// |   	FUNCIONES MÁS "ALTO NIVEL"     |
-// |								   |
-
-
-
-// |								   |
-// |   	FUNCIONES DE MANEJO DE FS	   |
-// |								   |
 
 int abrir_archivo(char* nombre_archivo){
 	// busco archivo, si no existe f será nula y fd será -1, devolver fd
@@ -105,6 +148,8 @@ int abrir_archivo(char* nombre_archivo){
 	{
 		boolExiste = 0;
 	}
+
+	log_info(logger,"Abrir Archivo: <%s>",nombre_archivo);
 	return boolExiste;
 }
 
@@ -130,6 +175,19 @@ int crear_archivo(char* nombre_archivo)
 	fprintf(f,"PUNTERO_INDIRECTO=%s\n","-1");
 
 	fclose(f);
+
+	log_info(logger,"Crear Archivo: <%s>",nombre_archivo);
+
+	// PROVISIONAL -> probando que funcionen cambios sobre FCB (osea entrada de directorio) - dps sacar porque no corresponde a creación de archivo
+	// pues no se asignan bloques cuando se crea !
+
+	t_config* config_fcb_archivo = iniciar_config(ruta);
+
+	asignar_bloques_iniciales(ruta,config_fcb_archivo);
+
+
+	// PROVISIONAL !
+
 	free(ruta);
 
 	return 1;
@@ -168,6 +226,8 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,tamanio_bloque,cantidad_punteros_bloque,config_fcb_archivo);
 	}
 
+	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%s>",nombre_archivo,nuevo_tamanio);
+
 	msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
 
 	config_set_value(config_fcb_archivo,"TAMANIO_ARCHIVO",nuevo_tamanio);
@@ -176,6 +236,25 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 
 	fclose(f);
 
+}
+
+int acceso_lectura_bitmap(int nro_bloque)
+{
+	char* string;
+
+	int ret = bitarray_test_bit(estructura_bitmap,nro_bloque);
+
+	if(ret)
+	{
+		string = "Ocupado";
+	}
+	else
+	{
+		string = "Libre";
+	}
+
+	log_info(logger,"Acceso de Lectura a Bitmap - Bloque <%i> - Estado: <%s>",nro_bloque,string);
+	return ret;
 }
 
 void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque,t_config* config_fcb_archivo)
@@ -382,9 +461,9 @@ t_bitarray* inicializar_archivo_bm(FILE* f){
 
 //	f = fopen(config_get_string_value(config,"PATH_BITMAP"),"w+");
 
-	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","w+");
+	archivo_bm = fopen("../fileSystem/grupoDeBloques/bitmap.bin","w+");
 
-	int fd = fileno(f);
+	int fd = fileno(archivo_bm);
 
 	if(fd == -1){
 		printf("Error al crear archivo bitmap\n");
@@ -402,7 +481,7 @@ t_bitarray* inicializar_archivo_bm(FILE* f){
 	ftruncate(fd,cantidad_bytes);
 
 	for(int i = 0; i < cantidad_bytes; i++){
-		fwrite(&byte,1,1,f);
+		fwrite(&byte,1,1,archivo_bm);
 	}
 
 	char* mapping = mmap(NULL,cantidad_bytes+1,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
@@ -433,28 +512,54 @@ int primer_bloque_disponible()
 	return i;
 }
 
-void asignar_bloques_iniciales(FILE* fcb){
-	FILE* f;
-	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
-
-	if(fileno(f) == -1){
-		printf("Error al abrir archivo bitmap\n");
+void acceso_escritura_bitmap(int nro_bloque,int estado_escribir)
+{
+	if(estado_escribir)
+	{
+		bitarray_set_bit(estructura_bitmap,nro_bloque);
+		log_info(logger,"Acceso de Escritua a Bitmap - Bloque <%i> - Se cambia estado a: <1>",nro_bloque);
 	}
+	else
+	{
+		bitarray_clean_bit(estructura_bitmap,nro_bloque);
+		log_info(logger,"Acceso de Escritua a Bitmap - Bloque <%i> - Se cambia estado a: <0>",nro_bloque);
+	}
+}
+
+
+void asignar_bloques_iniciales(char* ruta,t_config* config_fcb_archivo){
+//	FILE* f;
+//	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
+//
+//	if(fileno(f) == -1){
+//		printf("Error al abrir archivo bitmap\n");
+//	}
 
 	int nro_primer_bloque = primer_bloque_disponible(estructura_bitmap);
 
-	bitarray_set_bit(estructura_bitmap,nro_primer_bloque);
+//	bitarray_set_bit(estructura_bitmap,nro_primer_bloque);
 
-	fprintf(fcb,"PUNTERO_DIRECTO=%i\n",nro_primer_bloque);
-
+	acceso_escritura_bitmap(nro_primer_bloque,1);
+//
+//	t_config* config_fcb_archivo_copia = config_fcb_archivo;
+//
 	int nro_bloque_punteros = primer_bloque_disponible(estructura_bitmap);
 
-	bitarray_set_bit(estructura_bitmap,nro_bloque_punteros);
+//	bitarray_set_bit(estructura_bitmap,nro_bloque_punteros);
 
-	fprintf(fcb,"PUNTERO_INDIRECTO=%i\n",nro_bloque_punteros);
+	acceso_escritura_bitmap(nro_bloque_punteros,1);
 
-	fclose(f);
-	fclose(fcb);
+	char* nombre = config_get_string_value(config_fcb_archivo,"NOMBRE_ARCHIVO");
+
+	config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",string_itoa(nro_primer_bloque));
+	config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(nro_bloque_punteros));
+
+	config_save(config_fcb_archivo);
+
+	printf("Prueba cantidad keys config: %i\n",config_keys_amount(config_fcb_archivo));
+	// da dos, por algun extraño motivo set value borra las llaves anteriores
+
+
 }
 
 void liberar_recursos_bitmap(FILE* archivo_bm,FILE* archivo_bloques,char* mapping_archivo_bloques){
@@ -482,27 +587,27 @@ void liberar_recursos_bitmap(FILE* archivo_bm,FILE* archivo_bloques,char* mappin
 
 // cada registro de archivo será un bloque, por ende cada registro del archivo consiste de 64 bytes (o lo que se indique en el archivo de config que ocupan los bloques)
 //
-void levantar_archivo_bloques(FILE*f,char* mapping){
+void levantar_archivo_bloques(){
 
 	int cantidad_bloques = config_super_bloque_valores->block_count;
 	int tamanio_bloques = config_super_bloque_valores->block_size;
 	// - //
 
-	f = fopen(config_valores->path_bloques,"w+");
+	archivo_bloques = fopen(config_valores->path_bloques,"w+");
 
-	int fd = fileno(f);
+	int fd = fileno(archivo_bloques);
 
 	if(fd == -1){
 		printf("Error al crear archivo de bloques\n");
-		fclose(f);
+		fclose(archivo_bloques);
 	}
 	int tamanio_en_bytes = cantidad_bloques * tamanio_bloques;
 
 	ftruncate(fd,tamanio_en_bytes);
 
-	mapping = mmap(NULL,tamanio_en_bytes,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
+	mapping_archivo_bloques = mmap(NULL,tamanio_en_bytes,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
 
-	if(mapping == MAP_FAILED){
+	if(mapping_archivo_bloques == MAP_FAILED){
 		printf("Error al mappear memoria\n");
 	}
 
@@ -531,25 +636,25 @@ char* obtener_ruta_archivo(const char* nombre_archivo)
 }
 
 
-void levantar_fcb_nuevo_archivo(const char* nombre_archivo){
-	FILE* f;
-
-	int tamanio_bloques = config_super_bloque_valores->block_size;
-
-	char* ruta = obtener_ruta_archivo(nombre_archivo);
-
-	f = fopen(ruta,"w+");
-
-	int fd = fileno(f);
-
-	if(fd == -1){
-		printf("Error al crear archivo de config\n");
-		fclose(f);
-	}
-
-	fprintf(f,"NOMBRE_ARCHIVO=%s\n",nombre_archivo);
-	fprintf(f,"TAMANIO_ARCHIVO=%i\n",tamanio_bloques*2);
-
-	asignar_bloques_iniciales(f);
-	free(ruta);
-}
+//void levantar_fcb_nuevo_archivo(const char* nombre_archivo){
+//	FILE* f;
+//
+//	int tamanio_bloques = config_super_bloque_valores->block_size;
+//
+//	char* ruta = obtener_ruta_archivo(nombre_archivo);
+//
+//	f = fopen(ruta,"w+");
+//
+//	int fd = fileno(f);
+//
+//	if(fd == -1){
+//		printf("Error al crear archivo de config\n");
+//		fclose(f);
+//	}
+//
+//	fprintf(f,"NOMBRE_ARCHIVO=%s\n",nombre_archivo);
+//	fprintf(f,"TAMANIO_ARCHIVO=%i\n",tamanio_bloques*2);
+//
+//	asignar_bloques_iniciales(f);
+//	free(ruta);
+//}
