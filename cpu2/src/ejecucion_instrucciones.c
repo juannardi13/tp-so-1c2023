@@ -800,7 +800,7 @@ void ejecutar_F_WRITE(char* instruccion_grande, t_contexto_de_ejecucion* context
 	free(paquete);
 }
 
-void ejecutar_IO(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada) {
+void ejecutar_IO(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel) {
 	char** instruccion_con_parametros = string_split(instruccion, " ");
 
 	t_buffer *buffer = malloc(sizeof(t_buffer));

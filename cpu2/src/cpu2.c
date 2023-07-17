@@ -3,7 +3,6 @@
 #define MAX_LEN 256
 
 int main() {
-	bool cpu_bloqueada = false;
 	char* ip_kernel;
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
@@ -145,7 +144,7 @@ int main() {
 				case IO: //TERMINADO - ERA FINITA - FINISHED - WAR VORBEI
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel, cpu_bloqueada);
+					ejecutar_IO(instruccion_a_ejecutar, contexto, fd_kernel);
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_OPEN: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO

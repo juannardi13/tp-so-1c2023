@@ -71,7 +71,9 @@ void buscar_valor_enviar_CPU(int direccion_fisica_buscada, int socket_cliente){
 }
 
 void escribir_valor_en_direccion_fisica(int direccion_fisica, char* valor){
+	// en cada acceso al espacio de usuario hacer un usleep con lo de la config
 	// Buscar direccion fisica, le asigna valor que me paso CPU
 	// Ver que pasa si no la encuentra !!!
+	log_info(logger, "OK, se escribio el valor en memoria");// agreamos log para enviar mensaje de ok
 }
 

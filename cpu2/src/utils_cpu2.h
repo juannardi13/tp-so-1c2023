@@ -55,7 +55,7 @@ void ejecutar_F_READ(char*, t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_F_SEEK(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_F_TRUNCATE(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_F_WRITE(char*, t_contexto_de_ejecucion*, int, int, t_config*);
-void ejecutar_IO(char*, t_contexto_de_ejecucion*, int, bool);
+void ejecutar_IO(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_MOV_IN(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
 void ejecutar_MOV_OUT(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
 void ejecutar_SET(char*, t_contexto_de_ejecucion*);
