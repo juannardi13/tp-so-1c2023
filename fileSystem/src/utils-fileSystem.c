@@ -168,26 +168,94 @@ void probando_cositas(){
 	// el 99 se rompe el vínculo del mmap. Primero hacer todas las escrituras y después si quiero probar, leer el archivo sabiendo que no lo voy
 	// a poder volver a escribir por modificar la direcc del mmap.
 
-	uint32_t lectura2;
-	fseek(archivo_bloques,obtener_posicion_archivo_bloques(6),0);
-	fread(&lectura2,4,1,archivo_bloques);
-	// tendría que sacar 7
-	printf("%ld\n",lectura2);
-
-	 lectura2;
-	fseek(archivo_bloques,obtener_posicion_archivo_bloques(6) + 4,0);
-	fread(&lectura2,4,1,archivo_bloques);
-	// tendría que sacar 7
-	printf("%ld\n",lectura2);
+//	uint32_t lectura2;
+//	fseek(archivo_bloques,obtener_posicion_archivo_bloques(6),0);
+//	fread(&lectura2,4,1,archivo_bloques);
+//	// tendría que sacar 7
+//	printf("%ld\n",lectura2);
+//
+//	 lectura2;
+//	fseek(archivo_bloques,obtener_posicion_archivo_bloques(6) + 4,0);
+//	fread(&lectura2,4,1,archivo_bloques);
+//	// tendría que sacar 8
+//	printf("%ld\n",lectura2);
 
 	// probé la hipotésis de acá comentando la lectura del archivo del 99 arriba
 	// imprimió 7 y 8, función caso de ftruncate
 
+
 	// otro caso de ftruncate
+	// archivo no estaba vacio, tamanio actual es menor a tamanio de bloque, tamanio nuevo tambien menor a tam bloque
 
+	crear_archivo("campeonesFutbolArgentino");
 
+	truncar_archivo("campeonesFutbolArgentino",string_itoa(54));
 
+	truncar_archivo("campeonesFutbolArgentino",string_itoa(60));
+
+	// funca
+
+	// archivo no estaba vacio, tamanio actual es menor a tamanio de bloque, tamanio nuevo mayor a tam bloque, tiene que asignar puntero indirecto
+
+	crear_archivo("campeonesPremier");
+
+	truncar_archivo("campeonesPremier",string_itoa(54));
+
+	truncar_archivo("campeonesPremier",string_itoa(147));
+
+	// se necesitaron 2 bloques que sean apuntados por punteros de bloque de punteros (bloque numero 11), por ende leyendo en archivo
+	// desde pos 11 desplazado 0 y 4 bytes deberían leer los nros de los bloques de datos 12, 13.
+
+//	uint32_t lectura2;
+//	fseek(archivo_bloques,obtener_posicion_archivo_bloques(11),0);
+//	fread(&lectura2,4,1,archivo_bloques);
+//	// tendría que sacar 12
+//	printf("%ld\n",lectura2);
+//
+//	 lectura2;
+//	fseek(archivo_bloques,obtener_posicion_archivo_bloques(11) + 4,0);
+//	fread(&lectura2,4,1,archivo_bloques);
+//	// tendría que sacar 13
+//	printf("%ld\n",lectura2);
+
+	// funca, imprimio lo que tenía que escribir en archivo de bloques
+
+	// archivo no estaba vacio, tamanio actual mayor a tamanio de bloque, determinar cuantos nuevos bloques tendrán que ser apuntados por punteros
+	// del bloque de punteros si es que esto es necesario. Puntero indirecto es 15. Si en 137 usa 2 punteros del bloque de puntero, tiene que usar 4 en total ahora entonces
+	// dos nuevo nro de bloque tendría que ser 18 y 19 (16 y 17 fueron usado para nros de bloques anteriores en primer truncamiento.
+
+	crear_archivo("campeonesLibertadores");
+
+	truncar_archivo("campeonesLibertadores",string_itoa(137));
+
+	truncar_archivo("campeonesLibertadores",string_itoa(250));
+
+		uint32_t lectura2;
+		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15),0);
+		fread(&lectura2,4,1,archivo_bloques);
+		// tendría que sacar 16
+		printf("%ld\n",lectura2);
+
+		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15) + 4,0);
+		fread(&lectura2,4,1,archivo_bloques);
+		// tendría que sacar 17
+		printf("%ld\n",lectura2);
+
+		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15) + 8,0);
+		fread(&lectura2,4,1,archivo_bloques);
+		// tendría que sacar 18
+		printf("%ld\n",lectura2);
+
+		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15) + 12,0);
+		fread(&lectura2,4,1,archivo_bloques);
+		// tendría que sacar 19
+		printf("%ld\n",lectura2);
+
+		// funca
+
+		// fin pruebas ampliar
 }
+
 
 
 int abrir_archivo(char* nombre_archivo){
@@ -436,7 +504,7 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 				//
 				//				int bloques_nuevos_necesarios = ceil(tamanio_necesario / tamanio_bloque);
 
-				int cantidad_bloques_puntero_indirecto = ceil((nuevo_tamanio_entero - tamanio_bloque) / tamanio_bloque);
+				int cantidad_bloques_puntero_indirecto = ceil((double)(nuevo_tamanio_entero - tamanio_bloque) / (double)tamanio_bloque);
 
 				int puntero_indirecto = primer_bloque_disponible(estructura_bitmap);
 
@@ -463,7 +531,8 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 					}
 					else
 					{
-						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,-1,sizeof(uint32_t));
+						int menos_uno = -1;
+						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&menos_uno,sizeof(uint32_t));
 					}
 				}
 			}
@@ -475,29 +544,29 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 			//  me quedan 15366. Dividido 1024 es 15.005 osea se usaron 16 entradas del bloque, de la 0 a la 15
 			// si el tamanio necesario me queda por ejemplo 2056 necesito 3 bloque nuevos. Serán el 16, 17, 18 osea cant_ind_usadas + 2
 
-			int cantidad_indirecciones_usadas = ceil((tamanio_fcb - tamanio_bloque)/tamanio_bloque);
+			int cantidad_indirecciones_usadas = ceil((double)(tamanio_fcb - tamanio_bloque)/(double)tamanio_bloque);
 
 			int tamanio_necesario = nuevo_tamanio_entero - tamanio_fcb;
 
-			int cantidad_punteros_indirectos = ceil(tamanio_necesario / tamanio_bloque);
+			int cantidad_punteros_indirectos = ceil((double)tamanio_necesario / (double)tamanio_bloque);
 
 			int nro_bloque_punteros_indirectos = config_get_int_value(config_fcb_archivo,"PUNTERO_INDIRECTO");
 
-			int j = 0;
-
 			for(int i = cantidad_indirecciones_usadas; i < (cantidad_indirecciones_usadas + cantidad_punteros_indirectos) ;i++)
 			{
-				int off = sizeof(uint32_t) * j;
+				int off = sizeof(uint32_t) * i;
 
 				int bloque_datos = primer_bloque_disponible();
 
 				bitarray_set_bit(estructura_bitmap,bloque_datos);
 
+				printf("%i\n",bloque_datos);
+
 				// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
 
 				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,&bloque_datos,sizeof(uint32_t));
 
-				j++;
+
 			}
 
 		}

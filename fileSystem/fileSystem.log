@@ -1900,3 +1900,445 @@
 [INFO] 19:26:47:387 File System/(9377:9377): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
 [INFO] 19:26:47:388 File System/(9377:9377): Crear Archivo: <plantelArgentinaCampeona>
 [INFO] 19:26:47:388 File System/(9377:9377): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:03:53:707 File System/(9760:9760): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:03:53:709 File System/(9760:9760): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:03:53:713 File System/(9760:9760): Se inicializa el módulo File System
+[INFO] 20:03:53:713 File System/(9760:9760): PUERTO ESCUCHA: 8003
+[INFO] 20:03:53:713 File System/(9760:9760): Crear Archivo: <campeonesFormula1>
+[INFO] 20:03:53:713 File System/(9760:9760): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:03:53:714 File System/(9760:9760): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:03:53:714 File System/(9760:9760): Crear Archivo: <campeonesF1>
+[INFO] 20:03:53:714 File System/(9760:9760): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:03:53:715 File System/(9760:9760): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:03:53:715 File System/(9760:9760): Crear Archivo: <escuderiasF1>
+[INFO] 20:03:53:716 File System/(9760:9760): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:03:53:716 File System/(9760:9760): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:03:53:716 File System/(9760:9760): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:03:53:717 File System/(9760:9760): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:04:28:823 File System/(9796:9796): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:04:28:825 File System/(9796:9796): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:04:28:825 File System/(9796:9796): Se inicializa el módulo File System
+[INFO] 20:04:28:826 File System/(9796:9796): PUERTO ESCUCHA: 8003
+[INFO] 20:04:28:826 File System/(9796:9796): Crear Archivo: <campeonesFormula1>
+[INFO] 20:04:28:826 File System/(9796:9796): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:04:28:830 File System/(9796:9796): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:04:28:830 File System/(9796:9796): Crear Archivo: <campeonesF1>
+[INFO] 20:04:28:831 File System/(9796:9796): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:04:28:831 File System/(9796:9796): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:04:28:831 File System/(9796:9796): Crear Archivo: <escuderiasF1>
+[INFO] 20:04:28:831 File System/(9796:9796): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:04:28:832 File System/(9796:9796): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:04:28:832 File System/(9796:9796): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:04:28:834 File System/(9796:9796): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:09:23:135 File System/(9934:9934): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:09:23:138 File System/(9934:9934): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:09:23:141 File System/(9934:9934): Se inicializa el módulo File System
+[INFO] 20:09:23:141 File System/(9934:9934): PUERTO ESCUCHA: 8003
+[INFO] 20:09:23:141 File System/(9934:9934): Crear Archivo: <campeonesFormula1>
+[INFO] 20:09:23:141 File System/(9934:9934): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:09:23:142 File System/(9934:9934): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:09:23:142 File System/(9934:9934): Crear Archivo: <campeonesF1>
+[INFO] 20:09:23:143 File System/(9934:9934): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:09:23:143 File System/(9934:9934): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:09:23:145 File System/(9934:9934): Crear Archivo: <escuderiasF1>
+[INFO] 20:09:23:145 File System/(9934:9934): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:09:23:145 File System/(9934:9934): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:09:23:147 File System/(9934:9934): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:09:23:147 File System/(9934:9934): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:09:23:147 File System/(9934:9934): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:09:23:147 File System/(9934:9934): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:12:18:610 File System/(10094:10094): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:12:18:614 File System/(10094:10094): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:12:18:616 File System/(10094:10094): Se inicializa el módulo File System
+[INFO] 20:12:18:616 File System/(10094:10094): PUERTO ESCUCHA: 8003
+[INFO] 20:12:18:616 File System/(10094:10094): Crear Archivo: <campeonesFormula1>
+[INFO] 20:12:18:617 File System/(10094:10094): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:12:18:617 File System/(10094:10094): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:12:18:620 File System/(10094:10094): Crear Archivo: <campeonesF1>
+[INFO] 20:12:18:620 File System/(10094:10094): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:12:18:620 File System/(10094:10094): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:12:18:620 File System/(10094:10094): Crear Archivo: <escuderiasF1>
+[INFO] 20:12:18:620 File System/(10094:10094): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:12:18:621 File System/(10094:10094): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:12:18:621 File System/(10094:10094): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:12:18:621 File System/(10094:10094): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:12:18:621 File System/(10094:10094): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:12:18:622 File System/(10094:10094): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:12:18:622 File System/(10094:10094): Crear Archivo: <campeonesPremiere>
+[INFO] 20:12:18:622 File System/(10094:10094): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:12:41:448 File System/(10212:10212): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:12:41:454 File System/(10212:10212): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:12:41:454 File System/(10212:10212): Se inicializa el módulo File System
+[INFO] 20:12:41:454 File System/(10212:10212): PUERTO ESCUCHA: 8003
+[INFO] 20:12:41:454 File System/(10212:10212): Crear Archivo: <campeonesFormula1>
+[INFO] 20:12:41:455 File System/(10212:10212): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:12:41:455 File System/(10212:10212): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:12:41:455 File System/(10212:10212): Crear Archivo: <campeonesF1>
+[INFO] 20:12:41:456 File System/(10212:10212): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:12:41:457 File System/(10212:10212): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:12:41:457 File System/(10212:10212): Crear Archivo: <escuderiasF1>
+[INFO] 20:12:41:457 File System/(10212:10212): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:12:41:458 File System/(10212:10212): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:12:41:458 File System/(10212:10212): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:12:41:458 File System/(10212:10212): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:12:41:458 File System/(10212:10212): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:12:41:459 File System/(10212:10212): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:12:41:459 File System/(10212:10212): Crear Archivo: <campeonesPremiere>
+[INFO] 20:12:41:459 File System/(10212:10212): Truncar Archivo: <campeonesPremiere> - Tamaño: <54>
+[INFO] 20:13:29:903 File System/(10261:10261): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:13:29:906 File System/(10261:10261): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:13:29:910 File System/(10261:10261): Se inicializa el módulo File System
+[INFO] 20:13:29:910 File System/(10261:10261): PUERTO ESCUCHA: 8003
+[INFO] 20:13:29:910 File System/(10261:10261): Crear Archivo: <campeonesFormula1>
+[INFO] 20:13:29:910 File System/(10261:10261): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:13:29:911 File System/(10261:10261): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:13:29:911 File System/(10261:10261): Crear Archivo: <campeonesF1>
+[INFO] 20:13:29:912 File System/(10261:10261): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:13:29:912 File System/(10261:10261): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:13:29:912 File System/(10261:10261): Crear Archivo: <escuderiasF1>
+[INFO] 20:13:29:913 File System/(10261:10261): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:13:29:913 File System/(10261:10261): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:13:29:913 File System/(10261:10261): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:13:29:915 File System/(10261:10261): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:13:29:915 File System/(10261:10261): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:13:29:915 File System/(10261:10261): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:13:29:915 File System/(10261:10261): Crear Archivo: <campeonesPremiere>
+[INFO] 20:13:36:765 File System/(10275:10275): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:13:36:771 File System/(10275:10275): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:13:36:771 File System/(10275:10275): Se inicializa el módulo File System
+[INFO] 20:13:36:771 File System/(10275:10275): PUERTO ESCUCHA: 8003
+[INFO] 20:13:36:771 File System/(10275:10275): Crear Archivo: <campeonesFormula1>
+[INFO] 20:13:36:772 File System/(10275:10275): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:13:36:772 File System/(10275:10275): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:13:36:772 File System/(10275:10275): Crear Archivo: <campeonesF1>
+[INFO] 20:13:36:773 File System/(10275:10275): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:13:36:773 File System/(10275:10275): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:13:36:774 File System/(10275:10275): Crear Archivo: <escuderiasF1>
+[INFO] 20:13:36:774 File System/(10275:10275): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:13:36:774 File System/(10275:10275): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:13:36:779 File System/(10275:10275): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:13:36:781 File System/(10275:10275): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:13:36:781 File System/(10275:10275): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:13:36:782 File System/(10275:10275): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:13:36:782 File System/(10275:10275): Crear Archivo: <campeonesPremiere>
+[INFO] 20:13:44:774 File System/(10308:10308): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:13:44:780 File System/(10308:10308): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:13:44:782 File System/(10308:10308): Se inicializa el módulo File System
+[INFO] 20:13:44:782 File System/(10308:10308): PUERTO ESCUCHA: 8003
+[INFO] 20:13:44:782 File System/(10308:10308): Crear Archivo: <campeonesFormula1>
+[INFO] 20:13:44:782 File System/(10308:10308): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:13:44:782 File System/(10308:10308): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:13:44:790 File System/(10308:10308): Crear Archivo: <campeonesF1>
+[INFO] 20:13:44:790 File System/(10308:10308): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:13:44:790 File System/(10308:10308): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:13:44:790 File System/(10308:10308): Crear Archivo: <escuderiasF1>
+[INFO] 20:13:44:791 File System/(10308:10308): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:13:44:791 File System/(10308:10308): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:13:44:791 File System/(10308:10308): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:13:44:791 File System/(10308:10308): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:13:44:793 File System/(10308:10308): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:13:44:794 File System/(10308:10308): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:13:44:794 File System/(10308:10308): Crear Archivo: <campeonesPremier>
+[INFO] 20:13:44:794 File System/(10308:10308): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:21:21:765 File System/(10417:10417): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:21:21:769 File System/(10417:10417): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:21:21:772 File System/(10417:10417): Se inicializa el módulo File System
+[INFO] 20:21:21:772 File System/(10417:10417): PUERTO ESCUCHA: 8003
+[INFO] 20:21:21:772 File System/(10417:10417): Crear Archivo: <campeonesFormula1>
+[INFO] 20:21:21:773 File System/(10417:10417): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:21:21:773 File System/(10417:10417): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:21:21:774 File System/(10417:10417): Crear Archivo: <campeonesF1>
+[INFO] 20:21:21:774 File System/(10417:10417): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:21:21:774 File System/(10417:10417): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:21:21:776 File System/(10417:10417): Crear Archivo: <escuderiasF1>
+[INFO] 20:21:21:776 File System/(10417:10417): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:21:21:776 File System/(10417:10417): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:21:21:776 File System/(10417:10417): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:21:21:776 File System/(10417:10417): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:21:21:777 File System/(10417:10417): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:21:21:777 File System/(10417:10417): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:21:21:778 File System/(10417:10417): Crear Archivo: <campeonesPremier>
+[INFO] 20:21:21:778 File System/(10417:10417): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:25:14:478 File System/(10455:10455): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:25:14:481 File System/(10455:10455): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:25:14:481 File System/(10455:10455): Se inicializa el módulo File System
+[INFO] 20:25:14:481 File System/(10455:10455): PUERTO ESCUCHA: 8003
+[INFO] 20:25:16:093 File System/(10455:10455): Crear Archivo: <campeonesFormula1>
+[INFO] 20:25:17:290 File System/(10455:10455): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:25:17:290 File System/(10455:10455): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:25:19:187 File System/(10455:10455): Crear Archivo: <campeonesF1>
+[INFO] 20:25:20:385 File System/(10455:10455): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:25:20:385 File System/(10455:10455): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:25:22:906 File System/(10455:10455): Crear Archivo: <escuderiasF1>
+[INFO] 20:25:23:556 File System/(10455:10455): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:25:23:900 File System/(10455:10455): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:25:24:456 File System/(10455:10455): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:25:28:790 File System/(10455:10455): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:25:29:843 File System/(10455:10455): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:25:30:536 File System/(10455:10455): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:25:31:263 File System/(10455:10455): Crear Archivo: <campeonesPremier>
+[INFO] 20:25:32:384 File System/(10455:10455): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:26:46:189 File System/(10583:10583): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:26:46:192 File System/(10583:10583): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:26:46:193 File System/(10583:10583): Se inicializa el módulo File System
+[INFO] 20:26:46:194 File System/(10583:10583): PUERTO ESCUCHA: 8003
+[INFO] 20:26:46:194 File System/(10583:10583): Crear Archivo: <campeonesFormula1>
+[INFO] 20:26:46:194 File System/(10583:10583): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:26:46:197 File System/(10583:10583): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:26:46:198 File System/(10583:10583): Crear Archivo: <campeonesF1>
+[INFO] 20:26:46:198 File System/(10583:10583): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:26:46:198 File System/(10583:10583): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:26:46:198 File System/(10583:10583): Crear Archivo: <escuderiasF1>
+[INFO] 20:26:46:199 File System/(10583:10583): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:26:46:199 File System/(10583:10583): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:26:46:199 File System/(10583:10583): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:26:46:199 File System/(10583:10583): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:26:46:199 File System/(10583:10583): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:26:46:200 File System/(10583:10583): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:26:46:200 File System/(10583:10583): Crear Archivo: <campeonesPremier>
+[INFO] 20:26:46:200 File System/(10583:10583): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:26:46:200 File System/(10583:10583): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:33:25:379 File System/(10849:10849): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:33:25:387 File System/(10849:10849): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:33:25:389 File System/(10849:10849): Se inicializa el módulo File System
+[INFO] 20:33:25:389 File System/(10849:10849): PUERTO ESCUCHA: 8003
+[INFO] 20:33:25:389 File System/(10849:10849): Crear Archivo: <campeonesFormula1>
+[INFO] 20:33:25:389 File System/(10849:10849): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:33:25:390 File System/(10849:10849): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:33:25:391 File System/(10849:10849): Crear Archivo: <campeonesF1>
+[INFO] 20:33:25:391 File System/(10849:10849): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:33:25:391 File System/(10849:10849): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:33:25:395 File System/(10849:10849): Crear Archivo: <escuderiasF1>
+[INFO] 20:33:25:395 File System/(10849:10849): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:33:25:396 File System/(10849:10849): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:33:25:396 File System/(10849:10849): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:33:25:398 File System/(10849:10849): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:33:25:400 File System/(10849:10849): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:33:25:400 File System/(10849:10849): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:33:25:400 File System/(10849:10849): Crear Archivo: <campeonesPremier>
+[INFO] 20:33:25:401 File System/(10849:10849): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:33:25:401 File System/(10849:10849): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:33:34:826 File System/(10890:10890): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:33:34:828 File System/(10890:10890): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:33:34:828 File System/(10890:10890): Se inicializa el módulo File System
+[INFO] 20:33:34:830 File System/(10890:10890): PUERTO ESCUCHA: 8003
+[INFO] 20:33:34:830 File System/(10890:10890): Crear Archivo: <campeonesFormula1>
+[INFO] 20:33:34:830 File System/(10890:10890): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:33:34:830 File System/(10890:10890): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:33:34:832 File System/(10890:10890): Crear Archivo: <campeonesF1>
+[INFO] 20:33:34:833 File System/(10890:10890): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:33:34:834 File System/(10890:10890): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:33:34:835 File System/(10890:10890): Crear Archivo: <escuderiasF1>
+[INFO] 20:33:34:836 File System/(10890:10890): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:33:34:836 File System/(10890:10890): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:33:34:836 File System/(10890:10890): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:33:34:838 File System/(10890:10890): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:33:34:838 File System/(10890:10890): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:33:34:838 File System/(10890:10890): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:33:34:839 File System/(10890:10890): Crear Archivo: <campeonesPremier>
+[INFO] 20:33:34:839 File System/(10890:10890): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:33:34:840 File System/(10890:10890): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:34:35:106 File System/(10986:10986): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:34:35:108 File System/(10986:10986): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:34:35:110 File System/(10986:10986): Se inicializa el módulo File System
+[INFO] 20:34:35:111 File System/(10986:10986): PUERTO ESCUCHA: 8003
+[INFO] 20:34:35:113 File System/(10986:10986): Crear Archivo: <campeonesFormula1>
+[INFO] 20:34:35:114 File System/(10986:10986): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:34:35:114 File System/(10986:10986): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:34:35:114 File System/(10986:10986): Crear Archivo: <campeonesF1>
+[INFO] 20:34:35:114 File System/(10986:10986): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:34:35:114 File System/(10986:10986): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:34:35:114 File System/(10986:10986): Crear Archivo: <escuderiasF1>
+[INFO] 20:34:35:114 File System/(10986:10986): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:34:35:115 File System/(10986:10986): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:34:35:115 File System/(10986:10986): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:34:35:117 File System/(10986:10986): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:34:35:117 File System/(10986:10986): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:34:35:117 File System/(10986:10986): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:34:35:118 File System/(10986:10986): Crear Archivo: <campeonesPremier>
+[INFO] 20:34:35:118 File System/(10986:10986): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:34:35:118 File System/(10986:10986): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:48:58:707 File System/(11274:11274): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:48:58:714 File System/(11274:11274): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:48:58:714 File System/(11274:11274): Se inicializa el módulo File System
+[INFO] 20:48:58:714 File System/(11274:11274): PUERTO ESCUCHA: 8003
+[INFO] 20:48:58:714 File System/(11274:11274): Crear Archivo: <campeonesFormula1>
+[INFO] 20:48:58:714 File System/(11274:11274): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:48:58:714 File System/(11274:11274): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:48:58:715 File System/(11274:11274): Crear Archivo: <campeonesF1>
+[INFO] 20:48:58:715 File System/(11274:11274): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:48:58:716 File System/(11274:11274): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:48:58:716 File System/(11274:11274): Crear Archivo: <escuderiasF1>
+[INFO] 20:48:58:717 File System/(11274:11274): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:48:58:718 File System/(11274:11274): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:48:58:718 File System/(11274:11274): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:48:58:718 File System/(11274:11274): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:48:58:718 File System/(11274:11274): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:48:58:718 File System/(11274:11274): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:48:58:720 File System/(11274:11274): Crear Archivo: <campeonesPremier>
+[INFO] 20:48:58:720 File System/(11274:11274): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:48:58:720 File System/(11274:11274): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:48:58:720 File System/(11274:11274): Crear Archivo: <campeonesPremier>
+[INFO] 20:48:58:721 File System/(11274:11274): Truncar Archivo: <campeonesPremier> - Tamaño: <137>
+[INFO] 20:48:58:722 File System/(11274:11274): Truncar Archivo: <campeonesPremier> - Tamaño: <250>
+[INFO] 20:49:31:868 File System/(11355:11355): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:49:31:874 File System/(11355:11355): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:49:31:875 File System/(11355:11355): Se inicializa el módulo File System
+[INFO] 20:49:31:875 File System/(11355:11355): PUERTO ESCUCHA: 8003
+[INFO] 20:49:31:875 File System/(11355:11355): Crear Archivo: <campeonesFormula1>
+[INFO] 20:49:31:876 File System/(11355:11355): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:49:31:876 File System/(11355:11355): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:49:31:900 File System/(11355:11355): Crear Archivo: <campeonesF1>
+[INFO] 20:49:31:901 File System/(11355:11355): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:49:31:901 File System/(11355:11355): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:49:31:902 File System/(11355:11355): Crear Archivo: <escuderiasF1>
+[INFO] 20:49:31:902 File System/(11355:11355): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:49:31:902 File System/(11355:11355): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:49:31:902 File System/(11355:11355): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:49:31:903 File System/(11355:11355): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:49:31:903 File System/(11355:11355): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:49:31:903 File System/(11355:11355): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:49:31:903 File System/(11355:11355): Crear Archivo: <campeonesPremier>
+[INFO] 20:49:31:903 File System/(11355:11355): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:49:31:904 File System/(11355:11355): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:49:31:904 File System/(11355:11355): Crear Archivo: <campeonesLibertadores>
+[INFO] 20:49:31:904 File System/(11355:11355): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 20:49:31:904 File System/(11355:11355): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 20:51:54:052 File System/(11471:11471): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:51:54:056 File System/(11471:11471): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:51:54:057 File System/(11471:11471): Se inicializa el módulo File System
+[INFO] 20:51:54:058 File System/(11471:11471): PUERTO ESCUCHA: 8003
+[INFO] 20:51:54:059 File System/(11471:11471): Crear Archivo: <campeonesFormula1>
+[INFO] 20:51:54:059 File System/(11471:11471): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:51:54:059 File System/(11471:11471): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:51:54:060 File System/(11471:11471): Crear Archivo: <campeonesF1>
+[INFO] 20:51:54:060 File System/(11471:11471): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:51:54:060 File System/(11471:11471): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:51:54:061 File System/(11471:11471): Crear Archivo: <escuderiasF1>
+[INFO] 20:51:54:061 File System/(11471:11471): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:51:54:062 File System/(11471:11471): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:51:54:062 File System/(11471:11471): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:51:54:064 File System/(11471:11471): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:51:54:064 File System/(11471:11471): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:51:54:064 File System/(11471:11471): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:51:54:064 File System/(11471:11471): Crear Archivo: <campeonesPremier>
+[INFO] 20:51:54:064 File System/(11471:11471): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:51:54:065 File System/(11471:11471): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:51:54:065 File System/(11471:11471): Crear Archivo: <campeonesLibertadores>
+[INFO] 20:51:54:065 File System/(11471:11471): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 20:51:54:065 File System/(11471:11471): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 20:54:59:553 File System/(11588:11588): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:54:59:559 File System/(11588:11588): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:54:59:560 File System/(11588:11588): Se inicializa el módulo File System
+[INFO] 20:54:59:560 File System/(11588:11588): PUERTO ESCUCHA: 8003
+[INFO] 20:54:59:561 File System/(11588:11588): Crear Archivo: <campeonesFormula1>
+[INFO] 20:54:59:562 File System/(11588:11588): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:54:59:562 File System/(11588:11588): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:54:59:563 File System/(11588:11588): Crear Archivo: <campeonesF1>
+[INFO] 20:54:59:563 File System/(11588:11588): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:54:59:564 File System/(11588:11588): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:54:59:565 File System/(11588:11588): Crear Archivo: <escuderiasF1>
+[INFO] 20:54:59:566 File System/(11588:11588): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:54:59:567 File System/(11588:11588): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:54:59:567 File System/(11588:11588): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:54:59:569 File System/(11588:11588): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:54:59:569 File System/(11588:11588): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:54:59:569 File System/(11588:11588): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:54:59:571 File System/(11588:11588): Crear Archivo: <campeonesPremier>
+[INFO] 20:54:59:571 File System/(11588:11588): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:54:59:572 File System/(11588:11588): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:54:59:573 File System/(11588:11588): Crear Archivo: <campeonesLibertadores>
+[INFO] 20:54:59:573 File System/(11588:11588): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 20:54:59:579 File System/(11588:11588): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 20:56:13:713 File System/(11700:11700): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:56:13:717 File System/(11700:11700): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:56:13:727 File System/(11700:11700): Se inicializa el módulo File System
+[INFO] 20:56:13:727 File System/(11700:11700): PUERTO ESCUCHA: 8003
+[INFO] 20:56:13:727 File System/(11700:11700): Crear Archivo: <campeonesFormula1>
+[INFO] 20:56:13:727 File System/(11700:11700): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:56:13:727 File System/(11700:11700): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:56:13:731 File System/(11700:11700): Crear Archivo: <campeonesF1>
+[INFO] 20:56:13:732 File System/(11700:11700): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:56:13:732 File System/(11700:11700): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:56:13:732 File System/(11700:11700): Crear Archivo: <escuderiasF1>
+[INFO] 20:56:13:732 File System/(11700:11700): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:56:13:732 File System/(11700:11700): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:56:13:733 File System/(11700:11700): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:56:13:733 File System/(11700:11700): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:56:13:733 File System/(11700:11700): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:56:13:733 File System/(11700:11700): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:56:13:734 File System/(11700:11700): Crear Archivo: <campeonesPremier>
+[INFO] 20:56:13:734 File System/(11700:11700): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:56:13:734 File System/(11700:11700): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:56:13:735 File System/(11700:11700): Crear Archivo: <campeonesLibertadores>
+[INFO] 20:56:13:735 File System/(11700:11700): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 20:56:13:735 File System/(11700:11700): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 20:59:31:918 File System/(11996:11996): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 20:59:31:922 File System/(11996:11996): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 20:59:31:923 File System/(11996:11996): Se inicializa el módulo File System
+[INFO] 20:59:31:923 File System/(11996:11996): PUERTO ESCUCHA: 8003
+[INFO] 20:59:31:924 File System/(11996:11996): Crear Archivo: <campeonesFormula1>
+[INFO] 20:59:31:924 File System/(11996:11996): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 20:59:31:929 File System/(11996:11996): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 20:59:31:929 File System/(11996:11996): Crear Archivo: <campeonesF1>
+[INFO] 20:59:31:929 File System/(11996:11996): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 20:59:31:929 File System/(11996:11996): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 20:59:31:931 File System/(11996:11996): Crear Archivo: <escuderiasF1>
+[INFO] 20:59:31:931 File System/(11996:11996): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 20:59:31:933 File System/(11996:11996): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 20:59:31:933 File System/(11996:11996): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 20:59:31:933 File System/(11996:11996): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 20:59:31:933 File System/(11996:11996): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 20:59:31:936 File System/(11996:11996): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 20:59:31:937 File System/(11996:11996): Crear Archivo: <campeonesPremier>
+[INFO] 20:59:31:937 File System/(11996:11996): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 20:59:31:937 File System/(11996:11996): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 20:59:31:937 File System/(11996:11996): Crear Archivo: <campeonesLibertadores>
+[INFO] 20:59:31:937 File System/(11996:11996): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 20:59:31:938 File System/(11996:11996): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 21:01:01:750 File System/(12060:12060): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 21:01:01:753 File System/(12060:12060): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 21:01:01:755 File System/(12060:12060): Se inicializa el módulo File System
+[INFO] 21:01:01:755 File System/(12060:12060): PUERTO ESCUCHA: 8003
+[INFO] 21:01:01:756 File System/(12060:12060): Crear Archivo: <campeonesFormula1>
+[INFO] 21:01:01:757 File System/(12060:12060): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 21:01:01:757 File System/(12060:12060): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 21:01:01:759 File System/(12060:12060): Crear Archivo: <campeonesF1>
+[INFO] 21:01:01:759 File System/(12060:12060): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 21:01:01:759 File System/(12060:12060): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 21:01:01:760 File System/(12060:12060): Crear Archivo: <escuderiasF1>
+[INFO] 21:01:01:760 File System/(12060:12060): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 21:01:01:764 File System/(12060:12060): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 21:01:01:764 File System/(12060:12060): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 21:01:01:764 File System/(12060:12060): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 21:01:01:764 File System/(12060:12060): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 21:01:01:764 File System/(12060:12060): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 21:01:01:765 File System/(12060:12060): Crear Archivo: <campeonesPremier>
+[INFO] 21:01:01:765 File System/(12060:12060): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 21:01:01:765 File System/(12060:12060): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 21:01:01:766 File System/(12060:12060): Crear Archivo: <campeonesLibertadores>
+[INFO] 21:01:01:766 File System/(12060:12060): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 21:01:01:769 File System/(12060:12060): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 21:01:41:313 File System/(12108:12108): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 21:01:41:315 File System/(12108:12108): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 21:01:41:317 File System/(12108:12108): Se inicializa el módulo File System
+[INFO] 21:01:41:317 File System/(12108:12108): PUERTO ESCUCHA: 8003
+[INFO] 21:01:41:326 File System/(12108:12108): Crear Archivo: <campeonesFormula1>
+[INFO] 21:01:41:328 File System/(12108:12108): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 21:01:41:328 File System/(12108:12108): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 21:01:41:329 File System/(12108:12108): Crear Archivo: <campeonesF1>
+[INFO] 21:01:41:329 File System/(12108:12108): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 21:01:41:329 File System/(12108:12108): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 21:01:41:329 File System/(12108:12108): Crear Archivo: <escuderiasF1>
+[INFO] 21:01:41:330 File System/(12108:12108): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 21:01:41:332 File System/(12108:12108): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 21:01:41:333 File System/(12108:12108): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 21:01:41:335 File System/(12108:12108): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 21:01:41:335 File System/(12108:12108): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 21:01:41:336 File System/(12108:12108): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 21:01:41:337 File System/(12108:12108): Crear Archivo: <campeonesPremier>
+[INFO] 21:01:41:337 File System/(12108:12108): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 21:01:41:337 File System/(12108:12108): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 21:01:41:339 File System/(12108:12108): Crear Archivo: <campeonesLibertadores>
+[INFO] 21:01:41:339 File System/(12108:12108): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 21:01:41:339 File System/(12108:12108): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
