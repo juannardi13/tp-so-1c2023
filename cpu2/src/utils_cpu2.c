@@ -11,6 +11,10 @@ int convertirAEntero(char *cadena) {
     return resultado;
 }
 
+void msleep(int tiempo_microsegundos) {
+	usleep(tiempo_microsegundos * 1000);
+}
+
 void asignar_valor_a_registro(char *valor, char *registro) {
 
 	if (strcmp(registro, "AX") == 0) {

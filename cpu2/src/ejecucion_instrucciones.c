@@ -432,29 +432,97 @@ void ejecutar_F_OPEN(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 	free(paquete);
 }
 
-void ejecutar_F_READ(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
-	/*t_buffer* buffer;
-	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
-	void* stream;
+void ejecutar_F_READ(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+	char **instruccion = string_split(instruccion_grande, " ");
+
+	t_buffer *buffer = malloc(sizeof(t_buffer));
+	t_paquete *paquete = malloc(sizeof(t_paquete));
+
+	int tamanio_instrucciones = contexto->tamanio_instrucciones;
+	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
+	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
+	int tamanio_registro_grande = strlen(registros_cpu.rax) + 1;
+	int tamanio_nombre_archivo = strlen(instruccion[1]) + 1;
+	int direccion_logica = atoi(instruccion[2]);
+	int cantidad_bytes = atoi(instruccion[3]);
+
+	buffer->stream_size = sizeof(int) * 6 //PID, PC, TAMANIO_INSTRUCCIONES, TAMANIO_NOMBRE_ARCHIVO, DIRECCION_LOGICA, CANTIDAD_BYTES
+	//		+ sizeof(t_registros)
+	//		+ tamanio_segmentos
+			+ tamanio_nombre_archivo
+			+ tamanio_instrucciones
+			+ tamanio_registro_chico * 4
+			+ tamanio_registro_mediano * 4
+			+ tamanio_registro_grande * 4;
+
+	void *stream = malloc(buffer->stream_size);
 	int offset = 0;
-	serializar_contexto(contexto, buffer, stream, offset);
-	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
-	offset += strlen(instruccion[1])+1;
-	int direccion_logica = convertirAEntero(instruccion[2]);
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
-	memcpy(stream + offset, &direccion_fisica, sizeof(int));
-	offset += strlen(instruccion[2])+1;
-	memcpy(stream + offset, &instruccion[3], strlen(instruccion[3])+1);
-	offset += strlen(instruccion[3])+1;
-	t_paquete* paquete = malloc(sizeof(t_paquete));
+	//	serializar_contexto(contexto, buffer, stream, offset);
+
+	memcpy(stream + offset, &(contexto->pid), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
+	offset += tamanio_instrucciones;
+
+	// SERIALIZAR DESPUÉS LOS REGISTROS
+	memcpy(stream + offset, &(registros_cpu.ax), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.bx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.cx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.dx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+
+	memcpy(stream + offset, &(registros_cpu.eax), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.ebx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.ecx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.edx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+
+	memcpy(stream + offset, &(registros_cpu.rax), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rbx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rcx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rdx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+
+	//---SERIALIZACION DE LOS PARAMETROS DE F_READ
+	memcpy(stream + offset, &tamanio_nombre_archivo, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, instruccion[1], tamanio_nombre_archivo);
+	offset += tamanio_nombre_archivo;
+	memcpy(stream + offset, &direccion_logica, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &cantidad_bytes, sizeof(int));
+
+	buffer->stream = stream;
+
 	paquete->codigo_operacion = F_READ;
 	paquete->buffer = buffer;
 
-	send(fd_kernel, stream, buffer->stream_size, 0);
+	void *a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
 
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_kernel, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
-	free(paquete);*/
+	free(paquete);
 }
 
 void ejecutar_F_SEEK(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel) {
@@ -639,29 +707,97 @@ void ejecutar_F_TRUNCATE(char* instruccion_grande, t_contexto_de_ejecucion* cont
 	free(paquete);
 }
 
-void ejecutar_F_WRITE(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
-	/*t_buffer* buffer;
-	buffer->stream_size = strlen(instruccion[1])+ sizeof(int) + strlen(instruccion[2]) + 2;
-	void* stream;
+void ejecutar_F_WRITE(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+	char **instruccion = string_split(instruccion_grande, " ");
+
+	t_buffer *buffer = malloc(sizeof(t_buffer));
+	t_paquete *paquete = malloc(sizeof(t_paquete));
+
+	int tamanio_instrucciones = contexto->tamanio_instrucciones;
+	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
+	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
+	int tamanio_registro_grande = strlen(registros_cpu.rax) + 1;
+	int tamanio_nombre_archivo = strlen(instruccion[1]) + 1;
+	int direccion_logica = atoi(instruccion[2]);
+	int cantidad_bytes = atoi(instruccion[3]);
+
+	buffer->stream_size = sizeof(int) * 6 //PID, PC, TAMANIO_INSTRUCCIONES, TAMANIO_NOMBRE_ARCHIVO, DIRECCION_LOGICA, CANTIDAD_BYTES
+	//		+ sizeof(t_registros)
+	//		+ tamanio_segmentos
+	+ tamanio_nombre_archivo
+	+ tamanio_instrucciones
+	+ tamanio_registro_chico * 4
+	+ tamanio_registro_mediano * 4
+	+ tamanio_registro_grande * 4;
+
+	void *stream = malloc(buffer->stream_size);
 	int offset = 0;
-	serializar_contexto(contexto, buffer, stream, offset);
-	memcpy(stream + offset, &instruccion[1], strlen(instruccion[1])+1);
-	offset += strlen(instruccion[1])+1;
-	int direccion_logica = convertirAEntero(instruccion[2]);
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto);
-	memcpy(stream + offset, &direccion_fisica, sizeof(int));
-	offset += strlen(instruccion[2])+1;
-	memcpy(stream + offset, &instruccion[3], strlen(instruccion[3])+1);
-	offset += strlen(instruccion[3])+1;
-	t_paquete* paquete = malloc(sizeof(t_paquete));
+	//	serializar_contexto(contexto, buffer, stream, offset);
+
+	memcpy(stream + offset, &(contexto->pid), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->pc), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &(contexto->tamanio_instrucciones), sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, contexto->instrucciones, tamanio_instrucciones);
+	offset += tamanio_instrucciones;
+
+	// SERIALIZAR DESPUÉS LOS REGISTROS
+	memcpy(stream + offset, &(registros_cpu.ax), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.bx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.cx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+	memcpy(stream + offset, &(registros_cpu.dx), tamanio_registro_chico);
+	offset += tamanio_registro_chico;
+
+	memcpy(stream + offset, &(registros_cpu.eax), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.ebx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.ecx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+	memcpy(stream + offset, &(registros_cpu.edx), tamanio_registro_mediano);
+	offset += tamanio_registro_mediano;
+
+	memcpy(stream + offset, &(registros_cpu.rax), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rbx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rcx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+	memcpy(stream + offset, &(registros_cpu.rdx), tamanio_registro_grande);
+	offset += tamanio_registro_grande;
+
+	//---SERIALIZACION DE LOS PARAMETROS DE F_READ
+	memcpy(stream + offset, &tamanio_nombre_archivo, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, instruccion[1], tamanio_nombre_archivo);
+	offset += tamanio_nombre_archivo;
+	memcpy(stream + offset, &direccion_logica, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &cantidad_bytes, sizeof(int));
+
+	buffer->stream = stream;
+
 	paquete->codigo_operacion = F_WRITE;
 	paquete->buffer = buffer;
 
-	send(fd_kernel, stream, buffer->stream_size, 0);
+	void *a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
 
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(fd_kernel, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
-	free(paquete);*/
+	free(paquete);
 }
 
 void ejecutar_IO(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_kernel, bool cpu_bloqueada) {

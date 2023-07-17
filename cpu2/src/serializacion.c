@@ -28,6 +28,7 @@ void deserializar_segmentos(t_segmento* segmento_actual, void* stream){
 	stream += sizeof(int);
 }
 
+/*//TODO comento las funciones para que no molesten los warnings
 void recibir_contexto(int fd_kernel, t_contexto_de_ejecucion* contexto){
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	paquete->buffer = malloc(sizeof(t_buffer));
@@ -68,10 +69,10 @@ void recibir_contexto(int fd_kernel, t_contexto_de_ejecucion* contexto){
 //			deserializar_segmentos(segmento_actual, stream);
 //				}
 			}
-	/*
+
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
-	free(paquete);*/
+	free(paquete);
 
 }
 
@@ -91,4 +92,4 @@ void serializar_contexto(t_contexto_de_ejecucion* contexto, t_buffer* buffer, vo
 	offset += sizeof(int);
 	memcpy(stream + offset, &contexto->instrucciones, contexto->tamanio_instrucciones);
 	offset += contexto->tamanio_instrucciones;
-}
+}*/
