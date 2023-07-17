@@ -85,8 +85,20 @@ void probando_cositas(){
 
 	crear_archivo("campeonesFormula1");
 
+	// PROVISIONAL -> probando que funcionen cambios sobre FCB (osea entrada de directorio) - dps sacar porque no corresponde a creación de archivo
+	// pues no se asignan bloques cuando se crea !
+
+	char* ruta1 = obtener_ruta_archivo("campeonesFormula1");
+
+	t_config* config_fcb_archivo1 = iniciar_config(ruta1);
+
+	asignar_bloques_iniciales(ruta1,config_fcb_archivo1);
+
+
+	// PROVISIONAL !
+
 //
-//	// veo si con asignación de bloques cambié archivo de bloques
+//	// veo si con asignación de bloques cambié archivo bitmap
 //	// 0 y 1 ocupados, osea primer byte es 00000011, osea 3
 
 
@@ -101,6 +113,12 @@ void probando_cositas(){
 // tendría como primer byte 00001111, considerar que cada unsigned byte son 4 bits se obtendrán dos 3
 
 	crear_archivo("campeonesF1");
+
+	char* ruta2 = obtener_ruta_archivo("campeonesF1");
+
+	t_config* config_fcb_archivo2 = iniciar_config(ruta2);
+
+	asignar_bloques_iniciales(ruta2,config_fcb_archivo2);
 
 	fseek(archivo_bm,0,0);
 	fread(&b,1,1,archivo_bm);
@@ -121,15 +139,53 @@ void probando_cositas(){
 
 	// ARRIBA MUESTRO QUE SE ESCRIBIÓ 99 EN MEMORIA
 
-	uint32_t lectura;
-	fseek(archivo_bloques,obtener_posicion_archivo_bloques(3),0);
-	fread(&lectura,4,1,archivo_bloques);
-	// tendría que sacar 99
-	printf("%ld\n",lectura);
+//	uint32_t lectura;
+//	fseek(archivo_bloques,obtener_posicion_archivo_bloques(3),0);
+//	fread(&lectura,4,1,archivo_bloques);
+//	// tendría que sacar 99
+//	printf("%ld\n",lectura);
 
 	// ARRIBA MUESTRO QUE SE ESCRIBIÓ 99 EN EL ARCHIVO
 
-	truncar_archivo("campeonesFormula1",string_itoa(128));
+
+	// pruebo caso truncar archivo vacio y tamaño nuevo menor o igual a bloque -> cambia tamaño en fcb y puntero directo
+	crear_archivo("escuderiasF1");
+
+	truncar_archivo("escuderiasF1",string_itoa(56));
+
+	// funca
+
+	// pruebo caso truncar archivo vacio y tamaño mayor a bloque -> cambia tamaño en fcb, puntero directo y puntero indirecto y escribe sobre bloque
+	// de puntero los primeros punteros
+	crear_archivo("plantelArgentinaCampeona");
+
+	truncar_archivo("plantelArgentinaCampeona",string_itoa(137));
+
+	// puntero indirecto asignado es el 6
+	// debería poder leer el nro de bloque asignado al primer bloque de datos accedido por indirección para el archivo, que sería 7 y 8
+	// NOTA: PROBANDO PONIENDO ACÁ ABAJO EL MEMCPY SOBRE LA DIRECCIÓN DE MEMORIA VINCULADA CON EL ARCHIVO DE BLOQUES ME DI CUENTA
+	// QUE NUNCA LO SINCRONIZABA AL BLOQUE. SUpongo que una vez accedido el archivo para lectura como hice arriba para mostrar
+	// el 99 se rompe el vínculo del mmap. Primero hacer todas las escrituras y después si quiero probar, leer el archivo sabiendo que no lo voy
+	// a poder volver a escribir por modificar la direcc del mmap.
+
+	uint32_t lectura2;
+	fseek(archivo_bloques,obtener_posicion_archivo_bloques(6),0);
+	fread(&lectura2,4,1,archivo_bloques);
+	// tendría que sacar 7
+	printf("%ld\n",lectura2);
+
+	 lectura2;
+	fseek(archivo_bloques,obtener_posicion_archivo_bloques(6) + 4,0);
+	fread(&lectura2,4,1,archivo_bloques);
+	// tendría que sacar 7
+	printf("%ld\n",lectura2);
+
+	// probé la hipotésis de acá comentando la lectura del archivo del 99 arriba
+	// imprimió 7 y 8, función caso de ftruncate
+
+	// otro caso de ftruncate
+
+
 
 }
 
@@ -178,16 +234,6 @@ int crear_archivo(char* nombre_archivo)
 
 	log_info(logger,"Crear Archivo: <%s>",nombre_archivo);
 
-	// PROVISIONAL -> probando que funcionen cambios sobre FCB (osea entrada de directorio) - dps sacar porque no corresponde a creación de archivo
-	// pues no se asignan bloques cuando se crea !
-
-	t_config* config_fcb_archivo = iniciar_config(ruta);
-
-	asignar_bloques_iniciales(ruta,config_fcb_archivo);
-
-
-	// PROVISIONAL !
-
 	free(ruta);
 
 	return 1;
@@ -215,7 +261,7 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 
 	int cantidad_bloques = config_super_bloque_valores->block_count;
 
-	int cantidad_punteros_bloque = config_super_bloque_valores->block_count / sizeof(uint32_t);
+	int cantidad_punteros_bloque = config_super_bloque_valores->block_size / sizeof(uint32_t);
 
 	if(nuevo_tamanio_entero > tamanio_fcb)
 	{
@@ -228,7 +274,7 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 
 	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%s>",nombre_archivo,nuevo_tamanio);
 
-	msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
+//	msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
 
 	config_set_value(config_fcb_archivo,"TAMANIO_ARCHIVO",nuevo_tamanio);
 
@@ -324,7 +370,8 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 		}
 		else
 		{
-			int cantidad_bloques_puntero_indirecto = ceil((nuevo_tamanio_entero - tamanio_bloque) / tamanio_bloque);
+
+			int cantidad_bloques_puntero_indirecto = ceil((((double)(nuevo_tamanio_entero - tamanio_bloque)) / ((double)tamanio_bloque)));
 
 			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
 
@@ -342,6 +389,7 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 
 			for(int i = 0; i <  cantidad_punteros_bloque;i++)
 			{
+				int off = sizeof(uint32_t) * i;
 
 				if(i < cantidad_bloques_puntero_indirecto)
 				{
@@ -350,13 +398,23 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 
 					bitarray_set_bit(estructura_bitmap,bloque_datos);
 
-					// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
+					// esto funcionaba afuera, porque no adentro de la función?
 
-					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),&bloque_datos,sizeof(uint32_t));
+//					int nro_bloque2 = 7;
+//
+//					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(6),&nro_bloque2,sizeof(uint32_t));
+//
+//					uint32_t h = *(mapping_archivo_bloques + obtener_posicion_archivo_bloques(6));
+//
+//					printf("%ld\n",h);
+
+					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
+
 				}
 				else
 				{
-					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto),-1,sizeof(uint32_t));
+					int menos_uno = -1;
+					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto)+ off,&menos_uno,sizeof(uint32_t));
 				}
 			}
 		}
@@ -610,7 +668,6 @@ void levantar_archivo_bloques(){
 	if(mapping_archivo_bloques == MAP_FAILED){
 		printf("Error al mappear memoria\n");
 	}
-
 
 }
 
