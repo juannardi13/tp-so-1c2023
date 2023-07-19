@@ -138,12 +138,6 @@ void agregar_a_lista(int pid, t_segmento *seg) {
 
 	t_tabla_segmentos *tabla = list_find(tablas_segmentos, (void *) mismo_pid);
 
-//	if (tabla == NULL) {
-//		tabla = malloc(sizeof(t_tabla_segmentos));
-//		tabla->pid = pid;
-//		tabla->segmentos = list_create();
-//	}
-
 	list_add(tabla->segmentos, seg);
 }
 

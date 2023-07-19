@@ -21,11 +21,6 @@ typedef struct {
 	char *algoritmo_asignacion;
 } t_config_memoria;
 
-//typedef struct {
-//	int pid;
-//	t_list *segmentos;
-//} t_tabla_segmentos;
-
 extern t_config_memoria config_memoria;
 extern t_log *logger;
 extern void *memoria;

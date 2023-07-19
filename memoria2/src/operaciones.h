@@ -7,5 +7,6 @@
 void atender_File_System(int *);
 void atender_kernel(int *);
 void recv_nuevo_proceso(int);
+void recv_crear_segmento(int);
 
 #endif /* OPERACIONES_H_ */

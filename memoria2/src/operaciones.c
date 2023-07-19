@@ -28,16 +28,12 @@ void atender_kernel(int *kernel_fd) {
 			recv_nuevo_proceso(socket_cliente);
 			break;
 
-//		case CREATE_SEGMENT:
-//			recv_crear_segmento(socket_cliente);
-//			break;
+		case CREATE_SEGMENT:
+			recv_crear_segmento(socket_cliente);
+			break;
 //
 //		case DELETE_SEGMENT:
 //			recv_eliminar_segmento(socket_cliente);
-//			break;
-
-//		case ESCRIBIR_EN_MEMORIA:
-//			recv_escribir_memoria(socket_cliente);
 //			break;
 
 		case -1:
@@ -60,6 +56,50 @@ void recv_nuevo_proceso(int socket_cliente) {
 	list_add(tablas_segmentos, nueva_tabla);
 
 	log_info(logger, "Creación de Proceso PID: %d", pid);
+
+	free(buffer);
+}
+
+void recv_crear_segmento(int socket_cliente) {
+
+	int size;
+	int offset = 0;
+
+	void *buffer = recibir_buffer(&size, socket_cliente);
+
+	int pid = deserializar_int(buffer, &offset);
+	int id = deserializar_int(buffer, &offset);
+	int tamanio = deserializar_int(buffer, &offset);
+
+	if (! hay_espacio(tamanio)) { // NO hay espacio, no importa compactación
+		log_info(logger, "No hay espacio suficiente en memoria para crear el segmento solicitado");
+//		send_sin_espacio_disponible(); TODO
+		return;
+	}
+
+	t_list *huecos_disponibles = buscar_huecos_libres(); // incluidos los que no alcanzan para size
+
+	bool es_suficiente_para(t_segmento *hueco) { // TRAMOYA
+		return (hueco->tamanio >= tamanio);
+	}
+
+	t_list *huecos_suficientes = list_filter(huecos_disponibles, (void *) es_suficiente_para);
+
+	if (list_is_empty(huecos_suficientes)) {
+		log_info(logger, "No hay suficiente espacio contiguo para crear el segmento, requiere compactación");
+//		send_necesita_compactacion(); TODO
+		return;
+	}
+
+	int base = obtener_base_segun_criterio(huecos_suficientes, tamanio);
+
+	dinamitar_listas(huecos_disponibles, huecos_suficientes);
+
+	t_segmento *seg = crear_segmento(id, base, tamanio);
+	guardar_en_bitmap(seg);
+	agregar_a_lista(pid, seg);
+
+	log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - Tamaño: %d", pid, id, base, tamanio);
 
 	free(buffer);
 }
