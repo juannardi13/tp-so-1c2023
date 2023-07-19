@@ -70,7 +70,8 @@ typedef enum
 	SEGMENTO_CREADO,
 	NECESITO_COMPACTAR,
 	COMPACTAR,
-	COMPACTACION_TERMINADA
+	COMPACTACION_TERMINADA,
+	INICIAR_PROCESO
 }op_code;
 
 typedef struct
@@ -199,6 +200,6 @@ t_list *recibir_paquete(int);
 void *recibir_stream(int *, int);
 void* serializar_paquete(t_paquete* paquete, int bytes);
 void* serializar_paquete_con_bytes(t_paquete *, int);
-
+int deserializar_int(void *, int *);
 
 #endif /* SRC_SHARED_2_H_ */

@@ -288,3 +288,13 @@ int bits_to_bytes(int bits) {
 	return bits / 8;
 }
 
+int deserializar_int(void *buffer, int *offset) {
+
+	int aux;
+
+	memcpy(&aux, buffer + (*offset), sizeof(int));
+	(*offset) += sizeof(int);
+
+	return aux;
+}
+

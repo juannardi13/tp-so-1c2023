@@ -2,13 +2,11 @@
 
 t_segmento *crear_segmento(int id, int base, int size) {
 
-
 	t_segmento *seg = malloc(sizeof(t_segmento));
 
 	seg->id   	  = id;
 	seg->base 	  = base;
 	seg->tamanio  = size;
-	seg->segmento = malloc(seg->tamanio);
 
 	return seg;
 }

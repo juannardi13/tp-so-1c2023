@@ -15,6 +15,56 @@ void atender_File_System(int *fileSystem_fd) {
 	}
 }
 
+void atender_kernel(int *kernel_fd) {
+
+	int socket_cliente = *kernel_fd;
+
+	while (1) {
+		int cod_op = recibir_operacion(socket_cliente);
+
+		switch(cod_op) {
+
+		case INICIAR_PROCESO:
+			recv_nuevo_proceso(socket_cliente);
+			break;
+
+//		case CREATE_SEGMENT:
+//			recv_crear_segmento(socket_cliente);
+//			break;
+//
+//		case DELETE_SEGMENT:
+//			recv_eliminar_segmento(socket_cliente);
+//			break;
+
+//		case ESCRIBIR_EN_MEMORIA:
+//			recv_escribir_memoria(socket_cliente);
+//			break;
+
+		case -1:
+			log_warning(logger, "Se desconectó el File System!");
+			return;
+		}
+	}
+}
+
+void recv_nuevo_proceso(int socket_cliente) {
+
+	int size;
+	int offset = 0;
+	void *buffer = recibir_buffer(&size, socket_cliente);
+
+	int pid = deserializar_int(buffer, &offset);
+
+	t_tabla_segmentos *nueva_tabla = nueva_tabla_segmentos(pid);
+
+	list_add(tablas_segmentos, nueva_tabla);
+
+	log_info(logger, "Creación de Proceso PID: %d", pid);
+
+	free(buffer);
+}
+
+
 // AGREGO INICIO DE ATENDER A CPU
 void atender_CPU(int *cpu_fd){
 
