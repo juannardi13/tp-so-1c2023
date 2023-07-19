@@ -56,24 +56,68 @@ void atender_CPU(int *cpu_fd){
 void buscar_valor_enviar_CPU(int direccion_fisica_buscada, int socket_cliente){
 	// Tenemos que ver como buscar una direccion fisica
 	// Si encuentra la direccion fisica, debe devolverle a cpu el valor encontrado como un paquete
-	if(1==1){ // if encuentra direccion fisica
+
+	t_buffer *buffer = malloc(sizeof(t_buffer));
+	t_paquete* paquete_valor = malloc(sizeof(t_paquete));
+
+	if(encuentra_direccion(direccion_fisica_buscada)){ // if encuentra direccion fisica
 		char* valor_buscado; // le deberia asignar el valor que encontre
-		t_paquete* paquete_valor = crear_paquete(LEIDO);
-		agregar_a_paquete(paquete_valor, &valor_buscado, strlen(valor_buscado)+1);
-		enviar_paquete(paquete_valor, socket_cliente);
-		eliminar_paquete(paquete_valor);
+		//t_paquete* paquete_valor = crear_paquete(LEIDO);
+		int tamanio_valor_buscado = strlen(valor_buscado);
+		buffer->stream_size = sizeof(tamanio_valor_buscado);
+		void *stream = malloc(buffer->stream_size);
+
+		memcpy(stream, &valor_buscado, sizeof(tamanio_valor_buscado));
+
+		buffer->stream = stream;
+
+		paquete_valor->codigo_operacion = LEIDO;
+		paquete_valor->buffer = buffer;
+
+		//agregar_a_paquete(paquete_valor, &valor_buscado, strlen(valor_buscado)+1);
+		//enviar_paquete(paquete_valor, socket_cliente);
+		//eliminar_paquete(paquete_valor);
 	}
 	else{
-		t_paquete* paquete_valor = crear_paquete(NO_LEIDO);
-		enviar_paquete(paquete_valor, socket_cliente);
-		eliminar_paquete(paquete_valor);
+		//t_paquete* paquete_valor = crear_paquete(NO_LEIDO);
+		//enviar_paquete(paquete_valor, socket_cliente);
+		//eliminar_paquete(paquete_valor);
+		paquete_valor->codigo_operacion = NO_LEIDO;
+		paquete_valor->buffer->stream = NULL;
+		paquete_valor->buffer->stream_size = 0;
+
 	}
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete_valor->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete_valor->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete_valor->buffer->stream, paquete_valor->buffer->stream_size);
+
+	send(socket_cliente, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
+	free(paquete_valor->buffer->stream);
+	free(paquete_valor->buffer);
+	free(paquete_valor);
+
 }
 
 void escribir_valor_en_direccion_fisica(int direccion_fisica, char* valor){
 	// en cada acceso al espacio de usuario hacer un usleep con lo de la config
 	// Buscar direccion fisica, le asigna valor que me paso CPU
+	//memcpy(memoriaUsuario + offset?, valor_buscado, tamanio?);
 	// Ver que pasa si no la encuentra !!!
 	log_info(logger, "OK, se escribio el valor en memoria");// agreamos log para enviar mensaje de ok
+}
+
+int agregar_a_stream(void* stream, int* offset, void* src, int size) {
+	memcpy(stream + *offset, src, size);
+	*offset +=size;
+}
+
+int encuentra_direccion(int direccion_fisica){
+	return 1;
 }
 
