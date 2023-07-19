@@ -19,7 +19,6 @@ void inicializar_config(void);
 void esperar_conexiones(int);
 void terminar_memoria(void);
 void destructor_lista_tablas(t_tabla_segmentos *);
-void liberar_segmento_0(void);
 void destruir_bitmap(void);
 
 

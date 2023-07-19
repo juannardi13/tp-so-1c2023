@@ -125,12 +125,11 @@ void eliminar_nodo(t_segmento *hueco) {
 	free(hueco);
 }
 
-void guardar_en_memoria(t_segmento *seg) {
+void guardar_en_bitmap(t_segmento *seg) {
 
 	for (int i = 0; i < seg->tamanio; i++) {
 		bitarray_set_bit(bitmap, seg->base + i);
 	}
-	memcpy(memoria + seg->base, seg->segmento, seg->tamanio);
 }
 
 void agregar_a_lista(int pid, t_segmento *seg) {
@@ -182,7 +181,6 @@ void liberar_segmento(t_segmento *seg) {
 		for (int i = 0; i < seg->tamanio; i++) {
 			bitarray_clean_bit(bitmap, seg->base + i);
 		}
-		free(seg->segmento);
 		free(seg);
 	}
 }

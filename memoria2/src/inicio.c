@@ -6,7 +6,7 @@ void iniciar_memoria(void) {
 	iniciar_lista_tabla_segmentos();
 	iniciar_bitmap_bytes_libres(config_memoria.tam_memoria);
 	segmento_0 = crear_segmento(0, 0, config_memoria.tam_segmento_0);
-	guardar_en_memoria(segmento_0);
+	guardar_en_bitmap(segmento_0);
 }
 
 void iniciar_lista_tabla_segmentos(void) {

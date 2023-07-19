@@ -75,7 +75,7 @@ void terminar_memoria(void) {
 	log_destroy(logger);
 	free(conexiones[0]);
 	list_destroy_and_destroy_elements(tablas_segmentos, (void *) destructor_lista_tablas);
-	liberar_segmento_0();
+	free(segmento_0);
 	destruir_bitmap();
 	free(memoria);
 }
@@ -86,10 +86,6 @@ void destructor_lista_tablas(t_tabla_segmentos *tabla) {
 	free(tabla);
 }
 
-void liberar_segmento_0(void) {
-	free(segmento_0->segmento);
-	free(segmento_0);
-}
 
 void destruir_bitmap(void) {
 	free(bitmap->bitarray);

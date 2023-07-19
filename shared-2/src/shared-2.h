@@ -104,7 +104,6 @@ typedef struct{
 	int id;
 	int base;
 	int tamanio;
-	void *segmento;
 }t_segmento;
 
 typedef struct {

@@ -15,7 +15,7 @@ int base_segun_worst(t_list *, int);
 t_segmento *cmp_hueco_mayor(t_segmento *, t_segmento *);
 void dinamitar_listas(t_list *, t_list *);
 void eliminar_nodo(t_segmento *);
-void guardar_en_memoria(t_segmento *);
+void guardar_en_bitmap(t_segmento *);
 void agregar_a_lista(int, t_segmento *);
 t_tabla_segmentos *nueva_tabla_segmentos(int);
 t_segmento *obtener_segmento(int, int);
