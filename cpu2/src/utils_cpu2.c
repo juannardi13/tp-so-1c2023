@@ -199,7 +199,7 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_lo
 	free(paquete);
 }
 
-char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
+char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int tamanio, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
 	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel);
 	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
@@ -215,9 +215,10 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 
 	memcpy(stream + offset, &direccion_fisica, sizeof(int));
 	offset += sizeof(int);
+	memcpy(stream + offset, &tamanio, sizeof(int));
+	offset += sizeof(int);
 
 	buffer->stream = stream;
-
 	paquete->codigo_operacion = LEER_DE_MEMORIA;
 	paquete->buffer = buffer;
 
@@ -269,7 +270,6 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 
 	return valor;
 }
-
 //------LA FUNCION LEER_DE_MEMORIA() Y MMU_VALOR_BUSCADO CUMPLÍAN LA MISMA FUNCIÓN, DECIDÍ QUEDARME CON LA DE ARRIBA
 
 char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria, int numero_segmento){
