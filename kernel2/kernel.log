@@ -637,3 +637,294 @@
 [INFO] 07:06:02:486 kernel.log/(98720:98728): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
 [INFO] 07:06:02:486 kernel.log/(98720:98728): Finaliza el proceso <1001> - Motivo: <SUCCESS>
 [INFO] 07:06:02:487 kernel.log/(98720:98726): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 01:07:44:518 kernel.log/(101255:101255): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 01:07:58:579 kernel.log/(101255:101255): Cliente conectado (a KERNEL)
+
+[INFO] 01:08:01:979 kernel.log/(101255:101269): Se crea el proceso <1000> en NEW
+[INFO] 01:08:01:979 kernel.log/(101255:101269): Cola NEW: 
+[INFO] 01:08:01:979 kernel.log/(101255:101269): PID: <1000>
+[INFO] 01:08:01:979 kernel.log/(101255:101266): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 01:08:01:979 kernel.log/(101255:101266): Cola Ready <FIFO>:
+[INFO] 01:08:01:979 kernel.log/(101255:101266): PID: <1000>
+[INFO] 01:08:01:979 kernel.log/(101255:101263): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:08:01:979 kernel.log/(101255:101263): PID: <1000> ingresa a EXECUTE
+[INFO] 01:08:01:979 kernel.log/(101255:101263): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:08:01:980 kernel.log/(101255:101264): PID: <1000> enviada a CPU
+[INFO] 01:08:03:983 kernel.log/(101255:101264): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 01:08:03:983 kernel.log/(101255:101264): COMO
+[INFO] 01:08:03:983 kernel.log/(101255:101264): DERE
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 0000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 0000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:03:983 kernel.log/(101255:101264): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 01:08:03:983 kernel.log/(101255:101264): PID: <1000> - Bloqueado por: <IO>
+[INFO] 01:08:03:983 kernel.log/(101255:101265): PID: <1000> - Ejecuta IO: <5>
+[INFO] 01:08:08:984 kernel.log/(101255:101265): Cola Ready <FIFO>:
+[INFO] 01:08:08:984 kernel.log/(101255:101265): PID: <1000>
+[INFO] 01:08:08:985 kernel.log/(101255:101263): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:08:08:985 kernel.log/(101255:101263): PID: <1000> ingresa a EXECUTE
+[INFO] 01:08:08:985 kernel.log/(101255:101263): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:08:08:985 kernel.log/(101255:101264): PID: <1000> enviada a CPU
+[INFO] 01:08:10:986 kernel.log/(101255:101264): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 01:08:10:986 kernel.log/(101255:101264): COMO
+[INFO] 01:08:10:986 kernel.log/(101255:101264): DERE
+[INFO] 01:08:10:986 kernel.log/(101255:101264): PENT
+[INFO] 01:08:10:986 kernel.log/(101255:101264): ETOD
+[INFO] 01:08:10:986 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:10:986 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:10:986 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:10:986 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:10:987 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:10:987 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:10:987 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:10:987 kernel.log/(101255:101264): 0000000000000000
+[WARNING] 01:08:10:987 kernel.log/(101255:101264): La última instrucción ejecutada fue YIELD
+[INFO] 01:08:10:987 kernel.log/(101255:101263): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:08:10:987 kernel.log/(101255:101263): PID: <1000> ingresa a EXECUTE
+[INFO] 01:08:10:987 kernel.log/(101255:101263): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:08:10:987 kernel.log/(101255:101264): PID: <1000> enviada a CPU
+[INFO] 01:08:12:989 kernel.log/(101255:101264): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 01:08:12:989 kernel.log/(101255:101264): COMO
+[INFO] 01:08:12:989 kernel.log/(101255:101264): DERE
+[INFO] 01:08:12:989 kernel.log/(101255:101264): PENT
+[INFO] 01:08:12:989 kernel.log/(101255:101264): ETOD
+[INFO] 01:08:12:989 kernel.log/(101255:101264): OESORDEN
+[INFO] 01:08:12:989 kernel.log/(101255:101264): ADODESDE
+[INFO] 01:08:12:989 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:12:989 kernel.log/(101255:101264): 00000000
+[INFO] 01:08:12:989 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:12:989 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:12:989 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:12:989 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:12:989 kernel.log/(101255:101264): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 01:08:12:989 kernel.log/(101255:101264): PID: <1000> - Bloqueado por: <IO>
+[INFO] 01:08:12:989 kernel.log/(101255:101265): PID: <1000> - Ejecuta IO: <5>
+[INFO] 01:08:17:990 kernel.log/(101255:101265): Cola Ready <FIFO>:
+[INFO] 01:08:17:990 kernel.log/(101255:101265): PID: <1000>
+[INFO] 01:08:17:990 kernel.log/(101255:101263): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:08:17:990 kernel.log/(101255:101263): PID: <1000> ingresa a EXECUTE
+[INFO] 01:08:17:990 kernel.log/(101255:101263): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:08:17:990 kernel.log/(101255:101264): PID: <1000> enviada a CPU
+[INFO] 01:08:19:995 kernel.log/(101255:101264): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 01:08:19:995 kernel.log/(101255:101264): COMO
+[INFO] 01:08:19:995 kernel.log/(101255:101264): DERE
+[INFO] 01:08:19:995 kernel.log/(101255:101264): PENT
+[INFO] 01:08:19:996 kernel.log/(101255:101264): ETOD
+[INFO] 01:08:19:996 kernel.log/(101255:101264): OESORDEN
+[INFO] 01:08:19:996 kernel.log/(101255:101264): ADODESDE
+[INFO] 01:08:19:996 kernel.log/(101255:101264): QUEHASLL
+[INFO] 01:08:19:996 kernel.log/(101255:101264): EGADOMIV
+[INFO] 01:08:19:996 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:19:996 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:19:996 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:19:996 kernel.log/(101255:101264): 0000000000000000
+[WARNING] 01:08:19:996 kernel.log/(101255:101264): La última instrucción ejecutada fue YIELD
+[INFO] 01:08:19:996 kernel.log/(101255:101263): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:08:19:996 kernel.log/(101255:101263): PID: <1000> ingresa a EXECUTE
+[INFO] 01:08:19:996 kernel.log/(101255:101263): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:08:19:996 kernel.log/(101255:101264): PID: <1000> enviada a CPU
+[INFO] 01:08:21:997 kernel.log/(101255:101264): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 01:08:21:997 kernel.log/(101255:101264): COMO
+[INFO] 01:08:21:997 kernel.log/(101255:101264): DERE
+[INFO] 01:08:21:997 kernel.log/(101255:101264): PENT
+[INFO] 01:08:21:997 kernel.log/(101255:101264): ETOD
+[INFO] 01:08:21:997 kernel.log/(101255:101264): OESORDEN
+[INFO] 01:08:21:997 kernel.log/(101255:101264): ADODESDE
+[INFO] 01:08:21:997 kernel.log/(101255:101264): QUEHASLL
+[INFO] 01:08:21:997 kernel.log/(101255:101264): EGADOMIV
+[INFO] 01:08:21:997 kernel.log/(101255:101264): IDACAMBIOYANOSOY
+[INFO] 01:08:21:997 kernel.log/(101255:101264): LAMISMAQUETUCONO
+[INFO] 01:08:21:997 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:21:997 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:08:21:997 kernel.log/(101255:101264): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 01:08:21:997 kernel.log/(101255:101264): PID: <1000> - Bloqueado por: <IO>
+[INFO] 01:08:21:997 kernel.log/(101255:101265): PID: <1000> - Ejecuta IO: <5>
+[INFO] 01:08:26:998 kernel.log/(101255:101265): Cola Ready <FIFO>:
+[INFO] 01:08:26:999 kernel.log/(101255:101265): PID: <1000>
+[INFO] 01:08:26:999 kernel.log/(101255:101263): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:08:26:999 kernel.log/(101255:101263): PID: <1000> ingresa a EXECUTE
+[INFO] 01:08:26:999 kernel.log/(101255:101263): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:08:26:999 kernel.log/(101255:101264): PID: <1000> enviada a CPU
+[INFO] 01:08:29:010 kernel.log/(101255:101264): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 01:08:29:010 kernel.log/(101255:101264): COMO
+[INFO] 01:08:29:010 kernel.log/(101255:101264): DERE
+[INFO] 01:08:29:010 kernel.log/(101255:101264): PENT
+[INFO] 01:08:29:010 kernel.log/(101255:101264): ETOD
+[INFO] 01:08:29:010 kernel.log/(101255:101264): OESORDEN
+[INFO] 01:08:29:010 kernel.log/(101255:101264): ADODESDE
+[INFO] 01:08:29:010 kernel.log/(101255:101264): QUEHASLL
+[INFO] 01:08:29:010 kernel.log/(101255:101264): EGADOMIV
+[INFO] 01:08:29:010 kernel.log/(101255:101264): IDACAMBIOYANOSOY
+[INFO] 01:08:29:010 kernel.log/(101255:101264): LAMISMAQUETUCONO
+[INFO] 01:08:29:010 kernel.log/(101255:101264): CISTEENTONCESAHO
+[INFO] 01:08:29:010 kernel.log/(101255:101264): RASOYMUCHOMEJOR!
+[INFO] 01:08:29:010 kernel.log/(101255:101264): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 01:08:29:010 kernel.log/(101255:101264): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 01:08:29:010 kernel.log/(101255:101262): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 01:09:08:850 kernel.log/(101255:101255): Cliente conectado (a KERNEL)
+
+[INFO] 01:09:12:727 kernel.log/(101255:101273): Se crea el proceso <1001> en NEW
+[INFO] 01:09:12:727 kernel.log/(101255:101273): Cola NEW: 
+[INFO] 01:09:12:728 kernel.log/(101255:101273): PID: <1001>
+[INFO] 01:09:12:728 kernel.log/(101255:101266): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 01:09:12:728 kernel.log/(101255:101266): Cola Ready <FIFO>:
+[INFO] 01:09:12:728 kernel.log/(101255:101266): PID: <1001>
+[INFO] 01:09:12:728 kernel.log/(101255:101263): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:09:12:728 kernel.log/(101255:101263): PID: <1001> ingresa a EXECUTE
+[INFO] 01:09:12:728 kernel.log/(101255:101263): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:09:12:728 kernel.log/(101255:101264): PID: <1001> enviada a CPU
+[INFO] 01:09:21:751 kernel.log/(101255:101264): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 01:09:21:751 kernel.log/(101255:101264): SOY_
+[INFO] 01:09:21:751 kernel.log/(101255:101264): LA__
+[INFO] 01:09:21:751 kernel.log/(101255:101264): CONS
+[INFO] 01:09:21:751 kernel.log/(101255:101264): OLA_
+[INFO] 01:09:21:751 kernel.log/(101255:101264): LIMPIADO
+[INFO] 01:09:21:751 kernel.log/(101255:101264): RA!_____
+[INFO] 01:09:21:751 kernel.log/(101255:101264): PONGO___
+[INFO] 01:09:21:751 kernel.log/(101255:101264): TODO_EN_
+[INFO] 01:09:21:751 kernel.log/(101255:101264): 0_DE_NUEVO!_____
+[INFO] 01:09:21:751 kernel.log/(101255:101264): LAMISMAQUETUCONO
+[INFO] 01:09:21:751 kernel.log/(101255:101264): CISTEENTONCESAHO
+[INFO] 01:09:21:751 kernel.log/(101255:101264): RASOYMUCHOMEJOR!
+[INFO] 01:09:21:751 kernel.log/(101255:101264): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 01:09:21:751 kernel.log/(101255:101264): PID: <1001> - Bloqueado por: <IO>
+[INFO] 01:09:21:751 kernel.log/(101255:101265): PID: <1001> - Ejecuta IO: <5>
+[INFO] 01:09:26:752 kernel.log/(101255:101265): Cola Ready <FIFO>:
+[INFO] 01:09:26:752 kernel.log/(101255:101265): PID: <1001>
+[INFO] 01:09:26:752 kernel.log/(101255:101263): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:09:26:752 kernel.log/(101255:101263): PID: <1001> ingresa a EXECUTE
+[INFO] 01:09:26:752 kernel.log/(101255:101263): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:09:26:753 kernel.log/(101255:101264): PID: <1001> enviada a CPU
+[INFO] 01:09:38:770 kernel.log/(101255:101264): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 00000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 00000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 00000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 00000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:09:38:770 kernel.log/(101255:101264): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 01:09:38:770 kernel.log/(101255:101264): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 01:09:38:771 kernel.log/(101255:101262): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 01:10:00:158 kernel.log/(101255:101255): Cliente conectado (a KERNEL)
+
+[INFO] 01:10:28:700 kernel.log/(101255:101275): Se crea el proceso <1002> en NEW
+[INFO] 01:10:28:701 kernel.log/(101255:101275): Cola NEW: 
+[INFO] 01:10:28:701 kernel.log/(101255:101275): PID: <1002>
+[INFO] 01:10:28:701 kernel.log/(101255:101266): PID: <1002> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 01:10:28:701 kernel.log/(101255:101266): Cola Ready <FIFO>:
+[INFO] 01:10:28:701 kernel.log/(101255:101266): PID: <1002>
+[INFO] 01:10:28:701 kernel.log/(101255:101263): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:10:28:701 kernel.log/(101255:101263): PID: <1002> ingresa a EXECUTE
+[INFO] 01:10:28:701 kernel.log/(101255:101263): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:10:28:701 kernel.log/(101255:101264): PID: <1002> enviada a CPU
+[INFO] 01:10:30:709 kernel.log/(101255:101264): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 01:10:30:709 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:30:709 kernel.log/(101255:101264): OPEN
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 0000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 0000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:30:709 kernel.log/(101255:101264): 0000000000000000
+[WARNING] 01:10:30:709 kernel.log/(101255:101264): PID: <1002> solicita abrir o crear el archivo: <CHARLY_GARCIA.MP3>
+[INFO] 01:10:30:709 kernel.log/(101255:101264): PID: <1002> enviada a CPU
+[INFO] 01:10:32:717 kernel.log/(101255:101264): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 01:10:32:717 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:32:717 kernel.log/(101255:101264): OPEN
+[INFO] 01:10:32:717 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:32:717 kernel.log/(101255:101264): SEEK
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:32:717 kernel.log/(101255:101264): 0000000000000000
+[WARNING] 01:10:32:717 kernel.log/(101255:101264): PID: <1002> solicita actualizar el puntero del archivo <CHARLY_GARCIA.MP3> a <16>
+[INFO] 01:10:32:717 kernel.log/(101255:101264): PID: <1002> enviada a CPU
+[INFO] 01:10:34:721 kernel.log/(101255:101264): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 01:10:34:721 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:34:721 kernel.log/(101255:101264): OPEN
+[INFO] 01:10:34:721 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:34:721 kernel.log/(101255:101264): SEEK
+[INFO] 01:10:34:721 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:34:721 kernel.log/(101255:101264): TRUNCATE
+[INFO] 01:10:34:721 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:34:721 kernel.log/(101255:101264): 00000000
+[INFO] 01:10:34:721 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:34:721 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:34:721 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:34:721 kernel.log/(101255:101264): 0000000000000000
+[WARNING] 01:10:34:721 kernel.log/(101255:101264): PID: <1002> solicita actualiazar el tamaño del archivo <CHARLY_GARCIA.MP3> a <64>
+[INFO] 01:10:34:721 kernel.log/(101255:101264): PID: <1002> enviada a CPU
+[INFO] 01:10:36:727 kernel.log/(101255:101264): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 01:10:36:727 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:36:727 kernel.log/(101255:101264): OPEN
+[INFO] 01:10:36:727 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:36:727 kernel.log/(101255:101264): SEEK
+[INFO] 01:10:36:727 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:36:727 kernel.log/(101255:101264): TRUNCATE
+[INFO] 01:10:36:727 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:36:727 kernel.log/(101255:101264): F_CLOSE_
+[INFO] 01:10:36:727 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:727 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:727 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:727 kernel.log/(101255:101264): 0000000000000000
+[WARNING] 01:10:36:727 kernel.log/(101255:101264): PID: <1002> solicita cerrar el archivo <CHARLY_GARCIA.MP3>
+[INFO] 01:10:36:727 kernel.log/(101255:101264): PID: <1002> enviada a CPU
+[INFO] 01:10:36:728 kernel.log/(101255:101264): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 01:10:36:728 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:36:728 kernel.log/(101255:101264): OPEN
+[INFO] 01:10:36:728 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:36:728 kernel.log/(101255:101264): SEEK
+[INFO] 01:10:36:728 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:36:728 kernel.log/(101255:101264): TRUNCATE
+[INFO] 01:10:36:728 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:36:728 kernel.log/(101255:101264): F_CLOSE_
+[INFO] 01:10:36:728 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:728 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:729 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:729 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:36:729 kernel.log/(101255:101264): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 01:10:36:729 kernel.log/(101255:101264): PID: <1002> - Bloqueado por: <IO>
+[INFO] 01:10:36:729 kernel.log/(101255:101265): PID: <1002> - Ejecuta IO: <5>
+[INFO] 01:10:41:733 kernel.log/(101255:101265): Cola Ready <FIFO>:
+[INFO] 01:10:41:733 kernel.log/(101255:101265): PID: <1002>
+[INFO] 01:10:41:733 kernel.log/(101255:101263): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:10:41:733 kernel.log/(101255:101263): PID: <1002> ingresa a EXECUTE
+[INFO] 01:10:41:733 kernel.log/(101255:101263): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 01:10:41:733 kernel.log/(101255:101264): PID: <1002> enviada a CPU
+[INFO] 01:10:43:735 kernel.log/(101255:101264): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 01:10:43:735 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:43:735 kernel.log/(101255:101264): OPEN
+[INFO] 01:10:43:735 kernel.log/(101255:101264): EJEC
+[INFO] 01:10:43:735 kernel.log/(101255:101264): SEEK
+[INFO] 01:10:43:735 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:43:735 kernel.log/(101255:101264): TRUNCATE
+[INFO] 01:10:43:735 kernel.log/(101255:101264): EJECUTAR
+[INFO] 01:10:43:735 kernel.log/(101255:101264): F_CLOSE_
+[INFO] 01:10:43:735 kernel.log/(101255:101264): TERMINAR_PROCESO
+[INFO] 01:10:43:735 kernel.log/(101255:101264): CHARLY_GARCIA.MP
+[INFO] 01:10:43:735 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:43:735 kernel.log/(101255:101264): 0000000000000000
+[INFO] 01:10:43:735 kernel.log/(101255:101264): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 01:10:43:735 kernel.log/(101255:101264): Finaliza el proceso <1002> - Motivo: <SUCCESS>
+[INFO] 01:10:43:735 kernel.log/(101255:101262): Ordenando a Consola la finalización del PID: <1002>
