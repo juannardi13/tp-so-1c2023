@@ -889,8 +889,9 @@ void ejecutar_MOV_IN(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 	char** instruccion = string_split(instruccion_grande, " ");
 
 	int direccion_logica = atoi(instruccion[2]);
+	int tam_registro = tamanio_registro(instruccion[1]);
 
-	asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, fd_memoria, config, logger_principal, fd_kernel), instruccion[1]);
+	asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, tam_registro, fd_memoria, config, logger_principal, fd_kernel), instruccion[1]);
 }
 
 void ejecutar_MOV_OUT(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
