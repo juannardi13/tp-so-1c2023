@@ -100,7 +100,7 @@ void estado_ejecutar(void) {
 		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rcx);
 		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rdx);
 
-		//--- FALTA DESERIALIZAR SEGMENTOS
+		//--- FALTA DESERIALIZAR SEGMENTOS JAJSDJASJDAJSD SISI YA LOS DESERIALIZO
 
 		switch (respuesta_cpu) {
 		case IO: //TERMINADO
@@ -359,12 +359,24 @@ void estado_ejecutar(void) {
 			log_warning(logger_kernel, "PID: <%d> solicita una instancia del Recurso: <%s>", proceso_a_ejecutar->pcb->pid, recurso_wait);
 
 			if (dictionary_has_key(recursos, recurso_wait)) {
-				//Lógica para WAIT TODO
-				pthread_mutex_lock(&mutex_exec);
-				list_add(cola_exec, proceso_a_ejecutar);
-				pthread_mutex_unlock(&mutex_exec);
+				//Lógica para WAIT TODO Creo que es por acá
+				t_recurso* recurso_a_pedir = dictionary_get(recursos, recurso_wait);
 
-				sem_post(&sem_exec);
+				if(asignar_recurso(recurso_a_pedir, proceso_a_ejecutar)) {
+					pthread_mutex_lock(&mutex_exec);
+					list_add(cola_exec, proceso_a_ejecutar);
+					pthread_mutex_unlock(&mutex_exec);
+
+					sem_post(&sem_exec);
+				} else {
+					proceso_a_ejecutar->desalojado = DESALOJADO;
+					proceso_a_ejecutar->final_ultima_rafaga = get_time();
+					proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+
+					queue_push(recurso_a_pedir->cola_espera, proceso_a_ejecutar);
+					sem_post(&sem_ready)
+				}
+
 			} else {
 				pthread_mutex_lock(&mutex_exit);
 				proceso_a_ejecutar->pcb->estado = EXT;
@@ -398,7 +410,12 @@ void estado_ejecutar(void) {
 			log_warning(logger_kernel, "PID: <%d> solicita liberar una instancia del Recurso <%s>", proceso_a_ejecutar->pcb->pid, recurso_signal);
 
 			if(dictionary_has_key(recursos, recurso_signal)) {
-				//Lógica para SIGNAL TODO
+				//Lógica para SIGNAL TODO CREO QUE ES POR ACA
+
+				t_recurso* recurso_a_liberar = dictionary_get(recursos, recurso_signal);
+
+				liberar_instancia_recurso(recurso_a_liberar);
+
 				pthread_mutex_lock(&mutex_exec);
 				list_add(cola_exec, proceso_a_ejecutar);
 				pthread_mutex_unlock(&mutex_exec);
@@ -480,14 +497,13 @@ void estado_exit(void) {
 		liberar_recursos_asignados(proceso->pcb->recursos_asignados);
 
 		//Liberar las estructuras del proceso en memoria
-		//enviar_pcb(socket_memoria, proceso->pcb);
-		//TODO mutex para operacion de memoria
+		pthread_mutex_lock(&mutex_operacion_memoria);
 		enviar_pid_memoria(proceso->pcb->pid, LIBERAR_ESTRUCTURAS);
 		log_info(logger_kernel, "PID: <%d> liberando estructuras en memoria", proceso->pcb->pid);
 		op_code respuesta_memoria;
 
 		recv(socket_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);
-		//TODO fin de mutex de operacion de memoria
+		pthread_mutex_unlock(&mutex_operacion_memoria);
 
 		if(respuesta_memoria != ESTRUCTURAS_LIBERADAS) {
 			log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
