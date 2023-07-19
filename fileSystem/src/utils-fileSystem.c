@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// dps cambiar log_info a donde esta el manejo de conexión, están en las funciones de manera provisional
-
 void probando_cositas(){
 ////	 Prueba respuesta a petición de creación de archivo (SEGUIR) //
 ////	 --- INICIO --- //
@@ -254,12 +252,31 @@ void probando_cositas(){
 		// funca
 
 		// fin pruebas ampliar
+		// archivo de 325 bytes (1 bloque con puntero directo 5 con puntero directo)
+		// si nuevo tamanio < 64, por ejemplo 56, libero todos los bloques usados apuntados por punteros de bloque
+
+		crear_archivo("campeonesSudamericana");
+
+		truncar_archivo("campeonesSudamericana",string_itoa(325));
+
+		truncar_archivo("campeonesSudamericana",string_itoa(56));
+
+		crear_archivo("poleSittersHungaroring");
+
+		// necesita 6 bloques, uno apuntado directo y 5 indirecciones
+		truncar_archivo("poleSittersHungaroring",string_itoa(325));
+
+		// necesita 3 bloques, uno apuntado directo y 2 indirecciones, tengo que liberar 3 bloques
+		truncar_archivo("poleSittersHungaroring",string_itoa(160));
+
+		// funca - fin preubas ftruncate
+
 }
 
 
 
 int abrir_archivo(char* nombre_archivo){
-	// busco archivo, si no existe f será nula y fd será -1, devolver fd
+
 	FILE* f;
 
 	int boolExiste = 1;
@@ -325,28 +342,22 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 
 	int tamanio_fcb = config_get_int_value(config_fcb_archivo,"TAMANIO_ARCHIVO");
 
-	int tamanio_bloque = config_super_bloque_valores->block_size;
-
-	int cantidad_bloques = config_super_bloque_valores->block_count;
-
-	int cantidad_punteros_bloque = config_super_bloque_valores->block_size / sizeof(uint32_t);
-
 	if(nuevo_tamanio_entero > tamanio_fcb)
 	{
-			ampliar_tamanio(tamanio_fcb,nuevo_tamanio_entero,tamanio_bloque,cantidad_punteros_bloque,cantidad_bloques,config_fcb_archivo);
+			ampliar_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
 	}
 	else
 	{
-			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,tamanio_bloque,cantidad_punteros_bloque,config_fcb_archivo);
+			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
 	}
 
 	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%s>",nombre_archivo,nuevo_tamanio);
 
-//	msync(mapping_archivo_bloques,tamanio_bloque*cantidad_bloques,MS_SYNC);
-
 	config_set_value(config_fcb_archivo,"TAMANIO_ARCHIVO",nuevo_tamanio);
 
 	config_save(config_fcb_archivo);
+
+	config_destroy(config_fcb_archivo);
 
 	fclose(f);
 
@@ -371,120 +382,53 @@ int acceso_lectura_bitmap(int nro_bloque)
 	return ret;
 }
 
-void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque,t_config* config_fcb_archivo)
+
+
+void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_fcb_archivo)
 {
-if(tamanio_fcb <= tamanio_bloque)
+
+	int tamanio_bloque = config_super_bloque_valores->block_size;
+
+
+	if(tamanio_fcb <= tamanio_bloque)
+	{
+
+	}
+	else
+	{
+
+		int nro_bloque_punteros_indirectos = config_get_int_value(config_fcb_archivo,"PUNTERO_INDIRECTO");
+
+		int nro_ultima_entrada_bloque_pind = ceil((double)(tamanio_fcb - tamanio_bloque) / (double)tamanio_bloque) -1;
+
+		if(nuevo_tamanio_entero <= tamanio_bloque)
 		{
-			// no hace nada, solo cambio numero indicado en fcb
+			reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(nro_ultima_entrada_bloque_pind,nro_bloque_punteros_indirectos);
 		}
 		else
 		{
-			// tamanio nuevo menor a tamanio fcb y tamanio fcb mayor a tamanio bloque
-			// ver con tamanio nuevo cuantos bloques voy a necesitar
+			int cantidad_bloques_apuntados_necesarios = ceil((double)nuevo_tamanio_entero / (double)tamanio_bloque) - 1;
 
-			int nro_bloque_punteros_indirectos = config_get_int_value(config_fcb_archivo,"PUNTERO_INDIRECTO");
-
-			int nro_ultima_entrada_bloque_pind = ceil((tamanio_fcb - tamanio_bloque) / tamanio_bloque) -1;
-
-			if(nuevo_tamanio_entero <= tamanio_bloque)
-			{
-				// liberar a todos bloques apuntados por punteros indirectos
-
-				for(int i = 0; i <= nro_ultima_entrada_bloque_pind; i++)
-				{
-					int off = sizeof(uint32_t) * i;
-
-					int nro_bloque;
-
-					memcpy(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t));
-
-					bitarray_clean_bit(estructura_bitmap,nro_bloque);
-				}
-
-			}
-			else
-			{
-				int cantidad_bloques_apuntados_necesarios = ceil(nuevo_tamanio_entero / tamanio_bloque) - 1;
-
-				for(int i = nro_ultima_entrada_bloque_pind; i >= cantidad_bloques_apuntados_necesarios;i--)
-				{
-					int off = sizeof(uint32_t) * i;
-
-					int nro_bloque;
-
-					memcpy(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t));
-
-					bitarray_clean_bit(estructura_bitmap,nro_bloque);
-				}
-
-			}
-
+			reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(nro_ultima_entrada_bloque_pind,nro_bloque_punteros_indirectos,cantidad_bloques_apuntados_necesarios);
 		}
+
+	}
 }
 
-void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque,int cantidad_punteros_bloque,int cantidad_bloques,t_config* config_fcb_archivo)
+
+void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_fcb_archivo)
 {
+	int tamanio_bloque = config_super_bloque_valores->block_size;
+
 	if(tamanio_fcb == 0)
 	{
 		if(nuevo_tamanio_entero <= tamanio_bloque)
 		{
-			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
-
-			bitarray_set_bit(estructura_bitmap,puntero_directo);
-
-			char* puntero_directo_string = string_itoa(puntero_directo);
-
-			config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",puntero_directo_string);
+			ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(config_fcb_archivo);
 		}
 		else
 		{
-
-			int cantidad_bloques_puntero_indirecto = ceil((((double)(nuevo_tamanio_entero - tamanio_bloque)) / ((double)tamanio_bloque)));
-
-			int puntero_directo = primer_bloque_disponible(estructura_bitmap);
-
-			bitarray_set_bit(estructura_bitmap,puntero_directo);
-
-			char* puntero_directo_string = string_itoa(puntero_directo);
-
-			config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",puntero_directo_string);
-
-			int puntero_indirecto = primer_bloque_disponible(estructura_bitmap);
-
-			bitarray_set_bit(estructura_bitmap,puntero_indirecto);
-
-			config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(puntero_indirecto));
-
-			for(int i = 0; i <  cantidad_punteros_bloque;i++)
-			{
-				int off = sizeof(uint32_t) * i;
-
-				if(i < cantidad_bloques_puntero_indirecto)
-				{
-
-					int bloque_datos = primer_bloque_disponible(estructura_bitmap);
-
-					bitarray_set_bit(estructura_bitmap,bloque_datos);
-
-					// esto funcionaba afuera, porque no adentro de la función?
-
-//					int nro_bloque2 = 7;
-//
-//					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(6),&nro_bloque2,sizeof(uint32_t));
-//
-//					uint32_t h = *(mapping_archivo_bloques + obtener_posicion_archivo_bloques(6));
-//
-//					printf("%ld\n",h);
-
-					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
-
-				}
-				else
-				{
-					int menos_uno = -1;
-					memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto)+ off,&menos_uno,sizeof(uint32_t));
-				}
-			}
+			ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(nuevo_tamanio_entero,config_fcb_archivo);
 		}
 	}
 	else
@@ -493,86 +437,18 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,int tamanio_bloque
 		{
 			if(nuevo_tamanio_entero <= tamanio_bloque)
 			{
-				// no se hace nada pues ya tiene bloque necesario, solo se reescribe tamanio en fcb
+
 			}
 			else
 			{
-				// resto a nuevo tam el tam actual. Con lo que me queda veo cuantos bloques extra necesito.
-				// dps asigno bloque para punteros indirectos y sobre ese bloque escribo la cantidad de punteros
-				// correspondiente a la cantidad de bloques extra que se necesitaron
-				//				int tamanio_necesario = nuevo_tamanio_entero - tamanio_fcb;
-				//
-				//				int bloques_nuevos_necesarios = ceil(tamanio_necesario / tamanio_bloque);
-
-				int cantidad_bloques_puntero_indirecto = ceil((double)(nuevo_tamanio_entero - tamanio_bloque) / (double)tamanio_bloque);
-
-				int puntero_indirecto = primer_bloque_disponible(estructura_bitmap);
-
-				bitarray_set_bit(estructura_bitmap,puntero_indirecto);
-
-				config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(puntero_indirecto));
-
-
-				for(int i = 0; i <  cantidad_punteros_bloque;i++)
-				{
-
-					int off = sizeof(uint32_t) * i;
-
-					if(i < cantidad_bloques_puntero_indirecto)
-					{
-
-						int bloque_datos = primer_bloque_disponible(estructura_bitmap);
-
-						bitarray_set_bit(estructura_bitmap,bloque_datos);
-
-						// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
-
-						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
-					}
-					else
-					{
-						int menos_uno = -1;
-						memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&menos_uno,sizeof(uint32_t));
-					}
-				}
+				ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(nuevo_tamanio_entero,config_fcb_archivo);
 			}
 		}
 		else
 		{
-			// coincide con número de entrada dentro de bloque de punteros indirectos siguiente a usar.
-			// por ejemplo si el tam fcb es de 16390, le resto 1024 del puntero directo
-			//  me quedan 15366. Dividido 1024 es 15.005 osea se usaron 16 entradas del bloque, de la 0 a la 15
-			// si el tamanio necesario me queda por ejemplo 2056 necesito 3 bloque nuevos. Serán el 16, 17, 18 osea cant_ind_usadas + 2
-
-			int cantidad_indirecciones_usadas = ceil((double)(tamanio_fcb - tamanio_bloque)/(double)tamanio_bloque);
-
-			int tamanio_necesario = nuevo_tamanio_entero - tamanio_fcb;
-
-			int cantidad_punteros_indirectos = ceil((double)tamanio_necesario / (double)tamanio_bloque);
-
-			int nro_bloque_punteros_indirectos = config_get_int_value(config_fcb_archivo,"PUNTERO_INDIRECTO");
-
-			for(int i = cantidad_indirecciones_usadas; i < (cantidad_indirecciones_usadas + cantidad_punteros_indirectos) ;i++)
-			{
-				int off = sizeof(uint32_t) * i;
-
-				int bloque_datos = primer_bloque_disponible();
-
-				bitarray_set_bit(estructura_bitmap,bloque_datos);
-
-				printf("%i\n",bloque_datos);
-
-				// escribir número de bloque asignado en el bloque del puntero indirecto (todavía no hecho)
-
-				memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,&bloque_datos,sizeof(uint32_t));
-
-
-			}
-
+			ampliar_con_tam_actual_mayor_tam_bloque(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
 		}
 	}
-
-
 }
 
 
@@ -585,8 +461,6 @@ void concatenar_strings(const char* s1, const char* s2,char* buffer){
 
 
 t_bitarray* inicializar_archivo_bm(FILE* f){
-
-//	f = fopen(config_get_string_value(config,"PATH_BITMAP"),"w+");
 
 	archivo_bm = fopen("../fileSystem/grupoDeBloques/bitmap.bin","w+");
 
@@ -655,28 +529,14 @@ void acceso_escritura_bitmap(int nro_bloque,int estado_escribir)
 
 
 void asignar_bloques_iniciales(char* ruta,t_config* config_fcb_archivo){
-//	FILE* f;
-//	f = fopen("../fileSystem/grupoDeBloques/bitmap.bin","r+");
-//
-//	if(fileno(f) == -1){
-//		printf("Error al abrir archivo bitmap\n");
-//	}
 
-	int nro_primer_bloque = primer_bloque_disponible(estructura_bitmap);
-
-//	bitarray_set_bit(estructura_bitmap,nro_primer_bloque);
+	int nro_primer_bloque = primer_bloque_disponible();
 
 	acceso_escritura_bitmap(nro_primer_bloque,1);
-//
-//	t_config* config_fcb_archivo_copia = config_fcb_archivo;
-//
-	int nro_bloque_punteros = primer_bloque_disponible(estructura_bitmap);
 
-//	bitarray_set_bit(estructura_bitmap,nro_bloque_punteros);
+	int nro_bloque_punteros = primer_bloque_disponible();
 
 	acceso_escritura_bitmap(nro_bloque_punteros,1);
-
-	char* nombre = config_get_string_value(config_fcb_archivo,"NOMBRE_ARCHIVO");
 
 	config_set_value(config_fcb_archivo,"PUNTERO_DIRECTO",string_itoa(nro_primer_bloque));
 	config_set_value(config_fcb_archivo,"PUNTERO_INDIRECTO",string_itoa(nro_bloque_punteros));
@@ -684,9 +544,6 @@ void asignar_bloques_iniciales(char* ruta,t_config* config_fcb_archivo){
 	config_save(config_fcb_archivo);
 
 	printf("Prueba cantidad keys config: %i\n",config_keys_amount(config_fcb_archivo));
-	// da dos, por algun extraño motivo set value borra las llaves anteriores
-
-
 }
 
 void liberar_recursos_bitmap(FILE* archivo_bm,FILE* archivo_bloques,char* mapping_archivo_bloques){
@@ -702,18 +559,6 @@ void liberar_recursos_bitmap(FILE* archivo_bm,FILE* archivo_bloques,char* mappin
 	bitarray_destroy(estructura_bitmap);
 }
 
-
-// un archivo fcb por cada archivo (fichero)usado. Tiene puntero "a lista" de bloques, a bloque con punteros a otros bloques y puntero directo a bloque inicial
-// PERO, como se recomienda un archivo de bloques y no una lista de bloques, el puntero "sera" la posicion dentro del archivo
-// donde se cuenta con el contenido. Cada posición del archivo de bloques es un bloque (64 bytes). Además, para cada archivo, dentro
-// de esta lista / archivo de bloques habrá un bloque que contendrá únicamente punteros hacia el resto de bloques del archivo.
-// como cada bloque
-// luego cada bloque lo leo de a 8 bits (1 byte) -> tamaño estandar de stream (flujo de datos cuyo tipo no conozco) ???? COMO RESUELVO ESTO
-
-
-
-// cada registro de archivo será un bloque, por ende cada registro del archivo consiste de 64 bytes (o lo que se indique en el archivo de config que ocupan los bloques)
-//
 void levantar_archivo_bloques(){
 
 	int cantidad_bloques = config_super_bloque_valores->block_count;
@@ -746,11 +591,6 @@ int obtener_posicion_archivo_bloques(int indice)
 	return indice  * tamanio_bloques;
 }
 
-
-// tamanio de archivo => al inicializarlo se le asigna mínimo un bloque de para almacenar punteros
-// tamanio inicial de archivo es el de 1 bloque
-// se asignará como primer bloque y bloque indirecto los primeros bloques disponibles, para lo cual se consulta el bitmap
-
 char* obtener_ruta_archivo(const char* nombre_archivo)
 {
 	const char* ruta_incompleta = "../fileSystem/grupoDeBloques/";
@@ -762,25 +602,4 @@ char* obtener_ruta_archivo(const char* nombre_archivo)
 }
 
 
-//void levantar_fcb_nuevo_archivo(const char* nombre_archivo){
-//	FILE* f;
-//
-//	int tamanio_bloques = config_super_bloque_valores->block_size;
-//
-//	char* ruta = obtener_ruta_archivo(nombre_archivo);
-//
-//	f = fopen(ruta,"w+");
-//
-//	int fd = fileno(f);
-//
-//	if(fd == -1){
-//		printf("Error al crear archivo de config\n");
-//		fclose(f);
-//	}
-//
-//	fprintf(f,"NOMBRE_ARCHIVO=%s\n",nombre_archivo);
-//	fprintf(f,"TAMANIO_ARCHIVO=%i\n",tamanio_bloques*2);
-//
-//	asignar_bloques_iniciales(f);
-//	free(ruta);
-//}
+

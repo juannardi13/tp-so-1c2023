@@ -7,6 +7,7 @@
 #include <commons/config.h>
 #include <commons/bitarray.h>
 #include <shared-2.h>
+#include "funcionesTruncar.h"
 
 typedef struct{
 	char* ip;
@@ -40,6 +41,20 @@ int crear_archivo(char*);
 void inicializar_estructuras();
 void probando_cositas();
 void inicializar_servidor();
+void reducir_tamanio(int,int,t_config*);
+void ampliar_tamanio(int,int,t_config*);
+void acceso_escritura_bitmap(int,int);
+void asignar_bloques_iniciales(char*,t_config*);
+int primer_bloque_disponible(void);
+int obtener_posicion_archivo_bloques(int);
+void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(int,int);
+void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(int,int,int);
+void ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(t_config*);
+void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int ,t_config*);
+void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int,t_config*);
+void ampliar_con_tam_actual_mayor_tam_bloque(int, int,t_config*);
+
+
 
 extern t_log* logger;
 extern t_config_valores *config_valores;
