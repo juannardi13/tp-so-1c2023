@@ -5,7 +5,8 @@
 #include "operaciones.h"
 #include "inicio.h"
 
-t_config_memoria *config_memoria;
+t_config *config;
+t_config_memoria config_memoria;
 t_log *logger;
 int *conexiones[3];
 pthread_t hilos[3];
@@ -16,5 +17,10 @@ t_segmento *segmento_0;
 
 void inicializar_config(void);
 void esperar_conexiones(int);
+void terminar_memoria(void);
+void destructor_lista_tablas(t_tabla_segmentos *);
+void liberar_segmento_0(void);
+void destruir_bitmap(void);
+
 
 #endif /* MEMORIA_H_ */

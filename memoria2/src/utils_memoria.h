@@ -1,5 +1,5 @@
-#ifndef UTILS_H_
-#define UTILS_H_
+#ifndef UTILS_MEMORIA_H_
+#define UTILS_MEMORIA_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,16 +22,16 @@ typedef struct {
 } t_config_memoria;
 
 //typedef struct {
-//	int id;
-//	int base;
-//	int limite;
-//} t_segmento;
+//	int pid;
+//	t_list *segmentos;
+//} t_tabla_segmentos;
 
-extern t_config_memoria *config_memoria;
+extern t_config_memoria config_memoria;
 extern t_log *logger;
 extern void *memoria;
 extern t_list *tablas_segmentos;
 extern t_bitarray *bitmap;
 extern t_segmento *segmento_0;
+extern t_tabla_segmentos *tabla_segmentos;
 
-#endif /* UTILS_H_ */
+#endif /* UTILS_MEMORIA_H_ */
