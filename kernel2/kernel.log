@@ -928,3 +928,6 @@
 [INFO] 01:10:43:735 kernel.log/(101255:101264): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
 [INFO] 01:10:43:735 kernel.log/(101255:101264): Finaliza el proceso <1002> - Motivo: <SUCCESS>
 [INFO] 01:10:43:735 kernel.log/(101255:101262): Ordenando a Consola la finalización del PID: <1002>
+[INFO] 07:22:13:224 kernel.log/(112690:112690): Se crea el diccionario con los recursos.
+[INFO] 07:22:13:224 kernel.log/(112690:112690): Se agrego el recurso DISCO al diccionario
+[INFO] 07:22:13:224 kernel.log/(112690:112690): Se agrego el recurso RECURSO_1 al diccionario

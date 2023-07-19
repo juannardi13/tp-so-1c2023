@@ -483,7 +483,7 @@ void estado_exit(void) {
 		//enviar_pcb(socket_memoria, proceso->pcb);
 		//TODO mutex para operacion de memoria
 		enviar_pid_memoria(proceso->pcb->pid, LIBERAR_ESTRUCTURAS);
-		log_info(logger_kernel, "PID: <%d> liberando estructuras en memoria");
+		log_info(logger_kernel, "PID: <%d> liberando estructuras en memoria", proceso->pcb->pid);
 		op_code respuesta_memoria;
 
 		recv(socket_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);

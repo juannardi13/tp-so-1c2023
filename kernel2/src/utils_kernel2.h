@@ -4,6 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/socket.h>
+#include<sys/time.h>
 #include<unistd.h>
 #include<netdb.h>
 #include<commons/log.h>
@@ -177,5 +178,13 @@ void calcular_response_ratio(t_proceso*);
 bool comparador_response_ratio(t_proceso*, t_proceso*);
 void mostrar_response_ratio(t_proceso*);
 int get_time(void);
+
+//Funciones de la conexión con Memoria
+void asignar_segmentos_de_memoria(t_pcb*);
+void enviar_parametros_a_memoria(int, int, int, op_code);
+void enviar_pid_memoria(int, op_code);
+void ordenar_compactacion(void);
+void recibir_respuesta_create(t_proceso*, int, int);
+void recibir_tablas_segmentos(t_pcb*);
 
 #endif /* UTILS_H_ */

@@ -1,5 +1,6 @@
 #include <commons/log.h>
 #include <commons/config.h>
+#include <signal.h>
 #include "utils_kernel2.h"
 
 archivo_config config_kernel;
