@@ -80,6 +80,7 @@ void destruir_semaforos(void) {
 	pthread_mutex_destroy(&mutex_exec);
 	pthread_mutex_destroy(&mutex_exit);
 	pthread_mutex_destroy(&mutex_pid);
+	pthread_mutex_destroy(&mutex_operacion_memoria);
 	sem_destroy(&sem_ready);
 	sem_destroy(&sem_block_io);
 	sem_destroy(&sem_exit);

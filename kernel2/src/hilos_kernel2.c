@@ -37,8 +37,6 @@ void manejar_conexion(int socket_cliente) {
 		proceso->pcb = crear_estructura_pcb(data);
 		proceso->socket = socket_cliente;
 
-//		avisar_a_memoria_crear_estructuras();
-
 		agregar_proceso_a_new(proceso);
 //
 //		-----------------------------------------------------------------
@@ -49,10 +47,9 @@ void manejar_conexion(int socket_cliente) {
 //		|																 |
 //		------------------------------------------------------------------
 //
-	//	agregar_proceso_a_ready();
 
-	//	ejecutar_proceso();
 
+		eliminar_paquete(paquete);
 		break;
 	default:
 		log_warning(logger_kernel, "Operacion desconocida \n");
@@ -94,6 +91,12 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	//un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
 	un_pcb->registros = registros_iniciados;
 	un_pcb->recursos_asignados = list_create();
+
+	//TODO PONER ACA EL MUTEX PARA LAS OPERACIONES CON MEMORIA
+	pthread_mutex_lock(&mutex_operacion_memoria);
+	asignar_segmentos_de_memoria(un_pcb);
+	pthread_mutex_unlock(&mutex_operacion_memoria);
+
 	//un_pcb->rafaga_estimada = config_kernel.estimacion_inicial; // TODO las rafagas y todos los tiempos que necesita el proceso para calcular el HRRN ahora estan en la estructura del proceso.
 	//un_pcb->rafaga_anterior = 0;
 	//un_pcb->llegada_ready = 0; //ver función get_time()

@@ -80,6 +80,7 @@ extern pthread_mutex_t mutex_block_io;
 extern pthread_mutex_t mutex_exec;
 extern pthread_mutex_t mutex_exit;
 extern pthread_mutex_t mutex_new;
+extern pthread_mutex_t mutex_operacion_memoria;
 extern pthread_mutex_t mutex_pid;
 extern pthread_mutex_t mutex_ready;
 extern sem_t sem_admitir;

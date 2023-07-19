@@ -5,6 +5,7 @@ pthread_mutex_t mutex_block_io;
 pthread_mutex_t mutex_exec;
 pthread_mutex_t mutex_exit;
 pthread_mutex_t mutex_new;
+pthread_mutex_t mutex_operacion_memoria;
 pthread_mutex_t mutex_pid;
 pthread_mutex_t mutex_ready;
 sem_t sem_admitir;
@@ -82,6 +83,7 @@ void iniciar_planificador_corto_plazo(void) {
 	pthread_mutex_init(&mutex_ready, NULL);
 	pthread_mutex_init(&mutex_block_io, NULL);
 	pthread_mutex_init(&mutex_exec, NULL);
+	pthread_mutex_init(&mutex_operacion_memoria, NULL);
 	sem_init(&sem_ready, 0, 0);
 	sem_init(&sem_exec, 0, 0);
 	sem_init(&sem_block_io, 0, 0);

@@ -25,6 +25,11 @@ typedef enum {
 	READ_WRITE
 }proteccion;
 
+typedef enum {
+	DESALOJADO,
+	NO_DESALOJADO
+}desalojo_cpu;
+
 typedef enum
 {
 	CONTEXTO_DE_EJECUCION,
@@ -55,7 +60,17 @@ typedef enum
 	NO_LEIDO,
 	SEG_FAULT,
 	FINALIZAR_CONSOLA,
-	SIN_INSTRUCCION
+	SIN_INSTRUCCION,
+	CREAR_ESTRUCTURAS,
+	ESTRUCTURAS_CREADAS,
+	LIBERAR_ESTRUCTURAS,
+	ESTRUCTURAS_LIBERADAS,
+	NUEVA_TABLA,
+	OUT_OF_MEMORY,
+	SEGMENTO_CREADO,
+	NECESITO_COMPACTAR,
+	COMPACTAR,
+	COMPACTACION_TERMINADA
 }op_code;
 
 typedef struct
@@ -93,6 +108,11 @@ typedef struct{
 }t_segmento;
 
 typedef struct {
+    uint32_t pid;
+    t_list* segmentos;
+} t_tabla_segmentos;
+
+typedef struct {
 	int pid;
 	int tamanio_instrucciones;
 	char* instrucciones;
@@ -101,7 +121,7 @@ typedef struct {
 	int tamanio_registros;
 	t_registros registros;
 	int tamanio_segmentos;
-	t_list* tabla_segmentos;
+	t_tabla_segmentos* tabla_segmentos;
 	t_list* recursos_asignados;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//int archivos_abiertos[][2];
@@ -137,6 +157,7 @@ typedef struct {
 	int rafaga_estimada;
 	double response_ratio;
 	op_code ultima_instruccion;
+	desalojo_cpu desalojado;
 }t_proceso;
 
 typedef struct

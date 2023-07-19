@@ -146,15 +146,13 @@ void estado_ejecutar(void) {
 			memcpy(&tamanio_segmento, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_info(logger_kernel, "PID: <%d> solicita crear el Segmento <%d> - Tamanio: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento);
+			log_info(logger_kernel, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+			pthread_mutex_lock(&mutex_operacion_memoria);
+			enviar_parametros_a_memoria(proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento, CREATE_SEGMENT);
 
-			sem_post(&sem_exec);
-			//TODO implementar con Memoria
-
+			recibir_respuesta_create(proceso_a_ejecutar, id_segmento, tamanio_segmento);
+			pthread_mutex_unlock(&mutex_operacion_memoria);
 			break;
 		case DELETE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;
@@ -164,15 +162,19 @@ void estado_ejecutar(void) {
 			memcpy(&id_segmento_a_borrar, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_info(logger_kernel, "PID: <%d> solicita eliminar el Segmento <%d>", proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar);
+			log_info(logger_kernel, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar);
+
+			pthread_mutex_lock(&mutex_operacion_memoria);
+			enviar_parametros_a_memoria(proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar, 0, DELETE_SEGMENT); //pongo un 0 en el tercer parámetro porque si es DELETE_SEGMENT no interfiere para nada
+
+			recibir_tablas_segmentos(proceso_a_ejecutar->pcb);
+			pthread_mutex_unlock(&mutex_operacion_memoria);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exec);
 
 			sem_post(&sem_exec);
-			//TODO implementar con Memoria
-
 			break;
 		case F_OPEN:
 			//Abrir o crear el archivo pasado por parámetro
@@ -190,7 +192,7 @@ void estado_ejecutar(void) {
 			memcpy(nombre_archivo_a_abrir, stream, tamanio_archivo_a_abrir);
 			stream += tamanio_archivo_a_abrir;
 
-			log_warning(logger_kernel, "PID: <%d> solicita abrir o crear el archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
+			log_warning(logger_kernel, "PID: <%d> - Abrir Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -213,7 +215,7 @@ void estado_ejecutar(void) {
 			memcpy(nombre_archivo_a_cerrar, stream, tamanio_archivo_a_cerrar);
 			stream += tamanio_archivo_a_cerrar;
 
-			log_warning(logger_kernel, "PID: <%d> solicita cerrar el archivo <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_cerrar);
+			log_warning(logger_kernel, "PID: <%d> - Cerrar Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_cerrar);
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exec);
@@ -239,7 +241,7 @@ void estado_ejecutar(void) {
 			memcpy(&tamanio_en_bytes, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(logger_kernel, "PID: <%d> solicita actualizar el puntero del archivo <%s> a <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
+			log_warning(logger_kernel, "PID: <%d> - Actualizar puntero Archivo: <%s> - Puntero <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -270,7 +272,7 @@ void estado_ejecutar(void) {
 			memcpy(&cantidad_bytes_read, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(logger_kernel, "PID: <%d> solicita leer del archivo <%s> - <%d> bytes para escribirlos en la DF de Memoria: <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, cantidad_bytes_read, direccion_fisica_read);
+			log_warning(logger_kernel, "PID: <%d> - Leer Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, direccion_fisica_read, cantidad_bytes_read);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -301,7 +303,7 @@ void estado_ejecutar(void) {
 			memcpy(&cantidad_bytes_write, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(logger_kernel, "PID: <%d> solicita al Kernel escribir en el archivo <%s> - <%d> bytes desde la DF de Memoria: <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, cantidad_bytes_write, direccion_fisica_write);
+			log_warning(logger_kernel, "PID: <%d> - Escribir Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, direccion_fisica_write, cantidad_bytes_write);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -329,7 +331,7 @@ void estado_ejecutar(void) {
 
 			proceso_a_ejecutar->ultima_instruccion = F_TRUNCATE;
 			
-			log_warning(logger_kernel, "PID: <%d> solicita actualiazar el tamaño del archivo <%s> a <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_truncar, nuevo_tamanio);
+			log_warning(logger_kernel, "PID: <%d> - Archivo: <%s> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_truncar, nuevo_tamanio);
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exec);
@@ -371,8 +373,7 @@ void estado_ejecutar(void) {
 				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 				sem_post(&sem_ready);
-			} //está comentado para que se puedan probar las cosas TODO
-
+			}
 
 			break;
 		case SIGNAL:
@@ -410,7 +411,7 @@ void estado_ejecutar(void) {
 				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 				sem_post(&sem_ready);
-			} //está comentado para que se puedan probar las cosas TODO
+			}
 
 			break;
 		case YIELD: //TERMINADO
@@ -475,11 +476,17 @@ void estado_exit(void) {
 
 		//Liberar las estructuras del proceso en memoria
 		//enviar_pcb(socket_memoria, proceso->pcb);
-		//log_info(logger_kernel, "Enviando pcb a memoria para liberar estructuras");
-		//op_code codigo = esperar_respuesta_memoria(socket_memoria);
-		//if(codigo != ESTRUCTURAS_LIBERADAS) {
-		//	log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
-		//}
+		//TODO mutex para operacion de memoria
+		enviar_pid_memoria(proceso->pcb->pid, LIBERAR_ESTRUCTURAS);
+		log_info(logger_kernel, "PID: <%d> liberando estructuras en memoria");
+		op_code respuesta_memoria;
+
+		recv(socket_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);
+		//TODO fin de mutex de operacion de memoria
+
+		if(respuesta_memoria != ESTRUCTURAS_LIBERADAS) {
+			log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
+		}
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
 
@@ -492,7 +499,7 @@ void estado_exit(void) {
 }
 
 void eliminar_pcb(t_pcb* pcb) {
-	//list_destroy_and_destroy_elements(pcb->segmentos, free);
+	list_destroy_and_destroy_elements(pcb->tabla_segmentos->segmentos, free);
 	//list_destroy_and_destroy_elements(pcb->recursos_asignados, free);
 	//TODO seguir destruyendo las eventuales listas de la pcb.
 }
