@@ -14,22 +14,13 @@ void estado_ejecutar(void) {
 
 		proceso_a_ejecutar->pcb->estado = EXEC;
 
-//		struct timespec inicio, final; //Estructuras y definiciones necesarias para calcular el HRRN
-	//	clock_gettime(CLOCK_REALTIME, &inicio);
-	//	long seconds; 
-	//	long nanoseconds;
-	//	double elapsed;
-
-	// 	if(proceso_a_ejecutar no viene de una instrucción que lo desalojó del CPU)
-
-		int inicio_cpu = get_time();
-		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
+	 	if(proceso_a_ejecutar->desalojado == DESALOJADO){
+	 		int inicio_cpu = get_time();
+	 		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
+	 	}
 		
 		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
 		log_info(logger_kernel, "PID: <%d> enviada a CPU", proceso_a_ejecutar->pcb->pid);
-
-
-		//proceso_a_ejecutar->pcb = recibir_pcb(socket_cpu);
 
 		t_paquete* paquete = malloc(sizeof(t_paquete));
 		paquete->buffer = malloc(sizeof(t_buffer));
@@ -113,6 +104,7 @@ void estado_ejecutar(void) {
 
 		switch (respuesta_cpu) {
 		case IO: //TERMINADO
+			proceso_a_ejecutar->desalojado = DESALOJADO;
 			int finalizacion_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = finalizacion_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
@@ -137,6 +129,7 @@ void estado_ejecutar(void) {
 			break;
 		case CREATE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = CREATE_SEGMENT;
+			proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 
 			int id_segmento;
 			int tamanio_segmento;
@@ -156,6 +149,7 @@ void estado_ejecutar(void) {
 			break;
 		case DELETE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;
+			proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 
 			int id_segmento_a_borrar;
 
@@ -178,6 +172,7 @@ void estado_ejecutar(void) {
 			break;
 		case F_OPEN:
 			//Abrir o crear el archivo pasado por parámetro
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = F_OPEN;
 			
@@ -202,6 +197,8 @@ void estado_ejecutar(void) {
 			break;
 		case F_CLOSE:
 			//Cerrar el archivo pasado por parámetro
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
+
 			proceso_a_ejecutar->ultima_instruccion = F_CLOSE;
 			
 			int tamanio_archivo_a_cerrar;
@@ -224,6 +221,7 @@ void estado_ejecutar(void) {
 			break;
 		case F_SEEK:
 			//Actualizar el puntero del archivo a la posición pasada por parámetro
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 			proceso_a_ejecutar->ultima_instruccion = F_SEEK;
 			
 			int tamanio_archivo_seek;
@@ -251,6 +249,7 @@ void estado_ejecutar(void) {
 			break;
 		case F_READ:
 			//Leer del archivo indicado la cantidad de bytes pasados por parámetro y escribirlo en la dirección física de memoria
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = F_READ;
 			
@@ -282,6 +281,7 @@ void estado_ejecutar(void) {
 			break;
 		case F_WRITE:
 			//Esta instrucción solicita al Kernel que se escriba en el archivo indicado la cantidad de bytes pasados por parámetro cuya información es obtenida a partir de la dirección física de Memoria.
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = F_WRITE;
 			
@@ -313,6 +313,7 @@ void estado_ejecutar(void) {
 			break;
 		case F_TRUNCATE:
 			//Modificar el tamaño del archivo al indicado por parámetro.
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			int tamanio_archivo_a_truncar;
 			int nuevo_tamanio;
@@ -340,6 +341,7 @@ void estado_ejecutar(void) {
 			break;
 		case WAIT:
 			//Se asigne una instancia del recurso indicado por parámetro
+			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = WAIT;
 			
@@ -380,6 +382,7 @@ void estado_ejecutar(void) {
 			//Libera una instancia del recurso indicado por parámetro.
 
 			proceso_a_ejecutar->ultima_instruccion = SIGNAL;
+			proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 			
 			int tamanio_parametro_signal = 0;
 
@@ -416,6 +419,7 @@ void estado_ejecutar(void) {
 			break;
 		case YIELD: //TERMINADO
 			proceso_a_ejecutar->ultima_instruccion = YIELD;
+			proceso_a_ejecutar->desalojado = DESALOJADO;
 
 			int fin_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = fin_cpu;
@@ -425,6 +429,7 @@ void estado_ejecutar(void) {
 			pthread_mutex_lock(&mutex_ready);
 			proceso_a_ejecutar->pcb->estado = READY;
 			list_add(cola_ready, proceso_a_ejecutar);
+			proceso_a_ejecutar->llegada_ready = get_time();
 			pthread_mutex_unlock(&mutex_ready);
 
 			sem_post(&sem_ready);

@@ -112,6 +112,7 @@ void agregar_proceso_a_new(t_proceso* proceso) {
 
 	pthread_mutex_lock(&mutex_new);
 	proceso->pcb->estado = NEW;
+	proceso->desalojado = DESALOJADO;
 	list_add(cola_new, proceso);
 
 	log_info(logger_kernel, "Se crea el proceso <%d> en NEW", proceso->pcb->pid);
