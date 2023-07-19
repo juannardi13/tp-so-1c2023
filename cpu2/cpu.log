@@ -1007,3 +1007,4 @@
 [WARNING] 01:10:43:736 cpu.log/(101222:101222): RCX: 0000000000000000
 [WARNING] 01:10:43:736 cpu.log/(101222:101222): RDX: 0000000000000000
 [INFO] 01:10:43:736 cpu.log/(101222:101222): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 07:22:33:512 cpu.log/(101222:101222): [ERROR] Se desconectó Kernel, chau loco suerte.
