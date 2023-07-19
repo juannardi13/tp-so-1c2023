@@ -333,3 +333,16 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria, in
 
 	return valor;
 }
+int tamanio_registro(char* registro){
+	int tam;
+	if(strcmp(registro, "AX") || strcmp(registro, "BX") || strcmp(registro, "CX") ||strcmp(registro, "DX")){
+		tam = 5;
+	}
+	if(strcmp(registro, "EAX") || strcmp(registro, "EBX") || strcmp(registro, "ECX") ||strcmp(registro, "EDX")){
+		tam = 9;
+	}
+	if(strcmp(registro, "RAX") || strcmp(registro, "RBX") || strcmp(registro, "RCX") ||strcmp(registro, "RDX")){
+		tam = 17;
+	}
+	return tam;
+}
