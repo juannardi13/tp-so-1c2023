@@ -35,10 +35,10 @@ void activar_segmentation_fault(t_contexto_de_ejecucion*, int);
 bool desplazamiento_supera_tamanio(int, char*);
 void escribir_en_memoria(int, char*, int, t_log*, t_contexto_de_ejecucion*, int, t_config*);
 char* leer_de_memoria(int, t_config*, int, int);
-char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, t_config*, t_log*, int);
+char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, int, t_config*, t_log*, int);
 void msleep(int);
 int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*, t_log*, int);
-char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, int, t_config*, t_log*, int);
+int tamanio_registro(char*);
 
 // Funciones para tratar con las instrucciones
 int agregar_a_stream(void*, int*, void*, int);
