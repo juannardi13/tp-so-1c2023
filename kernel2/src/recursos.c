@@ -6,7 +6,7 @@ t_dictionary* recursos;
 void iniciar_recursos(void) {
 
 	recursos = dictionary_create();
-	log_debug(logger_kernel, "Se crea el diccionario con los recursos.");
+	log_info(logger_kernel, "Se crea el diccionario con los recursos.");
 
 	t_recurso* recurso;
 
@@ -33,7 +33,7 @@ void iniciar_recursos(void) {
 		recurso->mutex_instancia_usada = mutex_instancia_usada;
 
 		dictionary_put(recursos, recurso->nombre, recurso);
-		log_debug(logger_kernel, "Se agrego el recurso %s al diccionario", recurso->nombre);
+		log_info(logger_kernel, "Se agrego el recurso %s al diccionario", recurso->nombre);
 	}
 
 }
