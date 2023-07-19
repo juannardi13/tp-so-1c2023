@@ -28,7 +28,7 @@ typedef enum {
 typedef enum {
 	DESALOJADO,
 	NO_DESALOJADO
-}desalojo_cpu;
+}desalojo_cpu; //No se preocupen por esto que es solamente para una cosa de Kernel ;))
 
 typedef enum
 {
