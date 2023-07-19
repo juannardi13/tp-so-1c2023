@@ -26,9 +26,9 @@ int main() {
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
 
 
-    //int ip_memoria = config_get_string_value(config, "IP");
-    //int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-    int fd_memoria = 4; //crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
+    int ip_memoria = config_get_string_value(config, "IP");
+    int puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    int fd_memoria = crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
 //    int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
 //    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
 
@@ -168,13 +168,13 @@ int main() {
 				case F_READ:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_F_READ(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
+					ejecutar_F_READ(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_WRITE:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-//					ejecutar_F_WRITE(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
+					ejecutar_F_WRITE(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_TRUNCATE: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO
@@ -225,6 +225,7 @@ int main() {
 					break;
 				}
 
+				free(instruccion_a_ejecutar);
 			}
 
 			log_warning(logger, "AX: %s", registros_cpu.ax);
@@ -244,6 +245,10 @@ int main() {
 			log_error(logger, "[ERROR] Se desconectó Kernel, chau loco suerte.");
 			return 2;
 		}
+
+		eliminar_paquete(paquete);
+		free(contexto);
+
 	}
 
 	return 0;
