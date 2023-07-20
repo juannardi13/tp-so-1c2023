@@ -140,6 +140,17 @@ void liberar_recursos_asignados(t_list* lista) {
 
 }
 
+void quitar_recurso(t_proceso* proceso, t_recurso* recurso) {
+
+//---------Funcion Lambda para encontrar el recurso en la lista-----------//
+	bool buscar_recurso(void* un_recurso) {
+		char* nombre_recurso = (char*) un_recurso
+		return string_equals_ignore_case(nombre_recurso, recurso->nombre);
+	}
+	
+	list_remove_by_condition(proceso->pcb->recursos_asignados, buscar_recurso);
+}
+
 int string_to_int(char* numero) {
 
 	int r = 0;
