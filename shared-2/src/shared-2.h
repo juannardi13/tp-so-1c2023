@@ -182,6 +182,8 @@ void crear_buffer(t_paquete *);
 int crear_conexion(t_log *, const char *, char *, char *);
 t_paquete *crear_paquete(int);
 t_paquete *crear_paquete_consola(void);
+int deserializar_int(void *, int *);
+void* deserializar_string(int, void *, int *);
 void eliminar_paquete(t_paquete *);
 int enviar_datos(int, void *, uint32_t);
 void enviar_mensaje(char *, int);
@@ -191,6 +193,7 @@ void hola(void);
 t_buffer *inicializar_buffer_con_parametros(uint32_t, void *);
 int iniciar_servidor(char *);
 void liberar_conexion(int);
+void msleep(int);
 int recibir_datos(int, void *, uint32_t);
 t_paquete* recibe_paquete(int);
 void* recibir_buffer(int *, int);
@@ -200,6 +203,5 @@ t_list *recibir_paquete(int);
 void *recibir_stream(int *, int);
 void* serializar_paquete(t_paquete* paquete, int bytes);
 void* serializar_paquete_con_bytes(t_paquete *, int);
-int deserializar_int(void *, int *);
 
 #endif /* SRC_SHARED_2_H_ */

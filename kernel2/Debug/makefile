@@ -40,7 +40,7 @@ main-build: kernel2
 kernel2: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "kernel2" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lshared-2
+	gcc -L"/home/utnso/Desktop/tpJULIO/tp-2023-1c-DeLorean/shared-2/Debug" -o "kernel2" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lshared-2
 	@echo 'Finished building target: $@'
 	@echo ' '
 

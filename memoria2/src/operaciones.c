@@ -123,7 +123,7 @@ void atender_CPU(int *cpu_fd){
 
 		int direccion_fisica_buscada = malloc(sizeof(int));
 		int tamanio_valor = malloc(sizeof(int));
-		char* valor_a_asignar = malloc(sizeof(t_registros));
+		char* valor_a_asignar = malloc(tamanio_valor);
 
 		switch(cod_op){
 		case LEER_DE_MEMORIA :
@@ -164,7 +164,7 @@ void recv_escribir_en_memoria(int socket_cliente){
 
 	int direccion_fisica = deserializar_int(buffer, &offset);
 	int tamanio = deserializar_int(buffer, &offset);
-	char* valor = deserializar_string(buffer, &offset);
+	char* valor = deserializar_string(tamanio, buffer, &offset);
 
 	escribir_valor_en_direccion_fisica(direccion_fisica, tamanio, valor);
 	log_info(logger, "Se escribe el valor de la direccion fisica: %d", direccion_fisica);
@@ -178,17 +178,17 @@ void buscar_valor_enviar_CPU(int direccion_fisica_buscada, int tamanio, int sock
 
 	char* valor_buscado;
 
-	if(&(memoria + direccion_fisica_buscada) != NULL){
+	if((memoria + direccion_fisica_buscada) != NULL){
 		msleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
 		memcpy(valor_buscado, memoria + direccion_fisica_buscada, tamanio);
-		t_paquete paquete = crear_paquete(LEIDO);
+		t_paquete* paquete = crear_paquete(LEIDO);
 		agregar_int_a_paquete(paquete, tamanio);
 		agregar_string_a_paquete(paquete, valor_buscado, tamanio+1);
 		enviar_paquete(paquete, socket_cliente);
 		log_info(logger, "Se envia el valor: %s", valor_buscado);
 	}
 	else{
-		t_paquete paquete = crear_paquete(NO_LEIDO);
+		t_paquete* paquete = crear_paquete(NO_LEIDO);
 		enviar_paquete(paquete, socket_cliente);
 	}
 }
@@ -214,9 +214,6 @@ void escribir_valor_en_direccion_fisica(int direccion_fisica, int tamanio_valor,
 	log_info(logger, "OK, se escribio el valor en memoria");
 }
 
-/*
-int agregar_a_stream(void* stream, int* offset, void* src, int size) {
-	memcpy(stream + *offset, src, size);
-	*offset +=size;
+void msleep(int tiempo_microsegundos) {
+	usleep(tiempo_microsegundos * 1000);
 }
-*/

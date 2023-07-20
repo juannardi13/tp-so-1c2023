@@ -8,5 +8,8 @@ void atender_File_System(int *);
 void atender_kernel(int *);
 void recv_nuevo_proceso(int);
 void recv_crear_segmento(int);
-
+void recv_leer_de_memoria(int);
+void recv_escribir_en_memoria(int);
+void buscar_valor_enviar_CPU(int, int, int);
+void escribir_valor_en_direccion_fisica(int, int, char*);
 #endif /* OPERACIONES_H_ */

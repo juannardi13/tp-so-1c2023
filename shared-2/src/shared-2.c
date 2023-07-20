@@ -94,6 +94,15 @@ void agregar_a_paquete(t_paquete *paquete, void *valor, int tamanio_valor) {
     agregar_a_buffer(paquete->buffer, valor, tamanio_valor);
 }
 
+void agregar_string_a_paquete(t_paquete* paquete, void* valor, int size) {
+    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->stream_size + size + sizeof(int));
+
+    memcpy(paquete->buffer->stream + paquete->buffer->stream_size, &size, sizeof(int));
+    memcpy(paquete->buffer->stream + paquete->buffer->stream_size + sizeof(int), valor, size);
+
+    paquete->buffer->stream_size += size + sizeof(int);
+}
+
 void agregar_a_buffer(t_buffer *buffer, void *src, int size) {
 	buffer->stream = realloc(buffer->stream, buffer->stream_size + size);
 	memcpy(buffer->stream + buffer->stream_size, src, size);
@@ -298,3 +307,17 @@ int deserializar_int(void *buffer, int *offset) {
 	return aux;
 }
 
+void* deserializar_string(int size, void *buffer, int *offset) {
+
+    void *aux;
+
+    aux = malloc(size);
+    memcpy(aux, buffer + (*offset), size);
+    (*offset) += size;
+
+    return aux;
+}
+
+void msleep(int tiempo_microsegundos) {
+	usleep(tiempo_microsegundos * 1000);
+}
