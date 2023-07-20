@@ -31,10 +31,10 @@ void atender_kernel(int *kernel_fd) {
 		case CREATE_SEGMENT:
 			recv_crear_segmento(socket_cliente);
 			break;
-//
-//		case DELETE_SEGMENT:
-//			recv_eliminar_segmento(socket_cliente);
-//			break;
+
+		case DELETE_SEGMENT:
+			recv_eliminar_segmento(socket_cliente);
+			break;
 
 		case -1:
 			log_warning(logger, "Se desconectó el File System!");
@@ -111,6 +111,29 @@ void recv_crear_segmento(int socket_cliente) {
 	agregar_a_lista(pid, seg);
 
 	log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - Tamaño: %d", pid, id, base, tamanio);
+
+	free(buffer);
+}
+
+void recv_eliminar_segmento(int socket_cliente) {
+
+	int size;
+	int offset = 0;
+
+	void *buffer = recibir_buffer(&size, socket_cliente);
+
+	int pid = deserializar_int(buffer, &offset);
+	int id = deserializar_int(buffer, &offset);
+
+	t_segmento *seg = obtener_segmento(pid, id);
+	int base = seg->base;
+	int tamanio = seg->tamanio;
+
+	quitar_de_lista(pid, seg);
+
+	liberar_segmento(seg);
+
+	log_info(logger, "PID: %d - Eliminar Segmento: %d - Base: %d - Tamaño: %d", pid, id, base, tamanio);
 
 	free(buffer);
 }
