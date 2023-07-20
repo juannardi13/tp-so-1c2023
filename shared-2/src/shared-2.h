@@ -178,6 +178,8 @@ void agregar_a_buffer(t_buffer *, void *, int);
 void agregar_a_paquete(t_paquete *, void *, int);
 void agregar_entero_a_paquete(t_paquete *, int);
 void agregar_int_a_paquete(t_paquete *, int);
+void agregar_segmento_a_paquete(t_paquete *, t_segmento *);
+void agregar_tabla_a_paquete(t_paquete *, t_tabla_segmentos *);
 int bits_to_bytes(int);
 void crear_buffer(t_paquete *);
 int crear_conexion(t_log *, const char *, char *, char *);

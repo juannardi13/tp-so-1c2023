@@ -330,3 +330,24 @@ void* deserializar_string(int size, void *buffer, int *offset) {
 void msleep(int tiempo_microsegundos) {
 	usleep(tiempo_microsegundos * 1000);
 }
+
+void agregar_segmento_a_paquete(t_paquete *paquete, t_segmento *seg) {
+
+	agregar_int_a_paquete(paquete, seg->id);
+	agregar_int_a_paquete(paquete, seg->base);
+	agregar_int_a_paquete(paquete, seg->tamanio);
+}
+
+void agregar_tabla_a_paquete(t_paquete *paquete, t_tabla_segmentos *tabla) {
+
+	int tam_lista = list_size(tabla->segmentos);
+
+	agregar_int_a_paquete(paquete, tam_lista);
+
+	for (int i = 0; i < tam_lista; i++) {
+		t_segmento *seg = list_get(tabla->segmentos, i);
+		agregar_segmento_a_paquete(paquete, seg);
+	}
+
+	agregar_int_a_paquete(paquete, tabla->pid);
+}

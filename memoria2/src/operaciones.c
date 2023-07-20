@@ -57,7 +57,18 @@ void recv_nuevo_proceso(int socket_cliente) {
 
 	log_info(logger, "Creación de Proceso PID: %d", pid);
 
+	send_nueva_tabla(socket_cliente, nueva_tabla);
+
 	free(buffer);
+}
+
+void send_nueva_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
+
+	t_paquete *paquete = crear_paquete(NUEVA_TABLA);
+
+	agregar_tabla_a_paquete(paquete, tabla);
+
+	enviar_paquete(paquete, socket_cliente);
 }
 
 void recv_crear_segmento(int socket_cliente) {
