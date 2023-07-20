@@ -351,3 +351,12 @@ void agregar_tabla_a_paquete(t_paquete *paquete, t_tabla_segmentos *tabla) {
 
 	agregar_int_a_paquete(paquete, tabla->pid);
 }
+
+void send_op(int socket_cliente, int cod_op) {
+
+	void *a_enviar = malloc(sizeof(int));
+	memcpy(a_enviar, &cod_op, sizeof(int));
+	send(socket_cliente, a_enviar, sizeof(int), 0);
+
+	free(a_enviar);
+}

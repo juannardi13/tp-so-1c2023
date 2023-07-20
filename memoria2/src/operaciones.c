@@ -36,6 +36,11 @@ void atender_kernel(int *kernel_fd) {
 			recv_eliminar_segmento(socket_cliente);
 			break;
 
+		case COMPACTAR:
+			// compactar(); TODO
+			log_info(logger, "Inicia compactación");
+			break;
+
 		case -1:
 			log_warning(logger, "Se desconectó el File System!");
 			return;
@@ -57,12 +62,12 @@ void recv_nuevo_proceso(int socket_cliente) {
 
 	log_info(logger, "Creación de Proceso PID: %d", pid);
 
-	send_nueva_tabla(socket_cliente, nueva_tabla);
+	send_tabla(socket_cliente, nueva_tabla);
 
 	free(buffer);
 }
 
-void send_nueva_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
+void send_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
 
 	t_paquete *paquete = crear_paquete(NUEVA_TABLA);
 
@@ -84,7 +89,8 @@ void recv_crear_segmento(int socket_cliente) {
 
 	if (! hay_espacio(tamanio)) { // NO hay espacio, no importa compactación
 		log_info(logger, "No hay espacio suficiente en memoria para crear el segmento solicitado");
-//		send_sin_espacio_disponible(); TODO
+		send_op(socket_cliente, OUT_OF_MEMORY);
+		free(buffer);
 		return;
 	}
 
@@ -98,7 +104,9 @@ void recv_crear_segmento(int socket_cliente) {
 
 	if (list_is_empty(huecos_suficientes)) {
 		log_info(logger, "No hay suficiente espacio contiguo para crear el segmento, requiere compactación");
-//		send_necesita_compactacion(); TODO
+		send_op(socket_cliente, NECESITO_COMPACTAR);
+		dinamitar_listas(huecos_disponibles, huecos_suficientes);
+		free(buffer);
 		return;
 	}
 
@@ -112,7 +120,18 @@ void recv_crear_segmento(int socket_cliente) {
 
 	log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - Tamaño: %d", pid, id, base, tamanio);
 
+	send_base_segmento(socket_cliente, base);
+
 	free(buffer);
+}
+
+void send_base_segmento(int socket_cliente, int base) {
+
+	t_paquete *paquete = crear_paquete(SEGMENTO_CREADO);
+
+	agregar_int_a_paquete(paquete, base);
+
+	enviar_paquete(paquete, socket_cliente);
 }
 
 void recv_eliminar_segmento(int socket_cliente) {
@@ -134,6 +153,9 @@ void recv_eliminar_segmento(int socket_cliente) {
 	liberar_segmento(seg);
 
 	log_info(logger, "PID: %d - Eliminar Segmento: %d - Base: %d - Tamaño: %d", pid, id, base, tamanio);
+
+	t_tabla_segmentos *tabla = tabla_por_pid(pid);
+	send_tabla(socket_cliente, tabla);
 
 	free(buffer);
 }

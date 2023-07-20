@@ -16,6 +16,7 @@ t_segmento *cmp_hueco_mayor(t_segmento *, t_segmento *);
 void dinamitar_listas(t_list *, t_list *);
 void eliminar_nodo(t_segmento *);
 void guardar_en_bitmap(t_segmento *);
+t_tabla_segmentos *tabla_por_pid(int);
 void agregar_a_lista(int, t_segmento *);
 t_tabla_segmentos *nueva_tabla_segmentos(int);
 t_segmento *obtener_segmento(int, int);

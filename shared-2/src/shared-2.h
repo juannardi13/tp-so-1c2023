@@ -204,6 +204,7 @@ char* recibir_mensaje(t_log *, int);
 int recibir_operacion(int);
 t_list *recibir_paquete(int);
 void *recibir_stream(int *, int);
+void send_op(int, int);
 void* serializar_paquete(t_paquete* paquete, int bytes);
 void* serializar_paquete_con_bytes(t_paquete *, int);
 

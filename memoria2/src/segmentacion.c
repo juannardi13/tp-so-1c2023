@@ -132,13 +132,19 @@ void guardar_en_bitmap(t_segmento *seg) {
 
 void agregar_a_lista(int pid, t_segmento *seg) {
 
+	t_tabla_segmentos *tabla = tabla_por_pid(pid);
+
+	list_add(tabla->segmentos, seg);
+}
+
+t_tabla_segmentos *tabla_por_pid(int pid) {
+
 	bool mismo_pid(t_tabla_segmentos *tabla) {
 		return tabla->pid == pid;
 	}
+	t_tabla_segmentos *aux = list_find(tablas_segmentos, (void *) mismo_pid);
 
-	t_tabla_segmentos *tabla = list_find(tablas_segmentos, (void *) mismo_pid);
-
-	list_add(tabla->segmentos, seg);
+	return aux;
 }
 
 t_tabla_segmentos *nueva_tabla_segmentos(int pid) {
@@ -153,15 +159,11 @@ t_tabla_segmentos *nueva_tabla_segmentos(int pid) {
 
 t_segmento *obtener_segmento(int pid, int id) {
 
-	bool mismo_pid(t_tabla_segmentos *tabla) {
-		return tabla->pid == pid;
-	}
-
 	bool mismo_id(t_segmento *seg) {
 		return seg->id == id;
 	}
 
-	t_tabla_segmentos *aux = list_find(tablas_segmentos, (void *) mismo_pid);
+	t_tabla_segmentos *aux = tabla_por_pid(pid);
 	t_segmento *seg = list_find(aux->segmentos, (void *) mismo_id);
 
 	return seg;
@@ -179,11 +181,7 @@ void liberar_segmento(t_segmento *seg) {
 
 void quitar_de_lista(int pid, t_segmento *seg) {
 
-	bool mismo_pid(t_tabla_segmentos *tabla) {
-		return tabla->pid == pid;
-	}
-
-	t_tabla_segmentos *tabla = list_find(tablas_segmentos, (void *) mismo_pid);
+	t_tabla_segmentos *tabla = tabla_por_pid(pid);
 
 	if (! list_remove_element(tabla->segmentos, seg)) {
 		log_error(logger, "Error al borrar segmento");
