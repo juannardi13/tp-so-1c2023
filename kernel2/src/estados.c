@@ -415,6 +415,7 @@ void estado_ejecutar(void) {
 				t_recurso* recurso_a_liberar = dictionary_get(recursos, recurso_signal);
 
 				liberar_instancia_recurso(recurso_a_liberar);
+				quitar_recurso(proceso_a_ejecutar, recurso_a_liberar);
 
 				pthread_mutex_lock(&mutex_exec);
 				list_add(cola_exec, proceso_a_ejecutar);
