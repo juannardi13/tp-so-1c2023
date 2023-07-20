@@ -3879,3 +3879,57 @@
 [INFO] 18:03:21:142 File System/(25778:25778): Acceso de Escritua a Bitmap - Bloque <26> - Se cambia estado a: <0>
 [INFO] 18:03:21:143 File System/(25778:25778): Acceso de Escritua a Bitmap - Bloque <25> - Se cambia estado a: <0>
 [INFO] 18:03:21:143 File System/(25778:25778): Truncar Archivo: <poleSittersHungaroring> - Tamaño: <160>
+[INFO] 18:14:25:916 File System/(52508:52508): El fileSystem posee una cantidad de 65536 bloques
+[INFO] 18:14:25:932 File System/(52508:52508): Los bloques del fileSystem tiene un tamaño de 64 bytes
+[INFO] 18:14:25:934 File System/(52508:52508): Se inicializa el módulo File System
+[INFO] 18:14:25:934 File System/(52508:52508): PUERTO ESCUCHA: 8003
+[INFO] 18:14:25:936 File System/(52508:52508): Crear Archivo: <campeonesFormula1>
+[INFO] 18:14:25:937 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <0> - Se cambia estado a: <1>
+[INFO] 18:14:25:938 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <1> - Se cambia estado a: <1>
+[INFO] 18:14:25:941 File System/(52508:52508): Crear Archivo: <campeonesF1>
+[INFO] 18:14:25:941 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <2> - Se cambia estado a: <1>
+[INFO] 18:14:25:941 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <3> - Se cambia estado a: <1>
+[INFO] 18:14:25:942 File System/(52508:52508): Crear Archivo: <escuderiasF1>
+[INFO] 18:14:25:944 File System/(52508:52508): Truncar Archivo: <escuderiasF1> - Tamaño: <56>
+[INFO] 18:14:25:947 File System/(52508:52508): Crear Archivo: <plantelArgentinaCampeona>
+[INFO] 18:14:25:948 File System/(52508:52508): Truncar Archivo: <plantelArgentinaCampeona> - Tamaño: <137>
+[INFO] 18:14:25:948 File System/(52508:52508): Crear Archivo: <campeonesFutbolArgentino>
+[INFO] 18:14:25:949 File System/(52508:52508): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <54>
+[INFO] 18:14:25:949 File System/(52508:52508): Truncar Archivo: <campeonesFutbolArgentino> - Tamaño: <60>
+[INFO] 18:14:25:950 File System/(52508:52508): Crear Archivo: <campeonesPremier>
+[INFO] 18:14:25:952 File System/(52508:52508): Truncar Archivo: <campeonesPremier> - Tamaño: <54>
+[INFO] 18:14:25:953 File System/(52508:52508): Truncar Archivo: <campeonesPremier> - Tamaño: <147>
+[INFO] 18:14:25:954 File System/(52508:52508): Crear Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:954 File System/(52508:52508): Truncar Archivo: <campeonesLibertadores> - Tamaño: <137>
+[INFO] 18:14:25:955 File System/(52508:52508): Truncar Archivo: <campeonesLibertadores> - Tamaño: <250>
+[INFO] 18:14:25:958 File System/(52508:52508): Crear Archivo: <campeonesSudamericana>
+[INFO] 18:14:25:959 File System/(52508:52508): Truncar Archivo: <campeonesSudamericana> - Tamaño: <325>
+[INFO] 18:14:25:961 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <22> - Se cambia estado a: <0>
+[INFO] 18:14:25:962 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <23> - Se cambia estado a: <0>
+[INFO] 18:14:25:962 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <24> - Se cambia estado a: <0>
+[INFO] 18:14:25:962 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <25> - Se cambia estado a: <0>
+[INFO] 18:14:25:963 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <26> - Se cambia estado a: <0>
+[INFO] 18:14:25:963 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <21> - Se cambia estado a: <0>
+[INFO] 18:14:25:963 File System/(52508:52508): Truncar Archivo: <campeonesSudamericana> - Tamaño: <56>
+[INFO] 18:14:25:971 File System/(52508:52508): Crear Archivo: <poleSittersHungaroring>
+[INFO] 18:14:25:972 File System/(52508:52508): Truncar Archivo: <poleSittersHungaroring> - Tamaño: <325>
+[INFO] 18:14:25:972 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <27> - Se cambia estado a: <0>
+[INFO] 18:14:25:972 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <26> - Se cambia estado a: <0>
+[INFO] 18:14:25:972 File System/(52508:52508): Acceso de Escritua a Bitmap - Bloque <25> - Se cambia estado a: <0>
+[INFO] 18:14:25:973 File System/(52508:52508): Truncar Archivo: <poleSittersHungaroring> - Tamaño: <160>
+[INFO] 18:14:25:973 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:973 File System/(52508:52508): Escribir Archivo: <campeonesLibertadores> - Puntero <30> - Memoria <-2062971760> - Tamaño <12>
+[INFO] 18:14:25:973 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:973 File System/(52508:52508): Leer Archivo: <campeonesLibertadores> - Puntero <30> - Memoria <-2062973248> - Tamaño <12>
+[INFO] 18:14:25:973 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:974 File System/(52508:52508): Escribir Archivo: <campeonesLibertadores> - Puntero <70> - Memoria <-2062963392> - Tamaño <13>
+[INFO] 18:14:25:974 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:974 File System/(52508:52508): Leer Archivo: <campeonesLibertadores> - Puntero <70> - Memoria <-2062973248> - Tamaño <13>
+[INFO] 18:14:25:974 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:974 File System/(52508:52508): Escribir Archivo: <campeonesLibertadores> - Puntero <60> - Memoria <-2062960800> - Tamaño <10>
+[INFO] 18:14:25:974 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:974 File System/(52508:52508): Leer Archivo: <campeonesLibertadores> - Puntero <60> - Memoria <-2062973248> - Tamaño <10>
+[INFO] 18:14:25:974 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:975 File System/(52508:52508): Escribir Archivo: <campeonesLibertadores> - Puntero <185> - Memoria <-2062957936> - Tamaño <16>
+[INFO] 18:14:25:975 File System/(52508:52508): Abrir Archivo: <campeonesLibertadores>
+[INFO] 18:14:25:975 File System/(52508:52508): Leer Archivo: <campeonesLibertadores> - Puntero <185> - Memoria <-2062973248> - Tamaño <16>

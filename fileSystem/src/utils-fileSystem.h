@@ -47,12 +47,20 @@ void acceso_escritura_bitmap(int,int);
 void asignar_bloques_iniciales(char*,t_config*);
 int primer_bloque_disponible(void);
 int obtener_posicion_archivo_bloques(int);
+char* leer_archivo(char*,int,char*,int);
 void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(int,int);
 void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(int,int,int);
 void ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(t_config*);
 void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int ,t_config*);
 void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int,t_config*);
 void ampliar_con_tam_actual_mayor_tam_bloque(int, int,t_config*);
+char* leer_bytes_mismo_bloque(int,int,int,t_config*);
+void leer_bytes_en_bloque(int ,int ,char* ,int,t_config* );
+char* leer_bytes_en_bloques_distintos(int ,int ,int ,t_config* );
+int nro_bloque_escribir_cuando_escribo_en_unico_bloque(int,t_config*);
+void escribir_bytes_mismo_bloque(int ,int ,char* ,int ,t_config* );
+void escribir_archivo(char*,int,char*,int);
+void escribir_bytes_diferentes_bloques(int,int,char*,int,t_config*);
 
 
 
@@ -65,3 +73,4 @@ extern FILE* archivo_bloques;
 extern FILE* archivo_bm;
 
 #endif /* UTILS_FILESYSTEM_H_ */
+
