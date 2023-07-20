@@ -200,6 +200,15 @@ void agregar_entero_a_paquete(t_paquete *paquete, int tamanio_proceso) // Agrega
     paquete->buffer->stream_size += tamanio_proceso + sizeof(int);
 }
 
+void agregar_int_a_paquete(t_paquete *paquete, int valor) {
+
+    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->stream_size + sizeof(int));
+    memcpy(paquete->buffer->stream + paquete->buffer->stream_size, &valor, sizeof(int));
+
+    paquete->buffer->stream_size += sizeof(int);
+}
+
+
 void enviar_paquete(t_paquete* paquete, int socket_cliente)
 {
 	int bytes = paquete->buffer->stream_size + 2*sizeof(int);

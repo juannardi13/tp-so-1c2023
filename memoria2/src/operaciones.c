@@ -179,7 +179,7 @@ void buscar_valor_enviar_CPU(int direccion_fisica_buscada, int tamanio, int sock
 	char* valor_buscado;
 
 	if((memoria + direccion_fisica_buscada) != NULL){
-		msleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
+		usleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
 		memcpy(valor_buscado, memoria + direccion_fisica_buscada, tamanio);
 		t_paquete* paquete = crear_paquete(LEIDO);
 		agregar_int_a_paquete(paquete, tamanio);
@@ -201,11 +201,11 @@ void escribir_valor_en_direccion_fisica(int direccion_fisica, int tamanio_valor,
 	log_info(logger, "Dirección física: %d", direccion_fisica);
 	log_info(logger, "Valor Registro: %s", valor);
 
-	msleep(config_memoria.retardo_memoria);
+	usleep(config_memoria.retardo_memoria);
 	memcpy(memoria + direccion_fisica, valor, tamanio_valor);
 
 	char *aux = malloc(tamanio_valor); // ver si se saca
-	msleep(config_memoria.retardo_memoria);
+	usleep(config_memoria.retardo_memoria);
 	memcpy(aux, memoria + direccion_fisica, tamanio_valor);
 	log_info(logger, "%s", aux);
 
@@ -214,6 +214,9 @@ void escribir_valor_en_direccion_fisica(int direccion_fisica, int tamanio_valor,
 	log_info(logger, "OK, se escribio el valor en memoria");
 }
 
+//No hace falta porque en la config lo contempla en milisegundos
+
+/*
 void msleep(int tiempo_microsegundos) {
 	usleep(tiempo_microsegundos * 1000);
-}
+}*/
