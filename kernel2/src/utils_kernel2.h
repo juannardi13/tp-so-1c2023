@@ -61,6 +61,23 @@ typedef struct {
 	pthread_mutex_t* mutex_instancia_usada;
 }t_recurso;
 
+typedef struct {
+	char* nombre;
+	int puntero;
+	int tamanio;
+	int instancias_usadas;
+	int instancias_totales;
+	t_queue cola_bloqueados;
+	pthread_mutex_t* mutex_cola_bloqueados;
+	pthread_mutex_t* mutex_instancia_usada;
+}t_archivo;
+
+typedef struct {
+	char* nombre;
+	int puntero;
+	int tamanio;
+}t_archivo_proceso;
+
 //Variables globales:
 extern archivo_config config_kernel;
 extern t_log* logger_kernel;
@@ -76,6 +93,7 @@ extern t_list* cola_new;
 extern t_list* cola_ready;
 extern t_registros registros_iniciados;
 extern t_dictionary* recursos;
+extern t_dictionary* tabla_global_archivos;
 
 extern pthread_mutex_t mutex_block_io;
 extern pthread_mutex_t mutex_exec;
@@ -84,6 +102,8 @@ extern pthread_mutex_t mutex_new;
 extern pthread_mutex_t mutex_operacion_memoria;
 extern pthread_mutex_t mutex_pid;
 extern pthread_mutex_t mutex_ready;
+extern pthread_mutex_t mutex_tabla_global_archivos;
+extern sem_t sem_archivos;
 extern sem_t sem_admitir;
 extern sem_t sem_block_io;
 extern sem_t sem_exec;
@@ -92,7 +112,9 @@ extern sem_t sem_grado_multiprogramacion;
 extern sem_t sem_ready;
 extern sem_t sem_recursos;
 
+extern pthread_t thread_archivos;
 extern pthread_t thread_ready;
+extern pthread_t thread_recursos;
 extern pthread_t thread_exit;
 extern pthread_t thread_exec;
 extern pthread_t thread_ready;

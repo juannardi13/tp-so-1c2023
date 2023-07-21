@@ -189,11 +189,57 @@ void estado_ejecutar(void) {
 
 			log_warning(logger_kernel, "PID: <%d> - Abrir Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+			if(dictionary_has_key(tabla_global_archivos, nombre_archivo_a_abrir)) {
+				t_archivo_proceso* entrada_archivo = malloc(sizeof(t_archivo_proceso));
+				entrada_archivo->nombre = nombre_archivo_a_abrir;
+				entrada_archivo->puntero = 0;
+				entrada_archivo->tamanio = 0; //Creo que para la entrada no es necesario el tamaño pero lo dejo por si las moscas.
 
-			sem_post(&sem_exec);
+				list_add(proceso_a_ejecutar->pcb->tabla_archivos, entrada_archivo);
+
+				t_archivo* archivo_open = dictionary_get(tabla_global_archivos, nombre_archivo_a_abrir);
+
+				proceso_a_ejecutar->desalojado = DESALOJADO;
+				proceso_a_ejecutar->final_ultima_rafaga = get_time();
+				proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+
+				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
+				log_info(logger_kernel, "PID: <%d> - Bloqueado por: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
+
+
+				queue_push(archivo_open->cola_bloqueados, proceso_a_ejecutar);
+				sem_post(&sem_ready);
+			} else {
+				op_code respuesta_fs_open = consultar_existencia_archivo_a_fs(nombre_archivo_a_abrir);
+
+				t_archivo_proceso* entrada_archivo_open = malloc(sizeof(t_archivo_proceso));
+				entrada_archivo_open->nombre = nombre_archivo_a_abrir;
+				entrada_archivo_open->puntero = 0;
+				entrada_archivo_open->tamanio = 0; //Creo que para la entrada no es necesario el tamaño pero lo dejo por si las moscas.
+
+				switch(respuesta_fs_open) {
+				case EXISTE:
+					agregar_archivo_a_tabla_global_archivos(nombre_archivo_a_abrir);
+
+					break;
+				case NO_EXISTE:
+					crear_archivo_en_fs(nombre_archivo_a_abrir);
+					agregar_archivo_a_tabla_global_archivos(nombre_archivo_a_abrir);
+
+					break;
+				default:
+					log_error(logger_kernel, "[ERROR] Fallo al recibir la respuesta de FileSystem, arreglate hermano.");
+
+					break;
+				}
+
+				pthread_mutex_lock(&mutex_exec);
+				list_add(cola_exec, proceso_a_ejecutar);
+				pthread_mutex_unlock(&mutex_exec);
+
+				sem_post(&sem_exec);
+			}
+
 			break;
 		case F_CLOSE:
 			//Cerrar el archivo pasado por parámetro
@@ -213,6 +259,17 @@ void estado_ejecutar(void) {
 			stream += tamanio_archivo_a_cerrar;
 
 			log_warning(logger_kernel, "PID: <%d> - Cerrar Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_cerrar);
+
+			quitar_entrada_archivo_del_proceso(nombre_archivo_a_cerrar, proceso_a_ejecutar);
+
+			t_archivo* archivo_close = dictionary_get(tabla_global_archivos, nombre_archivo_a_cerrar);
+
+			if(queue_is_empty(archivo_close->cola_bloqueados)) {
+				quitar_entrada_archivo_de_tabla_global_archivos(nombre_archivo_a_cerrar);
+			} else {
+				liberar_entrada_archivo(archivo_close); //esta funcion es como el liberar instancia del recurso
+			}
+
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exec);
@@ -240,6 +297,8 @@ void estado_ejecutar(void) {
 			stream += sizeof(int);
 
 			log_warning(logger_kernel, "PID: <%d> - Actualizar puntero Archivo: <%s> - Puntero <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
+
+			actualizar_puntero_archivo_proceso(proceso_a_ejecutar, nombre_archivo_seek, tamanio_en_bytes);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -374,7 +433,7 @@ void estado_ejecutar(void) {
 					proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
 					queue_push(recurso_a_pedir->cola_espera, proceso_a_ejecutar);
-					sem_post(&sem_ready)
+					sem_post(&sem_ready);
 				}
 
 			} else {
@@ -478,6 +537,9 @@ void estado_ejecutar(void) {
 			log_error(logger_kernel, "[ERROR] Feneció el CPU, chau loco suerte arreglate.");
 			break;
 		}
+
+		free(stream);
+		eliminar_paquete(paquete);
 	}
 
 }

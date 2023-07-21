@@ -15,7 +15,10 @@ sem_t sem_exit;
 sem_t sem_grado_multiprogramacion;
 sem_t sem_ready;
 sem_t sem_recursos;
+sem_t sem_archivos;
+pthread_t thread_archivos;
 pthread_t thread_ready;
+pthread_t thread_recursos;
 pthread_t thread_exit;
 pthread_t thread_exec;
 pthread_t thread_ready;
@@ -84,6 +87,8 @@ void iniciar_planificador_corto_plazo(void) {
 	pthread_mutex_init(&mutex_block_io, NULL);
 	pthread_mutex_init(&mutex_exec, NULL);
 	pthread_mutex_init(&mutex_operacion_memoria, NULL);
+	sem_init(&sem_archivos, 0, 0);
+	sem_init(&sem_recursos, 0, 0);
 	sem_init(&sem_ready, 0, 0);
 	sem_init(&sem_exec, 0, 0);
 	sem_init(&sem_block_io, 0, 0);
@@ -92,11 +97,14 @@ void iniciar_planificador_corto_plazo(void) {
 	cola_exec = list_create();
 	cola_block_io = list_create();
 
+	pthread_create(&thread_archivos, NULL, (void*) hilo_archivos, NULL);
 	pthread_create(&thread_ready, NULL, (void*) estado_ready, NULL);
+	pthread_create(&thread_recursos, NULL, (void*) hilo_recursos, NULL);
 	pthread_create(&thread_exec, NULL, (void*) estado_ejecutar, NULL);
 	pthread_create(&thread_blocked, NULL, (void*) estado_block_io, NULL);
 	pthread_create(&thread_admitir_ready, NULL, (void*) admitir_procesos_a_ready, NULL);
 	pthread_detach(thread_ready);
+	pthread_detach(thread_recursos);
 	pthread_detach(thread_exec);
 	pthread_detach(thread_blocked);
 	pthread_detach(thread_admitir_ready);

@@ -91,6 +91,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	//un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
 	un_pcb->registros = registros_iniciados;
 	un_pcb->recursos_asignados = list_create();
+	un_pcb->tabla_archivos = list_create();
 
 	//TODO PONER ACA EL MUTEX PARA LAS OPERACIONES CON MEMORIA
 	pthread_mutex_lock(&mutex_operacion_memoria);
