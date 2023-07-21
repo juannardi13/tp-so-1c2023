@@ -5,6 +5,102 @@
 #include <stdlib.h>
 #include <string.h>
 
+void manejar_fopen(int socket_cliente)
+{
+	// ya saque cod op, me falta el size del buffer y el buffer
+
+	int size_buffer;
+	void* contenido_buffer = deserializo_buffer(&size_buffer,socket_cliente);
+
+	// el paquete recibido tiene solo un string, por ende en el stream hay |strlen(stringEnviado) + 1 (por \n)|stringEnviado|
+	int offset = 0;
+	int tamanio_string_recibido = deserializo_int(contenido_buffer,&offset);
+	char* string_recibido = deserializo_string(tamanio_string_recibido,contenido_buffer,&offset);
+
+	abrir_archivo(string_recibido);
+}
+
+void manejar_fread(int socket_cliente)
+{
+	int size_buffer;
+	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
+
+	// leer_archivo(char* nombre_archivo,int nro_byte_archivo,char* direccion_volcar_lectura,int cantidad_bytes_leer)
+
+	int offset = 0;
+	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
+	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
+	int nro_byte_archivo = deserializar_int(contenido_buffer,&offset);
+	int tamanio_string_representa_memoria = deserializar_int(contenido_buffer,&offset);
+	char* direccion_fisica = deserializar_string(tamanio_string_representa_memoria,contenido_buffer,&offset);
+	int cantidad_bytes_leer = deserializar_int(contenido_buffer,&offset);
+
+	leer_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_leer);
+}
+
+void manejar_fwrite(int socket_cliente)
+{
+	int size_buffer;
+	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
+
+	// leer_archivo(char* nombre_archivo,int nro_byte_archivo,char* direccion_volcar_lectura,int cantidad_bytes_leer)
+
+	int offset = 0;
+	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
+	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
+	int nro_byte_archivo = deserializar_int(contenido_buffer,&offset);
+	int tamanio_string_representa_memoria = deserializar_int(contenido_buffer,&offset);
+	char* direccion_fisica = deserializar_string(tamanio_string_representa_memoria,contenido_buffer,&offset);
+	int cantidad_bytes_escribir = deserializar_int(contenido_buffer,&offset);
+
+	leer_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_escribir);
+}
+
+void manejar_ftruncate(int socket_cliente)
+{
+	int size_buffer;
+	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
+
+	// leer_archivo(char* nombre_archivo,int nro_byte_archivo,char* direccion_volcar_lectura,int cantidad_bytes_leer)
+
+	int offset = 0;
+	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
+	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
+	int tamanio_nuevo = deserializar_int(contenido_buffer,&offset);
+
+	truncar_archivo(string_nombre_archivo,tamanio_nuevo);
+}
+
+void manejar_conexion(int socket_cliente){
+
+	int codigo_operacion = recibir_operacion(socket_cliente);
+
+	switch(codigo_operacion)
+	{
+
+	case F_OPEN:
+			manejar_fopen(socket_cliente);
+			break;
+
+	case F_READ:
+			manejar_fread(socket_cliente);
+			break;
+
+	case F_WRITE:
+			manejar_fwrite(socket_cliente);
+			break;
+
+	case F_TRUNCATE:
+			manejar_ftruncate(socket_cliente);
+			break;
+
+	default:
+		log_warning(logger,"Operacion desconocida\n");
+	}
+
+}
+
+
 void manejar_conexion(int socket_cliente){
 
 	// un paquete es un codigo de un operación más un buffer
