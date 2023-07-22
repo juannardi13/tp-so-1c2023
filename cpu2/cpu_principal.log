@@ -161,3 +161,175 @@
 [INFO] 01:10:42:734 cpu_principal.log/(101222:101222): PID: <1002> - Ejecutando: <SET RAX TERMINAR_PROCESO>
 [INFO] 01:10:43:735 cpu_principal.log/(101222:101222): PID: <1002> - Ejecutando: <SET RBX CHARLY_GARCIA.MP>
 [INFO] 01:10:43:735 cpu_principal.log/(101222:101222): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 06:04:07:588 cpu_principal.log/(119507:119507): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:04:08:590 cpu_principal.log/(119507:119507): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:04:08:590 cpu_principal.log/(119507:119507): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:08:48:743 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:08:49:744 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:08:49:744 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:09:32:775 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:10:45:706 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:12:01:255 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:12:02:256 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:12:02:257 cpu_principal.log/(119890:119890): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16>
+[INFO] 06:15:47:394 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:15:48:395 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:15:48:395 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:15:48:395 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:15:48:396 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:15:54:399 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:15:55:401 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:15:55:401 cpu_principal.log/(120716:120716): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16>
+[INFO] 06:19:03:883 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:19:11:423 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:19:15:867 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:19:52:533 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:20:28:215 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:21:16:343 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:21:21:179 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:21:32:143 cpu_principal.log/(120788:120788): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16>
+[INFO] 06:24:45:198 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:24:46:199 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:24:46:199 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:25:20:159 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:25:50:543 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:26:52:702 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:26:53:703 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:26:53:703 cpu_principal.log/(121505:121505): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 06:32:55:666 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:32:56:667 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:32:56:668 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:32:56:673 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:32:56:674 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:33:02:675 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:33:03:678 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:33:03:678 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 06:33:03:683 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 06:33:03:686 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:33:08:691 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:33:28:874 cpu_principal.log/(122286:122286): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 06:33:29:874 cpu_principal.log/(122286:122286): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 06:33:30:875 cpu_principal.log/(122286:122286): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 06:33:30:875 cpu_principal.log/(122286:122286): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 06:33:30:876 cpu_principal.log/(122286:122286): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 06:33:30:876 cpu_principal.log/(122286:122286): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:33:30:877 cpu_principal.log/(122286:122286): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 06:36:12:322 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:36:13:323 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:36:13:323 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:36:54:855 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:36:54:856 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:37:03:381 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:37:04:382 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:37:04:382 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 06:37:13:229 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 06:37:13:230 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:37:29:751 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:37:49:359 cpu_principal.log/(122411:122411): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 06:37:50:360 cpu_principal.log/(122411:122411): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 06:37:51:360 cpu_principal.log/(122411:122411): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 06:37:51:360 cpu_principal.log/(122411:122411): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 06:39:45:510 cpu_principal.log/(122411:122411): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:43:10:407 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:43:11:408 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:43:11:409 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:43:11:419 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:43:11:426 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:43:17:435 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:43:18:436 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:43:18:436 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 06:43:18:441 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 06:43:18:442 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:43:23:444 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:43:45:327 cpu_principal.log/(122866:122866): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 06:43:46:329 cpu_principal.log/(122866:122866): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 06:43:47:330 cpu_principal.log/(122866:122866): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 06:43:47:331 cpu_principal.log/(122866:122866): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 06:43:47:331 cpu_principal.log/(122866:122866): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 06:43:47:333 cpu_principal.log/(122866:122866): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 06:43:47:334 cpu_principal.log/(122866:122866): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:46:17:159 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:46:18:164 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:46:18:165 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:46:18:171 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:46:18:175 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:46:24:178 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:46:25:179 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:46:25:180 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 06:46:25:184 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 06:46:25:186 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:46:30:191 cpu_principal.log/(122999:122999): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:46:39:765 cpu_principal.log/(122999:122999): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 06:46:40:769 cpu_principal.log/(122999:122999): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 06:46:41:770 cpu_principal.log/(122999:122999): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 06:46:41:770 cpu_principal.log/(122999:122999): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 06:46:41:776 cpu_principal.log/(122999:122999): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 06:46:41:781 cpu_principal.log/(122999:122999): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 06:58:17:227 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 06:58:18:229 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 06:58:18:229 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:58:18:233 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 06:58:18:235 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:58:24:244 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 06:58:25:245 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 06:58:25:245 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 06:58:25:247 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 06:58:25:248 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 06:58:30:251 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 06:58:39:991 cpu_principal.log/(123536:123536): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 06:58:40:994 cpu_principal.log/(123536:123536): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 06:58:41:995 cpu_principal.log/(123536:123536): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 06:58:41:995 cpu_principal.log/(123536:123536): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 06:58:41:996 cpu_principal.log/(123536:123536): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 06:58:41:997 cpu_principal.log/(123536:123536): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 06:58:41:999 cpu_principal.log/(123536:123536): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 07:01:44:656 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 07:01:45:657 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 07:01:45:657 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 07:02:09:189 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 07:02:36:888 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:03:08:628 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 07:03:09:629 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 07:03:09:629 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 07:03:30:181 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 07:03:56:216 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:04:25:580 cpu_principal.log/(123579:123579): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 07:06:56:139 cpu_principal.log/(123579:123579): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 07:06:57:151 cpu_principal.log/(123579:123579): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 07:06:58:152 cpu_principal.log/(123579:123579): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 07:06:58:152 cpu_principal.log/(123579:123579): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 07:07:52:174 cpu_principal.log/(123579:123579): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 07:07:52:177 cpu_principal.log/(123579:123579): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 07:09:47:141 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET AX EJEC>
+[INFO] 07:09:48:142 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET BX WAIT>
+[INFO] 07:09:48:142 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 07:09:48:143 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <WAIT RECURSO_1>
+[INFO] 07:09:48:144 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:09:54:168 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET CX EJEC>
+[INFO] 07:09:55:169 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET DX SEGM>
+[INFO] 07:09:55:169 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <CREATE_SEGMENT 16 64>
+[INFO] 07:09:55:174 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <DELETE_SEGMENT 16>
+[INFO] 07:09:55:175 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:10:00:177 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 07:10:20:787 cpu_principal.log/(124831:124831): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 07:10:21:800 cpu_principal.log/(124831:124831): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 07:10:22:801 cpu_principal.log/(124831:124831): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 07:10:22:802 cpu_principal.log/(124831:124831): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 07:10:22:803 cpu_principal.log/(124831:124831): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 07:10:22:803 cpu_principal.log/(124831:124831): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 07:10:22:805 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <WAIT DISCO>
+[INFO] 07:11:13:734 cpu_principal.log/(124831:124831): PID: <1002> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 07:11:14:734 cpu_principal.log/(124831:124831): PID: <1002> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 07:11:15:735 cpu_principal.log/(124831:124831): PID: <1002> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 07:11:15:735 cpu_principal.log/(124831:124831): PID: <1002> - Ejecutando: <SIGNAL DISCO >
+[INFO] 07:11:15:735 cpu_principal.log/(124831:124831): PID: <1002> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 07:11:15:736 cpu_principal.log/(124831:124831): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 07:11:15:737 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:11:21:742 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET EAX EJECUTAR>
+[INFO] 07:11:22:742 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET EBX SIGNAL__>
+[INFO] 07:11:22:742 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 07:11:22:743 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SIGNAL DISCO>
+[INFO] 07:11:22:744 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 07:11:28:748 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET ECX EJECUTAR>
+[INFO] 07:11:29:749 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <SET EDX WAIT_404>
+[INFO] 07:11:29:749 cpu_principal.log/(124831:124831): PID: <1000> - Ejecutando: <WAIT NO_EXISTO>

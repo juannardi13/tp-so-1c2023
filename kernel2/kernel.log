@@ -931,3 +931,1891 @@
 [INFO] 07:22:13:224 kernel.log/(112690:112690): Se crea el diccionario con los recursos.
 [INFO] 07:22:13:224 kernel.log/(112690:112690): Se agrego el recurso DISCO al diccionario
 [INFO] 07:22:13:224 kernel.log/(112690:112690): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:56:21:013 kernel.log/(119252:119252): Se crea el diccionario con los recursos.
+[INFO] 05:56:21:013 kernel.log/(119252:119252): Se agrego el recurso DISCO al diccionario
+[INFO] 05:56:21:013 kernel.log/(119252:119252): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:57:29:683 kernel.log/(119350:119350): Se crea el diccionario con los recursos.
+[INFO] 05:57:29:683 kernel.log/(119350:119350): Se agrego el recurso DISCO al diccionario
+[INFO] 05:57:29:683 kernel.log/(119350:119350): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:57:41:785 kernel.log/(119350:119350): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 05:58:09:997 kernel.log/(119350:119350): Cliente conectado (a KERNEL)
+
+[INFO] 06:01:12:016 kernel.log/(119535:119535): Se crea el diccionario con los recursos.
+[INFO] 06:01:12:016 kernel.log/(119535:119535): Se agrego el recurso DISCO al diccionario
+[INFO] 06:01:12:016 kernel.log/(119535:119535): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:01:15:865 kernel.log/(119535:119535): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:01:33:762 kernel.log/(119535:119535): Cliente conectado (a KERNEL)
+
+[INFO] 06:02:15:368 kernel.log/(119535:119584): Se crea el proceso <1000> en NEW
+[INFO] 06:02:15:368 kernel.log/(119535:119584): Cola NEW: 
+[INFO] 06:02:15:369 kernel.log/(119535:119584): PID: <1000>
+[INFO] 06:02:31:945 kernel.log/(119535:119556): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:02:33:346 kernel.log/(119535:119556): Cola Ready <FIFO>:
+[INFO] 06:02:34:061 kernel.log/(119535:119556): PID: <1000>
+[INFO] 06:03:04:643 kernel.log/(119535:119552): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:03:26:075 kernel.log/(119535:119552): PID: <1000> ingresa a EXECUTE
+[INFO] 06:03:27:398 kernel.log/(119535:119552): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:04:15:565 kernel.log/(119535:119554): PID: <1000> enviada a CPU
+[INFO] 06:04:41:020 kernel.log/(119535:119554): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:04:41:122 kernel.log/(119535:119554): EJEC
+[INFO] 06:04:41:222 kernel.log/(119535:119554): WAIT
+[INFO] 06:04:41:327 kernel.log/(119535:119554): 0000
+[INFO] 06:04:41:426 kernel.log/(119535:119554): 0000
+[INFO] 06:04:41:884 kernel.log/(119535:119554): 00000000
+[INFO] 06:04:42:148 kernel.log/(119535:119554): 00000000
+[INFO] 06:04:42:385 kernel.log/(119535:119554): 00000000
+[INFO] 06:04:42:575 kernel.log/(119535:119554): 00000000
+[INFO] 06:04:42:746 kernel.log/(119535:119554): 0000000000000000
+[INFO] 06:04:44:421 kernel.log/(119535:119554): 0000000000000000
+[INFO] 06:04:45:322 kernel.log/(119535:119554): 0000000000000000
+[INFO] 06:04:46:679 kernel.log/(119535:119554): 0000000000000000
+[WARNING] 06:04:55:050 kernel.log/(119535:119554): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:07:29:738 kernel.log/(119919:119919): Se crea el diccionario con los recursos.
+[INFO] 06:07:29:738 kernel.log/(119919:119919): Se agrego el recurso DISCO al diccionario
+[INFO] 06:07:29:738 kernel.log/(119919:119919): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:07:31:518 kernel.log/(119919:119919): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:07:35:565 kernel.log/(119919:119919): Cliente conectado (a KERNEL)
+
+[INFO] 06:07:52:530 kernel.log/(119919:119961): Se crea el proceso <1000> en NEW
+[INFO] 06:07:52:530 kernel.log/(119919:119961): Cola NEW: 
+[INFO] 06:07:52:530 kernel.log/(119919:119961): PID: <1000>
+[INFO] 06:08:03:515 kernel.log/(119919:119939): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:08:04:364 kernel.log/(119919:119939): Cola Ready <FIFO>:
+[INFO] 06:08:04:658 kernel.log/(119919:119939): PID: <1000>
+[INFO] 06:08:23:548 kernel.log/(119919:119935): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:08:26:310 kernel.log/(119919:119935): PID: <1000> ingresa a EXECUTE
+[INFO] 06:08:28:505 kernel.log/(119919:119935): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:08:48:813 kernel.log/(119919:119937): PID: <1000> enviada a CPU
+[INFO] 06:09:02:943 kernel.log/(119919:119937): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:09:03:046 kernel.log/(119919:119937): EJEC
+[INFO] 06:09:03:146 kernel.log/(119919:119937): WAIT
+[INFO] 06:09:03:247 kernel.log/(119919:119937): 0000
+[INFO] 06:09:03:353 kernel.log/(119919:119937): 0000
+[INFO] 06:09:03:456 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:03:557 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:03:659 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:03:760 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:03:861 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:09:03:964 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:09:04:065 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:09:04:166 kernel.log/(119919:119937): 0000000000000000
+[WARNING] 06:09:09:409 kernel.log/(119919:119937): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:09:39:451 kernel.log/(119919:119937): PID: <1000> enviada a CPU
+[INFO] 06:09:49:481 kernel.log/(119919:119937): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:09:49:585 kernel.log/(119919:119937): EJEC
+[INFO] 06:09:49:685 kernel.log/(119919:119937): WAIT
+[INFO] 06:09:49:785 kernel.log/(119919:119937): 0000
+[INFO] 06:09:49:886 kernel.log/(119919:119937): 0000
+[INFO] 06:09:49:992 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:50:090 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:50:210 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:50:312 kernel.log/(119919:119937): 00000000
+[INFO] 06:09:50:414 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:09:50:517 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:09:53:585 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:09:54:718 kernel.log/(119919:119937): 0000000000000000
+[WARNING] 06:10:22:255 kernel.log/(119919:119937): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:10:46:116 kernel.log/(119919:119937): PID: <1000> enviada a CPU
+[INFO] 06:11:01:073 kernel.log/(119919:119937): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:11:01:175 kernel.log/(119919:119937): EJEC
+[INFO] 06:11:01:276 kernel.log/(119919:119937): WAIT
+[INFO] 06:11:01:379 kernel.log/(119919:119937): 0000
+[INFO] 06:11:01:481 kernel.log/(119919:119937): 0000
+[INFO] 06:11:01:584 kernel.log/(119919:119937): 00000000
+[INFO] 06:11:01:684 kernel.log/(119919:119937): 00000000
+[INFO] 06:11:01:788 kernel.log/(119919:119937): 00000000
+[INFO] 06:11:01:889 kernel.log/(119919:119937): 00000000
+[INFO] 06:11:01:990 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:11:02:093 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:11:02:194 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:11:02:294 kernel.log/(119919:119937): 0000000000000000
+[INFO] 06:11:29:166 kernel.log/(119919:119937): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:11:31:461 kernel.log/(119919:119937): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:11:33:828 kernel.log/(119919:119938): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:11:38:832 kernel.log/(119919:119938): Cola Ready <FIFO>:
+[INFO] 06:11:38:832 kernel.log/(119919:119938): PID: <1000>
+[INFO] 06:11:38:832 kernel.log/(119919:119935): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:11:38:832 kernel.log/(119919:119935): PID: <1000> ingresa a EXECUTE
+[INFO] 06:11:38:832 kernel.log/(119919:119935): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:12:11:530 kernel.log/(119919:119937): PID: <1000> enviada a CPU
+[INFO] 06:12:20:288 kernel.log/(119919:119937): Los registros que trajo PID: <0> de la CPU son: 
+[INFO] 06:12:20:389 kernel.log/(119919:119937): 
+[INFO] 06:12:20:488 kernel.log/(119919:119937): 
+[INFO] 06:12:20:589 kernel.log/(119919:119937): 
+[INFO] 06:12:20:691 kernel.log/(119919:119937): 
+[INFO] 06:12:20:796 kernel.log/(119919:119937): 
+[INFO] 06:12:20:945 kernel.log/(119919:119937): 
+[INFO] 06:12:21:045 kernel.log/(119919:119937): 
+[INFO] 06:12:21:145 kernel.log/(119919:119937): 
+[INFO] 06:12:21:252 kernel.log/(119919:119937): 
+[INFO] 06:12:21:350 kernel.log/(119919:119937): 
+[INFO] 06:12:21:452 kernel.log/(119919:119937): 
+[INFO] 06:12:26:547 kernel.log/(119919:119937): 
+[INFO] 06:15:40:566 kernel.log/(120728:120728): Se crea el diccionario con los recursos.
+[INFO] 06:15:40:566 kernel.log/(120728:120728): Se agrego el recurso DISCO al diccionario
+[INFO] 06:15:40:566 kernel.log/(120728:120728): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:15:40:566 kernel.log/(120728:120728): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:15:45:491 kernel.log/(120728:120728): Cliente conectado (a KERNEL)
+
+[INFO] 06:15:46:389 kernel.log/(120728:120742): Se crea el proceso <1000> en NEW
+[INFO] 06:15:46:389 kernel.log/(120728:120742): Cola NEW: 
+[INFO] 06:15:46:389 kernel.log/(120728:120742): PID: <1000>
+[INFO] 06:15:46:389 kernel.log/(120728:120740): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:15:46:389 kernel.log/(120728:120740): Cola Ready <FIFO>:
+[INFO] 06:15:46:390 kernel.log/(120728:120740): PID: <1000>
+[INFO] 06:15:46:390 kernel.log/(120728:120736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:15:46:390 kernel.log/(120728:120736): PID: <1000> ingresa a EXECUTE
+[INFO] 06:15:46:390 kernel.log/(120728:120736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:15:46:391 kernel.log/(120728:120738): PID: <1000> enviada a CPU
+[INFO] 06:15:48:395 kernel.log/(120728:120738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:15:48:395 kernel.log/(120728:120738): EJEC
+[INFO] 06:15:48:395 kernel.log/(120728:120738): WAIT
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 0000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 0000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:395 kernel.log/(120728:120738): 0000000000000000
+[WARNING] 06:15:48:395 kernel.log/(120728:120738): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:15:48:395 kernel.log/(120728:120738): PID: <1000> enviada a CPU
+[INFO] 06:15:48:395 kernel.log/(120728:120738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:15:48:396 kernel.log/(120728:120738): EJEC
+[INFO] 06:15:48:396 kernel.log/(120728:120738): WAIT
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[WARNING] 06:15:48:396 kernel.log/(120728:120738): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:15:48:396 kernel.log/(120728:120738): PID: <1000> enviada a CPU
+[INFO] 06:15:48:396 kernel.log/(120728:120738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:15:48:396 kernel.log/(120728:120738): EJEC
+[INFO] 06:15:48:396 kernel.log/(120728:120738): WAIT
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 00000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): 0000000000000000
+[INFO] 06:15:48:396 kernel.log/(120728:120738): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:15:48:396 kernel.log/(120728:120738): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:15:48:396 kernel.log/(120728:120739): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:15:53:397 kernel.log/(120728:120739): Cola Ready <FIFO>:
+[INFO] 06:15:53:397 kernel.log/(120728:120739): PID: <1000>
+[INFO] 06:15:53:397 kernel.log/(120728:120736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:15:53:397 kernel.log/(120728:120736): PID: <1000> ingresa a EXECUTE
+[INFO] 06:15:53:397 kernel.log/(120728:120736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:15:53:397 kernel.log/(120728:120738): PID: <1000> enviada a CPU
+[INFO] 06:18:23:981 kernel.log/(120824:120824): Se crea el diccionario con los recursos.
+[INFO] 06:18:23:982 kernel.log/(120824:120824): Se agrego el recurso DISCO al diccionario
+[INFO] 06:18:23:982 kernel.log/(120824:120824): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:18:23:982 kernel.log/(120824:120824): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:18:32:143 kernel.log/(120824:120824): Cliente conectado (a KERNEL)
+
+[INFO] 06:18:32:755 kernel.log/(120824:120839): Se crea el proceso <1000> en NEW
+[INFO] 06:18:32:755 kernel.log/(120824:120839): Cola NEW: 
+[INFO] 06:18:32:755 kernel.log/(120824:120839): PID: <1000>
+[INFO] 06:18:32:755 kernel.log/(120824:120836): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:18:32:755 kernel.log/(120824:120836): Cola Ready <FIFO>:
+[INFO] 06:18:32:755 kernel.log/(120824:120836): PID: <1000>
+[INFO] 06:18:32:756 kernel.log/(120824:120832): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:18:32:756 kernel.log/(120824:120832): PID: <1000> ingresa a EXECUTE
+[INFO] 06:18:32:756 kernel.log/(120824:120832): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:18:32:756 kernel.log/(120824:120834): PID: <1000> enviada a CPU
+[INFO] 06:19:16:450 kernel.log/(120824:120834): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:19:16:450 kernel.log/(120824:120834): EJEC
+[INFO] 06:19:16:450 kernel.log/(120824:120834): WAIT
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 0000
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 0000
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:16:450 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:19:16:451 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:19:16:451 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:19:16:451 kernel.log/(120824:120834): 0000000000000000
+[WARNING] 06:19:16:451 kernel.log/(120824:120834): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:19:16:451 kernel.log/(120824:120834): PID: <1000> enviada a CPU
+[INFO] 06:19:53:461 kernel.log/(120824:120834): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:19:53:461 kernel.log/(120824:120834): EJEC
+[INFO] 06:19:53:461 kernel.log/(120824:120834): WAIT
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 0000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 0000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 00000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:19:53:461 kernel.log/(120824:120834): 0000000000000000
+[WARNING] 06:19:53:461 kernel.log/(120824:120834): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:19:53:461 kernel.log/(120824:120834): PID: <1000> enviada a CPU
+[INFO] 06:20:28:767 kernel.log/(120824:120834): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:20:28:767 kernel.log/(120824:120834): EJEC
+[INFO] 06:20:28:767 kernel.log/(120824:120834): WAIT
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 0000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 0000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 00000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 00000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 00000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 00000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): 0000000000000000
+[INFO] 06:20:28:767 kernel.log/(120824:120834): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:20:28:767 kernel.log/(120824:120834): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:20:28:768 kernel.log/(120824:120835): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:20:33:769 kernel.log/(120824:120835): Cola Ready <FIFO>:
+[INFO] 06:20:33:769 kernel.log/(120824:120835): PID: <1000>
+[INFO] 06:20:33:769 kernel.log/(120824:120832): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:20:33:769 kernel.log/(120824:120832): PID: <1000> ingresa a EXECUTE
+[INFO] 06:20:33:769 kernel.log/(120824:120832): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:20:33:769 kernel.log/(120824:120834): PID: <1000> enviada a CPU
+[INFO] 06:23:58:139 kernel.log/(121538:121538): Se crea el diccionario con los recursos.
+[INFO] 06:23:58:140 kernel.log/(121538:121538): Se agrego el recurso DISCO al diccionario
+[INFO] 06:23:58:140 kernel.log/(121538:121538): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:24:00:579 kernel.log/(121538:121538): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:24:04:196 kernel.log/(121538:121538): Cliente conectado (a KERNEL)
+
+[INFO] 06:24:12:328 kernel.log/(121538:121585): Se crea el proceso <1000> en NEW
+[INFO] 06:24:12:328 kernel.log/(121538:121585): Cola NEW: 
+[INFO] 06:24:12:328 kernel.log/(121538:121585): PID: <1000>
+[INFO] 06:24:22:777 kernel.log/(121538:121560): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:24:24:277 kernel.log/(121538:121560): Cola Ready <FIFO>:
+[INFO] 06:24:24:469 kernel.log/(121538:121560): PID: <1000>
+[INFO] 06:24:36:348 kernel.log/(121538:121556): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:24:36:348 kernel.log/(121538:121556): PID: <1000> ingresa a EXECUTE
+[INFO] 06:24:36:348 kernel.log/(121538:121556): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:24:44:483 kernel.log/(121538:121558): PID: <1000> enviada a CPU
+[INFO] 06:25:02:816 kernel.log/(121538:121558): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:25:03:030 kernel.log/(121538:121558): EJEC
+[INFO] 06:25:03:206 kernel.log/(121538:121558): WAIT
+[INFO] 06:25:03:387 kernel.log/(121538:121558): 0000
+[INFO] 06:25:03:603 kernel.log/(121538:121558): 0000
+[INFO] 06:25:03:721 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:03:843 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:03:995 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:04:347 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:04:473 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:04:854 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:05:065 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:05:242 kernel.log/(121538:121558): 0000000000000000
+[WARNING] 06:25:10:328 kernel.log/(121538:121558): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:25:24:425 kernel.log/(121538:121558): PID: <1000> enviada a CPU
+[INFO] 06:25:36:346 kernel.log/(121538:121558): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:25:36:451 kernel.log/(121538:121558): EJEC
+[INFO] 06:25:36:566 kernel.log/(121538:121558): WAIT
+[INFO] 06:25:36:705 kernel.log/(121538:121558): 0000
+[INFO] 06:25:36:805 kernel.log/(121538:121558): 0000
+[INFO] 06:25:36:906 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:37:006 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:37:109 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:37:210 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:37:311 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:37:416 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:37:520 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:37:619 kernel.log/(121538:121558): 0000000000000000
+[WARNING] 06:25:40:911 kernel.log/(121538:121558): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:25:50:811 kernel.log/(121538:121558): PID: <1000> enviada a CPU
+[INFO] 06:25:57:668 kernel.log/(121538:121558): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:25:57:768 kernel.log/(121538:121558): EJEC
+[INFO] 06:25:57:871 kernel.log/(121538:121558): WAIT
+[INFO] 06:25:57:971 kernel.log/(121538:121558): 0000
+[INFO] 06:25:58:071 kernel.log/(121538:121558): 0000
+[INFO] 06:25:58:172 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:58:272 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:58:373 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:58:522 kernel.log/(121538:121558): 00000000
+[INFO] 06:25:58:626 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:58:727 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:59:482 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:25:59:835 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:26:32:181 kernel.log/(121538:121558): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:26:33:799 kernel.log/(121538:121558): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:26:36:402 kernel.log/(121538:121559): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:26:41:402 kernel.log/(121538:121559): Cola Ready <FIFO>:
+[INFO] 06:26:41:403 kernel.log/(121538:121559): PID: <1000>
+[INFO] 06:26:41:403 kernel.log/(121538:121556): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:26:41:403 kernel.log/(121538:121556): PID: <1000> ingresa a EXECUTE
+[INFO] 06:26:41:403 kernel.log/(121538:121556): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:26:52:051 kernel.log/(121538:121558): PID: <1000> enviada a CPU
+[INFO] 06:27:06:222 kernel.log/(121538:121558): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:27:06:323 kernel.log/(121538:121558): EJEC
+[INFO] 06:27:06:424 kernel.log/(121538:121558): WAIT
+[INFO] 06:27:06:525 kernel.log/(121538:121558): EJEC
+[INFO] 06:27:06:628 kernel.log/(121538:121558): SEGM
+[INFO] 06:27:07:082 kernel.log/(121538:121558): 00000000
+[INFO] 06:27:07:295 kernel.log/(121538:121558): 00000000
+[INFO] 06:27:07:512 kernel.log/(121538:121558): 00000000
+[INFO] 06:27:07:684 kernel.log/(121538:121558): 00000000
+[INFO] 06:27:07:872 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:27:08:159 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:27:08:397 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:27:08:779 kernel.log/(121538:121558): 0000000000000000
+[INFO] 06:27:15:053 kernel.log/(121538:121558): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 06:27:17:090 kernel.log/(121538:121558): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 06:32:49:588 kernel.log/(122301:122301): Se crea el diccionario con los recursos.
+[INFO] 06:32:49:588 kernel.log/(122301:122301): Se agrego el recurso DISCO al diccionario
+[INFO] 06:32:49:588 kernel.log/(122301:122301): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:32:49:589 kernel.log/(122301:122301): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:32:53:765 kernel.log/(122301:122301): Cliente conectado (a KERNEL)
+
+[INFO] 06:32:54:663 kernel.log/(122301:122315): Se crea el proceso <1000> en NEW
+[INFO] 06:32:54:663 kernel.log/(122301:122315): Cola NEW: 
+[INFO] 06:32:54:663 kernel.log/(122301:122315): PID: <1000>
+[INFO] 06:32:54:663 kernel.log/(122301:122313): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:32:54:663 kernel.log/(122301:122313): Cola Ready <FIFO>:
+[INFO] 06:32:54:663 kernel.log/(122301:122313): PID: <1000>
+[INFO] 06:32:54:663 kernel.log/(122301:122309): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:32:54:663 kernel.log/(122301:122309): PID: <1000> ingresa a EXECUTE
+[INFO] 06:32:54:663 kernel.log/(122301:122309): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:32:54:663 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:32:56:668 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:32:56:669 kernel.log/(122301:122311): EJEC
+[INFO] 06:32:56:669 kernel.log/(122301:122311): WAIT
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 0000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 0000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:669 kernel.log/(122301:122311): 0000000000000000
+[WARNING] 06:32:56:669 kernel.log/(122301:122311): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:32:56:669 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:32:56:673 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:32:56:673 kernel.log/(122301:122311): EJEC
+[INFO] 06:32:56:673 kernel.log/(122301:122311): WAIT
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 0000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 0000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:673 kernel.log/(122301:122311): 0000000000000000
+[WARNING] 06:32:56:673 kernel.log/(122301:122311): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:32:56:673 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:32:56:674 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:32:56:674 kernel.log/(122301:122311): EJEC
+[INFO] 06:32:56:674 kernel.log/(122301:122311): WAIT
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 0000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 0000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 00000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:32:56:674 kernel.log/(122301:122311): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:32:56:674 kernel.log/(122301:122311): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:32:56:674 kernel.log/(122301:122312): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:33:01:674 kernel.log/(122301:122312): Cola Ready <FIFO>:
+[INFO] 06:33:01:674 kernel.log/(122301:122312): PID: <1000>
+[INFO] 06:33:01:674 kernel.log/(122301:122309): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:33:01:674 kernel.log/(122301:122309): PID: <1000> ingresa a EXECUTE
+[INFO] 06:33:01:674 kernel.log/(122301:122309): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:33:01:674 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:33:03:679 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:33:03:679 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:03:679 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:03:679 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:03:679 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:679 kernel.log/(122301:122311): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 06:33:03:679 kernel.log/(122301:122311): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 06:33:03:679 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:33:03:684 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:33:03:684 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:03:684 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:03:684 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:03:684 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:684 kernel.log/(122301:122311): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 06:33:03:684 kernel.log/(122301:122311): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 06:33:03:684 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:33:03:686 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:33:03:686 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:03:686 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:03:686 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:03:686 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:03:686 kernel.log/(122301:122311): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:33:03:686 kernel.log/(122301:122311): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:33:03:686 kernel.log/(122301:122312): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:33:08:687 kernel.log/(122301:122312): Cola Ready <FIFO>:
+[INFO] 06:33:08:687 kernel.log/(122301:122312): PID: <1000>
+[INFO] 06:33:08:687 kernel.log/(122301:122309): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:33:08:687 kernel.log/(122301:122309): PID: <1000> ingresa a EXECUTE
+[INFO] 06:33:08:687 kernel.log/(122301:122309): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:33:08:688 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:33:08:691 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:33:08:691 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:08:691 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:08:691 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:08:691 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:08:691 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:08:691 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:08:691 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:08:692 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:08:692 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:08:692 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:08:692 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:08:692 kernel.log/(122301:122311): 0000000000000000
+[WARNING] 06:33:08:692 kernel.log/(122301:122311): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:33:26:141 kernel.log/(122301:122301): Cliente conectado (a KERNEL)
+
+[INFO] 06:33:27:873 kernel.log/(122301:122318): Se crea el proceso <1001> en NEW
+[INFO] 06:33:27:873 kernel.log/(122301:122318): Cola NEW: 
+[INFO] 06:33:27:873 kernel.log/(122301:122318): PID: <1001>
+[INFO] 06:33:27:873 kernel.log/(122301:122313): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:33:27:873 kernel.log/(122301:122313): Cola Ready <FIFO>:
+[INFO] 06:33:27:873 kernel.log/(122301:122313): PID: <1001>
+[INFO] 06:33:27:873 kernel.log/(122301:122309): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:33:27:873 kernel.log/(122301:122309): PID: <1001> ingresa a EXECUTE
+[INFO] 06:33:27:873 kernel.log/(122301:122309): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:33:27:873 kernel.log/(122301:122311): PID: <1001> enviada a CPU
+[INFO] 06:33:30:875 kernel.log/(122301:122311): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:33:30:875 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:875 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:30:875 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:875 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:30:875 kernel.log/(122301:122311): VENGO_A_
+[INFO] 06:33:30:875 kernel.log/(122301:122311): SALVARTE
+[INFO] 06:33:30:875 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:875 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:875 kernel.log/(122301:122311): UNLOCK_RECURSO__
+[INFO] 06:33:30:875 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:875 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:875 kernel.log/(122301:122311): 0000000000000000
+[WARNING] 06:33:30:875 kernel.log/(122301:122311): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 06:33:30:875 kernel.log/(122301:122311): PID: <1001> enviada a CPU
+[INFO] 06:33:30:876 kernel.log/(122301:122310): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 06:33:30:876 kernel.log/(122301:122311): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:33:30:876 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:876 kernel.log/(122301:122309): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:33:30:876 kernel.log/(122301:122309): PID: <1000> ingresa a EXECUTE
+[INFO] 06:33:30:876 kernel.log/(122301:122309): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:33:30:876 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:30:876 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:876 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:30:876 kernel.log/(122301:122311): VENGO_A_
+[INFO] 06:33:30:876 kernel.log/(122301:122311): SALVARTE
+[INFO] 06:33:30:876 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:876 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:876 kernel.log/(122301:122311): UNLOCK_RECURSO__
+[INFO] 06:33:30:876 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:876 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:876 kernel.log/(122301:122311): 0000000000000000
+[WARNING] 06:33:30:876 kernel.log/(122301:122311): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 06:33:30:876 kernel.log/(122301:122311): PID: <1000> enviada a CPU
+[INFO] 06:33:30:877 kernel.log/(122301:122311): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:33:30:877 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:877 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:30:877 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:877 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:30:877 kernel.log/(122301:122311): VENGO_A_
+[INFO] 06:33:30:877 kernel.log/(122301:122311): SALVARTE
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:877 kernel.log/(122301:122311): UNLOCK_RECURSO__
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 0000000000000000
+[WARNING] 06:33:30:877 kernel.log/(122301:122311): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:33:30:877 kernel.log/(122301:122311): PID: <1001> enviada a CPU
+[INFO] 06:33:30:877 kernel.log/(122301:122311): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:33:30:877 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:877 kernel.log/(122301:122311): WAIT
+[INFO] 06:33:30:877 kernel.log/(122301:122311): EJEC
+[INFO] 06:33:30:877 kernel.log/(122301:122311): SEGM
+[INFO] 06:33:30:877 kernel.log/(122301:122311): VENGO_A_
+[INFO] 06:33:30:877 kernel.log/(122301:122311): SALVARTE
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:877 kernel.log/(122301:122311): 00000000
+[INFO] 06:33:30:878 kernel.log/(122301:122311): UNLOCK_RECURSO__
+[INFO] 06:33:30:878 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:878 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:878 kernel.log/(122301:122311): 0000000000000000
+[INFO] 06:33:30:878 kernel.log/(122301:122311): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 06:33:30:878 kernel.log/(122301:122311): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 06:33:30:878 kernel.log/(122301:122307): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 06:34:10:437 kernel.log/(122367:122367): Se crea el diccionario con los recursos.
+[INFO] 06:34:10:438 kernel.log/(122367:122367): Se agrego el recurso DISCO al diccionario
+[INFO] 06:34:10:438 kernel.log/(122367:122367): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:35:50:452 kernel.log/(122444:122444): Se crea el diccionario con los recursos.
+[INFO] 06:35:50:452 kernel.log/(122444:122444): Se agrego el recurso DISCO al diccionario
+[INFO] 06:35:50:452 kernel.log/(122444:122444): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:35:53:176 kernel.log/(122444:122444): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:35:57:910 kernel.log/(122444:122444): Cliente conectado (a KERNEL)
+
+[INFO] 06:36:11:302 kernel.log/(122444:122484): Se crea el proceso <1000> en NEW
+[INFO] 06:36:11:303 kernel.log/(122444:122484): Cola NEW: 
+[INFO] 06:36:11:303 kernel.log/(122444:122484): PID: <1000>
+[INFO] 06:36:11:321 kernel.log/(122444:122465): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:36:11:321 kernel.log/(122444:122465): Cola Ready <FIFO>:
+[INFO] 06:36:11:321 kernel.log/(122444:122465): PID: <1000>
+[INFO] 06:36:11:321 kernel.log/(122444:122461): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:36:11:321 kernel.log/(122444:122461): PID: <1000> ingresa a EXECUTE
+[INFO] 06:36:11:321 kernel.log/(122444:122461): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:36:11:321 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:36:54:853 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:36:54:853 kernel.log/(122444:122463): EJEC
+[INFO] 06:36:54:853 kernel.log/(122444:122463): WAIT
+[INFO] 06:36:54:853 kernel.log/(122444:122463): 0000
+[INFO] 06:36:54:853 kernel.log/(122444:122463): 0000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:854 kernel.log/(122444:122463): 0000000000000000
+[WARNING] 06:36:54:854 kernel.log/(122444:122463): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:36:54:854 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:36:54:855 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:36:54:855 kernel.log/(122444:122463): EJEC
+[INFO] 06:36:54:855 kernel.log/(122444:122463): WAIT
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 0000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 0000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:855 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:856 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:856 kernel.log/(122444:122463): 0000000000000000
+[WARNING] 06:36:54:856 kernel.log/(122444:122463): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:36:54:856 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:36:54:857 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:36:54:857 kernel.log/(122444:122463): EJEC
+[INFO] 06:36:54:857 kernel.log/(122444:122463): WAIT
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 0000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 0000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 00000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:36:54:857 kernel.log/(122444:122463): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:36:54:857 kernel.log/(122444:122463): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:36:54:857 kernel.log/(122444:122464): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:36:59:090 kernel.log/(122444:122444): Cliente conectado (a KERNEL)
+
+[INFO] 06:37:02:378 kernel.log/(122444:122464): Cola Ready <FIFO>:
+[INFO] 06:37:02:378 kernel.log/(122444:122464): PID: <1000>
+[INFO] 06:37:02:378 kernel.log/(122444:122461): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:37:02:378 kernel.log/(122444:122461): PID: <1000> ingresa a EXECUTE
+[INFO] 06:37:02:378 kernel.log/(122444:122461): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:37:02:379 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:37:13:228 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:37:13:228 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:13:228 kernel.log/(122444:122463): WAIT
+[INFO] 06:37:13:228 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:13:228 kernel.log/(122444:122463): SEGM
+[INFO] 06:37:13:228 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:228 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:228 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:228 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 06:37:13:229 kernel.log/(122444:122463): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 06:37:13:229 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:37:13:229 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:37:13:229 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:13:229 kernel.log/(122444:122463): WAIT
+[INFO] 06:37:13:229 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:13:229 kernel.log/(122444:122463): SEGM
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:229 kernel.log/(122444:122463): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 06:37:13:229 kernel.log/(122444:122463): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 06:37:13:229 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:37:13:230 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:37:13:230 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:13:230 kernel.log/(122444:122463): WAIT
+[INFO] 06:37:13:230 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:13:230 kernel.log/(122444:122463): SEGM
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:13:230 kernel.log/(122444:122463): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:37:13:230 kernel.log/(122444:122463): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:37:13:230 kernel.log/(122444:122464): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:37:29:750 kernel.log/(122444:122464): Cola Ready <FIFO>:
+[INFO] 06:37:29:751 kernel.log/(122444:122464): PID: <1000>
+[INFO] 06:37:29:751 kernel.log/(122444:122461): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:37:29:751 kernel.log/(122444:122461): PID: <1000> ingresa a EXECUTE
+[INFO] 06:37:29:751 kernel.log/(122444:122461): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:37:29:751 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:37:29:751 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:37:29:751 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:29:751 kernel.log/(122444:122463): WAIT
+[INFO] 06:37:29:751 kernel.log/(122444:122463): EJEC
+[INFO] 06:37:29:751 kernel.log/(122444:122463): SEGM
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 00000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:37:29:751 kernel.log/(122444:122463): 0000000000000000
+[WARNING] 06:37:29:751 kernel.log/(122444:122463): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:37:48:241 kernel.log/(122444:122508): Se crea el proceso <1001> en NEW
+[INFO] 06:37:48:242 kernel.log/(122444:122508): Cola NEW: 
+[INFO] 06:37:48:242 kernel.log/(122444:122508): PID: <1001>
+[INFO] 06:37:48:357 kernel.log/(122444:122465): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:37:48:358 kernel.log/(122444:122465): Cola Ready <FIFO>:
+[INFO] 06:37:48:358 kernel.log/(122444:122465): PID: <1001>
+[INFO] 06:37:48:358 kernel.log/(122444:122461): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:37:48:358 kernel.log/(122444:122461): PID: <1001> ingresa a EXECUTE
+[INFO] 06:37:48:358 kernel.log/(122444:122461): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:37:48:358 kernel.log/(122444:122463): PID: <1001> enviada a CPU
+[INFO] 06:38:46:545 kernel.log/(122444:122463): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:38:46:713 kernel.log/(122444:122463): EJEC
+[INFO] 06:38:46:936 kernel.log/(122444:122463): WAIT
+[INFO] 06:38:47:190 kernel.log/(122444:122463): EJEC
+[INFO] 06:38:47:369 kernel.log/(122444:122463): SEGM
+[INFO] 06:38:47:553 kernel.log/(122444:122463): VENGO_A_
+[INFO] 06:38:47:904 kernel.log/(122444:122463): SALVARTE
+[INFO] 06:38:48:258 kernel.log/(122444:122463): 00000000
+[INFO] 06:38:49:247 kernel.log/(122444:122463): 00000000
+[INFO] 06:38:49:659 kernel.log/(122444:122463): UNLOCK_RECURSO__
+[INFO] 06:38:50:103 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:38:51:081 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:38:51:755 kernel.log/(122444:122463): 0000000000000000
+[WARNING] 06:38:59:499 kernel.log/(122444:122463): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 06:39:09:128 kernel.log/(122444:122462): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 06:39:09:128 kernel.log/(122444:122461): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:39:09:128 kernel.log/(122444:122461): PID: <1000> ingresa a EXECUTE
+[INFO] 06:39:09:128 kernel.log/(122444:122461): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:39:45:823 kernel.log/(122444:122463): PID: <1000> enviada a CPU
+[INFO] 06:40:08:412 kernel.log/(122444:122463): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:40:08:587 kernel.log/(122444:122463): EJEC
+[INFO] 06:40:08:758 kernel.log/(122444:122463): WAIT
+[INFO] 06:40:08:969 kernel.log/(122444:122463): EJEC
+[INFO] 06:40:09:207 kernel.log/(122444:122463): SEGM
+[INFO] 06:40:09:416 kernel.log/(122444:122463): VENGO_A_
+[INFO] 06:40:09:646 kernel.log/(122444:122463): SALVARTE
+[INFO] 06:40:09:840 kernel.log/(122444:122463): 00000000
+[INFO] 06:40:10:047 kernel.log/(122444:122463): 00000000
+[INFO] 06:40:10:254 kernel.log/(122444:122463): UNLOCK_RECURSO__
+[INFO] 06:40:10:474 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:40:10:845 kernel.log/(122444:122463): 0000000000000000
+[INFO] 06:40:11:087 kernel.log/(122444:122463): 0000000000000000
+[WARNING] 06:40:14:188 kernel.log/(122444:122463): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:43:03:758 kernel.log/(122878:122878): Se crea el diccionario con los recursos.
+[INFO] 06:43:03:758 kernel.log/(122878:122878): Se agrego el recurso DISCO al diccionario
+[INFO] 06:43:03:758 kernel.log/(122878:122878): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:43:03:759 kernel.log/(122878:122878): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:43:08:567 kernel.log/(122878:122878): Cliente conectado (a KERNEL)
+
+[INFO] 06:43:09:406 kernel.log/(122878:122892): Se crea el proceso <1000> en NEW
+[INFO] 06:43:09:406 kernel.log/(122878:122892): Cola NEW: 
+[INFO] 06:43:09:406 kernel.log/(122878:122892): PID: <1000>
+[INFO] 06:43:09:407 kernel.log/(122878:122890): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:43:09:407 kernel.log/(122878:122890): Cola Ready <FIFO>:
+[INFO] 06:43:09:407 kernel.log/(122878:122890): PID: <1000>
+[INFO] 06:43:09:407 kernel.log/(122878:122886): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:43:09:407 kernel.log/(122878:122886): PID: <1000> ingresa a EXECUTE
+[INFO] 06:43:09:407 kernel.log/(122878:122886): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:43:09:407 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:11:410 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:11:410 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:11:410 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:11:410 kernel.log/(122878:122888): 0000
+[INFO] 06:43:11:410 kernel.log/(122878:122888): 0000
+[INFO] 06:43:11:410 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:410 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:410 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:410 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:411 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:411 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:411 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:411 kernel.log/(122878:122888): 0000000000000000
+[WARNING] 06:43:11:411 kernel.log/(122878:122888): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:43:11:411 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:11:420 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:11:420 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:11:420 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:11:420 kernel.log/(122878:122888): 0000
+[INFO] 06:43:11:421 kernel.log/(122878:122888): 0000
+[INFO] 06:43:11:421 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:421 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:421 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:421 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:421 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:422 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:422 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:422 kernel.log/(122878:122888): 0000000000000000
+[WARNING] 06:43:11:422 kernel.log/(122878:122888): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:43:11:422 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:11:429 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:11:429 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:11:429 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:11:429 kernel.log/(122878:122888): 0000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 0000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:430 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:11:431 kernel.log/(122878:122888): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:43:11:431 kernel.log/(122878:122888): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:43:11:431 kernel.log/(122878:122889): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:43:16:431 kernel.log/(122878:122889): Cola Ready <FIFO>:
+[INFO] 06:43:16:432 kernel.log/(122878:122889): PID: <1000>
+[INFO] 06:43:16:432 kernel.log/(122878:122886): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:43:16:432 kernel.log/(122878:122886): PID: <1000> ingresa a EXECUTE
+[INFO] 06:43:16:432 kernel.log/(122878:122886): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:43:16:432 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:18:437 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:18:437 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:18:438 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:18:438 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:18:438 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:438 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:439 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:439 kernel.log/(122878:122888): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 06:43:18:439 kernel.log/(122878:122888): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 06:43:18:440 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:18:441 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:18:441 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:18:441 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:18:441 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:18:441 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:18:441 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 06:43:18:442 kernel.log/(122878:122888): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 06:43:18:442 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:18:442 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:18:442 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:18:442 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:18:442 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:18:442 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:18:442 kernel.log/(122878:122888): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:43:18:442 kernel.log/(122878:122888): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:43:18:442 kernel.log/(122878:122889): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:43:23:442 kernel.log/(122878:122889): Cola Ready <FIFO>:
+[INFO] 06:43:23:443 kernel.log/(122878:122889): PID: <1000>
+[INFO] 06:43:23:443 kernel.log/(122878:122886): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:43:23:443 kernel.log/(122878:122886): PID: <1000> ingresa a EXECUTE
+[INFO] 06:43:23:443 kernel.log/(122878:122886): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:43:23:443 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:43:23:445 kernel.log/(122878:122888): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:43:23:445 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:23:445 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:23:445 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:23:445 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:23:445 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:23:445 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:23:445 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:23:445 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:23:446 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:23:446 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:23:446 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:23:447 kernel.log/(122878:122888): 0000000000000000
+[WARNING] 06:43:23:447 kernel.log/(122878:122888): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:43:38:766 kernel.log/(122878:122878): Cliente conectado (a KERNEL)
+
+[INFO] 06:43:44:319 kernel.log/(122878:122894): Se crea el proceso <1001> en NEW
+[INFO] 06:43:44:319 kernel.log/(122878:122894): Cola NEW: 
+[INFO] 06:43:44:319 kernel.log/(122878:122894): PID: <1001>
+[INFO] 06:43:44:320 kernel.log/(122878:122890): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:43:44:320 kernel.log/(122878:122890): Cola Ready <FIFO>:
+[INFO] 06:43:44:320 kernel.log/(122878:122890): PID: <1001>
+[INFO] 06:43:44:320 kernel.log/(122878:122886): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:43:44:320 kernel.log/(122878:122886): PID: <1001> ingresa a EXECUTE
+[INFO] 06:43:44:320 kernel.log/(122878:122886): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:43:44:320 kernel.log/(122878:122888): PID: <1001> enviada a CPU
+[INFO] 06:43:47:331 kernel.log/(122878:122888): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:43:47:331 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:47:331 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:47:331 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:47:331 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:47:331 kernel.log/(122878:122888): VENGO_A_
+[INFO] 06:43:47:331 kernel.log/(122878:122888): SALVARTE
+[INFO] 06:43:47:331 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:47:331 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:47:331 kernel.log/(122878:122888): UNLOCK_RECURSO__
+[INFO] 06:43:47:331 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:331 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:331 kernel.log/(122878:122888): 0000000000000000
+[WARNING] 06:43:47:331 kernel.log/(122878:122888): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 06:43:47:331 kernel.log/(122878:122888): PID: <1001> enviada a CPU
+[INFO] 06:43:47:331 kernel.log/(122878:122887): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 06:43:47:332 kernel.log/(122878:122888): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:43:47:332 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:47:332 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:47:332 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:47:332 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:47:332 kernel.log/(122878:122888): VENGO_A_
+[INFO] 06:43:47:332 kernel.log/(122878:122888): SALVARTE
+[INFO] 06:43:47:332 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:47:332 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:47:332 kernel.log/(122878:122888): UNLOCK_RECURSO__
+[INFO] 06:43:47:332 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:332 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:332 kernel.log/(122878:122888): 0000000000000000
+[WARNING] 06:43:47:333 kernel.log/(122878:122888): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 06:43:47:333 kernel.log/(122878:122888): PID: <1001> enviada a CPU
+[INFO] 06:43:47:334 kernel.log/(122878:122888): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:43:47:334 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:47:334 kernel.log/(122878:122888): WAIT
+[INFO] 06:43:47:334 kernel.log/(122878:122888): EJEC
+[INFO] 06:43:47:334 kernel.log/(122878:122888): SEGM
+[INFO] 06:43:47:334 kernel.log/(122878:122888): VENGO_A_
+[INFO] 06:43:47:334 kernel.log/(122878:122888): SALVARTE
+[INFO] 06:43:47:334 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:47:334 kernel.log/(122878:122888): 00000000
+[INFO] 06:43:47:334 kernel.log/(122878:122888): UNLOCK_RECURSO__
+[INFO] 06:43:47:334 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:334 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:334 kernel.log/(122878:122888): 0000000000000000
+[INFO] 06:43:47:334 kernel.log/(122878:122888): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 06:43:47:334 kernel.log/(122878:122888): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 06:43:47:334 kernel.log/(122878:122886): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:43:47:334 kernel.log/(122878:122886): PID: <1000> ingresa a EXECUTE
+[INFO] 06:43:47:334 kernel.log/(122878:122886): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:43:47:334 kernel.log/(122878:122884): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 06:43:47:334 kernel.log/(122878:122888): PID: <1000> enviada a CPU
+[INFO] 06:46:09:140 kernel.log/(123011:123011): Se crea el diccionario con los recursos.
+[INFO] 06:46:09:140 kernel.log/(123011:123011): Se agrego el recurso DISCO al diccionario
+[INFO] 06:46:09:140 kernel.log/(123011:123011): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:46:09:140 kernel.log/(123011:123011): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:46:14:627 kernel.log/(123011:123011): Cliente conectado (a KERNEL)
+
+[INFO] 06:46:16:158 kernel.log/(123011:123025): Se crea el proceso <1000> en NEW
+[INFO] 06:46:16:158 kernel.log/(123011:123025): Cola NEW: 
+[INFO] 06:46:16:158 kernel.log/(123011:123025): PID: <1000>
+[INFO] 06:46:16:158 kernel.log/(123011:123023): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:46:16:158 kernel.log/(123011:123023): Cola Ready <FIFO>:
+[INFO] 06:46:16:158 kernel.log/(123011:123023): PID: <1000>
+[INFO] 06:46:16:158 kernel.log/(123011:123019): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:46:16:158 kernel.log/(123011:123019): PID: <1000> ingresa a EXECUTE
+[INFO] 06:46:16:158 kernel.log/(123011:123019): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:46:16:158 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:18:165 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:18:165 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:18:165 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 0000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 0000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:165 kernel.log/(123011:123021): 0000000000000000
+[WARNING] 06:46:18:165 kernel.log/(123011:123021): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:46:18:165 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:18:171 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:18:171 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:18:171 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 0000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 0000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:172 kernel.log/(123011:123021): 0000000000000000
+[WARNING] 06:46:18:172 kernel.log/(123011:123021): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:46:18:173 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:18:175 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:18:176 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:18:176 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 0000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 0000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:18:176 kernel.log/(123011:123021): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:46:18:176 kernel.log/(123011:123021): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:46:18:176 kernel.log/(123011:123022): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:46:23:177 kernel.log/(123011:123022): Cola Ready <FIFO>:
+[INFO] 06:46:23:177 kernel.log/(123011:123022): PID: <1000>
+[INFO] 06:46:23:177 kernel.log/(123011:123019): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:46:23:177 kernel.log/(123011:123019): PID: <1000> ingresa a EXECUTE
+[INFO] 06:46:23:177 kernel.log/(123011:123019): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:46:23:177 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:25:180 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:25:180 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:25:181 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:25:181 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:25:181 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:181 kernel.log/(123011:123021): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 06:46:25:182 kernel.log/(123011:123021): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 06:46:25:182 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:25:184 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:25:184 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:25:184 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:25:184 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:25:184 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:185 kernel.log/(123011:123021): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 06:46:25:185 kernel.log/(123011:123021): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 06:46:25:185 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:25:186 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:25:186 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:25:186 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:25:186 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:25:186 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:25:186 kernel.log/(123011:123021): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:46:25:186 kernel.log/(123011:123021): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:46:25:186 kernel.log/(123011:123022): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:46:30:189 kernel.log/(123011:123022): Cola Ready <FIFO>:
+[INFO] 06:46:30:189 kernel.log/(123011:123022): PID: <1000>
+[INFO] 06:46:30:189 kernel.log/(123011:123019): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:46:30:189 kernel.log/(123011:123019): PID: <1000> ingresa a EXECUTE
+[INFO] 06:46:30:189 kernel.log/(123011:123019): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:46:30:190 kernel.log/(123011:123021): PID: <1000> enviada a CPU
+[INFO] 06:46:30:191 kernel.log/(123011:123021): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:46:30:192 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:30:192 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:30:192 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:30:192 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:30:192 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:30:192 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:30:193 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:30:193 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:30:193 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:30:193 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:30:193 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:30:193 kernel.log/(123011:123021): 0000000000000000
+[WARNING] 06:46:30:194 kernel.log/(123011:123021): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:46:36:571 kernel.log/(123011:123011): Cliente conectado (a KERNEL)
+
+[INFO] 06:46:38:764 kernel.log/(123011:123027): Se crea el proceso <1001> en NEW
+[INFO] 06:46:38:764 kernel.log/(123011:123027): Cola NEW: 
+[INFO] 06:46:38:764 kernel.log/(123011:123027): PID: <1001>
+[INFO] 06:46:38:764 kernel.log/(123011:123023): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:46:38:764 kernel.log/(123011:123023): Cola Ready <FIFO>:
+[INFO] 06:46:38:764 kernel.log/(123011:123023): PID: <1001>
+[INFO] 06:46:38:765 kernel.log/(123011:123019): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:46:38:765 kernel.log/(123011:123019): PID: <1001> ingresa a EXECUTE
+[INFO] 06:46:38:765 kernel.log/(123011:123019): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:46:38:765 kernel.log/(123011:123021): PID: <1001> enviada a CPU
+[INFO] 06:46:41:770 kernel.log/(123011:123021): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:46:41:771 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:41:771 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:41:771 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:41:771 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:41:771 kernel.log/(123011:123021): VENGO_A_
+[INFO] 06:46:41:771 kernel.log/(123011:123021): SALVARTE
+[INFO] 06:46:41:771 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:41:771 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:41:771 kernel.log/(123011:123021): UNLOCK_RECURSO__
+[INFO] 06:46:41:771 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:771 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:771 kernel.log/(123011:123021): 0000000000000000
+[WARNING] 06:46:41:771 kernel.log/(123011:123021): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 06:46:41:771 kernel.log/(123011:123021): PID: <1001> enviada a CPU
+[INFO] 06:46:41:771 kernel.log/(123011:123020): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 06:46:41:776 kernel.log/(123011:123021): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:46:41:776 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:41:776 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:41:776 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:41:776 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:41:776 kernel.log/(123011:123021): VENGO_A_
+[INFO] 06:46:41:776 kernel.log/(123011:123021): SALVARTE
+[INFO] 06:46:41:776 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:41:776 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:41:776 kernel.log/(123011:123021): UNLOCK_RECURSO__
+[INFO] 06:46:41:776 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:776 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:776 kernel.log/(123011:123021): 0000000000000000
+[WARNING] 06:46:41:776 kernel.log/(123011:123021): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 06:46:41:776 kernel.log/(123011:123021): PID: <1001> enviada a CPU
+[INFO] 06:46:41:781 kernel.log/(123011:123021): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:46:41:781 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:41:781 kernel.log/(123011:123021): WAIT
+[INFO] 06:46:41:781 kernel.log/(123011:123021): EJEC
+[INFO] 06:46:41:782 kernel.log/(123011:123021): SEGM
+[INFO] 06:46:41:782 kernel.log/(123011:123021): VENGO_A_
+[INFO] 06:46:41:782 kernel.log/(123011:123021): SALVARTE
+[INFO] 06:46:41:782 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:41:782 kernel.log/(123011:123021): 00000000
+[INFO] 06:46:41:782 kernel.log/(123011:123021): UNLOCK_RECURSO__
+[INFO] 06:46:41:782 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:782 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:782 kernel.log/(123011:123021): 0000000000000000
+[INFO] 06:46:41:782 kernel.log/(123011:123021): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 06:46:41:782 kernel.log/(123011:123021): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 06:46:41:782 kernel.log/(123011:123017): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 06:46:41:782 kernel.log/(123011:123019): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:47:20:681 kernel.log/(123072:123072): Se crea el diccionario con los recursos.
+[INFO] 06:47:20:682 kernel.log/(123072:123072): Se agrego el recurso DISCO al diccionario
+[INFO] 06:47:20:682 kernel.log/(123072:123072): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:51:17:309 kernel.log/(123315:123315): Se crea el diccionario con los recursos.
+[INFO] 06:51:17:309 kernel.log/(123315:123315): Se agrego el recurso DISCO al diccionario
+[INFO] 06:51:17:309 kernel.log/(123315:123315): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:51:17:309 kernel.log/(123315:123315): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[WARNING] 06:51:21:093 kernel.log/(123315:123329): Operacion desconocida 
+
+[WARNING] 06:51:37:772 kernel.log/(123315:123331): Operacion desconocida 
+
+[INFO] 06:58:11:942 kernel.log/(123549:123549): Se crea el diccionario con los recursos.
+[INFO] 06:58:11:943 kernel.log/(123549:123549): Se agrego el recurso DISCO al diccionario
+[INFO] 06:58:11:943 kernel.log/(123549:123549): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 06:58:11:943 kernel.log/(123549:123549): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 06:58:16:226 kernel.log/(123549:123564): Se crea el proceso <1000> en NEW
+[INFO] 06:58:16:226 kernel.log/(123549:123564): Cola NEW: 
+[INFO] 06:58:16:226 kernel.log/(123549:123564): PID: <1000>
+[INFO] 06:58:16:226 kernel.log/(123549:123562): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:58:16:226 kernel.log/(123549:123562): Cola Ready <FIFO>:
+[INFO] 06:58:16:226 kernel.log/(123549:123562): PID: <1000>
+[INFO] 06:58:16:226 kernel.log/(123549:123558): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:58:16:226 kernel.log/(123549:123558): PID: <1000> ingresa a EXECUTE
+[INFO] 06:58:16:226 kernel.log/(123549:123558): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:58:16:226 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:18:230 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:18:231 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:18:231 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:18:231 kernel.log/(123549:123560): 0000
+[INFO] 06:58:18:231 kernel.log/(123549:123560): 0000
+[INFO] 06:58:18:231 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:231 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:231 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:232 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:232 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:232 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:232 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:232 kernel.log/(123549:123560): 0000000000000000
+[WARNING] 06:58:18:232 kernel.log/(123549:123560): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:58:18:232 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:18:234 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:18:234 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:18:234 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 0000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 0000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:234 kernel.log/(123549:123560): 0000000000000000
+[WARNING] 06:58:18:234 kernel.log/(123549:123560): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 06:58:18:235 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:18:235 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:18:235 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:18:235 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:18:235 kernel.log/(123549:123560): 0000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 0000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:18:236 kernel.log/(123549:123560): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:58:18:236 kernel.log/(123549:123560): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:58:18:236 kernel.log/(123549:123561): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:58:23:240 kernel.log/(123549:123561): Cola Ready <FIFO>:
+[INFO] 06:58:23:241 kernel.log/(123549:123561): PID: <1000>
+[INFO] 06:58:23:241 kernel.log/(123549:123558): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:58:23:242 kernel.log/(123549:123558): PID: <1000> ingresa a EXECUTE
+[INFO] 06:58:23:242 kernel.log/(123549:123558): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:58:23:242 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:25:246 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:25:246 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:25:246 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:25:246 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:25:246 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:246 kernel.log/(123549:123560): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 06:58:25:246 kernel.log/(123549:123560): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 06:58:25:246 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:25:247 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:25:247 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:25:247 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:25:247 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:25:247 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:247 kernel.log/(123549:123560): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 06:58:25:247 kernel.log/(123549:123560): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 06:58:25:247 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:25:248 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:25:248 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:25:248 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:25:248 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:25:248 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:25:248 kernel.log/(123549:123560): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 06:58:25:248 kernel.log/(123549:123560): PID: <1000> - Bloqueado por: <IO>
+[INFO] 06:58:25:248 kernel.log/(123549:123561): PID: <1000> - Ejecuta IO: <5>
+[INFO] 06:58:30:249 kernel.log/(123549:123561): Cola Ready <FIFO>:
+[INFO] 06:58:30:249 kernel.log/(123549:123561): PID: <1000>
+[INFO] 06:58:30:250 kernel.log/(123549:123558): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:58:30:250 kernel.log/(123549:123558): PID: <1000> ingresa a EXECUTE
+[INFO] 06:58:30:250 kernel.log/(123549:123558): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:58:30:250 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:30:252 kernel.log/(123549:123560): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 06:58:30:252 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:30:252 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:30:252 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:30:252 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:30:252 kernel.log/(123549:123560): 0000000000000000
+[WARNING] 06:58:30:253 kernel.log/(123549:123560): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 06:58:38:990 kernel.log/(123549:123566): Se crea el proceso <1001> en NEW
+[INFO] 06:58:38:990 kernel.log/(123549:123566): Cola NEW: 
+[INFO] 06:58:38:990 kernel.log/(123549:123566): PID: <1001>
+[INFO] 06:58:38:990 kernel.log/(123549:123562): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 06:58:38:990 kernel.log/(123549:123562): Cola Ready <FIFO>:
+[INFO] 06:58:38:990 kernel.log/(123549:123562): PID: <1001>
+[INFO] 06:58:38:991 kernel.log/(123549:123558): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:58:38:991 kernel.log/(123549:123558): PID: <1001> ingresa a EXECUTE
+[INFO] 06:58:38:991 kernel.log/(123549:123558): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:58:38:991 kernel.log/(123549:123560): PID: <1001> enviada a CPU
+[INFO] 06:58:41:995 kernel.log/(123549:123560): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:58:41:995 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:41:995 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:41:995 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:41:995 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:41:995 kernel.log/(123549:123560): VENGO_A_
+[INFO] 06:58:41:995 kernel.log/(123549:123560): SALVARTE
+[INFO] 06:58:41:995 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:41:995 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:41:995 kernel.log/(123549:123560): UNLOCK_RECURSO__
+[INFO] 06:58:41:995 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:995 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:995 kernel.log/(123549:123560): 0000000000000000
+[WARNING] 06:58:41:996 kernel.log/(123549:123560): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 06:58:41:996 kernel.log/(123549:123560): PID: <1001> enviada a CPU
+[INFO] 06:58:41:996 kernel.log/(123549:123559): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 06:58:41:996 kernel.log/(123549:123560): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:58:41:996 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:41:996 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:41:996 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:41:996 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:41:996 kernel.log/(123549:123560): VENGO_A_
+[INFO] 06:58:41:996 kernel.log/(123549:123560): SALVARTE
+[INFO] 06:58:41:996 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:41:997 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:41:997 kernel.log/(123549:123560): UNLOCK_RECURSO__
+[INFO] 06:58:41:997 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:997 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:997 kernel.log/(123549:123560): 0000000000000000
+[WARNING] 06:58:41:997 kernel.log/(123549:123560): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 06:58:41:997 kernel.log/(123549:123560): PID: <1001> enviada a CPU
+[INFO] 06:58:41:997 kernel.log/(123549:123560): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 06:58:41:997 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:41:997 kernel.log/(123549:123560): WAIT
+[INFO] 06:58:41:997 kernel.log/(123549:123560): EJEC
+[INFO] 06:58:41:997 kernel.log/(123549:123560): SEGM
+[INFO] 06:58:41:998 kernel.log/(123549:123560): VENGO_A_
+[INFO] 06:58:41:998 kernel.log/(123549:123560): SALVARTE
+[INFO] 06:58:41:998 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:41:998 kernel.log/(123549:123560): 00000000
+[INFO] 06:58:41:998 kernel.log/(123549:123560): UNLOCK_RECURSO__
+[INFO] 06:58:41:998 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:998 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:998 kernel.log/(123549:123560): 0000000000000000
+[INFO] 06:58:41:998 kernel.log/(123549:123560): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 06:58:41:998 kernel.log/(123549:123560): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 06:58:41:998 kernel.log/(123549:123558): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 06:58:41:998 kernel.log/(123549:123558): PID: <1000> ingresa a EXECUTE
+[INFO] 06:58:41:998 kernel.log/(123549:123558): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 06:58:41:998 kernel.log/(123549:123560): PID: <1000> enviada a CPU
+[INFO] 06:58:41:998 kernel.log/(123549:123556): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 07:00:39:607 kernel.log/(123617:123617): Se crea el diccionario con los recursos.
+[INFO] 07:00:39:607 kernel.log/(123617:123617): Se agrego el recurso DISCO al diccionario
+[INFO] 07:00:39:607 kernel.log/(123617:123617): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 07:00:41:818 kernel.log/(123617:123617): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 07:01:00:741 kernel.log/(123617:123667): Se crea el proceso <1000> en NEW
+[INFO] 07:01:00:741 kernel.log/(123617:123667): Cola NEW: 
+[INFO] 07:01:00:741 kernel.log/(123617:123667): PID: <1000>
+[INFO] 07:01:13:690 kernel.log/(123617:123640): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 07:01:14:600 kernel.log/(123617:123640): Cola Ready <FIFO>:
+[INFO] 07:01:15:006 kernel.log/(123617:123640): PID: <1000>
+[INFO] 07:01:28:531 kernel.log/(123617:123636): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:01:29:462 kernel.log/(123617:123636): PID: <1000> ingresa a EXECUTE
+[INFO] 07:01:29:924 kernel.log/(123617:123636): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:01:43:807 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:01:54:434 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:01:54:536 kernel.log/(123617:123638): EJEC
+[INFO] 07:01:54:639 kernel.log/(123617:123638): WAIT
+[INFO] 07:01:54:738 kernel.log/(123617:123638): 0000
+[INFO] 07:01:54:838 kernel.log/(123617:123638): 0000
+[INFO] 07:01:54:939 kernel.log/(123617:123638): 00000000
+[INFO] 07:01:55:038 kernel.log/(123617:123638): 00000000
+[INFO] 07:01:55:143 kernel.log/(123617:123638): 00000000
+[INFO] 07:01:55:247 kernel.log/(123617:123638): 00000000
+[INFO] 07:01:55:350 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:01:55:448 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:01:55:550 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:01:56:118 kernel.log/(123617:123638): 0000000000000000
+[WARNING] 07:02:00:362 kernel.log/(123617:123638): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 07:02:09:361 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:02:23:476 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:02:23:686 kernel.log/(123617:123638): EJEC
+[INFO] 07:02:23:860 kernel.log/(123617:123638): WAIT
+[INFO] 07:02:24:364 kernel.log/(123617:123638): 0000
+[INFO] 07:02:24:462 kernel.log/(123617:123638): 0000
+[INFO] 07:02:24:570 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:24:933 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:25:152 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:25:353 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:26:079 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:26:269 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:26:507 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:26:852 kernel.log/(123617:123638): 0000000000000000
+[WARNING] 07:02:30:820 kernel.log/(123617:123638): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 07:02:37:303 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:02:52:565 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:02:52:662 kernel.log/(123617:123638): EJEC
+[INFO] 07:02:52:766 kernel.log/(123617:123638): WAIT
+[INFO] 07:02:52:867 kernel.log/(123617:123638): 0000
+[INFO] 07:02:52:969 kernel.log/(123617:123638): 0000
+[INFO] 07:02:53:069 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:53:169 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:53:270 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:53:372 kernel.log/(123617:123638): 00000000
+[INFO] 07:02:53:473 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:53:573 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:53:675 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:53:774 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:02:58:460 kernel.log/(123617:123638): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 07:02:58:927 kernel.log/(123617:123638): PID: <1000> - Bloqueado por: <IO>
+[INFO] 07:03:00:207 kernel.log/(123617:123639): PID: <1000> - Ejecuta IO: <5>
+[INFO] 07:03:05:210 kernel.log/(123617:123639): Cola Ready <FIFO>:
+[INFO] 07:03:05:210 kernel.log/(123617:123639): PID: <1000>
+[INFO] 07:03:05:210 kernel.log/(123617:123636): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:03:05:210 kernel.log/(123617:123636): PID: <1000> ingresa a EXECUTE
+[INFO] 07:03:05:211 kernel.log/(123617:123636): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:03:07:843 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:03:18:818 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:03:18:917 kernel.log/(123617:123638): EJEC
+[INFO] 07:03:19:021 kernel.log/(123617:123638): WAIT
+[INFO] 07:03:19:122 kernel.log/(123617:123638): EJEC
+[INFO] 07:03:19:225 kernel.log/(123617:123638): SEGM
+[INFO] 07:03:19:388 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:19:485 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:19:588 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:19:689 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:19:791 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:19:893 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:19:995 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:20:098 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:22:134 kernel.log/(123617:123638): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 07:03:22:957 kernel.log/(123617:123638): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 07:03:30:561 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:03:39:744 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:03:39:849 kernel.log/(123617:123638): EJEC
+[INFO] 07:03:39:949 kernel.log/(123617:123638): WAIT
+[INFO] 07:03:40:053 kernel.log/(123617:123638): EJEC
+[INFO] 07:03:40:159 kernel.log/(123617:123638): SEGM
+[INFO] 07:03:40:263 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:40:365 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:40:465 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:40:623 kernel.log/(123617:123638): 00000000
+[INFO] 07:03:40:729 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:40:831 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:40:934 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:41:034 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:03:43:139 kernel.log/(123617:123638): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 07:03:45:838 kernel.log/(123617:123638): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 07:03:56:598 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:04:05:583 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:04:05:683 kernel.log/(123617:123638): EJEC
+[INFO] 07:04:05:785 kernel.log/(123617:123638): WAIT
+[INFO] 07:04:05:887 kernel.log/(123617:123638): EJEC
+[INFO] 07:04:05:987 kernel.log/(123617:123638): SEGM
+[INFO] 07:04:06:088 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:06:193 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:06:292 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:06:395 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:06:496 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:06:597 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:06:700 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:06:800 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:09:583 kernel.log/(123617:123638): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 07:04:09:865 kernel.log/(123617:123638): PID: <1000> - Bloqueado por: <IO>
+[INFO] 07:04:10:187 kernel.log/(123617:123639): PID: <1000> - Ejecuta IO: <5>
+[INFO] 07:04:15:188 kernel.log/(123617:123639): Cola Ready <FIFO>:
+[INFO] 07:04:15:188 kernel.log/(123617:123639): PID: <1000>
+[INFO] 07:04:15:188 kernel.log/(123617:123636): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:04:15:188 kernel.log/(123617:123636): PID: <1000> ingresa a EXECUTE
+[INFO] 07:04:15:188 kernel.log/(123617:123636): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:04:25:995 kernel.log/(123617:123638): PID: <1000> enviada a CPU
+[INFO] 07:04:35:119 kernel.log/(123617:123638): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:04:35:223 kernel.log/(123617:123638): EJEC
+[INFO] 07:04:35:334 kernel.log/(123617:123638): WAIT
+[INFO] 07:04:35:478 kernel.log/(123617:123638): EJEC
+[INFO] 07:04:35:581 kernel.log/(123617:123638): SEGM
+[INFO] 07:04:35:731 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:35:833 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:35:937 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:36:039 kernel.log/(123617:123638): 00000000
+[INFO] 07:04:36:144 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:36:243 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:36:344 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:04:36:446 kernel.log/(123617:123638): 0000000000000000
+[WARNING] 07:04:40:000 kernel.log/(123617:123638): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 07:06:24:207 kernel.log/(123617:124647): Se crea el proceso <1001> en NEW
+[INFO] 07:06:24:207 kernel.log/(123617:124647): Cola NEW: 
+[INFO] 07:06:24:207 kernel.log/(123617:124647): PID: <1001>
+[INFO] 07:06:24:207 kernel.log/(123617:123640): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 07:06:24:207 kernel.log/(123617:123640): Cola Ready <FIFO>:
+[INFO] 07:06:24:207 kernel.log/(123617:123640): PID: <1001>
+[INFO] 07:06:24:207 kernel.log/(123617:123636): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:06:24:207 kernel.log/(123617:123636): PID: <1001> ingresa a EXECUTE
+[INFO] 07:06:24:207 kernel.log/(123617:123636): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:06:55:396 kernel.log/(123617:123638): PID: <1001> enviada a CPU
+[INFO] 07:07:08:901 kernel.log/(123617:123638): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 07:07:09:019 kernel.log/(123617:123638): EJEC
+[INFO] 07:07:09:868 kernel.log/(123617:123638): WAIT
+[INFO] 07:07:10:192 kernel.log/(123617:123638): EJEC
+[INFO] 07:07:10:607 kernel.log/(123617:123638): SEGM
+[INFO] 07:07:10:927 kernel.log/(123617:123638): VENGO_A_
+[INFO] 07:07:11:314 kernel.log/(123617:123638): SALVARTE
+[INFO] 07:07:11:722 kernel.log/(123617:123638): 00000000
+[INFO] 07:07:12:130 kernel.log/(123617:123638): 00000000
+[INFO] 07:07:12:545 kernel.log/(123617:123638): UNLOCK_RECURSO__
+[INFO] 07:07:13:673 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:14:064 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:14:876 kernel.log/(123617:123638): 0000000000000000
+[WARNING] 07:07:27:959 kernel.log/(123617:123638): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 07:07:52:173 kernel.log/(123617:123638): PID: <1001> enviada a CPU
+[INFO] 07:07:52:174 kernel.log/(123617:123638): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 07:07:52:175 kernel.log/(123617:123638): EJEC
+[INFO] 07:07:52:175 kernel.log/(123617:123638): WAIT
+[INFO] 07:07:52:175 kernel.log/(123617:123638): EJEC
+[INFO] 07:07:52:175 kernel.log/(123617:123638): SEGM
+[INFO] 07:07:52:175 kernel.log/(123617:123638): VENGO_A_
+[INFO] 07:07:52:175 kernel.log/(123617:123638): SALVARTE
+[INFO] 07:07:52:176 kernel.log/(123617:123638): 00000000
+[INFO] 07:07:52:176 kernel.log/(123617:123638): 00000000
+[INFO] 07:07:52:176 kernel.log/(123617:123638): UNLOCK_RECURSO__
+[INFO] 07:07:52:176 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:52:176 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:52:176 kernel.log/(123617:123638): 0000000000000000
+[WARNING] 07:07:52:177 kernel.log/(123617:123638): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 07:07:52:177 kernel.log/(123617:123638): PID: <1001> enviada a CPU
+[INFO] 07:07:52:178 kernel.log/(123617:123638): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 07:07:52:178 kernel.log/(123617:123638): EJEC
+[INFO] 07:07:52:178 kernel.log/(123617:123638): WAIT
+[INFO] 07:07:52:178 kernel.log/(123617:123638): EJEC
+[INFO] 07:07:52:178 kernel.log/(123617:123638): SEGM
+[INFO] 07:07:52:178 kernel.log/(123617:123638): VENGO_A_
+[INFO] 07:07:52:179 kernel.log/(123617:123638): SALVARTE
+[INFO] 07:07:52:179 kernel.log/(123617:123638): 00000000
+[INFO] 07:07:52:179 kernel.log/(123617:123638): 00000000
+[INFO] 07:07:52:179 kernel.log/(123617:123638): UNLOCK_RECURSO__
+[INFO] 07:07:52:179 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:52:179 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:52:179 kernel.log/(123617:123638): 0000000000000000
+[INFO] 07:07:52:179 kernel.log/(123617:123638): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 07:07:52:179 kernel.log/(123617:123638): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 07:07:52:179 kernel.log/(123617:123632): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 07:09:40:679 kernel.log/(124845:124845): Se crea el diccionario con los recursos.
+[INFO] 07:09:40:679 kernel.log/(124845:124845): Se agrego el recurso DISCO al diccionario
+[INFO] 07:09:40:679 kernel.log/(124845:124845): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 07:09:40:679 kernel.log/(124845:124845): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 07:09:46:139 kernel.log/(124845:124859): Se crea el proceso <1000> en NEW
+[INFO] 07:09:46:139 kernel.log/(124845:124859): Cola NEW: 
+[INFO] 07:09:46:139 kernel.log/(124845:124859): PID: <1000>
+[INFO] 07:09:46:139 kernel.log/(124845:124857): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 07:09:46:139 kernel.log/(124845:124857): Cola Ready <FIFO>:
+[INFO] 07:09:46:139 kernel.log/(124845:124857): PID: <1000>
+[INFO] 07:09:46:139 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:09:46:139 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:09:46:139 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:09:46:139 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:09:48:142 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:09:48:142 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:48:142 kernel.log/(124845:124855): WAIT
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 0000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 0000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:142 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:09:48:142 kernel.log/(124845:124855): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 07:09:48:142 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:09:48:143 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:09:48:143 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:48:143 kernel.log/(124845:124855): WAIT
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 0000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 0000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:143 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:09:48:143 kernel.log/(124845:124855): PID: <1000> solicita una instancia del Recurso: <RECURSO_1>
+[INFO] 07:09:48:143 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:09:48:144 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:09:48:144 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:48:144 kernel.log/(124845:124855): WAIT
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 0000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 0000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:48:144 kernel.log/(124845:124855): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 07:09:48:144 kernel.log/(124845:124855): PID: <1000> - Bloqueado por: <IO>
+[INFO] 07:09:48:144 kernel.log/(124845:124856): PID: <1000> - Ejecuta IO: <5>
+[INFO] 07:09:53:144 kernel.log/(124845:124856): Cola Ready <FIFO>:
+[INFO] 07:09:53:144 kernel.log/(124845:124856): PID: <1000>
+[INFO] 07:09:53:144 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:09:53:145 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:09:53:145 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:09:53:145 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:09:55:170 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:09:55:170 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:55:170 kernel.log/(124845:124855): WAIT
+[INFO] 07:09:55:170 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:55:170 kernel.log/(124845:124855): SEGM
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:171 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:172 kernel.log/(124845:124855): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[ERROR] 07:09:55:172 kernel.log/(124845:124855): [ERROR] Error al recibir respuesta de CREATE_SEGMENT
+[INFO] 07:09:55:172 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:09:55:175 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:09:55:175 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:55:175 kernel.log/(124845:124855): WAIT
+[INFO] 07:09:55:175 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:55:175 kernel.log/(124845:124855): SEGM
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[ERROR] 07:09:55:175 kernel.log/(124845:124855): [ERROR] Error recibiendo las tablas de segmentos.
+[INFO] 07:09:55:175 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:09:55:175 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:09:55:175 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:55:175 kernel.log/(124845:124855): WAIT
+[INFO] 07:09:55:175 kernel.log/(124845:124855): EJEC
+[INFO] 07:09:55:175 kernel.log/(124845:124855): SEGM
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 00000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:09:55:175 kernel.log/(124845:124855): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 07:09:55:175 kernel.log/(124845:124855): PID: <1000> - Bloqueado por: <IO>
+[INFO] 07:09:55:175 kernel.log/(124845:124856): PID: <1000> - Ejecuta IO: <5>
+[INFO] 07:10:00:176 kernel.log/(124845:124856): Cola Ready <FIFO>:
+[INFO] 07:10:00:176 kernel.log/(124845:124856): PID: <1000>
+[INFO] 07:10:00:176 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:10:00:176 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:10:00:176 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:10:00:176 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:10:00:177 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:10:00:177 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:00:177 kernel.log/(124845:124855): WAIT
+[INFO] 07:10:00:177 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:00:177 kernel.log/(124845:124855): SEGM
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:00:177 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:10:00:177 kernel.log/(124845:124855): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 07:10:19:786 kernel.log/(124845:124862): Se crea el proceso <1001> en NEW
+[INFO] 07:10:19:786 kernel.log/(124845:124862): Cola NEW: 
+[INFO] 07:10:19:786 kernel.log/(124845:124862): PID: <1001>
+[INFO] 07:10:19:786 kernel.log/(124845:124857): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 07:10:19:786 kernel.log/(124845:124857): Cola Ready <FIFO>:
+[INFO] 07:10:19:786 kernel.log/(124845:124857): PID: <1001>
+[INFO] 07:10:19:786 kernel.log/(124845:124853): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:10:19:786 kernel.log/(124845:124853): PID: <1001> ingresa a EXECUTE
+[INFO] 07:10:19:786 kernel.log/(124845:124853): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:10:19:786 kernel.log/(124845:124855): PID: <1001> enviada a CPU
+[INFO] 07:10:22:802 kernel.log/(124845:124855): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 07:10:22:802 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:802 kernel.log/(124845:124855): WAIT
+[INFO] 07:10:22:802 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:802 kernel.log/(124845:124855): SEGM
+[INFO] 07:10:22:802 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:10:22:802 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:10:22:802 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:802 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:802 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:10:22:802 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:802 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:802 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:10:22:802 kernel.log/(124845:124855): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 07:10:22:802 kernel.log/(124845:124855): PID: <1001> enviada a CPU
+[INFO] 07:10:22:802 kernel.log/(124845:124854): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 07:10:22:803 kernel.log/(124845:124855): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 07:10:22:803 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:803 kernel.log/(124845:124855): WAIT
+[INFO] 07:10:22:803 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:803 kernel.log/(124845:124855): SEGM
+[INFO] 07:10:22:803 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:10:22:803 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:10:22:803 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:803 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:803 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:10:22:803 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:803 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:803 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:10:22:803 kernel.log/(124845:124855): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 07:10:22:803 kernel.log/(124845:124855): PID: <1001> enviada a CPU
+[INFO] 07:10:22:803 kernel.log/(124845:124855): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 07:10:22:804 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:804 kernel.log/(124845:124855): WAIT
+[INFO] 07:10:22:804 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:804 kernel.log/(124845:124855): SEGM
+[INFO] 07:10:22:804 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:10:22:804 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:10:22:804 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:804 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:804 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:10:22:804 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:804 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:804 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:804 kernel.log/(124845:124855): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 07:10:22:804 kernel.log/(124845:124855): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 07:10:22:804 kernel.log/(124845:124851): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 07:10:22:804 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:10:22:804 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:10:22:804 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:10:22:804 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:10:22:806 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:10:22:806 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:806 kernel.log/(124845:124855): WAIT
+[INFO] 07:10:22:806 kernel.log/(124845:124855): EJEC
+[INFO] 07:10:22:806 kernel.log/(124845:124855): SEGM
+[INFO] 07:10:22:806 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:10:22:806 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:10:22:806 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:806 kernel.log/(124845:124855): 00000000
+[INFO] 07:10:22:806 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:10:22:806 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:806 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:10:22:806 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:10:22:806 kernel.log/(124845:124855): PID: <1000> solicita una instancia del Recurso: <DISCO>
+[INFO] 07:11:12:733 kernel.log/(124845:124873): Se crea el proceso <1002> en NEW
+[INFO] 07:11:12:733 kernel.log/(124845:124873): Cola NEW: 
+[INFO] 07:11:12:733 kernel.log/(124845:124873): PID: <1002>
+[INFO] 07:11:12:733 kernel.log/(124845:124857): PID: <1002> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 07:11:12:733 kernel.log/(124845:124857): Cola Ready <FIFO>:
+[INFO] 07:11:12:733 kernel.log/(124845:124857): PID: <1002>
+[INFO] 07:11:12:733 kernel.log/(124845:124853): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:11:12:733 kernel.log/(124845:124853): PID: <1002> ingresa a EXECUTE
+[INFO] 07:11:12:733 kernel.log/(124845:124853): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:11:12:733 kernel.log/(124845:124855): PID: <1002> enviada a CPU
+[INFO] 07:11:15:735 kernel.log/(124845:124855): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 07:11:15:735 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:735 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:15:735 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:735 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:15:735 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:11:15:735 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:11:15:735 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:735 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:735 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:15:735 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:735 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:735 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:11:15:735 kernel.log/(124845:124855): PID: <1002> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 07:11:15:735 kernel.log/(124845:124855): PID: <1002> enviada a CPU
+[INFO] 07:11:15:735 kernel.log/(124845:124854): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 07:11:15:735 kernel.log/(124845:124855): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 07:11:15:735 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:735 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:15:735 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:735 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:15:735 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:11:15:735 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:11:15:736 kernel.log/(124845:124855): PID: <1002> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 07:11:15:736 kernel.log/(124845:124855): PID: <1002> enviada a CPU
+[INFO] 07:11:15:736 kernel.log/(124845:124855): Los registros que trajo PID: <1002> de la CPU son: 
+[INFO] 07:11:15:736 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:736 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:15:736 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:736 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:15:736 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:11:15:736 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:736 kernel.log/(124845:124855): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 07:11:15:736 kernel.log/(124845:124855): Finaliza el proceso <1002> - Motivo: <SUCCESS>
+[INFO] 07:11:15:736 kernel.log/(124845:124851): Ordenando a Consola la finalización del PID: <1002>
+[INFO] 07:11:15:736 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:11:15:736 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:11:15:736 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:11:15:736 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:11:15:737 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:11:15:737 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:737 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:15:737 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:15:737 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:15:737 kernel.log/(124845:124855): VENGO_A_
+[INFO] 07:11:15:737 kernel.log/(124845:124855): SALVARTE
+[INFO] 07:11:15:737 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:737 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:15:737 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:15:737 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:737 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:737 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:15:737 kernel.log/(124845:124855): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 07:11:15:738 kernel.log/(124845:124855): PID: <1000> - Bloqueado por: <IO>
+[INFO] 07:11:15:738 kernel.log/(124845:124856): PID: <1000> - Ejecuta IO: <5>
+[INFO] 07:11:20:740 kernel.log/(124845:124856): Cola Ready <FIFO>:
+[INFO] 07:11:20:741 kernel.log/(124845:124856): PID: <1000>
+[INFO] 07:11:20:741 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:11:20:741 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:11:20:741 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:11:20:741 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:11:22:743 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:11:22:743 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:22:743 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:22:743 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:22:743 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:22:743 kernel.log/(124845:124855): EJECUTAR
+[INFO] 07:11:22:743 kernel.log/(124845:124855): SIGNAL__
+[INFO] 07:11:22:743 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:22:743 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:22:743 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:22:743 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:743 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:743 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:11:22:743 kernel.log/(124845:124855): PID: <1000> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 07:11:22:743 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:11:22:744 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:11:22:744 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:22:744 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:22:744 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:22:744 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:22:744 kernel.log/(124845:124855): EJECUTAR
+[INFO] 07:11:22:744 kernel.log/(124845:124855): SIGNAL__
+[INFO] 07:11:22:744 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:22:744 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:22:744 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:22:744 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:744 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:744 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:11:22:744 kernel.log/(124845:124855): PID: <1000> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 07:11:22:744 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:11:22:744 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:11:22:745 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:22:745 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:22:745 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:22:745 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:22:745 kernel.log/(124845:124855): EJECUTAR
+[INFO] 07:11:22:745 kernel.log/(124845:124855): SIGNAL__
+[INFO] 07:11:22:745 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:22:745 kernel.log/(124845:124855): 00000000
+[INFO] 07:11:22:745 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:22:745 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:745 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:745 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:22:745 kernel.log/(124845:124855): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 07:11:22:745 kernel.log/(124845:124855): PID: <1000> - Bloqueado por: <IO>
+[INFO] 07:11:22:745 kernel.log/(124845:124856): PID: <1000> - Ejecuta IO: <5>
+[INFO] 07:11:27:746 kernel.log/(124845:124856): Cola Ready <FIFO>:
+[INFO] 07:11:27:746 kernel.log/(124845:124856): PID: <1000>
+[INFO] 07:11:27:746 kernel.log/(124845:124853): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 07:11:27:746 kernel.log/(124845:124853): PID: <1000> ingresa a EXECUTE
+[INFO] 07:11:27:746 kernel.log/(124845:124853): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 07:11:27:746 kernel.log/(124845:124855): PID: <1000> enviada a CPU
+[INFO] 07:11:29:750 kernel.log/(124845:124855): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 07:11:29:751 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:29:751 kernel.log/(124845:124855): WAIT
+[INFO] 07:11:29:751 kernel.log/(124845:124855): EJEC
+[INFO] 07:11:29:751 kernel.log/(124845:124855): SEGM
+[INFO] 07:11:29:751 kernel.log/(124845:124855): EJECUTAR
+[INFO] 07:11:29:752 kernel.log/(124845:124855): SIGNAL__
+[INFO] 07:11:29:752 kernel.log/(124845:124855): EJECUTAR
+[INFO] 07:11:29:752 kernel.log/(124845:124855): WAIT_404
+[INFO] 07:11:29:752 kernel.log/(124845:124855): UNLOCK_RECURSO__
+[INFO] 07:11:29:752 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:29:752 kernel.log/(124845:124855): 0000000000000000
+[INFO] 07:11:29:753 kernel.log/(124845:124855): 0000000000000000
+[WARNING] 07:11:29:753 kernel.log/(124845:124855): PID: <1000> solicita una instancia del Recurso: <NO_EXISTO>
+[INFO] 07:11:29:753 kernel.log/(124845:124855): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 07:11:29:753 kernel.log/(124845:124855): Finaliza el proceso <1000> - Motivo: <INVALID_RESOURCE>
+[INFO] 07:11:29:753 kernel.log/(124845:124851): Ordenando a Consola la finalización del PID: <1000>
