@@ -2,7 +2,7 @@
 #include<shared-2.h>
 
 //Deserealización de Strings, con esta función recibimos las instrucciones desde Consola
-char* deserializar_string(t_buffer* buffer) {
+char* deserializar_el_string(t_buffer* buffer) {
 	char* string = malloc(buffer->stream_size);
 	memset(string, 0, buffer->stream_size);
 

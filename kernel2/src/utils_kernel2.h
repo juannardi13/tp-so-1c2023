@@ -67,7 +67,7 @@ typedef struct {
 	int tamanio;
 	int instancias_usadas;
 	int instancias_totales;
-	t_queue cola_bloqueados;
+	t_queue* cola_bloqueados;
 	pthread_mutex_t* mutex_cola_bloqueados;
 	pthread_mutex_t* mutex_instancia_usada;
 }t_archivo;
@@ -151,7 +151,7 @@ t_pcb* recibir_pcb(int);
 
 //Funciones de clientes
 int atender_clientes_kernel(int);
-void manejar_conexion(int);
+void manejar_conexion(int*);
 int server_escuchar(t_log*, char*, int);
 
 //Serialización y deserialización de datos
@@ -159,7 +159,7 @@ int agregar_a_stream(void*, int*, void*, int);
 void agregar_instruccion_a_lista(char**, char*);
 t_consola *deserializar_consola(char*);
 t_list *deserializar_instrucciones(t_list*, int);
-char* deserializar_string(t_buffer*);
+char* deserializar_el_string(t_buffer*);
 void recibir_instruccion_serializada(int);
 char* recibir_instrucciones_como_string(int);
 
@@ -208,5 +208,17 @@ void enviar_pid_memoria(int, op_code);
 void ordenar_compactacion(void);
 void recibir_respuesta_create(t_proceso*, int, int);
 void recibir_tablas_segmentos(t_pcb*);
+
+//Funciones para el manejo de archivos
+void inicializar_tabla_global_archivos(void);
+void agregar_archivo_a_tabla_global_archivos(char*);
+void quitar_entrada_archivo_del_proceso(char*, t_proceso*);
+void quitar_entrada_archivo_de_tabla_global_archivos(char*);
+void* hilo_archivos(void*);
+void funcion_archivo(char*, void*);
+void liberar_entrada_archivo(t_archivo*);
+void actualizar_puntero_archivo_proceso(t_proceso*, char*, int);
+op_code consultar_existencia_archivo_a_fs(char*);
+void crear_archivo_en_fs(char*);
 
 #endif /* UTILS_H_ */

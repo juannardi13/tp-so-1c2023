@@ -28,7 +28,7 @@ int main() {
 
     char* ip_memoria = config_get_string_value(config, "IP");
     char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-    int fd_memoria = crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
+    int fd_memoria = 4;//crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
 //    int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
 //    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
 

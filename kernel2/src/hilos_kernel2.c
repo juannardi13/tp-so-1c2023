@@ -13,7 +13,9 @@ t_list* cola_exit;
 t_list* cola_block_io;
 t_list* cola_exec;
 
-void manejar_conexion(int socket_cliente) {
+void manejar_conexion(int* fd_cliente) {
+
+	int socket_cliente = *fd_cliente;
 
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	paquete->buffer = malloc(sizeof(t_buffer));
@@ -29,7 +31,7 @@ void manejar_conexion(int socket_cliente) {
 	switch(paquete->codigo_operacion)
 	{
 	case CONSOLA:
-		data = deserializar_string(paquete->buffer);
+		data = deserializar_el_string(paquete->buffer);
 
 		t_proceso* proceso = malloc(sizeof(t_proceso));
 		proceso->pcb = malloc(sizeof(t_pcb));
@@ -59,18 +61,19 @@ void manejar_conexion(int socket_cliente) {
 
 int atender_clientes_kernel(int socket_servidor) {
 
-	int socket_cliente = esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
+	int* socket_cliente = malloc(sizeof(int));//esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
+	*socket_cliente = accept(socket_servidor, NULL, NULL);
 
-		if(socket_cliente != -1) {
+		//if(socket_cliente != -1) {
 			pthread_t hilo_cliente;
 			//manejar_conexion(socket_cliente);
 			pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
 			pthread_detach(hilo_cliente);
 
 			return 1;
-		} else {
-			log_error(logger_kernel, "Error al escuchar clientes... Finalizando servidor \n"); // log para fallo de comunicaciones
-		}
+		//} else {
+	//		log_error(logger_kernel, "Error al escuchar clientes... Finalizando servidor \n"); // log para fallo de comunicaciones
+	//	}
 
 	return 0;
 }
@@ -95,7 +98,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 
 	//TODO PONER ACA EL MUTEX PARA LAS OPERACIONES CON MEMORIA
 	pthread_mutex_lock(&mutex_operacion_memoria);
-	asignar_segmentos_de_memoria(un_pcb);
+	//asignar_segmentos_de_memoria(un_pcb);
 	pthread_mutex_unlock(&mutex_operacion_memoria);
 
 	//un_pcb->rafaga_estimada = config_kernel.estimacion_inicial; // TODO las rafagas y todos los tiempos que necesita el proceso para calcular el HRRN ahora estan en la estructura del proceso.
