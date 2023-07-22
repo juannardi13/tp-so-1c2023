@@ -73,7 +73,8 @@ typedef enum
 	COMPACTACION_TERMINADA,
 	INICIAR_PROCESO,
 	EXISTE,
-	NO_EXISTE
+	NO_EXISTE,
+	CREAR_ARCHIVO
 }op_code;
 
 typedef struct
