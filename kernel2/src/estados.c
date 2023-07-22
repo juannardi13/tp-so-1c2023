@@ -146,6 +146,12 @@ void estado_ejecutar(void) {
 
 			recibir_respuesta_create(proceso_a_ejecutar, id_segmento, tamanio_segmento);
 			pthread_mutex_unlock(&mutex_operacion_memoria);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, proceso_a_ejecutar);
+			pthread_mutex_unlock(&mutex_exec);
+
+			sem_post(&sem_exec);
 			break;
 		case DELETE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;
@@ -206,7 +212,6 @@ void estado_ejecutar(void) {
 				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
 				log_info(logger_kernel, "PID: <%d> - Bloqueado por: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
 
-
 				queue_push(archivo_open->cola_bloqueados, proceso_a_ejecutar);
 				sem_post(&sem_ready);
 			} else {
@@ -246,6 +251,7 @@ void estado_ejecutar(void) {
 			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = F_CLOSE;
+			proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 			
 			int tamanio_archivo_a_cerrar;
 
@@ -280,6 +286,7 @@ void estado_ejecutar(void) {
 			//Actualizar el puntero del archivo a la posición pasada por parámetro
 			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 			proceso_a_ejecutar->ultima_instruccion = F_SEEK;
+			proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 			
 			int tamanio_archivo_seek;
 			int tamanio_en_bytes;
@@ -422,6 +429,8 @@ void estado_ejecutar(void) {
 				t_recurso* recurso_a_pedir = dictionary_get(recursos, recurso_wait);
 
 				if(asignar_recurso(recurso_a_pedir, proceso_a_ejecutar)) {
+					proceso_a_ejecutar->desalojado = NO_DESALOJADO;
+
 					pthread_mutex_lock(&mutex_exec);
 					list_add(cola_exec, proceso_a_ejecutar);
 					pthread_mutex_unlock(&mutex_exec);
@@ -474,7 +483,7 @@ void estado_ejecutar(void) {
 				t_recurso* recurso_a_liberar = dictionary_get(recursos, recurso_signal);
 
 				liberar_instancia_recurso(recurso_a_liberar);
-				quitar_recurso(proceso_a_ejecutar, recurso_a_liberar);
+				//quitar_recurso(proceso_a_ejecutar, recurso_a_liberar);
 
 				pthread_mutex_lock(&mutex_exec);
 				list_add(cola_exec, proceso_a_ejecutar);
@@ -490,7 +499,6 @@ void estado_ejecutar(void) {
 				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
 				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
-				sem_post(&sem_ready);
 			}
 
 			break;
@@ -538,7 +546,7 @@ void estado_ejecutar(void) {
 			break;
 		}
 
-		free(stream);
+//		free(stream);
 		eliminar_paquete(paquete);
 	}
 
@@ -560,6 +568,7 @@ void estado_exit(void) {
 		liberar_recursos_asignados(proceso->pcb->recursos_asignados);
 
 		//Liberar las estructuras del proceso en memoria
+		/*
 		pthread_mutex_lock(&mutex_operacion_memoria);
 		enviar_pid_memoria(proceso->pcb->pid, LIBERAR_ESTRUCTURAS);
 		log_info(logger_kernel, "PID: <%d> liberando estructuras en memoria", proceso->pcb->pid);
@@ -570,7 +579,7 @@ void estado_exit(void) {
 
 		if(respuesta_memoria != ESTRUCTURAS_LIBERADAS) {
 			log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
-		}
+		}*/
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
 
@@ -583,7 +592,7 @@ void estado_exit(void) {
 }
 
 void eliminar_pcb(t_pcb* pcb) {
-	list_destroy_and_destroy_elements(pcb->tabla_segmentos->segmentos, free);
+	//list_destroy_and_destroy_elements(pcb->tabla_segmentos->segmentos, free);
 	//list_destroy_and_destroy_elements(pcb->recursos_asignados, free);
 	//TODO seguir destruyendo las eventuales listas de la pcb.
 }
