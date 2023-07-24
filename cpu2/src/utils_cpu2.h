@@ -15,11 +15,13 @@
 #include <shared-2.h>
 
 extern t_registros registros_cpu;
+extern t_list* tabla_segmentos_prueba;
 
 // Funciones para la inicialización de CPU
 t_log* iniciar_logger(void);
 t_log* iniciar_logger_principal(void);
 void inicializar_registros(void);
+void inicializar_segmentos_prueba(void);
 t_config* iniciar_config(void);
 
 // Funciones para serializar y deserializar

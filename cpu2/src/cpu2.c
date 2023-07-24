@@ -9,6 +9,7 @@ int main() {
     t_log* logger_principal = iniciar_logger_principal();
     t_config* config = iniciar_config();
     inicializar_registros();
+    inicializar_segmentos_prueba();
 
 	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
 	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
@@ -21,14 +22,15 @@ int main() {
 
     log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
 
+    char* ip_memoria = config_get_string_value(config, "IP");
+    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    int fd_memoria = crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
+
     int fd_cpu = iniciar_servidor(puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.\n", puerto_kernel);
     int fd_kernel = esperar_cliente(logger, "CPU", fd_cpu);
 
 
-    char* ip_memoria = config_get_string_value(config, "IP");
-    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-    int fd_memoria = 4;//crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
 //    int fd_cpu_memoria = iniciar_servidor(puerto_memoria);
 //    int fd_memoria = esperar_cliente(logger, "CPU", fd_memoria);
 
@@ -111,6 +113,8 @@ int main() {
 			log_info(logger, "%s", contexto->registros_pcb.rdx);
 
 			log_info(logger, "PID: <%d> recibido desde el Kernel para ejecutar.", contexto->pid);
+
+			contexto->tabla_segmentos = tabla_segmentos_prueba;
 
 			int contexto_sigue_en_cpu = 1; // Es para el while de abajo, si queremos que el contexto vuelva al kernel va a ser 0, rompiendo el ciclo y quedandose el cpu en espera a recibir de nuevo el contexto de ejecución
 			char **instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
