@@ -22,9 +22,9 @@ int main() {
 
     log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
 
-    char* ip_memoria = config_get_string_value(config, "IP");
-    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-    int fd_memoria = crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
+//    char* ip_memoria = config_get_string_value(config, "IP"); TODO comentado para probar serialización de segmentos en kernel.
+//    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    int fd_memoria = 4; //crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
 
     int fd_cpu = iniciar_servidor(puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.\n", puerto_kernel);

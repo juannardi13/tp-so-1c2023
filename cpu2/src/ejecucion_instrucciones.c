@@ -183,6 +183,7 @@ void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_
 	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
 	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
 	int tamanio_registro_grande = strlen(registros_cpu.rax) + 1;
+	int cantidad_segmentos = list_size(contexto->tabla_segmentos);
 
 	buffer->stream_size = sizeof(int) * 3 //PID, PC, TAMANIO_INSTRUCCIONES
 	//		+ sizeof(t_registros)
@@ -190,7 +191,9 @@ void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_
 			+ tamanio_instrucciones
 			+ tamanio_registro_chico * 4
 			+ tamanio_registro_mediano * 4
-			+ tamanio_registro_grande * 4;
+			+ tamanio_registro_grande * 4
+			+ sizeof(int)
+			+ (cantidad_segmentos * 3 * sizeof(int));
 
 	void *stream = malloc(buffer->stream_size);
 	int offset = 0;
@@ -232,6 +235,25 @@ void ejecutar_EXIT(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_
 	offset += tamanio_registro_grande;
 	memcpy(stream + offset, &(registros_cpu.rdx), tamanio_registro_grande);
 	offset += tamanio_registro_grande;
+
+	//Serialización de segmentos
+	memcpy(stream + offset, &(cantidad_segmentos), sizeof(int));
+	offset += sizeof(int);
+
+	t_list_iterator* iterador = list_iterator_create(contexto->tabla_segmentos);
+
+	while(list_iterator_has_next(iterador)) {
+		t_segmento* aux = (t_segmento*) list_iterator_next(iterador);
+
+		memcpy(stream + offset, &(aux->base), sizeof(int));
+		offset += sizeof(int);
+		memcpy(stream + offset,&(aux->id), sizeof(int));
+		offset += sizeof(int);
+		memcpy(stream + offset, &(aux->tamanio), sizeof(int));
+		offset += sizeof(int);
+	}
+
+	list_iterator_destroy(iterador);
 
 	buffer->stream = stream;
 
@@ -1089,6 +1111,7 @@ void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd
 	int tamanio_registro_chico = strlen(registros_cpu.ax) + 1;
 	int tamanio_registro_mediano = strlen(registros_cpu.eax) + 1;
 	int tamanio_registro_grande = strlen(registros_cpu.rax) + 1;
+	int cantidad_segmentos = list_size(contexto->tabla_segmentos);
 
 	buffer->stream_size = sizeof(int) * 3 //PID, PC, TAMANIO_INSTRUCCIONES
 	//		+ sizeof(t_registros)
@@ -1096,7 +1119,9 @@ void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd
 			+ tamanio_instrucciones
 			+ tamanio_registro_chico * 4
 			+ tamanio_registro_mediano * 4
-			+ tamanio_registro_grande * 4;
+			+ tamanio_registro_grande * 4
+			+ sizeof(int) //el entero que dice cuántos segmentos hay
+			+ (cantidad_segmentos * 3 * sizeof(int)); //el peso total de cada segmento
 
 	void* stream = malloc(buffer->stream_size);
 	int offset = 0;
@@ -1139,6 +1164,25 @@ void ejecutar_YIELD(char* instruccion, t_contexto_de_ejecucion* contexto, int fd
 	offset += tamanio_registro_grande;
 	memcpy(stream + offset, &(registros_cpu.rdx), tamanio_registro_grande);
 	offset += tamanio_registro_grande;
+
+	//Serialización de segmentos
+	memcpy(stream + offset, &(cantidad_segmentos), sizeof(int));
+	offset += sizeof(int);
+
+	t_list_iterator* iterador = list_iterator_create(contexto->tabla_segmentos);
+
+	while(list_iterator_has_next(iterador)) {
+		t_segmento* aux = (t_segmento*) list_iterator_next(iterador);
+
+		memcpy(stream + offset, &(aux->base), sizeof(int));
+		offset += sizeof(int);
+		memcpy(stream + offset,&(aux->id), sizeof(int));
+		offset += sizeof(int);
+		memcpy(stream + offset, &(aux->tamanio), sizeof(int));
+		offset += sizeof(int);
+	}
+
+	list_iterator_destroy(iterador);
 
 	buffer->stream = stream;
 
