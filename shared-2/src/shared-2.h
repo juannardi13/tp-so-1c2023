@@ -189,6 +189,7 @@ void crear_buffer(t_paquete *);
 int crear_conexion(t_log *, const char *, char *, char *);
 t_paquete *crear_paquete(int);
 t_paquete *crear_paquete_consola(void);
+t_segmento *crear_segmento(int, int, int);
 int deserializar_int(void *, int *);
 void* deserializar_string(int, void *, int *);
 void eliminar_paquete(t_paquete *);

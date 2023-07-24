@@ -1,16 +1,5 @@
 #include "segmentacion.h"
 
-t_segmento *crear_segmento(int id, int base, int size) {
-
-	t_segmento *seg = malloc(sizeof(t_segmento));
-
-	seg->id   	  = id;
-	seg->base 	  = base;
-	seg->tamanio  = size;
-
-	return seg;
-}
-
 int hay_espacio(int size) {
 
 	int disponible = 0;

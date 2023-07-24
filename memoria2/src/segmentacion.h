@@ -3,7 +3,6 @@
 
 #include "utils_memoria.h"
 
-t_segmento *crear_segmento(int, int, int);
 int hay_espacio(int);
 t_list *buscar_huecos_libres(void);
 t_segmento *buscar_hueco_libre(int *);

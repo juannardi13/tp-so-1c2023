@@ -207,7 +207,22 @@ void compactar(int socket_cliente) {
 	list_destroy(segmentos_en_uso);
 	list_destroy(contenido_segmentos);
 	mostrar_esquema_memoria();
-	send_op(socket_cliente, COMPACTACION_TERMINADA);
+	send_tablas(socket_cliente);
+}
+
+void send_tablas(int socket_cliente) {
+
+	t_paquete *paquete = crear_paquete(COMPACTACION_TERMINADA);
+	int cant_procesos = list_size(tablas_segmentos);
+
+	agregar_int_a_paquete(paquete, cant_procesos);
+
+	for (int i = 0; i < cant_procesos; i++) {
+		t_tabla_segmentos *tabla = list_get(tablas_segmentos, i);
+		agregar_tabla_a_paquete(paquete, tabla);
+	}
+
+	enviar_paquete(paquete, socket_cliente);
 }
 
 // AGREGO INICIO DE ATENDER A CPU
