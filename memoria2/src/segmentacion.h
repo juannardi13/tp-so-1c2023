@@ -23,5 +23,11 @@ t_segmento *obtener_segmento(int, int);
 void eliminar_segmento(int, int);
 void liberar_segmento(t_segmento *);
 void quitar_de_lista(int, t_segmento *);
+t_list *get_segmentos_en_uso(void);
+t_list *get_contenido_segmentos(t_list *);
+void *obtener_contenido(t_segmento *);
+int primer_byte_disponible(void);
+bool esta_ocupado(int);
+void mostrar_esquema_memoria(void);
 
 #endif /* SEGMENTACION_H_ */

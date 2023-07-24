@@ -12,6 +12,7 @@ void send_tabla(int, t_tabla_segmentos *);
 void recv_crear_segmento(int);
 void send_base_segmento(int, int);
 void recv_eliminar_segmento(int);
+void compactar(int);
 void recv_leer_de_memoria(int);
 void recv_escribir_en_memoria(int);
 void buscar_valor_enviar_CPU(int, int, int);

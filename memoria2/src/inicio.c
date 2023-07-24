@@ -20,5 +20,5 @@ void iniciar_bitmap_bytes_libres(int tam_memoria) {
 	memset(data, 0, tam_memoria);
 
 	int size = bits_to_bytes(tam_memoria); // ej. 4096b = 512B
-	bitmap = bitarray_create_with_mode(data, size, MSB_FIRST); // LSB O MSB?
+	bitmap = bitarray_create_with_mode(data, size, MSB_FIRST);
 }

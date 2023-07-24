@@ -37,8 +37,8 @@ void atender_kernel(int *kernel_fd) {
 			break;
 
 		case COMPACTAR:
-			// compactar(); TODO
 			log_info(logger, "Inicia compactación");
+			compactar(socket_cliente);
 			break;
 
 		case -1:
@@ -158,6 +158,56 @@ void recv_eliminar_segmento(int socket_cliente) {
 	send_tabla(socket_cliente, tabla);
 
 	free(buffer);
+}
+
+void compactar(int socket_cliente) {
+
+	t_list *segmentos_en_uso = get_segmentos_en_uso(); // lista de t_segmento *
+
+	t_list *contenido_segmentos = get_contenido_segmentos(segmentos_en_uso); // lista de void * (la anterior mapeada)
+
+	for (int i = 0; i < config_memoria.tam_memoria; i++) {
+		bitarray_clean_bit(bitmap, config_memoria.tam_segmento_0 + i); // los bits del seg 0 se quedan así
+	}
+
+	int cant_segs_en_uso = list_size(segmentos_en_uso);
+
+	for (int j = 0; j < cant_segs_en_uso; j++) {
+
+		t_segmento *seg_viejo = list_get(segmentos_en_uso, j);
+		void *contenido = list_get(contenido_segmentos, j);
+
+		int nueva_base = primer_byte_disponible();
+
+		t_segmento *seg_nuevo = crear_segmento(seg_viejo->id, nueva_base, seg_viejo->tamanio);
+
+		guardar_en_bitmap(seg_nuevo);
+
+		memcpy(memoria + seg_nuevo->base, contenido, seg_nuevo->tamanio); // lo "escribimos" en el void *memoria
+
+		// -------------------------------------------------------------------
+
+		bool segmento_tiene_base(t_segmento *segmento) {
+			return (segmento->base == seg_viejo->base) && (segmento->id == seg_viejo->id);
+		}
+
+		bool tiene_segmento_con_base(t_tabla_segmentos *tabla) {
+			return list_any_satisfy(tabla->segmentos, (void *) segmento_tiene_base);
+		}
+
+		t_tabla_segmentos *tabla = list_find(tablas_segmentos, (void *) tiene_segmento_con_base);
+		int pid = tabla->pid;
+		quitar_de_lista(pid, seg_viejo);
+		agregar_a_lista(pid, seg_nuevo);
+
+		free(seg_viejo);
+		free(contenido);
+	}
+
+	list_destroy(segmentos_en_uso);
+	list_destroy(contenido_segmentos);
+	mostrar_esquema_memoria();
+	send_op(socket_cliente, COMPACTACION_TERMINADA);
 }
 
 // AGREGO INICIO DE ATENDER A CPU

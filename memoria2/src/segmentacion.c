@@ -188,3 +188,70 @@ void quitar_de_lista(int pid, t_segmento *seg) {
 		abort();
 	}
 }
+
+t_list *get_segmentos_en_uso(void) {
+
+	t_list *aux = list_create();
+	int tam_lista = list_size(tablas_segmentos);
+
+	for (int i = 0; i < tam_lista; i++) {
+
+		t_tabla_segmentos *tabla = list_get(tablas_segmentos, i);
+		int cant_segs = list_size(tabla->segmentos);
+
+		for (int j = 0; j < cant_segs; j++) {
+
+			t_segmento *seg = list_get(tabla->segmentos, j);
+
+			if (seg->id != 0) {
+				list_add(aux, seg);
+			}
+		}
+	}
+	return aux;
+}
+
+t_list *get_contenido_segmentos(t_list *segmentos) {
+
+	t_list *aux = list_map(segmentos, (void *) obtener_contenido);
+
+	return aux;
+}
+
+void *obtener_contenido(t_segmento *seg) {
+
+	void *contenido = malloc(seg->tamanio);
+	memcpy(contenido, memoria + seg->base, seg->tamanio);
+
+	return contenido;
+}
+
+int primer_byte_disponible(void) {
+
+	int i = 0;
+
+    while (i < config_memoria.tam_memoria && esta_ocupado(i)) {
+        i++;
+    }
+    return i;
+}
+
+bool esta_ocupado(int i) {
+    return bitarray_test_bit(bitmap, i);
+}
+
+void mostrar_esquema_memoria(void) {
+
+	int cant_procesos = list_size(tablas_segmentos);
+
+	for (int i = 0; i < cant_procesos; i++) {
+		t_tabla_segmentos *tabla = list_get(tablas_segmentos, i);
+		int pid = tabla->pid;
+		int cant_segs = list_size(tabla->segmentos);
+
+		for (int j = 0; j < cant_segs; j++) {
+			t_segmento *seg = list_get(tabla->segmentos, j);
+			log_info(logger, "PID: %d - Segmento: %d - Base: %d - Tamaño: %d", pid, seg->id, seg->base, seg->tamanio);
+		}
+	}
+}
