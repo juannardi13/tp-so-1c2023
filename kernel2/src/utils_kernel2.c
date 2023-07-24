@@ -146,3 +146,11 @@ t_instruccion recibir_instruccion(t_log* logger, int conexion_consola) {
 
 	return instruccion;
 }
+
+char* int_to_string(int un_numero) {
+	char* string = malloc(5);
+
+	snprintf(string, 5, "%d", un_numero);
+
+	return string;
+}

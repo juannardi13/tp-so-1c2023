@@ -117,6 +117,7 @@ typedef struct {
 
 typedef struct {
 	int pid;
+	char* pid_string;
 	int tamanio_instrucciones;
 	char* instrucciones;
 	estado_proceso estado;

@@ -85,6 +85,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	t_pcb* un_pcb = malloc(sizeof(t_pcb));
 	pthread_mutex_lock(&mutex_pid);
 	un_pcb->pid = pid_global;
+	un_pcb->pid_string = int_to_string(pid_global);
 	pid_global++;
 	pthread_mutex_unlock(&mutex_pid);
 	un_pcb->tamanio_instrucciones = tamanio_proceso;

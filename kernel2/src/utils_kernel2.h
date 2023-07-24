@@ -94,6 +94,7 @@ extern t_list* cola_ready;
 extern t_registros registros_iniciados;
 extern t_dictionary* recursos;
 extern t_dictionary* tabla_global_archivos;
+extern t_dictionary* segmentos;
 
 extern pthread_mutex_t mutex_block_io;
 extern pthread_mutex_t mutex_exec;

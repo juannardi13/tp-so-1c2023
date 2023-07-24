@@ -1,6 +1,8 @@
 #include"utils_kernel2.h"
 #include<shared-2.h>
 
+t_dictionary* segmentos;
+
 void asignar_segmentos_de_memoria(t_pcb* pcb) {
 
 	enviar_pid_memoria(pcb->pid, CREAR_ESTRUCTURAS);
@@ -14,7 +16,7 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 	recv(socket_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
 
 	switch(paquete_respuesta->codigo_operacion) {
-	case ESTRUCTURAS_CREADAS:
+	case NUEVA_TABLA:
 		//deserializar tabla de segmentos y tabla de segmentos global
 		t_tabla_segmentos tabla; // = malloc(sizeof(t_tabla_segmentos));
 
@@ -241,4 +243,23 @@ void ordenar_compactacion(void) {
 		log_error(logger_kernel, "[ERROR] Error al saber estado de la compactación.");
 		break;
 	}
+}
+
+//-----------------Funciones para tratar con la Tabla Global de Segmentos
+
+void inicializar_tabla_global_segmentos(void) {
+
+	segmentos = dictionary_create();
+	log_info(logger_kernel, "Se inicializó la Tabla Global de Segmentos.");
+
+}
+
+void agregar_tabla_segmentos_a_tgs(t_pcb* un_pcb, t_tabla_segmentos tabla_segmentos) {
+	dictionary_put(segmentos, un_pcb->pid_string, tabla_segmentos);
+}
+
+void actualizar_tablas_segmentos(t_proceso* proceso) {
+	list_destroy_and_destroy_elements(proceso->pcb->tabla_segmentos.segmentos);
+
+	proceso->pcb->tabla_segmentos = dictionary_get(segmentos, proceso->pcb->pid_string);
 }

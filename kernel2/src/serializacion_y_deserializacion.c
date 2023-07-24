@@ -24,10 +24,13 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 	int tamanio_registro_chico = strlen(pcb->registros.ax) + 1;
 	int tamanio_registro_mediano = strlen(pcb->registros.eax) + 1;
 	int tamanio_registro_grande = strlen(pcb->registros.rax) + 1;
+//	int cantidad_segmentos = list_size(pcb->tabla_segmentos.segmentos);
 
 	buffer->stream_size = sizeof(int) * 3
 //			+ sizeof(t_registros)
 //			+ tamanio_segmentos  <-- Agregar el tamaño de los segmentos cuando sepamos que carajo es
+		//	+ sizeof(int) //Peso de la variable cantidad_segmentos
+		//	+ (cantidad_segmentos * 3 * sizeof(int)) //Peso total de los segmentos
 			+ tamanio_instrucciones
 			+ tamanio_registro_chico * 4
 			+ tamanio_registro_mediano * 4
@@ -77,10 +80,24 @@ void enviar_pcb(int socket_servidor, t_pcb* pcb) {
 	offset += tamanio_registro_grande;
 	memcpy(stream + offset, &(pcb->registros.rdx), tamanio_registro_grande);
 	offset += tamanio_registro_grande;
+/*
+	memcpy(stream + offset, &cantidad_segmentos, sizeof(int));
+	offset += sizeof(int);
 
-//	memcpy(stream + offset, &(pcb->tamanio_segmentos), sizeof(int));
-//	offset += sizeof(int);
-//	memcpy(stream + offset, pcb->segmentos, pcb->tamanio_segmentos);
+	t_list_iterator* iterador = list_iterator_create(pcb->tabla_segmentos.segmentos);
+
+	while(list_iterator_has_next(iterador)) {
+		t_segmento* aux = (t_segmento*) list_iterator_next(iterador);
+
+		memcpy(stream + offset, &(aux->base), sizeof(int));
+		offset += sizeof(int);
+		memcpy(stream + offset,&(aux->id), sizeof(int));
+		offset += sizeof(int);
+		memcpy(stream + offset, &(aux->tamanio), sizeof(int));
+		offset += sizeof(int);
+	}
+
+	list_iterator_destroy(iterador);*/
 
 	buffer->stream = stream;
 

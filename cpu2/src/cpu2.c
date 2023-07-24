@@ -113,6 +113,28 @@ int main() {
 			log_info(logger, "%s", contexto->registros_pcb.rdx);
 
 			log_info(logger, "PID: <%d> recibido desde el Kernel para ejecutar.", contexto->pid);
+			/*
+			int cant_segmentos;
+			memcpy(&cant_segmentos, stream, sizeof(int));
+			stream += sizeof(int);
+
+			for(int m = 0; m < cant_segmentos; m++) {
+				t_segmento* aux = malloc(sizeof(t_segmento));
+
+				memcpy(&(aux->base), stream, sizeof(int));
+				stream += sizeof(int);
+				memcpy(&(aux->id), stream, sizeof(int));
+				stream += sizeof(int);
+				memcpy(&(aux->tamanio), stream, sizeof(int));
+				stream += sizeof(int);
+
+				log_info(logger, "Segmento <%d>:", m);
+				log_info(logger, "Base <%d>", aux->base);
+				log_info(logger, "ID <%d>", aux->id);
+				log_info(logger, "Tamaño <%d>", aux->tamanio);
+
+				list_add(contexto->tabla_segmentos, aux);
+			}*/
 
 			contexto->tabla_segmentos = tabla_segmentos_prueba;
 

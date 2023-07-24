@@ -154,10 +154,7 @@ op_code consultar_existencia_archivo_a_fs(char* nombre) {
 	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
-	free(stream);
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
+	eliminar_paquete(paquete);
 
 	recv(socket_filesystem, &respuesta, sizeof(op_code), MSG_WAITALL); //Tendria que ser el op_code EXISTE o NO_EXISTE
 
@@ -211,10 +208,7 @@ void crear_archivo_en_fs(char* nombre) {
 	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
-	free(stream);
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
+	eliminar_paquete(paquete);
 
 	//TODO creo que solo le digo que lo cree y listo, no creo que necesite esperar una respuesta
 }
