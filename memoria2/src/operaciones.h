@@ -7,7 +7,7 @@
 void atender_File_System(int *);
 void atender_kernel(int *);
 void atender_CPU(int*);
-void recv_nuevo_proceso(int);
+void recv_nuevo_proceso(int, int);
 void send_tabla(int, t_tabla_segmentos *);
 void recv_crear_segmento(int);
 void send_base_segmento(int, int);

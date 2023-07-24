@@ -79,13 +79,13 @@ int esperar_conexiones(int socket_servidor) {
 	int* socket_cliente = malloc(sizeof(int));//esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
 		*socket_cliente = accept(socket_servidor, NULL, NULL);
 
-			//if(socket_cliente != -1) {
-				pthread_t hilo_cliente;
-				//manejar_conexion(socket_cliente);
-				pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
-				pthread_detach(hilo_cliente);
+	//if(socket_cliente != -1) {
+	pthread_t hilo_cliente;
+	//manejar_conexion(socket_cliente);
+	pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+	pthread_detach(hilo_cliente);
 
-				return 1;
+	return 1;
 
 }
 
@@ -104,8 +104,6 @@ void manejar_conexion(int* fd_cliente) {
 
 		switch(paquete->codigo_operacion) {
 		case LEER_DE_MEMORIA :
-			//recv_leer_de_memoria(socket_cliente);
-			void* stream = paquete->buffer->stream;
 
 			int tamanio_valor;
 			int direccion_fisica_buscada;
@@ -125,12 +123,42 @@ void manejar_conexion(int* fd_cliente) {
 			valor = "HOLA";
 
 			enviar_string_por(LEIDO, valor, socket_cliente);
+
 			break;
-
-
 		case ESCRIBIR_EN_MEMORIA :
-			recv_escribir_en_memoria(socket_cliente);
+
+			int direccion_fisica_a_escribir;
+			int tamanio_a_escribir;
+
+			memcpy(&direccion_fisica_a_escribir, stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&tamanio_a_escribir, stream, sizeof(int));
+			stream += sizeof(int);
+
+			char* valor_a_escribir = malloc(tamanio_a_escribir);
+			memset(valor_a_escribir, 0, tamanio_a_escribir);
+
+			memcpy(valor_a_escribir, stream, tamanio_a_escribir);
+			stream += tamanio_a_escribir;
+
+			log_info(logger, "CPU quiere escribir en la dirección <%d> el valor <%s>, de tamaño <%d>", direccion_fisica_a_escribir, valor_a_escribir, tamanio_a_escribir);
+
+			//TODO acá van las operaciones que hacen para escribir en memoria.
+
 			break;
+		case CREAR_ESTRUCTURAS:
+
+			int pid_a_inicializar;
+
+			memcpy(&pid_a_inicializar, stream, sizeof(int));
+			stream += sizeof(int);
+
+			recv_nuevo_proceso(pid_a_inicializar, socket_cliente); //Modifiqué esta función para que ande bien.
+
+			break;
+		default:
+			log_error(logger, "[ERROR] Operación desconocida.");
+			abort();
 		}
 	}
 }

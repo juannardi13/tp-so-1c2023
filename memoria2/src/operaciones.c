@@ -48,13 +48,7 @@ void atender_kernel(int *kernel_fd) {
 	}
 }
 
-void recv_nuevo_proceso(int socket_cliente) {
-
-	int size;
-	int offset = 0;
-	void *buffer = recibir_buffer(&size, socket_cliente);
-
-	int pid = deserializar_int(buffer, &offset);
+void recv_nuevo_proceso(int pid, int socket_cliente) {
 
 	t_tabla_segmentos *nueva_tabla = nueva_tabla_segmentos(pid);
 
@@ -62,9 +56,7 @@ void recv_nuevo_proceso(int socket_cliente) {
 
 	log_info(logger, "Creación de Proceso PID: %d", pid);
 
-	send_tabla(socket_cliente, nueva_tabla);
-
-	free(buffer);
+	send_tabla(socket_cliente, nueva_tabla); //TODO revisar esta función
 }
 
 void send_tabla(int socket_cliente, t_tabla_segmentos *tabla) {

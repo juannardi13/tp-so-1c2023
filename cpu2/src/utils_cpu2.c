@@ -154,7 +154,7 @@ int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* con
 }
 
 void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_log* logger_principal, t_contexto_de_ejecucion* contexto, int direccion_logica, t_config* config) {
-	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	int tamanio_segmento =  config_get_int_value(config, "TAM_MAX_SEGMENTO");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
 
@@ -193,10 +193,7 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_lo
 	log_info(logger_principal, "PID: <%d> - Acción: <LEER> - Segmento: <%d> - Dirección Física: <%d> - Valor: <%s>", contexto->pid, numero_segmento, direccion_fisica, valor);
 
 	free(a_enviar);
-	free(stream);
-	free(buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
+	eliminar_paquete(paquete);
 }
 
 char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int tamanio, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
