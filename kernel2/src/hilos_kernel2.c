@@ -98,6 +98,8 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 
 	//TODO PONER ACA EL MUTEX PARA LAS OPERACIONES CON MEMORIA
 	pthread_mutex_lock(&mutex_operacion_memoria);
+	un_pcb->tabla_segmentos.pid = un_pcb->pid;
+	un_pcb->tabla_segmentos.segmentos = list_create();
 	//asignar_segmentos_de_memoria(un_pcb);
 	pthread_mutex_unlock(&mutex_operacion_memoria);
 

@@ -124,7 +124,7 @@ typedef struct {
 	int tamanio_registros;
 	t_registros registros;
 	int tamanio_segmentos;
-	t_tabla_segmentos* tabla_segmentos;
+	t_tabla_segmentos tabla_segmentos;
 	t_list* recursos_asignados;
 	t_list* tabla_archivos;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion

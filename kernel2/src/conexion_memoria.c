@@ -16,11 +16,11 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 	switch(paquete_respuesta->codigo_operacion) {
 	case ESTRUCTURAS_CREADAS:
 		//deserializar tabla de segmentos y tabla de segmentos global
-		t_tabla_segmentos* tabla = malloc(sizeof(t_tabla_segmentos));
+		t_tabla_segmentos tabla; // = malloc(sizeof(t_tabla_segmentos));
 
 		void* stream = paquete_respuesta->buffer->stream;
 
-		memcpy(&(tabla->pid), stream, sizeof(int));
+		memcpy(&(tabla.pid), stream, sizeof(int));
 		stream += sizeof(int);
 
 		int tam_segmentos;
@@ -29,7 +29,7 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 		memcpy(&tam_segmentos, stream, sizeof(int));
 		stream += sizeof(int);
 
-		tabla->segmentos = list_create();
+		tabla.segmentos = list_create();
 
 		for(int i = 0; i < tam_segmentos; i++) {
 			memcpy((&aux->id), stream, sizeof(int));
@@ -39,7 +39,7 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 			memcpy(&(aux->tamanio), stream, sizeof(int));
 			stream += sizeof(int);
 
-			list_add(tabla->segmentos, aux);
+			list_add(tabla.segmentos, aux);
 		}
 
 		pcb->tabla_segmentos = tabla;
@@ -134,11 +134,11 @@ void recibir_tablas_segmentos(t_pcb* pcb) {
 
 	switch(paquete_respuesta->codigo_operacion) {
 	case NUEVA_TABLA:
-		t_tabla_segmentos* tabla = malloc(sizeof(t_tabla_segmentos));
+		t_tabla_segmentos tabla; // = malloc(sizeof(t_tabla_segmentos));
 
 		void* stream = paquete_respuesta->buffer->stream;
 
-		memcpy(&(tabla->pid), stream, sizeof(int));
+		memcpy(&(tabla.pid), stream, sizeof(int));
 		stream += sizeof(int);
 
 		int tam_segmentos;
@@ -147,7 +147,7 @@ void recibir_tablas_segmentos(t_pcb* pcb) {
 		memcpy(&tam_segmentos, stream, sizeof(int));
 		stream += sizeof(int);
 
-		tabla->segmentos = list_create();
+		tabla.segmentos = list_create();
 
 		for(int i = 0; i < tam_segmentos; i++) {
 			memcpy((&aux->id), stream, sizeof(int));
@@ -157,7 +157,7 @@ void recibir_tablas_segmentos(t_pcb* pcb) {
 			memcpy(&(aux->tamanio), stream, sizeof(int));
 			stream += sizeof(int);
 
-			list_add(tabla->segmentos, aux);
+			list_add(tabla.segmentos, aux);
 		}
 
 		pcb->tabla_segmentos = tabla;

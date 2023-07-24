@@ -19,7 +19,7 @@ void estado_ejecutar(void) {
 	 		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
 	 	}
 		
-		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
+		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb); //falta enviar los segmentos TODO
 		log_info(logger_kernel, "PID: <%d> enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
 		t_paquete* paquete = malloc(sizeof(t_paquete));
@@ -101,6 +101,31 @@ void estado_ejecutar(void) {
 		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rdx);
 
 		//--- FALTA DESERIALIZAR SEGMENTOS JAJSDJASJDAJSD SISI YA LOS DESERIALIZO
+		// 24/07/23 ME FUI DOMADISIMO Y TENGO QUE SERIALIZAR SEGMENTOS AL FINAL
+
+		int cant_segmentos;
+		memcpy(&cant_segmentos, stream, sizeof(int));
+		stream += sizeof(int);
+
+		//list_clean_and_destroy_elements(proceso_a_ejecutar->pcb->tabla_segmentos->segmentos, free);
+
+		for(int m = 0; m < cant_segmentos; m++) {
+			t_segmento* aux = malloc(sizeof(t_segmento));
+
+			memcpy(&(aux->base), stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&(aux->id), stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&(aux->tamanio), stream, sizeof(int));
+			stream += sizeof(int);
+
+			log_info(logger_kernel, "Segmento <%d>:", m);
+			log_info(logger_kernel, "Base <%d>", aux->base);
+			log_info(logger_kernel, "ID <%d>", aux->id);
+			log_info(logger_kernel, "Tamaño <%d>", aux->tamanio);
+
+			list_add(proceso_a_ejecutar->pcb->tabla_segmentos.segmentos, aux);
+		}
 
 		switch (respuesta_cpu) {
 		case IO: //TERMINADO
