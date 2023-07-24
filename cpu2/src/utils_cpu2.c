@@ -137,7 +137,7 @@ bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 }
 
 int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal, int fd_kernel) {
-	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	int tamanio_segmento =  config_get_int_value(config, "TAM_MAX_SEGMENTO");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
 	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
@@ -201,14 +201,15 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_lo
 
 char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int tamanio, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
 	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel);
-	int tamanio_segmento =  config_get_int_value(config, "TAM_SEGMENTO_0");
+	int tamanio_segmento =  config_get_int_value(config, "TAM_MAX_SEGMENTO");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
 
 	t_buffer* buffer = malloc(sizeof(t_buffer));
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
-	buffer->stream_size = sizeof(int);
+	buffer->stream_size = sizeof(int) //tamanio_a_leer
+			+ sizeof(int);			  //dirección_física
 
 	void* stream = malloc(buffer->stream_size);
 	int offset = 0;
@@ -217,6 +218,8 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 	offset += sizeof(int);
 	memcpy(stream + offset, &tamanio, sizeof(int));
 	offset += sizeof(int);
+
+	log_info(logger_principal, "Quiero leer en la dirección <%d> un total de <%d>", direccion_fisica, tamanio);
 
 	buffer->stream = stream;
 	paquete->codigo_operacion = LEER_DE_MEMORIA;
@@ -232,30 +235,31 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 	send(fd_memoria, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
-	free(stream);
-	free(buffer->stream);
-	free(paquete);
+	eliminar_paquete(paquete);
 
-	op_code respuesta_memoria;
-	int tamanio_respuesta;
+	t_paquete* paquete_respuesta = malloc(sizeof(t_paquete));
+	paquete_respuesta->buffer = malloc(sizeof(t_buffer));
 
-	recv(fd_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);
-	recv(fd_memoria, &tamanio_respuesta, sizeof(int), 0);
-	void* recibido = malloc(tamanio_respuesta);
-	recv(fd_memoria, recibido, tamanio_respuesta, 0);
+	recv(fd_memoria, &(paquete_respuesta->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+	recv(fd_memoria, &(paquete_respuesta->buffer->stream_size), sizeof(int), 0);
+	paquete_respuesta->buffer->stream = malloc(paquete_respuesta->buffer->stream_size);
+	recv(fd_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
 
 	char* valor;
-	switch(respuesta_memoria){
+
+	switch(paquete_respuesta->codigo_operacion) {
 		case LEIDO :
+			void* stream_respuesta = paquete_respuesta->buffer->stream;
 			int tamanio_valor_memoria;
-			memcpy(&tamanio_valor_memoria, recibido, sizeof(int));
-			recibido += sizeof(int);
+
+			memcpy(&tamanio_valor_memoria, stream_respuesta, sizeof(int));
+			stream_respuesta += sizeof(int);
 
 			valor = malloc(tamanio_valor_memoria);
 			memset(valor, 0, tamanio_valor_memoria);
 
-			memcpy(valor, recibido, tamanio_valor_memoria);
-			recibido += tamanio_valor_memoria;
+			memcpy(valor, stream_respuesta, tamanio_valor_memoria);
+			stream_respuesta += tamanio_valor_memoria;
 
 			break;
 		case NO_LEIDO :
@@ -265,6 +269,8 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 			printf("Operacion desconocida");
 			break;
 	}
+
+	eliminar_paquete(paquete_respuesta);
 
 	log_info(logger_principal, "PID: <%d> - Acción: <LEER> - Segmento: <%d> - Dirección Física: <%d> - Valor: <%s>", contexto->pid, numero_segmento, direccion_fisica, valor);
 
@@ -334,15 +340,19 @@ char* leer_de_memoria(int direccion_fisica, t_config* config, int fd_memoria, in
 	return valor;
 }
 int tamanio_registro(char* registro){
-	int tam;
-	if(strcmp(registro, "AX") || strcmp(registro, "BX") || strcmp(registro, "CX") ||strcmp(registro, "DX")){
+	int tam = 0;
+
+	if(strcmp(registro, "AX") == 0 || strcmp(registro, "BX") == 0 || strcmp(registro, "CX") == 0 ||strcmp(registro, "DX") == 0) {
 		tam = 5;
 	}
-	if(strcmp(registro, "EAX") || strcmp(registro, "EBX") || strcmp(registro, "ECX") ||strcmp(registro, "EDX")){
+
+	if(strcmp(registro, "EAX") == 0 || strcmp(registro, "EBX") == 0 || strcmp(registro, "ECX") == 0 ||strcmp(registro, "EDX") == 0) {
 		tam = 9;
 	}
-	if(strcmp(registro, "RAX") || strcmp(registro, "RBX") || strcmp(registro, "RCX") ||strcmp(registro, "RDX")){
+
+	if(strcmp(registro, "RAX") == 0 || strcmp(registro, "RBX") == 0 || strcmp(registro, "RCX") == 0 ||strcmp(registro, "RDX") == 0) {
 		tam = 17;
 	}
+
 	return tam;
 }
