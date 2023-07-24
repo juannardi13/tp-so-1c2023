@@ -166,30 +166,43 @@ void atender_CPU(int *cpu_fd){
 	int socket_cliente = *cpu_fd;
 
 	while(1){
-		int cod_op = recibir_operacion(socket_cliente);
+		//int cod_op = recibir_operacion(socket_cliente);
 
-		/*
+
 		t_paquete* paquete = malloc(sizeof(t_paquete));
 		paquete->buffer = malloc(sizeof(t_buffer));
 		recv(socket_cliente, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
 		recv(socket_cliente, &(paquete->buffer->stream_size), sizeof(int), 0);
 		paquete->buffer->stream = malloc(paquete->buffer->stream_size);
 		recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
-		*/
 
-		int direccion_fisica_buscada = malloc(sizeof(int));
-		int tamanio_valor = malloc(sizeof(int));
-		char* valor_a_asignar = malloc(tamanio_valor);
+		void* stream = paquete->buffer->stream;
 
-		switch(cod_op){
+		switch(paquete->codigo_operacion){
 		case LEER_DE_MEMORIA :
-			recv_leer_de_memoria(socket_cliente);
+			//recv_leer_de_memoria(socket_cliente);
+			int direccion_fisica_a_leer;
+			int tamanio_valor_a_leer;
+
+			memcpy(&direccion_fisica_a_leer, stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&tamanio_valor_a_leer, stream, sizeof(int));
+			stream += sizeof(int);
+
+			log_info(logger, "CPU quiere leer en la dirección <%d> un tamaño de <%d>", direccion_fisica_a_leer, tamanio_valor_a_leer);
+
+			//TODO acá van las operaciones para obtener el valor de la dirección física.
+
+			//Esto de acá es simplemente para probarlo
+			char* valor = malloc(tamanio_valor_a_leer);
+
+			enviar_string_por(LEIDO, valor, socket_cliente);
 			break;
-
-
 		case ESCRIBIR_EN_MEMORIA :
 			recv_escribir_en_memoria(socket_cliente);
 			break;
+		default:
+			log_error(logger, "[ERROR] Operación desconocida, arreglate hermano.");
 		}
 	}
 }
@@ -206,7 +219,7 @@ void recv_leer_de_memoria(int socket_cliente){
 	int direccion_fisica = deserializar_int(buffer, &offset);
 	int tamanio = deserializar_int(buffer, &offset);
 
-	buscar_valor_enviar_CPU(direccion_fisica, tamanio, socket_cliente);
+	//buscar_valor_enviar_CPU(direccion_fisica, tamanio, socket_cliente);
 	log_info(logger, "Se busca el valor de la direccion fisica: %d", direccion_fisica);
 
 	free(buffer);
@@ -222,8 +235,8 @@ void recv_escribir_en_memoria(int socket_cliente){
 	int tamanio = deserializar_int(buffer, &offset);
 	char* valor = deserializar_string(tamanio, buffer, &offset);
 
-	escribir_valor_en_direccion_fisica(direccion_fisica, tamanio, valor);
-	log_info(logger, "Se escribe el valor de la direccion fisica: %d", direccion_fisica);
+	log_info(logger, "Se escribe el valor <%s> de tamaño <%d> en la direccion fisica: %d", valor, tamanio, direccion_fisica);
+//	escribir_valor_en_direccion_fisica(direccion_fisica, tamanio, valor);
 
 	free(buffer);
 }
@@ -276,3 +289,43 @@ void escribir_valor_en_direccion_fisica(int direccion_fisica, int tamanio_valor,
 void msleep(int tiempo_microsegundos) {
 	usleep(tiempo_microsegundos * 1000);
 }*/
+
+int agregar_a_stream(void *stream, int* offset, void *src, int size) {
+	memcpy(stream + *offset, src, size);
+	*offset += size;
+}
+
+void enviar_string_por(op_code codigo_operacion, char* valor, int socket) {
+	int tamanio_string = strlen(valor) + 1;
+
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+
+	buffer->stream_size = sizeof(int)
+			+ tamanio_string;
+
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, &tamanio_string, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, valor, tamanio_string);
+	offset += tamanio_string;
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = LEIDO;
+	paquete->buffer = buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(socket, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
+	eliminar_paquete(paquete);
+}

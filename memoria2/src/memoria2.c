@@ -6,15 +6,16 @@ int main(void) {
 
 	logger = log_create("memoria.log", "MEMORIA", 1, LOG_LEVEL_INFO);
 
-	int memoria_fd = iniciar_servidor(config_memoria.puerto_escucha);
-	log_info(logger, "Servidor Memoria iniciado, esperando conexiones entrantes");
-
-	esperar_conexiones(memoria_fd); // 1-FileSystem 2-CPU 3-Kernel
-
 	iniciar_memoria(); // se reserva memoria y crea el bitmap para huecos libres
 	log_info(logger, "Se inicializaron las estructuras de Memoria");
 
-	pthread_join(hilos[0], NULL); // Memoria termina cuando terminan los hilos
+	int memoria_fd = iniciar_servidor(config_memoria.puerto_escucha);
+	log_info(logger, "Servidor Memoria iniciado, esperando conexiones entrantes");
+
+	while(esperar_conexiones(memoria_fd));
+	//esperar_conexiones(memoria_fd); // 1-FileSystem 2-CPU 3-Kernel
+
+	//pthread_join(hilos[0], NULL); // Memoria termina cuando terminan los hilos
 
 	int cont = 0, desp = 0;
 	while (desp < config_memoria.tam_memoria) {
@@ -33,7 +34,7 @@ int main(void) {
 
 void inicializar_config(void) {
 
-	config = config_create("memoria.config");
+	config = config_create("./cfg/memoria.config");
 
 	if (config == NULL) {
 		perror("No se encontró el path de la config");
@@ -51,22 +52,87 @@ void inicializar_config(void) {
 	// config_destroy(config);
 }
 
-void esperar_conexiones(int socket_servidor) {
+int esperar_conexiones(int socket_servidor) {
 
-	conexiones[0] = malloc(sizeof(int));
-	*conexiones[0] = accept(socket_servidor, NULL, NULL); // esperar_cliente(socket_servidor);
-	pthread_create(&hilos[0], NULL, (void *) atender_File_System, conexiones[0]);
-	log_info(logger, "Se conectó el File System!");
+//	conexiones[0] = malloc(sizeof(int));
+//	*conexiones[0] = accept(socket_servidor, NULL, NULL); // esperar_cliente(socket_servidor);
+//	pthread_create(&hilos[0], NULL, (void *) atender_File_System, conexiones[0]);
+//	log_info(logger, "Se conectó el File System!");
 
-//	conexiones[1] = malloc(sizeof(int));
-//	*conexiones[1] = esperar_cliente(socket_servidor);
-//	pthread_create(&hilos[1], NULL, (void *) atender_File_System, (void *) *conexiones[1]);
+//	pthread_t hilo_cpu;
+//	pthread_t hilo_kernel;
+//
+//	int*socket_cpu = malloc(sizeof(int));
+//	*socket_cpu = accept(socket_servidor, NULL, NULL);
+//	pthread_create(&hilo_cpu, NULL, (void*) atender_CPU, socket_cpu);
 //	log_info(logger, "Se conectó la CPU!");
 //
-//	conexiones[2] = malloc(sizeof(int));
-//	*conexiones[2] = esperar_cliente(socket_servidor);
-//	pthread_create(&hilos[2], NULL, (void *) atender_File_System, (void *) *conexiones[2]);
+//	int*socket_kernel = malloc(sizeof(int));
+//	*socket_kernel = accept(socket_servidor, NULL, NULL);
+//	pthread_create(&hilo_kernel, NULL, (void *) atender_kernel, socket_kernel);
 //	log_info(logger, "Se conectó el Kernel!");
+//
+//	pthread_detach(hilo_kernel);
+//	pthread_detach(hilo_cpu);
+
+	//TODO DESPUÉS VEMOS BIEN ESTO
+	int* socket_cliente = malloc(sizeof(int));//esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
+		*socket_cliente = accept(socket_servidor, NULL, NULL);
+
+			//if(socket_cliente != -1) {
+				pthread_t hilo_cliente;
+				//manejar_conexion(socket_cliente);
+				pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
+				pthread_detach(hilo_cliente);
+
+				return 1;
+
+}
+
+void manejar_conexion(int* fd_cliente) {
+	int socket_cliente = *fd_cliente;
+
+	while(1) {
+		t_paquete* paquete = malloc(sizeof(t_paquete));
+		paquete->buffer = malloc(sizeof(t_buffer));
+		recv(socket_cliente, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+		recv(socket_cliente, &(paquete->buffer->stream_size), sizeof(int), 0);
+		paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+		recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+		void* stream = paquete->buffer->stream;
+
+		switch(paquete->codigo_operacion) {
+		case LEER_DE_MEMORIA :
+			//recv_leer_de_memoria(socket_cliente);
+			void* stream = paquete->buffer->stream;
+
+			int tamanio_valor;
+			int direccion_fisica_buscada;
+
+			memcpy(&direccion_fisica_buscada, stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&tamanio_valor, stream, sizeof(int));
+			stream += sizeof(int);
+
+			log_info(logger, "CPU quiere leer en la dirección <%d> un tamaño de <%d>", direccion_fisica_buscada, tamanio_valor);
+
+
+			//TODO acá van las operaciones para obtener el valor de la dirección física.
+
+			//Esto de acá es simplemente para probarlo
+			char* valor = malloc(tamanio_valor);
+			valor = "HOLA";
+
+			enviar_string_por(LEIDO, valor, socket_cliente);
+			break;
+
+
+		case ESCRIBIR_EN_MEMORIA :
+			recv_escribir_en_memoria(socket_cliente);
+			break;
+		}
+	}
 }
 
 void terminar_memoria(void) {
