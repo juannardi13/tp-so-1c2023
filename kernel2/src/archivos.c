@@ -151,7 +151,7 @@ op_code consultar_existencia_archivo_a_fs(char* nombre) {
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
 	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
 
-	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int));
+	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
 	free(stream);
@@ -208,7 +208,7 @@ void crear_archivo_en_fs(char* nombre) {
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
 	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
 
-	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int));
+	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
 	free(a_enviar);
 	free(stream);
