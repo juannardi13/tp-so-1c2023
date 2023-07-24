@@ -17,7 +17,7 @@ void send_tablas(int);
 void recv_leer_de_memoria(int);
 void recv_escribir_en_memoria(int);
 void buscar_valor_enviar_CPU(int, int, int);
-void escribir_valor_en_direccion_fisica(int, int, char*);
+void escribir_valor_en_direccion_fisica(int, int, int, char*);
 int agregar_a_stream(void*, int*, void*, int);
 void enviar_string_por(op_code, char*, int);
 

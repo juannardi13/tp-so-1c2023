@@ -156,6 +156,29 @@ void manejar_conexion(int* fd_cliente) {
 			recv_nuevo_proceso(pid_a_inicializar, socket_cliente); //Modifiqué esta función para que ande bien.
 
 			break;
+
+		case INICIAR_PROCESO:
+			int pid_a_inicializar;
+
+			memcpy(&pid_a_inicializar, stream, sizeof(int));
+			stream += sizeof(int);
+
+			recv_nuevo_proceso(pid_a_inicializar, socket_cliente);
+			break;
+
+		case CREATE_SEGMENT:
+			recv_crear_segmento(socket_cliente);
+			break;
+
+		case DELETE_SEGMENT:
+			recv_eliminar_segmento(socket_cliente);
+			break;
+
+		case COMPACTAR:
+			log_info(logger, "Inicia compactación");
+			compactar(socket_cliente);
+			break;
+			//FALTA FILE SYSTEM QUE SERIA LO MISMO QUE CPU... DEBATIR
 		default:
 			log_error(logger, "[ERROR] Operación desconocida.");
 			abort();
@@ -167,7 +190,7 @@ void terminar_memoria(void) {
 
 	config_destroy(config);
 	log_destroy(logger);
-	free(conexiones[0]);
+	free(conexiones[0]);//No iria mas si hacemos lo que juani dijo del case
 	list_destroy_and_destroy_elements(tablas_segmentos, (void *) destructor_lista_tablas);
 	free(segmento_0);
 	destruir_bitmap();

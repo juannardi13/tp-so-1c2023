@@ -322,7 +322,7 @@ void buscar_valor_enviar_CPU(int direccion_fisica_buscada, int tamanio, int sock
 
 
 
-void escribir_valor_en_direccion_fisica(int direccion_fisica, int tamanio_valor, char* valor){
+void escribir_valor_en_direccion_fisica(int socket_cliente, int direccion_fisica, int tamanio_valor, char* valor){
 
 	log_info(logger, "Dirección física: %d", direccion_fisica);
 	log_info(logger, "Valor Registro: %s", valor);
@@ -337,6 +337,7 @@ void escribir_valor_en_direccion_fisica(int direccion_fisica, int tamanio_valor,
 
 	free(aux);
 	free(valor);
+	send_op(socket_cliente, OK_VALOR_ESCRITO); // agregar en CPU esto de recibir el cod_op
 	log_info(logger, "OK, se escribio el valor en memoria");
 }
 

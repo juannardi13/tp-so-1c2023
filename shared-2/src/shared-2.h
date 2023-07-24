@@ -74,7 +74,8 @@ typedef enum
 	INICIAR_PROCESO,
 	EXISTE,
 	NO_EXISTE,
-	CREAR_ARCHIVO
+	CREAR_ARCHIVO,
+	OK_VALOR_ESCRITO
 }op_code;
 
 typedef struct

@@ -86,7 +86,7 @@ int base_segun_best(t_list *huecos, int size) {
 
 t_segmento *cmp_hueco_menor(t_segmento *hueco1, t_segmento *hueco2) {
 
-	return hueco1->base < hueco2->base ? hueco1 : hueco2;
+	return hueco1->tamanio < hueco2->tamanio ? hueco1 : hueco2;
 }
 
 int base_segun_worst(t_list *huecos, int size) {
@@ -98,7 +98,7 @@ int base_segun_worst(t_list *huecos, int size) {
 
 t_segmento *cmp_hueco_mayor(t_segmento *hueco1, t_segmento *hueco2) {
 
-	return hueco1->base > hueco2->base ? hueco1 : hueco2;
+	return hueco1->tamanio > hueco2->tamanio ? hueco1 : hueco2;
 }
 
 void dinamitar_listas(t_list *todos_los_huecos, t_list *algunos_huecos) {
