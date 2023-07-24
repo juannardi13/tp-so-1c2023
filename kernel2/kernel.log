@@ -3054,3 +3054,284 @@
 [INFO] 02:29:56:542 kernel.log/(4112:4121): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
 [INFO] 02:29:56:542 kernel.log/(4112:4121): Finaliza el proceso <1000> - Motivo: <SUCCESS>
 [INFO] 02:29:56:542 kernel.log/(4112:4117): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 18:17:27:980 kernel.log/(7139:7139): Se crea el diccionario con los recursos.
+[INFO] 18:17:27:980 kernel.log/(7139:7139): Se agrego el recurso DISCO al diccionario
+[INFO] 18:17:27:980 kernel.log/(7139:7139): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:17:27:981 kernel.log/(7139:7139): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:17:50:307 kernel.log/(7139:7162): Se crea el proceso <1000> en NEW
+[INFO] 18:17:50:307 kernel.log/(7139:7162): Cola NEW: 
+[INFO] 18:17:50:307 kernel.log/(7139:7162): PID: <1000>
+[INFO] 18:17:50:307 kernel.log/(7139:7151): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:17:50:307 kernel.log/(7139:7151): Cola Ready <FIFO>:
+[INFO] 18:17:50:307 kernel.log/(7139:7151): PID: <1000>
+[INFO] 18:17:50:307 kernel.log/(7139:7147): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:17:50:307 kernel.log/(7139:7147): PID: <1000> ingresa a EXECUTE
+[INFO] 18:17:50:307 kernel.log/(7139:7147): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:17:50:308 kernel.log/(7139:7149): PID: <1000> enviada a CPU
+[INFO] 18:20:05:526 kernel.log/(7139:7149): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:20:05:526 kernel.log/(7139:7149): 0000
+[INFO] 18:20:05:526 kernel.log/(7139:7149): 0000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 0000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 0000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 00000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 00000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 00000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 00000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 0000000000000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 0000000000000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 0000000000000000
+[INFO] 18:20:05:527 kernel.log/(7139:7149): 0000000000000000
+[INFO] 18:21:37:636 kernel.log/(7578:7578): Se crea el diccionario con los recursos.
+[INFO] 18:21:37:636 kernel.log/(7578:7578): Se agrego el recurso DISCO al diccionario
+[INFO] 18:21:37:636 kernel.log/(7578:7578): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:21:40:070 kernel.log/(7578:7578): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:22:05:225 kernel.log/(7578:7622): Se crea el proceso <1000> en NEW
+[INFO] 18:22:05:225 kernel.log/(7578:7622): Cola NEW: 
+[INFO] 18:22:05:225 kernel.log/(7578:7622): PID: <1000>
+[INFO] 18:22:17:596 kernel.log/(7578:7599): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:22:19:135 kernel.log/(7578:7599): Cola Ready <FIFO>:
+[INFO] 18:22:19:545 kernel.log/(7578:7599): PID: <1000>
+[INFO] 18:22:30:400 kernel.log/(7578:7595): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:22:30:400 kernel.log/(7578:7595): PID: <1000> ingresa a EXECUTE
+[INFO] 18:22:30:400 kernel.log/(7578:7595): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:22:30:400 kernel.log/(7578:7597): PID: <1000> enviada a CPU
+[INFO] 18:22:30:400 kernel.log/(7578:7597): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:22:30:400 kernel.log/(7578:7597): 0000
+[INFO] 18:22:30:400 kernel.log/(7578:7597): 0000
+[INFO] 18:22:30:400 kernel.log/(7578:7597): 0000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 0000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 00000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 00000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 00000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 00000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 0000000000000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 0000000000000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 0000000000000000
+[INFO] 18:22:30:401 kernel.log/(7578:7597): 0000000000000000
+[INFO] 18:25:38:318 kernel.log/(7753:7753): Se crea el diccionario con los recursos.
+[INFO] 18:25:38:318 kernel.log/(7753:7753): Se agrego el recurso DISCO al diccionario
+[INFO] 18:25:38:318 kernel.log/(7753:7753): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:25:39:325 kernel.log/(7753:7753): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:25:53:275 kernel.log/(7753:7796): Se crea el proceso <1000> en NEW
+[INFO] 18:25:53:275 kernel.log/(7753:7796): Cola NEW: 
+[INFO] 18:25:53:275 kernel.log/(7753:7796): PID: <1000>
+[INFO] 18:26:01:563 kernel.log/(7753:7774): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:26:01:912 kernel.log/(7753:7774): Cola Ready <FIFO>:
+[INFO] 18:26:02:282 kernel.log/(7753:7774): PID: <1000>
+[INFO] 18:26:14:999 kernel.log/(7753:7770): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:26:16:705 kernel.log/(7753:7770): PID: <1000> ingresa a EXECUTE
+[INFO] 18:26:18:639 kernel.log/(7753:7770): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:26:39:830 kernel.log/(7753:7772): PID: <1000> enviada a CPU
+[INFO] 18:26:51:321 kernel.log/(7753:7772): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:26:51:418 kernel.log/(7753:7772): 0000
+[INFO] 18:26:51:524 kernel.log/(7753:7772): 0000
+[INFO] 18:26:51:623 kernel.log/(7753:7772): 0000
+[INFO] 18:26:51:723 kernel.log/(7753:7772): 0000
+[INFO] 18:26:51:828 kernel.log/(7753:7772): 00000000
+[INFO] 18:26:51:977 kernel.log/(7753:7772): 00000000
+[INFO] 18:26:52:078 kernel.log/(7753:7772): 00000000
+[INFO] 18:26:52:180 kernel.log/(7753:7772): 00000000
+[INFO] 18:26:52:280 kernel.log/(7753:7772): 0000000000000000
+[INFO] 18:26:52:761 kernel.log/(7753:7772): 0000000000000000
+[INFO] 18:26:53:055 kernel.log/(7753:7772): 0000000000000000
+[INFO] 18:26:53:719 kernel.log/(7753:7772): 0000000000000000
+[INFO] 18:27:06:692 kernel.log/(7753:7772): Segmento <0>:
+[INFO] 18:27:07:160 kernel.log/(7753:7772): Base <0>
+[INFO] 18:27:07:538 kernel.log/(7753:7772): ID <0>
+[INFO] 18:27:08:296 kernel.log/(7753:7772): Tamaño <128>
+[INFO] 18:31:56:753 kernel.log/(8197:8197): Se crea el diccionario con los recursos.
+[INFO] 18:31:56:753 kernel.log/(8197:8197): Se agrego el recurso DISCO al diccionario
+[INFO] 18:31:56:753 kernel.log/(8197:8197): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:31:57:898 kernel.log/(8197:8197): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:37:42:114 kernel.log/(8721:8721): Se crea el diccionario con los recursos.
+[INFO] 18:37:42:114 kernel.log/(8721:8721): Se agrego el recurso DISCO al diccionario
+[INFO] 18:37:42:114 kernel.log/(8721:8721): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:37:44:381 kernel.log/(8721:8721): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:38:09:050 kernel.log/(8721:8763): Se crea el proceso <1000> en NEW
+[INFO] 18:38:09:050 kernel.log/(8721:8763): Cola NEW: 
+[INFO] 18:38:09:050 kernel.log/(8721:8763): PID: <1000>
+[INFO] 18:38:52:100 kernel.log/(8721:8740): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:38:52:496 kernel.log/(8721:8740): Cola Ready <FIFO>:
+[INFO] 18:38:52:900 kernel.log/(8721:8740): PID: <1000>
+[INFO] 18:39:06:167 kernel.log/(8721:8736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:39:08:138 kernel.log/(8721:8736): PID: <1000> ingresa a EXECUTE
+[INFO] 18:39:08:614 kernel.log/(8721:8736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:39:38:426 kernel.log/(8721:8738): PID: <1000> enviada a CPU
+[INFO] 18:39:45:448 kernel.log/(8721:8738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:39:45:548 kernel.log/(8721:8738): 0000
+[INFO] 18:39:45:648 kernel.log/(8721:8738): 0000
+[INFO] 18:39:45:750 kernel.log/(8721:8738): 0000
+[INFO] 18:39:45:850 kernel.log/(8721:8738): 0000
+[INFO] 18:39:45:951 kernel.log/(8721:8738): 00000000
+[INFO] 18:39:46:056 kernel.log/(8721:8738): 00000000
+[INFO] 18:39:46:159 kernel.log/(8721:8738): 00000000
+[INFO] 18:39:46:262 kernel.log/(8721:8738): 00000000
+[INFO] 18:39:46:362 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:39:46:820 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:39:47:094 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:39:47:582 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:40:00:211 kernel.log/(8721:8738): Segmento <0>:
+[INFO] 18:40:00:737 kernel.log/(8721:8738): Base <0>
+[INFO] 18:40:01:321 kernel.log/(8721:8738): ID <0>
+[INFO] 18:40:01:996 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:40:12:631 kernel.log/(8721:8738): Segmento <1>:
+[INFO] 18:40:12:784 kernel.log/(8721:8738): Base <129>
+[INFO] 18:40:12:936 kernel.log/(8721:8738): ID <1>
+[INFO] 18:40:13:088 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:40:15:998 kernel.log/(8721:8738): Segmento <2>:
+[INFO] 18:40:16:499 kernel.log/(8721:8738): Base <300>
+[INFO] 18:40:16:708 kernel.log/(8721:8738): ID <2>
+[INFO] 18:40:16:944 kernel.log/(8721:8738): Tamaño <128>
+[WARNING] 18:40:22:569 kernel.log/(8721:8738): La última instrucción ejecutada fue YIELD
+[INFO] 18:40:25:584 kernel.log/(8721:8736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:40:25:584 kernel.log/(8721:8736): PID: <1000> ingresa a EXECUTE
+[INFO] 18:40:25:584 kernel.log/(8721:8736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:40:34:091 kernel.log/(8721:8738): PID: <1000> enviada a CPU
+[INFO] 18:40:44:886 kernel.log/(8721:8738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:40:45:107 kernel.log/(8721:8738): 0000
+[INFO] 18:40:45:362 kernel.log/(8721:8738): 0000
+[INFO] 18:40:45:776 kernel.log/(8721:8738): 0000
+[INFO] 18:40:46:041 kernel.log/(8721:8738): 0000
+[INFO] 18:40:46:303 kernel.log/(8721:8738): 00000000
+[INFO] 18:40:46:556 kernel.log/(8721:8738): 00000000
+[INFO] 18:40:46:757 kernel.log/(8721:8738): 00000000
+[INFO] 18:40:46:998 kernel.log/(8721:8738): 00000000
+[INFO] 18:40:47:320 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:40:47:512 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:40:47:773 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:40:48:036 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:40:52:416 kernel.log/(8721:8738): Segmento <0>:
+[INFO] 18:40:52:683 kernel.log/(8721:8738): Base <0>
+[INFO] 18:40:52:921 kernel.log/(8721:8738): ID <0>
+[INFO] 18:40:53:214 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:40:55:375 kernel.log/(8721:8738): Segmento <1>:
+[INFO] 18:40:55:480 kernel.log/(8721:8738): Base <129>
+[INFO] 18:40:55:576 kernel.log/(8721:8738): ID <1>
+[INFO] 18:40:55:677 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:40:56:705 kernel.log/(8721:8738): Segmento <2>:
+[INFO] 18:40:56:806 kernel.log/(8721:8738): Base <300>
+[INFO] 18:40:56:906 kernel.log/(8721:8738): ID <2>
+[INFO] 18:40:57:006 kernel.log/(8721:8738): Tamaño <128>
+[WARNING] 18:40:57:930 kernel.log/(8721:8738): La última instrucción ejecutada fue YIELD
+[INFO] 18:40:58:538 kernel.log/(8721:8736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:40:58:538 kernel.log/(8721:8736): PID: <1000> ingresa a EXECUTE
+[INFO] 18:40:58:538 kernel.log/(8721:8736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:40:59:867 kernel.log/(8721:8738): PID: <1000> enviada a CPU
+[INFO] 18:41:04:817 kernel.log/(8721:8738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:41:04:921 kernel.log/(8721:8738): 0000
+[INFO] 18:41:05:021 kernel.log/(8721:8738): 0000
+[INFO] 18:41:05:122 kernel.log/(8721:8738): 0000
+[INFO] 18:41:05:223 kernel.log/(8721:8738): 0000
+[INFO] 18:41:05:324 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:05:429 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:05:532 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:05:640 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:05:741 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:05:843 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:05:944 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:06:048 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:08:204 kernel.log/(8721:8738): Segmento <0>:
+[INFO] 18:41:08:304 kernel.log/(8721:8738): Base <0>
+[INFO] 18:41:08:405 kernel.log/(8721:8738): ID <0>
+[INFO] 18:41:08:869 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:41:10:696 kernel.log/(8721:8738): Segmento <1>:
+[INFO] 18:41:10:794 kernel.log/(8721:8738): Base <129>
+[INFO] 18:41:10:896 kernel.log/(8721:8738): ID <1>
+[INFO] 18:41:10:997 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:41:12:013 kernel.log/(8721:8738): Segmento <2>:
+[INFO] 18:41:12:114 kernel.log/(8721:8738): Base <300>
+[INFO] 18:41:12:220 kernel.log/(8721:8738): ID <2>
+[INFO] 18:41:12:321 kernel.log/(8721:8738): Tamaño <128>
+[WARNING] 18:41:15:652 kernel.log/(8721:8738): La última instrucción ejecutada fue YIELD
+[INFO] 18:41:24:479 kernel.log/(8721:8736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:41:24:479 kernel.log/(8721:8736): PID: <1000> ingresa a EXECUTE
+[INFO] 18:41:24:479 kernel.log/(8721:8736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:41:30:735 kernel.log/(8721:8738): PID: <1000> enviada a CPU
+[INFO] 18:41:36:419 kernel.log/(8721:8738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:41:36:520 kernel.log/(8721:8738): 0000
+[INFO] 18:41:36:626 kernel.log/(8721:8738): 0000
+[INFO] 18:41:36:727 kernel.log/(8721:8738): 0000
+[INFO] 18:41:36:829 kernel.log/(8721:8738): 0000
+[INFO] 18:41:36:933 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:37:032 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:37:135 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:37:238 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:37:340 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:37:442 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:37:547 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:37:654 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:38:781 kernel.log/(8721:8738): Segmento <0>:
+[INFO] 18:41:38:885 kernel.log/(8721:8738): Base <0>
+[INFO] 18:41:38:988 kernel.log/(8721:8738): ID <0>
+[INFO] 18:41:39:089 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:41:40:106 kernel.log/(8721:8738): Segmento <1>:
+[INFO] 18:41:40:206 kernel.log/(8721:8738): Base <129>
+[INFO] 18:41:40:365 kernel.log/(8721:8738): ID <1>
+[INFO] 18:41:40:460 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:41:41:551 kernel.log/(8721:8738): Segmento <2>:
+[INFO] 18:41:41:656 kernel.log/(8721:8738): Base <300>
+[INFO] 18:41:41:757 kernel.log/(8721:8738): ID <2>
+[INFO] 18:41:41:861 kernel.log/(8721:8738): Tamaño <128>
+[WARNING] 18:41:43:925 kernel.log/(8721:8738): La última instrucción ejecutada fue YIELD
+[INFO] 18:41:44:631 kernel.log/(8721:8736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:41:44:631 kernel.log/(8721:8736): PID: <1000> ingresa a EXECUTE
+[INFO] 18:41:44:631 kernel.log/(8721:8736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:41:45:985 kernel.log/(8721:8738): PID: <1000> enviada a CPU
+[INFO] 18:41:51:034 kernel.log/(8721:8738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:41:51:138 kernel.log/(8721:8738): 0000
+[INFO] 18:41:51:239 kernel.log/(8721:8738): 0000
+[INFO] 18:41:51:339 kernel.log/(8721:8738): 0000
+[INFO] 18:41:51:495 kernel.log/(8721:8738): 0000
+[INFO] 18:41:51:591 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:51:693 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:51:795 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:51:898 kernel.log/(8721:8738): 00000000
+[INFO] 18:41:52:000 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:52:101 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:52:206 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:52:307 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:41:53:428 kernel.log/(8721:8738): Segmento <0>:
+[INFO] 18:41:53:532 kernel.log/(8721:8738): Base <0>
+[INFO] 18:41:53:637 kernel.log/(8721:8738): ID <0>
+[INFO] 18:41:53:737 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:41:57:233 kernel.log/(8721:8738): Segmento <1>:
+[INFO] 18:41:57:333 kernel.log/(8721:8738): Base <129>
+[INFO] 18:41:57:435 kernel.log/(8721:8738): ID <1>
+[INFO] 18:41:57:536 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:41:58:554 kernel.log/(8721:8738): Segmento <2>:
+[INFO] 18:41:58:655 kernel.log/(8721:8738): Base <300>
+[INFO] 18:41:58:759 kernel.log/(8721:8738): ID <2>
+[INFO] 18:41:58:862 kernel.log/(8721:8738): Tamaño <128>
+[WARNING] 18:42:00:540 kernel.log/(8721:8738): La última instrucción ejecutada fue YIELD
+[INFO] 18:42:01:518 kernel.log/(8721:8736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:42:01:518 kernel.log/(8721:8736): PID: <1000> ingresa a EXECUTE
+[INFO] 18:42:01:518 kernel.log/(8721:8736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 18:42:03:631 kernel.log/(8721:8738): PID: <1000> enviada a CPU
+[INFO] 18:42:12:488 kernel.log/(8721:8738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 18:42:12:588 kernel.log/(8721:8738): 0000
+[INFO] 18:42:12:690 kernel.log/(8721:8738): 0000
+[INFO] 18:42:12:791 kernel.log/(8721:8738): 0000
+[INFO] 18:42:12:896 kernel.log/(8721:8738): 0000
+[INFO] 18:42:13:000 kernel.log/(8721:8738): 00000000
+[INFO] 18:42:13:100 kernel.log/(8721:8738): 00000000
+[INFO] 18:42:13:200 kernel.log/(8721:8738): 00000000
+[INFO] 18:42:13:302 kernel.log/(8721:8738): 00000000
+[INFO] 18:42:13:402 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:42:13:507 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:42:13:609 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:42:13:711 kernel.log/(8721:8738): 0000000000000000
+[INFO] 18:42:15:826 kernel.log/(8721:8738): Segmento <0>:
+[INFO] 18:42:16:207 kernel.log/(8721:8738): Base <0>
+[INFO] 18:42:16:470 kernel.log/(8721:8738): ID <0>
+[INFO] 18:42:16:661 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:42:18:490 kernel.log/(8721:8738): Segmento <1>:
+[INFO] 18:42:18:592 kernel.log/(8721:8738): Base <129>
+[INFO] 18:42:18:696 kernel.log/(8721:8738): ID <1>
+[INFO] 18:42:18:799 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:42:19:822 kernel.log/(8721:8738): Segmento <2>:
+[INFO] 18:42:19:921 kernel.log/(8721:8738): Base <300>
+[INFO] 18:42:20:021 kernel.log/(8721:8738): ID <2>
+[INFO] 18:42:20:123 kernel.log/(8721:8738): Tamaño <128>
+[INFO] 18:42:24:055 kernel.log/(8721:8738): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 18:42:24:292 kernel.log/(8721:8738): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 18:42:24:617 kernel.log/(8721:8732): Ordenando a Consola la finalización del PID: <1000>

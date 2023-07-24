@@ -384,3 +384,12 @@
 [INFO] 02:29:44:441 cpu_principal.log/(4067:4067): Quiero leer en la dirección <141> un total de <5>
 [INFO] 02:29:44:441 cpu_principal.log/(4067:4067): PID: <1000> - Acción: <LEER> - Segmento: <1> - Dirección Física: <141> - Valor: <HOLA>
 [INFO] 02:29:56:098 cpu_principal.log/(4067:4067): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 18:18:40:959 cpu_principal.log/(7094:7094): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:22:30:400 cpu_principal.log/(7546:7546): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:26:39:473 cpu_principal.log/(7721:7721): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:39:36:257 cpu_principal.log/(8689:8689): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:40:32:960 cpu_principal.log/(8689:8689): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:40:59:766 cpu_principal.log/(8689:8689): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:41:30:387 cpu_principal.log/(8689:8689): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:41:45:883 cpu_principal.log/(8689:8689): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:42:03:530 cpu_principal.log/(8689:8689): PID: <1000> - Ejecutando: <EXIT>
