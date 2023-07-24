@@ -16,3 +16,49 @@
 [INFO] 14:39:15:187 memoria.log/(4252:4252): Memoria inicializada, esperando a recibir al Kernel en el PUERTO 7294.
 [INFO] 16:06:33:456 memoria.log/(9500:9500): Se inicializa el módulo Memoria
 [INFO] 16:06:33:459 memoria.log/(9500:9500): PUERTO ESCUCHA DE KERNEL: 7294
+[INFO] 20:12:33:091 MEMORIA/(129321:129321): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:18:20:447 MEMORIA/(129526:129526): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:20:08:774 MEMORIA/(129624:129624): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:23:19:135 MEMORIA/(129696:129696): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:27:03:814 MEMORIA/(129795:129795): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:27:37:484 MEMORIA/(129795:129795): Se conectó la CPU!
+[INFO] 20:27:37:484 MEMORIA/(129795:129795): Se inicializaron las estructuras de Memoria
+[INFO] 20:35:50:631 MEMORIA/(130278:130278): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:37:07:531 MEMORIA/(130278:130278): Se conectó la CPU!
+[INFO] 20:37:07:531 MEMORIA/(130278:130278): Se inicializaron las estructuras de Memoria
+[INFO] 20:41:35:221 MEMORIA/(130499:130499): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:43:15:764 MEMORIA/(130499:130499): Se conectó la CPU!
+[INFO] 20:46:56:097 MEMORIA/(130754:130754): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:47:21:451 MEMORIA/(130754:130754): Se conectó la CPU!
+[INFO] 20:48:28:014 MEMORIA/(130834:130834): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:49:32:589 MEMORIA/(130865:130865): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:49:47:447 MEMORIA/(130865:130865): Se conectó la CPU!
+[INFO] 20:51:51:295 MEMORIA/(130964:130964): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:52:05:078 MEMORIA/(130964:130964): Se conectó la CPU!
+[INFO] 20:52:18:689 MEMORIA/(130964:130964): Se conectó el Kernel!
+[INFO] 20:52:24:559 MEMORIA/(130964:130964): Se inicializaron las estructuras de Memoria
+[INFO] 20:53:55:859 MEMORIA/(131056:131056): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:54:02:116 MEMORIA/(131056:131056): Se conectó la CPU!
+[INFO] 20:54:24:447 MEMORIA/(131056:131056): Se conectó el Kernel!
+[INFO] 20:54:24:447 MEMORIA/(131056:131056): Se inicializaron las estructuras de Memoria
+[INFO] 20:58:58:319 MEMORIA/(131335:131335): Se inicializaron las estructuras de Memoria
+[INFO] 20:58:58:911 MEMORIA/(131335:131335): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 20:59:17:739 MEMORIA/(131335:131335): Se conectó la CPU!
+[INFO] 20:59:41:375 MEMORIA/(131335:131335): Se conectó el Kernel!
+[INFO] 21:28:28:155 MEMORIA/(132120:132120): Se inicializaron las estructuras de Memoria
+[INFO] 21:28:28:864 MEMORIA/(132120:132120): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 21:29:20:519 MEMORIA/(132120:132156): CPU quiere leer en la dirección <100> un tamaño de <0>
+[INFO] 23:09:58:787 MEMORIA/(2096:2096): Se inicializaron las estructuras de Memoria
+[INFO] 23:09:58:790 MEMORIA/(2096:2096): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 23:13:19:968 MEMORIA/(2096:2226): CPU quiere leer en la dirección <100> un tamaño de <0>
+[INFO] 23:42:17:467 MEMORIA/(2825:2825): Se inicializaron las estructuras de Memoria
+[INFO] 23:42:17:467 MEMORIA/(2825:2825): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 23:44:34:703 MEMORIA/(2825:2889): CPU quiere leer en la dirección <100> un tamaño de <0>
+[INFO] 23:48:11:086 MEMORIA/(2049:2049): Se inicializaron las estructuras de Memoria
+[INFO] 23:48:11:086 MEMORIA/(2049:2049): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 23:50:33:305 MEMORIA/(2049:2112): CPU quiere leer en la dirección <100> un tamaño de <0>
+[INFO] 02:26:51:277 MEMORIA/(4036:4036): Se inicializaron las estructuras de Memoria
+[INFO] 02:26:51:278 MEMORIA/(4036:4036): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:28:50:377 MEMORIA/(4036:4097): CPU quiere leer en la dirección <100> un tamaño de <5>
+[INFO] 02:29:36:205 MEMORIA/(4036:4097): CPU quiere leer en la dirección <120> un tamaño de <5>
+[INFO] 02:29:44:441 MEMORIA/(4036:4097): CPU quiere leer en la dirección <141> un tamaño de <5>

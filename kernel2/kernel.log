@@ -2819,3 +2819,238 @@
 [INFO] 07:11:29:753 kernel.log/(124845:124855): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
 [INFO] 07:11:29:753 kernel.log/(124845:124855): Finaliza el proceso <1000> - Motivo: <INVALID_RESOURCE>
 [INFO] 07:11:29:753 kernel.log/(124845:124851): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 19:31:44:353 kernel.log/(127126:127126): Se crea el diccionario con los recursos.
+[INFO] 19:31:44:353 kernel.log/(127126:127126): Se agrego el recurso DISCO al diccionario
+[INFO] 19:31:44:353 kernel.log/(127126:127126): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 19:31:44:353 kernel.log/(127126:127126): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:31:56:260 kernel.log/(127126:127142): Se crea el proceso <1000> en NEW
+[INFO] 19:31:56:260 kernel.log/(127126:127142): Cola NEW: 
+[INFO] 19:31:56:260 kernel.log/(127126:127142): PID: <1000>
+[INFO] 19:31:56:260 kernel.log/(127126:127138): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 19:31:56:260 kernel.log/(127126:127138): Cola Ready <FIFO>:
+[INFO] 19:31:56:260 kernel.log/(127126:127138): PID: <1000>
+[INFO] 19:31:56:260 kernel.log/(127126:127134): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 19:31:56:260 kernel.log/(127126:127134): PID: <1000> ingresa a EXECUTE
+[INFO] 19:31:56:260 kernel.log/(127126:127134): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 19:31:56:260 kernel.log/(127126:127136): PID: <1000> enviada a CPU
+[INFO] 19:50:57:695 kernel.log/(128235:128235): Se crea el diccionario con los recursos.
+[INFO] 19:50:57:695 kernel.log/(128235:128235): Se agrego el recurso DISCO al diccionario
+[INFO] 19:50:57:695 kernel.log/(128235:128235): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 19:50:57:696 kernel.log/(128235:128235): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:51:19:670 kernel.log/(128235:128252): Se crea el proceso <1000> en NEW
+[INFO] 19:51:19:670 kernel.log/(128235:128252): Cola NEW: 
+[INFO] 19:51:19:670 kernel.log/(128235:128252): PID: <1000>
+[INFO] 19:51:19:670 kernel.log/(128235:128247): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 19:51:19:670 kernel.log/(128235:128247): Cola Ready <FIFO>:
+[INFO] 19:51:19:670 kernel.log/(128235:128247): PID: <1000>
+[INFO] 19:51:19:670 kernel.log/(128235:128243): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 19:51:19:670 kernel.log/(128235:128243): PID: <1000> ingresa a EXECUTE
+[INFO] 19:51:19:670 kernel.log/(128235:128243): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 19:51:19:670 kernel.log/(128235:128245): PID: <1000> enviada a CPU
+[INFO] 19:51:37:640 kernel.log/(128235:128245): Los registros que trajo PID: <0> de la CPU son: 
+[INFO] 19:51:37:641 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[INFO] 19:51:37:642 kernel.log/(128235:128245): 
+[ERROR] 19:51:37:642 kernel.log/(128235:128245): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[INFO] 19:53:00:631 kernel.log/(128397:128397): Se crea el diccionario con los recursos.
+[INFO] 19:53:00:631 kernel.log/(128397:128397): Se agrego el recurso DISCO al diccionario
+[INFO] 19:53:00:631 kernel.log/(128397:128397): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 19:53:00:633 kernel.log/(128397:128397): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 19:53:04:362 kernel.log/(128397:128412): Se crea el proceso <1000> en NEW
+[INFO] 19:53:04:362 kernel.log/(128397:128412): Cola NEW: 
+[INFO] 19:53:04:362 kernel.log/(128397:128412): PID: <1000>
+[INFO] 19:53:04:362 kernel.log/(128397:128409): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 19:53:04:362 kernel.log/(128397:128409): Cola Ready <FIFO>:
+[INFO] 19:53:04:362 kernel.log/(128397:128409): PID: <1000>
+[INFO] 19:53:04:362 kernel.log/(128397:128405): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 19:53:04:362 kernel.log/(128397:128405): PID: <1000> ingresa a EXECUTE
+[INFO] 19:53:04:362 kernel.log/(128397:128405): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 19:53:04:362 kernel.log/(128397:128407): PID: <1000> enviada a CPU
+[INFO] 20:27:24:887 kernel.log/(129839:129839): Se crea el diccionario con los recursos.
+[INFO] 20:27:24:887 kernel.log/(129839:129839): Se agrego el recurso DISCO al diccionario
+[INFO] 20:27:24:887 kernel.log/(129839:129839): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:27:24:888 kernel.log/(129839:129839): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:36:12:387 kernel.log/(130335:130335): Se crea el diccionario con los recursos.
+[INFO] 20:36:12:387 kernel.log/(130335:130335): Se agrego el recurso DISCO al diccionario
+[INFO] 20:36:12:387 kernel.log/(130335:130335): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:36:12:388 kernel.log/(130335:130335): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:36:55:799 kernel.log/(130335:130358): Se crea el proceso <1000> en NEW
+[INFO] 20:36:55:799 kernel.log/(130335:130358): Cola NEW: 
+[INFO] 20:36:55:799 kernel.log/(130335:130358): PID: <1000>
+[INFO] 20:36:55:799 kernel.log/(130335:130347): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 20:36:55:799 kernel.log/(130335:130347): Cola Ready <FIFO>:
+[INFO] 20:36:55:799 kernel.log/(130335:130347): PID: <1000>
+[INFO] 20:36:55:799 kernel.log/(130335:130343): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 20:36:55:799 kernel.log/(130335:130343): PID: <1000> ingresa a EXECUTE
+[INFO] 20:36:55:799 kernel.log/(130335:130343): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 20:36:55:799 kernel.log/(130335:130345): PID: <1000> enviada a CPU
+[INFO] 20:36:58:896 kernel.log/(130335:130345): Los registros que trajo PID: <0> de la CPU son: 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[INFO] 20:36:58:896 kernel.log/(130335:130345): 
+[ERROR] 20:36:58:896 kernel.log/(130335:130345): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[INFO] 20:41:59:822 kernel.log/(130539:130539): Se crea el diccionario con los recursos.
+[INFO] 20:41:59:822 kernel.log/(130539:130539): Se agrego el recurso DISCO al diccionario
+[INFO] 20:41:59:822 kernel.log/(130539:130539): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:42:53:374 kernel.log/(130589:130589): Se crea el diccionario con los recursos.
+[INFO] 20:42:53:375 kernel.log/(130589:130589): Se agrego el recurso DISCO al diccionario
+[INFO] 20:42:53:375 kernel.log/(130589:130589): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:47:36:749 kernel.log/(130805:130805): Se crea el diccionario con los recursos.
+[INFO] 20:47:36:749 kernel.log/(130805:130805): Se agrego el recurso DISCO al diccionario
+[INFO] 20:47:36:749 kernel.log/(130805:130805): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:50:04:936 kernel.log/(130916:130916): Se crea el diccionario con los recursos.
+[INFO] 20:50:04:936 kernel.log/(130916:130916): Se agrego el recurso DISCO al diccionario
+[INFO] 20:50:04:936 kernel.log/(130916:130916): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:52:13:152 kernel.log/(131014:131014): Se crea el diccionario con los recursos.
+[INFO] 20:52:13:152 kernel.log/(131014:131014): Se agrego el recurso DISCO al diccionario
+[INFO] 20:52:13:152 kernel.log/(131014:131014): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:52:13:152 kernel.log/(131014:131014): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:54:15:541 kernel.log/(131105:131105): Se crea el diccionario con los recursos.
+[INFO] 20:54:15:541 kernel.log/(131105:131105): Se agrego el recurso DISCO al diccionario
+[INFO] 20:54:15:541 kernel.log/(131105:131105): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:59:35:900 kernel.log/(131394:131394): Se crea el diccionario con los recursos.
+[INFO] 20:59:35:900 kernel.log/(131394:131394): Se agrego el recurso DISCO al diccionario
+[INFO] 20:59:35:900 kernel.log/(131394:131394): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 20:59:35:905 kernel.log/(131394:131394): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 20:59:54:832 kernel.log/(131394:131417): Se crea el proceso <1000> en NEW
+[INFO] 20:59:54:832 kernel.log/(131394:131417): Cola NEW: 
+[INFO] 20:59:54:832 kernel.log/(131394:131417): PID: <1000>
+[INFO] 20:59:54:832 kernel.log/(131394:131406): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 20:59:54:832 kernel.log/(131394:131406): Cola Ready <FIFO>:
+[INFO] 20:59:54:832 kernel.log/(131394:131406): PID: <1000>
+[INFO] 20:59:54:832 kernel.log/(131394:131402): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 20:59:54:832 kernel.log/(131394:131402): PID: <1000> ingresa a EXECUTE
+[INFO] 20:59:54:832 kernel.log/(131394:131402): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 20:59:54:832 kernel.log/(131394:131404): PID: <1000> enviada a CPU
+[INFO] 20:59:58:167 kernel.log/(131394:131404): Los registros que trajo PID: <0> de la CPU son: 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[INFO] 20:59:58:168 kernel.log/(131394:131404): 
+[ERROR] 20:59:58:168 kernel.log/(131394:131404): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[INFO] 21:29:02:487 kernel.log/(132175:132175): Se crea el diccionario con los recursos.
+[INFO] 21:29:02:487 kernel.log/(132175:132175): Se agrego el recurso DISCO al diccionario
+[INFO] 21:29:02:487 kernel.log/(132175:132175): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 21:29:02:490 kernel.log/(132175:132175): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 21:29:17:512 kernel.log/(132175:132192): Se crea el proceso <1000> en NEW
+[INFO] 21:29:17:512 kernel.log/(132175:132192): Cola NEW: 
+[INFO] 21:29:17:512 kernel.log/(132175:132192): PID: <1000>
+[INFO] 21:29:17:512 kernel.log/(132175:132187): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 21:29:17:512 kernel.log/(132175:132187): Cola Ready <FIFO>:
+[INFO] 21:29:17:512 kernel.log/(132175:132187): PID: <1000>
+[INFO] 21:29:17:513 kernel.log/(132175:132183): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 21:29:17:513 kernel.log/(132175:132183): PID: <1000> ingresa a EXECUTE
+[INFO] 21:29:17:513 kernel.log/(132175:132183): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 21:29:17:513 kernel.log/(132175:132185): PID: <1000> enviada a CPU
+[INFO] 21:29:20:623 kernel.log/(132175:132185): Los registros que trajo PID: <0> de la CPU son: 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[INFO] 21:29:20:623 kernel.log/(132175:132185): 
+[ERROR] 21:29:20:623 kernel.log/(132175:132185): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[INFO] 23:10:26:740 kernel.log/(2329:2329): Se crea el diccionario con los recursos.
+[INFO] 23:10:26:741 kernel.log/(2329:2329): Se agrego el recurso DISCO al diccionario
+[INFO] 23:10:26:741 kernel.log/(2329:2329): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 23:10:26:741 kernel.log/(2329:2329): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:11:23:645 kernel.log/(2329:2400): Se crea el proceso <1000> en NEW
+[INFO] 23:11:23:645 kernel.log/(2329:2400): Cola NEW: 
+[INFO] 23:11:23:645 kernel.log/(2329:2400): PID: <1000>
+[INFO] 23:11:23:645 kernel.log/(2329:2342): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:11:23:646 kernel.log/(2329:2342): Cola Ready <FIFO>:
+[INFO] 23:11:23:646 kernel.log/(2329:2342): PID: <1000>
+[INFO] 23:11:23:646 kernel.log/(2329:2338): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 23:11:23:646 kernel.log/(2329:2338): PID: <1000> ingresa a EXECUTE
+[INFO] 23:11:23:646 kernel.log/(2329:2338): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:11:23:646 kernel.log/(2329:2340): PID: <1000> enviada a CPU
+[INFO] 23:42:39:706 kernel.log/(2905:2905): Se crea el diccionario con los recursos.
+[INFO] 23:42:39:706 kernel.log/(2905:2905): Se agrego el recurso DISCO al diccionario
+[INFO] 23:42:39:706 kernel.log/(2905:2905): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 23:42:39:706 kernel.log/(2905:2905): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:42:46:075 kernel.log/(2905:2921): Se crea el proceso <1000> en NEW
+[INFO] 23:42:46:075 kernel.log/(2905:2921): Cola NEW: 
+[INFO] 23:42:46:075 kernel.log/(2905:2921): PID: <1000>
+[INFO] 23:42:46:075 kernel.log/(2905:2917): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:42:46:075 kernel.log/(2905:2917): Cola Ready <FIFO>:
+[INFO] 23:42:46:075 kernel.log/(2905:2917): PID: <1000>
+[INFO] 23:42:46:075 kernel.log/(2905:2913): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 23:42:46:075 kernel.log/(2905:2913): PID: <1000> ingresa a EXECUTE
+[INFO] 23:42:46:075 kernel.log/(2905:2913): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:42:46:075 kernel.log/(2905:2915): PID: <1000> enviada a CPU
+[INFO] 23:48:41:753 kernel.log/(2127:2127): Se crea el diccionario con los recursos.
+[INFO] 23:48:41:754 kernel.log/(2127:2127): Se agrego el recurso DISCO al diccionario
+[INFO] 23:48:41:754 kernel.log/(2127:2127): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 23:48:41:754 kernel.log/(2127:2127): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 23:49:08:846 kernel.log/(2127:2198): Se crea el proceso <1000> en NEW
+[INFO] 23:49:08:846 kernel.log/(2127:2198): Cola NEW: 
+[INFO] 23:49:08:846 kernel.log/(2127:2198): PID: <1000>
+[INFO] 23:49:08:846 kernel.log/(2127:2140): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:49:08:846 kernel.log/(2127:2140): Cola Ready <FIFO>:
+[INFO] 23:49:08:846 kernel.log/(2127:2140): PID: <1000>
+[INFO] 23:49:08:846 kernel.log/(2127:2136): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 23:49:08:847 kernel.log/(2127:2136): PID: <1000> ingresa a EXECUTE
+[INFO] 23:49:08:847 kernel.log/(2127:2136): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:49:08:847 kernel.log/(2127:2138): PID: <1000> enviada a CPU
+[INFO] 02:27:17:769 kernel.log/(4112:4112): Se crea el diccionario con los recursos.
+[INFO] 02:27:17:769 kernel.log/(4112:4112): Se agrego el recurso DISCO al diccionario
+[INFO] 02:27:17:769 kernel.log/(4112:4112): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:27:17:770 kernel.log/(4112:4112): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:27:26:337 kernel.log/(4112:4134): Se crea el proceso <1000> en NEW
+[INFO] 02:27:26:337 kernel.log/(4112:4134): Cola NEW: 
+[INFO] 02:27:26:337 kernel.log/(4112:4134): PID: <1000>
+[INFO] 02:27:26:338 kernel.log/(4112:4123): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 02:27:26:338 kernel.log/(4112:4123): Cola Ready <FIFO>:
+[INFO] 02:27:26:338 kernel.log/(4112:4123): PID: <1000>
+[INFO] 02:27:26:338 kernel.log/(4112:4119): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:27:26:338 kernel.log/(4112:4119): PID: <1000> ingresa a EXECUTE
+[INFO] 02:27:26:338 kernel.log/(4112:4119): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 02:27:26:338 kernel.log/(4112:4121): PID: <1000> enviada a CPU
+[INFO] 02:29:56:540 kernel.log/(4112:4121): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 02:29:56:541 kernel.log/(4112:4121): HOLA
+[INFO] 02:29:56:541 kernel.log/(4112:4121): HOLA
+[INFO] 02:29:56:541 kernel.log/(4112:4121): HOLA
+[INFO] 02:29:56:541 kernel.log/(4112:4121): 0000
+[INFO] 02:29:56:541 kernel.log/(4112:4121): PRUEBA__
+[INFO] 02:29:56:541 kernel.log/(4112:4121): FUNCIONS
+[INFO] 02:29:56:541 kernel.log/(4112:4121): MEMORIA_
+[INFO] 02:29:56:541 kernel.log/(4112:4121): 00000000
+[INFO] 02:29:56:541 kernel.log/(4112:4121): 0000000000000000
+[INFO] 02:29:56:541 kernel.log/(4112:4121): 0000000000000000
+[INFO] 02:29:56:542 kernel.log/(4112:4121): 0000000000000000
+[INFO] 02:29:56:542 kernel.log/(4112:4121): 0000000000000000
+[INFO] 02:29:56:542 kernel.log/(4112:4121): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 02:29:56:542 kernel.log/(4112:4121): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 02:29:56:542 kernel.log/(4112:4117): Ordenando a Consola la finalización del PID: <1000>

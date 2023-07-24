@@ -3743,3 +3743,294 @@
 [WARNING] 07:11:29:749 cpu.log/(124831:124831): RCX: 0000000000000000
 [WARNING] 07:11:29:749 cpu.log/(124831:124831): RDX: 0000000000000000
 [INFO] 07:11:29:750 cpu.log/(124831:124831): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 19:30:38:727 cpu.log/(126965:126965): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 19:30:39:735 cpu.log/(126965:126965): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 19:30:40:816 cpu.log/(126965:126965): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 19:31:44:353 cpu.log/(126965:126965): Cliente conectado (a CPU)
+
+[INFO] 19:32:00:475 cpu.log/(126965:126965): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 19:32:12:544 cpu.log/(126965:126965): Los registros que trajo PID: <1000> son: 
+[INFO] 19:32:12:646 cpu.log/(126965:126965): 0000
+[INFO] 19:32:12:987 cpu.log/(126965:126965): 0000
+[INFO] 19:32:13:214 cpu.log/(126965:126965): 0000
+[INFO] 19:32:13:350 cpu.log/(126965:126965): 0000
+[INFO] 19:32:13:530 cpu.log/(126965:126965): 00000000
+[INFO] 19:32:13:711 cpu.log/(126965:126965): 00000000
+[INFO] 19:32:13:977 cpu.log/(126965:126965): 00000000
+[INFO] 19:32:14:157 cpu.log/(126965:126965): 00000000
+[INFO] 19:32:14:396 cpu.log/(126965:126965): 0000000000000000
+[INFO] 19:32:14:584 cpu.log/(126965:126965): 0000000000000000
+[INFO] 19:32:14:844 cpu.log/(126965:126965): 0000000000000000
+[INFO] 19:32:15:373 cpu.log/(126965:126965): 0000000000000000
+[INFO] 19:32:16:272 cpu.log/(126965:126965): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 19:50:47:144 cpu.log/(128162:128162): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 19:50:47:800 cpu.log/(128162:128162): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 19:50:48:276 cpu.log/(128162:128162): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 19:50:57:696 cpu.log/(128162:128162): Cliente conectado (a CPU)
+
+[INFO] 19:51:03:285 cpu.log/(128162:128162): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 19:51:19:670 cpu.log/(128162:128162): Los registros que trajo PID: <1000> son: 
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 00000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 00000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 00000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 00000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000000000000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000000000000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000000000000000
+[INFO] 19:51:19:670 cpu.log/(128162:128162): 0000000000000000
+[INFO] 19:51:19:671 cpu.log/(128162:128162): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 19:52:52:063 cpu.log/(128362:128362): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 19:52:52:803 cpu.log/(128362:128362): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 19:52:54:083 cpu.log/(128362:128362): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 19:53:00:631 cpu.log/(128362:128362): Cliente conectado (a CPU)
+
+[INFO] 19:53:10:718 cpu.log/(128362:128362): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 19:53:20:082 cpu.log/(128362:128362): Los registros que trajo PID: <1000> son: 
+[INFO] 19:53:20:183 cpu.log/(128362:128362): 0000
+[INFO] 19:53:20:292 cpu.log/(128362:128362): 0000
+[INFO] 19:53:20:434 cpu.log/(128362:128362): 0000
+[INFO] 19:53:20:539 cpu.log/(128362:128362): 0000
+[INFO] 19:53:20:635 cpu.log/(128362:128362): 00000000
+[INFO] 19:53:20:737 cpu.log/(128362:128362): 00000000
+[INFO] 19:53:20:839 cpu.log/(128362:128362): 00000000
+[INFO] 19:53:20:941 cpu.log/(128362:128362): 00000000
+[INFO] 19:53:21:041 cpu.log/(128362:128362): 0000000000000000
+[INFO] 19:53:21:143 cpu.log/(128362:128362): 0000000000000000
+[INFO] 19:53:21:246 cpu.log/(128362:128362): 0000000000000000
+[INFO] 19:53:21:571 cpu.log/(128362:128362): 0000000000000000
+[INFO] 19:53:21:868 cpu.log/(128362:128362): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 20:12:57:394 cpu.log/(129372:129372): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:12:57:395 cpu.log/(129372:129372): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:12:57:395 cpu.log/(129372:129372): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:13:26:146 cpu.log/(129412:129412): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:13:26:146 cpu.log/(129412:129412): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:13:26:146 cpu.log/(129412:129412): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:18:48:952 cpu.log/(129553:129553): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:18:48:953 cpu.log/(129553:129553): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:18:48:953 cpu.log/(129553:129553): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:20:53:694 cpu.log/(129659:129659): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:20:53:694 cpu.log/(129659:129659): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:20:53:694 cpu.log/(129659:129659): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:23:30:193 cpu.log/(129730:129730): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:23:30:995 cpu.log/(129730:129730): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:23:31:652 cpu.log/(129730:129730): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:27:16:668 cpu.log/(129826:129826): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:27:16:668 cpu.log/(129826:129826): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:27:16:668 cpu.log/(129826:129826): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:27:24:887 cpu.log/(129826:129826): Cliente conectado (a CPU)
+
+[INFO] 20:27:24:887 cpu.log/(129826:129826): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 20:27:57:444 cpu.log/(129826:129826): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 20:36:01:604 cpu.log/(130322:130322): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:36:01:604 cpu.log/(130322:130322): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:36:01:605 cpu.log/(130322:130322): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:36:12:388 cpu.log/(130322:130322): Cliente conectado (a CPU)
+
+[INFO] 20:36:12:388 cpu.log/(130322:130322): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 20:36:55:799 cpu.log/(130322:130322): Los registros que trajo PID: <1000> son: 
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 00000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 00000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 00000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 00000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000000000000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000000000000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000000000000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): 0000000000000000
+[INFO] 20:36:55:799 cpu.log/(130322:130322): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 20:41:45:019 cpu.log/(130527:130527): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:41:45:020 cpu.log/(130527:130527): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:41:45:020 cpu.log/(130527:130527): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:42:53:377 cpu.log/(130527:130527): Cliente conectado (a CPU)
+
+[INFO] 20:42:53:378 cpu.log/(130527:130527): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 20:42:53:378 cpu.log/(130527:130527): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 20:47:09:800 cpu.log/(130780:130780): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:47:09:801 cpu.log/(130780:130780): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:47:09:801 cpu.log/(130780:130780): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:47:36:749 cpu.log/(130780:130780): Cliente conectado (a CPU)
+
+[INFO] 20:47:36:749 cpu.log/(130780:130780): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 20:47:36:751 cpu.log/(130780:130780): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 20:49:42:038 cpu.log/(130894:130894): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:49:42:038 cpu.log/(130894:130894): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:49:42:039 cpu.log/(130894:130894): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:50:04:936 cpu.log/(130894:130894): Cliente conectado (a CPU)
+
+[INFO] 20:50:04:936 cpu.log/(130894:130894): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 20:50:04:937 cpu.log/(130894:130894): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 20:52:00:812 cpu.log/(130990:130990): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:52:00:812 cpu.log/(130990:130990): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:52:00:813 cpu.log/(130990:130990): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:52:13:152 cpu.log/(130990:130990): Cliente conectado (a CPU)
+
+[INFO] 20:52:13:152 cpu.log/(130990:130990): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 20:52:38:407 cpu.log/(130990:130990): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 20:54:02:112 cpu.log/(131069:131069): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:54:02:112 cpu.log/(131069:131069): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:54:02:117 cpu.log/(131069:131069): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:54:17:338 cpu.log/(131069:131069): Cliente conectado (a CPU)
+
+[INFO] 20:54:17:338 cpu.log/(131069:131069): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 20:54:40:687 cpu.log/(131069:131069): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 20:59:12:422 cpu.log/(131369:131369): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 20:59:12:422 cpu.log/(131369:131369): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 20:59:12:423 cpu.log/(131369:131369): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 20:59:35:900 cpu.log/(131369:131369): Cliente conectado (a CPU)
+
+[INFO] 20:59:35:900 cpu.log/(131369:131369): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 20:59:54:832 cpu.log/(131369:131369): Los registros que trajo PID: <1000> son: 
+[INFO] 20:59:54:832 cpu.log/(131369:131369): 0000
+[INFO] 20:59:54:832 cpu.log/(131369:131369): 0000
+[INFO] 20:59:54:832 cpu.log/(131369:131369): 0000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 0000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 00000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 00000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 00000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 00000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 0000000000000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 0000000000000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 0000000000000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): 0000000000000000
+[INFO] 20:59:54:833 cpu.log/(131369:131369): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 21:28:41:043 cpu.log/(132149:132149): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 21:28:41:043 cpu.log/(132149:132149): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 21:28:41:044 cpu.log/(132149:132149): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 21:29:02:487 cpu.log/(132149:132149): Cliente conectado (a CPU)
+
+[INFO] 21:29:02:489 cpu.log/(132149:132149): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 21:29:17:513 cpu.log/(132149:132149): Los registros que trajo PID: <1000> son: 
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 00000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 00000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 00000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 00000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000000000000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000000000000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000000000000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): 0000000000000000
+[INFO] 21:29:17:513 cpu.log/(132149:132149): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 23:10:11:627 cpu.log/(2196:2196): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 23:10:12:169 cpu.log/(2196:2196): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 23:10:17:901 cpu.log/(2196:2196): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 23:10:26:741 cpu.log/(2196:2196): Cliente conectado (a CPU)
+
+[INFO] 23:10:30:995 cpu.log/(2196:2196): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 23:11:59:900 cpu.log/(2196:2196): Los registros que trajo PID: <1000> son: 
+[INFO] 23:12:00:004 cpu.log/(2196:2196): 0000
+[INFO] 23:12:00:105 cpu.log/(2196:2196): 0000
+[INFO] 23:12:00:209 cpu.log/(2196:2196): 0000
+[INFO] 23:12:00:710 cpu.log/(2196:2196): 0000
+[INFO] 23:12:00:918 cpu.log/(2196:2196): 00000000
+[INFO] 23:12:01:100 cpu.log/(2196:2196): 00000000
+[INFO] 23:12:01:251 cpu.log/(2196:2196): 00000000
+[INFO] 23:12:01:432 cpu.log/(2196:2196): 00000000
+[INFO] 23:12:01:614 cpu.log/(2196:2196): 0000000000000000
+[INFO] 23:12:01:801 cpu.log/(2196:2196): 0000000000000000
+[INFO] 23:12:02:213 cpu.log/(2196:2196): 0000000000000000
+[INFO] 23:12:02:585 cpu.log/(2196:2196): 0000000000000000
+[INFO] 23:12:02:997 cpu.log/(2196:2196): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 23:42:29:625 cpu.log/(2857:2857): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 23:42:30:429 cpu.log/(2857:2857): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 23:42:32:461 cpu.log/(2857:2857): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 23:42:39:706 cpu.log/(2857:2857): Cliente conectado (a CPU)
+
+[INFO] 23:42:55:645 cpu.log/(2857:2857): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 23:43:10:008 cpu.log/(2857:2857): Los registros que trajo PID: <1000> son: 
+[INFO] 23:43:10:112 cpu.log/(2857:2857): 0000
+[INFO] 23:43:10:217 cpu.log/(2857:2857): 0000
+[INFO] 23:43:10:318 cpu.log/(2857:2857): 0000
+[INFO] 23:43:10:421 cpu.log/(2857:2857): 0000
+[INFO] 23:43:10:523 cpu.log/(2857:2857): 00000000
+[INFO] 23:43:10:627 cpu.log/(2857:2857): 00000000
+[INFO] 23:43:10:728 cpu.log/(2857:2857): 00000000
+[INFO] 23:43:10:830 cpu.log/(2857:2857): 00000000
+[INFO] 23:43:10:931 cpu.log/(2857:2857): 0000000000000000
+[INFO] 23:43:11:034 cpu.log/(2857:2857): 0000000000000000
+[INFO] 23:43:11:137 cpu.log/(2857:2857): 0000000000000000
+[INFO] 23:43:11:243 cpu.log/(2857:2857): 0000000000000000
+[INFO] 23:43:11:343 cpu.log/(2857:2857): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 23:48:24:739 cpu.log/(2079:2079): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 23:48:25:656 cpu.log/(2079:2079): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 23:48:28:545 cpu.log/(2079:2079): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 23:48:41:754 cpu.log/(2079:2079): Cliente conectado (a CPU)
+
+[INFO] 23:48:43:203 cpu.log/(2079:2079): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 23:49:24:962 cpu.log/(2079:2079): Los registros que trajo PID: <1000> son: 
+[INFO] 23:49:25:066 cpu.log/(2079:2079): 0000
+[INFO] 23:49:25:169 cpu.log/(2079:2079): 0000
+[INFO] 23:49:25:272 cpu.log/(2079:2079): 0000
+[INFO] 23:49:25:373 cpu.log/(2079:2079): 0000
+[INFO] 23:49:25:474 cpu.log/(2079:2079): 00000000
+[INFO] 23:49:25:575 cpu.log/(2079:2079): 00000000
+[INFO] 23:49:25:677 cpu.log/(2079:2079): 00000000
+[INFO] 23:49:25:779 cpu.log/(2079:2079): 00000000
+[INFO] 23:49:25:880 cpu.log/(2079:2079): 0000000000000000
+[INFO] 23:49:25:984 cpu.log/(2079:2079): 0000000000000000
+[INFO] 23:49:26:087 cpu.log/(2079:2079): 0000000000000000
+[INFO] 23:49:26:189 cpu.log/(2079:2079): 0000000000000000
+[INFO] 23:49:26:293 cpu.log/(2079:2079): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 02:27:04:137 cpu.log/(4067:4067): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 02:27:05:342 cpu.log/(4067:4067): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 02:27:09:818 cpu.log/(4067:4067): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 02:27:17:769 cpu.log/(4067:4067): Cliente conectado (a CPU)
+
+[INFO] 02:27:20:615 cpu.log/(4067:4067): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 02:27:46:412 cpu.log/(4067:4067): Los registros que trajo PID: <1000> son: 
+[INFO] 02:27:46:514 cpu.log/(4067:4067): 0000
+[INFO] 02:27:46:616 cpu.log/(4067:4067): 0000
+[INFO] 02:27:46:727 cpu.log/(4067:4067): 0000
+[INFO] 02:27:46:829 cpu.log/(4067:4067): 0000
+[INFO] 02:27:46:930 cpu.log/(4067:4067): 00000000
+[INFO] 02:27:47:031 cpu.log/(4067:4067): 00000000
+[INFO] 02:27:47:135 cpu.log/(4067:4067): 00000000
+[INFO] 02:27:47:239 cpu.log/(4067:4067): 00000000
+[INFO] 02:27:47:340 cpu.log/(4067:4067): 0000000000000000
+[INFO] 02:27:47:443 cpu.log/(4067:4067): 0000000000000000
+[INFO] 02:27:47:546 cpu.log/(4067:4067): 0000000000000000
+[INFO] 02:27:47:650 cpu.log/(4067:4067): 0000000000000000
+[INFO] 02:27:47:802 cpu.log/(4067:4067): PID: <1000> recibido desde el Kernel para ejecutar.
+[WARNING] 02:30:06:793 cpu.log/(4067:4067): AX: HOLA
+[WARNING] 02:30:07:519 cpu.log/(4067:4067): BX: HOLA
+[WARNING] 02:30:07:868 cpu.log/(4067:4067): CX: HOLA
+[WARNING] 02:30:08:252 cpu.log/(4067:4067): DX: 0000
+[WARNING] 02:30:08:579 cpu.log/(4067:4067): EAX: PRUEBA__
+[WARNING] 02:30:08:842 cpu.log/(4067:4067): EBX: FUNCIONS
+[WARNING] 02:30:09:053 cpu.log/(4067:4067): ECX: MEMORIA_
+[WARNING] 02:30:09:233 cpu.log/(4067:4067): EDX: 00000000
+[WARNING] 02:30:09:442 cpu.log/(4067:4067): RAX: 0000000000000000
+[WARNING] 02:30:09:633 cpu.log/(4067:4067): RBX: 0000000000000000
+[WARNING] 02:30:09:840 cpu.log/(4067:4067): RCX: 0000000000000000
+[WARNING] 02:30:10:425 cpu.log/(4067:4067): RDX: 0000000000000000
+[INFO] 02:30:12:247 cpu.log/(4067:4067): CPU esperando a recibir un nuevo proceso para ejecutar.
