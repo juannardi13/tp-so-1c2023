@@ -217,6 +217,8 @@ void recv_liberar_estructuras(int socket_cliente, void *stream) {
 
 	list_remove_and_destroy_by_condition(tablas_segmentos, (void *) mismo_pid, (void *) destruir_tabla);
 
+	log_info(logger, "Eliminación de Proceso PID: %d", pid);
+
 	send_op(socket_cliente, ESTRUCTURAS_LIBERADAS);
 }
 

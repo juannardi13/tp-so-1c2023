@@ -170,7 +170,7 @@ void manejar_conexion(int* fd_cliente) {
 			log_info(logger, "Inicia compactación");
 
 //			int offset = 0;
-//			int algo = deserializar_int(stream, &offset); // no se usa, sería para que reciba algo
+//			int algo = deserializar_int(stream, &offset); // no se usa, creo que igual no hace falta
 
 			compactar(socket_cliente);
 			break;
