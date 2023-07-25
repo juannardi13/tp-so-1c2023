@@ -81,6 +81,7 @@ typedef struct {
 //Variables globales:
 extern archivo_config config_kernel;
 extern t_log* logger_kernel;
+extern t_log* kernel_principal;
 extern int pid_global;
 extern int socket_cpu;
 extern int socket_memoria;

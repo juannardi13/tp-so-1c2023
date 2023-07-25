@@ -80,7 +80,7 @@ void funcion_recurso(char* key, void* elemento) {
 		pthread_mutex_unlock(recurso->mutex_cola_espera);
 
 		proceso->pcb->estado = READY;
-		log_info(logger_kernel, "PID: <%d> - Estado Anterior: <BLOCK> - Estado Actual: <READY>", proceso->pcb->pid);
+		log_info(kernel_principal, "PID: <%d> - Estado Anterior: <BLOCK> - Estado Actual: <READY>", proceso->pcb->pid);
 		int length = strlen(key) + 1;
 		char* aux = malloc(length);
 		memcpy(aux, key, length);

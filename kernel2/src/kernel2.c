@@ -5,6 +5,7 @@
 
 archivo_config config_kernel;
 t_log* logger_kernel;
+t_log* kernel_principal;
 
 void sighandler(int signal) {
 	finalizar_kernel();
@@ -15,6 +16,7 @@ int main() {
 	signal(SIGINT, sighandler);
 
 	logger_kernel = log_create("./kernel.log", "kernel.log", 1, LOG_LEVEL_INFO);
+	kernel_principal = log_create("./kernel_principal.log", "kernel_principal.log", 1, LOG_LEVEL_INFO);
 	cargar_valores_config("cfg/kernel.config");
 
 	iniciar_planificador_largo_plazo(); //Esto despues tiene que ir en main_kernel.c

@@ -66,6 +66,7 @@ int get_time(void) { //Esto te devuelve el tiempo en milisegundos
 void finalizar_kernel(void) {
 	log_error(logger_kernel, "Finalizando módulo Kernel");
 	log_destroy(logger_kernel);
+	log_destroy(kernel_principal);
 	destruir_semaforos();
 	destruir_listas();
 	liberar_conexion(socket_cpu);
@@ -81,10 +82,15 @@ void destruir_semaforos(void) {
 	pthread_mutex_destroy(&mutex_exit);
 	pthread_mutex_destroy(&mutex_pid);
 	pthread_mutex_destroy(&mutex_operacion_memoria);
+	pthread_mutex_destroy(&mutex_tabla_global_archivos);
+	sem_destroy(&sem_archivos);
+	sem_destroy(&sem_admitir);
+	sem_destroy(&sem_exec);
 	sem_destroy(&sem_ready);
 	sem_destroy(&sem_block_io);
 	sem_destroy(&sem_exit);
 	sem_destroy(&sem_grado_multiprogramacion);
+	sem_destroy(&sem_recursos);
 }
 
 void destruir_listas(void) {
@@ -92,6 +98,7 @@ void destruir_listas(void) {
 	list_destroy_and_destroy_elements(cola_ready, free);
 	list_destroy_and_destroy_elements(cola_block_io, free);
 	list_destroy_and_destroy_elements(cola_exit, free);
+	list_destroy_and_destroy_elements(cola_exec, free);
 }
 
 //----------------------------------------FUNCIONES EN DESUSO--------------------------------------------------------------------

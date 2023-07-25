@@ -147,8 +147,8 @@ void estado_ejecutar(void) {
 			list_add(cola_block_io, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_block_io);
 
-			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
-			log_info(logger_kernel, "PID: <%d> - Bloqueado por: <IO>", proceso_a_ejecutar->pcb->pid);
+			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
+			log_info(kernel_principal, "PID: <%d> - Bloqueado por: <IO>", proceso_a_ejecutar->pcb->pid);
 
 			sem_post(&sem_block_io);
 			break;
@@ -164,7 +164,7 @@ void estado_ejecutar(void) {
 			memcpy(&tamanio_segmento, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_info(logger_kernel, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento);
+			log_info(kernel_principal, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento);
 
 			pthread_mutex_lock(&mutex_operacion_memoria);
 			enviar_parametros_a_memoria(proceso_a_ejecutar->pcb->pid, id_segmento, tamanio_segmento, CREATE_SEGMENT);
@@ -187,7 +187,7 @@ void estado_ejecutar(void) {
 			memcpy(&id_segmento_a_borrar, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_info(logger_kernel, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar);
+			log_info(kernel_principal, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar);
 
 			pthread_mutex_lock(&mutex_operacion_memoria);
 			enviar_parametros_a_memoria(proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar, 0, DELETE_SEGMENT); //pongo un 0 en el tercer parámetro porque si es DELETE_SEGMENT no interfiere para nada
@@ -218,7 +218,7 @@ void estado_ejecutar(void) {
 			memcpy(nombre_archivo_a_abrir, stream, tamanio_archivo_a_abrir);
 			stream += tamanio_archivo_a_abrir;
 
-			log_warning(logger_kernel, "PID: <%d> - Abrir Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
+			log_warning(kernel_principal, "PID: <%d> - Abrir Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
 
 			if(dictionary_has_key(tabla_global_archivos, nombre_archivo_a_abrir)) {
 				t_archivo_proceso* entrada_archivo = malloc(sizeof(t_archivo_proceso));
@@ -234,8 +234,8 @@ void estado_ejecutar(void) {
 				proceso_a_ejecutar->final_ultima_rafaga = get_time();
 				proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
-				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
-				log_info(logger_kernel, "PID: <%d> - Bloqueado por: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
+				log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
+				log_info(kernel_principal, "PID: <%d> - Bloqueado por: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
 
 				queue_push(archivo_open->cola_bloqueados, proceso_a_ejecutar);
 				sem_post(&sem_ready);
@@ -289,7 +289,7 @@ void estado_ejecutar(void) {
 			memcpy(nombre_archivo_a_cerrar, stream, tamanio_archivo_a_cerrar);
 			stream += tamanio_archivo_a_cerrar;
 
-			log_warning(logger_kernel, "PID: <%d> - Cerrar Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_cerrar);
+			log_warning(kernel_principal, "PID: <%d> - Cerrar Archivo: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_cerrar);
 
 			quitar_entrada_archivo_del_proceso(nombre_archivo_a_cerrar, proceso_a_ejecutar);
 
@@ -328,9 +328,9 @@ void estado_ejecutar(void) {
 			memcpy(&tamanio_en_bytes, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(logger_kernel, "PID: <%d> - Actualizar puntero Archivo: <%s> - Puntero <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
-
 			actualizar_puntero_archivo_proceso(proceso_a_ejecutar, nombre_archivo_seek, tamanio_en_bytes);
+
+			log_warning(kernel_principal, "PID: <%d> - Actualizar puntero Archivo: <%s> - Puntero <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -362,7 +362,7 @@ void estado_ejecutar(void) {
 			memcpy(&cantidad_bytes_read, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(logger_kernel, "PID: <%d> - Leer Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, direccion_fisica_read, cantidad_bytes_read);
+			log_warning(kernel_principal, "PID: <%d> - Leer Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, direccion_fisica_read, cantidad_bytes_read);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -394,7 +394,7 @@ void estado_ejecutar(void) {
 			memcpy(&cantidad_bytes_write, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(logger_kernel, "PID: <%d> - Escribir Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, direccion_fisica_write, cantidad_bytes_write);
+			log_warning(kernel_principal, "PID: <%d> - Escribir Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, direccion_fisica_write, cantidad_bytes_write);
 
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
@@ -423,7 +423,7 @@ void estado_ejecutar(void) {
 
 			proceso_a_ejecutar->ultima_instruccion = F_TRUNCATE;
 			
-			log_warning(logger_kernel, "PID: <%d> - Archivo: <%s> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_truncar, nuevo_tamanio);
+			log_warning(kernel_principal, "PID: <%d> - Archivo: <%s> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_truncar, nuevo_tamanio);
 			pthread_mutex_lock(&mutex_exec);
 			list_add(cola_exec, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exec);
@@ -460,24 +460,27 @@ void estado_ejecutar(void) {
 					list_add(cola_exec, proceso_a_ejecutar);
 					pthread_mutex_unlock(&mutex_exec);
 
+					log_info(kernel_principal, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso_a_ejecutar->pcb->pid, recurso_a_pedir->nombre, (recurso_a_pedir->instancias_totales - recurso_a_pedir->instancias_usadas));
+
 					sem_post(&sem_exec);
 				} else {
 					proceso_a_ejecutar->desalojado = DESALOJADO;
 					proceso_a_ejecutar->final_ultima_rafaga = get_time();
 					proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
+					log_info(kernel_principal, "PID: <%d> - Bloqueado por <%s>", proceso_a_ejecutar->pcb->pid, recurso_a_pedir->nombre);
+
 					queue_push(recurso_a_pedir->cola_espera, proceso_a_ejecutar);
 					sem_post(&sem_ready);
 				}
-
 			} else {
 				pthread_mutex_lock(&mutex_exit);
 				proceso_a_ejecutar->pcb->estado = EXT;
 				list_add(cola_exit, proceso_a_ejecutar);
 				pthread_mutex_unlock(&mutex_exit);
 
-				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
-				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
+				log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+				log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 				sem_post(&sem_ready);
 			}
@@ -510,6 +513,8 @@ void estado_ejecutar(void) {
 				liberar_instancia_recurso(recurso_a_liberar);
 				//quitar_recurso(proceso_a_ejecutar, recurso_a_liberar);
 
+				log_info(kernel_principal, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso_a_ejecutar->pcb->pid, recurso_a_liberar->nombre, (recurso_a_liberar->instancias_totales - recurso_a_liberar->instancias_usadas));
+
 				pthread_mutex_lock(&mutex_exec);
 				list_add(cola_exec, proceso_a_ejecutar);
 				pthread_mutex_unlock(&mutex_exec);
@@ -521,8 +526,8 @@ void estado_ejecutar(void) {
 				list_add(cola_exit, proceso_a_ejecutar);
 				pthread_mutex_unlock(&mutex_exit);
 
-				log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
-				log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
+				log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+				log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
 				sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 			}
 
@@ -550,8 +555,8 @@ void estado_ejecutar(void) {
 			list_add(cola_exit, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exit);
 
-			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
-			log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso_a_ejecutar->pcb->pid);
+			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+			log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso_a_ejecutar->pcb->pid);
 			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 			sem_post(&sem_ready);
 			break;
@@ -561,8 +566,8 @@ void estado_ejecutar(void) {
 			list_add(cola_exit, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exit);
 
-			log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
-			log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <SEG_FAULT>", proceso_a_ejecutar->pcb->pid);
+			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
+			log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <SEG_FAULT>", proceso_a_ejecutar->pcb->pid);
 			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 			sem_post(&sem_ready);
 			break;
@@ -644,7 +649,7 @@ void estado_ready(void) {
 		pthread_mutex_unlock(&mutex_exec);
 
 		log_info(logger_kernel, "PID: <%d> ingresa a EXECUTE", siguiente_proceso->pcb->pid);
-		log_info(logger_kernel, "PID: <%d> - Estado Anterior: <READY> - Estado Actual: <EXEC>", siguiente_proceso->pcb->pid);
+		log_info(kernel_principal, "PID: <%d> - Estado Anterior: <READY> - Estado Actual: <EXEC>", siguiente_proceso->pcb->pid);
 		sem_post(&sem_exec);
 	}
 
@@ -701,7 +706,7 @@ bool comparador_response_ratio(t_proceso* un_proceso, t_proceso* otro_proceso) {
 }
 
 void mostrar_response_ratio(t_proceso* un_proceso) {
-	log_info(logger_kernel, "PCB id[%d] tiene un RR de: %f", un_proceso->pcb->pid, un_proceso->response_ratio);
+	log_info(logger_kernel, "PID: <%d> tiene un RR de: %f", un_proceso->pcb->pid, un_proceso->response_ratio);
 }
 
 void calcular_estimacion(t_proceso* un_proceso) {
@@ -721,7 +726,7 @@ void estado_block_io(void) {
 		t_proceso *proceso = list_remove(cola_block_io, 0);
 		pthread_mutex_unlock(&mutex_block_io);
 
-		log_info(logger_kernel, "PID: <%d> - Ejecuta IO: <%d>", proceso->pcb->pid, proceso->tiempo_bloqueo);
+		log_info(kernel_principal, "PID: <%d> - Ejecuta IO: <%d>", proceso->pcb->pid, proceso->tiempo_bloqueo);
 		sleep(proceso->tiempo_bloqueo);
 
 		pthread_mutex_lock(&mutex_ready);
@@ -729,11 +734,11 @@ void estado_block_io(void) {
 
 		switch (config_kernel.algoritmo_planificacion) {
 		case FIFO:
-			log_info(logger_kernel, "Cola Ready <FIFO>:");
+			log_info(kernel_principal, "Cola Ready <FIFO>:");
 			mostrar_cola(cola_ready);
 			break;
 		case HRRN:
-			log_info(logger_kernel, "Cola Ready <HRRN>:");
+			log_info(kernel_principal, "Cola Ready <HRRN>:");
 			mostrar_cola(cola_ready);
 			break;
 		default:

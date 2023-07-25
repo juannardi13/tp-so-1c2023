@@ -122,9 +122,9 @@ void agregar_proceso_a_new(t_proceso* proceso) {
 	proceso->desalojado = DESALOJADO;
 	list_add(cola_new, proceso);
 
-	log_info(logger_kernel, "Se crea el proceso <%d> en NEW", proceso->pcb->pid);
+	log_info(kernel_principal, "Se crea el proceso <%d> en NEW", proceso->pcb->pid);
 
-	log_info(logger_kernel, "Cola NEW: ");
+	log_info(kernel_principal, "Cola NEW: ");
 	mostrar_cola(cola_new);
 	pthread_mutex_unlock(&mutex_new);
 
@@ -136,7 +136,7 @@ void mostrar_cola(t_list* lista) {
 
     for (int j = 0; j < list_size(lista); j++){
     	t_proceso* proceso = list_get(lista, j);
-        log_info(logger_kernel,"PID: <%d>",proceso->pcb->pid);
+        log_info(kernel_principal,"PID: <%d>",proceso->pcb->pid);
     }
 }
 

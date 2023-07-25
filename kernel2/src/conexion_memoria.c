@@ -226,13 +226,45 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 }
 
 void ordenar_compactacion(void) {
-	avisar_a_modulo(socket_memoria, COMPACTAR);
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	t_buffer* buffer = malloc(sizeof(t_buffer));
 
-	op_code respuesta_compactacion;
+	int numero_totalmente_arbitrario = 912;
 
-	recv(socket_memoria, &respuesta_compactacion, sizeof(op_code), MSG_WAITALL);
+	buffer->stream_size = sizeof(int);
 
-	switch(respuesta_compactacion) {
+	void* stream = malloc(buffer->stream_size);
+	int offset = 0;
+
+	memcpy(stream + offset, &numero_totalmente_arbitrario, sizeof(int));
+	offset += sizeof(int);
+
+	buffer->stream = stream;
+
+	paquete->codigo_operacion = COMPACTAR;
+	paquete->buffer;
+
+	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
+	int desplazamiento = 0;
+
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
+
+	send(socket_memoria, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
+
+	free(a_enviar);
+	eliminar_paquete(paquete);
+
+	t_paquete* paquete_respuesta = malloc(sizeof(t_paquete));
+	paquete_respuesta->buffer = malloc(sizeof(t_buffer));
+
+	recv(socket_memoria, &(paquete_respuesta->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+	recv(socket_memoria, &(paquete->buffer->stream_size), sizeof(int), 0);
+	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+	recv(socket_memoria, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+
+	switch(paquete_respuesta->codigo_operacion) {
 	case COMPACTACION_TERMINADA:
 		log_info(logger_kernel, "Se finalizó el proceso de compactación");
 		//recibir_tablas_segmentos_global();
