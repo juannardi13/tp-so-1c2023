@@ -53,6 +53,11 @@ int main(int argc, char** argv) {
 	log_info(logger, "Finalizó el proceso, terminando consola");
 //	finalizar_programa(conexion_kernel, logger, config);
 
+	log_destroy(logger);
+	config_destroy(config);
+	liberar_conexion(conexion_kernel);
+	free(instrucciones);
+
 	return 0;
 }
 
