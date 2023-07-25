@@ -146,6 +146,7 @@ void manejar_conexion(int* fd_cliente) {
 			//TODO acá van las operaciones que hacen para escribir en memoria.
 
 			break;
+
 		case CREAR_ESTRUCTURAS:
 
 			int pid_a_inicializar;
@@ -153,25 +154,29 @@ void manejar_conexion(int* fd_cliente) {
 			memcpy(&pid_a_inicializar, stream, sizeof(int));
 			stream += sizeof(int);
 
-			recv_nuevo_proceso(pid_a_inicializar, socket_cliente); //Modifiqué esta función para que ande bien.
+			recv_nuevo_proceso(pid_a_inicializar, socket_cliente); //Modifiqué esta función para que ande bien
 
 			break;
 
-		/*case INICIAR_PROCESO:
-			int pid_a_inicializar;
-
-			memcpy(&pid_a_inicializar, stream, sizeof(int));
-			stream += sizeof(int);
-
-			recv_nuevo_proceso(pid_a_inicializar, socket_cliente);
-			break;*/
-
 		case CREATE_SEGMENT:
-			recv_crear_segmento(socket_cliente);
+
+			int offset = 0;
+
+			int pid = deserializar_int(stream, &offset);
+			int id = deserializar_int(stream, &offset);
+			int tamanio = deserializar_int(stream, &offset);
+
+			recv_crear_segmento(socket_cliente, pid, id, tamanio);
 			break;
 
 		case DELETE_SEGMENT:
-			recv_eliminar_segmento(socket_cliente);
+
+			int offset_ = 0;
+
+			int pid_ = deserializar_int(stream, &offset_);
+			int id_a_borrar = deserializar_int(stream, &offset_);
+
+			recv_eliminar_segmento(socket_cliente, pid_, id_a_borrar);
 			break;
 
 		case COMPACTAR:

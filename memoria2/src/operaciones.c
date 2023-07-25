@@ -15,38 +15,38 @@ void atender_File_System(int *fileSystem_fd) {
 	}
 }
 
-void atender_kernel(int *kernel_fd) {
-
-	int socket_cliente = *kernel_fd;
-
-	while (1) {
-		int cod_op = recibir_operacion(socket_cliente);
-
-		switch(cod_op) {
-
-		/*case INICIAR_PROCESO:
-			recv_nuevo_proceso(socket_cliente);
-			break;*/
-
-		case CREATE_SEGMENT:
-			recv_crear_segmento(socket_cliente);
-			break;
-
-		case DELETE_SEGMENT:
-			recv_eliminar_segmento(socket_cliente);
-			break;
-
-		case COMPACTAR:
-			log_info(logger, "Inicia compactación");
-			compactar(socket_cliente);
-			break;
-
-		case -1:
-			log_warning(logger, "Se desconectó el File System!");
-			return;
-		}
-	}
-}
+//void atender_kernel(int *kernel_fd) {
+//
+//	int socket_cliente = *kernel_fd;
+//
+//	while (1) {
+//		int cod_op = recibir_operacion(socket_cliente);
+//
+//		switch(cod_op) {
+//
+//		/*case INICIAR_PROCESO:
+//			recv_nuevo_proceso(socket_cliente);
+//			break;*/
+//
+//		case CREATE_SEGMENT:
+//			recv_crear_segmento(socket_cliente);
+//			break;
+//
+//		case DELETE_SEGMENT:
+//			recv_eliminar_segmento(socket_cliente);
+//			break;
+//
+//		case COMPACTAR:
+//			log_info(logger, "Inicia compactación");
+//			compactar(socket_cliente);
+//			break;
+//
+//		case -1:
+//			log_warning(logger, "Se desconectó el File System!");
+//			return;
+//		}
+//	}
+//}
 
 void recv_nuevo_proceso(int pid, int socket_cliente) {
 
@@ -68,21 +68,11 @@ void send_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
 	enviar_paquete(paquete, socket_cliente);
 }
 
-void recv_crear_segmento(int socket_cliente) {
-
-	int size;
-	int offset = 0;
-
-	void *buffer = recibir_buffer(&size, socket_cliente);
-
-	int pid = deserializar_int(buffer, &offset);
-	int id = deserializar_int(buffer, &offset);
-	int tamanio = deserializar_int(buffer, &offset);
+void recv_crear_segmento(int socket_cliente, int pid, int id, int tamanio) {
 
 	if (! hay_espacio(tamanio)) { // NO hay espacio, no importa compactación
 		log_info(logger, "No hay espacio suficiente en memoria para crear el segmento solicitado");
 		send_op(socket_cliente, OUT_OF_MEMORY);
-		free(buffer);
 		return;
 	}
 
@@ -98,7 +88,6 @@ void recv_crear_segmento(int socket_cliente) {
 		log_info(logger, "No hay suficiente espacio contiguo para crear el segmento, requiere compactación");
 		send_op(socket_cliente, NECESITO_COMPACTAR);
 		dinamitar_listas(huecos_disponibles, huecos_suficientes);
-		free(buffer);
 		return;
 	}
 
@@ -113,8 +102,6 @@ void recv_crear_segmento(int socket_cliente) {
 	log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - Tamaño: %d", pid, id, base, tamanio);
 
 	send_base_segmento(socket_cliente, base);
-
-	free(buffer);
 }
 
 void send_base_segmento(int socket_cliente, int base) {
@@ -126,15 +113,7 @@ void send_base_segmento(int socket_cliente, int base) {
 	enviar_paquete(paquete, socket_cliente);
 }
 
-void recv_eliminar_segmento(int socket_cliente) {
-
-	int size;
-	int offset = 0;
-
-	void *buffer = recibir_buffer(&size, socket_cliente);
-
-	int pid = deserializar_int(buffer, &offset);
-	int id = deserializar_int(buffer, &offset);
+void recv_eliminar_segmento(int socket_cliente, int pid, int id) {
 
 	t_segmento *seg = obtener_segmento(pid, id);
 	int base = seg->base;
@@ -148,8 +127,6 @@ void recv_eliminar_segmento(int socket_cliente) {
 
 	t_tabla_segmentos *tabla = tabla_por_pid(pid);
 	send_tabla(socket_cliente, tabla);
-
-	free(buffer);
 }
 
 void compactar(int socket_cliente) {
