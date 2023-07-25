@@ -455,3 +455,21 @@
 [INFO] 03:30:18:452 cpu_principal.log/(17901:17901): PID: <1001> - Ejecutando: <SET RCX 0000000000000000>
 [INFO] 03:30:19:455 cpu_principal.log/(17901:17901): PID: <1001> - Ejecutando: <SET RDX 0000000000000000>
 [INFO] 03:30:19:455 cpu_principal.log/(17901:17901): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 18:47:29:436 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET AX COMO>
+[INFO] 18:47:30:446 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET BX DERE>
+[INFO] 18:47:30:446 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 18:47:36:453 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET CX PENT>
+[INFO] 18:47:37:453 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET DX ETOD>
+[INFO] 18:47:37:453 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:47:38:456 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET EAX OESORDEN>
+[INFO] 18:47:39:459 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET EBX ADODESDE>
+[INFO] 18:47:39:460 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 18:47:45:478 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET ECX QUEHASLL>
+[INFO] 18:47:46:478 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET EDX EGADOMIV>
+[INFO] 18:47:46:478 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 18:47:47:483 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET RAX IDACAMBIOYANOSOY>
+[INFO] 18:47:48:484 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET RBX LAMISMAQUETUCONO>
+[INFO] 18:47:48:484 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 18:47:54:490 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET RCX CISTEENTONCESAHO>
+[INFO] 18:47:55:543 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET RDX RASOYMUCHOMEJOR!>
+[INFO] 18:47:55:543 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <EXIT>

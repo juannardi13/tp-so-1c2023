@@ -96,3 +96,7 @@
 [INFO] 03:28:37:187 MEMORIA/(17889:17960): Creación de Proceso PID: 1001
 [ERROR] 03:30:45:688 MEMORIA/(17889:17960): [ERROR] Operación desconocida.
 [ERROR] 03:30:45:688 MEMORIA/(17889:17907): [ERROR] Operación desconocida.
+[INFO] 18:46:52:101 MEMORIA/(21390:21390): Se inicializaron las estructuras de Memoria
+[INFO] 18:46:52:102 MEMORIA/(21390:21390): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:47:28:435 MEMORIA/(21390:21511): Creación de Proceso PID: 1000
+[ERROR] 18:48:10:570 MEMORIA/(21390:21511): [ERROR] Operación desconocida.
