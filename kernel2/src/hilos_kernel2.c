@@ -85,7 +85,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	t_pcb* un_pcb = malloc(sizeof(t_pcb));
 	pthread_mutex_lock(&mutex_pid);
 	un_pcb->pid = pid_global;
-	un_pcb->pid_string = int_to_string(pid_global);
+	//un_pcb->pid_string = int_to_string(pid_global);
 	pid_global++;
 	pthread_mutex_unlock(&mutex_pid);
 	un_pcb->tamanio_instrucciones = tamanio_proceso;
@@ -101,7 +101,7 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	pthread_mutex_lock(&mutex_operacion_memoria);
 	un_pcb->tabla_segmentos.pid = un_pcb->pid;
 	un_pcb->tabla_segmentos.segmentos = list_create();
-	//asignar_segmentos_de_memoria(un_pcb);
+	asignar_segmentos_de_memoria(un_pcb);
 	pthread_mutex_unlock(&mutex_operacion_memoria);
 
 	//un_pcb->rafaga_estimada = config_kernel.estimacion_inicial; // TODO las rafagas y todos los tiempos que necesita el proceso para calcular el HRRN ahora estan en la estructura del proceso.

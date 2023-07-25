@@ -107,7 +107,7 @@ void estado_ejecutar(void) {
 		memcpy(&cant_segmentos, stream, sizeof(int));
 		stream += sizeof(int);
 
-		//list_clean_and_destroy_elements(proceso_a_ejecutar->pcb->tabla_segmentos->segmentos, free);
+		list_clean_and_destroy_elements(proceso_a_ejecutar->pcb->tabla_segmentos.segmentos, free);
 
 		for(int m = 0; m < cant_segmentos; m++) {
 			t_segmento* aux = malloc(sizeof(t_segmento));

@@ -22,9 +22,6 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 
 		void* stream = paquete_respuesta->buffer->stream;
 
-		memcpy(&(tabla.pid), stream, sizeof(int));
-		stream += sizeof(int);
-
 		int tam_segmentos;
 		t_segmento* aux = malloc(sizeof(t_segmento));
 
@@ -45,6 +42,7 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 		}
 
 		pcb->tabla_segmentos = tabla;
+
 		break;
 	default:
 		log_error(logger_kernel, "[ERROR] Error creando las estructuras de memoria para el PID: <%d>", pcb->pid);
@@ -246,7 +244,7 @@ void ordenar_compactacion(void) {
 }
 
 //-----------------Funciones para tratar con la Tabla Global de Segmentos
-
+/*
 void inicializar_tabla_global_segmentos(void) {
 
 	segmentos = dictionary_create();
@@ -262,4 +260,4 @@ void actualizar_tablas_segmentos(t_proceso* proceso) {
 	list_destroy_and_destroy_elements(proceso->pcb->tabla_segmentos.segmentos);
 
 	proceso->pcb->tabla_segmentos = dictionary_get(segmentos, proceso->pcb->pid_string);
-}
+}*/
