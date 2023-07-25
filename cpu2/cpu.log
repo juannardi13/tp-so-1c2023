@@ -4316,3 +4316,786 @@
 [WARNING] 18:42:03:531 cpu.log/(8689:8689): RDX: 0000000000000000
 [INFO] 18:42:03:531 cpu.log/(8689:8689): CPU esperando a recibir un nuevo proceso para ejecutar.
 [ERROR] 18:42:32:979 cpu.log/(8689:8689): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 02:16:38:313 cpu.log/(14078:14078): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 02:16:38:313 cpu.log/(14078:14078): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 02:16:38:314 cpu.log/(14078:14078): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 02:16:51:852 cpu.log/(14078:14078): Cliente conectado (a CPU)
+
+[INFO] 02:16:51:852 cpu.log/(14078:14078): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 02:21:06:178 cpu.log/(14078:14078): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 02:27:39:241 cpu.log/(14509:14509): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 02:27:39:241 cpu.log/(14509:14509): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 02:27:39:241 cpu.log/(14509:14509): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 02:27:50:370 cpu.log/(14509:14509): Cliente conectado (a CPU)
+
+[INFO] 02:27:50:370 cpu.log/(14509:14509): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 02:29:57:402 cpu.log/(14509:14509): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 02:53:27:921 cpu.log/(15104:15104): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 02:53:27:921 cpu.log/(15104:15104): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 02:53:27:921 cpu.log/(15104:15104): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 02:53:32:866 cpu.log/(15104:15104): Cliente conectado (a CPU)
+
+[INFO] 02:53:32:866 cpu.log/(15104:15104): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 02:53:49:207 cpu.log/(15104:15104): Los registros que trajo PID: <1000> son: 
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 00000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 00000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 00000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 00000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000000000000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000000000000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000000000000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): 0000000000000000
+[INFO] 02:53:49:207 cpu.log/(15104:15104): PID: <1000> recibido desde el Kernel para ejecutar.
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): AX: COMO
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): BX: DERE
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): CX: 0000
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): DX: 0000
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): EAX: 00000000
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): EBX: 00000000
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): ECX: 00000000
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): EDX: 00000000
+[WARNING] 02:53:51:208 cpu.log/(15104:15104): RAX: 0000000000000000
+[WARNING] 02:53:51:209 cpu.log/(15104:15104): RBX: 0000000000000000
+[WARNING] 02:53:51:209 cpu.log/(15104:15104): RCX: 0000000000000000
+[WARNING] 02:53:51:209 cpu.log/(15104:15104): RDX: 0000000000000000
+[INFO] 02:53:51:209 cpu.log/(15104:15104): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 02:54:06:950 cpu.log/(15104:15104): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 03:07:28:473 cpu.log/(16618:16618): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 03:07:28:473 cpu.log/(16618:16618): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 03:07:28:474 cpu.log/(16618:16618): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 03:07:35:295 cpu.log/(16618:16618): Cliente conectado (a CPU)
+
+[INFO] 03:07:35:295 cpu.log/(16618:16618): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:07:48:363 cpu.log/(16618:16618): Los registros que trajo PID: <1000> son: 
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 00000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 00000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 00000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 00000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000000000000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000000000000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000000000000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): 0000000000000000
+[INFO] 03:07:48:363 cpu.log/(16618:16618): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:07:48:363 cpu.log/(16618:16618): Segmento <0>:
+[INFO] 03:07:48:363 cpu.log/(16618:16618): Base <0>
+[INFO] 03:07:48:363 cpu.log/(16618:16618): ID <0>
+[INFO] 03:07:48:363 cpu.log/(16618:16618): Tamaño <128>
+[INFO] 03:11:46:659 cpu.log/(17099:17099): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 03:11:47:821 cpu.log/(17099:17099): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 03:11:52:205 cpu.log/(17099:17099): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 03:11:59:336 cpu.log/(17099:17099): Cliente conectado (a CPU)
+
+[INFO] 03:13:25:497 cpu.log/(17099:17099): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:13:35:567 cpu.log/(17099:17099): Los registros que trajo PID: <1000> son: 
+[INFO] 03:13:35:689 cpu.log/(17099:17099): 0000
+[INFO] 03:13:35:845 cpu.log/(17099:17099): 0000
+[INFO] 03:13:36:088 cpu.log/(17099:17099): 0000
+[INFO] 03:13:36:241 cpu.log/(17099:17099): 0000
+[INFO] 03:13:36:364 cpu.log/(17099:17099): 00000000
+[INFO] 03:13:36:516 cpu.log/(17099:17099): 00000000
+[INFO] 03:13:36:672 cpu.log/(17099:17099): 00000000
+[INFO] 03:13:36:791 cpu.log/(17099:17099): 00000000
+[INFO] 03:13:36:914 cpu.log/(17099:17099): 0000000000000000
+[INFO] 03:13:37:095 cpu.log/(17099:17099): 0000000000000000
+[INFO] 03:13:37:476 cpu.log/(17099:17099): 0000000000000000
+[INFO] 03:13:37:915 cpu.log/(17099:17099): 0000000000000000
+[INFO] 03:13:38:599 cpu.log/(17099:17099): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:13:48:878 cpu.log/(17099:17099): Segmento <0>:
+[INFO] 03:13:49:235 cpu.log/(17099:17099): Base <0>
+[INFO] 03:13:49:557 cpu.log/(17099:17099): ID <0>
+[INFO] 03:13:50:094 cpu.log/(17099:17099): Tamaño <128>
+[INFO] 03:15:56:638 cpu.log/(17353:17353): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 03:15:56:638 cpu.log/(17353:17353): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 03:15:56:639 cpu.log/(17353:17353): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 03:17:26:393 cpu.log/(17405:17405): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 03:17:27:056 cpu.log/(17405:17405): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 03:17:28:817 cpu.log/(17405:17405): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 03:17:35:261 cpu.log/(17405:17405): Cliente conectado (a CPU)
+
+[INFO] 03:17:43:268 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:17:50:479 cpu.log/(17405:17405): Los registros que trajo PID: <1000> son: 
+[INFO] 03:17:50:583 cpu.log/(17405:17405): 0000
+[INFO] 03:17:50:730 cpu.log/(17405:17405): 0000
+[INFO] 03:17:50:831 cpu.log/(17405:17405): 0000
+[INFO] 03:17:50:932 cpu.log/(17405:17405): 0000
+[INFO] 03:17:51:038 cpu.log/(17405:17405): 00000000
+[INFO] 03:17:51:137 cpu.log/(17405:17405): 00000000
+[INFO] 03:17:51:239 cpu.log/(17405:17405): 00000000
+[INFO] 03:17:51:342 cpu.log/(17405:17405): 00000000
+[INFO] 03:17:51:443 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:17:51:545 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:17:52:198 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:17:52:571 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:17:53:096 cpu.log/(17405:17405): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:18:00:622 cpu.log/(17405:17405): Segmento <0>:
+[INFO] 03:18:01:057 cpu.log/(17405:17405): Base <0>
+[INFO] 03:18:01:495 cpu.log/(17405:17405): ID <0>
+[INFO] 03:18:02:772 cpu.log/(17405:17405): Tamaño <128>
+[WARNING] 03:19:22:375 cpu.log/(17405:17405): AX: COMO
+[WARNING] 03:19:22:580 cpu.log/(17405:17405): BX: DERE
+[WARNING] 03:19:22:846 cpu.log/(17405:17405): CX: 0000
+[WARNING] 03:19:23:058 cpu.log/(17405:17405): DX: 0000
+[WARNING] 03:19:23:237 cpu.log/(17405:17405): EAX: 00000000
+[WARNING] 03:19:23:418 cpu.log/(17405:17405): EBX: 00000000
+[WARNING] 03:19:23:637 cpu.log/(17405:17405): ECX: 00000000
+[WARNING] 03:19:23:750 cpu.log/(17405:17405): EDX: 00000000
+[WARNING] 03:19:23:932 cpu.log/(17405:17405): RAX: 0000000000000000
+[WARNING] 03:19:24:113 cpu.log/(17405:17405): RBX: 0000000000000000
+[WARNING] 03:19:24:265 cpu.log/(17405:17405): RCX: 0000000000000000
+[WARNING] 03:19:24:489 cpu.log/(17405:17405): RDX: 0000000000000000
+[INFO] 03:19:26:321 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:19:32:301 cpu.log/(17405:17405): Los registros que trajo PID: <1000> son: 
+[INFO] 03:19:32:301 cpu.log/(17405:17405): COMO
+[INFO] 03:19:32:301 cpu.log/(17405:17405): DERE
+[INFO] 03:19:32:301 cpu.log/(17405:17405): 0000
+[INFO] 03:19:32:301 cpu.log/(17405:17405): 0000
+[INFO] 03:19:32:301 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:32:301 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:32:301 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:32:302 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:32:302 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:32:302 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:32:302 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:32:302 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:32:302 cpu.log/(17405:17405): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:19:32:302 cpu.log/(17405:17405): Segmento <0>:
+[INFO] 03:19:32:302 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:32:302 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:32:302 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:32:302 cpu.log/(17405:17405): Segmento <1>:
+[INFO] 03:19:32:302 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:32:302 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:32:302 cpu.log/(17405:17405): Tamaño <128>
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): AX: COMO
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): BX: DERE
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): CX: PENT
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): DX: ETOD
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): EAX: 00000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): EBX: 00000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): ECX: 00000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): EDX: 00000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): RAX: 0000000000000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): RBX: 0000000000000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): RCX: 0000000000000000
+[WARNING] 03:19:34:313 cpu.log/(17405:17405): RDX: 0000000000000000
+[INFO] 03:19:34:313 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:19:34:313 cpu.log/(17405:17405): Los registros que trajo PID: <1000> son: 
+[INFO] 03:19:34:313 cpu.log/(17405:17405): COMO
+[INFO] 03:19:34:313 cpu.log/(17405:17405): DERE
+[INFO] 03:19:34:313 cpu.log/(17405:17405): PENT
+[INFO] 03:19:34:313 cpu.log/(17405:17405): ETOD
+[INFO] 03:19:34:313 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:34:313 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:34:314 cpu.log/(17405:17405): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Segmento <0>:
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Segmento <1>:
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Segmento <2>:
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Segmento <3>:
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:34:314 cpu.log/(17405:17405): Tamaño <128>
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): AX: COMO
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): BX: DERE
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): CX: PENT
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): DX: ETOD
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): EAX: OESORDEN
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): EBX: ADODESDE
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): ECX: 00000000
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): EDX: 00000000
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): RAX: 0000000000000000
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): RBX: 0000000000000000
+[WARNING] 03:19:36:322 cpu.log/(17405:17405): RCX: 0000000000000000
+[WARNING] 03:19:36:323 cpu.log/(17405:17405): RDX: 0000000000000000
+[INFO] 03:19:36:323 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Los registros que trajo PID: <1000> son: 
+[INFO] 03:19:41:328 cpu.log/(17405:17405): COMO
+[INFO] 03:19:41:328 cpu.log/(17405:17405): DERE
+[INFO] 03:19:41:328 cpu.log/(17405:17405): PENT
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ETOD
+[INFO] 03:19:41:328 cpu.log/(17405:17405): OESORDEN
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ADODESDE
+[INFO] 03:19:41:328 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:41:328 cpu.log/(17405:17405): 00000000
+[INFO] 03:19:41:328 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:41:328 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:41:328 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:41:328 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:41:328 cpu.log/(17405:17405): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <0>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <1>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <2>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <3>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <4>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <5>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <6>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Segmento <7>:
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:41:328 cpu.log/(17405:17405): Tamaño <128>
+[WARNING] 03:19:43:331 cpu.log/(17405:17405): AX: COMO
+[WARNING] 03:19:43:331 cpu.log/(17405:17405): BX: DERE
+[WARNING] 03:19:43:331 cpu.log/(17405:17405): CX: PENT
+[WARNING] 03:19:43:331 cpu.log/(17405:17405): DX: ETOD
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): EAX: OESORDEN
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): EBX: ADODESDE
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): ECX: QUEHASLL
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): EDX: EGADOMIV
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): RAX: 0000000000000000
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): RBX: 0000000000000000
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): RCX: 0000000000000000
+[WARNING] 03:19:43:332 cpu.log/(17405:17405): RDX: 0000000000000000
+[INFO] 03:19:43:332 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:19:43:335 cpu.log/(17405:17405): Los registros que trajo PID: <1000> son: 
+[INFO] 03:19:43:335 cpu.log/(17405:17405): COMO
+[INFO] 03:19:43:335 cpu.log/(17405:17405): DERE
+[INFO] 03:19:43:335 cpu.log/(17405:17405): PENT
+[INFO] 03:19:43:335 cpu.log/(17405:17405): ETOD
+[INFO] 03:19:43:335 cpu.log/(17405:17405): OESORDEN
+[INFO] 03:19:43:335 cpu.log/(17405:17405): ADODESDE
+[INFO] 03:19:43:335 cpu.log/(17405:17405): QUEHASLL
+[INFO] 03:19:43:335 cpu.log/(17405:17405): EGADOMIV
+[INFO] 03:19:43:335 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:43:335 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:43:336 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:43:336 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:43:336 cpu.log/(17405:17405): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <0>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <1>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <2>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <3>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <4>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <5>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <6>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <7>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <8>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <9>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <10>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <11>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <12>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <13>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <14>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Segmento <15>:
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:43:336 cpu.log/(17405:17405): Tamaño <128>
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): AX: COMO
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): BX: DERE
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): CX: PENT
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): DX: ETOD
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): EAX: OESORDEN
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): EBX: ADODESDE
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): ECX: QUEHASLL
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): EDX: EGADOMIV
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): RAX: IDACAMBIOYANOSOY
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): RBX: LAMISMAQUETUCONO
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): RCX: 0000000000000000
+[WARNING] 03:19:45:338 cpu.log/(17405:17405): RDX: 0000000000000000
+[INFO] 03:19:45:338 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Los registros que trajo PID: <1000> son: 
+[INFO] 03:19:50:341 cpu.log/(17405:17405): COMO
+[INFO] 03:19:50:341 cpu.log/(17405:17405): DERE
+[INFO] 03:19:50:341 cpu.log/(17405:17405): PENT
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ETOD
+[INFO] 03:19:50:341 cpu.log/(17405:17405): OESORDEN
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ADODESDE
+[INFO] 03:19:50:341 cpu.log/(17405:17405): QUEHASLL
+[INFO] 03:19:50:341 cpu.log/(17405:17405): EGADOMIV
+[INFO] 03:19:50:341 cpu.log/(17405:17405): IDACAMBIOYANOSOY
+[INFO] 03:19:50:341 cpu.log/(17405:17405): LAMISMAQUETUCONO
+[INFO] 03:19:50:341 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:50:341 cpu.log/(17405:17405): 0000000000000000
+[INFO] 03:19:50:341 cpu.log/(17405:17405): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <0>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <1>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <2>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <3>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <4>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <5>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <6>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <7>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <8>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <9>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <10>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <11>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <12>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <13>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <14>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <15>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <16>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <17>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <18>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <19>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <20>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <21>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <22>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <23>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <24>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <25>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Segmento <26>:
+[INFO] 03:19:50:341 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Segmento <27>:
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Segmento <28>:
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Segmento <29>:
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Segmento <30>:
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Tamaño <128>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Segmento <31>:
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Base <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): ID <0>
+[INFO] 03:19:50:342 cpu.log/(17405:17405): Tamaño <128>
+[WARNING] 03:19:52:342 cpu.log/(17405:17405): AX: COMO
+[WARNING] 03:19:52:342 cpu.log/(17405:17405): BX: DERE
+[WARNING] 03:19:52:342 cpu.log/(17405:17405): CX: PENT
+[WARNING] 03:19:52:342 cpu.log/(17405:17405): DX: ETOD
+[WARNING] 03:19:52:342 cpu.log/(17405:17405): EAX: OESORDEN
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): EBX: ADODESDE
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): ECX: QUEHASLL
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): EDX: EGADOMIV
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): RAX: IDACAMBIOYANOSOY
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): RBX: LAMISMAQUETUCONO
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): RCX: CISTEENTONCESAHO
+[WARNING] 03:19:52:343 cpu.log/(17405:17405): RDX: RASOYMUCHOMEJOR!
+[INFO] 03:19:52:343 cpu.log/(17405:17405): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 03:21:26:149 cpu.log/(17405:17405): [ERROR] Se desconectó Kernel, chau loco suerte.
+[INFO] 03:22:31:684 cpu.log/(17901:17901): Hola! Se inicializo el modulo cliente CPU.
+[INFO] 03:22:31:684 cpu.log/(17901:17901): La configuracion de la conexion indica el PUERTO 127.0.0.1 y la IP 8888
+[INFO] 03:22:31:684 cpu.log/(17901:17901): CPU inicializado, esperando a recibir al Kernel en el PUERTO 8888.
+
+[INFO] 03:22:41:955 cpu.log/(17901:17901): Cliente conectado (a CPU)
+
+[INFO] 03:22:41:955 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:23:29:874 cpu.log/(17901:17901): Los registros que trajo PID: <1000> son: 
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 0000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 0000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 0000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 0000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 00000000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 00000000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 00000000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 00000000
+[INFO] 03:23:29:874 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:23:29:875 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:23:29:875 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:23:29:875 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:23:29:875 cpu.log/(17901:17901): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:23:29:875 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:23:29:875 cpu.log/(17901:17901): Base <0>
+[INFO] 03:23:29:875 cpu.log/(17901:17901): ID <0>
+[INFO] 03:23:29:875 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): AX: COMO
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): BX: DERE
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): CX: 0000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): DX: 0000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): EAX: 00000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): EBX: 00000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): ECX: 00000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): EDX: 00000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): RAX: 0000000000000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): RBX: 0000000000000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): RCX: 0000000000000000
+[WARNING] 03:23:31:876 cpu.log/(17901:17901): RDX: 0000000000000000
+[INFO] 03:23:31:876 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:24:20:275 cpu.log/(17901:17901): Los registros que trajo PID: <1000> son: 
+[INFO] 03:24:20:275 cpu.log/(17901:17901): COMO
+[INFO] 03:24:20:275 cpu.log/(17901:17901): DERE
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 0000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 0000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:20:275 cpu.log/(17901:17901): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:24:20:275 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:24:20:275 cpu.log/(17901:17901): Base <0>
+[INFO] 03:24:20:275 cpu.log/(17901:17901): ID <0>
+[INFO] 03:24:20:275 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): AX: COMO
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): BX: DERE
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): CX: PENT
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): DX: ETOD
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): EAX: 00000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): EBX: 00000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): ECX: 00000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): EDX: 00000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): RAX: 0000000000000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): RBX: 0000000000000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): RCX: 0000000000000000
+[WARNING] 03:24:22:277 cpu.log/(17901:17901): RDX: 0000000000000000
+[INFO] 03:24:22:277 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:24:47:221 cpu.log/(17901:17901): Los registros que trajo PID: <1000> son: 
+[INFO] 03:24:47:222 cpu.log/(17901:17901): COMO
+[INFO] 03:24:47:222 cpu.log/(17901:17901): DERE
+[INFO] 03:24:47:222 cpu.log/(17901:17901): PENT
+[INFO] 03:24:47:222 cpu.log/(17901:17901): ETOD
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 00000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:24:47:222 cpu.log/(17901:17901): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:24:47:222 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:24:47:222 cpu.log/(17901:17901): Base <0>
+[INFO] 03:24:47:222 cpu.log/(17901:17901): ID <0>
+[INFO] 03:24:47:222 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): AX: COMO
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): BX: DERE
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): CX: PENT
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): DX: ETOD
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): EAX: OESORDEN
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): EBX: ADODESDE
+[WARNING] 03:24:49:228 cpu.log/(17901:17901): ECX: 00000000
+[WARNING] 03:24:49:229 cpu.log/(17901:17901): EDX: 00000000
+[WARNING] 03:24:49:229 cpu.log/(17901:17901): RAX: 0000000000000000
+[WARNING] 03:24:49:229 cpu.log/(17901:17901): RBX: 0000000000000000
+[WARNING] 03:24:49:229 cpu.log/(17901:17901): RCX: 0000000000000000
+[WARNING] 03:24:49:229 cpu.log/(17901:17901): RDX: 0000000000000000
+[INFO] 03:24:49:229 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:27:07:005 cpu.log/(17901:17901): Los registros que trajo PID: <1000> son: 
+[INFO] 03:27:07:005 cpu.log/(17901:17901): COMO
+[INFO] 03:27:07:005 cpu.log/(17901:17901): DERE
+[INFO] 03:27:07:005 cpu.log/(17901:17901): PENT
+[INFO] 03:27:07:005 cpu.log/(17901:17901): ETOD
+[INFO] 03:27:07:005 cpu.log/(17901:17901): OESORDEN
+[INFO] 03:27:07:005 cpu.log/(17901:17901): ADODESDE
+[INFO] 03:27:07:005 cpu.log/(17901:17901): 00000000
+[INFO] 03:27:07:005 cpu.log/(17901:17901): 00000000
+[INFO] 03:27:07:005 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:07:005 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:07:005 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:07:006 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:07:006 cpu.log/(17901:17901): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:27:07:006 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:27:07:006 cpu.log/(17901:17901): Base <0>
+[INFO] 03:27:07:006 cpu.log/(17901:17901): ID <0>
+[INFO] 03:27:07:006 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): AX: COMO
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): BX: DERE
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): CX: PENT
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): DX: ETOD
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): EAX: OESORDEN
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): EBX: ADODESDE
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): ECX: QUEHASLL
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): EDX: EGADOMIV
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): RAX: 0000000000000000
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): RBX: 0000000000000000
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): RCX: 0000000000000000
+[WARNING] 03:27:09:006 cpu.log/(17901:17901): RDX: 0000000000000000
+[INFO] 03:27:09:006 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:27:34:586 cpu.log/(17901:17901): Los registros que trajo PID: <1000> son: 
+[INFO] 03:27:34:586 cpu.log/(17901:17901): COMO
+[INFO] 03:27:34:586 cpu.log/(17901:17901): DERE
+[INFO] 03:27:34:586 cpu.log/(17901:17901): PENT
+[INFO] 03:27:34:586 cpu.log/(17901:17901): ETOD
+[INFO] 03:27:34:586 cpu.log/(17901:17901): OESORDEN
+[INFO] 03:27:34:586 cpu.log/(17901:17901): ADODESDE
+[INFO] 03:27:34:586 cpu.log/(17901:17901): QUEHASLL
+[INFO] 03:27:34:586 cpu.log/(17901:17901): EGADOMIV
+[INFO] 03:27:34:586 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:34:586 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:34:586 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:34:586 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:27:34:586 cpu.log/(17901:17901): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:27:34:586 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:27:34:586 cpu.log/(17901:17901): Base <0>
+[INFO] 03:27:34:586 cpu.log/(17901:17901): ID <0>
+[INFO] 03:27:34:586 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:27:36:587 cpu.log/(17901:17901): AX: COMO
+[WARNING] 03:27:36:587 cpu.log/(17901:17901): BX: DERE
+[WARNING] 03:27:36:587 cpu.log/(17901:17901): CX: PENT
+[WARNING] 03:27:36:587 cpu.log/(17901:17901): DX: ETOD
+[WARNING] 03:27:36:587 cpu.log/(17901:17901): EAX: OESORDEN
+[WARNING] 03:27:36:588 cpu.log/(17901:17901): EBX: ADODESDE
+[WARNING] 03:27:36:588 cpu.log/(17901:17901): ECX: QUEHASLL
+[WARNING] 03:27:36:590 cpu.log/(17901:17901): EDX: EGADOMIV
+[WARNING] 03:27:36:590 cpu.log/(17901:17901): RAX: IDACAMBIOYANOSOY
+[WARNING] 03:27:36:590 cpu.log/(17901:17901): RBX: LAMISMAQUETUCONO
+[WARNING] 03:27:36:590 cpu.log/(17901:17901): RCX: 0000000000000000
+[WARNING] 03:27:36:590 cpu.log/(17901:17901): RDX: 0000000000000000
+[INFO] 03:27:36:590 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:28:08:832 cpu.log/(17901:17901): Los registros que trajo PID: <1000> son: 
+[INFO] 03:28:08:832 cpu.log/(17901:17901): COMO
+[INFO] 03:28:08:833 cpu.log/(17901:17901): DERE
+[INFO] 03:28:08:833 cpu.log/(17901:17901): PENT
+[INFO] 03:28:08:833 cpu.log/(17901:17901): ETOD
+[INFO] 03:28:08:833 cpu.log/(17901:17901): OESORDEN
+[INFO] 03:28:08:833 cpu.log/(17901:17901): ADODESDE
+[INFO] 03:28:08:833 cpu.log/(17901:17901): QUEHASLL
+[INFO] 03:28:08:833 cpu.log/(17901:17901): EGADOMIV
+[INFO] 03:28:08:833 cpu.log/(17901:17901): IDACAMBIOYANOSOY
+[INFO] 03:28:08:833 cpu.log/(17901:17901): LAMISMAQUETUCONO
+[INFO] 03:28:08:833 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:28:08:833 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:28:08:833 cpu.log/(17901:17901): PID: <1000> recibido desde el Kernel para ejecutar.
+[INFO] 03:28:08:833 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:28:08:833 cpu.log/(17901:17901): Base <0>
+[INFO] 03:28:08:833 cpu.log/(17901:17901): ID <0>
+[INFO] 03:28:08:833 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): AX: COMO
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): BX: DERE
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): CX: PENT
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): DX: ETOD
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): EAX: OESORDEN
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): EBX: ADODESDE
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): ECX: QUEHASLL
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): EDX: EGADOMIV
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): RAX: IDACAMBIOYANOSOY
+[WARNING] 03:28:10:835 cpu.log/(17901:17901): RBX: LAMISMAQUETUCONO
+[WARNING] 03:28:10:836 cpu.log/(17901:17901): RCX: CISTEENTONCESAHO
+[WARNING] 03:28:10:836 cpu.log/(17901:17901): RDX: RASOYMUCHOMEJOR!
+[INFO] 03:28:10:836 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:28:51:616 cpu.log/(17901:17901): Los registros que trajo PID: <1001> son: 
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 00000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 00000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 00000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 00000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): 0000000000000000
+[INFO] 03:28:51:616 cpu.log/(17901:17901): PID: <1001> recibido desde el Kernel para ejecutar.
+[INFO] 03:28:51:616 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:28:51:616 cpu.log/(17901:17901): Base <0>
+[INFO] 03:28:51:616 cpu.log/(17901:17901): ID <0>
+[INFO] 03:28:51:616 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:29:00:642 cpu.log/(17901:17901): AX: SOY_
+[WARNING] 03:29:00:642 cpu.log/(17901:17901): BX: LA__
+[WARNING] 03:29:00:642 cpu.log/(17901:17901): CX: CONS
+[WARNING] 03:29:00:642 cpu.log/(17901:17901): DX: OLA_
+[WARNING] 03:29:00:642 cpu.log/(17901:17901): EAX: LIMPIADO
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): EBX: RA!_____
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): ECX: PONGO___
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): EDX: TODO_EN_
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): RAX: 0_DE_NUEVO!_____
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): RBX: LAMISMAQUETUCONO
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): RCX: CISTEENTONCESAHO
+[WARNING] 03:29:00:643 cpu.log/(17901:17901): RDX: RASOYMUCHOMEJOR!
+[INFO] 03:29:00:643 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[INFO] 03:30:07:426 cpu.log/(17901:17901): Los registros que trajo PID: <1001> son: 
+[INFO] 03:30:07:426 cpu.log/(17901:17901): SOY_
+[INFO] 03:30:07:426 cpu.log/(17901:17901): LA__
+[INFO] 03:30:07:426 cpu.log/(17901:17901): CONS
+[INFO] 03:30:07:426 cpu.log/(17901:17901): OLA_
+[INFO] 03:30:07:426 cpu.log/(17901:17901): LIMPIADO
+[INFO] 03:30:07:426 cpu.log/(17901:17901): RA!_____
+[INFO] 03:30:07:426 cpu.log/(17901:17901): PONGO___
+[INFO] 03:30:07:426 cpu.log/(17901:17901): TODO_EN_
+[INFO] 03:30:07:426 cpu.log/(17901:17901): 0_DE_NUEVO!_____
+[INFO] 03:30:07:426 cpu.log/(17901:17901): LAMISMAQUETUCONO
+[INFO] 03:30:07:426 cpu.log/(17901:17901): CISTEENTONCESAHO
+[INFO] 03:30:07:426 cpu.log/(17901:17901): RASOYMUCHOMEJOR!
+[INFO] 03:30:07:426 cpu.log/(17901:17901): PID: <1001> recibido desde el Kernel para ejecutar.
+[INFO] 03:30:07:426 cpu.log/(17901:17901): Segmento <0>:
+[INFO] 03:30:07:426 cpu.log/(17901:17901): Base <0>
+[INFO] 03:30:07:426 cpu.log/(17901:17901): ID <0>
+[INFO] 03:30:07:426 cpu.log/(17901:17901): Tamaño <128>
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): AX: 0000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): BX: 0000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): CX: 0000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): DX: 0000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): EAX: 00000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): EBX: 00000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): ECX: 00000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): EDX: 00000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): RAX: 0000000000000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): RBX: 0000000000000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): RCX: 0000000000000000
+[WARNING] 03:30:19:456 cpu.log/(17901:17901): RDX: 0000000000000000
+[INFO] 03:30:19:456 cpu.log/(17901:17901): CPU esperando a recibir un nuevo proceso para ejecutar.
+[ERROR] 03:30:45:688 cpu.log/(17901:17901): [ERROR] Se desconectó Kernel, chau loco suerte.
