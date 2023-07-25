@@ -175,6 +175,11 @@ void manejar_conexion(int* fd_cliente) {
 			compactar(socket_cliente);
 			break;
 			//FALTA FILE SYSTEM QUE SERIA LO MISMO QUE CPU... DEBATIR
+
+		case LIBERAR_ESTRUCTURAS:
+			recv_liberar_estructuras(socket_cliente, stream);
+			break;
+
 		default:
 			log_error(logger, "Operación desconocida.");
 			abort();
@@ -188,18 +193,11 @@ void terminar_memoria(void) {
 	config_destroy(config);
 	log_destroy(logger);
 	free(conexiones[0]);//No iria mas si hacemos lo que juani dijo del case
-	list_destroy_and_destroy_elements(tablas_segmentos, (void *) destructor_lista_tablas);
+	list_destroy_and_destroy_elements(tablas_segmentos, (void *) destruir_tabla);
 	free(segmento_0);
 	destruir_bitmap();
 	free(memoria);
 }
-
-void destructor_lista_tablas(t_tabla_segmentos *tabla) {
-
-	list_destroy_and_destroy_elements(tabla->segmentos, (void *) liberar_segmento);
-	free(tabla);
-}
-
 
 void destruir_bitmap(void) {
 	free(bitmap->bitarray);

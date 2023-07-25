@@ -28,5 +28,6 @@ void *obtener_contenido(t_segmento *);
 int primer_byte_disponible(void);
 bool esta_ocupado(int);
 void mostrar_esquema_memoria(void);
+void destruir_tabla(t_tabla_segmentos *);
 
 #endif /* SEGMENTACION_H_ */

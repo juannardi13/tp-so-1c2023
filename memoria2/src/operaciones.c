@@ -205,6 +205,21 @@ void send_tablas(int socket_cliente) {
 	enviar_paquete(paquete, socket_cliente);
 }
 
+void recv_liberar_estructuras(int socket_cliente, void *stream) {
+
+	int offset = 0;
+
+	int pid = deserializar_int(stream, &offset);
+
+	bool mismo_pid(t_tabla_segmentos *tabla) {
+		return tabla->pid == pid;
+	}
+
+	list_remove_and_destroy_by_condition(tablas_segmentos, (void *) mismo_pid, (void *) destruir_tabla);
+
+	send_op(socket_cliente, ESTRUCTURAS_LIBERADAS);
+}
+
 // AGREGO INICIO DE ATENDER A CPU
 void atender_CPU(int *cpu_fd){
 

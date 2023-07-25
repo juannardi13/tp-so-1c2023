@@ -244,3 +244,9 @@ void mostrar_esquema_memoria(void) {
 		}
 	}
 }
+
+void destruir_tabla(t_tabla_segmentos *tabla) {
+
+	list_destroy_and_destroy_elements(tabla->segmentos, (void *) liberar_segmento);
+	free(tabla);
+}

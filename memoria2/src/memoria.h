@@ -18,7 +18,6 @@ t_segmento *segmento_0;
 void inicializar_config(void);
 int esperar_conexiones(int);
 void terminar_memoria(void);
-void destructor_lista_tablas(t_tabla_segmentos *);
 void destruir_bitmap(void);
 void manejar_conexion(int*);
 
