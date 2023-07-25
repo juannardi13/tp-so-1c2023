@@ -22,9 +22,9 @@ int main() {
 
     log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
 
-//    char* ip_memoria = config_get_string_value(config, "IP"); TODO comentado para probar serialización de segmentos en kernel.
-//    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-    int fd_memoria = 4; //crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
+    char* ip_memoria = config_get_string_value(config, "IP"); //TODO comentado para probar serialización de segmentos en kernel.
+    char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+    int fd_memoria = crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
 
     int fd_cpu = iniciar_servidor(puerto_kernel);
     log_info(logger, "CPU inicializado, esperando a recibir al Kernel en el PUERTO %s.\n", puerto_kernel);
@@ -113,10 +113,12 @@ int main() {
 			log_info(logger, "%s", contexto->registros_pcb.rdx);
 
 			log_info(logger, "PID: <%d> recibido desde el Kernel para ejecutar.", contexto->pid);
-			/*
+
 			int cant_segmentos;
 			memcpy(&cant_segmentos, stream, sizeof(int));
 			stream += sizeof(int);
+
+			contexto->tabla_segmentos = list_create();
 
 			for(int m = 0; m < cant_segmentos; m++) {
 				t_segmento* aux = malloc(sizeof(t_segmento));
@@ -134,9 +136,9 @@ int main() {
 				log_info(logger, "Tamaño <%d>", aux->tamanio);
 
 				list_add(contexto->tabla_segmentos, aux);
-			}*/
+			}
 
-			contexto->tabla_segmentos = tabla_segmentos_prueba;
+			//contexto->tabla_segmentos = tabla_segmentos_prueba;
 
 			int contexto_sigue_en_cpu = 1; // Es para el while de abajo, si queremos que el contexto vuelva al kernel va a ser 0, rompiendo el ciclo y quedandose el cpu en espera a recibir de nuevo el contexto de ejecución
 			char **instrucciones_parseadas = string_split(contexto->instrucciones, "\n");
