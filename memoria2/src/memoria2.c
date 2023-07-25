@@ -157,14 +157,14 @@ void manejar_conexion(int* fd_cliente) {
 
 			break;
 
-		case INICIAR_PROCESO:
+		/*case INICIAR_PROCESO:
 			int pid_a_inicializar;
 
 			memcpy(&pid_a_inicializar, stream, sizeof(int));
 			stream += sizeof(int);
 
 			recv_nuevo_proceso(pid_a_inicializar, socket_cliente);
-			break;
+			break;*/
 
 		case CREATE_SEGMENT:
 			recv_crear_segmento(socket_cliente);

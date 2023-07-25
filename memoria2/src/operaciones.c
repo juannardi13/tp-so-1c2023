@@ -24,9 +24,9 @@ void atender_kernel(int *kernel_fd) {
 
 		switch(cod_op) {
 
-		case INICIAR_PROCESO:
+		/*case INICIAR_PROCESO:
 			recv_nuevo_proceso(socket_cliente);
-			break;
+			break;*/
 
 		case CREATE_SEGMENT:
 			recv_crear_segmento(socket_cliente);
