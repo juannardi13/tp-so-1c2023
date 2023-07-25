@@ -68,7 +68,13 @@ void send_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
 	enviar_paquete(paquete, socket_cliente);
 }
 
-void recv_crear_segmento(int socket_cliente, int pid, int id, int tamanio) {
+void recv_crear_segmento(int socket_cliente, void *stream) {
+
+	int offset = 0;
+
+	int pid = deserializar_int(stream, &offset);
+	int id = deserializar_int(stream, &offset);
+	int tamanio = deserializar_int(stream, &offset);
 
 	if (! hay_espacio(tamanio)) { // NO hay espacio, no importa compactación
 		log_info(logger, "No hay espacio suficiente en memoria para crear el segmento solicitado");
@@ -113,7 +119,12 @@ void send_base_segmento(int socket_cliente, int base) {
 	enviar_paquete(paquete, socket_cliente);
 }
 
-void recv_eliminar_segmento(int socket_cliente, int pid, int id) {
+void recv_eliminar_segmento(int socket_cliente, void *stream) {
+
+	int offset_ = 0;
+
+	int pid = deserializar_int(stream, &offset_);
+	int id = deserializar_int(stream, &offset_);
 
 	t_segmento *seg = obtener_segmento(pid, id);
 	int base = seg->base;

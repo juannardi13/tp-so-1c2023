@@ -159,35 +159,27 @@ void manejar_conexion(int* fd_cliente) {
 			break;
 
 		case CREATE_SEGMENT:
-
-			int offset = 0;
-
-			int pid = deserializar_int(stream, &offset);
-			int id = deserializar_int(stream, &offset);
-			int tamanio = deserializar_int(stream, &offset);
-
-			recv_crear_segmento(socket_cliente, pid, id, tamanio);
+			recv_crear_segmento(socket_cliente, stream);
 			break;
 
 		case DELETE_SEGMENT:
-
-			int offset_ = 0;
-
-			int pid_ = deserializar_int(stream, &offset_);
-			int id_a_borrar = deserializar_int(stream, &offset_);
-
-			recv_eliminar_segmento(socket_cliente, pid_, id_a_borrar);
+			recv_eliminar_segmento(socket_cliente, stream);
 			break;
 
 		case COMPACTAR:
 			log_info(logger, "Inicia compactación");
+
+//			int offset = 0;
+//			int algo = deserializar_int(stream, &offset); // no se usa, sería para que reciba algo
+
 			compactar(socket_cliente);
 			break;
 			//FALTA FILE SYSTEM QUE SERIA LO MISMO QUE CPU... DEBATIR
 		default:
-			log_error(logger, "[ERROR] Operación desconocida.");
+			log_error(logger, "Operación desconocida.");
 			abort();
 		}
+		eliminar_paquete(paquete);
 	}
 }
 
