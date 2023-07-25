@@ -8,7 +8,7 @@ int main(void) {
 
 	inicializar_servidor();
 
-	liberar_recursos_bitmap(archivo_bloques,archivo_bloques,mapping_archivo_bloques);
+	liberar_recursos_bitmap();
 
 	return 0;
 }

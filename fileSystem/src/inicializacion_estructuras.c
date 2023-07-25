@@ -41,7 +41,7 @@ void inicializar_estructuras()
 
 		//  Inicialización config //
 		// --- INICIO --- //
-		t_config* config = iniciar_config("fileSystem.config");
+		config = iniciar_config("fileSystem.config");
 
 //		IP_MEMORIA=127.0.0.1
 //		PUERTO_MEMORIA=8002
@@ -52,15 +52,14 @@ void inicializar_estructuras()
 //		PATH_FCB=/home/utnso/fs/fcb
 //		RETARDO_ACCESO_BLOQUE=15000
 
-		config_valores = malloc(sizeof(t_config_valores));
-		config_valores->ip = config_get_string_value(config,"IP_MEMORIA");
-		config_valores->puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
-		config_valores->puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
-		config_valores->retardo_acceso_bloque = config_get_int_value(config,"RETARDO_ACCESO_BLOQUE");
-		config_valores->path_superbloque = config_get_string_value(config,"PATH_SUPERBLOQUE");
-		config_valores->path_bitmap = config_get_string_value(config,"PATH_BITMAP");
-		config_valores->path_bloques = config_get_string_value(config,"PATH_BLOQUES");
-		config_valores->path_fcb = config_get_string_value(config,"PATH_FCB");
+		config_valores.ip = config_get_string_value(config,"IP_MEMORIA");
+		config_valores.puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
+		config_valores.puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
+		config_valores.retardo_acceso_bloque = config_get_int_value(config,"RETARDO_ACCESO_BLOQUE");
+		config_valores.path_superbloque = config_get_string_value(config,"PATH_SUPERBLOQUE");
+		config_valores.path_bitmap = config_get_string_value(config,"PATH_BITMAP");
+		config_valores.path_bloques = config_get_string_value(config,"PATH_BLOQUES");
+		config_valores.path_fcb = config_get_string_value(config,"PATH_FCB");
 
 
 		// --- FIN --- //
@@ -68,11 +67,10 @@ void inicializar_estructuras()
 
 		//  Inicialización super bloque //
 		// --- INICIO --- //
-		t_config* config_super_bloque = iniciar_config(config_get_string_value(config,"PATH_SUPERBLOQUE"));
+		config_super_bloque = iniciar_config(config_get_string_value(config,"PATH_SUPERBLOQUE"));
 
-		config_super_bloque_valores = malloc(sizeof(t_super_bloque_valores));
-		config_super_bloque_valores->block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
-		config_super_bloque_valores->block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
+		config_super_bloque_valores.block_count = config_get_int_value(config_super_bloque,"BLOCK_COUNT");
+		config_super_bloque_valores.block_size = config_get_int_value(config_super_bloque,"BLOCK_SIZE");
 
 
 		// --- FIN --- //

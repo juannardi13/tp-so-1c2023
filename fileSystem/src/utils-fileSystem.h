@@ -8,11 +8,12 @@
 #include <commons/bitarray.h>
 #include <shared-2.h>
 #include "funcionesTruncar.h"
+#include "funcionesArchivos.h"
 
 typedef struct{
 	char* ip;
-	int puerto_memoria;
-	int puerto_escucha;
+	char* puerto_memoria;
+	char* puerto_escucha;
 	char* path_superbloque;
 	char* path_bitmap;
 	char* path_bloques;
@@ -30,10 +31,10 @@ t_config *iniciar_config(char*);
 t_bitarray* inicializar_archivo_bm(FILE*f);
 bool esta_ocupado(int);
 void usar_bloque(t_bitarray*,int);
-void liberar_recursos_bitmap(FILE*,FILE*,char*);
+void liberar_recursos_bitmap();
 void levantar_fcb_nuevo_archivo(const char*);
 void levantar_archivo_bloques();
-int atender_clientes_file_system(int);
+void atender_clientes_file_system(int);
 char* obtener_ruta_archivo(const char*);
 void truncar_archivo(char*,char*);
 int abrir_archivo(char*);
@@ -47,26 +48,24 @@ void acceso_escritura_bitmap(int,int);
 void asignar_bloques_iniciales(char*,t_config*);
 int primer_bloque_disponible(void);
 int obtener_posicion_archivo_bloques(int);
-char* leer_archivo(char*,int,char*,int);
+void* leer_archivo(char*,int,int);
 void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(int,int);
 void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(int,int,int);
 void ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(t_config*);
 void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int ,t_config*);
 void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int,t_config*);
 void ampliar_con_tam_actual_mayor_tam_bloque(int, int,t_config*);
-char* leer_bytes_mismo_bloque(int,int,int,t_config*);
-void leer_bytes_en_bloque(int ,int ,char* ,int,t_config* );
-char* leer_bytes_en_bloques_distintos(int ,int ,int ,t_config* );
 int nro_bloque_escribir_cuando_escribo_en_unico_bloque(int,t_config*);
-void escribir_bytes_mismo_bloque(int ,int ,char* ,int ,t_config* );
-void escribir_archivo(char*,int,char*,int);
-void escribir_bytes_diferentes_bloques(int,int,char*,int,t_config*);
+void escribir_bytes_mismo_bloque(int ,int ,void* ,int ,t_config*,char*);
+void escribir_archivo(char*,int,void*,int);
+void escribir_bytes_diferentes_bloques(int,int,void*,int,t_config*,char*);
 
 
-
+extern t_config* config_super_bloque;
+extern t_config* config;
 extern t_log* logger;
-extern t_config_valores *config_valores;
-extern t_super_bloque_valores *config_super_bloque_valores;
+extern t_config_valores config_valores;
+extern t_super_bloque_valores config_super_bloque_valores;
 extern t_bitarray* estructura_bitmap;
 extern char* mapping_archivo_bloques;
 extern FILE* archivo_bloques;
