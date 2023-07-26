@@ -171,14 +171,21 @@ void escribir_bytes_diferentes_bloques(int nro_bloque_inicial,int nro_byte_archi
 		else
 		{
 
-			escribir_bytes_en_bloque_de_principio_a_fin(nro_bloque_archivo, contenido_escribir, start_escritura,config_fcb_archivo,nombre_archivo);
+//			escribir_bytes_en_bloque_de_principio_a_fin(nro_bloque_archivo, contenido_escribir, start_escritura,config_fcb_archivo,nombre_archivo);
+//
+//			cantidad_bytes_restan_escribir -= tamanio_bloque;
+//
+//			start_escritura += tamanio_bloque;
+//
+//			nro_byte_archivo += tamanio_bloque - 1;
+
+			escribir_bytes_en_bloque(nro_byte_archivo,nro_bloque_archivo,contenido_escribir,start_escritura,tamanio_bloque,&cantidad_bytes_asignados,config_fcb_archivo,nombre_archivo);
+
+			nro_byte_archivo += tamanio_bloque;
 
 			cantidad_bytes_restan_escribir -= tamanio_bloque;
-
-			start_escritura += tamanio_bloque;
-
-			nro_byte_archivo += tamanio_bloque - 1;
 		}
+
 
 		nro_bloque_archivo++;
 	}
@@ -281,6 +288,14 @@ void* leer_bytes_en_bloques_distintos(int nro_bloque_inicial,int nro_byte_archiv
 		if(i == cantidad_bloques_a_acceder -1 )
 		{
 			leer_bytes_en_bloque(nro_byte_archivo,nro_bloque_archivo,contenido_leido,cantidad_bytes_restan_leer,config_fcb_archivo,&cantidad_bytes_asignados,nombre_archivo);
+		}
+		else
+		{
+			leer_bytes_en_bloque(nro_byte_archivo,nro_bloque_archivo,contenido_leido,cantidad_bytes_restan_leer,config_fcb_archivo,&cantidad_bytes_asignados,nombre_archivo);
+
+			nro_byte_archivo += tamanio_bloque;
+
+			cantidad_bytes_restan_leer -= tamanio_bloque;
 		}
 
 		nro_bloque_archivo++;

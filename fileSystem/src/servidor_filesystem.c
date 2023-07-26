@@ -125,11 +125,11 @@ void manejar_fwrite(int socket_cliente)
 				log_info(logger, "Se escribió con éxito en memoria");
 
 				int size_buffer_mem;
-				void* contenido_buffer_mem = recibir_buffer(&size_buffer,socket_cliente);
+				void* contenido_buffer_mem = recibir_buffer(&size_buffer_mem,socket_cliente);
 
 				int offset_mem = 0;
-				int tamanio_recibir = deserializar_int(contenido_buffer,&offset);
-				void* direccion_fisica_contenido = deserializar_string(tamanio_recibir,contenido_buffer,&offset);
+				int tamanio_recibir = deserializar_int(contenido_buffer_mem,&offset_mem);
+				void* direccion_fisica_contenido = deserializar_string(tamanio_recibir,contenido_buffer_mem,&offset_mem);
 
 				escribir_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica_contenido,cantidad_bytes_escribir);
 
