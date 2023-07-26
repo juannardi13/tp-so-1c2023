@@ -107,7 +107,7 @@ void probando_cositas(){
 	unsigned char b;
 	fseek(archivo_bm,0,0);
 	fread(&b,1,1,archivo_bm);
-	printf("%u\n",b);
+//	printf("%u\n",b);
 
 	// funco :)
 
@@ -128,7 +128,7 @@ void probando_cositas(){
 
 	fseek(archivo_bm,0,0);
 	fread(&b,1,1,archivo_bm);
-	printf("%u\n",b);
+//	printf("%u\n",b);
 
 // funco
 
@@ -141,7 +141,7 @@ void probando_cositas(){
 
 	uint32_t p = *(mapping_archivo_bloques + obtener_posicion_archivo_bloques(3));
 
-	printf("%ld\n",p);
+//	printf("%ld\n",p);
 
 	// ARRIBA MUESTRO QUE SE ESCRIBIÓ 99 EN MEMORIA
 
@@ -272,22 +272,22 @@ void probando_cositas(){
 		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15),0);
 		fread(&lectura2,4,1,archivo_bloques);
 		// tendría que sacar 16
-		printf("%ld\n",lectura2);
+//		printf("%ld\n",lectura2);
 
 		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15) + 4,0);
 		fread(&lectura2,4,1,archivo_bloques);
 		// tendría que sacar 17
-		printf("%ld\n",lectura2);
+//		printf("%ld\n",lectura2);
 
 		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15) + 8,0);
 		fread(&lectura2,4,1,archivo_bloques);
 		// tendría que sacar 18
-		printf("%ld\n",lectura2);
+//		printf("%ld\n",lectura2);
 
 		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15) + 12,0);
 		fread(&lectura2,4,1,archivo_bloques);
 		// tendría que sacar 19
-		printf("%ld\n",lectura2);
+//		printf("%ld\n",lectura2);
 
 		// funca
 

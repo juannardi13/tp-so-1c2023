@@ -25,6 +25,5 @@ void escribir_bytes_en_bloque_de_principio_a_fin(int nro_bloque,void* contenido_
 void* leer_bytes_mismo_bloque(int,int,int,t_config*,char*);
 void leer_bytes_en_bloque(int ,int ,void* ,int,t_config*,int*,char*);
 void* leer_bytes_en_bloques_distintos(int ,int ,int ,t_config*,char*);
-void acceso_a_bloque(void* , void* ,int ,char* ,int ,int );
 
 #endif /* FUNCIONESARCHIVOS_H_ */

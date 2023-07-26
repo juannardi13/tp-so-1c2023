@@ -6,7 +6,7 @@ int main(void) {
 
 	probando_cositas();
 
-	inicializar_servidor();
+//	inicializar_servidor();
 
 	liberar_recursos_bitmap();
 

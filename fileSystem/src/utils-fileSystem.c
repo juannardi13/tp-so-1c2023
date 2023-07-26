@@ -77,6 +77,19 @@ int crear_archivo(char* nombre_archivo)
 	return 1;
 }
 
+void msleep(int tiempo_microsegundos) {
+	usleep(tiempo_microsegundos * 1000);
+}
+
+void acceso_a_bloque(void* destino, void* origen,int cantidad_bytes,char* nombre_archivo,int nro_bloque,int nro_bloque_inicial_en_archivo_bloques)
+{
+	msleep(config_valores.retardo_acceso_bloque);
+
+	memcpy(destino,origen,cantidad_bytes);
+
+	log_info(logger,"Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%i> - Bloque FileSystem: <%i>",nombre_archivo,nro_bloque,nro_bloque_inicial_en_archivo_bloques);
+}
+
 void truncar_archivo(char* nombre_archivo,int nuevo_tamanio_entero)
 {
 
@@ -96,11 +109,11 @@ void truncar_archivo(char* nombre_archivo,int nuevo_tamanio_entero)
 
 	if(nuevo_tamanio_entero > tamanio_fcb)
 	{
-			ampliar_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
+			ampliar_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo,nombre_archivo);
 	}
 	else
 	{
-			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
+			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo,nombre_archivo);
 	}
 
 	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%i>",nombre_archivo,nuevo_tamanio_entero);
@@ -121,7 +134,7 @@ void truncar_archivo(char* nombre_archivo,int nuevo_tamanio_entero)
 
 }
 
-void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_fcb_archivo)
+void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_fcb_archivo,char* nombre_archivo)
 {
 
 	int tamanio_bloque = config_super_bloque_valores.block_size;
@@ -140,20 +153,20 @@ void reducir_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_f
 
 		if(nuevo_tamanio_entero <= tamanio_bloque)
 		{
-			reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(nro_ultima_entrada_bloque_pind,nro_bloque_punteros_indirectos);
+			reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(nro_ultima_entrada_bloque_pind,nro_bloque_punteros_indirectos,nombre_archivo);
 		}
 		else
 		{
 			int cantidad_bloques_apuntados_necesarios = ceil((double)nuevo_tamanio_entero / (double)tamanio_bloque) - 1;
 
-			reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(nro_ultima_entrada_bloque_pind,nro_bloque_punteros_indirectos,cantidad_bloques_apuntados_necesarios);
+			reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(nro_ultima_entrada_bloque_pind,nro_bloque_punteros_indirectos,cantidad_bloques_apuntados_necesarios,nombre_archivo);
 		}
 
 	}
 }
 
 
-void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_fcb_archivo)
+void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_fcb_archivo,char* nombre_archivo)
 {
 	int tamanio_bloque = config_super_bloque_valores.block_size;
 
@@ -165,7 +178,7 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_f
 		}
 		else
 		{
-			ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(nuevo_tamanio_entero,config_fcb_archivo);
+			ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(nuevo_tamanio_entero,config_fcb_archivo,nombre_archivo);
 		}
 	}
 	else
@@ -178,12 +191,12 @@ void ampliar_tamanio(int tamanio_fcb,int nuevo_tamanio_entero,t_config* config_f
 			}
 			else
 			{
-				ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(nuevo_tamanio_entero,config_fcb_archivo);
+				ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(nuevo_tamanio_entero,config_fcb_archivo,nombre_archivo);
 			}
 		}
 		else
 		{
-			ampliar_con_tam_actual_mayor_tam_bloque(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
+			ampliar_con_tam_actual_mayor_tam_bloque(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo,nombre_archivo);
 		}
 	}
 }
@@ -212,20 +225,20 @@ void escribir_archivo(char* nombre_archivo,int nro_byte_archivo,void* direccion_
 
 		int nro_byte_final = nro_byte_archivo + cantidad_bytes_escribir - 1;
 
-		printf("Número de byte final de archivo a escribir: %i\n",nro_byte_final);
+//		printf("Número de byte final de archivo a escribir: %i\n",nro_byte_final);
 
 
 		int nro_bloque_inicial = floor((double) nro_byte_archivo / (double) tamanio_bloque);
 
 		int nro_bloque_final = floor((double) nro_byte_final / (double) tamanio_bloque);
-
-		printf("Número de bloque inicial donde se escribe: %i\n",nro_bloque_inicial);
-
-		printf("Número de bloque final donde se escribe %i\n",nro_bloque_final);
+//
+//		printf("Número de bloque inicial donde se escribe: %i\n",nro_bloque_inicial);
+//
+//		printf("Número de bloque final donde se escribe %i\n",nro_bloque_final);
 
 		if(nro_bloque_inicial == nro_bloque_final)
 		{
-			printf("Llegué\n");
+//			printf("Llegué\n");
 			escribir_bytes_mismo_bloque(nro_byte_archivo,nro_bloque_inicial,direccion_fisica,cantidad_bytes_escribir,config_fcb_archivo,nombre_archivo);
 		}
 		else
@@ -252,7 +265,7 @@ void escribir_archivo(char* nombre_archivo,int nro_byte_archivo,void* direccion_
 void* leer_archivo(char* nombre_archivo,int nro_byte_archivo,int cantidad_bytes_leer)
 {
 	// 10
-	void* leido = malloc(cantidad_bytes_leer);
+	void* leido;
 
 	if(!abrir_archivo(nombre_archivo))
 	{
@@ -389,7 +402,7 @@ void asignar_bloques_iniciales(char* ruta,t_config* config_fcb_archivo){
 
 	config_save(config_fcb_archivo);
 
-	printf("Prueba cantidad keys config: %i\n",config_keys_amount(config_fcb_archivo));
+//	printf("Prueba cantidad keys config: %i\n",config_keys_amount(config_fcb_archivo));
 }
 
 void liberar_recursos_bitmap(){

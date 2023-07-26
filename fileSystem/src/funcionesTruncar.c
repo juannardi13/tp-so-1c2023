@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(int nro_ultima_entrada_bloque_pind,int nro_bloque_punteros_indirectos)
+void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(int nro_ultima_entrada_bloque_pind,int nro_bloque_punteros_indirectos,char* nombre_archivo)
 {
 	for(int i = 0; i <= nro_ultima_entrada_bloque_pind; i++)
 	{
@@ -17,6 +17,7 @@ void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bl
 
 		memcpy(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t));
 
+		acceso_a_bloque(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t),nombre_archivo,i+1,nro_bloque);
 
 		acceso_escritura_bitmap(nro_bloque,0);
 	}
@@ -24,7 +25,7 @@ void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bl
 	acceso_escritura_bitmap(nro_bloque_punteros_indirectos,0);
 }
 
-void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(int nro_ultima_entrada_bloque_pind,int nro_bloque_punteros_indirectos,int cantidad_bloques_apuntados_necesarios )
+void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(int nro_ultima_entrada_bloque_pind,int nro_bloque_punteros_indirectos,int cantidad_bloques_apuntados_necesarios,char* nombre_archivo)
 {
 
 	for(int i = nro_ultima_entrada_bloque_pind; i >= cantidad_bloques_apuntados_necesarios;i--)
@@ -34,6 +35,8 @@ void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bl
 		int nro_bloque;
 
 		memcpy(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t));
+
+		acceso_a_bloque(&nro_bloque,mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,sizeof(uint32_t),nombre_archivo,i+1,nro_bloque);
 
 		acceso_escritura_bitmap(nro_bloque,0);
 	}
@@ -55,7 +58,7 @@ void ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(t_config* co
 	free(puntero_directo_string);
 }
 
-void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int nuevo_tamanio_entero,t_config* config_fcb_archivo)
+void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int nuevo_tamanio_entero,t_config* config_fcb_archivo,char* nombre_archivo)
 {
 	int tamanio_bloque = config_super_bloque_valores.block_size;
 
@@ -100,7 +103,9 @@ void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int nuevo_tamanio_
 
 			acceso_escritura_bitmap(bloque_datos,1);
 
-			memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
+//			memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
+
+			acceso_a_bloque(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t),nombre_archivo,i+1,bloque_datos);
 
 		}
 		else
@@ -111,7 +116,7 @@ void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int nuevo_tamanio_
 	}
 }
 
-void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int nuevo_tamanio_entero,t_config* config_fcb_archivo)
+void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int nuevo_tamanio_entero,t_config* config_fcb_archivo,char* nombre_archivo)
 {
 	int cantidad_punteros_bloque = config_super_bloque_valores.block_size / sizeof(uint32_t);
 
@@ -143,7 +148,9 @@ void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int nuev
 
 			acceso_escritura_bitmap(bloque_datos,1);
 
-			memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
+//			memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t));
+
+			acceso_a_bloque(mapping_archivo_bloques + obtener_posicion_archivo_bloques(puntero_indirecto) + off,&bloque_datos,sizeof(uint32_t),nombre_archivo,i+1,bloque_datos);
 		}
 		else
 		{
@@ -153,7 +160,7 @@ void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int nuev
 	}
 }
 
-void ampliar_con_tam_actual_mayor_tam_bloque(int tamanio_fcb, int nuevo_tamanio_entero,t_config* config_fcb_archivo)
+void ampliar_con_tam_actual_mayor_tam_bloque(int tamanio_fcb, int nuevo_tamanio_entero,t_config* config_fcb_archivo,char* nombre_archivo)
 {
 	int tamanio_bloque = config_super_bloque_valores.block_size;
 
@@ -175,9 +182,12 @@ void ampliar_con_tam_actual_mayor_tam_bloque(int tamanio_fcb, int nuevo_tamanio_
 
 		acceso_escritura_bitmap(bloque_datos,1);
 
-		printf("%i\n",bloque_datos);
+//		printf("%i\n",bloque_datos);
 
-		memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,&bloque_datos,sizeof(uint32_t));
+//		memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,&bloque_datos,sizeof(uint32_t));
+
+		acceso_a_bloque(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_punteros_indirectos) + off,&bloque_datos,sizeof(uint32_t),nombre_archivo,i+1,bloque_datos);
+
 
 
 	}

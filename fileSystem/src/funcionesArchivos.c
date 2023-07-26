@@ -42,11 +42,11 @@ void escribir_bytes_mismo_bloque(int nro_byte_archivo,int nro_bloque_inicial,voi
 
 	int off_bloque_datos = nro_byte_archivo - (nro_bloque_inicial * tamanio_bloque);
 
-	printf("Offset dentro de bloque a escribir: %i\n",off_bloque_datos);
+//	printf("Offset dentro de bloque a escribir: %i\n",off_bloque_datos);
 
 	int nro_bloque_inicial_en_archivo_bloques = nro_bloque_escribir_cuando_escribo_en_unico_bloque(nro_bloque_inicial,config_fcb_archivo,nombre_archivo);
 
-	printf("Nro bloque inicial en archivo bloques: %i\n",nro_bloque_inicial_en_archivo_bloques);
+//	printf("Nro bloque inicial en archivo bloques: %i\n",nro_bloque_inicial_en_archivo_bloques);
 
 
 //	memcpy(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_inicial_en_archivo_bloques) + off_bloque_datos,direccion_fisica,cantidad_bytes_escribir);
@@ -56,32 +56,21 @@ void escribir_bytes_mismo_bloque(int nro_byte_archivo,int nro_bloque_inicial,voi
 	acceso_a_bloque(mapping_archivo_bloques + obtener_posicion_archivo_bloques(nro_bloque_inicial_en_archivo_bloques) + off_bloque_datos,direccion_fisica,cantidad_bytes_escribir,nombre_archivo,nro_bloque_inicial,nro_bloque_inicial_en_archivo_bloques);
 }
 
-void msleep(int tiempo_microsegundos) {
-	usleep(tiempo_microsegundos * 1000);
-}
 
-void acceso_a_bloque(void* destino, void* origen,int cantidad_bytes,char* nombre_archivo,int nro_bloque,int nro_bloque_inicial_en_archivo_bloques)
-{
-	msleep(config_valores.retardo_acceso_bloque);
-
-	memcpy(destino,origen,cantidad_bytes);
-
-	log_info(logger,"Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%i> - Bloque FileSystem: <%i>",nombre_archivo,nro_bloque,nro_bloque_inicial_en_archivo_bloques);
-}
 
 void escribir_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_escritura,char* contenido_escribir,int start_escritura,int cantidad_bytes_escribir,int* cantidad_bytes_asignados,t_config* config_fcb_archivo,char* nombre_archivo)
 {
-	printf("------------------------------------\n");
-
-	printf("Logs función escribir_bytes_en_bloque\n");
+//	printf("------------------------------------\n");
+//
+//	printf("Logs función escribir_bytes_en_bloque\n");
 
 	int tamanio_bloque = config_super_bloque_valores.block_size;
 
-	printf("Nro bloque escritura %i\n",nro_bloque_escritura);
+//	printf("Nro bloque escritura %i\n",nro_bloque_escritura);
 
 	int nro_bloque_inicial_en_archivo_bloques = nro_bloque_escribir_cuando_escribo_en_unico_bloque(nro_bloque_escritura,config_fcb_archivo,nombre_archivo);
 
-	printf("Nro bloque inicial en archivo bloques %i\n",nro_bloque_inicial_en_archivo_bloques);
+//	printf("Nro bloque inicial en archivo bloques %i\n",nro_bloque_inicial_en_archivo_bloques);
 
 	int off_bloque_datos = nro_byte_archivo - (nro_bloque_escritura * tamanio_bloque);
 
@@ -93,7 +82,7 @@ void escribir_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_escritura,char
 
 	(*cantidad_bytes_asignados) +=  cantidad_bytes_escribir;
 
-	printf("%i\n",(*cantidad_bytes_asignados));
+//	printf("%i\n",(*cantidad_bytes_asignados));
 
 	char* aux = malloc(cantidad_bytes_escribir);
 
@@ -107,7 +96,7 @@ void escribir_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_escritura,char
 
 	memcpy(aux + cantidad_bytes_escribir,&c,1);
 
-	printf("%s\n",aux);
+//	printf("%s\n",aux);
 
 	// solo para MOSTRAR
 
@@ -121,9 +110,9 @@ void escribir_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_escritura,char
 
 	free(aux);
 
-	printf("Fin Logs función escribir_bytes_en_bloque\n");
-
-	printf("------------------------------------\n");
+//	printf("Fin Logs función escribir_bytes_en_bloque\n");
+//
+//	printf("------------------------------------\n");
 }
 
 void escribir_bytes_en_bloque_de_principio_a_fin(int nro_bloque,void* contenido_escribir,int start_escritura,t_config* config_fcb_archivo,char* nombre_archivo)
@@ -139,11 +128,11 @@ void escribir_bytes_diferentes_bloques(int nro_bloque_inicial,int nro_byte_archi
 {
 //	 dos casos principales -> pasar de bloque 0 (apuntado por puntero directo) a bloque 1 (apuntado por puntero indirecto)
 //	 						 -> pasasr de bloque 1>= a otro bloque apuntado por puntero de bloque de punteros
-	printf("\n");
-
-	printf("------------------------------------\n");
-
-	printf("Logs función escribir_bytes_diferentes_bloques\n");
+//	printf("\n");
+//
+//	printf("------------------------------------\n");
+//
+//	printf("Logs función escribir_bytes_diferentes_bloques\n");
 
 	void* contenido_escribir = malloc(cantidad_bytes_escribir);
 
@@ -175,7 +164,7 @@ void escribir_bytes_diferentes_bloques(int nro_bloque_inicial,int nro_byte_archi
 
 		if(i == cantidad_bloques_a_acceder - 1)
 		{
-			printf("Nro byte archivo: %i\n",nro_byte_archivo);
+//			printf("Nro byte archivo: %i\n",nro_byte_archivo);
 
 			escribir_bytes_en_bloque(nro_byte_archivo,nro_bloque_archivo,contenido_escribir,start_escritura,cantidad_bytes_restan_escribir,&cantidad_bytes_asignados,config_fcb_archivo,nombre_archivo);
 		}
@@ -196,11 +185,11 @@ void escribir_bytes_diferentes_bloques(int nro_bloque_inicial,int nro_byte_archi
 
 	free(contenido_escribir);
 
-	printf("------------------------------------\n");
-
-	printf("Fin Logs función escribir_bytes_diferentes_bloques\n");
-
-	printf("\n");
+//	printf("------------------------------------\n");
+//
+//	printf("Fin Logs función escribir_bytes_diferentes_bloques\n");
+//
+//	printf("\n");
 
 
 }
@@ -227,23 +216,23 @@ void* leer_bytes_mismo_bloque(int nro_bloque_inicial,int nro_byte_archivo,int ca
 
 void leer_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_lectura,void* contenido_leido,int cantidad_bytes_leer,t_config* config_fcb_archivo,int* cantidad_bytes_asignados,char* nombre_archivo)
 {
-	printf("------------------------------------\n");
-
-	printf("Logs función leer_bytes_en_bloque\n");
+//	printf("------------------------------------\n");
+//
+//	printf("Logs función leer_bytes_en_bloque\n");
 
 	int cantidad_bytes_asignados_anterior = (*cantidad_bytes_asignados);
 
-	printf("Cantidad bytes asignados anterior: %i \n",cantidad_bytes_asignados_anterior);
+//	printf("Cantidad bytes asignados anterior: %i \n",cantidad_bytes_asignados_anterior);
 
 	(*cantidad_bytes_asignados)+=cantidad_bytes_leer;
 
 	int tamanio_bloque = config_super_bloque_valores.block_size;
 
-	printf("Nro bloque lectura %i\n",nro_bloque_lectura);
+//	printf("Nro bloque lectura %i\n",nro_bloque_lectura);
 
 	int nro_bloque_inicial_en_archivo_bloques = nro_bloque_escribir_cuando_escribo_en_unico_bloque(nro_bloque_lectura,config_fcb_archivo,nombre_archivo);
 
-	printf("Nro bloque inicial en archivo bloques %i\n",nro_bloque_inicial_en_archivo_bloques);
+//	printf("Nro bloque inicial en archivo bloques %i\n",nro_bloque_inicial_en_archivo_bloques);
 
 	int off_bloque_datos = nro_byte_archivo - (nro_bloque_lectura * tamanio_bloque);
 
@@ -260,9 +249,9 @@ void leer_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_lectura,void* cont
 
 	free(aux);
 
-	printf("Fin Logs función leer_bytes_en_bloque\n");
-
-	printf("------------------------------------\n");
+//	printf("Fin Logs función leer_bytes_en_bloque\n");
+//
+//	printf("------------------------------------\n");
 
 
 }
@@ -297,7 +286,7 @@ void* leer_bytes_en_bloques_distintos(int nro_bloque_inicial,int nro_byte_archiv
 		nro_bloque_archivo++;
 	}
 
-	printf("MIRA LO QUE HICE LOCO: %s\n",contenido_leido);
+//	printf("MIRA LO QUE HICE LOCO: %s\n",contenido_leido);
 
 	return contenido_leido;
 

@@ -42,22 +42,18 @@ int crear_archivo(char*);
 void inicializar_estructuras();
 void probando_cositas();
 void inicializar_servidor();
-void reducir_tamanio(int,int,t_config*);
-void ampliar_tamanio(int,int,t_config*);
+void reducir_tamanio(int,int,t_config*,char* nombre_archivo);
+void ampliar_tamanio(int,int,t_config*,char* nombre_archivo);
 void acceso_escritura_bitmap(int,int);
 void asignar_bloques_iniciales(char*,t_config*);
 int primer_bloque_disponible(void);
 int obtener_posicion_archivo_bloques(int);
 void* leer_archivo(char*,int,int);
-void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_menor_tam_bloque(int,int);
-void reducir_tamanio_cuando_tam_actual_mayor_tam_bloque_y_nuevo_tam_mayor_tam_bloque(int,int,int);
-void ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(t_config*);
-void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int ,t_config*);
-void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int,t_config*);
-void ampliar_con_tam_actual_mayor_tam_bloque(int, int,t_config*);
 void escribir_bytes_mismo_bloque(int ,int ,void* ,int ,t_config*,char*);
 void escribir_archivo(char*,int,void*,int);
 void escribir_bytes_diferentes_bloques(int,int,void*,int,t_config*,char*);
+void acceso_a_bloque(void* , void* ,int ,char* ,int ,int );
+
 
 
 extern int socket_memoria;
