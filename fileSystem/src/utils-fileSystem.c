@@ -77,9 +77,8 @@ int crear_archivo(char* nombre_archivo)
 	return 1;
 }
 
-void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
+void truncar_archivo(char* nombre_archivo,int nuevo_tamanio_entero)
 {
-	int nuevo_tamanio_entero = atoi(nuevo_tamanio);
 
 	FILE* f;
 
@@ -104,13 +103,17 @@ void truncar_archivo(char* nombre_archivo,char* nuevo_tamanio)
 			reducir_tamanio(tamanio_fcb,nuevo_tamanio_entero,config_fcb_archivo);
 	}
 
-	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%s>",nombre_archivo,nuevo_tamanio);
+	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%i>",nombre_archivo,nuevo_tamanio_entero);
+
+	char* nuevo_tamanio = string_itoa(nuevo_tamanio_entero);
 
 	config_set_value(config_fcb_archivo,"TAMANIO_ARCHIVO",nuevo_tamanio);
 
 	config_save(config_fcb_archivo);
 
 	config_destroy(config_fcb_archivo);
+
+	free(nuevo_tamanio);
 
 	free(ruta);
 

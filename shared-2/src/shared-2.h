@@ -48,6 +48,11 @@ typedef enum
 	F_READ,
 	F_WRITE,
 	F_TRUNCATE,
+	F_CREATE,
+	FREAD_OK,
+	FWRITE_OK,
+	FTRUNCATE_OK,
+	FCREATE_OK,
 	WAIT,
 	SIGNAL,
 	CREATE_SEGMENT,
@@ -189,6 +194,7 @@ void agregar_tabla_a_paquete(t_paquete *, t_tabla_segmentos *);
 int bits_to_bytes(int);
 void crear_buffer(t_paquete *);
 int crear_conexion(t_log *, const char *, char *, char *);
+int crear_conexion_alt(char*,char*);
 t_paquete *crear_paquete(int);
 t_paquete *crear_paquete_consola(void);
 t_segmento *crear_segmento(int, int, int);
@@ -199,6 +205,7 @@ int enviar_datos(int, void *, uint32_t);
 void enviar_mensaje(char *, int);
 void enviar_paquete(t_paquete *, int);
 int esperar_cliente(t_log *, const char *, int);
+int esperar_cliente_alt(int);
 void hola(void);
 t_buffer *inicializar_buffer_con_parametros(uint32_t, void *);
 int iniciar_servidor(char *);

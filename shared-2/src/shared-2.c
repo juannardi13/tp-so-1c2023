@@ -43,6 +43,15 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
     return socket_cliente;
 }
 
+int esperar_cliente_alt(int socket_servidor) {
+//    struct sockaddr_in dir_cliente;
+//    socklen_t tam_direccion = sizeof(struct sockaddr_in);
+
+    int socket_cliente = accept(socket_servidor, NULL, NULL);
+
+    return socket_cliente;
+}
+
 int recibir_operacion(int socket_cliente)
 {
 	int cod_op;
@@ -296,6 +305,30 @@ int crear_conexion(t_log* logger, const char* name, char *ip, char* puerto)
 	return socket_cliente;
 }
 
+int crear_conexion_alt(char *ip, char* puerto) {
+	struct addrinfo hints;
+	struct addrinfo *server_info;
+
+	memset(&hints, 0, sizeof(hints));
+	hints.ai_family = AF_UNSPEC;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_flags = AI_PASSIVE;
+
+	getaddrinfo(ip, puerto, &hints, &server_info);
+
+	// Ahora vamos a crear el socket.
+	int socket_cliente = socket(server_info->ai_family, server_info->ai_socktype, server_info->ai_protocol);
+
+	// Ahora que tenemos el socket, vamos a conectarlo
+	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen) == -1) {
+		perror("No se ha podido conectar");
+		exit(1);
+	}
+
+	freeaddrinfo(server_info);
+
+	return socket_cliente;
+}
 
 void liberar_conexion(int socket_cliente) {
     close(socket_cliente);

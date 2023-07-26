@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+int socket_memoria;
+
 void manejar_fopen(int socket_cliente)
 {
 	// ya saque cod op, me falta el size del buffer y el buffer
@@ -19,7 +21,7 @@ void manejar_fopen(int socket_cliente)
 
 	int rta_para_kernel = abrir_archivo(string_recibido);
 
-	op_code rta;
+	int rta;
 
 	if(rta_para_kernel)
 	{
@@ -32,9 +34,13 @@ void manejar_fopen(int socket_cliente)
 		rta = NO_EXISTE;
 	}
 
+
 	log_info(logger,"Abrir Archivo: <%s>",string_recibido);
 
-	send(socket_cliente,&rta,sizeof(op_code),0);
+	send_op(socket_cliente,rta);
+
+	free(contenido_buffer);
+	free(string_recibido);
 }
 
 void manejar_fread(int socket_cliente)
@@ -51,63 +57,42 @@ void manejar_fread(int socket_cliente)
 	int direccion_fisica = deserializar_int(contenido_buffer,&offset);
 	int cantidad_bytes_leer = deserializar_int(contenido_buffer,&offset);
 
-	char* direccion_fisica_contenido = malloc(cantidad_bytes_leer);
+	void* direccion_fisica_contenido  = leer_archivo(string_nombre_archivo,nro_byte_archivo,cantidad_bytes_leer);
 
-//	direccion_fisica_contenido = leer_archivo(string_nombre_archivo,nro_byte_archivo,cantidad_bytes_leer);
+	printf("%s\n",direccion_fisica_contenido);
 
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-	t_buffer* buffer = malloc(sizeof(t_buffer));
+	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA);
 
-	buffer->stream_size = sizeof(uint32_t) + cantidad_bytes_leer;
+	// primero dir fisica, dps tamanio valor y dps valor
 
-	void* stream = malloc(buffer->stream_size);
-	offset = 0;
+	agregar_int_a_paquete(paquete,direccion_fisica);
+	agregar_int_a_paquete(paquete,cantidad_bytes_leer);
+	agregar_string_a_paquete(paquete,direccion_fisica_contenido,cantidad_bytes_leer);
 
-	memcpy(stream + offset,&cantidad_bytes_leer,sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	memcpy(stream + offset,direccion_fisica_contenido,cantidad_bytes_leer);
+	enviar_paquete(paquete,socket_memoria);
 
-	paquete->codigo_operacion = ESCRIBIR_EN_MEMORIA;
-	paquete->buffer = buffer;
+	free(paquete);
 
-	int tam_a_enviar = sizeof(uint8_t) + sizeof(uint32_t) + paquete->buffer->stream_size;
-	void* a_enviar = malloc(tam_a_enviar);
-	offset = 0;
+	int rta_memoria = recibir_operacion(socket_memoria);
 
-	memcpy(a_enviar + offset,&(paquete->codigo_operacion),sizeof(uint8_t));
-	offset += sizeof(uint8_t);
-	memcpy(a_enviar + offset,&(paquete->buffer->stream_size),sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	memcpy(a_enviar + offset,paquete->buffer->stream,paquete->buffer->stream_size);
-
-	int socket_memoria = config_valores.puerto_memoria;
-
-	send(socket_memoria,a_enviar,tam_a_enviar,0);
-
-	op_code respuesta_memoria;
-
-	recv(socket_memoria,&respuesta_memoria,sizeof(op_code),MSG_WAITALL);
-
-	op_code respuesta_a_kernel;
-
-	if(respuesta_memoria == ESCRITURA_OK)
+	if(rta_memoria == OK_VALOR_ESCRITO)
 	{
-		respuesta_a_kernel = FREAD_OK;
+		int cod_op = FREAD_OK;
+
+		send_op(socket_cliente,cod_op);
+
+		log_info(logger,"Leer Archivo: <%s> - Puntero <%i> - Memoria <%i> - Tamaño <%i>",string_nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_leer);
+
+
 	}
 	else
 	{
-		log_info(logger,"Error en la escritura en la direccion de memoria %i",direccion_fisica);
+		log_warning(logger, "Error al recibir respuesta de memoria");
 	}
 
-	send(socket_cliente,&respuesta_a_kernel,sizeof(op_code),0);
-
-	log_info(logger,"Leer Archivo: <%s> - Puntero <%i> - Memoria <%i> - Tamaño <%i>",string_nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_leer);
-
 	free(direccion_fisica_contenido);
-	free(a_enviar);
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
+	free(contenido_buffer);
+	free(string_nombre_archivo);
 }
 
 void manejar_fwrite(int socket_cliente)
@@ -124,40 +109,54 @@ void manejar_fwrite(int socket_cliente)
 	int direccion_fisica = deserializar_int(contenido_buffer,&offset);
 	int cantidad_bytes_escribir = deserializar_int(contenido_buffer,&offset);
 
-	char* direccion_fisica_contenido = malloc(cantidad_bytes_escribir);
+	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA);
 
-	// tengo que mandar a leer de memoria de la direccion fisica
+	agregar_int_a_paquete(paquete,direccion_fisica);
+	agregar_int_a_paquete(paquete,cantidad_bytes_escribir);
 
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-	t_buffer* buffer = malloc(sizeof(t_buffer));
+	enviar_paquete(paquete,socket_memoria);
 
-	buffer->stream_size = sizeof(uint32_t);
-	void* stream = malloc(buffer->stream_size);
 
-	memcpy(stream,&direccion_fisica,sizeof(uint32_t));
+	int rta_memoria = recibir_operacion(socket_memoria);
 
-	paquete->codigo_operacion = LEER_DE_MEMORIA;
-	paquete->buffer = buffer;
 
-	int tam_a_enviar = sizeof(uint8_t) + sizeof(uint32_t) + paquete->buffer->stream_size;
-	void* a_enviar = malloc(tam_a_enviar);
-	offset = 0;
+	switch(rta_memoria) {
+			case LEIDO :
+				log_info(logger, "Se escribió con éxito en memoria");
 
-	memcpy(a_enviar,&(paquete->codigo_operacion),sizeof(uint8_t));
-	offset += sizeof(uint8_t);
-	memcpy(a_enviar,&(paquete->buffer->stream_size),sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	memcpy(a_enviar,paquete->buffer->stream,paquete->buffer->stream_size);
+				int size_buffer_mem;
+				void* contenido_buffer_mem = recibir_buffer(&size_buffer,socket_cliente);
 
-	int socket_memoria = config_valores.puerto_memoria;
+				int offset_mem = 0;
+				int tamanio_recibir = deserializar_int(contenido_buffer,&offset);
+				void* direccion_fisica_contenido = deserializar_string(tamanio_recibir,contenido_buffer,&offset);
 
-	send(socket_memoria,a_enviar,tam_a_enviar,0);
+				escribir_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica_contenido,cantidad_bytes_escribir);
 
-	// no aclara si la memoria devuelve un paquete, por ahora supongo que no
+				int cod_op = FWRITE_OK;
 
-	recv(socket_memoria,direccion_fisica_contenido,cantidad_bytes_escribir,MSG_WAITALL);
+				log_info(logger,"Escribir Archivo: <%s> - Puntero <%i> - Memoria <%i> - Tamaño <%i>",string_nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_escribir);
 
-	escribir_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica_contenido,cantidad_bytes_escribir);
+				send_op(socket_cliente,cod_op);
+
+				free(direccion_fisica_contenido);
+				free(contenido_buffer_mem);
+
+				break;
+			case NO_LEIDO :
+				printf("No se pudo leer el valor del registro dado");
+				break;
+			default :
+				printf("Operacion desconocida");
+				break;
+		}
+
+
+//	void* direccion_fisica_contenido = "Fernando Alonso";
+
+	free(contenido_buffer);
+	free(string_nombre_archivo);
+
 }
 
 void manejar_ftruncate(int socket_cliente)
@@ -172,7 +171,35 @@ void manejar_ftruncate(int socket_cliente)
 	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
 	int tamanio_nuevo = deserializar_int(contenido_buffer,&offset);
 
-//	truncar_archivo(string_nombre_archivo,tamanio_nuevo);
+	truncar_archivo(string_nombre_archivo,tamanio_nuevo);
+
+	int cod_op = FTRUNCATE_OK;
+
+	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%i>",string_nombre_archivo,tamanio_nuevo);
+
+	send_op(socket_cliente,cod_op);
+
+	free(contenido_buffer);
+	free(string_nombre_archivo);
+}
+
+void manejar_fcreate(int socket_cliente)
+{
+	int size_buffer;
+	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
+
+	int offset = 0;
+	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
+	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
+
+	crear_archivo(string_nombre_archivo);
+
+	int cod_op = FCREATE_OK;
+
+	send_op(socket_cliente,cod_op);
+
+	free(contenido_buffer);
+	free(string_nombre_archivo);
 }
 
 void manejar_conexion(int socket_cliente){
@@ -202,9 +229,16 @@ void manejar_conexion(int socket_cliente){
 				manejar_ftruncate(socket_cliente);
 				break;
 
+		case F_CREATE:
+				manejar_fcreate(socket_cliente);
+				break;
+
 		case -1:
-			log_warning(logger,"Se desconectó el Kernel\n");
+			log_info(logger,"Se desconectó el Kernel\n");
 			return;
+		default:
+			log_warning(logger,"Operación desconocido. Ojo con lo que haces");
+			break;
 		}
 	}
 
@@ -212,19 +246,23 @@ void manejar_conexion(int socket_cliente){
 
 
 void atender_clientes_file_system(int fd_fs){
-	int socket_kernel = esperar_cliente(fd_fs);
-
+	int socket_kernel = esperar_cliente_alt(fd_fs);
+	log_info(logger, "Se conectó el Kernel");
 
 	manejar_conexion(socket_kernel);
 
 }
 
 void inicializar_servidor(){
+
+//	socket_memoria = crear_conexion_alt(config_valores.puerto_memoria,config_valores.puerto_memoria);
+
 	char* puerto_escucha = config_valores.puerto_escucha;
 	int fd_fs= iniciar_servidor(puerto_escucha);
 	log_info(logger, "File System inicializado, esperando a recibir al Kernel en el PUERTO %s.", puerto_escucha);
 
 	atender_clientes_file_system(fd_fs);
+
 
 }
 

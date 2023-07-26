@@ -157,11 +157,11 @@ void probando_cositas(){
 	// pruebo caso truncar archivo vacio y tamaño nuevo menor o igual a bloque -> cambia tamaño en fcb y puntero directo
 	crear_archivo("escuderiasF1");
 
-	char* string_itoa_11 = string_itoa(56);
+//	char* string_itoa_11 = string_itoa(56);
 
-	truncar_archivo("escuderiasF1",string_itoa_11);
+	truncar_archivo("escuderiasF1",56);
 
-	free(string_itoa_11);
+//	free(string_itoa_11);
 
 	// funca
 
@@ -169,11 +169,11 @@ void probando_cositas(){
 	// de puntero los primeros punteros
 	crear_archivo("plantelArgentinaCampeona");
 
-	char* string_itoa_12 = string_itoa(137);
+//	char* string_itoa_12 = string_itoa(137);
 
-	truncar_archivo("plantelArgentinaCampeona",string_itoa_12);
+	truncar_archivo("plantelArgentinaCampeona",137);
 
-	free(string_itoa_12);
+//	free(string_itoa_12);
 
 	// puntero indirecto asignado es el 6
 	// debería poder leer el nro de bloque asignado al primer bloque de datos accedido por indirección para el archivo, que sería 7 y 8
@@ -203,17 +203,17 @@ void probando_cositas(){
 
 	crear_archivo("campeonesFutbolArgentino");
 
-	char* string_itoa_1 = string_itoa(54);
+//	char* string_itoa_1 = string_itoa(54);
 
-	truncar_archivo("campeonesFutbolArgentino",string_itoa_1);
+	truncar_archivo("campeonesFutbolArgentino",54);
 
-	free(string_itoa_1);
+//	free(string_itoa_1);
 
-	char* string_itoa_2 = string_itoa(60);
+//	char* string_itoa_2 = string_itoa(60);
 
-	truncar_archivo("campeonesFutbolArgentino",string_itoa_2);
+	truncar_archivo("campeonesFutbolArgentino",60);
 
-	free(string_itoa_2);
+//	free(string_itoa_2);
 
 	// funca
 
@@ -221,17 +221,17 @@ void probando_cositas(){
 
 	crear_archivo("campeonesPremier");
 
-	char* string_itoa_3 = string_itoa(54);
+//	char* string_itoa_3 = string_itoa(54);
 
-	truncar_archivo("campeonesPremier",string_itoa_3);
+	truncar_archivo("campeonesPremier",54);
 
-	free(string_itoa_3);
+//	free(string_itoa_3);
 
-	char* string_itoa_4 = string_itoa(147);
+//	char* string_itoa_4 = string_itoa(147);
 
-	truncar_archivo("campeonesPremier",string_itoa_4);
+	truncar_archivo("campeonesPremier",147);
 
-	free(string_itoa_4);
+//	free(string_itoa_4);
 
 	// se necesitaron 2 bloques que sean apuntados por punteros de bloque de punteros (bloque numero 11), por ende leyendo en archivo
 	// desde pos 11 desplazado 0 y 4 bytes deberían leer los nros de los bloques de datos 12, 13.
@@ -256,17 +256,17 @@ void probando_cositas(){
 
 	crear_archivo("campeonesLibertadores");
 
-	char* string_itoa_5 = string_itoa(137);
+//	char* string_itoa_5 = string_itoa(137);
 
-	truncar_archivo("campeonesLibertadores",string_itoa_5);
+	truncar_archivo("campeonesLibertadores",137);
 
-	free(string_itoa_5);
+//	free(string_itoa_5);
 
-	char* string_itoa_6 = string_itoa(250);
+//	char* string_itoa_6 = string_itoa(250);
 
-	truncar_archivo("campeonesLibertadores",string_itoa_6);
+	truncar_archivo("campeonesLibertadores",250);
 
-	free(string_itoa_6);
+//	free(string_itoa_6);
 
 		uint32_t lectura2;
 		fseek(archivo_bloques,obtener_posicion_archivo_bloques(15),0);
@@ -297,33 +297,33 @@ void probando_cositas(){
 
 		crear_archivo("campeonesSudamericana");
 
-		char* string_itoa_7 = string_itoa(325);
+//		char* string_itoa_7 = string_itoa(325);
 
-		truncar_archivo("campeonesSudamericana",string_itoa_7);
+		truncar_archivo("campeonesSudamericana",325);
 
-		free(string_itoa_7);
+//		free(string_itoa_7);
 
-		char* string_itoa_8 = string_itoa(56);
+//		char* string_itoa_8 = string_itoa(56);
 
-		truncar_archivo("campeonesSudamericana",string_itoa_8);
+		truncar_archivo("campeonesSudamericana",56);
 
-		free(string_itoa_8);
+//		free(string_itoa_8);
 
 		crear_archivo("poleSittersHungaroring");
 
-		char* string_itoa_9 = string_itoa(325);
+//		char* string_itoa_9 = string_itoa(325);
 
 		// necesita 6 bloques, uno apuntado directo y 5 indirecciones
-		truncar_archivo("poleSittersHungaroring",string_itoa_9);
+		truncar_archivo("poleSittersHungaroring",325);
 
-		free(string_itoa_9);
+//		free(string_itoa_9);
 
-		char* string_itoa_10 = string_itoa(160);
+//		char* string_itoa_10 = string_itoa(160);
 
 		// necesita 3 bloques, uno apuntado directo y 2 indirecciones, tengo que liberar 3 bloques
-		truncar_archivo("poleSittersHungaroring",string_itoa_10);
+		truncar_archivo("poleSittersHungaroring",160);
 
-		free(string_itoa_10);
+//		free(string_itoa_10);
 
 		// funca - fin preubas ftruncate
 
@@ -390,7 +390,7 @@ void probando_cositas(){
 
 //		char* l1aux = leo_archivo_1;
 //
-//		printf("Leido con fread: %s\n:",l1aux);
+		printf("Leido con fread: %s\n:",leo_archivo_1);
 
 		free(leo_archivo_1);
 
@@ -468,6 +468,10 @@ void probando_cositas(){
 
 		char* leo_archivo_4 = leer_archivo("campeonesLibertadores",185,16);
 		printf("Leido con fread: %s\n",leo_archivo_4);
+
+		int rta = abrir_archivo("hey");
+
+		printf("%i\n",rta);
 
 		free(leo_archivo_4);
 

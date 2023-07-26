@@ -36,7 +36,7 @@ void levantar_fcb_nuevo_archivo(const char*);
 void levantar_archivo_bloques();
 void atender_clientes_file_system(int);
 char* obtener_ruta_archivo(const char*);
-void truncar_archivo(char*,char*);
+void truncar_archivo(char*,int);
 int abrir_archivo(char*);
 int crear_archivo(char*);
 void inicializar_estructuras();
@@ -55,12 +55,12 @@ void ampliar_con_tam_actual_cero_y_tam_nuevo_menor_igual_tam_bloque(t_config*);
 void ampliar_con_tam_actual_cero_y_tam_nuevo_mayor_tam_bloque(int ,t_config*);
 void ampliar_con_tam_actual_menor_tam_bloque_tam_nuevo_mayor_tam_bloque(int,t_config*);
 void ampliar_con_tam_actual_mayor_tam_bloque(int, int,t_config*);
-int nro_bloque_escribir_cuando_escribo_en_unico_bloque(int,t_config*);
 void escribir_bytes_mismo_bloque(int ,int ,void* ,int ,t_config*,char*);
 void escribir_archivo(char*,int,void*,int);
 void escribir_bytes_diferentes_bloques(int,int,void*,int,t_config*,char*);
 
 
+extern int socket_memoria;
 extern t_config* config_super_bloque;
 extern t_config* config;
 extern t_log* logger;
