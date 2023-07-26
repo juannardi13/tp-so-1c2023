@@ -164,8 +164,10 @@ int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* con
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
 	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
 	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
-
-	if(desplazamiento_segmento > tamanio_segmento) {
+	int tamanio_valor = strlen(valor)+1; 
+	// Ojo Juani, segun la consigna: En caso de que el desplazamiento dentro del segmento (desplazamiento_segmento) sumado al tamaño a leer / escribir, sea mayor al tamaño del segmento
+	// Estaba mal planteado el if
+	if(desplazamiento_segmento + tamanio_valor > tamanio_segmento) {
 		log_info(logger_principal, "PID: <%d> - Error SEG_FAULT- Segmento: <%d> - Offset: <%d> - Tamaño: <%d>", contexto->pid, numero_segmento, desplazamiento_segmento, tamanio_segmento);
 		activar_segmentation_fault(contexto, fd_kernel);
 	}
