@@ -158,21 +158,25 @@ bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 	return desplazamiento > tamanio_valor;
 }
 
-int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal, int fd_kernel) {
+int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal, int fd_kernel, int tamanio_valor) {
 	int tamanio_segmento =  config_get_int_value(config, "TAM_MAX_SEGMENTO");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
 	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
 	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
-	int tamanio_valor = strlen(valor)+1; 
+	//int tamanio_valor = strlen(valor) + 1;
 	// Ojo Juani, segun la consigna: En caso de que el desplazamiento dentro del segmento (desplazamiento_segmento) sumado al tamaño a leer / escribir, sea mayor al tamaño del segmento
 	// Estaba mal planteado el if
+	int direccion_fisica;
+
 	if(desplazamiento_segmento + tamanio_valor > tamanio_segmento) {
 		log_info(logger_principal, "PID: <%d> - Error SEG_FAULT- Segmento: <%d> - Offset: <%d> - Tamaño: <%d>", contexto->pid, numero_segmento, desplazamiento_segmento, tamanio_segmento);
 		activar_segmentation_fault(contexto, fd_kernel);
+		direccion_fisica = -1;
+	} else {
+		direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
 	}
 
-	int direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
 
 	return direccion_fisica;
 }
@@ -214,14 +218,27 @@ void escribir_en_memoria(int direccion_fisica, char* valor, int fd_memoria, t_lo
 
 	send(fd_memoria, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 
-	log_info(logger_principal, "PID: <%d> - Acción: <ESCRIBIR> - Segmento: <%d> - Dirección Física: <%d> - Valor: <%s>", contexto->pid, numero_segmento, direccion_fisica, valor);
 
 	free(a_enviar);
 	eliminar_paquete(paquete);
+
+	op_code respuesta_memoria;
+
+	recv(fd_memoria, &respuesta_memoria, sizeof(op_code), MSG_WAITALL);
+
+	switch(respuesta_memoria) {
+	case OK_VALOR_ESCRITO:
+		log_info(logger_principal, "PID: <%d> - Acción: <ESCRIBIR> - Segmento: <%d> - Dirección Física: <%d> - Valor: <%s>", contexto->pid, numero_segmento, direccion_fisica, valor);
+		break;
+	default:
+		log_error(logger_principal, "[ERROR] Arreglate con Memoria loco suerte.");
+		break;
+	}
+
 }
 
-char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int tamanio, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel);
+char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica, int tamanio, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel, int direccion_fisica) {
+
 	int tamanio_segmento =  config_get_int_value(config, "TAM_MAX_SEGMENTO");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
 	int numero_segmento = floor(direccion_logica / tamanio_segmento);
@@ -288,7 +305,9 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 			break;
 		default :
 			printf("Operacion desconocida");
-			break;
+			break;	} else {
+				return registros_cpu
+			}
 	}
 
 	eliminar_paquete(paquete_respuesta);

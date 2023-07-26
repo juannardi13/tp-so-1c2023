@@ -1105,21 +1105,35 @@ void ejecutar_IO(char* instruccion, t_contexto_de_ejecucion* contexto, int fd_ke
 	eliminar_paquete(paquete);
 }
 
-void ejecutar_MOV_IN(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
+int ejecutar_MOV_IN(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
 	char** instruccion = string_split(instruccion_grande, " ");
 
 	int direccion_logica = atoi(instruccion[2]);
 	int tam_registro = tamanio_registro(instruccion[1]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel, tam_registro);
 
-	asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, tam_registro, fd_memoria, config, logger_principal, fd_kernel), instruccion[1]);
+	if(direccion_fisica != -1) {
+		asignar_valor_a_registro(mmu_valor_buscado(contexto, direccion_logica, tam_registro, fd_memoria, config, logger_principal, fd_kernel, direccion_fisica), instruccion[1]);
+		return 1;
+	} else {
+		return 0;
+	}
 }
 
-void ejecutar_MOV_OUT(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
+int ejecutar_MOV_OUT(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_memoria, t_config* config, t_log* logger_principal, int fd_kernel) {
 	char** instruccion = string_split(instruccion_grande, " ");
 
 	int direccion_logica = atoi(instruccion[1]);
-	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel);
+	int tamanio = tamanio_registro(instruccion[2]);
+
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel, tamanio);
+
+	if(direccion_fisica != -1) {
 	escribir_en_memoria(direccion_fisica, instruccion[2], fd_memoria, logger_principal, contexto, direccion_logica, config);
+	return 1;
+	} else {
+		return 0;
+	}
 }
 
 void ejecutar_SET(char* instruccion_grande, t_contexto_de_ejecucion* contexto) {

@@ -167,6 +167,8 @@ void avisar_a_modulo(int socket, op_code codigo) {
 	agregar_a_stream(a_enviar, &desplazamiento, &codigo, sizeof(op_code));
 
 	send(socket, a_enviar, sizeof(op_code), 0);
+
+	free(a_enviar);
 }
 
 //Funciones de deserialización de estructuras que ya no se usan, como t_instruccion (NO ANDAN DEL TODO BIEN)

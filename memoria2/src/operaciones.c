@@ -298,7 +298,7 @@ void recv_escribir_en_memoria(int socket_cliente){
 	char* valor = deserializar_string(tamanio, buffer, &offset);
 
 	log_info(logger, "Se escribe el valor <%s> de tamaño <%d> en la direccion fisica: %d", valor, tamanio, direccion_fisica);
-//	escribir_valor_en_direccion_fisica(direccion_fisica, tamanio, valor);
+	escribir_valor_en_direccion_fisica(direccion_fisica, tamanio, valor);
 
 	free(buffer);
 }
