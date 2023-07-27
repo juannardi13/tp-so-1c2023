@@ -375,6 +375,7 @@ void agregar_tabla_a_paquete(t_paquete *paquete, t_tabla_segmentos *tabla) {
 
 	int tam_lista = list_size(tabla->segmentos);
 
+	agregar_int_a_paquete(paquete, tabla->pid);
 	agregar_int_a_paquete(paquete, tam_lista);
 
 	for (int i = 0; i < tam_lista; i++) {
@@ -382,7 +383,6 @@ void agregar_tabla_a_paquete(t_paquete *paquete, t_tabla_segmentos *tabla) {
 		agregar_segmento_a_paquete(paquete, seg);
 	}
 
-	agregar_int_a_paquete(paquete, tabla->pid);
 }
 
 void send_op(int socket_cliente, int cod_op) {

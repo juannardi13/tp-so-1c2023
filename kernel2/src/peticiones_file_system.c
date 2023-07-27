@@ -12,7 +12,7 @@ void iniciar_peticiones_file_system(void) {
 
 	pthread_mutex_init(&mutex_compactacion, NULL);
 	pthread_mutex_init(&mutex_peticiones_fs, NULL);
-	sem_init(&sem_archivos, 0, 0);
+	sem_init(&sem_peticiones_file_system, 0, 0);
 
 	pthread_create(&thread_peticiones_fs, NULL, (void*) manejar_peticiones_fs, NULL);
 	pthread_detach(thread_peticiones_fs);
@@ -38,6 +38,14 @@ void* manejar_peticiones_fs(void) {
 		list_add(cola_ready, proceso);
 		proceso->llegada_ready = get_time();
 		pthread_mutex_unlock(&mutex_ready);
+
+		pthread_mutex_lock(&mutex_compactacion_solicitada);
+		pthread_mutex_lock(&mutex_peticiones_fs);
+		if(queue_is_empty(cola_peticiones_file_system) && compactacion_solicitada == 1) {
+			sem_post(&sem_finalizar_peticiones_fs);
+		}
+		pthread_mutex_unlock(&mutex_peticiones_fs);
+		pthread_mutex_unlock(&mutex_compactacion_solicitada);
 
 		pthread_mutex_unlock(&mutex_compactacion);
 	}

@@ -77,7 +77,7 @@ void manejar_fread(int socket_cliente)
 
 	if(rta_memoria == OK_VALOR_ESCRITO)
 	{
-		int cod_op = FREAD_OK;
+		int cod_op = FINALIZADO;
 
 		send_op(socket_cliente,cod_op);
 
@@ -133,7 +133,7 @@ void manejar_fwrite(int socket_cliente)
 
 				escribir_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica_contenido,cantidad_bytes_escribir);
 
-				int cod_op = FWRITE_OK;
+				int cod_op = FINALIZADO;
 
 				log_info(logger,"Escribir Archivo: <%s> - Puntero <%i> - Memoria <%i> - Tamaño <%i>",string_nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_escribir);
 
@@ -173,7 +173,7 @@ void manejar_ftruncate(int socket_cliente)
 
 	truncar_archivo(string_nombre_archivo,tamanio_nuevo);
 
-	int cod_op = FTRUNCATE_OK;
+	int cod_op = FINALIZADO;
 
 	log_info(logger,"Truncar Archivo: <%s> - Tamaño: <%i>",string_nombre_archivo,tamanio_nuevo);
 
@@ -193,10 +193,6 @@ void manejar_fcreate(int socket_cliente)
 	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
 
 	crear_archivo(string_nombre_archivo);
-
-	int cod_op = FCREATE_OK;
-
-	send_op(socket_cliente,cod_op);
 
 	free(contenido_buffer);
 	free(string_nombre_archivo);

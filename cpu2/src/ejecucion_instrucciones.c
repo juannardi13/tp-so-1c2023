@@ -454,7 +454,7 @@ void ejecutar_F_OPEN(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 			+ tamanio_registro_mediano * 4
 			+ tamanio_registro_grande * 4
 			+ sizeof(int)
-			+ (cantidad_segmentos * 3 * sizeof(int));;
+			+ (cantidad_segmentos * 3 * sizeof(int));
 
 	void *stream = malloc(buffer->stream_size);
 	int offset = 0;
@@ -542,7 +542,7 @@ void ejecutar_F_OPEN(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 	free(paquete);
 }
 
-void ejecutar_F_READ(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+void ejecutar_F_READ(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config, t_log* logger_principal){
 	char **instruccion = string_split(instruccion_grande, " ");
 
 	t_buffer *buffer = malloc(sizeof(t_buffer));
@@ -555,6 +555,7 @@ void ejecutar_F_READ(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 	int tamanio_nombre_archivo = strlen(instruccion[1]) + 1;
 	int direccion_logica = atoi(instruccion[2]);
 	int cantidad_bytes = atoi(instruccion[3]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel, cantidad_bytes);
 	int cantidad_segmentos = list_size(contexto->tabla_segmentos);
 
 	buffer->stream_size = sizeof(int) * 6 //PID, PC, TAMANIO_INSTRUCCIONES, TAMANIO_NOMBRE_ARCHIVO, DIRECCION_LOGICA, CANTIDAD_BYTES
@@ -633,7 +634,7 @@ void ejecutar_F_READ(char* instruccion_grande, t_contexto_de_ejecucion* contexto
 	offset += sizeof(int);
 	memcpy(stream + offset, instruccion[1], tamanio_nombre_archivo);
 	offset += tamanio_nombre_archivo;
-	memcpy(stream + offset, &direccion_logica, sizeof(int));
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, &cantidad_bytes, sizeof(int));
 
@@ -883,7 +884,7 @@ void ejecutar_F_TRUNCATE(char* instruccion_grande, t_contexto_de_ejecucion* cont
 	free(paquete);
 }
 
-void ejecutar_F_WRITE(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config){
+void ejecutar_F_WRITE(char* instruccion_grande, t_contexto_de_ejecucion* contexto, int fd_kernel, int fd_memoria, t_config* config, t_log* logger_principal){
 	char **instruccion = string_split(instruccion_grande, " ");
 
 	t_buffer *buffer = malloc(sizeof(t_buffer));
@@ -896,6 +897,7 @@ void ejecutar_F_WRITE(char* instruccion_grande, t_contexto_de_ejecucion* context
 	int tamanio_nombre_archivo = strlen(instruccion[1]) + 1;
 	int direccion_logica = atoi(instruccion[2]);
 	int cantidad_bytes = atoi(instruccion[3]);
+	int direccion_fisica = obtener_direccion_fisica(direccion_logica, fd_memoria, config, contexto, logger_principal, fd_kernel, cantidad_bytes);
 	int cantidad_segmentos = list_size(contexto->tabla_segmentos);
 
 	buffer->stream_size = sizeof(int) * 6 //PID, PC, TAMANIO_INSTRUCCIONES, TAMANIO_NOMBRE_ARCHIVO, DIRECCION_LOGICA, CANTIDAD_BYTES
@@ -974,7 +976,7 @@ void ejecutar_F_WRITE(char* instruccion_grande, t_contexto_de_ejecucion* context
 	offset += sizeof(int);
 	memcpy(stream + offset, instruccion[1], tamanio_nombre_archivo);
 	offset += tamanio_nombre_archivo;
-	memcpy(stream + offset, &direccion_logica, sizeof(int));
+	memcpy(stream + offset, &direccion_fisica, sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, &cantidad_bytes, sizeof(int));
 

@@ -85,19 +85,17 @@ t_pcb* crear_estructura_pcb(char* instrucciones) {
 	t_pcb* un_pcb = malloc(sizeof(t_pcb));
 	pthread_mutex_lock(&mutex_pid);
 	un_pcb->pid = pid_global;
-	//un_pcb->pid_string = int_to_string(pid_global);
+	un_pcb->pid_string = string_itoa(pid_global);
 	pid_global++;
 	pthread_mutex_unlock(&mutex_pid);
 	un_pcb->tamanio_instrucciones = tamanio_proceso;
 	un_pcb->instrucciones = string_duplicate(instrucciones);
 	un_pcb->pc = 0;
 	un_pcb->estado = NEW;
-	//un_pcb->tamanio = tamanio_proceso; //TODO este tiene que ser el tamaño de los segmentos, quizás no hace falta agregarlos ahora
 	un_pcb->registros = registros_iniciados;
 	un_pcb->recursos_asignados = list_create();
 	un_pcb->tabla_archivos = dictionary_create();
 
-	//TODO PONER ACA EL MUTEX PARA LAS OPERACIONES CON MEMORIA
 	pthread_mutex_lock(&mutex_operacion_memoria);
 	un_pcb->tabla_segmentos.pid = un_pcb->pid;
 	un_pcb->tabla_segmentos.segmentos = list_create();
@@ -121,6 +119,10 @@ void agregar_proceso_a_new(t_proceso* proceso) {
 	proceso->pcb->estado = NEW;
 	proceso->desalojado = DESALOJADO;
 	list_add(cola_new, proceso);
+
+	pthread_mutex_lock(&mutex_procesos_en_el_sistema);
+	dictionary_put(procesos_en_el_sistema, proceso->pcb->pid_string, proceso);
+	pthread_mutex_unlock(&mutex_procesos_en_el_sistema);
 
 	log_info(kernel_principal, "Se crea el proceso <%d> en NEW", proceso->pcb->pid);
 

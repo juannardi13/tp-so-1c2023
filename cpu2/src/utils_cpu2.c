@@ -301,10 +301,14 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 
 			break;
 		case NO_LEIDO :
-			printf("No se pudo leer el valor del registro dado");
+			perror("No se pudo leer el valor del registro dado");
+			valor = malloc(6);
+			strcpy(valor, "ERROR");
 			break;
 		default :
-			printf("Operacion desconocida");
+			perror("Operacion desconocida");
+			valor = malloc(6);
+			strcpy(valor, "ERROR");
 			break;
 	}
 

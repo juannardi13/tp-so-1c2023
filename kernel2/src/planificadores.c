@@ -9,6 +9,8 @@ pthread_mutex_t mutex_operacion_file_system;
 pthread_mutex_t mutex_operacion_memoria;
 pthread_mutex_t mutex_pid;
 pthread_mutex_t mutex_ready;
+pthread_mutex_t mutex_procesos_en_el_sistema;
+pthread_mutex_t mutex_compactacion_solicitada;
 sem_t sem_admitir;
 sem_t sem_block_io;
 sem_t sem_exec;
@@ -17,6 +19,7 @@ sem_t sem_grado_multiprogramacion;
 sem_t sem_ready;
 sem_t sem_recursos;
 sem_t sem_archivos;
+sem_t sem_finalizar_peticiones_fs;
 pthread_t thread_archivos;
 pthread_t thread_ready;
 pthread_t thread_recursos;
@@ -25,6 +28,8 @@ pthread_t thread_exec;
 pthread_t thread_ready;
 pthread_t thread_blocked;
 pthread_t thread_admitir_ready;
+t_dictionary* procesos_en_el_sistema;
+int compactacion_solicitada;
 
 void admitir_procesos_a_ready(void) { //hilo
 
@@ -67,11 +72,16 @@ void admitir_procesos_a_ready(void) { //hilo
 
 void iniciar_planificador_largo_plazo(void) {
 	//Aca creo todos los semáforos y las estructuras necesarias para inicializar la planificación, por ahora solo tiene esto:
+	procesos_en_el_sistema = dictionary_create();
+	pthread_mutex_init(&mutex_procesos_en_el_sistema, NULL);
+	pthread_mutex_init(&mutex_compactacion_solicitada, NULL);
 	pthread_mutex_init(&mutex_new, NULL);
 	pthread_mutex_init(&mutex_exit, NULL);
 	pthread_mutex_init(&mutex_pid, NULL);
 	sem_init(&sem_exit, 0, 0);
 	sem_init(&sem_grado_multiprogramacion, 0, config_kernel.grado_multiprogramacion); //semaforo contador para la cantidad de procesos en ready
+
+	compactacion_solicitada = 0;
 
 	cola_new = list_create();
 	cola_exit = list_create();
@@ -92,6 +102,7 @@ void iniciar_planificador_corto_plazo(void) {
 	sem_init(&sem_ready, 0, 0);
 	sem_init(&sem_exec, 0, 0);
 	sem_init(&sem_block_io, 0, 0);
+	sem_init(&sem_finalizar_peticiones_fs, 0, 0);
 
 	cola_ready = list_create();
 	cola_exec = list_create();

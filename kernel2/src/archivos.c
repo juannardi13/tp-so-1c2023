@@ -196,7 +196,7 @@ void crear_archivo_en_fs(char* nombre) {
 
 	buffer->stream = stream;
 
-	paquete->codigo_operacion = CREAR_ARCHIVO;
+	paquete->codigo_operacion = F_CREATE;
 	paquete->buffer = buffer;
 
 	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
@@ -210,6 +210,4 @@ void crear_archivo_en_fs(char* nombre) {
 
 	free(a_enviar);
 	eliminar_paquete(paquete);
-
-	//TODO creo que solo le digo que lo cree y listo, no creo que necesite esperar una respuesta
 }

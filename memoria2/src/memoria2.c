@@ -92,7 +92,7 @@ int esperar_conexiones(int socket_servidor) {
 
 void manejar_conexion(int* fd_cliente) {
 	int socket_cliente = *fd_cliente;
-	pthread_mutex_t mutex_atendiendo_fs = PTHREAD_MUTEX_INITIALIZER;
+//	pthread_mutex_t mutex_atendiendo_fs = PTHREAD_MUTEX_INITIALIZER;
 
 	while(1) {
 		t_paquete* paquete = malloc(sizeof(t_paquete));
@@ -119,11 +119,11 @@ void manejar_conexion(int* fd_cliente) {
 
 			recv_leer_de_memoria(tamanio_valor, direccion_fisica, socket_cliente);
 
-			//Esto de acá es simplemente para probarlo
-			char* valor = malloc(tamanio_valor);
-			valor = "HOLA";
-
-			enviar_string_por(LEIDO, valor, socket_cliente);
+//			//Esto de acá es simplemente para probarlo
+//			char* valor = malloc(tamanio_valor);
+//			valor = "HOLA";
+//
+//			enviar_string_por(LEIDO, valor, socket_cliente);
 
 			break;
 		case ESCRIBIR_EN_MEMORIA :
@@ -169,9 +169,9 @@ void manejar_conexion(int* fd_cliente) {
 
 //			int offset = 0;
 //			int algo = deserializar_int(stream, &offset); // no se usa, creo que igual no hace falta
-			pthread_mutex_lock(&mutex_atendiendo_fs);
+//			pthread_mutex_lock(&mutex_atendiendo_fs);
 			compactar(socket_cliente);
-			pthread_mutex_unlock(&mutex_atendiendo_fs);
+			//pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;
 
 
@@ -180,7 +180,7 @@ void manejar_conexion(int* fd_cliente) {
 			break;
 
 		case ESCRIBIR_EN_MEMORIA_FS:
-			pthread_mutex_lock(&mutex_atendiendo_fs);
+	//		pthread_mutex_lock(&mutex_atendiendo_fs);
 			memcpy(&direccion_fisica, stream, sizeof(int));
 			stream += sizeof(int);
 			memcpy(&tamanio_valor, stream, sizeof(int));
@@ -196,11 +196,11 @@ void manejar_conexion(int* fd_cliente) {
 
 			recv_escribir_en_memoria(direccion_fisica, tamanio_valor, valor_a_escribir, socket_cliente);
 
-			pthread_mutex_unlock(&mutex_atendiendo_fs);
+	//		pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;
 
 			case LEER_DE_MEMORIA_FS:
-			pthread_mutex_lock(&mutex_atendiendo_fs);
+	//		pthread_mutex_lock(&mutex_atendiendo_fs);
 
 			memcpy(&direccion_fisica, stream, sizeof(int));
 			stream += sizeof(int);
@@ -210,7 +210,7 @@ void manejar_conexion(int* fd_cliente) {
 			log_info(logger, "File System quiere leer en la dirección <%d> un tamaño de <%d>", direccion_fisica, tamanio_valor);
 
 			recv_leer_de_memoria(tamanio_valor, direccion_fisica, socket_cliente);
-			pthread_mutex_unlock(&mutex_atendiendo_fs);
+	//		pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;
 
 		default:

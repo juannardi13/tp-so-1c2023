@@ -23,8 +23,11 @@ void asignar_segmentos_de_memoria(t_pcb* pcb) {
 		void* stream = paquete_respuesta->buffer->stream;
 
 		int tam_segmentos;
+		int pid;
 		t_segmento* aux = malloc(sizeof(t_segmento));
 
+		memcpy(&pid, stream, sizeof(int));
+		stream += sizeof(int);
 		memcpy(&tam_segmentos, stream, sizeof(int));
 		stream += sizeof(int);
 
@@ -194,31 +197,61 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 	case SEGMENTO_CREADO:
 		log_info(logger_kernel, "El segmento solicitado por PID: <%d> fue exitosamente creado", proceso->pcb->pid);
 		//recibir_tablas_segmentos_global();
-		recibir_tablas_segmentos(proceso->pcb);
+	//	recibir_tablas_segmentos(proceso->pcb);
+		void* stream = paquete_respuesta->buffer->stream;
+		int nueva_base;
 
-		pthread_mutex_lock(&mutex_exec);
-		list_add(cola_exec, proceso);
-		pthread_mutex_unlock(&mutex_exec);
+		memcpy(&(nueva_base), stream, sizeof(int));
+		stream += sizeof(int);
+
+		t_segmento* nuevo_segmento = malloc(sizeof(t_segmento));
+		nuevo_segmento->id = id_segmento;
+		nuevo_segmento->tamanio = tamanio_segmento;
+		nuevo_segmento->base = nueva_base;
+
+		list_add(proceso->pcb->tabla_segmentos.segmentos, nuevo_segmento);
+
+//		pthread_mutex_lock(&mutex_exec);
+//		list_add(cola_exec, proceso);
+//		pthread_mutex_unlock(&mutex_exec);
 
 		sem_post(&sem_exec);
 		break;
 	case NECESITO_COMPACTAR:
 		log_info(logger_kernel, "Compactación: <Se solicitó compactación>");
 
-		log_info(logger_kernel, "Compactación: <Esperando Fin de Operaciones de FS");
+		//TODO semáforos y las tablas actualizadas para la compactación
+
+		if(!queue_is_empty(cola_peticiones_file_system)) {
+			pthread_mutex_lock(&mutex_compactacion_solicitada);
+			compactacion_solicitada = 1;
+			pthread_mutex_unlock(&mutex_compactacion_solicitada);
+			log_info(logger_kernel, "Compactación: <Esperando Fin de Operaciones de FS");
+			sem_wait(&sem_finalizar_peticiones_fs);
+		}
+
+		pthread_mutex_lock(&mutex_compactacion);
+
+
 		ordenar_compactacion();
 
 		//TODO ordenar create_segment de nuevo
 		log_info(logger_kernel, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->pcb->pid, id_segmento, tamanio_segmento);
 		enviar_parametros_a_memoria(proceso->pcb->pid, id_segmento, tamanio_segmento, CREATE_SEGMENT);
-		recibir_tablas_segmentos(proceso->pcb);
 
-		pthread_mutex_lock(&mutex_exec);
-		list_add(cola_exec, proceso);
-		pthread_mutex_unlock(&mutex_exec);
+		recibir_respuesta_create(proceso, id_segmento, tamanio_segmento);
 
+//		pthread_mutex_lock(&mutex_exec);
+//		list_add(cola_exec, proceso);
+//		pthread_mutex_unlock(&mutex_exec);
+
+		pthread_mutex_lock(&mutex_compactacion_solicitada);
+		compactacion_solicitada = 0;
+		pthread_mutex_unlock(&mutex_compactacion_solicitada);
+
+		pthread_mutex_unlock(&mutex_compactacion);
 		sem_post(&sem_exec);
-		break;
+		break;//TODO acá va la recepción de las tablas de segmentos actualizadas
 	default:
 		log_error(logger_kernel, "[ERROR] Error al recibir respuesta de CREATE_SEGMENT");
 		break;
@@ -260,15 +293,49 @@ void ordenar_compactacion(void) {
 	paquete_respuesta->buffer = malloc(sizeof(t_buffer));
 
 	recv(socket_memoria, &(paquete_respuesta->codigo_operacion), sizeof(op_code), MSG_WAITALL);
-	recv(socket_memoria, &(paquete->buffer->stream_size), sizeof(int), 0);
-	paquete->buffer->stream = malloc(paquete->buffer->stream_size);
-	recv(socket_memoria, paquete->buffer->stream, paquete->buffer->stream_size, 0);
+	recv(socket_memoria, &(paquete_respuesta->buffer->stream_size), sizeof(int), 0);
+	paquete_respuesta->buffer->stream = malloc(paquete_respuesta->buffer->stream_size);
+	recv(socket_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
+
+	void* stream_respuesta = paquete_respuesta->buffer->stream;
+	int offset_respuesta = 0;
 
 	switch(paquete_respuesta->codigo_operacion) {
 	case COMPACTACION_TERMINADA:
 		log_info(logger_kernel, "Se finalizó el proceso de compactación");
 
-		//TODO acá va la recepción de las tablas de segmentos actualizadas
+		int cantidad_tablas;
+		int pid;
+		int cantidad_segmentos;
+
+		memcpy(&(cantidad_tablas), stream_respuesta, sizeof(int));
+		stream_respuesta += sizeof(int);
+
+		for(int i = 0; i < cantidad_tablas; i++) {
+			memcpy(&(pid), stream_respuesta, sizeof(int));
+			stream_respuesta += sizeof(int);
+			memcpy(&(cantidad_segmentos), stream_respuesta, sizeof(int));
+			stream_respuesta += sizeof(int);
+
+			pthread_mutex_lock(&mutex_procesos_en_el_sistema);
+			t_proceso* proceso = dictionary_get(procesos_en_el_sistema, string_itoa(pid));
+			pthread_mutex_unlock(&mutex_procesos_en_el_sistema);
+
+			list_clean_and_destroy_elements(proceso->pcb->tabla_segmentos.segmentos, free);
+
+			for(int gcbc = 0; gcbc < cantidad_segmentos; gcbc++) {
+				t_segmento* segmento_aux = malloc(sizeof(t_segmento));
+
+				memcpy(&(segmento_aux->id), stream_respuesta, sizeof(int));
+				stream_respuesta += sizeof(int);
+				memcpy(&(segmento_aux->base), stream_respuesta, sizeof(int));
+				stream_respuesta += sizeof(int);
+				memcpy(&(segmento_aux->tamanio), stream_respuesta, sizeof(int));
+				stream_respuesta += sizeof(int);
+
+				list_add(proceso->pcb->tabla_segmentos.segmentos, segmento_aux);
+			}
+		}
 
 		break;
 	default:

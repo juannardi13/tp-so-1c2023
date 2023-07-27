@@ -179,7 +179,7 @@ void estado_ejecutar(void) {
 //			list_add(cola_exec, proceso_a_ejecutar);
 //			pthread_mutex_unlock(&mutex_exec);
 
-//			sem_post(&sem_exec);
+			sem_post(&sem_exec);
 			break;
 		case DELETE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;
@@ -270,6 +270,8 @@ void estado_ejecutar(void) {
 				}
 
 				pthread_mutex_unlock(&mutex_operacion_file_system);
+
+				proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 
 				dictionary_put(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_a_abrir, entrada_archivo_open);
 
@@ -375,8 +377,6 @@ void estado_ejecutar(void) {
 			memcpy(&cantidad_bytes_read, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(kernel_principal, "PID: <%d> - Leer Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, direccion_fisica_read, cantidad_bytes_read);
-
 			t_peticion* peticion_read = malloc(sizeof(t_peticion));
 			t_archivo_proceso* archivo_read = dictionary_get(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_read);
 
@@ -386,6 +386,8 @@ void estado_ejecutar(void) {
 			peticion_read->direccion_fisica = direccion_fisica_read;
 			peticion_read->nombre_archivo = nombre_archivo_read;
 			peticion_read->puntero = archivo_read->puntero;
+
+			log_warning(kernel_principal, "PID: <%d> - Leer Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, archivo_read->puntero, direccion_fisica_read, cantidad_bytes_read);
 
 			pthread_mutex_lock(&mutex_peticiones_fs);
 			queue_push(cola_peticiones_file_system, peticion_read);
@@ -427,8 +429,6 @@ void estado_ejecutar(void) {
 			memcpy(&cantidad_bytes_write, stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_warning(kernel_principal, "PID: <%d> - Escribir Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, direccion_fisica_write, cantidad_bytes_write);
-
 //			pthread_mutex_lock(&mutex_exec);
 //			list_add(cola_exec, proceso_a_ejecutar);
 //			pthread_mutex_unlock(&mutex_exec);
@@ -443,6 +443,8 @@ void estado_ejecutar(void) {
 			peticion_read->direccion_fisica = direccion_fisica_write;
 			peticion_read->nombre_archivo = nombre_archivo_write;
 			peticion_read->puntero = archivo_write->puntero;
+
+			log_warning(kernel_principal, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, archivo_write->puntero, direccion_fisica_write, cantidad_bytes_write);
 
 			pthread_mutex_lock(&mutex_peticiones_fs);
 			queue_push(cola_peticiones_file_system, peticion_write);
@@ -702,6 +704,10 @@ void estado_exit(void) {
 		if(respuesta_memoria != ESTRUCTURAS_LIBERADAS) {
 			log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
 		}
+
+		pthread_mutex_lock(&mutex_procesos_en_el_sistema);
+		dictionary_remove(procesos_en_el_sistema, proceso->pcb->pid_string);
+		pthread_mutex_unlock(&mutex_procesos_en_el_sistema);
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
 
