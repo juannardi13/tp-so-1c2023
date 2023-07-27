@@ -8,8 +8,9 @@ void estado_ejecutar(void) {
 	while (1) {
 		sem_wait(&sem_exec);
 		pthread_mutex_lock(&mutex_exec);
-		t_proceso* proceso_a_ejecutar = list_remove(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
+		t_proceso* proceso_a_ejecutar = list_get(cola_exec, 0); //esto ayuda para cuando se necesita devolver el mismo proceso a cpu, como en las instrucciones de memoria
 		// ME CAGÓ LA VIDA DURANTE UN BUEN RATO EL LIST_REMOVE HABÍA PUESTO LIST_GET Y NO ANDABA LA CONCHA DE LA LORA!"!!!!!!!!!"°!"°!"
+		// 27/07/23 ME FUI DOMADÍSIMO UNA VEZ MÁS Y TUVO QUE VOLVER EL LIST_GET COMO MVP DE ESTADO_EXEC
 		pthread_mutex_unlock(&mutex_exec);
 
 		proceso_a_ejecutar->pcb->estado = EXEC;
@@ -19,7 +20,7 @@ void estado_ejecutar(void) {
 	 		proceso_a_ejecutar->principio_ultima_rafaga = inicio_cpu;
 	 	}
 		
-		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb); //falta enviar los segmentos TODO
+		enviar_pcb(socket_cpu, proceso_a_ejecutar->pcb);
 		log_info(logger_kernel, "PID: <%d> enviada a CPU", proceso_a_ejecutar->pcb->pid);
 
 		t_paquete* paquete = malloc(sizeof(t_paquete));
@@ -130,6 +131,7 @@ void estado_ejecutar(void) {
 		switch (respuesta_cpu) {
 		case IO: //TERMINADO
 			proceso_a_ejecutar->desalojado = DESALOJADO;
+			list_remove(cola_exec, 0);
 			int finalizacion_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = finalizacion_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
@@ -150,6 +152,7 @@ void estado_ejecutar(void) {
 			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
 			log_info(kernel_principal, "PID: <%d> - Bloqueado por: <IO>", proceso_a_ejecutar->pcb->pid);
 
+			sem_post(&sem_ready);
 			sem_post(&sem_block_io);
 			break;
 		case CREATE_SEGMENT:
@@ -172,11 +175,11 @@ void estado_ejecutar(void) {
 			recibir_respuesta_create(proceso_a_ejecutar, id_segmento, tamanio_segmento);
 			pthread_mutex_unlock(&mutex_operacion_memoria);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
 
-			sem_post(&sem_exec);
+//			sem_post(&sem_exec);
 			break;
 		case DELETE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;
@@ -195,9 +198,9 @@ void estado_ejecutar(void) {
 			recibir_tablas_segmentos(proceso_a_ejecutar->pcb);
 			pthread_mutex_unlock(&mutex_operacion_memoria);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
 
 			sem_post(&sem_exec);
 			break;
@@ -226,11 +229,12 @@ void estado_ejecutar(void) {
 				entrada_archivo->puntero = 0;
 				entrada_archivo->tamanio = 0; //Creo que para la entrada no es necesario el tamaño pero lo dejo por si las moscas.
 
-				list_add(proceso_a_ejecutar->pcb->tabla_archivos, entrada_archivo);
+				dictionary_put(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_a_abrir, entrada_archivo);
 
 				t_archivo* archivo_open = dictionary_get(tabla_global_archivos, nombre_archivo_a_abrir);
 
 				proceso_a_ejecutar->desalojado = DESALOJADO;
+				list_remove(cola_exec, 0);
 				proceso_a_ejecutar->final_ultima_rafaga = get_time();
 				proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
@@ -263,9 +267,11 @@ void estado_ejecutar(void) {
 					break;
 				}
 
-				pthread_mutex_lock(&mutex_exec);
-				list_add(cola_exec, proceso_a_ejecutar);
-				pthread_mutex_unlock(&mutex_exec);
+				dictionary_put(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_a_abrir, entrada_archivo_open);
+
+//				pthread_mutex_lock(&mutex_exec);
+//				list_add(cola_exec, proceso_a_ejecutar);
+//				pthread_mutex_unlock(&mutex_exec);
 
 				sem_post(&sem_exec);
 			}
@@ -301,9 +307,9 @@ void estado_ejecutar(void) {
 				liberar_entrada_archivo(archivo_close); //esta funcion es como el liberar instancia del recurso
 			}
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
 
 			sem_post(&sem_exec);
 			break;
@@ -332,9 +338,9 @@ void estado_ejecutar(void) {
 
 			log_warning(kernel_principal, "PID: <%d> - Actualizar puntero Archivo: <%s> - Puntero <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_seek, tamanio_en_bytes);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
 
 			sem_post(&sem_exec);
 			break;
@@ -343,6 +349,9 @@ void estado_ejecutar(void) {
 			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = F_READ;
+			proceso_a_ejecutar->desalojado = DESALOJADO;
+			proceso_a_ejecutar->final_ultima_rafaga = get_time();
+			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 			
 			int tamanio_archivo_read;
 			int direccion_fisica_read;
@@ -364,17 +373,37 @@ void estado_ejecutar(void) {
 
 			log_warning(kernel_principal, "PID: <%d> - Leer Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_read, direccion_fisica_read, cantidad_bytes_read);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+			t_peticion* peticion_read = malloc(sizeof(t_peticion));
+			t_archivo_proceso* archivo_read = dictionary_get(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_read);
 
-			sem_post(&sem_exec);
+			peticion_read->proceso = proceso_a_ejecutar;
+			peticion_read->cantidad_bytes = cantidad_bytes_read;
+			peticion_read->codigo_operacion = F_READ;
+			peticion_read->direccion_fisica = direccion_fisica_read;
+			peticion_read->nombre_archivo = nombre_archivo_read;
+			peticion_read->puntero = archivo_read->puntero;
+
+			pthread_mutex_lock(&mutex_peticiones_fs);
+			queue_push(cola_peticiones_file_system, peticion_read);
+			pthread_mutex_unlock(&mutex_peticiones_fs);
+
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
+
+//			sem_post(&sem_exec);
+
+			sem_post(&sem_peticiones_file_system);
+			sem_post(&sem_ready);
 			break;
 		case F_WRITE:
 			//Esta instrucción solicita al Kernel que se escriba en el archivo indicado la cantidad de bytes pasados por parámetro cuya información es obtenida a partir de la dirección física de Memoria.
 			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
 
 			proceso_a_ejecutar->ultima_instruccion = F_WRITE;
+			proceso_a_ejecutar->desalojado = DESALOJADO;
+			proceso_a_ejecutar->final_ultima_rafaga = get_time();
+			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 			
 			int tamanio_archivo_write;
 			int direccion_fisica_write;
@@ -396,15 +425,35 @@ void estado_ejecutar(void) {
 
 			log_warning(kernel_principal, "PID: <%d> - Escribir Archivo: <%s> - Puntero <PUNTERO_ARCHIVO> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, direccion_fisica_write, cantidad_bytes_write);
 
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
+//
+//			sem_post(&sem_exec);
+			t_peticion* peticion_write = malloc(sizeof(t_peticion));
+			t_archivo_proceso* archivo_write = dictionary_get(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_write);
 
-			sem_post(&sem_exec);
+			peticion_read->proceso = proceso_a_ejecutar;
+			peticion_read->cantidad_bytes = cantidad_bytes_write;
+			peticion_read->codigo_operacion = F_WRITE;
+			peticion_read->direccion_fisica = direccion_fisica_write;
+			peticion_read->nombre_archivo = nombre_archivo_write;
+			peticion_read->puntero = archivo_write->puntero;
+
+			pthread_mutex_lock(&mutex_peticiones_fs);
+			queue_push(cola_peticiones_file_system, peticion_write);
+			pthread_mutex_unlock(&mutex_peticiones_fs);
+
+			sem_post(&sem_peticiones_file_system);
+			sem_post(&sem_ready);
 			break;
 		case F_TRUNCATE:
 			//Modificar el tamaño del archivo al indicado por parámetro.
 			//TODO Calculo para el HRRN, si se bloquea, se desaloja y se termina la rafaga del cpu
+			proceso_a_ejecutar->ultima_instruccion = F_TRUNCATE;
+			proceso_a_ejecutar->desalojado = DESALOJADO;
+			proceso_a_ejecutar->final_ultima_rafaga = get_time();
+			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 
 			int tamanio_archivo_a_truncar;
 			int nuevo_tamanio;
@@ -421,14 +470,29 @@ void estado_ejecutar(void) {
 			memcpy(&nuevo_tamanio, stream, sizeof(int));
 			stream += sizeof(int);
 
-			proceso_a_ejecutar->ultima_instruccion = F_TRUNCATE;
 			
 			log_warning(kernel_principal, "PID: <%d> - Archivo: <%s> - Tamaño: <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_truncar, nuevo_tamanio);
-			pthread_mutex_lock(&mutex_exec);
-			list_add(cola_exec, proceso_a_ejecutar);
-			pthread_mutex_unlock(&mutex_exec);
+//			pthread_mutex_lock(&mutex_exec);
+//			list_add(cola_exec, proceso_a_ejecutar);
+//			pthread_mutex_unlock(&mutex_exec);
+//
+//			sem_post(&sem_exec);
 
-			sem_post(&sem_exec);
+			t_peticion* peticion_truncate = malloc(sizeof(t_peticion));
+
+			peticion_truncate->proceso = proceso_a_ejecutar;
+			peticion_truncate->codigo_operacion = F_TRUNCATE;
+			peticion_truncate->nombre_archivo = nombre_archivo_a_truncar;
+			peticion_truncate->nuevo_tamanio_truncate = nuevo_tamanio;
+
+			//peticion_read->puntero = puntero_read;
+
+			pthread_mutex_lock(&mutex_peticiones_fs);
+			queue_push(cola_peticiones_file_system, peticion_truncate);
+			pthread_mutex_unlock(&mutex_peticiones_fs);
+
+			sem_post(&sem_peticiones_file_system);
+			sem_post(&sem_ready);
 			break;
 		case WAIT:
 			//Se asigne una instancia del recurso indicado por parámetro
@@ -456,9 +520,9 @@ void estado_ejecutar(void) {
 				if(asignar_recurso(recurso_a_pedir, proceso_a_ejecutar)) {
 					proceso_a_ejecutar->desalojado = NO_DESALOJADO;
 
-					pthread_mutex_lock(&mutex_exec);
-					list_add(cola_exec, proceso_a_ejecutar);
-					pthread_mutex_unlock(&mutex_exec);
+//					pthread_mutex_lock(&mutex_exec);
+//					list_add(cola_exec, proceso_a_ejecutar);
+//					pthread_mutex_unlock(&mutex_exec);
 
 					log_info(kernel_principal, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso_a_ejecutar->pcb->pid, recurso_a_pedir->nombre, (recurso_a_pedir->instancias_totales - recurso_a_pedir->instancias_usadas));
 
@@ -467,6 +531,10 @@ void estado_ejecutar(void) {
 					proceso_a_ejecutar->desalojado = DESALOJADO;
 					proceso_a_ejecutar->final_ultima_rafaga = get_time();
 					proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+
+					pthread_mutex_lock(&mutex_exec);
+					list_remove(cola_exec, 0);
+					pthread_mutex_unlock(&mutex_exec);
 
 					log_info(kernel_principal, "PID: <%d> - Bloqueado por <%s>", proceso_a_ejecutar->pcb->pid, recurso_a_pedir->nombre);
 
@@ -478,6 +546,10 @@ void estado_ejecutar(void) {
 				proceso_a_ejecutar->pcb->estado = EXT;
 				list_add(cola_exit, proceso_a_ejecutar);
 				pthread_mutex_unlock(&mutex_exit);
+
+				pthread_mutex_lock(&mutex_exec);
+				list_remove(cola_exec, 0);
+				pthread_mutex_unlock(&mutex_exec);
 
 				log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
 				log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
@@ -515,9 +587,9 @@ void estado_ejecutar(void) {
 
 				log_info(kernel_principal, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso_a_ejecutar->pcb->pid, recurso_a_liberar->nombre, (recurso_a_liberar->instancias_totales - recurso_a_liberar->instancias_usadas));
 
-				pthread_mutex_lock(&mutex_exec);
-				list_add(cola_exec, proceso_a_ejecutar);
-				pthread_mutex_unlock(&mutex_exec);
+//				pthread_mutex_lock(&mutex_exec);
+//				list_add(cola_exec, proceso_a_ejecutar);
+//				pthread_mutex_unlock(&mutex_exec);
 
 				sem_post(&sem_exec);
 			} else {
@@ -525,6 +597,10 @@ void estado_ejecutar(void) {
 				proceso_a_ejecutar->pcb->estado = EXT;
 				list_add(cola_exit, proceso_a_ejecutar);
 				pthread_mutex_unlock(&mutex_exit);
+
+				pthread_mutex_lock(&mutex_exec);
+				list_remove(cola_exec, 0);
+				pthread_mutex_unlock(&mutex_exec);
 
 				log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
 				log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <INVALID_RESOURCE>", proceso_a_ejecutar->pcb->pid);
@@ -540,6 +616,10 @@ void estado_ejecutar(void) {
 			proceso_a_ejecutar->final_ultima_rafaga = fin_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
 			
+			pthread_mutex_lock(&mutex_exec);
+			list_remove(cola_exec, 0);
+			pthread_mutex_unlock(&mutex_exec);
+
 			log_warning(logger_kernel, "La última instrucción ejecutada fue YIELD");
 			pthread_mutex_lock(&mutex_ready);
 			proceso_a_ejecutar->pcb->estado = READY;
@@ -555,6 +635,10 @@ void estado_ejecutar(void) {
 			list_add(cola_exit, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exit);
 
+			pthread_mutex_lock(&mutex_exec);
+			list_remove(cola_exec, 0);
+			pthread_mutex_unlock(&mutex_exec);
+
 			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
 			log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso_a_ejecutar->pcb->pid);
 			sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
@@ -565,6 +649,10 @@ void estado_ejecutar(void) {
 			proceso_a_ejecutar->pcb->estado = EXT;
 			list_add(cola_exit, proceso_a_ejecutar);
 			pthread_mutex_unlock(&mutex_exit);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_remove(cola_exec, 0);
+			pthread_mutex_unlock(&mutex_exec);
 
 			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso_a_ejecutar->pcb->pid);
 			log_info(kernel_principal, "Finaliza el proceso <%d> - Motivo: <SEG_FAULT>", proceso_a_ejecutar->pcb->pid);
@@ -598,7 +686,7 @@ void estado_exit(void) {
 		liberar_recursos_asignados(proceso->pcb->recursos_asignados);
 
 		//Liberar las estructuras del proceso en memoria
-		/*
+
 		pthread_mutex_lock(&mutex_operacion_memoria);
 		enviar_pid_memoria(proceso->pcb->pid, LIBERAR_ESTRUCTURAS);
 		log_info(logger_kernel, "PID: <%d> liberando estructuras en memoria", proceso->pcb->pid);
@@ -609,7 +697,7 @@ void estado_exit(void) {
 
 		if(respuesta_memoria != ESTRUCTURAS_LIBERADAS) {
 			log_error(logger_kernel, "No se pudo eliminar de memoria a PCB id[%d]", proceso->pcb->pid);
-		}*/
+		}
 
 		avisar_a_modulo(proceso->socket, FINALIZAR_CONSOLA);
 
@@ -642,15 +730,22 @@ void estado_ready(void) {
 		}
 		pthread_mutex_unlock(&mutex_ready);
 
-		t_proceso* siguiente_proceso = obtener_proceso_cola_ready();
-
 		pthread_mutex_lock(&mutex_exec);
-		list_add(cola_exec, siguiente_proceso);
-		pthread_mutex_unlock(&mutex_exec);
+		if(list_size(cola_exec) == 0) {       //Esto es para que no haya más de un proceso en cola_exec
+			pthread_mutex_unlock(&mutex_exec);
 
-		log_info(logger_kernel, "PID: <%d> ingresa a EXECUTE", siguiente_proceso->pcb->pid);
-		log_info(kernel_principal, "PID: <%d> - Estado Anterior: <READY> - Estado Actual: <EXEC>", siguiente_proceso->pcb->pid);
-		sem_post(&sem_exec);
+			t_proceso* siguiente_proceso = obtener_proceso_cola_ready();
+
+			pthread_mutex_lock(&mutex_exec);
+			list_add(cola_exec, siguiente_proceso);
+			pthread_mutex_unlock(&mutex_exec);
+
+			log_info(logger_kernel, "PID: <%d> ingresa a EXECUTE", siguiente_proceso->pcb->pid);
+			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <READY> - Estado Actual: <EXEC>", siguiente_proceso->pcb->pid);
+			sem_post(&sem_exec);
+		} else {
+			pthread_mutex_unlock(&mutex_exec);
+		}
 	}
 
 }

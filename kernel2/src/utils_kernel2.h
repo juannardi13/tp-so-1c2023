@@ -78,6 +78,16 @@ typedef struct {
 	int tamanio;
 }t_archivo_proceso;
 
+typedef struct {
+	t_proceso* proceso;
+	char* nombre_archivo;
+	int nuevo_tamanio_truncate;
+	int puntero;
+	int cantidad_bytes;
+	int direccion_fisica;
+	op_code codigo_operacion;
+}t_peticion;
+
 //Variables globales:
 extern archivo_config config_kernel;
 extern t_log* logger_kernel;
@@ -87,6 +97,7 @@ extern int socket_cpu;
 extern int socket_memoria;
 extern int socket_filesystem;
 extern t_consola* consola;
+extern t_queue* cola_peticiones_file_system;
 extern t_list* cola_block_io;
 extern t_list* cola_exec;
 extern t_list* cola_exit;
@@ -101,10 +112,13 @@ extern pthread_mutex_t mutex_block_io;
 extern pthread_mutex_t mutex_exec;
 extern pthread_mutex_t mutex_exit;
 extern pthread_mutex_t mutex_new;
+extern pthread_mutex_t mutex_operacion_file_system;
 extern pthread_mutex_t mutex_operacion_memoria;
 extern pthread_mutex_t mutex_pid;
 extern pthread_mutex_t mutex_ready;
 extern pthread_mutex_t mutex_tabla_global_archivos;
+extern pthread_mutex_t mutex_compactacion;
+extern pthread_mutex_t mutex_peticiones_fs;
 extern sem_t sem_archivos;
 extern sem_t sem_admitir;
 extern sem_t sem_block_io;
@@ -113,6 +127,7 @@ extern sem_t sem_exit;
 extern sem_t sem_grado_multiprogramacion;
 extern sem_t sem_ready;
 extern sem_t sem_recursos;
+extern sem_t sem_peticiones_file_system;
 
 extern pthread_t thread_archivos;
 extern pthread_t thread_ready;
@@ -122,6 +137,7 @@ extern pthread_t thread_exec;
 extern pthread_t thread_ready;
 extern pthread_t thread_blocked;
 extern pthread_t thread_admitir_ready;
+extern pthread_t thread_peticiones_fs;
 
 //Estructura para pasarle a la función de los hilos:
 typedef struct {
