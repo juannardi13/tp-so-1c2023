@@ -71,8 +71,6 @@ void manejar_fread(int socket_cliente)
 
 	enviar_paquete(paquete,socket_memoria);
 
-	free(paquete);
-
 	int rta_memoria = recibir_operacion(socket_memoria);
 
 	if(rta_memoria == OK_VALOR_ESCRITO)
@@ -90,6 +88,7 @@ void manejar_fread(int socket_cliente)
 		log_warning(logger, "Error al recibir respuesta de memoria");
 	}
 
+	eliminar_paquete(paquete);
 	free(direccion_fisica_contenido);
 	free(contenido_buffer);
 	free(string_nombre_archivo);
