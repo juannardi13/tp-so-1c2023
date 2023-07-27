@@ -244,6 +244,8 @@ void estado_ejecutar(void) {
 				queue_push(archivo_open->cola_bloqueados, proceso_a_ejecutar);
 				sem_post(&sem_ready);
 			} else {
+				pthread_mutex_lock(&mutex_operacion_file_system);
+
 				op_code respuesta_fs_open = consultar_existencia_archivo_a_fs(nombre_archivo_a_abrir);
 
 				t_archivo_proceso* entrada_archivo_open = malloc(sizeof(t_archivo_proceso));
@@ -266,6 +268,8 @@ void estado_ejecutar(void) {
 
 					break;
 				}
+
+				pthread_mutex_unlock(&mutex_operacion_file_system);
 
 				dictionary_put(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_a_abrir, entrada_archivo_open);
 
