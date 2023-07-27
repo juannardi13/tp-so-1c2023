@@ -305,9 +305,7 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 			break;
 		default :
 			printf("Operacion desconocida");
-			break;	} else {
-				return registros_cpu
-			}
+			break;
 	}
 
 	eliminar_paquete(paquete_respuesta);

@@ -37,9 +37,9 @@ void activar_segmentation_fault(t_contexto_de_ejecucion*, int);
 bool desplazamiento_supera_tamanio(int, char*);
 void escribir_en_memoria(int, char*, int, t_log*, t_contexto_de_ejecucion*, int, t_config*);
 char* leer_de_memoria(int, t_config*, int, int);
-char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, int, t_config*, t_log*, int);
+char* mmu_valor_buscado(t_contexto_de_ejecucion*, int, int, int, t_config*, t_log*, int, int);
 void msleep(int);
-int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*, t_log*, int);
+int obtener_direccion_fisica(int, int, t_config*, t_contexto_de_ejecucion*, t_log*, int, int);
 int tamanio_registro(char*);
 
 // Funciones para tratar con las instrucciones
@@ -59,8 +59,8 @@ void ejecutar_F_SEEK(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_F_TRUNCATE(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_F_WRITE(char*, t_contexto_de_ejecucion*, int, int, t_config*);
 void ejecutar_IO(char*, t_contexto_de_ejecucion*, int);
-void ejecutar_MOV_IN(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
-void ejecutar_MOV_OUT(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
+int ejecutar_MOV_IN(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
+int ejecutar_MOV_OUT(char*, t_contexto_de_ejecucion*, int, t_config*, t_log*, int);
 void ejecutar_SET(char*, t_contexto_de_ejecucion*);
 void ejecutar_SIGNAL(char*, t_contexto_de_ejecucion*, int);
 void ejecutar_WAIT(char*, t_contexto_de_ejecucion*, int);
