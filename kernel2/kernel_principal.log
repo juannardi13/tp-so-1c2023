@@ -27,3 +27,48 @@
 [INFO] 18:47:53:486 kernel_principal.log/(21498:21506): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
 [INFO] 18:47:55:543 kernel_principal.log/(21498:21508): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
 [INFO] 18:47:55:543 kernel_principal.log/(21498:21508): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24299): Se crea el proceso <1000> en NEW
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24299): Cola NEW: 
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24299): PID: <1000>
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24275): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24275): Cola Ready <FIFO>:
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24275): PID: <1000>
+[INFO] 04:27:42:389 kernel_principal.log/(24255:24271): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 04:30:05:972 kernel_principal.log/(24523:24539): Se crea el proceso <1000> en NEW
+[INFO] 04:30:05:973 kernel_principal.log/(24523:24539): Cola NEW: 
+[INFO] 04:30:05:973 kernel_principal.log/(24523:24539): PID: <1000>
+[INFO] 04:30:05:973 kernel_principal.log/(24523:24535): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 04:30:05:973 kernel_principal.log/(24523:24535): Cola Ready <FIFO>:
+[INFO] 04:30:05:973 kernel_principal.log/(24523:24535): PID: <1000>
+[INFO] 04:30:05:973 kernel_principal.log/(24523:24531): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 04:32:44:563 kernel_principal.log/(24523:24533): PID: <1000> - Signal: <DISCO> - Instancias: <2>
+[INFO] 04:33:30:545 kernel_principal.log/(24523:24533): PID: <1000> - Signal: <RECURSO_1> - Instancias: <3>
+[INFO] 04:33:50:553 kernel_principal.log/(24523:24533): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 04:33:50:554 kernel_principal.log/(24523:24533): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 04:34:10:025 kernel_principal.log/(24523:25240): Se crea el proceso <1001> en NEW
+[INFO] 04:34:10:025 kernel_principal.log/(24523:25240): Cola NEW: 
+[INFO] 04:34:10:025 kernel_principal.log/(24523:25240): PID: <1001>
+[INFO] 04:34:10:025 kernel_principal.log/(24523:24535): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 04:34:10:025 kernel_principal.log/(24523:24535): Cola Ready <FIFO>:
+[INFO] 04:34:10:025 kernel_principal.log/(24523:24535): PID: <1001>
+[INFO] 04:34:10:025 kernel_principal.log/(24523:24531): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 04:34:40:084 kernel_principal.log/(24523:24533): PID: <1001> - Signal: <DISCO> - Instancias: <3>
+[INFO] 04:34:53:241 kernel_principal.log/(24523:24533): PID: <1001> - Signal: <RECURSO_1> - Instancias: <4>
+[INFO] 04:35:09:489 kernel_principal.log/(24523:24533): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 04:35:09:489 kernel_principal.log/(24523:24533): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 04:37:19:710 kernel_principal.log/(25718:25760): Se crea el proceso <1000> en NEW
+[INFO] 04:37:19:710 kernel_principal.log/(25718:25760): Cola NEW: 
+[INFO] 04:37:19:710 kernel_principal.log/(25718:25760): PID: <1000>
+[INFO] 04:37:31:132 kernel_principal.log/(25718:25740): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 04:37:31:952 kernel_principal.log/(25718:25740): Cola Ready <FIFO>:
+[INFO] 04:37:32:387 kernel_principal.log/(25718:25740): PID: <1000>
+[INFO] 04:37:47:135 kernel_principal.log/(25718:25736): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 04:39:18:837 kernel_principal.log/(25718:25738): PID: <1000> - Signal: <DISCO> - Instancias: <2>
+[INFO] 04:40:03:592 kernel_principal.log/(25718:26009): Se crea el proceso <1001> en NEW
+[INFO] 04:40:03:592 kernel_principal.log/(25718:26009): Cola NEW: 
+[INFO] 04:40:03:592 kernel_principal.log/(25718:26009): PID: <1001>
+[INFO] 04:40:03:593 kernel_principal.log/(25718:25740): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 04:40:03:593 kernel_principal.log/(25718:25740): Cola Ready <FIFO>:
+[INFO] 04:40:03:593 kernel_principal.log/(25718:25740): PID: <1001>
+[INFO] 04:40:03:593 kernel_principal.log/(25718:25736): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 04:40:48:182 kernel_principal.log/(25718:25738): PID: <1000> - Signal: <RECURSO_1> - Instancias: <3>

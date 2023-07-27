@@ -4158,3 +4158,181 @@
 [INFO] 18:47:55:543 kernel.log/(21498:21508): ID <0>
 [INFO] 18:47:55:543 kernel.log/(21498:21508): Tamaño <128>
 [INFO] 18:47:55:543 kernel.log/(21498:21504): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 04:27:18:855 kernel.log/(24255:24255): Se crea el diccionario con los recursos.
+[INFO] 04:27:18:855 kernel.log/(24255:24255): Se agrego el recurso DISCO al diccionario
+[INFO] 04:27:18:855 kernel.log/(24255:24255): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:27:21:847 kernel.log/(24255:24255): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:27:42:389 kernel.log/(24255:24271): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:27:42:389 kernel.log/(24255:24271): PID: <1000> ingresa a EXECUTE
+[INFO] 04:27:42:389 kernel.log/(24255:24273): PID: <1000> enviada a CPU
+[INFO] 04:30:02:209 kernel.log/(24523:24523): Se crea el diccionario con los recursos.
+[INFO] 04:30:02:210 kernel.log/(24523:24523): Se agrego el recurso DISCO al diccionario
+[INFO] 04:30:02:210 kernel.log/(24523:24523): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:30:02:210 kernel.log/(24523:24523): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:30:05:973 kernel.log/(24523:24531): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:30:05:973 kernel.log/(24523:24531): PID: <1000> ingresa a EXECUTE
+[INFO] 04:30:05:973 kernel.log/(24523:24533): PID: <1000> enviada a CPU
+[INFO] 04:32:44:561 kernel.log/(24523:24533): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 04:32:44:561 kernel.log/(24523:24533): 0000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 0000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 0000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 0000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): VENGO_A_
+[INFO] 04:32:44:562 kernel.log/(24523:24533): SALVARTE
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 00000000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 00000000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): UNLOCK_RECURSO__
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:32:44:562 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:32:44:563 kernel.log/(24523:24533): Segmento <0>:
+[INFO] 04:32:44:563 kernel.log/(24523:24533): Base <0>
+[INFO] 04:32:44:563 kernel.log/(24523:24533): ID <0>
+[INFO] 04:32:44:563 kernel.log/(24523:24533): Tamaño <128>
+[WARNING] 04:32:44:563 kernel.log/(24523:24533): PID: <1000> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 04:32:44:563 kernel.log/(24523:24533): PID: <1000> enviada a CPU
+[INFO] 04:33:30:545 kernel.log/(24523:24533): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): VENGO_A_
+[INFO] 04:33:30:545 kernel.log/(24523:24533): SALVARTE
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 00000000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 00000000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): UNLOCK_RECURSO__
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:33:30:545 kernel.log/(24523:24533): Segmento <0>:
+[INFO] 04:33:30:545 kernel.log/(24523:24533): Base <0>
+[INFO] 04:33:30:545 kernel.log/(24523:24533): ID <0>
+[INFO] 04:33:30:545 kernel.log/(24523:24533): Tamaño <128>
+[WARNING] 04:33:30:545 kernel.log/(24523:24533): PID: <1000> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 04:33:30:545 kernel.log/(24523:24533): PID: <1000> enviada a CPU
+[INFO] 04:33:50:552 kernel.log/(24523:24533): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): VENGO_A_
+[INFO] 04:33:50:553 kernel.log/(24523:24533): SALVARTE
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 00000000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 00000000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): UNLOCK_RECURSO__
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:33:50:553 kernel.log/(24523:24533): Segmento <0>:
+[INFO] 04:33:50:553 kernel.log/(24523:24533): Base <0>
+[INFO] 04:33:50:553 kernel.log/(24523:24533): ID <0>
+[INFO] 04:33:50:553 kernel.log/(24523:24533): Tamaño <128>
+[INFO] 04:33:50:554 kernel.log/(24523:24529): PID: <1000> liberando estructuras en memoria
+[INFO] 04:33:50:554 kernel.log/(24523:24529): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 04:34:10:025 kernel.log/(24523:24531): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:34:10:025 kernel.log/(24523:24531): PID: <1001> ingresa a EXECUTE
+[INFO] 04:34:10:025 kernel.log/(24523:24533): PID: <1001> enviada a CPU
+[INFO] 04:34:40:083 kernel.log/(24523:24533): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): VENGO_A_
+[INFO] 04:34:40:084 kernel.log/(24523:24533): SALVARTE
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 00000000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 00000000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): UNLOCK_RECURSO__
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:34:40:084 kernel.log/(24523:24533): Segmento <0>:
+[INFO] 04:34:40:084 kernel.log/(24523:24533): Base <0>
+[INFO] 04:34:40:084 kernel.log/(24523:24533): ID <0>
+[INFO] 04:34:40:084 kernel.log/(24523:24533): Tamaño <128>
+[WARNING] 04:34:40:084 kernel.log/(24523:24533): PID: <1001> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 04:34:40:084 kernel.log/(24523:24533): PID: <1001> enviada a CPU
+[INFO] 04:34:53:241 kernel.log/(24523:24533): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): VENGO_A_
+[INFO] 04:34:53:241 kernel.log/(24523:24533): SALVARTE
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 00000000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 00000000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): UNLOCK_RECURSO__
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:34:53:241 kernel.log/(24523:24533): Segmento <0>:
+[INFO] 04:34:53:241 kernel.log/(24523:24533): Base <0>
+[INFO] 04:34:53:241 kernel.log/(24523:24533): ID <0>
+[INFO] 04:34:53:241 kernel.log/(24523:24533): Tamaño <128>
+[WARNING] 04:34:53:241 kernel.log/(24523:24533): PID: <1001> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 04:34:53:241 kernel.log/(24523:24533): PID: <1001> enviada a CPU
+[INFO] 04:35:09:489 kernel.log/(24523:24533): Los registros que trajo PID: <1001> de la CPU son: 
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): VENGO_A_
+[INFO] 04:35:09:489 kernel.log/(24523:24533): SALVARTE
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 00000000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 00000000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): UNLOCK_RECURSO__
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): 0000000000000000
+[INFO] 04:35:09:489 kernel.log/(24523:24533): Segmento <0>:
+[INFO] 04:35:09:489 kernel.log/(24523:24533): Base <0>
+[INFO] 04:35:09:489 kernel.log/(24523:24533): ID <0>
+[INFO] 04:35:09:489 kernel.log/(24523:24533): Tamaño <128>
+[INFO] 04:35:09:489 kernel.log/(24523:24529): PID: <1001> liberando estructuras en memoria
+[INFO] 04:35:09:489 kernel.log/(24523:24529): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 04:36:54:698 kernel.log/(25718:25718): Se crea el diccionario con los recursos.
+[INFO] 04:36:54:698 kernel.log/(25718:25718): Se agrego el recurso DISCO al diccionario
+[INFO] 04:36:54:698 kernel.log/(25718:25718): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:36:55:106 kernel.log/(25718:25718): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:37:45:214 kernel.log/(25718:25736): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:37:46:780 kernel.log/(25718:25736): PID: <1000> ingresa a EXECUTE
+[INFO] 04:38:41:006 kernel.log/(25718:25738): PID: <1000> enviada a CPU
+[INFO] 04:38:53:957 kernel.log/(25718:25738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 04:38:54:058 kernel.log/(25718:25738): 0000
+[INFO] 04:38:54:159 kernel.log/(25718:25738): 0000
+[INFO] 04:38:54:259 kernel.log/(25718:25738): 0000
+[INFO] 04:38:54:361 kernel.log/(25718:25738): 0000
+[INFO] 04:38:54:462 kernel.log/(25718:25738): VENGO_A_
+[INFO] 04:38:54:568 kernel.log/(25718:25738): SALVARTE
+[INFO] 04:38:54:717 kernel.log/(25718:25738): 00000000
+[INFO] 04:38:54:819 kernel.log/(25718:25738): 00000000
+[INFO] 04:38:54:922 kernel.log/(25718:25738): UNLOCK_RECURSO__
+[INFO] 04:38:55:024 kernel.log/(25718:25738): 0000000000000000
+[INFO] 04:38:55:126 kernel.log/(25718:25738): 0000000000000000
+[INFO] 04:38:55:225 kernel.log/(25718:25738): 0000000000000000
+[INFO] 04:38:59:927 kernel.log/(25718:25738): Segmento <0>:
+[INFO] 04:39:00:278 kernel.log/(25718:25738): Base <0>
+[INFO] 04:39:00:548 kernel.log/(25718:25738): ID <0>
+[INFO] 04:39:00:819 kernel.log/(25718:25738): Tamaño <128>
+[WARNING] 04:39:11:986 kernel.log/(25718:25738): PID: <1000> solicita liberar una instancia del Recurso <DISCO>
+[INFO] 04:40:03:593 kernel.log/(25718:25736): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:40:03:593 kernel.log/(25718:25736): PID: <1001> ingresa a EXECUTE
+[INFO] 04:40:19:537 kernel.log/(25718:25738): PID: <1000> enviada a CPU
+[INFO] 04:40:39:245 kernel.log/(25718:25738): Los registros que trajo PID: <1000> de la CPU son: 
+[INFO] 04:40:39:347 kernel.log/(25718:25738): 0000
+[INFO] 04:40:39:447 kernel.log/(25718:25738): 0000
+[INFO] 04:40:39:548 kernel.log/(25718:25738): 0000
+[INFO] 04:40:39:648 kernel.log/(25718:25738): 0000
+[INFO] 04:40:39:749 kernel.log/(25718:25738): VENGO_A_
+[INFO] 04:40:39:850 kernel.log/(25718:25738): SALVARTE
+[INFO] 04:40:39:954 kernel.log/(25718:25738): 00000000
+[INFO] 04:40:40:056 kernel.log/(25718:25738): 00000000
+[INFO] 04:40:40:155 kernel.log/(25718:25738): UNLOCK_RECURSO__
+[INFO] 04:40:40:257 kernel.log/(25718:25738): 0000000000000000
+[INFO] 04:40:40:359 kernel.log/(25718:25738): 0000000000000000
+[INFO] 04:40:40:464 kernel.log/(25718:25738): 0000000000000000
+[INFO] 04:40:43:255 kernel.log/(25718:25738): Segmento <0>:
+[INFO] 04:40:43:505 kernel.log/(25718:25738): Base <0>
+[INFO] 04:40:43:703 kernel.log/(25718:25738): ID <0>
+[INFO] 04:40:44:085 kernel.log/(25718:25738): Tamaño <128>
+[WARNING] 04:40:47:399 kernel.log/(25718:25738): PID: <1000> solicita liberar una instancia del Recurso <RECURSO_1>
+[INFO] 04:41:02:324 kernel.log/(25718:25738): PID: <1001> enviada a CPU

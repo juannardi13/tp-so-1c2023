@@ -100,3 +100,21 @@
 [INFO] 18:46:52:102 MEMORIA/(21390:21390): Servidor Memoria iniciado, esperando conexiones entrantes
 [INFO] 18:47:28:435 MEMORIA/(21390:21511): Creación de Proceso PID: 1000
 [ERROR] 18:48:10:570 MEMORIA/(21390:21511): [ERROR] Operación desconocida.
+[INFO] 04:26:59:709 MEMORIA/(24207:24207): Se inicializaron las estructuras de Memoria
+[INFO] 04:26:59:709 MEMORIA/(24207:24207): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:27:42:389 MEMORIA/(24207:24284): Creación de Proceso PID: 1000
+[ERROR] 04:28:22:585 MEMORIA/(24207:24284): Operación desconocida.
+[INFO] 04:29:37:913 MEMORIA/(24452:24452): Se inicializaron las estructuras de Memoria
+[INFO] 04:29:37:914 MEMORIA/(24452:24452): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:30:05:972 MEMORIA/(24452:24536): Creación de Proceso PID: 1000
+[INFO] 04:33:50:554 MEMORIA/(24452:24536): Eliminación de Proceso PID: 1000
+[INFO] 04:34:10:025 MEMORIA/(24452:24536): Creación de Proceso PID: 1001
+[INFO] 04:35:09:489 MEMORIA/(24452:24536): Eliminación de Proceso PID: 1001
+[ERROR] 04:35:14:418 MEMORIA/(24452:24509): Operación desconocida.
+[INFO] 04:36:28:409 MEMORIA/(25665:25665): Se inicializaron las estructuras de Memoria
+[INFO] 04:36:41:772 MEMORIA/(25677:25677): Se inicializaron las estructuras de Memoria
+[INFO] 04:36:41:772 MEMORIA/(25677:25677): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:37:19:710 MEMORIA/(25677:25745): Creación de Proceso PID: 1000
+[INFO] 04:40:03:592 MEMORIA/(25677:25745): Creación de Proceso PID: 1001
+[ERROR] 04:41:14:969 MEMORIA/(25677:25745): Operación desconocida.
+[ERROR] 04:41:14:969 MEMORIA/(25677:25695): Operación desconocida.

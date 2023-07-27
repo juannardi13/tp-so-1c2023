@@ -473,3 +473,27 @@
 [INFO] 18:47:54:490 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET RCX CISTEENTONCESAHO>
 [INFO] 18:47:55:543 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <SET RDX RASOYMUCHOMEJOR!>
 [INFO] 18:47:55:543 cpu_principal.log/(21402:21402): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:27:43:390 cpu_principal.log/(24219:24219): PID: <1000> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 04:27:44:390 cpu_principal.log/(24219:24219): PID: <1000> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 04:27:45:390 cpu_principal.log/(24219:24219): PID: <1000> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 04:27:45:390 cpu_principal.log/(24219:24219): PID: <1000> - Ejecutando: <SIGNAL DISCO >
+[INFO] 04:30:47:158 cpu_principal.log/(24480:24480): PID: <1000> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 04:30:52:488 cpu_principal.log/(24480:24480): PID: <1000> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 04:30:57:692 cpu_principal.log/(24480:24480): PID: <1000> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 04:31:06:503 cpu_principal.log/(24480:24480): PID: <1000> - Ejecutando: <SIGNAL DISCO >
+[INFO] 04:33:29:851 cpu_principal.log/(24480:24480): PID: <1000> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 04:33:50:023 cpu_principal.log/(24480:24480): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:34:31:347 cpu_principal.log/(24480:24480): PID: <1001> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 04:34:35:635 cpu_principal.log/(24480:24480): PID: <1001> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 04:34:37:811 cpu_principal.log/(24480:24480): PID: <1001> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 04:34:39:563 cpu_principal.log/(24480:24480): PID: <1001> - Ejecutando: <SIGNAL DISCO >
+[INFO] 04:34:53:028 cpu_principal.log/(24480:24480): PID: <1001> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 04:35:09:390 cpu_principal.log/(24480:24480): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 04:38:37:716 cpu_principal.log/(25689:25689): PID: <1000> - Ejecutando: <SET EAX VENGO_A_>
+[INFO] 04:38:38:716 cpu_principal.log/(25689:25689): PID: <1000> - Ejecutando: <SET EBX SALVARTE>
+[INFO] 04:38:39:717 cpu_principal.log/(25689:25689): PID: <1000> - Ejecutando: <SET RAX UNLOCK_RECURSO__>
+[INFO] 04:38:39:717 cpu_principal.log/(25689:25689): PID: <1000> - Ejecutando: <SIGNAL DISCO >
+[INFO] 04:40:19:095 cpu_principal.log/(25689:25689): PID: <1000> - Ejecutando: <SIGNAL RECURSO_1>
+[INFO] 04:41:03:015 cpu_principal.log/(25689:25689): PID: <1001> - Ejecutando: <SET AX COMO>
+[INFO] 04:41:04:015 cpu_principal.log/(25689:25689): PID: <1001> - Ejecutando: <SET BX DERE>
+[INFO] 04:41:04:015 cpu_principal.log/(25689:25689): PID: <1001> - Ejecutando: <IO 5>
