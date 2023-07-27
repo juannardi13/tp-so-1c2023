@@ -222,95 +222,28 @@ void recv_liberar_estructuras(int socket_cliente, void *stream) {
 	send_op(socket_cliente, ESTRUCTURAS_LIBERADAS);
 }
 
-// AGREGO INICIO DE ATENDER A CPU
-void atender_CPU(int *cpu_fd){
-
-	int socket_cliente = *cpu_fd;
-
-	while(1){
-		//int cod_op = recibir_operacion(socket_cliente);
-
-
-		t_paquete* paquete = malloc(sizeof(t_paquete));
-		paquete->buffer = malloc(sizeof(t_buffer));
-		recv(socket_cliente, &(paquete->codigo_operacion), sizeof(op_code), MSG_WAITALL);
-		recv(socket_cliente, &(paquete->buffer->stream_size), sizeof(int), 0);
-		paquete->buffer->stream = malloc(paquete->buffer->stream_size);
-		recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
-
-		void* stream = paquete->buffer->stream;
-
-		switch(paquete->codigo_operacion){
-		case LEER_DE_MEMORIA :
-			//recv_leer_de_memoria(socket_cliente);
-			int direccion_fisica_a_leer;
-			int tamanio_valor_a_leer;
-
-			memcpy(&direccion_fisica_a_leer, stream, sizeof(int));
-			stream += sizeof(int);
-			memcpy(&tamanio_valor_a_leer, stream, sizeof(int));
-			stream += sizeof(int);
-
-			log_info(logger, "CPU quiere leer en la dirección <%d> un tamaño de <%d>", direccion_fisica_a_leer, tamanio_valor_a_leer);
-
-			//TODO acá van las operaciones para obtener el valor de la dirección física.
-
-			//Esto de acá es simplemente para probarlo
-			char* valor = malloc(tamanio_valor_a_leer);
-
-			enviar_string_por(LEIDO, valor, socket_cliente);
-			break;
-		case ESCRIBIR_EN_MEMORIA :
-			recv_escribir_en_memoria(socket_cliente);
-			break;
-		default:
-			log_error(logger, "[ERROR] Operación desconocida, arreglate hermano.");
-		}
-	}
-}
 
 
 // FUNCIONES AUXILIARES - Gero, si queres las pasamos a otro archivo
-void recv_leer_de_memoria(int socket_cliente){
-
-	int size;
-	int offset = 0;
-
-	void *buffer = recibir_buffer(&size, socket_cliente);
-
-	int direccion_fisica = deserializar_int(buffer, &offset);
-	int tamanio = deserializar_int(buffer, &offset);
-
-	//buscar_valor_enviar_CPU(direccion_fisica, tamanio, socket_cliente);
+void recv_leer_de_memoria(int tamanio, int direccion_fisica, int socket_cliente){
+	buscar_valor_enviar(direccion_fisica, tamanio, socket_cliente);
 	log_info(logger, "Se busca el valor de la direccion fisica: %d", direccion_fisica);
-
-	free(buffer);
 }
 
-void recv_escribir_en_memoria(int socket_cliente){
-	int size;
-	int offset = 0;
 
-	void *buffer = recibir_buffer(&size, socket_cliente);
-
-	int direccion_fisica = deserializar_int(buffer, &offset);
-	int tamanio = deserializar_int(buffer, &offset);
-	char* valor = deserializar_string(tamanio, buffer, &offset);
-
+void recv_escribir_en_memoria(int direccion_fisica, int tamanio, char* valor, int socket_cliente){
 	log_info(logger, "Se escribe el valor <%s> de tamaño <%d> en la direccion fisica: %d", valor, tamanio, direccion_fisica);
-	escribir_valor_en_direccion_fisica(direccion_fisica, tamanio, valor);
-
-	free(buffer);
+	escribir_valor_en_direccion_fisica(socket_cliente, direccion_fisica, tamanio, valor);
 }
 
 
 
-void buscar_valor_enviar_CPU(int direccion_fisica_buscada, int tamanio, int socket_cliente){
+void buscar_valor_enviar(int direccion_fisica_buscada, int tamanio, int socket_cliente){
 
 	char* valor_buscado;
 
 	if((memoria + direccion_fisica_buscada) != NULL){
-		usleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
+		msleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
 		memcpy(valor_buscado, memoria + direccion_fisica_buscada, tamanio);
 		t_paquete* paquete = crear_paquete(LEIDO);
 		agregar_int_a_paquete(paquete, tamanio);
@@ -332,28 +265,28 @@ void escribir_valor_en_direccion_fisica(int socket_cliente, int direccion_fisica
 	log_info(logger, "Dirección física: %d", direccion_fisica);
 	log_info(logger, "Valor Registro: %s", valor);
 
-	usleep(config_memoria.retardo_memoria);
+	msleep(config_memoria.retardo_memoria);
 	memcpy(memoria + direccion_fisica, valor, tamanio_valor);
+	log_info(logger, "%s", valor);
 
+	/*
 	char *aux = malloc(tamanio_valor); // ver si se saca
-	usleep(config_memoria.retardo_memoria);
+	msleep(config_memoria.retardo_memoria);
 	memcpy(aux, memoria + direccion_fisica, tamanio_valor);
 	log_info(logger, "%s", aux);
-
 	free(aux);
+	*/
+
 	free(valor);
 	send_op(socket_cliente, OK_VALOR_ESCRITO); // agregar en CPU esto de recibir el cod_op
-	log_info(logger, "OK, se escribio el valor en memoria");
 }
 
-//No hace falta porque en la config lo contempla en milisegundos
 
-/*
 void msleep(int tiempo_microsegundos) {
 	usleep(tiempo_microsegundos * 1000);
-}*/
+}
 
-int agregar_a_stream(void *stream, int* offset, void *src, int size) {
+void agregar_a_stream(void *stream, int* offset, void *src, int size) {
 	memcpy(stream + *offset, src, size);
 	*offset += size;
 }
