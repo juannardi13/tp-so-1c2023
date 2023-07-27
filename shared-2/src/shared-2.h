@@ -8,6 +8,7 @@
 #include <netdb.h>
 #include <commons/log.h>
 #include<commons/collections/list.h>
+#include<commons/collections/dictionary.h>
 #include <unistd.h>
 
 typedef enum {
@@ -135,7 +136,7 @@ typedef struct {
 	int tamanio_segmentos;
 	t_tabla_segmentos tabla_segmentos;
 	t_list* recursos_asignados;
-	t_list* tabla_archivos;
+	t_dictionary* tabla_archivos;
 	//float est_prox_rafaga; //iniciaizar con archivo configuracion
 	//int archivos_abiertos[][2];
 } t_pcb;

@@ -286,7 +286,7 @@ void msleep(int tiempo_microsegundos) {
 	usleep(tiempo_microsegundos * 1000);
 }
 
-void agregar_a_stream(void *stream, int* offset, void *src, int size) {
+int agregar_a_stream(void *stream, int* offset, void *src, int size) {
 	memcpy(stream + *offset, src, size);
 	*offset += size;
 }
