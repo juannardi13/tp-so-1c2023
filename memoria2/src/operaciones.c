@@ -187,6 +187,8 @@ void compactar(int socket_cliente) {
 	list_destroy(segmentos_en_uso);
 	list_destroy(contenido_segmentos);
 	mostrar_esquema_memoria();
+
+	msleep(config_memoria.retardo_compactacion);
 	send_tablas(socket_cliente);
 }
 
@@ -282,8 +284,8 @@ void escribir_valor_en_direccion_fisica(int socket_cliente, int direccion_fisica
 }
 
 
-void msleep(int tiempo_microsegundos) {
-	usleep(tiempo_microsegundos * 1000);
+void msleep(int tiempo_milisegundos) {
+	usleep(tiempo_milisegundos * 1000);
 }
 
 int agregar_a_stream(void *stream, int* offset, void *src, int size) {
