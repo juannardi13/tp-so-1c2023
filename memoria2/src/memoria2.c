@@ -165,11 +165,15 @@ void manejar_conexion(int* fd_cliente) {
 			break;
 
 		case COMPACTAR:
-			log_info(logger, "Inicia compactación");
+			log_info(logger, "Solicitud de compactación");
 
+<<<<<<< HEAD
 //			int offset = 0;
 //			int algo = deserializar_int(stream, &offset); // no se usa, creo que igual no hace falta
 //			pthread_mutex_lock(&mutex_atendiendo_fs);
+=======
+			pthread_mutex_lock(&mutex_atendiendo_fs);
+>>>>>>> da2e4946a01c6cd340270ec7ecf12d33a88c5afe
 			compactar(socket_cliente);
 			//pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;

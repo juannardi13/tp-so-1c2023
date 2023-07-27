@@ -43,6 +43,7 @@ void manejar_fopen(int socket_cliente)
 	free(string_recibido);
 }
 
+// devolver cod op finalizado
 void manejar_fread(int socket_cliente)
 {
 	int size_buffer;
@@ -61,7 +62,7 @@ void manejar_fread(int socket_cliente)
 
 	printf("%s\n",direccion_fisica_contenido);
 
-	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA);
+	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA_FS);
 
 	// primero dir fisica, dps tamanio valor y dps valor
 
@@ -70,8 +71,6 @@ void manejar_fread(int socket_cliente)
 	agregar_string_a_paquete(paquete,direccion_fisica_contenido,cantidad_bytes_leer);
 
 	enviar_paquete(paquete,socket_memoria);
-
-	free(paquete);
 
 	int rta_memoria = recibir_operacion(socket_memoria);
 
@@ -90,11 +89,14 @@ void manejar_fread(int socket_cliente)
 		log_warning(logger, "Error al recibir respuesta de memoria");
 	}
 
+	eliminar_paquete(paquete);
 	free(direccion_fisica_contenido);
 	free(contenido_buffer);
 	free(string_nombre_archivo);
 }
 
+
+// devolver cod op finalizado
 void manejar_fwrite(int socket_cliente)
 {
 	int size_buffer;
@@ -109,7 +111,7 @@ void manejar_fwrite(int socket_cliente)
 	int direccion_fisica = deserializar_int(contenido_buffer,&offset);
 	int cantidad_bytes_escribir = deserializar_int(contenido_buffer,&offset);
 
-	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA);
+	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA_FS);
 
 	agregar_int_a_paquete(paquete,direccion_fisica);
 	agregar_int_a_paquete(paquete,cantidad_bytes_escribir);
@@ -159,6 +161,7 @@ void manejar_fwrite(int socket_cliente)
 
 }
 
+// devolver cod op finalizado
 void manejar_ftruncate(int socket_cliente)
 {
 	int size_buffer;

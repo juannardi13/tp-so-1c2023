@@ -15,39 +15,6 @@ void atender_File_System(int *fileSystem_fd) {
 	}
 }
 
-//void atender_kernel(int *kernel_fd) {
-//
-//	int socket_cliente = *kernel_fd;
-//
-//	while (1) {
-//		int cod_op = recibir_operacion(socket_cliente);
-//
-//		switch(cod_op) {
-//
-//		/*case INICIAR_PROCESO:
-//			recv_nuevo_proceso(socket_cliente);
-//			break;*/
-//
-//		case CREATE_SEGMENT:
-//			recv_crear_segmento(socket_cliente);
-//			break;
-//
-//		case DELETE_SEGMENT:
-//			recv_eliminar_segmento(socket_cliente);
-//			break;
-//
-//		case COMPACTAR:
-//			log_info(logger, "Inicia compactación");
-//			compactar(socket_cliente);
-//			break;
-//
-//		case -1:
-//			log_warning(logger, "Se desconectó el File System!");
-//			return;
-//		}
-//	}
-//}
-
 void recv_nuevo_proceso(int pid, int socket_cliente) {
 
 	t_tabla_segmentos *nueva_tabla = nueva_tabla_segmentos(pid);
@@ -66,6 +33,7 @@ void send_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
 	agregar_tabla_a_paquete(paquete, tabla);
 
 	enviar_paquete(paquete, socket_cliente);
+	eliminar_paquete(paquete);
 }
 
 void recv_crear_segmento(int socket_cliente, void *stream) {
@@ -117,14 +85,15 @@ void send_base_segmento(int socket_cliente, int base) {
 	agregar_int_a_paquete(paquete, base);
 
 	enviar_paquete(paquete, socket_cliente);
+	eliminar_paquete(paquete);
 }
 
 void recv_eliminar_segmento(int socket_cliente, void *stream) {
 
-	int offset_ = 0;
+	int offset = 0;
 
-	int pid = deserializar_int(stream, &offset_);
-	int id = deserializar_int(stream, &offset_);
+	int pid = deserializar_int(stream, &offset);
+	int id = deserializar_int(stream, &offset);
 
 	t_segmento *seg = obtener_segmento(pid, id);
 	int base = seg->base;
@@ -187,6 +156,8 @@ void compactar(int socket_cliente) {
 	list_destroy(segmentos_en_uso);
 	list_destroy(contenido_segmentos);
 	mostrar_esquema_memoria();
+
+	msleep(config_memoria.retardo_compactacion);
 	send_tablas(socket_cliente);
 }
 
@@ -203,6 +174,7 @@ void send_tablas(int socket_cliente) {
 	}
 
 	enviar_paquete(paquete, socket_cliente);
+	eliminar_paquete(paquete);
 }
 
 void recv_liberar_estructuras(int socket_cliente, void *stream) {
@@ -282,8 +254,8 @@ void escribir_valor_en_direccion_fisica(int socket_cliente, int direccion_fisica
 }
 
 
-void msleep(int tiempo_microsegundos) {
-	usleep(tiempo_microsegundos * 1000);
+void msleep(int tiempo_milisegundos) {
+	usleep(tiempo_milisegundos * 1000);
 }
 
 int agregar_a_stream(void *stream, int* offset, void *src, int size) {

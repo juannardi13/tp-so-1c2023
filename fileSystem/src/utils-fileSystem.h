@@ -28,12 +28,14 @@ typedef struct{
 
 t_log *iniciar_logger(void);
 t_config *iniciar_config(char*);
-t_bitarray* inicializar_archivo_bm(FILE*f);
+t_bitarray* inicializar_archivo_bm();
+t_bitarray* inicializar_archivo_bm_prueba();
 bool esta_ocupado(int);
 void usar_bloque(t_bitarray*,int);
 void liberar_recursos_bitmap();
 void levantar_fcb_nuevo_archivo(const char*);
 void levantar_archivo_bloques();
+void levantar_archivo_bloques_prueba();
 void atender_clientes_file_system(int);
 char* obtener_ruta_archivo(const char*);
 void truncar_archivo(char*,int);

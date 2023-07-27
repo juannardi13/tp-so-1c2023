@@ -312,8 +312,7 @@ void concatenar_strings(const char* s1, const char* s2,char* buffer){
 	memccpy(memccpy(buffer,s1,'\0',100)-1,s2,'\0',100);
 }
 
-
-t_bitarray* inicializar_archivo_bm(FILE* f){
+t_bitarray* inicializar_archivo_bm_prueba(){
 
 	archivo_bm = fopen("../fileSystem/grupoDeBloques/bitmap.bin","w+");
 
@@ -321,7 +320,7 @@ t_bitarray* inicializar_archivo_bm(FILE* f){
 
 	if(fd == -1){
 		printf("Error al crear archivo bitmap\n");
-		fclose(f);
+		fclose(archivo_bm);
 	}
 
 	unsigned char byte = 0;
@@ -337,6 +336,50 @@ t_bitarray* inicializar_archivo_bm(FILE* f){
 	for(int i = 0; i < cantidad_bytes; i++){
 		fwrite(&byte,1,1,archivo_bm);
 	}
+
+	char* mapping = mmap(NULL,cantidad_bytes+1,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
+
+	if(mapping == MAP_FAILED){
+		printf("Error al mappear memoria\n");
+	}
+
+	t_bitarray* estructura_aux = bitarray_create_with_mode(mapping,cantidad_bytes,LSB_FIRST);
+
+	return estructura_aux;
+}
+
+t_bitarray* inicializar_archivo_bm(){
+
+	archivo_bm = fopen("../fileSystem/grupoDeBloques/bitmap.bin","a+");
+
+	int fd = fileno(archivo_bm);
+
+	if(fd == -1){
+		printf("Error al crear archivo bitmap\n");
+		fclose(archivo_bm);
+	}
+
+	fseek(archivo_bm,0,SEEK_END);
+
+	long size = ftell(archivo_bm);
+
+	int cantidad_bloques = config_super_bloque_valores.block_count;
+
+	int byte_adicional = (cantidad_bloques % 8 != 0)?1:0;
+
+	int cantidad_bytes = (cantidad_bloques / 8) + byte_adicional;
+
+	if(size == 0)
+	{
+		unsigned char byte = 0;
+
+		ftruncate(fd,cantidad_bytes);
+
+		for(int i = 0; i < cantidad_bytes; i++){
+			fwrite(&byte,1,1,archivo_bm);
+		}
+	}
+
 
 	char* mapping = mmap(NULL,cantidad_bytes+1,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
 
@@ -421,7 +464,7 @@ void liberar_recursos_bitmap(){
 	config_destroy(config);
 }
 
-void levantar_archivo_bloques(){
+void levantar_archivo_bloques_prueba(){
 
 	int cantidad_bloques = config_super_bloque_valores.block_count;
 	int tamanio_bloques = config_super_bloque_valores.block_size;
@@ -438,6 +481,41 @@ void levantar_archivo_bloques(){
 	int tamanio_en_bytes = cantidad_bloques * tamanio_bloques;
 
 	ftruncate(fd,tamanio_en_bytes);
+
+	mapping_archivo_bloques = mmap(NULL,tamanio_en_bytes,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
+
+	if(mapping_archivo_bloques == MAP_FAILED){
+		printf("Error al mappear memoria\n");
+	}
+
+}
+
+void levantar_archivo_bloques(){
+
+	int cantidad_bloques = config_super_bloque_valores.block_count;
+	int tamanio_bloques = config_super_bloque_valores.block_size;
+	// - //
+
+	archivo_bloques = fopen(config_valores.path_bloques,"a+");
+
+	int fd = fileno(archivo_bloques);
+
+	fseek(archivo_bloques,0,SEEK_END);
+
+	long size = ftell(archivo_bloques);
+
+	if(fd == -1){
+		printf("Error al crear archivo de bloques\n");
+		fclose(archivo_bloques);
+	}
+
+	int tamanio_en_bytes = cantidad_bloques * tamanio_bloques;
+
+	if(size == 0)
+	{
+		ftruncate(fd,tamanio_en_bytes);
+
+	}
 
 	mapping_archivo_bloques = mmap(NULL,tamanio_en_bytes,PROT_READ | PROT_WRITE,MAP_SHARED,fd,0);
 
