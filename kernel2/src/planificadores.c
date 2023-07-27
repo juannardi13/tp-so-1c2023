@@ -5,6 +5,7 @@ pthread_mutex_t mutex_block_io;
 pthread_mutex_t mutex_exec;
 pthread_mutex_t mutex_exit;
 pthread_mutex_t mutex_new;
+pthread_mutex_t mutex_operacion_file_system;
 pthread_mutex_t mutex_operacion_memoria;
 pthread_mutex_t mutex_pid;
 pthread_mutex_t mutex_ready;
@@ -36,8 +37,6 @@ void admitir_procesos_a_ready(void) { //hilo
 		pthread_mutex_lock(&mutex_new);
 		proceso = list_remove(cola_new, 0);
 		pthread_mutex_unlock(&mutex_new);
-
-		//Puedo hacer que los segmentos de memoria se los demos al proceso acá o apenas entra a cola new TODO
 
 		pthread_mutex_lock(&mutex_ready);
 		list_add(cola_ready, proceso);
@@ -87,6 +86,7 @@ void iniciar_planificador_corto_plazo(void) {
 	pthread_mutex_init(&mutex_block_io, NULL);
 	pthread_mutex_init(&mutex_exec, NULL);
 	pthread_mutex_init(&mutex_operacion_memoria, NULL);
+	pthread_mutex_init(&mutex_operacion_file_system, NULL);
 	sem_init(&sem_archivos, 0, 0);
 	sem_init(&sem_recursos, 0, 0);
 	sem_init(&sem_ready, 0, 0);

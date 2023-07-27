@@ -17,7 +17,7 @@ void agregar_archivo_a_tabla_global_archivos(char* nombre) {
 	archivo->nombre = nombre;
 	archivo->tamanio = 0;
 	archivo->instancias_usadas = 0;
-	archivo->instancias_totales = 0;
+	archivo->instancias_totales = 1;
 	archivo->cola_bloqueados = queue_create();
 
 	pthread_mutex_t* mutex_cola_bloqueo = malloc(sizeof(pthread_mutex_t));
@@ -36,13 +36,14 @@ void agregar_archivo_a_tabla_global_archivos(char* nombre) {
 
 
 void quitar_entrada_archivo_del_proceso(char* nombre, t_proceso* proceso) {
-
+/*
 	bool buscar_archivo(void* un_archivo) {
 		char* nombre_archivo = (char*) un_archivo;
 		return string_equals_ignore_case(nombre_archivo, nombre);
 	}
 
-	list_remove_by_condition(proceso->pcb->tabla_archivos, buscar_archivo);
+	list_remove_by_condition(proceso->pcb->tabla_archivos, buscar_archivo);*/
+	dictionary_remove_and_destroy(proceso->pcb->tabla_archivos, nombre);
 }
 
 
@@ -107,13 +108,13 @@ void liberar_entrada_archivo(t_archivo* archivo) {
 }
 
 void actualizar_puntero_archivo_proceso(t_proceso* proceso, char* nombre, int nuevo_puntero) {
-
+/*
 	bool buscar_archivo(void* un_archivo) {
 		char* nombre_archivo = (char*) un_archivo;
 		return string_equals_ignore_case(nombre_archivo, nombre);
-	}
+	}*/
 
-	t_archivo_proceso* archivo = list_find(proceso->pcb->tabla_archivos, buscar_archivo);
+	t_archivo_proceso* archivo = dictionary_get(proceso->pcb->tabla_archivos, nombre);
 
 	log_info(logger_kernel, "Actualización del puntero a <%d> del archivo: <%s>", nuevo_puntero, archivo->nombre);
 

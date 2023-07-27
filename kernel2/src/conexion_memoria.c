@@ -242,7 +242,7 @@ void ordenar_compactacion(void) {
 	buffer->stream = stream;
 
 	paquete->codigo_operacion = COMPACTAR;
-	paquete->buffer;
+	paquete->buffer = buffer;
 
 	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
 	int desplazamiento = 0;
@@ -267,29 +267,12 @@ void ordenar_compactacion(void) {
 	switch(paquete_respuesta->codigo_operacion) {
 	case COMPACTACION_TERMINADA:
 		log_info(logger_kernel, "Se finalizó el proceso de compactación");
-		//recibir_tablas_segmentos_global();
+
+		//TODO acá va la recepción de las tablas de segmentos actualizadas
+
 		break;
 	default:
 		log_error(logger_kernel, "[ERROR] Error al saber estado de la compactación.");
 		break;
 	}
 }
-
-//-----------------Funciones para tratar con la Tabla Global de Segmentos
-/*
-void inicializar_tabla_global_segmentos(void) {
-
-	segmentos = dictionary_create();
-	log_info(logger_kernel, "Se inicializó la Tabla Global de Segmentos.");
-
-}
-
-void agregar_tabla_segmentos_a_tgs(t_pcb* un_pcb, t_tabla_segmentos tabla_segmentos) {
-	dictionary_put(segmentos, un_pcb->pid_string, tabla_segmentos);
-}
-
-void actualizar_tablas_segmentos(t_proceso* proceso) {
-	list_destroy_and_destroy_elements(proceso->pcb->tabla_segmentos.segmentos);
-
-	proceso->pcb->tabla_segmentos = dictionary_get(segmentos, proceso->pcb->pid_string);
-}*/
