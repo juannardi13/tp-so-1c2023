@@ -717,3 +717,775 @@
 [INFO] 05:42:16:249 MEMORIA/(115287:115287): Se conectó un cliente!
 [INFO] 05:42:18:525 MEMORIA/(115287:115301): Creación de Proceso PID: 1000
 [ERROR] 05:44:41:865 MEMORIA/(115287:115301): Operación desconocida.
+[INFO] 13:30:11:319 MEMORIA/(118437:118437): Se inicializaron las estructuras de Memoria
+[INFO] 13:30:11:504 MEMORIA/(118437:118437): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 13:30:30:965 MEMORIA/(118437:118437): Se conectó un cliente!
+[INFO] 13:30:41:481 MEMORIA/(118437:118437): Se conectó un cliente!
+[INFO] 13:30:47:162 MEMORIA/(118437:118437): Se conectó un cliente!
+[INFO] 13:31:11:712 MEMORIA/(118437:118451): Creación de Proceso PID: 1000
+[ERROR] 13:31:47:806 MEMORIA/(118437:118451): Operación desconocida.
+[INFO] 13:34:20:188 MEMORIA/(118649:118649): Se inicializaron las estructuras de Memoria
+[INFO] 13:34:20:320 MEMORIA/(118649:118649): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 13:34:27:180 MEMORIA/(118649:118649): Se conectó un cliente!
+[INFO] 13:34:28:844 MEMORIA/(118649:118649): Se conectó un cliente!
+[INFO] 13:34:32:557 MEMORIA/(118649:118649): Se conectó un cliente!
+[INFO] 13:34:37:993 MEMORIA/(118649:118663): Creación de Proceso PID: 1000
+[ERROR] 13:36:48:083 MEMORIA/(118649:118663): Operación desconocida.
+[INFO] 13:42:29:717 MEMORIA/(118856:118856): Se inicializaron las estructuras de Memoria
+[INFO] 13:42:30:020 MEMORIA/(118856:118856): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 13:42:40:094 MEMORIA/(118856:118856): Se conectó un cliente!
+[INFO] 13:42:47:301 MEMORIA/(118856:118856): Se conectó un cliente!
+[INFO] 13:42:50:327 MEMORIA/(118856:118856): Se conectó un cliente!
+[INFO] 13:42:55:357 MEMORIA/(118856:118870): Creación de Proceso PID: 1000
+[ERROR] 13:48:55:697 MEMORIA/(118856:118870): Operación desconocida.
+[ERROR] 13:48:55:699 MEMORIA/(118856:118860): Operación desconocida.
+[INFO] 13:49:03:605 MEMORIA/(119122:119122): Se inicializaron las estructuras de Memoria
+[INFO] 13:49:03:807 MEMORIA/(119122:119122): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 13:49:07:166 MEMORIA/(119122:119122): Se conectó un cliente!
+[INFO] 13:49:09:435 MEMORIA/(119122:119122): Se conectó un cliente!
+[ERROR] 13:49:11:679 MEMORIA/(119122:119126): Operación desconocida.
+[INFO] 13:49:11:696 MEMORIA/(119122:119122): Se conectó un cliente!
+[ERROR] 13:49:11:697 MEMORIA/(119122:119136): Operación desconocida.
+[INFO] 13:50:22:278 MEMORIA/(119140:119140): Se inicializaron las estructuras de Memoria
+[INFO] 13:50:22:410 MEMORIA/(119140:119140): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 13:50:36:342 MEMORIA/(119140:119140): Se conectó un cliente!
+[INFO] 13:50:38:070 MEMORIA/(119140:119140): Se conectó un cliente!
+[INFO] 13:51:23:255 MEMORIA/(119140:119140): Se conectó un cliente!
+[INFO] 13:51:28:075 MEMORIA/(119140:119154): Creación de Proceso PID: 1000
+[INFO] 13:51:49:642 MEMORIA/(119140:119154): Eliminación de Proceso PID: 1000
+[INFO] 13:52:08:022 MEMORIA/(119140:119154): Creación de Proceso PID: 1001
+[ERROR] 13:52:22:605 MEMORIA/(119140:119154): Operación desconocida.
+[ERROR] 13:52:22:614 MEMORIA/(119140:119144): Operación desconocida.
+[INFO] 14:01:04:929 MEMORIA/(119228:119228): Se inicializaron las estructuras de Memoria
+[INFO] 14:01:05:182 MEMORIA/(119228:119228): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:01:09:395 MEMORIA/(119228:119228): Se conectó un cliente!
+[INFO] 14:01:11:488 MEMORIA/(119228:119228): Se conectó un cliente!
+[INFO] 14:02:19:445 MEMORIA/(119273:119273): Se inicializaron las estructuras de Memoria
+[INFO] 14:02:41:980 MEMORIA/(119275:119275): Se inicializaron las estructuras de Memoria
+[INFO] 14:02:45:341 MEMORIA/(119276:119276): Se inicializaron las estructuras de Memoria
+[INFO] 14:02:58:064 MEMORIA/(119277:119277): Se inicializaron las estructuras de Memoria
+[INFO] 14:03:02:130 MEMORIA/(119278:119278): Se inicializaron las estructuras de Memoria
+[INFO] 14:03:16:126 MEMORIA/(119280:119280): Se inicializaron las estructuras de Memoria
+[INFO] 14:03:16:253 MEMORIA/(119280:119280): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:03:22:794 MEMORIA/(119280:119280): Se conectó un cliente!
+[INFO] 14:03:25:880 MEMORIA/(119280:119280): Se conectó un cliente!
+[INFO] 14:03:56:328 MEMORIA/(119280:119280): Se conectó un cliente!
+[INFO] 14:04:46:275 MEMORIA/(119280:119338): Creación de Proceso PID: 1000
+[INFO] 14:23:07:371 MEMORIA/(119280:119338): Eliminación de Proceso PID: 1000
+[INFO] 14:23:24:377 MEMORIA/(119280:119338): Creación de Proceso PID: 1001
+[ERROR] 14:35:14:107 MEMORIA/(119280:119338): Operación desconocida.
+[ERROR] 14:35:14:118 MEMORIA/(119280:119284): Operación desconocida.
+[INFO] 14:40:42:160 MEMORIA/(120830:120830): Se inicializaron las estructuras de Memoria
+[INFO] 14:40:42:289 MEMORIA/(120830:120830): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:40:47:782 MEMORIA/(120830:120830): Se conectó un cliente!
+[INFO] 14:40:49:963 MEMORIA/(120830:120830): Se conectó un cliente!
+[INFO] 14:41:07:508 MEMORIA/(120830:120830): Se conectó un cliente!
+[INFO] 14:41:54:521 MEMORIA/(120830:120858): Creación de Proceso PID: 1000
+[INFO] 14:42:37:982 MEMORIA/(120830:120858): Eliminación de Proceso PID: 1000
+[INFO] 14:42:54:642 MEMORIA/(120830:120858): Creación de Proceso PID: 1001
+[ERROR] 14:43:55:442 MEMORIA/(120830:120858): Operación desconocida.
+[ERROR] 14:43:55:447 MEMORIA/(120830:120834): Operación desconocida.
+[INFO] 14:44:43:671 MEMORIA/(120962:120962): Se inicializaron las estructuras de Memoria
+[INFO] 14:44:43:898 MEMORIA/(120962:120962): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:44:46:894 MEMORIA/(120962:120962): Se conectó un cliente!
+[INFO] 14:44:49:266 MEMORIA/(120962:120962): Se conectó un cliente!
+[INFO] 14:44:59:016 MEMORIA/(120962:120962): Se conectó un cliente!
+[INFO] 14:45:31:310 MEMORIA/(120962:120991): Creación de Proceso PID: 1000
+[INFO] 14:46:20:562 MEMORIA/(120962:120991): Eliminación de Proceso PID: 1000
+[INFO] 14:46:29:097 MEMORIA/(120962:120991): Creación de Proceso PID: 1001
+[INFO] 14:51:14:004 MEMORIA/(121149:121149): Se inicializaron las estructuras de Memoria
+[INFO] 14:52:06:634 MEMORIA/(121150:121150): Se inicializaron las estructuras de Memoria
+[INFO] 14:52:06:775 MEMORIA/(121150:121150): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:52:13:650 MEMORIA/(121150:121150): Se conectó un cliente!
+[INFO] 14:52:16:290 MEMORIA/(121150:121150): Se conectó un cliente!
+[ERROR] 14:52:21:846 MEMORIA/(121150:121154): Operación desconocida.
+[INFO] 14:53:34:340 MEMORIA/(121166:121166): Se inicializaron las estructuras de Memoria
+[INFO] 14:53:34:474 MEMORIA/(121166:121166): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:53:40:423 MEMORIA/(121166:121166): Se conectó un cliente!
+[INFO] 14:53:44:573 MEMORIA/(121166:121166): Se conectó un cliente!
+[ERROR] 14:53:49:028 MEMORIA/(121166:121170): Operación desconocida.
+[INFO] 14:54:03:385 MEMORIA/(121183:121183): Se inicializaron las estructuras de Memoria
+[INFO] 14:54:03:576 MEMORIA/(121183:121183): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 14:54:18:033 MEMORIA/(121183:121183): Se conectó un cliente!
+[INFO] 14:54:20:732 MEMORIA/(121183:121183): Se conectó un cliente!
+[INFO] 14:54:24:544 MEMORIA/(121183:121183): Se conectó un cliente!
+[INFO] 14:54:29:587 MEMORIA/(121183:121197): Creación de Proceso PID: 1000
+[INFO] 14:54:51:140 MEMORIA/(121183:121197): Eliminación de Proceso PID: 1000
+[INFO] 14:55:07:687 MEMORIA/(121183:121197): Creación de Proceso PID: 1001
+[INFO] 14:55:29:101 MEMORIA/(121183:121197): Eliminación de Proceso PID: 1001
+[INFO] 14:55:38:768 MEMORIA/(121183:121197): Creación de Proceso PID: 1002
+[INFO] 14:56:00:103 MEMORIA/(121183:121197): Eliminación de Proceso PID: 1002
+[INFO] 14:57:00:227 MEMORIA/(121183:121197): Creación de Proceso PID: 1003
+[INFO] 14:57:26:330 MEMORIA/(121183:121197): Eliminación de Proceso PID: 1003
+[ERROR] 14:58:02:558 MEMORIA/(121183:121197): Operación desconocida.
+[ERROR] 14:58:02:560 MEMORIA/(121183:121187): Operación desconocida.
+[INFO] 15:35:27:986 MEMORIA/(122538:122538): Se inicializaron las estructuras de Memoria
+[INFO] 15:35:28:181 MEMORIA/(122538:122538): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 15:35:31:259 MEMORIA/(122538:122538): Se conectó un cliente!
+[INFO] 15:35:47:494 MEMORIA/(122538:122538): Se conectó un cliente!
+[INFO] 15:35:52:476 MEMORIA/(122538:122538): Se conectó un cliente!
+[INFO] 15:36:04:360 MEMORIA/(122538:122552): Creación de Proceso PID: 1000
+[INFO] 15:36:05:460 MEMORIA/(122538:122540): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 15:36:05:461 MEMORIA/(122538:122540): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 15:36:05:462 MEMORIA/(122538:122540): Dirección física: 32
+[INFO] 15:36:05:463 MEMORIA/(122538:122540): Valor Registro: SonyPlaystation1
+[INFO] 15:36:06:470 MEMORIA/(122538:122540): SonyPlaystation1
+[INFO] 15:36:07:480 MEMORIA/(122538:122540): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 15:36:07:481 MEMORIA/(122538:122540): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 15:36:07:481 MEMORIA/(122538:122540): Dirección física: 48
+[INFO] 15:36:07:482 MEMORIA/(122538:122540): Valor Registro: SonyPlaystation2
+[INFO] 15:36:08:483 MEMORIA/(122538:122540): SonyPlaystation2
+[INFO] 15:36:09:493 MEMORIA/(122538:122540): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 15:36:09:497 MEMORIA/(122538:122540): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 15:36:09:498 MEMORIA/(122538:122540): Dirección física: 64
+[INFO] 15:36:09:500 MEMORIA/(122538:122540): Valor Registro: SonyPlaystation3
+[INFO] 15:36:10:504 MEMORIA/(122538:122540): SonyPlaystation3
+[INFO] 15:36:11:510 MEMORIA/(122538:122540): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 15:36:11:512 MEMORIA/(122538:122540): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 15:36:11:513 MEMORIA/(122538:122540): Dirección física: 80
+[INFO] 15:36:11:514 MEMORIA/(122538:122540): Valor Registro: SonyPlaystation4
+[INFO] 15:36:12:516 MEMORIA/(122538:122540): SonyPlaystation4
+[INFO] 15:36:13:523 MEMORIA/(122538:122540): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 15:36:13:524 MEMORIA/(122538:122540): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 15:36:13:524 MEMORIA/(122538:122540): Dirección física: 96
+[INFO] 15:36:13:525 MEMORIA/(122538:122540): Valor Registro: SonyPlaystation5
+[INFO] 15:36:14:525 MEMORIA/(122538:122540): SonyPlaystation5
+[ERROR] 15:36:18:105 MEMORIA/(122538:122552): Operación desconocida.
+[ERROR] 15:36:18:107 MEMORIA/(122538:122542): Operación desconocida.
+[INFO] 15:41:22:328 MEMORIA/(122602:122602): Se inicializaron las estructuras de Memoria
+[INFO] 15:41:22:452 MEMORIA/(122602:122602): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 15:41:36:323 MEMORIA/(122602:122602): Se conectó un cliente!
+[INFO] 15:41:37:735 MEMORIA/(122602:122602): Se conectó un cliente!
+[INFO] 15:41:51:848 MEMORIA/(122602:122602): Se conectó un cliente!
+[INFO] 15:42:41:694 MEMORIA/(122602:122631): Creación de Proceso PID: 1000
+[INFO] 15:45:08:238 MEMORIA/(122602:122604): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 15:45:08:244 MEMORIA/(122602:122604): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 15:45:08:247 MEMORIA/(122602:122604): Dirección física: 32
+[INFO] 15:45:08:248 MEMORIA/(122602:122604): Valor Registro: SonyPlaystation1
+[INFO] 15:45:09:259 MEMORIA/(122602:122604): SonyPlaystation1
+[INFO] 15:45:10:269 MEMORIA/(122602:122604): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 15:45:10:270 MEMORIA/(122602:122604): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 15:45:10:270 MEMORIA/(122602:122604): Dirección física: 48
+[INFO] 15:45:10:270 MEMORIA/(122602:122604): Valor Registro: SonyPlaystation2
+[INFO] 15:45:11:271 MEMORIA/(122602:122604): SonyPlaystation2
+[INFO] 15:45:12:280 MEMORIA/(122602:122604): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 15:45:12:283 MEMORIA/(122602:122604): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 15:45:12:286 MEMORIA/(122602:122604): Dirección física: 64
+[INFO] 15:45:12:291 MEMORIA/(122602:122604): Valor Registro: SonyPlaystation3
+[INFO] 15:45:13:294 MEMORIA/(122602:122604): SonyPlaystation3
+[INFO] 15:45:14:297 MEMORIA/(122602:122604): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 15:45:14:298 MEMORIA/(122602:122604): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 15:45:14:300 MEMORIA/(122602:122604): Dirección física: 80
+[INFO] 15:45:14:301 MEMORIA/(122602:122604): Valor Registro: SonyPlaystation4
+[INFO] 15:45:15:304 MEMORIA/(122602:122604): SonyPlaystation4
+[INFO] 15:45:16:336 MEMORIA/(122602:122604): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 15:45:16:337 MEMORIA/(122602:122604): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 15:45:16:339 MEMORIA/(122602:122604): Dirección física: 96
+[INFO] 15:45:16:339 MEMORIA/(122602:122604): Valor Registro: SonyPlaystation5
+[INFO] 15:45:17:340 MEMORIA/(122602:122604): SonyPlaystation5
+[ERROR] 15:50:35:919 MEMORIA/(122602:122631): Operación desconocida.
+[ERROR] 15:50:35:927 MEMORIA/(122602:122606): Operación desconocida.
+[INFO] 15:54:56:339 MEMORIA/(123015:123015): Se inicializaron las estructuras de Memoria
+[INFO] 15:54:56:470 MEMORIA/(123015:123015): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 15:55:02:030 MEMORIA/(123015:123015): Se conectó un cliente!
+[INFO] 15:55:05:934 MEMORIA/(123015:123015): Se conectó un cliente!
+[INFO] 15:55:10:404 MEMORIA/(123015:123015): Se conectó un cliente!
+[INFO] 15:55:14:582 MEMORIA/(123015:123029): Creación de Proceso PID: 1000
+[INFO] 15:55:15:726 MEMORIA/(123015:123017): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 15:55:15:729 MEMORIA/(123015:123017): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 15:55:15:731 MEMORIA/(123015:123017): Dirección física: 32
+[INFO] 15:55:15:732 MEMORIA/(123015:123017): Valor Registro: SonyPlaystation1
+[INFO] 15:55:16:741 MEMORIA/(123015:123017): SonyPlaystation1
+[INFO] 15:55:17:755 MEMORIA/(123015:123017): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 15:55:17:758 MEMORIA/(123015:123017): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 15:55:17:761 MEMORIA/(123015:123017): Dirección física: 48
+[INFO] 15:55:17:762 MEMORIA/(123015:123017): Valor Registro: SonyPlaystation2
+[INFO] 15:55:18:763 MEMORIA/(123015:123017): SonyPlaystation2
+[INFO] 15:55:19:776 MEMORIA/(123015:123017): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 15:55:19:783 MEMORIA/(123015:123017): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 15:55:19:786 MEMORIA/(123015:123017): Dirección física: 64
+[INFO] 15:55:19:791 MEMORIA/(123015:123017): Valor Registro: SonyPlaystation3
+[INFO] 15:55:20:800 MEMORIA/(123015:123017): SonyPlaystation3
+[INFO] 15:55:21:816 MEMORIA/(123015:123017): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 15:55:21:825 MEMORIA/(123015:123017): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 15:55:21:826 MEMORIA/(123015:123017): Dirección física: 80
+[INFO] 15:55:21:826 MEMORIA/(123015:123017): Valor Registro: SonyPlaystation4
+[INFO] 15:55:22:827 MEMORIA/(123015:123017): SonyPlaystation4
+[INFO] 15:55:23:837 MEMORIA/(123015:123017): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 15:55:23:842 MEMORIA/(123015:123017): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 15:55:23:852 MEMORIA/(123015:123017): Dirección física: 96
+[INFO] 15:55:23:853 MEMORIA/(123015:123017): Valor Registro: SonyPlaystation5
+[INFO] 15:55:24:855 MEMORIA/(123015:123017): SonyPlaystation5
+[ERROR] 15:55:26:575 MEMORIA/(123015:123017): Operación desconocida.
+[INFO] 15:58:35:254 MEMORIA/(123106:123106): Se inicializaron las estructuras de Memoria
+[INFO] 15:58:35:384 MEMORIA/(123106:123106): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 15:58:39:964 MEMORIA/(123106:123106): Se conectó un cliente!
+[INFO] 15:58:43:423 MEMORIA/(123106:123106): Se conectó un cliente!
+[INFO] 15:58:52:308 MEMORIA/(123106:123106): Se conectó un cliente!
+[INFO] 15:59:22:992 MEMORIA/(123106:123131): Creación de Proceso PID: 1000
+[INFO] 15:59:24:095 MEMORIA/(123106:123108): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 15:59:24:100 MEMORIA/(123106:123108): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 15:59:24:101 MEMORIA/(123106:123108): Dirección física: 32
+[INFO] 15:59:24:102 MEMORIA/(123106:123108): Valor Registro: SonyPlaystation1
+[INFO] 15:59:25:106 MEMORIA/(123106:123108): SonyPlaystation1
+[INFO] 15:59:26:112 MEMORIA/(123106:123108): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 15:59:26:113 MEMORIA/(123106:123108): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 15:59:26:114 MEMORIA/(123106:123108): Dirección física: 48
+[INFO] 15:59:26:115 MEMORIA/(123106:123108): Valor Registro: SonyPlaystation2
+[INFO] 15:59:27:122 MEMORIA/(123106:123108): SonyPlaystation2
+[INFO] 15:59:28:127 MEMORIA/(123106:123108): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 15:59:28:133 MEMORIA/(123106:123108): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 15:59:28:138 MEMORIA/(123106:123108): Dirección física: 64
+[INFO] 15:59:28:139 MEMORIA/(123106:123108): Valor Registro: SonyPlaystation3
+[INFO] 15:59:29:149 MEMORIA/(123106:123108): SonyPlaystation3
+[INFO] 15:59:30:158 MEMORIA/(123106:123108): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 15:59:30:159 MEMORIA/(123106:123108): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 15:59:30:159 MEMORIA/(123106:123108): Dirección física: 80
+[INFO] 15:59:30:159 MEMORIA/(123106:123108): Valor Registro: SonyPlaystation4
+[INFO] 15:59:31:160 MEMORIA/(123106:123108): SonyPlaystation4
+[INFO] 15:59:32:170 MEMORIA/(123106:123108): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 15:59:32:172 MEMORIA/(123106:123108): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 15:59:32:174 MEMORIA/(123106:123108): Dirección física: 96
+[INFO] 15:59:32:175 MEMORIA/(123106:123108): Valor Registro: SonyPlaystation5
+[INFO] 15:59:33:176 MEMORIA/(123106:123108): SonyPlaystation5
+[INFO] 16:06:41:685 MEMORIA/(123451:123451): Se inicializaron las estructuras de Memoria
+[INFO] 16:07:51:209 MEMORIA/(123452:123452): Se inicializaron las estructuras de Memoria
+[INFO] 16:07:51:348 MEMORIA/(123452:123452): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 16:08:02:283 MEMORIA/(123452:123452): Se conectó un cliente!
+[INFO] 16:08:08:875 MEMORIA/(123452:123452): Se conectó un cliente!
+[INFO] 16:08:14:998 MEMORIA/(123452:123452): Se conectó un cliente!
+[INFO] 16:08:21:686 MEMORIA/(123452:123466): Creación de Proceso PID: 1000
+[INFO] 16:08:22:812 MEMORIA/(123452:123454): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 16:08:22:813 MEMORIA/(123452:123454): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 16:08:22:814 MEMORIA/(123452:123454): Dirección física: 32
+[INFO] 16:08:22:815 MEMORIA/(123452:123454): Valor Registro: SonyPlaystation1
+[INFO] 16:08:23:821 MEMORIA/(123452:123454): SonyPlaystation1
+[INFO] 16:08:24:834 MEMORIA/(123452:123454): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 16:08:24:835 MEMORIA/(123452:123454): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 16:08:24:836 MEMORIA/(123452:123454): Dirección física: 48
+[INFO] 16:08:24:837 MEMORIA/(123452:123454): Valor Registro: SonyPlaystation2
+[INFO] 16:08:25:838 MEMORIA/(123452:123454): SonyPlaystation2
+[INFO] 16:08:26:844 MEMORIA/(123452:123454): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 16:08:26:846 MEMORIA/(123452:123454): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 16:08:26:847 MEMORIA/(123452:123454): Dirección física: 64
+[INFO] 16:08:26:848 MEMORIA/(123452:123454): Valor Registro: SonyPlaystation3
+[INFO] 16:08:27:850 MEMORIA/(123452:123454): SonyPlaystation3
+[INFO] 16:08:28:852 MEMORIA/(123452:123454): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 16:08:28:853 MEMORIA/(123452:123454): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 16:08:28:853 MEMORIA/(123452:123454): Dirección física: 80
+[INFO] 16:08:28:854 MEMORIA/(123452:123454): Valor Registro: SonyPlaystation4
+[INFO] 16:08:29:856 MEMORIA/(123452:123454): SonyPlaystation4
+[INFO] 16:08:30:872 MEMORIA/(123452:123454): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 16:08:30:874 MEMORIA/(123452:123454): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 16:08:30:877 MEMORIA/(123452:123454): Dirección física: 96
+[INFO] 16:08:30:878 MEMORIA/(123452:123454): Valor Registro: SonyPlaystation5
+[INFO] 16:08:31:879 MEMORIA/(123452:123454): SonyPlaystation5
+[INFO] 16:08:32:151 MEMORIA/(123452:123456): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 16:08:33:176 MEMORIA/(123452:123456): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 16:08:33:179 MEMORIA/(123452:123456): Se busca el valor de la direccion fisica: 32
+[INFO] 16:14:19:290 MEMORIA/(123520:123520): Se inicializaron las estructuras de Memoria
+[INFO] 16:14:19:414 MEMORIA/(123520:123520): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 16:14:28:913 MEMORIA/(123520:123520): Se conectó un cliente!
+[INFO] 16:14:33:360 MEMORIA/(123520:123520): Se conectó un cliente!
+[ERROR] 16:14:46:651 MEMORIA/(123520:123524): Operación desconocida.
+[INFO] 16:15:19:634 MEMORIA/(123536:123536): Se inicializaron las estructuras de Memoria
+[INFO] 16:15:19:861 MEMORIA/(123536:123536): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 16:15:23:494 MEMORIA/(123536:123536): Se conectó un cliente!
+[INFO] 16:15:26:338 MEMORIA/(123536:123536): Se conectó un cliente!
+[ERROR] 16:15:30:667 MEMORIA/(123536:123540): Operación desconocida.
+[ERROR] 16:15:30:676 MEMORIA/(123536:123550): Operación desconocida.
+[INFO] 16:15:30:676 MEMORIA/(123536:123536): Se conectó un cliente!
+[INFO] 16:16:09:449 MEMORIA/(123552:123552): Se inicializaron las estructuras de Memoria
+[INFO] 16:16:09:580 MEMORIA/(123552:123552): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 16:16:14:896 MEMORIA/(123552:123552): Se conectó un cliente!
+[INFO] 16:16:16:040 MEMORIA/(123552:123552): Se conectó un cliente!
+[INFO] 16:16:18:794 MEMORIA/(123552:123552): Se conectó un cliente!
+[INFO] 16:16:26:360 MEMORIA/(123552:123566): Creación de Proceso PID: 1000
+[INFO] 16:16:27:462 MEMORIA/(123552:123554): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 16:16:27:483 MEMORIA/(123552:123554): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 16:16:27:490 MEMORIA/(123552:123554): Dirección física: 32
+[INFO] 16:16:27:491 MEMORIA/(123552:123554): Valor Registro: SonyPlaystation1
+[INFO] 16:16:28:504 MEMORIA/(123552:123554): SonyPlaystation1
+[INFO] 16:16:29:514 MEMORIA/(123552:123554): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 16:16:29:516 MEMORIA/(123552:123554): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 16:16:29:518 MEMORIA/(123552:123554): Dirección física: 48
+[INFO] 16:16:29:519 MEMORIA/(123552:123554): Valor Registro: SonyPlaystation2
+[INFO] 16:16:30:520 MEMORIA/(123552:123554): SonyPlaystation2
+[INFO] 16:16:31:528 MEMORIA/(123552:123554): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 16:16:31:529 MEMORIA/(123552:123554): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 16:16:31:530 MEMORIA/(123552:123554): Dirección física: 64
+[INFO] 16:16:31:531 MEMORIA/(123552:123554): Valor Registro: SonyPlaystation3
+[INFO] 16:16:32:533 MEMORIA/(123552:123554): SonyPlaystation3
+[INFO] 16:16:33:540 MEMORIA/(123552:123554): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 16:16:33:541 MEMORIA/(123552:123554): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 16:16:33:541 MEMORIA/(123552:123554): Dirección física: 80
+[INFO] 16:16:33:542 MEMORIA/(123552:123554): Valor Registro: SonyPlaystation4
+[INFO] 16:16:34:543 MEMORIA/(123552:123554): SonyPlaystation4
+[INFO] 16:16:35:548 MEMORIA/(123552:123554): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 16:16:35:549 MEMORIA/(123552:123554): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 16:16:35:550 MEMORIA/(123552:123554): Dirección física: 96
+[INFO] 16:16:35:550 MEMORIA/(123552:123554): Valor Registro: SonyPlaystation5
+[INFO] 16:16:36:552 MEMORIA/(123552:123554): SonyPlaystation5
+[INFO] 16:16:36:781 MEMORIA/(123552:123556): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 16:16:37:816 MEMORIA/(123552:123556): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 16:16:37:820 MEMORIA/(123552:123556): Se busca el valor de la direccion fisica: 32
+[ERROR] 16:16:38:020 MEMORIA/(123552:123556): Operación desconocida.
+[INFO] 17:43:15:892 MEMORIA/(126421:126421): Se inicializaron las estructuras de Memoria
+[INFO] 17:43:16:111 MEMORIA/(126421:126421): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 17:43:22:761 MEMORIA/(126421:126421): Se conectó un cliente!
+[INFO] 17:44:13:259 MEMORIA/(126473:126473): Se inicializaron las estructuras de Memoria
+[INFO] 17:44:20:563 MEMORIA/(126479:126479): Se inicializaron las estructuras de Memoria
+[INFO] 17:44:37:522 MEMORIA/(126480:126480): Se inicializaron las estructuras de Memoria
+[INFO] 17:44:44:294 MEMORIA/(126482:126482): Se inicializaron las estructuras de Memoria
+[INFO] 17:45:00:496 MEMORIA/(126483:126483): Se inicializaron las estructuras de Memoria
+[INFO] 17:45:16:520 MEMORIA/(126484:126484): Se inicializaron las estructuras de Memoria
+[INFO] 17:45:16:656 MEMORIA/(126484:126484): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 17:45:21:726 MEMORIA/(126484:126484): Se conectó un cliente!
+[INFO] 17:45:24:881 MEMORIA/(126484:126484): Se conectó un cliente!
+[INFO] 17:45:31:236 MEMORIA/(126484:126484): Se conectó un cliente!
+[INFO] 17:45:35:193 MEMORIA/(126484:126499): Creación de Proceso PID: 1000
+[INFO] 17:45:36:397 MEMORIA/(126484:126486): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 17:45:36:399 MEMORIA/(126484:126486): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 17:45:36:401 MEMORIA/(126484:126486): Dirección física: 32
+[INFO] 17:45:36:401 MEMORIA/(126484:126486): Valor Registro: SonyPlaystation1
+[INFO] 17:45:37:407 MEMORIA/(126484:126486): SonyPlaystation1
+[INFO] 17:45:38:416 MEMORIA/(126484:126486): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 17:45:38:418 MEMORIA/(126484:126486): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 17:45:38:419 MEMORIA/(126484:126486): Dirección física: 48
+[INFO] 17:45:38:424 MEMORIA/(126484:126486): Valor Registro: SonyPlaystation2
+[INFO] 17:45:39:426 MEMORIA/(126484:126486): SonyPlaystation2
+[INFO] 17:45:40:430 MEMORIA/(126484:126486): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 17:45:40:430 MEMORIA/(126484:126486): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 17:45:40:431 MEMORIA/(126484:126486): Dirección física: 64
+[INFO] 17:45:40:431 MEMORIA/(126484:126486): Valor Registro: SonyPlaystation3
+[INFO] 17:45:41:432 MEMORIA/(126484:126486): SonyPlaystation3
+[INFO] 17:45:42:435 MEMORIA/(126484:126486): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 17:45:42:436 MEMORIA/(126484:126486): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 17:45:42:436 MEMORIA/(126484:126486): Dirección física: 80
+[INFO] 17:45:42:437 MEMORIA/(126484:126486): Valor Registro: SonyPlaystation4
+[INFO] 17:45:43:438 MEMORIA/(126484:126486): SonyPlaystation4
+[INFO] 17:45:44:442 MEMORIA/(126484:126486): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 17:45:44:443 MEMORIA/(126484:126486): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 17:45:44:444 MEMORIA/(126484:126486): Dirección física: 96
+[INFO] 17:45:44:445 MEMORIA/(126484:126486): Valor Registro: SonyPlaystation5
+[INFO] 17:45:45:446 MEMORIA/(126484:126486): SonyPlaystation5
+[INFO] 17:45:45:685 MEMORIA/(126484:126488): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 17:45:46:693 MEMORIA/(126484:126488): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 17:45:46:698 MEMORIA/(126484:126488): Se busca el valor de la direccion fisica: 32
+[INFO] 17:51:01:207 MEMORIA/(126700:126700): Se inicializaron las estructuras de Memoria
+[INFO] 17:51:01:522 MEMORIA/(126700:126700): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 17:51:04:747 MEMORIA/(126700:126700): Se conectó un cliente!
+[INFO] 17:51:05:707 MEMORIA/(126700:126700): Se conectó un cliente!
+[INFO] 17:51:08:808 MEMORIA/(126700:126700): Se conectó un cliente!
+[INFO] 17:51:11:883 MEMORIA/(126700:126714): Creación de Proceso PID: 1000
+[INFO] 17:51:12:969 MEMORIA/(126700:126702): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 17:51:12:972 MEMORIA/(126700:126702): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 17:51:12:976 MEMORIA/(126700:126702): Dirección física: 32
+[INFO] 17:51:12:977 MEMORIA/(126700:126702): Valor Registro: SonyPlaystation1
+[INFO] 17:51:13:984 MEMORIA/(126700:126702): SonyPlaystation1
+[INFO] 17:51:14:989 MEMORIA/(126700:126702): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 17:51:14:990 MEMORIA/(126700:126702): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 17:51:14:990 MEMORIA/(126700:126702): Dirección física: 48
+[INFO] 17:51:14:991 MEMORIA/(126700:126702): Valor Registro: SonyPlaystation2
+[INFO] 17:51:15:992 MEMORIA/(126700:126702): SonyPlaystation2
+[INFO] 17:51:16:996 MEMORIA/(126700:126702): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 17:51:16:997 MEMORIA/(126700:126702): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 17:51:16:997 MEMORIA/(126700:126702): Dirección física: 64
+[INFO] 17:51:16:998 MEMORIA/(126700:126702): Valor Registro: SonyPlaystation3
+[INFO] 17:51:17:998 MEMORIA/(126700:126702): SonyPlaystation3
+[INFO] 17:51:19:008 MEMORIA/(126700:126702): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 17:51:19:014 MEMORIA/(126700:126702): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 17:51:19:015 MEMORIA/(126700:126702): Dirección física: 80
+[INFO] 17:51:19:020 MEMORIA/(126700:126702): Valor Registro: SonyPlaystation4
+[INFO] 17:51:20:022 MEMORIA/(126700:126702): SonyPlaystation4
+[INFO] 17:51:21:027 MEMORIA/(126700:126702): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 17:51:21:028 MEMORIA/(126700:126702): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 17:51:21:029 MEMORIA/(126700:126702): Dirección física: 96
+[INFO] 17:51:21:030 MEMORIA/(126700:126702): Valor Registro: SonyPlaystation5
+[INFO] 17:51:22:031 MEMORIA/(126700:126702): SonyPlaystation5
+[INFO] 17:51:22:345 MEMORIA/(126700:126704): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 17:51:23:376 MEMORIA/(126700:126704): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 17:51:23:378 MEMORIA/(126700:126704): Se busca el valor de la direccion fisica: 32
+[ERROR] 17:51:24:078 MEMORIA/(126700:126704): Operación desconocida.
+[INFO] 17:55:36:375 MEMORIA/(126812:126812): Se inicializaron las estructuras de Memoria
+[INFO] 17:55:36:527 MEMORIA/(126812:126812): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 17:55:38:638 MEMORIA/(126812:126812): Se conectó un cliente!
+[INFO] 17:55:39:000 MEMORIA/(126812:126812): Se conectó un cliente!
+[INFO] 17:55:41:452 MEMORIA/(126812:126812): Se conectó un cliente!
+[INFO] 17:55:43:491 MEMORIA/(126812:126826): Creación de Proceso PID: 1000
+[INFO] 17:55:44:563 MEMORIA/(126812:126814): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 17:55:44:568 MEMORIA/(126812:126814): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 17:55:44:579 MEMORIA/(126812:126814): Dirección física: 32
+[INFO] 17:55:44:579 MEMORIA/(126812:126814): Valor Registro: SonyPlaystation1
+[INFO] 17:55:45:586 MEMORIA/(126812:126814): SonyPlaystation1
+[INFO] 17:55:46:605 MEMORIA/(126812:126814): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 17:55:46:605 MEMORIA/(126812:126814): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 17:55:46:606 MEMORIA/(126812:126814): Dirección física: 48
+[INFO] 17:55:46:606 MEMORIA/(126812:126814): Valor Registro: SonyPlaystation2
+[INFO] 17:55:47:607 MEMORIA/(126812:126814): SonyPlaystation2
+[INFO] 17:55:48:617 MEMORIA/(126812:126814): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 17:55:48:620 MEMORIA/(126812:126814): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 17:55:48:622 MEMORIA/(126812:126814): Dirección física: 64
+[INFO] 17:55:48:625 MEMORIA/(126812:126814): Valor Registro: SonyPlaystation3
+[INFO] 17:55:49:636 MEMORIA/(126812:126814): SonyPlaystation3
+[INFO] 17:55:50:642 MEMORIA/(126812:126814): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 17:55:50:643 MEMORIA/(126812:126814): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 17:55:50:644 MEMORIA/(126812:126814): Dirección física: 80
+[INFO] 17:55:50:645 MEMORIA/(126812:126814): Valor Registro: SonyPlaystation4
+[INFO] 17:55:51:646 MEMORIA/(126812:126814): SonyPlaystation4
+[INFO] 17:55:52:652 MEMORIA/(126812:126814): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 17:55:52:653 MEMORIA/(126812:126814): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 17:55:52:654 MEMORIA/(126812:126814): Dirección física: 96
+[INFO] 17:55:52:655 MEMORIA/(126812:126814): Valor Registro: SonyPlaystation5
+[INFO] 17:55:53:656 MEMORIA/(126812:126814): SonyPlaystation5
+[INFO] 17:55:53:901 MEMORIA/(126812:126816): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 17:55:54:940 MEMORIA/(126812:126816): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 17:55:54:944 MEMORIA/(126812:126816): Se busca el valor de la direccion fisica: 32
+[ERROR] 17:55:55:182 MEMORIA/(126812:126816): Operación desconocida.
+[INFO] 17:58:30:625 MEMORIA/(126906:126906): Se inicializaron las estructuras de Memoria
+[INFO] 17:58:30:759 MEMORIA/(126906:126906): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 17:58:54:782 MEMORIA/(126940:126940): Se inicializaron las estructuras de Memoria
+[INFO] 17:58:54:905 MEMORIA/(126940:126940): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 17:59:00:217 MEMORIA/(126940:126940): Se conectó un cliente!
+[INFO] 17:59:00:325 MEMORIA/(126940:126940): Se conectó un cliente!
+[INFO] 17:59:21:504 MEMORIA/(126950:126950): Se inicializaron las estructuras de Memoria
+[INFO] 18:00:14:647 MEMORIA/(126952:126952): Se inicializaron las estructuras de Memoria
+[INFO] 18:00:21:309 MEMORIA/(126953:126953): Se inicializaron las estructuras de Memoria
+[INFO] 18:00:21:434 MEMORIA/(126953:126953): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:00:27:175 MEMORIA/(126953:126953): Se conectó un cliente!
+[INFO] 18:00:29:952 MEMORIA/(126953:126953): Se conectó un cliente!
+[INFO] 18:00:41:450 MEMORIA/(126953:126953): Se conectó un cliente!
+[INFO] 18:00:45:155 MEMORIA/(126953:126967): Creación de Proceso PID: 1000
+[INFO] 18:00:46:275 MEMORIA/(126953:126955): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:00:46:277 MEMORIA/(126953:126955): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:00:46:288 MEMORIA/(126953:126955): Dirección física: 32
+[INFO] 18:00:46:289 MEMORIA/(126953:126955): Valor Registro: SonyPlaystation1
+[INFO] 18:00:47:293 MEMORIA/(126953:126955): SonyPlaystation1
+[INFO] 18:00:48:298 MEMORIA/(126953:126955): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:00:48:299 MEMORIA/(126953:126955): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:00:48:299 MEMORIA/(126953:126955): Dirección física: 48
+[INFO] 18:00:48:300 MEMORIA/(126953:126955): Valor Registro: SonyPlaystation2
+[INFO] 18:00:49:301 MEMORIA/(126953:126955): SonyPlaystation2
+[INFO] 18:00:50:305 MEMORIA/(126953:126955): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:00:50:306 MEMORIA/(126953:126955): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:00:50:306 MEMORIA/(126953:126955): Dirección física: 64
+[INFO] 18:00:50:307 MEMORIA/(126953:126955): Valor Registro: SonyPlaystation3
+[INFO] 18:00:51:308 MEMORIA/(126953:126955): SonyPlaystation3
+[INFO] 18:00:52:314 MEMORIA/(126953:126955): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:00:52:315 MEMORIA/(126953:126955): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:00:52:315 MEMORIA/(126953:126955): Dirección física: 80
+[INFO] 18:00:52:316 MEMORIA/(126953:126955): Valor Registro: SonyPlaystation4
+[INFO] 18:00:53:317 MEMORIA/(126953:126955): SonyPlaystation4
+[INFO] 18:00:54:320 MEMORIA/(126953:126955): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:00:54:321 MEMORIA/(126953:126955): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:00:54:321 MEMORIA/(126953:126955): Dirección física: 96
+[INFO] 18:00:54:322 MEMORIA/(126953:126955): Valor Registro: SonyPlaystation5
+[INFO] 18:00:55:323 MEMORIA/(126953:126955): SonyPlaystation5
+[INFO] 18:00:55:543 MEMORIA/(126953:126957): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:00:56:559 MEMORIA/(126953:126957): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:00:56:561 MEMORIA/(126953:126957): Se busca el valor de la direccion fisica: 32
+[INFO] 18:00:56:586 MEMORIA/(126953:126957): File System quiere escribir en la dirección <32> el valor <>, de tamaño <80>
+[INFO] 18:00:56:587 MEMORIA/(126953:126957): Se escribe el valor <> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:00:56:588 MEMORIA/(126953:126957): Dirección física: 32
+[INFO] 18:00:56:588 MEMORIA/(126953:126957): Valor Registro: 
+[INFO] 18:00:57:591 MEMORIA/(126953:126957): 
+[ERROR] 18:00:58:156 MEMORIA/(126953:126957): Operación desconocida.
+[INFO] 18:03:48:520 MEMORIA/(127037:127037): Se inicializaron las estructuras de Memoria
+[INFO] 18:03:48:647 MEMORIA/(127037:127037): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:03:54:201 MEMORIA/(127037:127037): Se conectó un cliente!
+[INFO] 18:03:57:363 MEMORIA/(127037:127037): Se conectó un cliente!
+[ERROR] 18:04:10:553 MEMORIA/(127037:127039): Operación desconocida.
+[INFO] 18:05:01:934 MEMORIA/(127049:127049): Se inicializaron las estructuras de Memoria
+[INFO] 18:05:17:746 MEMORIA/(127050:127050): Se inicializaron las estructuras de Memoria
+[INFO] 18:05:17:889 MEMORIA/(127050:127050): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:05:22:902 MEMORIA/(127050:127050): Se conectó un cliente!
+[INFO] 18:05:24:706 MEMORIA/(127050:127050): Se conectó un cliente!
+[INFO] 18:05:27:519 MEMORIA/(127050:127050): Se conectó un cliente!
+[INFO] 18:05:30:421 MEMORIA/(127050:127064): Creación de Proceso PID: 1000
+[INFO] 18:05:31:480 MEMORIA/(127050:127052): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:05:31:481 MEMORIA/(127050:127052): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:05:31:482 MEMORIA/(127050:127052): Dirección física: 32
+[INFO] 18:05:31:484 MEMORIA/(127050:127052): Valor Registro: SonyPlaystation1
+[INFO] 18:05:32:502 MEMORIA/(127050:127052): SonyPlaystation1
+[INFO] 18:05:33:514 MEMORIA/(127050:127052): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:05:33:515 MEMORIA/(127050:127052): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:05:33:516 MEMORIA/(127050:127052): Dirección física: 48
+[INFO] 18:05:33:516 MEMORIA/(127050:127052): Valor Registro: SonyPlaystation2
+[INFO] 18:05:34:517 MEMORIA/(127050:127052): SonyPlaystation2
+[INFO] 18:05:35:524 MEMORIA/(127050:127052): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:05:35:525 MEMORIA/(127050:127052): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:05:35:526 MEMORIA/(127050:127052): Dirección física: 64
+[INFO] 18:05:35:527 MEMORIA/(127050:127052): Valor Registro: SonyPlaystation3
+[INFO] 18:05:36:529 MEMORIA/(127050:127052): SonyPlaystation3
+[INFO] 18:05:37:535 MEMORIA/(127050:127052): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:05:37:536 MEMORIA/(127050:127052): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:05:37:537 MEMORIA/(127050:127052): Dirección física: 80
+[INFO] 18:05:37:539 MEMORIA/(127050:127052): Valor Registro: SonyPlaystation4
+[INFO] 18:05:38:541 MEMORIA/(127050:127052): SonyPlaystation4
+[INFO] 18:05:39:544 MEMORIA/(127050:127052): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:05:39:545 MEMORIA/(127050:127052): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:05:39:545 MEMORIA/(127050:127052): Dirección física: 96
+[INFO] 18:05:39:546 MEMORIA/(127050:127052): Valor Registro: SonyPlaystation5
+[INFO] 18:05:40:547 MEMORIA/(127050:127052): SonyPlaystation5
+[INFO] 18:05:40:831 MEMORIA/(127050:127054): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:05:41:862 MEMORIA/(127050:127054): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:05:41:875 MEMORIA/(127050:127054): Se busca el valor de la direccion fisica: 32
+[ERROR] 18:05:42:087 MEMORIA/(127050:127054): Operación desconocida.
+[INFO] 18:18:51:561 MEMORIA/(127327:127327): Se inicializaron las estructuras de Memoria
+[INFO] 18:18:51:686 MEMORIA/(127327:127327): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:18:57:003 MEMORIA/(127327:127327): Se conectó un cliente!
+[INFO] 18:18:59:090 MEMORIA/(127327:127327): Se conectó un cliente!
+[ERROR] 18:19:01:811 MEMORIA/(127327:127331): Operación desconocida.
+[INFO] 18:19:01:817 MEMORIA/(127327:127327): Se conectó un cliente!
+[ERROR] 18:19:01:817 MEMORIA/(127327:127341): Operación desconocida.
+[INFO] 18:19:48:575 MEMORIA/(127349:127349): Se inicializaron las estructuras de Memoria
+[INFO] 18:19:48:804 MEMORIA/(127349:127349): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:19:57:414 MEMORIA/(127349:127349): Se conectó un cliente!
+[INFO] 18:20:01:353 MEMORIA/(127349:127349): Se conectó un cliente!
+[INFO] 18:20:03:980 MEMORIA/(127349:127349): Se conectó un cliente!
+[INFO] 18:20:10:083 MEMORIA/(127349:127363): Creación de Proceso PID: 1000
+[INFO] 18:20:11:207 MEMORIA/(127349:127351): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:20:11:208 MEMORIA/(127349:127351): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:20:11:208 MEMORIA/(127349:127351): Dirección física: 32
+[INFO] 18:20:11:209 MEMORIA/(127349:127351): Valor Registro: SonyPlaystation1
+[INFO] 18:20:12:214 MEMORIA/(127349:127351): SonyPlaystation1
+[INFO] 18:20:13:219 MEMORIA/(127349:127351): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:20:13:219 MEMORIA/(127349:127351): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:20:13:219 MEMORIA/(127349:127351): Dirección física: 48
+[INFO] 18:20:13:220 MEMORIA/(127349:127351): Valor Registro: SonyPlaystation2
+[INFO] 18:20:14:221 MEMORIA/(127349:127351): SonyPlaystation2
+[INFO] 18:20:15:229 MEMORIA/(127349:127351): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:20:15:232 MEMORIA/(127349:127351): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:20:15:234 MEMORIA/(127349:127351): Dirección física: 64
+[INFO] 18:20:15:235 MEMORIA/(127349:127351): Valor Registro: SonyPlaystation3
+[INFO] 18:20:16:240 MEMORIA/(127349:127351): SonyPlaystation3
+[INFO] 18:20:17:253 MEMORIA/(127349:127351): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:20:17:256 MEMORIA/(127349:127351): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:20:17:259 MEMORIA/(127349:127351): Dirección física: 80
+[INFO] 18:20:17:268 MEMORIA/(127349:127351): Valor Registro: SonyPlaystation4
+[INFO] 18:20:18:270 MEMORIA/(127349:127351): SonyPlaystation4
+[INFO] 18:20:19:274 MEMORIA/(127349:127351): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:20:19:275 MEMORIA/(127349:127351): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:20:19:276 MEMORIA/(127349:127351): Dirección física: 96
+[INFO] 18:20:19:277 MEMORIA/(127349:127351): Valor Registro: SonyPlaystation5
+[INFO] 18:20:20:278 MEMORIA/(127349:127351): SonyPlaystation5
+[INFO] 18:20:20:516 MEMORIA/(127349:127353): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:20:21:547 MEMORIA/(127349:127353): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:20:21:549 MEMORIA/(127349:127353): Se busca el valor de la direccion fisica: 32
+[INFO] 18:20:21:592 MEMORIA/(127349:127353): File System quiere escribir en la dirección <32> el valor <>, de tamaño <80>
+[INFO] 18:20:21:593 MEMORIA/(127349:127353): Se escribe el valor <> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:20:21:593 MEMORIA/(127349:127353): Dirección física: 32
+[INFO] 18:20:21:596 MEMORIA/(127349:127353): Valor Registro: 
+[INFO] 18:20:22:597 MEMORIA/(127349:127353): 
+[ERROR] 18:20:24:790 MEMORIA/(127349:127351): Operación desconocida.
+[INFO] 18:26:55:496 MEMORIA/(127518:127518): Se inicializaron las estructuras de Memoria
+[INFO] 18:26:55:654 MEMORIA/(127518:127518): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:26:59:428 MEMORIA/(127518:127518): Se conectó un cliente!
+[INFO] 18:27:01:013 MEMORIA/(127518:127518): Se conectó un cliente!
+[INFO] 18:27:03:722 MEMORIA/(127518:127518): Se conectó un cliente!
+[INFO] 18:27:07:550 MEMORIA/(127518:127532): Creación de Proceso PID: 1000
+[INFO] 18:27:08:644 MEMORIA/(127518:127520): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:27:08:645 MEMORIA/(127518:127520): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:27:08:646 MEMORIA/(127518:127520): Dirección física: 32
+[INFO] 18:27:08:646 MEMORIA/(127518:127520): Valor Registro: SonyPlaystation1
+[INFO] 18:27:09:650 MEMORIA/(127518:127520): SonyPlaystation1
+[INFO] 18:27:10:655 MEMORIA/(127518:127520): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:27:10:655 MEMORIA/(127518:127520): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:27:10:656 MEMORIA/(127518:127520): Dirección física: 48
+[INFO] 18:27:10:656 MEMORIA/(127518:127520): Valor Registro: SonyPlaystation2
+[INFO] 18:27:11:657 MEMORIA/(127518:127520): SonyPlaystation2
+[INFO] 18:27:12:662 MEMORIA/(127518:127520): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:27:12:662 MEMORIA/(127518:127520): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:27:12:663 MEMORIA/(127518:127520): Dirección física: 64
+[INFO] 18:27:12:664 MEMORIA/(127518:127520): Valor Registro: SonyPlaystation3
+[INFO] 18:27:13:666 MEMORIA/(127518:127520): SonyPlaystation3
+[INFO] 18:27:14:671 MEMORIA/(127518:127520): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:27:14:671 MEMORIA/(127518:127520): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:27:14:672 MEMORIA/(127518:127520): Dirección física: 80
+[INFO] 18:27:14:672 MEMORIA/(127518:127520): Valor Registro: SonyPlaystation4
+[INFO] 18:27:15:673 MEMORIA/(127518:127520): SonyPlaystation4
+[INFO] 18:27:16:681 MEMORIA/(127518:127520): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:27:16:682 MEMORIA/(127518:127520): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:27:16:683 MEMORIA/(127518:127520): Dirección física: 96
+[INFO] 18:27:16:684 MEMORIA/(127518:127520): Valor Registro: SonyPlaystation5
+[INFO] 18:27:17:686 MEMORIA/(127518:127520): SonyPlaystation5
+[INFO] 18:27:17:939 MEMORIA/(127518:127522): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:27:18:957 MEMORIA/(127518:127522): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:27:18:960 MEMORIA/(127518:127522): Se busca el valor de la direccion fisica: 32
+[INFO] 18:27:19:001 MEMORIA/(127518:127522): File System quiere escribir en la dirección <32> el valor <>, de tamaño <80>
+[INFO] 18:27:19:001 MEMORIA/(127518:127522): Se escribe el valor <> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:27:19:002 MEMORIA/(127518:127522): Dirección física: 32
+[INFO] 18:27:19:002 MEMORIA/(127518:127522): Valor Registro: 
+[INFO] 18:27:20:004 MEMORIA/(127518:127522): 
+[ERROR] 18:27:21:350 MEMORIA/(127518:127520): Operación desconocida.
+[INFO] 18:30:48:779 MEMORIA/(127555:127555): Se inicializaron las estructuras de Memoria
+[INFO] 18:30:48:905 MEMORIA/(127555:127555): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:30:54:927 MEMORIA/(127555:127555): Se conectó un cliente!
+[INFO] 18:31:24:468 MEMORIA/(127555:127555): Se conectó un cliente!
+[INFO] 18:31:33:084 MEMORIA/(127555:127555): Se conectó un cliente!
+[ERROR] 18:31:33:101 MEMORIA/(127555:127616): Operación desconocida.
+[INFO] 18:32:46:011 MEMORIA/(127619:127619): Se inicializaron las estructuras de Memoria
+[INFO] 18:32:46:165 MEMORIA/(127619:127619): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:32:49:326 MEMORIA/(127619:127619): Se conectó un cliente!
+[INFO] 18:33:07:590 MEMORIA/(127619:127619): Se conectó un cliente!
+[INFO] 18:33:18:428 MEMORIA/(127619:127619): Se conectó un cliente!
+[ERROR] 18:33:54:994 MEMORIA/(127619:127674): Operación desconocida.
+[INFO] 18:35:14:636 MEMORIA/(127712:127712): Se inicializaron las estructuras de Memoria
+[INFO] 18:35:14:766 MEMORIA/(127712:127712): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:35:19:040 MEMORIA/(127712:127712): Se conectó un cliente!
+[INFO] 18:35:38:273 MEMORIA/(127712:127712): Se conectó un cliente!
+[INFO] 18:35:55:620 MEMORIA/(127712:127712): Se conectó un cliente!
+[ERROR] 18:36:26:381 MEMORIA/(127712:127750): Operación desconocida.
+[INFO] 18:36:58:028 MEMORIA/(127772:127772): Se inicializaron las estructuras de Memoria
+[INFO] 18:38:18:810 MEMORIA/(127773:127773): Se inicializaron las estructuras de Memoria
+[INFO] 18:38:19:055 MEMORIA/(127773:127773): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:38:34:801 MEMORIA/(127773:127773): Se conectó un cliente!
+[INFO] 18:39:04:273 MEMORIA/(127773:127773): Se conectó un cliente!
+[INFO] 18:39:14:539 MEMORIA/(127773:127773): Se conectó un cliente!
+[INFO] 18:39:32:969 MEMORIA/(127773:127829): Creación de Proceso PID: 1000
+[INFO] 18:39:34:156 MEMORIA/(127773:127775): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:39:34:159 MEMORIA/(127773:127775): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:39:34:169 MEMORIA/(127773:127775): Dirección física: 32
+[INFO] 18:39:34:170 MEMORIA/(127773:127775): Valor Registro: SonyPlaystation1
+[INFO] 18:39:35:174 MEMORIA/(127773:127775): SonyPlaystation1
+[INFO] 18:39:36:185 MEMORIA/(127773:127775): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:39:36:186 MEMORIA/(127773:127775): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:39:36:188 MEMORIA/(127773:127775): Dirección física: 48
+[INFO] 18:39:36:189 MEMORIA/(127773:127775): Valor Registro: SonyPlaystation2
+[INFO] 18:39:37:189 MEMORIA/(127773:127775): SonyPlaystation2
+[INFO] 18:39:38:196 MEMORIA/(127773:127775): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:39:38:201 MEMORIA/(127773:127775): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:39:38:203 MEMORIA/(127773:127775): Dirección física: 64
+[INFO] 18:39:38:204 MEMORIA/(127773:127775): Valor Registro: SonyPlaystation3
+[INFO] 18:39:39:207 MEMORIA/(127773:127775): SonyPlaystation3
+[INFO] 18:39:40:215 MEMORIA/(127773:127775): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:39:40:215 MEMORIA/(127773:127775): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:39:40:216 MEMORIA/(127773:127775): Dirección física: 80
+[INFO] 18:39:40:220 MEMORIA/(127773:127775): Valor Registro: SonyPlaystation4
+[INFO] 18:39:41:222 MEMORIA/(127773:127775): SonyPlaystation4
+[INFO] 18:39:42:226 MEMORIA/(127773:127775): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:39:42:226 MEMORIA/(127773:127775): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:39:42:227 MEMORIA/(127773:127775): Dirección física: 96
+[INFO] 18:39:42:228 MEMORIA/(127773:127775): Valor Registro: SonyPlaystation5
+[INFO] 18:39:43:231 MEMORIA/(127773:127775): SonyPlaystation5
+[INFO] 18:42:20:291 MEMORIA/(127773:127810): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:42:21:306 MEMORIA/(127773:127810): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:42:21:307 MEMORIA/(127773:127810): Se busca el valor de la direccion fisica: 32
+[INFO] 18:49:37:210 MEMORIA/(127773:127810): File System quiere escribir en la dirección <32> el valor <>, de tamaño <80>
+[INFO] 18:49:37:212 MEMORIA/(127773:127810): Se escribe el valor <> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:49:37:214 MEMORIA/(127773:127810): Dirección física: 32
+[INFO] 18:49:37:216 MEMORIA/(127773:127810): Valor Registro: 
+[INFO] 18:49:38:226 MEMORIA/(127773:127810): 
+[ERROR] 18:50:32:043 MEMORIA/(127773:127775): Operación desconocida.
+[INFO] 18:55:05:764 MEMORIA/(128130:128130): Se inicializaron las estructuras de Memoria
+[INFO] 18:55:05:976 MEMORIA/(128130:128130): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 18:55:16:159 MEMORIA/(128130:128130): Se conectó un cliente!
+[INFO] 18:55:20:035 MEMORIA/(128130:128130): Se conectó un cliente!
+[INFO] 18:55:22:422 MEMORIA/(128130:128130): Se conectó un cliente!
+[INFO] 18:55:31:104 MEMORIA/(128130:128144): Creación de Proceso PID: 1000
+[INFO] 18:55:32:184 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:55:32:188 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:55:32:189 MEMORIA/(128130:128132): Dirección física: 32
+[INFO] 18:55:32:193 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation1
+[INFO] 18:55:33:201 MEMORIA/(128130:128132): SonyPlaystation1
+[INFO] 18:55:34:221 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:55:34:222 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:55:34:223 MEMORIA/(128130:128132): Dirección física: 48
+[INFO] 18:55:34:224 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation2
+[INFO] 18:55:35:226 MEMORIA/(128130:128132): SonyPlaystation2
+[INFO] 18:55:36:230 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:55:36:231 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:55:36:231 MEMORIA/(128130:128132): Dirección física: 64
+[INFO] 18:55:36:232 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation3
+[INFO] 18:55:37:233 MEMORIA/(128130:128132): SonyPlaystation3
+[INFO] 18:55:38:238 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:55:38:239 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:55:38:240 MEMORIA/(128130:128132): Dirección física: 80
+[INFO] 18:55:38:241 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation4
+[INFO] 18:55:39:242 MEMORIA/(128130:128132): SonyPlaystation4
+[INFO] 18:55:40:249 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:55:40:250 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:55:40:251 MEMORIA/(128130:128132): Dirección física: 96
+[INFO] 18:55:40:253 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation5
+[INFO] 18:55:41:254 MEMORIA/(128130:128132): SonyPlaystation5
+[INFO] 18:55:41:588 MEMORIA/(128130:128134): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:55:42:616 MEMORIA/(128130:128134): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:55:42:622 MEMORIA/(128130:128134): Se busca el valor de la direccion fisica: 32
+[INFO] 18:55:42:652 MEMORIA/(128130:128134): File System quiere escribir en la dirección <32> el valor <>, de tamaño <80>
+[INFO] 18:55:42:653 MEMORIA/(128130:128134): Se escribe el valor <> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:55:42:654 MEMORIA/(128130:128134): Dirección física: 32
+[INFO] 18:55:42:654 MEMORIA/(128130:128134): Valor Registro: 
+[INFO] 18:55:43:656 MEMORIA/(128130:128134): 
+[INFO] 18:55:43:828 MEMORIA/(128130:128144): Eliminación de Proceso PID: 1000
+[INFO] 18:55:56:074 MEMORIA/(128130:128144): Creación de Proceso PID: 1001
+[INFO] 18:55:57:098 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:55:57:099 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:55:57:099 MEMORIA/(128130:128132): Dirección física: 32
+[INFO] 18:55:57:100 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation1
+[INFO] 18:55:58:101 MEMORIA/(128130:128132): SonyPlaystation1
+[INFO] 18:55:59:112 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:55:59:113 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:55:59:114 MEMORIA/(128130:128132): Dirección física: 48
+[INFO] 18:55:59:115 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation2
+[INFO] 18:56:00:117 MEMORIA/(128130:128132): SonyPlaystation2
+[INFO] 18:56:01:123 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:56:01:124 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:56:01:126 MEMORIA/(128130:128132): Dirección física: 64
+[INFO] 18:56:01:127 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation3
+[INFO] 18:56:02:128 MEMORIA/(128130:128132): SonyPlaystation3
+[INFO] 18:56:03:135 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:56:03:144 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:56:03:145 MEMORIA/(128130:128132): Dirección física: 80
+[INFO] 18:56:03:146 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation4
+[INFO] 18:56:04:147 MEMORIA/(128130:128132): SonyPlaystation4
+[INFO] 18:56:05:151 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:56:05:152 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:56:05:153 MEMORIA/(128130:128132): Dirección física: 96
+[INFO] 18:56:05:154 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation5
+[INFO] 18:56:06:156 MEMORIA/(128130:128132): SonyPlaystation5
+[INFO] 18:56:06:309 MEMORIA/(128130:128134): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:56:07:311 MEMORIA/(128130:128134): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:56:07:313 MEMORIA/(128130:128134): Se busca el valor de la direccion fisica: 32
+[INFO] 18:56:07:372 MEMORIA/(128130:128134): File System quiere escribir en la dirección <32> el valor <ernel>, de tamaño <80>
+[INFO] 18:56:07:372 MEMORIA/(128130:128134): Se escribe el valor <ernel> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:56:07:372 MEMORIA/(128130:128134): Dirección física: 32
+[INFO] 18:56:07:377 MEMORIA/(128130:128134): Valor Registro: ernel
+[INFO] 18:56:08:377 MEMORIA/(128130:128134): ernel
+[INFO] 18:56:08:436 MEMORIA/(128130:128144): Eliminación de Proceso PID: 1001
+[INFO] 18:56:40:786 MEMORIA/(128130:128144): Creación de Proceso PID: 1002
+[INFO] 18:56:41:814 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 18:56:41:815 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 18:56:41:815 MEMORIA/(128130:128132): Dirección física: 32
+[INFO] 18:56:41:816 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation1
+[INFO] 18:56:42:817 MEMORIA/(128130:128132): SonyPlaystation1
+[INFO] 18:56:43:822 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 18:56:43:824 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 18:56:43:825 MEMORIA/(128130:128132): Dirección física: 48
+[INFO] 18:56:43:832 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation2
+[INFO] 18:56:44:833 MEMORIA/(128130:128132): SonyPlaystation2
+[INFO] 18:56:45:846 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 18:56:45:848 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 18:56:45:849 MEMORIA/(128130:128132): Dirección física: 64
+[INFO] 18:56:45:849 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation3
+[INFO] 18:56:46:851 MEMORIA/(128130:128132): SonyPlaystation3
+[INFO] 18:56:47:861 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 18:56:47:862 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 18:56:47:863 MEMORIA/(128130:128132): Dirección física: 80
+[INFO] 18:56:47:864 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation4
+[INFO] 18:56:48:865 MEMORIA/(128130:128132): SonyPlaystation4
+[INFO] 18:56:49:871 MEMORIA/(128130:128132): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 18:56:49:872 MEMORIA/(128130:128132): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 18:56:49:873 MEMORIA/(128130:128132): Dirección física: 96
+[INFO] 18:56:49:874 MEMORIA/(128130:128132): Valor Registro: SonyPlaystation5
+[INFO] 18:56:50:876 MEMORIA/(128130:128132): SonyPlaystation5
+[INFO] 18:56:51:059 MEMORIA/(128130:128134): File System quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 18:56:52:061 MEMORIA/(128130:128134): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 18:56:52:062 MEMORIA/(128130:128134): Se busca el valor de la direccion fisica: 32
+[INFO] 18:56:52:102 MEMORIA/(128130:128134): File System quiere escribir en la dirección <32> el valor <O>, de tamaño <80>
+[INFO] 18:56:52:102 MEMORIA/(128130:128134): Se escribe el valor <O> de tamaño <80> en la direccion fisica: 32
+[INFO] 18:56:52:102 MEMORIA/(128130:128134): Dirección física: 32
+[INFO] 18:56:52:102 MEMORIA/(128130:128134): Valor Registro: O
+[INFO] 18:56:53:103 MEMORIA/(128130:128134): O
+[INFO] 18:56:53:133 MEMORIA/(128130:128144): Eliminación de Proceso PID: 1002
+[ERROR] 18:57:14:023 MEMORIA/(128130:128134): Operación desconocida.
+[ERROR] 18:57:14:023 MEMORIA/(128130:128144): Operación desconocida.

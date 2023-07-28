@@ -454,3 +454,645 @@
 [INFO] 05:42:25:832 kernel_principal.log/(115292:115298): PID: <1000>
 [INFO] 05:42:25:833 kernel_principal.log/(115292:115295): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
 [WARNING] 05:42:32:886 kernel_principal.log/(115292:115297): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 13:31:11:734 kernel_principal.log/(118442:118453): Se crea el proceso <1000> en NEW
+[INFO] 13:31:11:772 kernel_principal.log/(118442:118453): Cola NEW: 
+[INFO] 13:31:11:772 kernel_principal.log/(118442:118453): PID: <1000>
+[INFO] 13:31:11:772 kernel_principal.log/(118442:118449): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 13:31:11:772 kernel_principal.log/(118442:118449): Cola Ready <FIFO>:
+[INFO] 13:31:11:772 kernel_principal.log/(118442:118449): PID: <1000>
+[INFO] 13:31:11:772 kernel_principal.log/(118442:118445): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:31:11:882 kernel_principal.log/(118442:118447): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 13:31:11:955 kernel_principal.log/(118442:118447): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 13:31:12:005 kernel_principal.log/(118442:118447): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:31:12:096 kernel_principal.log/(118442:118447): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:31:12:096 kernel_principal.log/(118442:118447): PID: <1000> - Bloqueado por: <IO>
+[INFO] 13:31:12:096 kernel_principal.log/(118442:118448): PID: <1000> - Ejecuta IO: <7>
+[INFO] 13:31:19:097 kernel_principal.log/(118442:118448): Cola Ready <FIFO>:
+[INFO] 13:31:19:097 kernel_principal.log/(118442:118448): PID: <1000>
+[INFO] 13:31:19:097 kernel_principal.log/(118442:118445): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:31:26:165 kernel_principal.log/(118442:118447): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118665): Se crea el proceso <1000> en NEW
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118665): Cola NEW: 
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118665): PID: <1000>
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118661): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118661): Cola Ready <FIFO>:
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118661): PID: <1000>
+[INFO] 13:34:38:000 kernel_principal.log/(118654:118657): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:34:38:085 kernel_principal.log/(118654:118659): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 13:34:38:175 kernel_principal.log/(118654:118659): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 13:34:38:233 kernel_principal.log/(118654:118659): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:34:38:265 kernel_principal.log/(118654:118659): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:34:38:265 kernel_principal.log/(118654:118659): PID: <1000> - Bloqueado por: <IO>
+[INFO] 13:34:38:265 kernel_principal.log/(118654:118660): PID: <1000> - Ejecuta IO: <7>
+[INFO] 13:34:45:265 kernel_principal.log/(118654:118660): Cola Ready <FIFO>:
+[INFO] 13:34:45:265 kernel_principal.log/(118654:118660): PID: <1000>
+[INFO] 13:34:45:266 kernel_principal.log/(118654:118657): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:34:52:312 kernel_principal.log/(118654:118659): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 13:34:52:421 kernel_principal.log/(118654:118659): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 13:42:55:365 kernel_principal.log/(118861:118872): Se crea el proceso <1000> en NEW
+[INFO] 13:42:55:391 kernel_principal.log/(118861:118872): Cola NEW: 
+[INFO] 13:42:55:391 kernel_principal.log/(118861:118872): PID: <1000>
+[INFO] 13:42:55:391 kernel_principal.log/(118861:118868): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 13:42:55:391 kernel_principal.log/(118861:118868): Cola Ready <FIFO>:
+[INFO] 13:42:55:391 kernel_principal.log/(118861:118868): PID: <1000>
+[INFO] 13:42:55:391 kernel_principal.log/(118861:118864): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:42:55:477 kernel_principal.log/(118861:118866): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 13:42:55:569 kernel_principal.log/(118861:118866): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 13:42:55:638 kernel_principal.log/(118861:118866): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:42:55:700 kernel_principal.log/(118861:118866): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:42:55:703 kernel_principal.log/(118861:118866): PID: <1000> - Bloqueado por: <IO>
+[INFO] 13:42:55:704 kernel_principal.log/(118861:118867): PID: <1000> - Ejecuta IO: <7>
+[INFO] 13:43:02:704 kernel_principal.log/(118861:118867): Cola Ready <FIFO>:
+[INFO] 13:43:02:704 kernel_principal.log/(118861:118867): PID: <1000>
+[INFO] 13:43:02:704 kernel_principal.log/(118861:118864): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:43:09:798 kernel_principal.log/(118861:118866): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 13:43:09:877 kernel_principal.log/(118861:118866): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119156): Se crea el proceso <1000> en NEW
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119156): Cola NEW: 
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119156): PID: <1000>
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119152): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119152): Cola Ready <FIFO>:
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119152): PID: <1000>
+[INFO] 13:51:28:089 kernel_principal.log/(119145:119148): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:51:28:164 kernel_principal.log/(119145:119150): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 13:51:28:275 kernel_principal.log/(119145:119150): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 13:51:28:340 kernel_principal.log/(119145:119150): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:51:28:392 kernel_principal.log/(119145:119150): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:51:28:395 kernel_principal.log/(119145:119150): PID: <1000> - Bloqueado por: <IO>
+[INFO] 13:51:28:395 kernel_principal.log/(119145:119151): PID: <1000> - Ejecuta IO: <7>
+[INFO] 13:51:35:395 kernel_principal.log/(119145:119151): Cola Ready <FIFO>:
+[INFO] 13:51:35:395 kernel_principal.log/(119145:119151): PID: <1000>
+[INFO] 13:51:35:395 kernel_principal.log/(119145:119148): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:51:42:424 kernel_principal.log/(119145:119150): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 13:51:42:489 kernel_principal.log/(119145:119150): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 13:51:42:492 kernel_principal.log/(119145:119148): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 13:51:42:532 kernel_principal.log/(119145:119150): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:51:42:532 kernel_principal.log/(119145:119150): PID: <1000> - Bloqueado por: <IO>
+[INFO] 13:51:42:532 kernel_principal.log/(119145:119151): PID: <1000> - Ejecuta IO: <5>
+[INFO] 13:51:47:533 kernel_principal.log/(119145:119151): Cola Ready <FIFO>:
+[INFO] 13:51:47:533 kernel_principal.log/(119145:119151): PID: <1000>
+[INFO] 13:51:47:533 kernel_principal.log/(119145:119148): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:51:47:578 kernel_principal.log/(119145:119150): PID: <1000> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 13:51:47:605 kernel_principal.log/(119145:119150): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:51:47:605 kernel_principal.log/(119145:119150): PID: <1000> - Bloqueado por: <IO>
+[INFO] 13:51:47:605 kernel_principal.log/(119145:119151): PID: <1000> - Ejecuta IO: <2>
+[INFO] 13:51:49:606 kernel_principal.log/(119145:119151): Cola Ready <FIFO>:
+[INFO] 13:51:49:606 kernel_principal.log/(119145:119151): PID: <1000>
+[INFO] 13:51:49:606 kernel_principal.log/(119145:119148): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 13:51:49:628 kernel_principal.log/(119145:119150): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 13:51:49:628 kernel_principal.log/(119145:119150): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 13:52:08:024 kernel_principal.log/(119145:119158): Se crea el proceso <1001> en NEW
+[INFO] 13:52:08:025 kernel_principal.log/(119145:119158): Cola NEW: 
+[INFO] 13:52:08:025 kernel_principal.log/(119145:119158): PID: <1001>
+[INFO] 13:52:08:025 kernel_principal.log/(119145:119152): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 13:52:08:025 kernel_principal.log/(119145:119152): Cola Ready <FIFO>:
+[INFO] 13:52:08:025 kernel_principal.log/(119145:119152): PID: <1001>
+[INFO] 13:52:08:025 kernel_principal.log/(119145:119148): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:52:08:056 kernel_principal.log/(119145:119150): PID: <1001> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 13:52:08:110 kernel_principal.log/(119145:119150): PID: <1001> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 13:52:08:168 kernel_principal.log/(119145:119150): PID: <1001> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:52:08:226 kernel_principal.log/(119145:119150): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 13:52:08:227 kernel_principal.log/(119145:119150): PID: <1001> - Bloqueado por: <IO>
+[INFO] 13:52:08:227 kernel_principal.log/(119145:119151): PID: <1001> - Ejecuta IO: <7>
+[INFO] 13:52:15:227 kernel_principal.log/(119145:119151): Cola Ready <FIFO>:
+[INFO] 13:52:15:227 kernel_principal.log/(119145:119151): PID: <1001>
+[INFO] 13:52:15:228 kernel_principal.log/(119145:119148): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 13:52:22:287 kernel_principal.log/(119145:119150): PID: <1001> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 13:52:22:304 kernel_principal.log/(119145:119150): PID: <1001> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:04:46:282 kernel_principal.log/(119304:119356): Se crea el proceso <1000> en NEW
+[INFO] 14:04:46:284 kernel_principal.log/(119304:119356): Cola NEW: 
+[INFO] 14:04:46:284 kernel_principal.log/(119304:119356): PID: <1000>
+[INFO] 14:05:07:780 kernel_principal.log/(119304:119328): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:05:08:362 kernel_principal.log/(119304:119328): Cola Ready <FIFO>:
+[INFO] 14:05:08:715 kernel_principal.log/(119304:119328): PID: <1000>
+[INFO] 14:05:11:434 kernel_principal.log/(119304:119324): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:06:25:298 kernel_principal.log/(119304:119326): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:09:58:149 kernel_principal.log/(119304:119326): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:10:35:796 kernel_principal.log/(119304:119326): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:12:06:676 kernel_principal.log/(119304:119326): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:12:07:006 kernel_principal.log/(119304:119326): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:12:08:421 kernel_principal.log/(119304:119327): PID: <1000> - Ejecuta IO: <7>
+[INFO] 14:12:15:422 kernel_principal.log/(119304:119327): Cola Ready <FIFO>:
+[INFO] 14:12:15:422 kernel_principal.log/(119304:119327): PID: <1000>
+[INFO] 14:12:15:422 kernel_principal.log/(119304:119324): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:13:22:075 kernel_principal.log/(119304:119326): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:15:11:027 kernel_principal.log/(119304:119326): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:18:55:361 kernel_principal.log/(119304:119324): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:19:38:003 kernel_principal.log/(119304:119326): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:19:38:271 kernel_principal.log/(119304:119326): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:19:39:006 kernel_principal.log/(119304:119327): PID: <1000> - Ejecuta IO: <5>
+[INFO] 14:19:47:504 kernel_principal.log/(119304:119327): Cola Ready <FIFO>:
+[INFO] 14:19:47:504 kernel_principal.log/(119304:119327): PID: <1000>
+[INFO] 14:19:47:504 kernel_principal.log/(119304:119324): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:20:23:315 kernel_principal.log/(119304:119326): PID: <1000> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 14:22:12:994 kernel_principal.log/(119304:119326): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:22:13:306 kernel_principal.log/(119304:119326): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:22:14:037 kernel_principal.log/(119304:119327): PID: <1000> - Ejecuta IO: <2>
+[INFO] 14:22:16:171 kernel_principal.log/(119304:119327): Cola Ready <FIFO>:
+[INFO] 14:22:16:171 kernel_principal.log/(119304:119327): PID: <1000>
+[INFO] 14:22:16:172 kernel_principal.log/(119304:119324): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:23:06:780 kernel_principal.log/(119304:119326): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:23:07:095 kernel_principal.log/(119304:119326): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 14:23:24:378 kernel_principal.log/(119304:120282): Se crea el proceso <1001> en NEW
+[INFO] 14:23:24:378 kernel_principal.log/(119304:120282): Cola NEW: 
+[INFO] 14:23:24:378 kernel_principal.log/(119304:120282): PID: <1001>
+[INFO] 14:23:24:378 kernel_principal.log/(119304:119328): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:23:24:380 kernel_principal.log/(119304:119328): Cola Ready <FIFO>:
+[INFO] 14:23:24:380 kernel_principal.log/(119304:119328): PID: <1001>
+[INFO] 14:23:24:380 kernel_principal.log/(119304:119324): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:24:25:243 kernel_principal.log/(119304:119326): PID: <1001> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:28:57:732 kernel_principal.log/(119304:119326): PID: <1001> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:29:59:973 kernel_principal.log/(119304:119326): PID: <1001> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:31:30:333 kernel_principal.log/(119304:119326): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:31:30:642 kernel_principal.log/(119304:119326): PID: <1001> - Bloqueado por: <IO>
+[INFO] 14:31:31:208 kernel_principal.log/(119304:119327): PID: <1001> - Ejecuta IO: <7>
+[INFO] 14:31:38:209 kernel_principal.log/(119304:119327): Cola Ready <FIFO>:
+[INFO] 14:31:38:209 kernel_principal.log/(119304:119327): PID: <1001>
+[INFO] 14:31:38:210 kernel_principal.log/(119304:119324): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:32:21:872 kernel_principal.log/(119304:119326): PID: <1001> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:34:19:076 kernel_principal.log/(119304:119326): PID: <1001> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:41:54:529 kernel_principal.log/(120820:120876): Se crea el proceso <1000> en NEW
+[INFO] 14:41:54:530 kernel_principal.log/(120820:120876): Cola NEW: 
+[INFO] 14:41:54:530 kernel_principal.log/(120820:120876): PID: <1000>
+[INFO] 14:41:54:531 kernel_principal.log/(120820:120849): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:41:54:531 kernel_principal.log/(120820:120849): Cola Ready <FIFO>:
+[INFO] 14:41:54:531 kernel_principal.log/(120820:120849): PID: <1000>
+[INFO] 14:41:54:531 kernel_principal.log/(120820:120845): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:41:54:662 kernel_principal.log/(120820:120847): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:41:54:757 kernel_principal.log/(120820:120847): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:41:54:795 kernel_principal.log/(120820:120847): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:41:54:845 kernel_principal.log/(120820:120847): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:41:54:846 kernel_principal.log/(120820:120847): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:41:54:846 kernel_principal.log/(120820:120848): PID: <1000> - Ejecuta IO: <7>
+[INFO] 14:42:01:846 kernel_principal.log/(120820:120848): Cola Ready <FIFO>:
+[INFO] 14:42:01:846 kernel_principal.log/(120820:120848): PID: <1000>
+[INFO] 14:42:01:846 kernel_principal.log/(120820:120845): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:42:08:875 kernel_principal.log/(120820:120847): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:42:08:967 kernel_principal.log/(120820:120847): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:42:28:516 kernel_principal.log/(120820:120845): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:42:30:834 kernel_principal.log/(120820:120847): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:42:30:834 kernel_principal.log/(120820:120847): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:42:30:834 kernel_principal.log/(120820:120848): PID: <1000> - Ejecuta IO: <5>
+[INFO] 14:42:35:835 kernel_principal.log/(120820:120848): Cola Ready <FIFO>:
+[INFO] 14:42:35:835 kernel_principal.log/(120820:120848): PID: <1000>
+[INFO] 14:42:35:835 kernel_principal.log/(120820:120845): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:42:35:858 kernel_principal.log/(120820:120847): PID: <1000> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 14:42:35:917 kernel_principal.log/(120820:120847): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:42:35:917 kernel_principal.log/(120820:120847): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:42:35:917 kernel_principal.log/(120820:120848): PID: <1000> - Ejecuta IO: <2>
+[INFO] 14:42:37:917 kernel_principal.log/(120820:120848): Cola Ready <FIFO>:
+[INFO] 14:42:37:917 kernel_principal.log/(120820:120848): PID: <1000>
+[INFO] 14:42:37:917 kernel_principal.log/(120820:120845): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:42:37:948 kernel_principal.log/(120820:120847): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:42:37:950 kernel_principal.log/(120820:120847): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 14:42:54:643 kernel_principal.log/(120820:120906): Se crea el proceso <1001> en NEW
+[INFO] 14:42:54:643 kernel_principal.log/(120820:120906): Cola NEW: 
+[INFO] 14:42:54:643 kernel_principal.log/(120820:120906): PID: <1001>
+[INFO] 14:42:54:643 kernel_principal.log/(120820:120849): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:42:54:644 kernel_principal.log/(120820:120849): Cola Ready <FIFO>:
+[INFO] 14:42:54:644 kernel_principal.log/(120820:120849): PID: <1001>
+[INFO] 14:42:54:644 kernel_principal.log/(120820:120845): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:42:54:683 kernel_principal.log/(120820:120847): PID: <1001> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:42:54:752 kernel_principal.log/(120820:120847): PID: <1001> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:42:54:843 kernel_principal.log/(120820:120847): PID: <1001> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:42:54:865 kernel_principal.log/(120820:120847): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:42:54:865 kernel_principal.log/(120820:120847): PID: <1001> - Bloqueado por: <IO>
+[INFO] 14:42:54:865 kernel_principal.log/(120820:120848): PID: <1001> - Ejecuta IO: <7>
+[INFO] 14:43:01:865 kernel_principal.log/(120820:120848): Cola Ready <FIFO>:
+[INFO] 14:43:01:868 kernel_principal.log/(120820:120848): PID: <1001>
+[INFO] 14:43:01:869 kernel_principal.log/(120820:120845): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:43:08:915 kernel_principal.log/(120820:120847): PID: <1001> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:43:08:958 kernel_principal.log/(120820:120847): PID: <1001> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:45:31:317 kernel_principal.log/(120953:121004): Se crea el proceso <1000> en NEW
+[INFO] 14:45:31:319 kernel_principal.log/(120953:121004): Cola NEW: 
+[INFO] 14:45:31:319 kernel_principal.log/(120953:121004): PID: <1000>
+[INFO] 14:45:31:320 kernel_principal.log/(120953:120979): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:45:31:321 kernel_principal.log/(120953:120979): Cola Ready <FIFO>:
+[INFO] 14:45:31:321 kernel_principal.log/(120953:120979): PID: <1000>
+[INFO] 14:45:31:321 kernel_principal.log/(120953:120975): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:45:31:426 kernel_principal.log/(120953:120977): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:45:31:517 kernel_principal.log/(120953:120977): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:45:31:575 kernel_principal.log/(120953:120977): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:45:31:611 kernel_principal.log/(120953:120977): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:45:31:611 kernel_principal.log/(120953:120977): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:45:31:611 kernel_principal.log/(120953:120978): PID: <1000> - Ejecuta IO: <7>
+[INFO] 14:45:38:611 kernel_principal.log/(120953:120978): Cola Ready <FIFO>:
+[INFO] 14:45:38:612 kernel_principal.log/(120953:120978): PID: <1000>
+[INFO] 14:45:38:612 kernel_principal.log/(120953:120975): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:45:45:651 kernel_principal.log/(120953:120977): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:45:45:714 kernel_principal.log/(120953:120977): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:46:11:925 kernel_principal.log/(120953:120975): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:46:13:389 kernel_principal.log/(120953:120977): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:46:13:389 kernel_principal.log/(120953:120977): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:46:13:389 kernel_principal.log/(120953:120978): PID: <1000> - Ejecuta IO: <5>
+[INFO] 14:46:18:389 kernel_principal.log/(120953:120978): Cola Ready <FIFO>:
+[INFO] 14:46:18:390 kernel_principal.log/(120953:120978): PID: <1000>
+[INFO] 14:46:18:390 kernel_principal.log/(120953:120975): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:46:18:407 kernel_principal.log/(120953:120977): PID: <1000> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 14:46:18:447 kernel_principal.log/(120953:120977): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:46:18:447 kernel_principal.log/(120953:120977): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:46:18:447 kernel_principal.log/(120953:120978): PID: <1000> - Ejecuta IO: <2>
+[INFO] 14:46:20:447 kernel_principal.log/(120953:120978): Cola Ready <FIFO>:
+[INFO] 14:46:20:448 kernel_principal.log/(120953:120978): PID: <1000>
+[INFO] 14:46:20:449 kernel_principal.log/(120953:120975): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:46:20:531 kernel_principal.log/(120953:120977): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:46:20:531 kernel_principal.log/(120953:120977): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 14:46:29:099 kernel_principal.log/(120953:121032): Se crea el proceso <1001> en NEW
+[INFO] 14:46:29:099 kernel_principal.log/(120953:121032): Cola NEW: 
+[INFO] 14:46:29:099 kernel_principal.log/(120953:121032): PID: <1001>
+[INFO] 14:46:29:099 kernel_principal.log/(120953:120979): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:46:29:099 kernel_principal.log/(120953:120979): Cola Ready <FIFO>:
+[INFO] 14:46:29:099 kernel_principal.log/(120953:120979): PID: <1001>
+[INFO] 14:46:29:099 kernel_principal.log/(120953:120975): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:46:29:119 kernel_principal.log/(120953:120977): PID: <1001> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:46:29:168 kernel_principal.log/(120953:120977): PID: <1001> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:46:29:214 kernel_principal.log/(120953:120977): PID: <1001> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:46:29:247 kernel_principal.log/(120953:120977): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:46:29:249 kernel_principal.log/(120953:120977): PID: <1001> - Bloqueado por: <IO>
+[INFO] 14:46:29:249 kernel_principal.log/(120953:120978): PID: <1001> - Ejecuta IO: <7>
+[INFO] 14:46:36:253 kernel_principal.log/(120953:120978): Cola Ready <FIFO>:
+[INFO] 14:46:36:260 kernel_principal.log/(120953:120978): PID: <1001>
+[INFO] 14:46:36:260 kernel_principal.log/(120953:120975): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:46:43:305 kernel_principal.log/(120953:120977): PID: <1001> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:46:43:345 kernel_principal.log/(120953:120977): PID: <1001> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:54:29:596 kernel_principal.log/(121188:121199): Se crea el proceso <1000> en NEW
+[INFO] 14:54:29:598 kernel_principal.log/(121188:121199): Cola NEW: 
+[INFO] 14:54:29:598 kernel_principal.log/(121188:121199): PID: <1000>
+[INFO] 14:54:29:598 kernel_principal.log/(121188:121195): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:54:29:598 kernel_principal.log/(121188:121195): Cola Ready <FIFO>:
+[INFO] 14:54:29:598 kernel_principal.log/(121188:121195): PID: <1000>
+[INFO] 14:54:29:598 kernel_principal.log/(121188:121191): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:54:29:668 kernel_principal.log/(121188:121193): PID: <1000> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:54:29:772 kernel_principal.log/(121188:121193): PID: <1000> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:54:29:836 kernel_principal.log/(121188:121193): PID: <1000> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:54:29:892 kernel_principal.log/(121188:121193): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:54:29:893 kernel_principal.log/(121188:121193): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:54:29:893 kernel_principal.log/(121188:121194): PID: <1000> - Ejecuta IO: <7>
+[INFO] 14:54:36:894 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:54:36:894 kernel_principal.log/(121188:121194): PID: <1000>
+[INFO] 14:54:36:894 kernel_principal.log/(121188:121191): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:54:43:953 kernel_principal.log/(121188:121193): PID: <1000> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:54:43:979 kernel_principal.log/(121188:121193): PID: <1000> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:54:43:980 kernel_principal.log/(121188:121191): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:54:44:030 kernel_principal.log/(121188:121193): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:54:44:030 kernel_principal.log/(121188:121193): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:54:44:030 kernel_principal.log/(121188:121194): PID: <1000> - Ejecuta IO: <5>
+[INFO] 14:54:49:030 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:54:49:030 kernel_principal.log/(121188:121194): PID: <1000>
+[INFO] 14:54:49:030 kernel_principal.log/(121188:121191): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:54:49:038 kernel_principal.log/(121188:121193): PID: <1000> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 14:54:49:059 kernel_principal.log/(121188:121193): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:54:49:059 kernel_principal.log/(121188:121193): PID: <1000> - Bloqueado por: <IO>
+[INFO] 14:54:49:059 kernel_principal.log/(121188:121194): PID: <1000> - Ejecuta IO: <2>
+[INFO] 14:54:51:059 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:54:51:060 kernel_principal.log/(121188:121194): PID: <1000>
+[INFO] 14:54:51:061 kernel_principal.log/(121188:121191): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:54:51:115 kernel_principal.log/(121188:121193): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:54:51:115 kernel_principal.log/(121188:121193): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121201): Se crea el proceso <1001> en NEW
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121201): Cola NEW: 
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121201): PID: <1001>
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121195): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121195): Cola Ready <FIFO>:
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121195): PID: <1001>
+[INFO] 14:55:07:690 kernel_principal.log/(121188:121191): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:55:07:704 kernel_principal.log/(121188:121193): PID: <1001> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:55:07:733 kernel_principal.log/(121188:121193): PID: <1001> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:55:07:773 kernel_principal.log/(121188:121193): PID: <1001> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:07:829 kernel_principal.log/(121188:121193): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:55:07:829 kernel_principal.log/(121188:121193): PID: <1001> - Bloqueado por: <IO>
+[INFO] 14:55:07:829 kernel_principal.log/(121188:121194): PID: <1001> - Ejecuta IO: <7>
+[INFO] 14:55:14:829 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:55:14:829 kernel_principal.log/(121188:121194): PID: <1001>
+[INFO] 14:55:14:830 kernel_principal.log/(121188:121191): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:55:21:899 kernel_principal.log/(121188:121193): PID: <1001> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:55:21:934 kernel_principal.log/(121188:121193): PID: <1001> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:55:21:935 kernel_principal.log/(121188:121191): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:55:21:979 kernel_principal.log/(121188:121193): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:55:21:979 kernel_principal.log/(121188:121193): PID: <1001> - Bloqueado por: <IO>
+[INFO] 14:55:21:979 kernel_principal.log/(121188:121194): PID: <1001> - Ejecuta IO: <5>
+[INFO] 14:55:26:980 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:55:26:980 kernel_principal.log/(121188:121194): PID: <1001>
+[INFO] 14:55:26:981 kernel_principal.log/(121188:121191): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:55:27:033 kernel_principal.log/(121188:121193): PID: <1001> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 14:55:27:078 kernel_principal.log/(121188:121193): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:55:27:078 kernel_principal.log/(121188:121193): PID: <1001> - Bloqueado por: <IO>
+[INFO] 14:55:27:078 kernel_principal.log/(121188:121194): PID: <1001> - Ejecuta IO: <2>
+[INFO] 14:55:29:079 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:55:29:079 kernel_principal.log/(121188:121194): PID: <1001>
+[INFO] 14:55:29:080 kernel_principal.log/(121188:121191): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:55:29:100 kernel_principal.log/(121188:121193): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:55:29:101 kernel_principal.log/(121188:121193): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121203): Se crea el proceso <1002> en NEW
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121203): Cola NEW: 
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121203): PID: <1002>
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121195): PID: <1002> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121195): Cola Ready <FIFO>:
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121195): PID: <1002>
+[INFO] 14:55:38:770 kernel_principal.log/(121188:121191): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:55:38:784 kernel_principal.log/(121188:121193): PID: <1002> - Abrir Archivo: <TINI_CONSEJODEAMOR.MP3>
+[WARNING] 14:55:38:832 kernel_principal.log/(121188:121193): PID: <1002> - Actualizar puntero Archivo: <TINI_CONSEJODEAMOR.MP3> - Puntero <23>
+[WARNING] 14:55:38:877 kernel_principal.log/(121188:121193): PID: <1002> - Cerrar Archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:38:935 kernel_principal.log/(121188:121193): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:55:38:935 kernel_principal.log/(121188:121193): PID: <1002> - Bloqueado por: <IO>
+[INFO] 14:55:38:935 kernel_principal.log/(121188:121194): PID: <1002> - Ejecuta IO: <7>
+[INFO] 14:55:45:936 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:55:45:936 kernel_principal.log/(121188:121194): PID: <1002>
+[INFO] 14:55:45:936 kernel_principal.log/(121188:121191): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:55:52:964 kernel_principal.log/(121188:121193): PID: <1002> - Abrir Archivo: <TAYLOR_TSOU.MP3>
+[WARNING] 14:55:52:979 kernel_principal.log/(121188:121193): PID: <1002> - Archivo: <TAYLOR_TSOU.MP3> - Tamaño: <47>
+[INFO] 14:55:52:980 kernel_principal.log/(121188:121191): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:55:53:014 kernel_principal.log/(121188:121193): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:55:53:014 kernel_principal.log/(121188:121193): PID: <1002> - Bloqueado por: <IO>
+[INFO] 14:55:53:014 kernel_principal.log/(121188:121194): PID: <1002> - Ejecuta IO: <5>
+[INFO] 14:55:58:014 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:55:58:015 kernel_principal.log/(121188:121194): PID: <1002>
+[INFO] 14:55:58:015 kernel_principal.log/(121188:121191): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 14:55:58:039 kernel_principal.log/(121188:121193): PID: <1002> - Cerrar Archivo: <TAYLOR_TSOU.MP3>
+[INFO] 14:55:58:088 kernel_principal.log/(121188:121193): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:55:58:088 kernel_principal.log/(121188:121193): PID: <1002> - Bloqueado por: <IO>
+[INFO] 14:55:58:088 kernel_principal.log/(121188:121194): PID: <1002> - Ejecuta IO: <2>
+[INFO] 14:56:00:088 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:56:00:089 kernel_principal.log/(121188:121194): PID: <1002>
+[INFO] 14:56:00:089 kernel_principal.log/(121188:121191): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:56:00:103 kernel_principal.log/(121188:121193): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:56:00:103 kernel_principal.log/(121188:121193): Finaliza el proceso <1002> - Motivo: <SUCCESS>
+[INFO] 14:57:00:228 kernel_principal.log/(121188:121207): Se crea el proceso <1003> en NEW
+[INFO] 14:57:00:228 kernel_principal.log/(121188:121207): Cola NEW: 
+[INFO] 14:57:00:228 kernel_principal.log/(121188:121207): PID: <1003>
+[INFO] 14:57:00:228 kernel_principal.log/(121188:121195): PID: <1003> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 14:57:00:228 kernel_principal.log/(121188:121195): Cola Ready <FIFO>:
+[INFO] 14:57:00:228 kernel_principal.log/(121188:121195): PID: <1003>
+[INFO] 14:57:00:229 kernel_principal.log/(121188:121191): PID: <1003> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:57:09:257 kernel_principal.log/(121188:121193): PID: <1003> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 14:57:09:257 kernel_principal.log/(121188:121193): PID: <1003> - Bloqueado por: <IO>
+[INFO] 14:57:09:257 kernel_principal.log/(121188:121194): PID: <1003> - Ejecuta IO: <5>
+[INFO] 14:57:14:257 kernel_principal.log/(121188:121194): Cola Ready <FIFO>:
+[INFO] 14:57:14:258 kernel_principal.log/(121188:121194): PID: <1003>
+[INFO] 14:57:14:258 kernel_principal.log/(121188:121191): PID: <1003> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 14:57:26:327 kernel_principal.log/(121188:121193): PID: <1003> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 14:57:26:328 kernel_principal.log/(121188:121193): Finaliza el proceso <1003> - Motivo: <SUCCESS>
+[INFO] 15:36:04:367 kernel_principal.log/(122543:122554): Se crea el proceso <1000> en NEW
+[INFO] 15:36:04:367 kernel_principal.log/(122543:122554): Cola NEW: 
+[INFO] 15:36:04:367 kernel_principal.log/(122543:122554): PID: <1000>
+[INFO] 15:36:04:367 kernel_principal.log/(122543:122550): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 15:36:04:367 kernel_principal.log/(122543:122550): Cola Ready <FIFO>:
+[INFO] 15:36:04:367 kernel_principal.log/(122543:122550): PID: <1000>
+[INFO] 15:36:04:368 kernel_principal.log/(122543:122546): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:36:14:545 kernel_principal.log/(122543:122548): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 15:36:14:663 kernel_principal.log/(122543:122548): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 15:36:17:682 kernel_principal.log/(122543:122546): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:36:17:705 kernel_principal.log/(122543:122548): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[INFO] 15:42:41:701 kernel_principal.log/(122590:122649): Se crea el proceso <1000> en NEW
+[INFO] 15:42:41:702 kernel_principal.log/(122590:122649): Cola NEW: 
+[INFO] 15:42:41:702 kernel_principal.log/(122590:122649): PID: <1000>
+[INFO] 15:43:05:277 kernel_principal.log/(122590:122621): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 15:43:08:947 kernel_principal.log/(122590:122621): Cola Ready <FIFO>:
+[INFO] 15:43:09:303 kernel_principal.log/(122590:122621): PID: <1000>
+[INFO] 15:43:49:640 kernel_principal.log/(122590:122616): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:46:02:501 kernel_principal.log/(122590:122619): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 15:46:51:272 kernel_principal.log/(122590:122619): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 15:46:51:274 kernel_principal.log/(122590:122616): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:47:20:680 kernel_principal.log/(122590:122619): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[INFO] 15:55:14:591 kernel_principal.log/(123020:123031): Se crea el proceso <1000> en NEW
+[INFO] 15:55:14:592 kernel_principal.log/(123020:123031): Cola NEW: 
+[INFO] 15:55:14:592 kernel_principal.log/(123020:123031): PID: <1000>
+[INFO] 15:55:14:592 kernel_principal.log/(123020:123027): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 15:55:14:592 kernel_principal.log/(123020:123027): Cola Ready <FIFO>:
+[INFO] 15:55:14:592 kernel_principal.log/(123020:123027): PID: <1000>
+[INFO] 15:55:14:592 kernel_principal.log/(123020:123023): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:55:24:907 kernel_principal.log/(123020:123025): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 15:55:25:015 kernel_principal.log/(123020:123025): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 15:55:25:018 kernel_principal.log/(123020:123023): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:55:25:097 kernel_principal.log/(123020:123025): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 15:55:25:146 kernel_principal.log/(123020:123025): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 15:55:25:149 kernel_principal.log/(123020:123023): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:55:25:215 kernel_principal.log/(123020:123025): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 15:55:25:215 kernel_principal.log/(123020:123023): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:55:25:271 kernel_principal.log/(123020:123025): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 15:59:23:004 kernel_principal.log/(123096:123150): Se crea el proceso <1000> en NEW
+[INFO] 15:59:23:005 kernel_principal.log/(123096:123150): Cola NEW: 
+[INFO] 15:59:23:005 kernel_principal.log/(123096:123150): PID: <1000>
+[INFO] 15:59:23:005 kernel_principal.log/(123096:123122): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 15:59:23:005 kernel_principal.log/(123096:123122): Cola Ready <FIFO>:
+[INFO] 15:59:23:005 kernel_principal.log/(123096:123122): PID: <1000>
+[INFO] 15:59:23:006 kernel_principal.log/(123096:123118): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 15:59:33:235 kernel_principal.log/(123096:123120): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 15:59:33:409 kernel_principal.log/(123096:123120): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 16:00:47:539 kernel_principal.log/(123096:123118): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:00:48:777 kernel_principal.log/(123096:123120): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 16:00:50:299 kernel_principal.log/(123096:123120): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 16:08:21:696 kernel_principal.log/(123457:123468): Se crea el proceso <1000> en NEW
+[INFO] 16:08:21:697 kernel_principal.log/(123457:123468): Cola NEW: 
+[INFO] 16:08:21:697 kernel_principal.log/(123457:123468): PID: <1000>
+[INFO] 16:08:21:697 kernel_principal.log/(123457:123464): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 16:08:21:697 kernel_principal.log/(123457:123464): Cola Ready <FIFO>:
+[INFO] 16:08:21:697 kernel_principal.log/(123457:123464): PID: <1000>
+[INFO] 16:08:21:697 kernel_principal.log/(123457:123460): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:08:31:930 kernel_principal.log/(123457:123462): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 16:08:32:009 kernel_principal.log/(123457:123462): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 16:08:32:011 kernel_principal.log/(123457:123460): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:08:32:074 kernel_principal.log/(123457:123462): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 16:08:32:148 kernel_principal.log/(123457:123462): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 16:08:37:174 kernel_principal.log/(123457:123460): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:08:37:219 kernel_principal.log/(123457:123462): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 16:08:42:513 kernel_principal.log/(123457:123460): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:08:42:570 kernel_principal.log/(123457:123462): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 16:16:26:367 kernel_principal.log/(123557:123568): Se crea el proceso <1000> en NEW
+[INFO] 16:16:26:368 kernel_principal.log/(123557:123568): Cola NEW: 
+[INFO] 16:16:26:368 kernel_principal.log/(123557:123568): PID: <1000>
+[INFO] 16:16:26:368 kernel_principal.log/(123557:123564): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 16:16:26:368 kernel_principal.log/(123557:123564): Cola Ready <FIFO>:
+[INFO] 16:16:26:368 kernel_principal.log/(123557:123564): PID: <1000>
+[INFO] 16:16:26:368 kernel_principal.log/(123557:123560): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:16:36:594 kernel_principal.log/(123557:123562): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 16:16:36:640 kernel_principal.log/(123557:123562): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 16:16:36:641 kernel_principal.log/(123557:123560): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:16:36:698 kernel_principal.log/(123557:123562): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 16:16:36:781 kernel_principal.log/(123557:123562): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 16:16:38:018 kernel_principal.log/(123557:123560): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:16:38:081 kernel_principal.log/(123557:123562): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 16:16:38:088 kernel_principal.log/(123557:123560): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 16:16:38:184 kernel_principal.log/(123557:123562): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 17:45:35:206 kernel_principal.log/(126490:126501): Se crea el proceso <1000> en NEW
+[INFO] 17:45:35:233 kernel_principal.log/(126490:126501): Cola NEW: 
+[INFO] 17:45:35:233 kernel_principal.log/(126490:126501): PID: <1000>
+[INFO] 17:45:35:233 kernel_principal.log/(126490:126497): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 17:45:35:233 kernel_principal.log/(126490:126497): Cola Ready <FIFO>:
+[INFO] 17:45:35:233 kernel_principal.log/(126490:126497): PID: <1000>
+[INFO] 17:45:35:236 kernel_principal.log/(126490:126493): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:45:45:529 kernel_principal.log/(126490:126495): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 17:45:45:620 kernel_principal.log/(126490:126495): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 17:45:45:621 kernel_principal.log/(126490:126493): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:45:45:652 kernel_principal.log/(126490:126495): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 17:45:45:685 kernel_principal.log/(126490:126495): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 17:45:46:693 kernel_principal.log/(126490:126493): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:45:46:709 kernel_principal.log/(126490:126495): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 17:45:50:886 kernel_principal.log/(126490:126493): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:45:50:903 kernel_principal.log/(126490:126495): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126716): Se crea el proceso <1000> en NEW
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126716): Cola NEW: 
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126716): PID: <1000>
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126712): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126712): Cola Ready <FIFO>:
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126712): PID: <1000>
+[INFO] 17:51:11:890 kernel_principal.log/(126705:126708): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:51:22:081 kernel_principal.log/(126705:126710): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 17:51:22:160 kernel_principal.log/(126705:126710): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 17:51:22:161 kernel_principal.log/(126705:126708): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:51:22:236 kernel_principal.log/(126705:126710): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 17:51:22:337 kernel_principal.log/(126705:126710): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 17:51:24:080 kernel_principal.log/(126705:126708): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:51:24:132 kernel_principal.log/(126705:126710): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 17:51:24:132 kernel_principal.log/(126705:126708): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:51:24:209 kernel_principal.log/(126705:126710): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126828): Se crea el proceso <1000> en NEW
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126828): Cola NEW: 
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126828): PID: <1000>
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126824): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126824): Cola Ready <FIFO>:
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126824): PID: <1000>
+[INFO] 17:55:43:499 kernel_principal.log/(126817:126820): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:55:53:689 kernel_principal.log/(126817:126822): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 17:55:53:776 kernel_principal.log/(126817:126822): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 17:55:53:778 kernel_principal.log/(126817:126820): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:55:53:829 kernel_principal.log/(126817:126822): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 17:55:53:900 kernel_principal.log/(126817:126822): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 17:55:55:184 kernel_principal.log/(126817:126820): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:55:55:213 kernel_principal.log/(126817:126822): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 17:55:55:214 kernel_principal.log/(126817:126820): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 17:55:55:369 kernel_principal.log/(126817:126822): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126969): Se crea el proceso <1000> en NEW
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126969): Cola NEW: 
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126969): PID: <1000>
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126965): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126965): Cola Ready <FIFO>:
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126965): PID: <1000>
+[INFO] 18:00:45:162 kernel_principal.log/(126958:126961): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:00:55:349 kernel_principal.log/(126958:126963): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 18:00:55:402 kernel_principal.log/(126958:126963): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:00:55:403 kernel_principal.log/(126958:126961): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:00:55:476 kernel_principal.log/(126958:126963): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:00:55:540 kernel_principal.log/(126958:126963): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:00:56:551 kernel_principal.log/(126958:126961): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:00:56:583 kernel_principal.log/(126958:126963): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:00:57:592 kernel_principal.log/(126958:126961): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:00:57:688 kernel_principal.log/(126958:126963): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127066): Se crea el proceso <1000> en NEW
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127066): Cola NEW: 
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127066): PID: <1000>
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127062): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127062): Cola Ready <FIFO>:
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127062): PID: <1000>
+[INFO] 18:05:30:428 kernel_principal.log/(127055:127058): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:05:40:560 kernel_principal.log/(127055:127060): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 18:05:40:642 kernel_principal.log/(127055:127060): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:05:40:648 kernel_principal.log/(127055:127058): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:05:40:741 kernel_principal.log/(127055:127060): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:05:40:828 kernel_principal.log/(127055:127060): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:05:42:088 kernel_principal.log/(127055:127058): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:05:42:154 kernel_principal.log/(127055:127060): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:05:42:161 kernel_principal.log/(127055:127058): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:05:42:271 kernel_principal.log/(127055:127060): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127365): Se crea el proceso <1000> en NEW
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127365): Cola NEW: 
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127365): PID: <1000>
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127361): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127361): Cola Ready <FIFO>:
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127361): PID: <1000>
+[INFO] 18:20:10:093 kernel_principal.log/(127354:127357): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:20:20:324 kernel_principal.log/(127354:127359): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 18:20:20:374 kernel_principal.log/(127354:127359): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:20:20:377 kernel_principal.log/(127354:127357): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:20:20:452 kernel_principal.log/(127354:127359): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:20:20:515 kernel_principal.log/(127354:127359): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:20:21:539 kernel_principal.log/(127354:127357): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:20:21:581 kernel_principal.log/(127354:127359): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:20:22:598 kernel_principal.log/(127354:127357): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:20:22:626 kernel_principal.log/(127354:127359): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:27:07:555 kernel_principal.log/(127523:127534): Se crea el proceso <1000> en NEW
+[INFO] 18:27:07:556 kernel_principal.log/(127523:127534): Cola NEW: 
+[INFO] 18:27:07:556 kernel_principal.log/(127523:127534): PID: <1000>
+[INFO] 18:27:07:556 kernel_principal.log/(127523:127530): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:27:07:556 kernel_principal.log/(127523:127530): Cola Ready <FIFO>:
+[INFO] 18:27:07:556 kernel_principal.log/(127523:127530): PID: <1000>
+[INFO] 18:27:07:556 kernel_principal.log/(127523:127526): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:27:17:740 kernel_principal.log/(127523:127528): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 18:27:17:803 kernel_principal.log/(127523:127528): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:27:17:806 kernel_principal.log/(127523:127526): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:27:17:872 kernel_principal.log/(127523:127528): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:27:17:939 kernel_principal.log/(127523:127528): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:27:18:951 kernel_principal.log/(127523:127526): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:27:18:995 kernel_principal.log/(127523:127528): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:27:20:005 kernel_principal.log/(127523:127526): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:27:20:053 kernel_principal.log/(127523:127528): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:39:32:975 kernel_principal.log/(127820:127844): Se crea el proceso <1000> en NEW
+[INFO] 18:39:33:036 kernel_principal.log/(127820:127844): Cola NEW: 
+[INFO] 18:39:33:036 kernel_principal.log/(127820:127844): PID: <1000>
+[INFO] 18:39:33:037 kernel_principal.log/(127820:127827): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:39:33:037 kernel_principal.log/(127820:127827): Cola Ready <FIFO>:
+[INFO] 18:39:33:037 kernel_principal.log/(127820:127827): PID: <1000>
+[INFO] 18:39:33:039 kernel_principal.log/(127820:127823): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:39:43:280 kernel_principal.log/(127820:127825): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 18:40:01:617 kernel_principal.log/(127820:127825): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:40:47:136 kernel_principal.log/(127820:127823): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:40:47:242 kernel_principal.log/(127820:127825): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:40:47:334 kernel_principal.log/(127820:127825): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:46:28:504 kernel_principal.log/(127820:127823): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:46:28:587 kernel_principal.log/(127820:127825): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:50:30:256 kernel_principal.log/(127820:127823): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:50:30:334 kernel_principal.log/(127820:127825): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:55:31:110 kernel_principal.log/(128135:128146): Se crea el proceso <1000> en NEW
+[INFO] 18:55:31:112 kernel_principal.log/(128135:128146): Cola NEW: 
+[INFO] 18:55:31:112 kernel_principal.log/(128135:128146): PID: <1000>
+[INFO] 18:55:31:112 kernel_principal.log/(128135:128142): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:55:31:112 kernel_principal.log/(128135:128142): Cola Ready <FIFO>:
+[INFO] 18:55:31:112 kernel_principal.log/(128135:128142): PID: <1000>
+[INFO] 18:55:31:112 kernel_principal.log/(128135:128138): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:55:41:318 kernel_principal.log/(128135:128140): PID: <1000> - Abrir Archivo: <Consoles>
+[WARNING] 18:55:41:405 kernel_principal.log/(128135:128140): PID: <1000> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:55:41:410 kernel_principal.log/(128135:128138): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:55:41:502 kernel_principal.log/(128135:128140): PID: <1000> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:55:41:587 kernel_principal.log/(128135:128140): PID: <1000> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:55:42:607 kernel_principal.log/(128135:128138): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:55:42:648 kernel_principal.log/(128135:128140): PID: <1000> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:55:43:658 kernel_principal.log/(128135:128138): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:55:43:700 kernel_principal.log/(128135:128140): PID: <1000> - Cerrar Archivo: <Consoles>
+[INFO] 18:55:43:789 kernel_principal.log/(128135:128140): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 18:55:43:789 kernel_principal.log/(128135:128140): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 18:55:56:075 kernel_principal.log/(128135:128150): Se crea el proceso <1001> en NEW
+[INFO] 18:55:56:081 kernel_principal.log/(128135:128150): Cola NEW: 
+[INFO] 18:55:56:081 kernel_principal.log/(128135:128150): PID: <1001>
+[INFO] 18:55:56:081 kernel_principal.log/(128135:128142): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:55:56:081 kernel_principal.log/(128135:128142): Cola Ready <FIFO>:
+[INFO] 18:55:56:081 kernel_principal.log/(128135:128142): PID: <1001>
+[INFO] 18:55:56:081 kernel_principal.log/(128135:128138): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:06:159 kernel_principal.log/(128135:128140): PID: <1001> - Abrir Archivo: <Consoles>
+[WARNING] 18:56:06:220 kernel_principal.log/(128135:128140): PID: <1001> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:56:06:220 kernel_principal.log/(128135:128138): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:06:263 kernel_principal.log/(128135:128140): PID: <1001> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:56:06:309 kernel_principal.log/(128135:128140): PID: <1001> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:56:07:316 kernel_principal.log/(128135:128138): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:07:366 kernel_principal.log/(128135:128140): PID: <1001> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:56:08:378 kernel_principal.log/(128135:128138): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:08:396 kernel_principal.log/(128135:128140): PID: <1001> - Cerrar Archivo: <Consoles>
+[INFO] 18:56:08:436 kernel_principal.log/(128135:128140): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 18:56:08:436 kernel_principal.log/(128135:128140): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 18:56:40:786 kernel_principal.log/(128135:128153): Se crea el proceso <1002> en NEW
+[INFO] 18:56:40:788 kernel_principal.log/(128135:128153): Cola NEW: 
+[INFO] 18:56:40:788 kernel_principal.log/(128135:128153): PID: <1002>
+[INFO] 18:56:40:788 kernel_principal.log/(128135:128142): PID: <1002> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 18:56:40:788 kernel_principal.log/(128135:128142): Cola Ready <FIFO>:
+[INFO] 18:56:40:788 kernel_principal.log/(128135:128142): PID: <1002>
+[INFO] 18:56:40:788 kernel_principal.log/(128135:128138): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:50:880 kernel_principal.log/(128135:128140): PID: <1002> - Abrir Archivo: <Consoles>
+[WARNING] 18:56:50:936 kernel_principal.log/(128135:128140): PID: <1002> - Archivo: <Consoles> - Tamaño: <256>
+[INFO] 18:56:50:937 kernel_principal.log/(128135:128138): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:50:994 kernel_principal.log/(128135:128140): PID: <1002> - Actualizar puntero Archivo: <Consoles> - Puntero <128>
+[WARNING] 18:56:51:059 kernel_principal.log/(128135:128140): PID: <1002> - Escribir Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:56:52:064 kernel_principal.log/(128135:128138): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:52:092 kernel_principal.log/(128135:128140): PID: <1002> - Leer Archivo: <Consoles> - Puntero <128> - Dirección Memoria <32> - Tamaño <80>
+[INFO] 18:56:53:104 kernel_principal.log/(128135:128138): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[WARNING] 18:56:53:113 kernel_principal.log/(128135:128140): PID: <1002> - Cerrar Archivo: <Consoles>
+[INFO] 18:56:53:132 kernel_principal.log/(128135:128140): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 18:56:53:132 kernel_principal.log/(128135:128140): Finaliza el proceso <1002> - Motivo: <SUCCESS>

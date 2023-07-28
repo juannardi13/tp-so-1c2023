@@ -92,7 +92,7 @@ void funcion_recurso(char* key, void* elemento) {
 		proceso->llegada_ready = get_time();
 		pthread_mutex_unlock(&mutex_ready);
 
-		//sem_post(&sem_ready); //TODO ??? Me parece que esto vuela
+		sem_post(&sem_ready); //TODO ??? Me parece que esto vuela
 	}
 
 	pthread_mutex_unlock(recurso->mutex_instancia_usada);

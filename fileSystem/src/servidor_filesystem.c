@@ -47,33 +47,67 @@ void manejar_fopen(int socket_cliente,void* stream)
 }
 
 // devolver cod op finalizado
-void manejar_fread(int socket_cliente)
+void manejar_fread(int socket_cliente,void* stream)
 {
-	int size_buffer;
-	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
+
 
 	// leer_archivo(char* nombre_archivo,int nro_byte_archivo,char* direccion_volcar_lectura,int cantidad_bytes_leer)
 
 	int offset = 0;
-	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
-	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
-	int nro_byte_archivo = deserializar_int(contenido_buffer,&offset);
-	int direccion_fisica = deserializar_int(contenido_buffer,&offset);
-	int cantidad_bytes_leer = deserializar_int(contenido_buffer,&offset);
+	int tamanio_string_nombre_archivo;
+	int direccion_fisica;
+	int nro_byte_archivo;
+	int cantidad_bytes_leer;
+
+	memcpy(&tamanio_string_nombre_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	char* string_nombre_archivo = malloc(tamanio_string_nombre_archivo);
+	memcpy(string_nombre_archivo,stream + offset,tamanio_string_nombre_archivo);
+	offset += tamanio_string_nombre_archivo;
+	memcpy(&nro_byte_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	memcpy(&direccion_fisica,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	memcpy(&cantidad_bytes_leer,stream + offset,sizeof(int));
+
+//	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
+//	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
+//	int nro_byte_archivo = deserializar_int(contenido_buffer,&offset);
+//	int direccion_fisica = deserializar_int(contenido_buffer,&offset);
+//	int cantidad_bytes_leer = deserializar_int(contenido_buffer,&offset);
 
 	void* direccion_fisica_contenido  = leer_archivo(string_nombre_archivo,nro_byte_archivo,cantidad_bytes_leer);
 
 	printf("%s\n",direccion_fisica_contenido);
 
-	t_paquete* paquete = crear_paquete(ESCRIBIR_EN_MEMORIA_FS);
 
 	// primero dir fisica, dps tamanio valor y dps valor
 
-	agregar_int_a_paquete(paquete,direccion_fisica);
-	agregar_int_a_paquete(paquete,cantidad_bytes_leer);
-	agregar_string_a_paquete(paquete,direccion_fisica_contenido,cantidad_bytes_leer);
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
 
-	enviar_paquete(paquete,socket_memoria);
+	paquete->buffer->stream_size = sizeof(int) + sizeof(int) + cantidad_bytes_leer;
+	void* stream_mem = malloc(paquete->buffer->stream_size);
+
+	offset = 0;
+	memcpy(stream_mem + offset,&direccion_fisica,sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream_mem + offset,&cantidad_bytes_leer,sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream_mem + offset,direccion_fisica_contenido,cantidad_bytes_leer);
+	offset += cantidad_bytes_leer;
+
+	paquete->codigo_operacion = ESCRIBIR_EN_MEMORIA_FS;
+	paquete->buffer->stream = stream_mem;
+
+	int tam_a_enviar = sizeof(int) + sizeof(int) + paquete->buffer->stream_size;
+	void* a_enviar = malloc(tam_a_enviar);
+	offset = 0;
+	agregar_a_stream(a_enviar,&offset,&(paquete->codigo_operacion),sizeof(int));
+	agregar_a_stream(a_enviar,&offset,&(paquete->buffer->stream_size),sizeof(int));
+	agregar_a_stream(a_enviar,&offset,paquete->buffer->stream,paquete->buffer->stream_size);
+
+	send(socket_memoria,a_enviar,tam_a_enviar,0);
 
 	int rta_memoria = recibir_operacion(socket_memoria);
 
@@ -93,48 +127,89 @@ void manejar_fread(int socket_cliente)
 	}
 
 	eliminar_paquete(paquete);
+	free(stream);
 	free(direccion_fisica_contenido);
-	free(contenido_buffer);
 	free(string_nombre_archivo);
 }
 
 
 // devolver cod op finalizado
-void manejar_fwrite(int socket_cliente)
+void manejar_fwrite(int socket_cliente,void* stream)
 {
-	int size_buffer;
-	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
-
-	// leer_archivo(char* nombre_archivo,int nro_byte_archivo,char* direccion_volcar_lectura,int cantidad_bytes_leer)
-
 	int offset = 0;
-	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
-	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
-	int nro_byte_archivo = deserializar_int(contenido_buffer,&offset);
-	int direccion_fisica = deserializar_int(contenido_buffer,&offset);
-	int cantidad_bytes_escribir = deserializar_int(contenido_buffer,&offset);
+	int tamanio_string_nombre_archivo;
+	int direccion_fisica;
+	int nro_byte_archivo;
+	int cantidad_bytes_escribir;
 
-	t_paquete* paquete = crear_paquete(LEER_DE_MEMORIA_FS);
+	memcpy(&tamanio_string_nombre_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	char* string_nombre_archivo = malloc(tamanio_string_nombre_archivo);
+	memcpy(string_nombre_archivo,stream + offset,tamanio_string_nombre_archivo);
+	offset += tamanio_string_nombre_archivo;
+	memcpy(&nro_byte_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	memcpy(&direccion_fisica,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	memcpy(&cantidad_bytes_escribir,stream + offset,sizeof(int));
 
-	agregar_int_a_paquete(paquete,direccion_fisica);
-	agregar_int_a_paquete(paquete,cantidad_bytes_escribir);
+	// leer de memoria en la dir fisica, eso escribir a archivo
 
-	enviar_paquete(paquete,socket_memoria);
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->buffer = malloc(sizeof(t_buffer));
+
+	paquete->buffer->stream_size = sizeof(int) + sizeof(int);
+	void* stream_mem = malloc(paquete->buffer->stream_size);
+
+	offset = 0;
+	memcpy(stream_mem + offset,&direccion_fisica,sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream_mem + offset,&cantidad_bytes_escribir,sizeof(int));
+	offset += sizeof(int);
 
 
-	int rta_memoria = recibir_operacion(socket_memoria);
+	paquete->codigo_operacion = LEER_DE_MEMORIA_FS;
+	paquete->buffer->stream = stream_mem;
 
+	int tam_a_enviar = sizeof(int) + sizeof(int) + paquete->buffer->stream_size;
+	void* a_enviar = malloc(tam_a_enviar);
+	offset = 0;
+	agregar_a_stream(a_enviar,&offset,&(paquete->codigo_operacion),sizeof(int));
+	agregar_a_stream(a_enviar,&offset,&(paquete->buffer->stream_size),sizeof(int));
+	agregar_a_stream(a_enviar,&offset,paquete->buffer->stream,paquete->buffer->stream_size);
 
-	switch(rta_memoria) {
+	send(socket_memoria,a_enviar,tam_a_enviar,0);
+
+	t_paquete* paquete_rta = malloc(sizeof(t_paquete));
+	paquete_rta->buffer = malloc(sizeof(t_buffer));
+
+	recv(socket_memoria,&(paquete_rta->codigo_operacion),sizeof(int),MSG_WAITALL);
+	recv(socket_memoria,&(paquete_rta->buffer->stream_size),sizeof(int),0);
+
+	paquete_rta->buffer->stream = malloc(paquete_rta->buffer->stream_size);
+	recv(socket_memoria,paquete_rta->buffer->stream,paquete_rta->buffer->stream_size,0);
+
+	void* stream_rta = paquete->buffer->stream;
+
+	switch(paquete_rta->codigo_operacion) {
 			case LEIDO :
 				log_info(logger, "Se escribió con éxito en memoria");
 
-				int size_buffer_mem;
-				void* contenido_buffer_mem = recibir_buffer(&size_buffer_mem,socket_cliente);
+//				int size_buffer_mem;
+//				void* contenido_buffer_mem = recibir_buffer(&size_buffer_mem,socket_cliente);
+//
+//				int offset_mem = 0;
+//				int tamanio_recibir = deserializar_int(contenido_buffer_mem,&offset_mem);
+//				void* direccion_fisica_contenido = deserializar_string(tamanio_recibir,contenido_buffer_mem,&offset_mem);
 
-				int offset_mem = 0;
-				int tamanio_recibir = deserializar_int(contenido_buffer_mem,&offset_mem);
-				void* direccion_fisica_contenido = deserializar_string(tamanio_recibir,contenido_buffer_mem,&offset_mem);
+				int tamanio_recibido;
+				int offset_rta = 0;
+
+				memcpy(&tamanio_recibido,stream_rta + offset_rta,sizeof(int));
+				offset_rta += sizeof(int);
+				void* direccion_fisica_contenido = malloc(tamanio_recibido);
+				memcpy(direccion_fisica_contenido,stream_rta + offset_rta,tamanio_recibido);
+				offset_rta += tamanio_recibido;
 
 				escribir_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica_contenido,cantidad_bytes_escribir);
 
@@ -145,7 +220,6 @@ void manejar_fwrite(int socket_cliente)
 				send_op(socket_cliente,cod_op);
 
 				free(direccion_fisica_contenido);
-				free(contenido_buffer_mem);
 
 				break;
 			case NO_LEIDO :
@@ -159,23 +233,37 @@ void manejar_fwrite(int socket_cliente)
 
 //	void* direccion_fisica_contenido = "Fernando Alonso";
 
-	free(contenido_buffer);
+	eliminar_paquete(paquete_rta);
+	eliminar_paquete(paquete);
 	free(string_nombre_archivo);
 
 }
 
 // devolver cod op finalizado
-void manejar_ftruncate(int socket_cliente)
+void manejar_ftruncate(int socket_cliente,void* stream)
 {
-	int size_buffer;
-	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
+//	int size_buffer;
+//	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
 
 	// leer_archivo(char* nombre_archivo,int nro_byte_archivo,char* direccion_volcar_lectura,int cantidad_bytes_leer)
 
+//	int offset = 0;
+//	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
+//	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
+//	int tamanio_nuevo = deserializar_int(contenido_buffer,&offset);
+
 	int offset = 0;
-	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
-	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
-	int tamanio_nuevo = deserializar_int(contenido_buffer,&offset);
+	int tamanio_string_nombre_archivo;
+	int tamanio_nuevo;
+
+
+	memcpy(&tamanio_string_nombre_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	char* string_nombre_archivo = malloc(tamanio_string_nombre_archivo);
+	memcpy(string_nombre_archivo,stream + offset,tamanio_string_nombre_archivo);
+	offset += tamanio_string_nombre_archivo;
+	memcpy(&tamanio_nuevo,stream + offset,sizeof(int));
+	offset += sizeof(int);
 
 	truncar_archivo(string_nombre_archivo,tamanio_nuevo);
 
@@ -185,23 +273,26 @@ void manejar_ftruncate(int socket_cliente)
 
 	send_op(socket_cliente,cod_op);
 
-	free(contenido_buffer);
+	free(stream);
 	free(string_nombre_archivo);
 }
 
-void manejar_fcreate(int socket_cliente)
+void manejar_fcreate(int socket_cliente,void* stream)
 {
-	int size_buffer;
-	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
-
 	int offset = 0;
-	int tamanio_string_nombre_archivo = deserializar_int(contenido_buffer,&offset);
-	char* string_nombre_archivo = deserializar_string(tamanio_string_nombre_archivo,contenido_buffer,&offset);
 
-	crear_archivo(string_nombre_archivo);
+	int tam_nombre_archivo;
+	memcpy(&tam_nombre_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	char* string_recibido = malloc(tam_nombre_archivo);
+	memset(string_recibido,0,tam_nombre_archivo);
+	memcpy(string_recibido,stream + offset,tam_nombre_archivo);
+	offset += tam_nombre_archivo;
 
-	free(contenido_buffer);
-	free(string_nombre_archivo);
+	crear_archivo(string_recibido);
+
+	free(string_recibido);
+	free(stream);
 }
 
 void manejar_conexion(int socket_cliente){
@@ -227,19 +318,19 @@ void manejar_conexion(int socket_cliente){
 				break;
 
 		case F_READ:
-				manejar_fread(socket_cliente);
+				manejar_fread(socket_cliente,stream);
 				break;
 
 		case F_WRITE:
-				manejar_fwrite(socket_cliente);
+				manejar_fwrite(socket_cliente,stream);
 				break;
 
 		case F_TRUNCATE:
-				manejar_ftruncate(socket_cliente);
+				manejar_ftruncate(socket_cliente,stream);
 				break;
 
 		case F_CREATE:
-				manejar_fcreate(socket_cliente);
+				manejar_fcreate(socket_cliente,stream);
 				break;
 
 		case -1:
@@ -247,7 +338,7 @@ void manejar_conexion(int socket_cliente){
 			return;
 		default:
 			log_warning(logger,"Operación desconocido. Ojo con lo que haces");
-			break;
+			return;
 		}
 	}
 

@@ -5063,3 +5063,817 @@
 [INFO] 05:42:25:833 kernel.log/(115292:115295): PID: <1000> ingresa a EXECUTE
 [INFO] 05:42:25:833 kernel.log/(115292:115297): PID: <1000> enviada a CPU
 [ERROR] 05:44:41:863 kernel.log/(115292:115292): Finalizando módulo Kernel
+[INFO] 13:30:47:078 kernel.log/(118442:118442): Se crea la Tabla Global de Archivos
+[INFO] 13:30:47:099 kernel.log/(118442:118442): Se crea el diccionario con los recursos.
+[INFO] 13:30:47:099 kernel.log/(118442:118442): Se agrego el recurso DISCO al diccionario
+[INFO] 13:30:47:099 kernel.log/(118442:118442): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 13:30:47:108 kernel.log/(118442:118442): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 13:31:11:772 kernel.log/(118442:118445): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:31:11:772 kernel.log/(118442:118445): PID: <1000> ingresa a EXECUTE
+[INFO] 13:31:11:772 kernel.log/(118442:118447): PID: <1000> enviada a CPU
+[INFO] 13:31:11:882 kernel.log/(118442:118447): El archivo <TINI_CONSEJODEAMOR.MP3> no existe en FileSystem
+[INFO] 13:31:11:882 kernel.log/(118442:118447): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 13:31:11:882 kernel.log/(118442:118447): PID: <1000> enviada a CPU
+[INFO] 13:31:11:955 kernel.log/(118442:118447): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:31:11:955 kernel.log/(118442:118447): PID: <1000> enviada a CPU
+[INFO] 13:31:12:006 kernel.log/(118442:118447): PID: <1000> enviada a CPU
+[INFO] 13:31:19:097 kernel.log/(118442:118445): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:31:19:097 kernel.log/(118442:118445): PID: <1000> ingresa a EXECUTE
+[INFO] 13:31:19:097 kernel.log/(118442:118447): PID: <1000> enviada a CPU
+[ERROR] 13:31:47:804 kernel.log/(118442:118442): Finalizando módulo Kernel
+[INFO] 13:34:32:502 kernel.log/(118654:118654): Se crea la Tabla Global de Archivos
+[INFO] 13:34:32:502 kernel.log/(118654:118654): Se crea el diccionario con los recursos.
+[INFO] 13:34:32:502 kernel.log/(118654:118654): Se agrego el recurso DISCO al diccionario
+[INFO] 13:34:32:502 kernel.log/(118654:118654): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 13:34:32:510 kernel.log/(118654:118654): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 13:34:38:000 kernel.log/(118654:118657): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:34:38:000 kernel.log/(118654:118657): PID: <1000> ingresa a EXECUTE
+[INFO] 13:34:38:000 kernel.log/(118654:118659): PID: <1000> enviada a CPU
+[INFO] 13:34:38:088 kernel.log/(118654:118659): El archivo <TINI_CONSEJODEAMOR.MP3> no existe en FileSystem
+[INFO] 13:34:38:088 kernel.log/(118654:118659): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 13:34:38:088 kernel.log/(118654:118659): PID: <1000> enviada a CPU
+[INFO] 13:34:38:175 kernel.log/(118654:118659): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:34:38:175 kernel.log/(118654:118659): PID: <1000> enviada a CPU
+[INFO] 13:34:38:234 kernel.log/(118654:118659): PID: <1000> enviada a CPU
+[INFO] 13:34:45:265 kernel.log/(118654:118657): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:34:45:266 kernel.log/(118654:118657): PID: <1000> ingresa a EXECUTE
+[INFO] 13:34:45:266 kernel.log/(118654:118659): PID: <1000> enviada a CPU
+[INFO] 13:34:52:314 kernel.log/(118654:118659): El archivo <TAYLOR_TSOU.MP3> no existe en FileSystem
+[INFO] 13:34:52:314 kernel.log/(118654:118659): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 13:34:52:316 kernel.log/(118654:118659): PID: <1000> enviada a CPU
+[INFO] 13:34:52:440 kernel.log/(118654:118662): Peticion FILE SYSTEM terminada con éxito.
+[ERROR] 13:36:47:828 kernel.log/(118654:118654): Finalizando módulo Kernel
+[INFO] 13:42:50:234 kernel.log/(118861:118861): Se crea la Tabla Global de Archivos
+[INFO] 13:42:50:248 kernel.log/(118861:118861): Se crea el diccionario con los recursos.
+[INFO] 13:42:50:248 kernel.log/(118861:118861): Se agrego el recurso DISCO al diccionario
+[INFO] 13:42:50:248 kernel.log/(118861:118861): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 13:42:50:249 kernel.log/(118861:118861): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 13:42:55:391 kernel.log/(118861:118864): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:42:55:391 kernel.log/(118861:118864): PID: <1000> ingresa a EXECUTE
+[INFO] 13:42:55:391 kernel.log/(118861:118866): PID: <1000> enviada a CPU
+[INFO] 13:42:55:478 kernel.log/(118861:118866): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 13:42:55:478 kernel.log/(118861:118866): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 13:42:55:478 kernel.log/(118861:118866): PID: <1000> enviada a CPU
+[INFO] 13:42:55:569 kernel.log/(118861:118866): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:42:55:569 kernel.log/(118861:118866): PID: <1000> enviada a CPU
+[INFO] 13:42:55:639 kernel.log/(118861:118866): PID: <1000> enviada a CPU
+[INFO] 13:43:02:704 kernel.log/(118861:118864): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:43:02:704 kernel.log/(118861:118864): PID: <1000> ingresa a EXECUTE
+[INFO] 13:43:02:704 kernel.log/(118861:118866): PID: <1000> enviada a CPU
+[INFO] 13:43:09:798 kernel.log/(118861:118866): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 13:43:09:798 kernel.log/(118861:118866): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 13:43:09:799 kernel.log/(118861:118866): PID: <1000> enviada a CPU
+[INFO] 13:43:09:877 kernel.log/(118861:118869): Peticion FILE SYSTEM terminada con éxito.
+[ERROR] 13:48:54:190 kernel.log/(118861:118861): Finalizando módulo Kernel
+[INFO] 13:49:11:562 kernel.log/(119127:119127): Se crea la Tabla Global de Archivos
+[INFO] 13:49:11:564 kernel.log/(119127:119127): Se crea el diccionario con los recursos.
+[INFO] 13:49:11:564 kernel.log/(119127:119127): Se agrego el recurso DISCO al diccionario
+[INFO] 13:49:11:564 kernel.log/(119127:119127): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 13:51:23:207 kernel.log/(119145:119145): Se crea la Tabla Global de Archivos
+[INFO] 13:51:23:208 kernel.log/(119145:119145): Se crea el diccionario con los recursos.
+[INFO] 13:51:23:208 kernel.log/(119145:119145): Se agrego el recurso DISCO al diccionario
+[INFO] 13:51:23:208 kernel.log/(119145:119145): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 13:51:23:216 kernel.log/(119145:119145): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 13:51:28:089 kernel.log/(119145:119148): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:51:28:089 kernel.log/(119145:119148): PID: <1000> ingresa a EXECUTE
+[INFO] 13:51:28:089 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:28:167 kernel.log/(119145:119150): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 13:51:28:167 kernel.log/(119145:119150): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 13:51:28:167 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:28:274 kernel.log/(119145:119150): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:51:28:275 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:28:340 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:35:395 kernel.log/(119145:119148): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:51:35:395 kernel.log/(119145:119148): PID: <1000> ingresa a EXECUTE
+[INFO] 13:51:35:395 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:42:425 kernel.log/(119145:119150): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 13:51:42:425 kernel.log/(119145:119150): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 13:51:42:425 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:42:492 kernel.log/(119145:119153): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 13:51:42:492 kernel.log/(119145:119148): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:51:42:492 kernel.log/(119145:119148): PID: <1000> ingresa a EXECUTE
+[INFO] 13:51:42:492 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:47:533 kernel.log/(119145:119148): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:51:47:533 kernel.log/(119145:119148): PID: <1000> ingresa a EXECUTE
+[INFO] 13:51:47:533 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:47:578 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:49:606 kernel.log/(119145:119148): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:51:49:606 kernel.log/(119145:119148): PID: <1000> ingresa a EXECUTE
+[INFO] 13:51:49:606 kernel.log/(119145:119150): PID: <1000> enviada a CPU
+[INFO] 13:51:49:628 kernel.log/(119145:119146): PID: <1000> liberando estructuras en memoria
+[INFO] 13:51:49:646 kernel.log/(119145:119146): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 13:52:08:025 kernel.log/(119145:119148): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:52:08:025 kernel.log/(119145:119148): PID: <1001> ingresa a EXECUTE
+[INFO] 13:52:08:025 kernel.log/(119145:119150): PID: <1001> enviada a CPU
+[INFO] 13:52:08:056 kernel.log/(119145:119150): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 13:52:08:056 kernel.log/(119145:119150): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 13:52:08:056 kernel.log/(119145:119150): PID: <1001> enviada a CPU
+[INFO] 13:52:08:109 kernel.log/(119145:119150): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:52:08:110 kernel.log/(119145:119150): PID: <1001> enviada a CPU
+[INFO] 13:52:08:168 kernel.log/(119145:119150): PID: <1001> enviada a CPU
+[INFO] 13:52:15:227 kernel.log/(119145:119148): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 13:52:15:228 kernel.log/(119145:119148): PID: <1001> ingresa a EXECUTE
+[INFO] 13:52:15:228 kernel.log/(119145:119150): PID: <1001> enviada a CPU
+[INFO] 13:52:22:287 kernel.log/(119145:119150): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 13:52:22:287 kernel.log/(119145:119150): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 13:52:22:287 kernel.log/(119145:119150): PID: <1001> enviada a CPU
+[INFO] 14:03:50:639 kernel.log/(119304:119304): Se crea la Tabla Global de Archivos
+[INFO] 14:03:51:731 kernel.log/(119304:119304): Se crea el diccionario con los recursos.
+[INFO] 14:03:51:731 kernel.log/(119304:119304): Se agrego el recurso DISCO al diccionario
+[INFO] 14:03:51:731 kernel.log/(119304:119304): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 14:03:57:919 kernel.log/(119304:119304): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 14:05:11:434 kernel.log/(119304:119324): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:05:11:434 kernel.log/(119304:119324): PID: <1000> ingresa a EXECUTE
+[INFO] 14:05:11:434 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:07:16:833 kernel.log/(119304:119326): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:08:14:619 kernel.log/(119304:119326): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:08:43:834 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:09:44:622 kernel.log/(119304:119326): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:10:09:234 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:11:33:316 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:12:15:422 kernel.log/(119304:119324): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:12:15:422 kernel.log/(119304:119324): PID: <1000> ingresa a EXECUTE
+[INFO] 14:12:22:982 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:13:34:098 kernel.log/(119304:119326): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:13:41:547 kernel.log/(119304:119326): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:13:59:979 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:18:09:373 kernel.log/(119304:119334): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 14:18:55:361 kernel.log/(119304:119324): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:18:55:361 kernel.log/(119304:119324): PID: <1000> ingresa a EXECUTE
+[INFO] 14:19:16:151 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:19:47:504 kernel.log/(119304:119324): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:19:47:504 kernel.log/(119304:119324): PID: <1000> ingresa a EXECUTE
+[INFO] 14:19:54:231 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:21:53:199 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:22:16:172 kernel.log/(119304:119324): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:22:16:172 kernel.log/(119304:119324): PID: <1000> ingresa a EXECUTE
+[INFO] 14:22:18:578 kernel.log/(119304:119326): PID: <1000> enviada a CPU
+[INFO] 14:23:07:360 kernel.log/(119304:119320): PID: <1000> liberando estructuras en memoria
+[INFO] 14:23:08:093 kernel.log/(119304:119320): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 14:23:24:380 kernel.log/(119304:119324): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:23:24:380 kernel.log/(119304:119324): PID: <1001> ingresa a EXECUTE
+[INFO] 14:23:52:747 kernel.log/(119304:119326): PID: <1001> enviada a CPU
+[INFO] 14:24:30:794 kernel.log/(119304:119326): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:25:06:960 kernel.log/(119304:119326): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:28:33:438 kernel.log/(119304:119326): PID: <1001> enviada a CPU
+[INFO] 14:28:57:378 kernel.log/(119304:119326): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:29:03:310 kernel.log/(119304:119326): PID: <1001> enviada a CPU
+[INFO] 14:31:11:231 kernel.log/(119304:119326): PID: <1001> enviada a CPU
+[INFO] 14:31:38:209 kernel.log/(119304:119324): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:31:38:210 kernel.log/(119304:119324): PID: <1001> ingresa a EXECUTE
+[INFO] 14:31:47:124 kernel.log/(119304:119326): PID: <1001> enviada a CPU
+[INFO] 14:32:27:209 kernel.log/(119304:119326): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:32:33:953 kernel.log/(119304:119326): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:33:09:830 kernel.log/(119304:119326): PID: <1001> enviada a CPU
+[INFO] 14:41:04:709 kernel.log/(120820:120820): Se crea la Tabla Global de Archivos
+[INFO] 14:41:05:542 kernel.log/(120820:120820): Se crea el diccionario con los recursos.
+[INFO] 14:41:05:542 kernel.log/(120820:120820): Se agrego el recurso DISCO al diccionario
+[INFO] 14:41:05:543 kernel.log/(120820:120820): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 14:41:08:477 kernel.log/(120820:120820): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 14:41:54:531 kernel.log/(120820:120845): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:41:54:531 kernel.log/(120820:120845): PID: <1000> ingresa a EXECUTE
+[INFO] 14:41:54:531 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:41:54:668 kernel.log/(120820:120847): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:41:54:668 kernel.log/(120820:120847): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:41:54:668 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:41:54:755 kernel.log/(120820:120847): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:41:54:757 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:41:54:796 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:01:846 kernel.log/(120820:120845): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:42:01:846 kernel.log/(120820:120845): PID: <1000> ingresa a EXECUTE
+[INFO] 14:42:01:846 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:08:875 kernel.log/(120820:120847): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:42:08:875 kernel.log/(120820:120847): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:42:08:875 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:22:715 kernel.log/(120820:120854): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 14:42:28:516 kernel.log/(120820:120845): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:42:28:516 kernel.log/(120820:120845): PID: <1000> ingresa a EXECUTE
+[INFO] 14:42:28:516 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:35:835 kernel.log/(120820:120845): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:42:35:835 kernel.log/(120820:120845): PID: <1000> ingresa a EXECUTE
+[INFO] 14:42:35:835 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:35:859 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:37:917 kernel.log/(120820:120845): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:42:37:917 kernel.log/(120820:120845): PID: <1000> ingresa a EXECUTE
+[INFO] 14:42:37:918 kernel.log/(120820:120847): PID: <1000> enviada a CPU
+[INFO] 14:42:37:950 kernel.log/(120820:120842): PID: <1000> liberando estructuras en memoria
+[INFO] 14:42:37:993 kernel.log/(120820:120842): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 14:42:54:644 kernel.log/(120820:120845): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:42:54:644 kernel.log/(120820:120845): PID: <1001> ingresa a EXECUTE
+[INFO] 14:42:54:644 kernel.log/(120820:120847): PID: <1001> enviada a CPU
+[INFO] 14:42:54:683 kernel.log/(120820:120847): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:42:54:683 kernel.log/(120820:120847): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:42:54:683 kernel.log/(120820:120847): PID: <1001> enviada a CPU
+[INFO] 14:42:54:751 kernel.log/(120820:120847): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:42:54:752 kernel.log/(120820:120847): PID: <1001> enviada a CPU
+[INFO] 14:42:54:843 kernel.log/(120820:120847): PID: <1001> enviada a CPU
+[INFO] 14:43:01:869 kernel.log/(120820:120845): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:43:01:869 kernel.log/(120820:120845): PID: <1001> ingresa a EXECUTE
+[INFO] 14:43:01:869 kernel.log/(120820:120847): PID: <1001> enviada a CPU
+[INFO] 14:43:08:915 kernel.log/(120820:120847): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:43:08:915 kernel.log/(120820:120847): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:43:08:915 kernel.log/(120820:120847): PID: <1001> enviada a CPU
+[INFO] 14:44:55:799 kernel.log/(120953:120953): Se crea la Tabla Global de Archivos
+[INFO] 14:44:56:541 kernel.log/(120953:120953): Se crea el diccionario con los recursos.
+[INFO] 14:44:56:542 kernel.log/(120953:120953): Se agrego el recurso DISCO al diccionario
+[INFO] 14:44:56:542 kernel.log/(120953:120953): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 14:45:00:148 kernel.log/(120953:120953): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 14:45:31:321 kernel.log/(120953:120975): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:45:31:321 kernel.log/(120953:120975): PID: <1000> ingresa a EXECUTE
+[INFO] 14:45:31:322 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:45:31:428 kernel.log/(120953:120977): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:45:31:429 kernel.log/(120953:120977): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:45:31:429 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:45:31:516 kernel.log/(120953:120977): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:45:31:518 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:45:31:577 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:45:38:612 kernel.log/(120953:120975): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:45:38:612 kernel.log/(120953:120975): PID: <1000> ingresa a EXECUTE
+[INFO] 14:45:38:612 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:45:45:653 kernel.log/(120953:120977): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:45:45:653 kernel.log/(120953:120977): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:45:45:653 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:46:05:083 kernel.log/(120953:120986): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 14:46:11:925 kernel.log/(120953:120975): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:46:11:925 kernel.log/(120953:120975): PID: <1000> ingresa a EXECUTE
+[INFO] 14:46:11:925 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:46:18:390 kernel.log/(120953:120975): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:46:18:390 kernel.log/(120953:120975): PID: <1000> ingresa a EXECUTE
+[INFO] 14:46:18:390 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:46:18:407 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:46:20:449 kernel.log/(120953:120975): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:46:20:449 kernel.log/(120953:120975): PID: <1000> ingresa a EXECUTE
+[INFO] 14:46:20:449 kernel.log/(120953:120977): PID: <1000> enviada a CPU
+[INFO] 14:46:20:531 kernel.log/(120953:120972): PID: <1000> liberando estructuras en memoria
+[INFO] 14:46:20:565 kernel.log/(120953:120972): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 14:46:29:099 kernel.log/(120953:120975): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:46:29:099 kernel.log/(120953:120975): PID: <1001> ingresa a EXECUTE
+[INFO] 14:46:29:099 kernel.log/(120953:120977): PID: <1001> enviada a CPU
+[INFO] 14:46:29:120 kernel.log/(120953:120977): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:46:29:120 kernel.log/(120953:120977): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:46:29:120 kernel.log/(120953:120977): PID: <1001> enviada a CPU
+[INFO] 14:46:29:162 kernel.log/(120953:120977): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:46:29:168 kernel.log/(120953:120977): PID: <1001> enviada a CPU
+[INFO] 14:46:29:215 kernel.log/(120953:120977): PID: <1001> enviada a CPU
+[INFO] 14:46:36:260 kernel.log/(120953:120975): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:46:36:260 kernel.log/(120953:120975): PID: <1001> ingresa a EXECUTE
+[INFO] 14:46:36:260 kernel.log/(120953:120977): PID: <1001> enviada a CPU
+[INFO] 14:46:43:305 kernel.log/(120953:120977): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:46:43:305 kernel.log/(120953:120977): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:46:43:305 kernel.log/(120953:120977): PID: <1001> enviada a CPU
+[INFO] 14:52:21:724 kernel.log/(121155:121155): Se crea la Tabla Global de Archivos
+[INFO] 14:52:21:724 kernel.log/(121155:121155): Se crea el diccionario con los recursos.
+[INFO] 14:52:21:725 kernel.log/(121155:121155): Se agrego el recurso DISCO al diccionario
+[INFO] 14:52:21:725 kernel.log/(121155:121155): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 14:53:48:873 kernel.log/(121171:121171): Se crea la Tabla Global de Archivos
+[INFO] 14:53:48:874 kernel.log/(121171:121171): Se crea el diccionario con los recursos.
+[INFO] 14:53:48:874 kernel.log/(121171:121171): Se agrego el recurso DISCO al diccionario
+[INFO] 14:53:48:874 kernel.log/(121171:121171): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 14:54:24:480 kernel.log/(121188:121188): Se crea la Tabla Global de Archivos
+[INFO] 14:54:24:480 kernel.log/(121188:121188): Se crea el diccionario con los recursos.
+[INFO] 14:54:24:481 kernel.log/(121188:121188): Se agrego el recurso DISCO al diccionario
+[INFO] 14:54:24:481 kernel.log/(121188:121188): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 14:54:24:500 kernel.log/(121188:121188): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 14:54:29:598 kernel.log/(121188:121191): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:54:29:598 kernel.log/(121188:121191): PID: <1000> ingresa a EXECUTE
+[INFO] 14:54:29:598 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:29:668 kernel.log/(121188:121193): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:54:29:668 kernel.log/(121188:121193): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:54:29:668 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:29:768 kernel.log/(121188:121193): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:54:29:773 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:29:836 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:36:894 kernel.log/(121188:121191): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:54:36:894 kernel.log/(121188:121191): PID: <1000> ingresa a EXECUTE
+[INFO] 14:54:36:894 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:43:953 kernel.log/(121188:121193): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:54:43:953 kernel.log/(121188:121193): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:54:43:953 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:43:980 kernel.log/(121188:121196): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 14:54:43:980 kernel.log/(121188:121191): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:54:43:980 kernel.log/(121188:121191): PID: <1000> ingresa a EXECUTE
+[INFO] 14:54:43:980 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:49:030 kernel.log/(121188:121191): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:54:49:030 kernel.log/(121188:121191): PID: <1000> ingresa a EXECUTE
+[INFO] 14:54:49:030 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:49:038 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:51:060 kernel.log/(121188:121191): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:54:51:061 kernel.log/(121188:121191): PID: <1000> ingresa a EXECUTE
+[INFO] 14:54:51:061 kernel.log/(121188:121193): PID: <1000> enviada a CPU
+[INFO] 14:54:51:115 kernel.log/(121188:121189): PID: <1000> liberando estructuras en memoria
+[INFO] 14:54:51:149 kernel.log/(121188:121189): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 14:55:07:690 kernel.log/(121188:121191): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:07:690 kernel.log/(121188:121191): PID: <1001> ingresa a EXECUTE
+[INFO] 14:55:07:690 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:07:704 kernel.log/(121188:121193): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:55:07:705 kernel.log/(121188:121193): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:55:07:705 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:07:733 kernel.log/(121188:121193): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:07:733 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:07:773 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:14:830 kernel.log/(121188:121191): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:14:830 kernel.log/(121188:121191): PID: <1001> ingresa a EXECUTE
+[INFO] 14:55:14:830 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:21:900 kernel.log/(121188:121193): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:55:21:900 kernel.log/(121188:121193): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:55:21:900 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:21:935 kernel.log/(121188:121196): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 14:55:21:935 kernel.log/(121188:121191): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:21:935 kernel.log/(121188:121191): PID: <1001> ingresa a EXECUTE
+[INFO] 14:55:21:935 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:26:980 kernel.log/(121188:121191): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:26:980 kernel.log/(121188:121191): PID: <1001> ingresa a EXECUTE
+[INFO] 14:55:26:981 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:27:033 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:29:080 kernel.log/(121188:121191): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:29:080 kernel.log/(121188:121191): PID: <1001> ingresa a EXECUTE
+[INFO] 14:55:29:080 kernel.log/(121188:121193): PID: <1001> enviada a CPU
+[INFO] 14:55:29:101 kernel.log/(121188:121189): PID: <1001> liberando estructuras en memoria
+[INFO] 14:55:29:103 kernel.log/(121188:121189): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 14:55:38:770 kernel.log/(121188:121191): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:38:770 kernel.log/(121188:121191): PID: <1002> ingresa a EXECUTE
+[INFO] 14:55:38:770 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:38:784 kernel.log/(121188:121193): El archivo <TINI_CONSEJODEAMOR.MP3> existe en FileSystem
+[INFO] 14:55:38:784 kernel.log/(121188:121193): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 14:55:38:784 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:38:832 kernel.log/(121188:121193): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:38:832 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:38:877 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:45:936 kernel.log/(121188:121191): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:45:936 kernel.log/(121188:121191): PID: <1002> ingresa a EXECUTE
+[INFO] 14:55:45:936 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:52:964 kernel.log/(121188:121193): El archivo <TAYLOR_TSOU.MP3> existe en FileSystem
+[INFO] 14:55:52:964 kernel.log/(121188:121193): Agregado archivo <TAYLOR_TSOU.MP3> a la Tabla Global de Archivos.
+[INFO] 14:55:52:964 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:52:980 kernel.log/(121188:121196): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 14:55:52:980 kernel.log/(121188:121191): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:52:980 kernel.log/(121188:121191): PID: <1002> ingresa a EXECUTE
+[INFO] 14:55:52:980 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:58:015 kernel.log/(121188:121191): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:55:58:015 kernel.log/(121188:121191): PID: <1002> ingresa a EXECUTE
+[INFO] 14:55:58:015 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:55:58:039 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:56:00:089 kernel.log/(121188:121191): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:56:00:089 kernel.log/(121188:121191): PID: <1002> ingresa a EXECUTE
+[INFO] 14:56:00:089 kernel.log/(121188:121193): PID: <1002> enviada a CPU
+[INFO] 14:56:00:103 kernel.log/(121188:121189): PID: <1002> liberando estructuras en memoria
+[INFO] 14:56:00:105 kernel.log/(121188:121189): Ordenando a Consola la finalización del PID: <1002>
+[INFO] 14:57:00:228 kernel.log/(121188:121191): PID: <1003> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:57:00:229 kernel.log/(121188:121191): PID: <1003> ingresa a EXECUTE
+[INFO] 14:57:00:229 kernel.log/(121188:121193): PID: <1003> enviada a CPU
+[INFO] 14:57:14:258 kernel.log/(121188:121191): PID: <1003> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 14:57:14:258 kernel.log/(121188:121191): PID: <1003> ingresa a EXECUTE
+[INFO] 14:57:14:258 kernel.log/(121188:121193): PID: <1003> enviada a CPU
+[INFO] 14:57:26:328 kernel.log/(121188:121189): PID: <1003> liberando estructuras en memoria
+[INFO] 14:57:26:337 kernel.log/(121188:121189): Ordenando a Consola la finalización del PID: <1003>
+[ERROR] 14:58:02:555 kernel.log/(121188:121188): Finalizando módulo Kernel
+[INFO] 15:35:52:396 kernel.log/(122543:122543): Se crea la Tabla Global de Archivos
+[INFO] 15:35:52:396 kernel.log/(122543:122543): Se crea el diccionario con los recursos.
+[INFO] 15:35:52:396 kernel.log/(122543:122543): Se agrego el recurso DISCO al diccionario
+[INFO] 15:35:52:396 kernel.log/(122543:122543): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 15:35:52:404 kernel.log/(122543:122543): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 15:36:04:368 kernel.log/(122543:122546): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:36:04:368 kernel.log/(122543:122546): PID: <1000> ingresa a EXECUTE
+[INFO] 15:36:04:368 kernel.log/(122543:122548): PID: <1000> enviada a CPU
+[INFO] 15:36:14:545 kernel.log/(122543:122548): El archivo <Consoles> no existe en FileSystem
+[INFO] 15:36:14:546 kernel.log/(122543:122548): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 15:36:14:546 kernel.log/(122543:122548): PID: <1000> enviada a CPU
+[INFO] 15:36:17:682 kernel.log/(122543:122551): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 15:36:17:682 kernel.log/(122543:122546): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:36:17:682 kernel.log/(122543:122546): PID: <1000> ingresa a EXECUTE
+[INFO] 15:36:17:682 kernel.log/(122543:122548): PID: <1000> enviada a CPU
+[INFO] 15:36:17:705 kernel.log/(122543:122548): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 15:36:17:705 kernel.log/(122543:122548): PID: <1000> enviada a CPU
+[INFO] 15:41:48:804 kernel.log/(122590:122590): Se crea la Tabla Global de Archivos
+[INFO] 15:41:49:672 kernel.log/(122590:122590): Se crea el diccionario con los recursos.
+[INFO] 15:41:49:673 kernel.log/(122590:122590): Se agrego el recurso DISCO al diccionario
+[INFO] 15:41:49:674 kernel.log/(122590:122590): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 15:41:53:529 kernel.log/(122590:122590): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 15:43:49:640 kernel.log/(122590:122616): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:43:49:640 kernel.log/(122590:122616): PID: <1000> ingresa a EXECUTE
+[INFO] 15:45:07:882 kernel.log/(122590:122619): PID: <1000> enviada a CPU
+[INFO] 15:46:09:233 kernel.log/(122590:122619): El archivo <Consoles> existe en FileSystem
+[INFO] 15:46:11:374 kernel.log/(122590:122619): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 15:46:27:397 kernel.log/(122590:122619): PID: <1000> enviada a CPU
+[INFO] 15:46:51:274 kernel.log/(122590:122626): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 15:46:51:274 kernel.log/(122590:122616): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:46:51:274 kernel.log/(122590:122616): PID: <1000> ingresa a EXECUTE
+[INFO] 15:47:01:794 kernel.log/(122590:122619): PID: <1000> enviada a CPU
+[INFO] 15:47:20:679 kernel.log/(122590:122619): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 15:47:26:109 kernel.log/(122590:122619): PID: <1000> enviada a CPU
+[INFO] 15:55:10:345 kernel.log/(123020:123020): Se crea la Tabla Global de Archivos
+[INFO] 15:55:10:346 kernel.log/(123020:123020): Se crea el diccionario con los recursos.
+[INFO] 15:55:10:347 kernel.log/(123020:123020): Se agrego el recurso DISCO al diccionario
+[INFO] 15:55:10:347 kernel.log/(123020:123020): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 15:55:10:359 kernel.log/(123020:123020): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 15:55:14:592 kernel.log/(123020:123023): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:55:14:592 kernel.log/(123020:123023): PID: <1000> ingresa a EXECUTE
+[INFO] 15:55:14:592 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[INFO] 15:55:24:912 kernel.log/(123020:123025): El archivo <Consoles> existe en FileSystem
+[INFO] 15:55:24:912 kernel.log/(123020:123025): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 15:55:24:912 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[INFO] 15:55:25:018 kernel.log/(123020:123028): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 15:55:25:018 kernel.log/(123020:123023): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:55:25:018 kernel.log/(123020:123023): PID: <1000> ingresa a EXECUTE
+[INFO] 15:55:25:018 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[INFO] 15:55:25:096 kernel.log/(123020:123025): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 15:55:25:097 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[ERROR] 15:55:25:149 kernel.log/(123020:123028): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 15:55:25:149 kernel.log/(123020:123023): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:55:25:149 kernel.log/(123020:123023): PID: <1000> ingresa a EXECUTE
+[INFO] 15:55:25:149 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[ERROR] 15:55:25:215 kernel.log/(123020:123028): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 15:55:25:215 kernel.log/(123020:123023): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:55:25:215 kernel.log/(123020:123023): PID: <1000> ingresa a EXECUTE
+[INFO] 15:55:25:215 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[INFO] 15:55:25:274 kernel.log/(123020:123025): PID: <1000> enviada a CPU
+[INFO] 15:58:49:735 kernel.log/(123096:123096): Se crea la Tabla Global de Archivos
+[INFO] 15:58:50:573 kernel.log/(123096:123096): Se crea el diccionario con los recursos.
+[INFO] 15:58:50:574 kernel.log/(123096:123096): Se agrego el recurso DISCO al diccionario
+[INFO] 15:58:50:574 kernel.log/(123096:123096): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 15:58:53:351 kernel.log/(123096:123096): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 15:59:23:005 kernel.log/(123096:123118): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 15:59:23:006 kernel.log/(123096:123118): PID: <1000> ingresa a EXECUTE
+[INFO] 15:59:23:006 kernel.log/(123096:123120): PID: <1000> enviada a CPU
+[INFO] 15:59:33:238 kernel.log/(123096:123120): El archivo <Consoles> existe en FileSystem
+[INFO] 15:59:33:239 kernel.log/(123096:123120): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 15:59:33:239 kernel.log/(123096:123120): PID: <1000> enviada a CPU
+[INFO] 16:00:31:707 kernel.log/(123096:123127): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 16:00:47:538 kernel.log/(123096:123118): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:00:47:539 kernel.log/(123096:123118): PID: <1000> ingresa a EXECUTE
+[INFO] 16:00:47:539 kernel.log/(123096:123120): PID: <1000> enviada a CPU
+[INFO] 16:00:48:777 kernel.log/(123096:123120): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 16:00:48:777 kernel.log/(123096:123120): PID: <1000> enviada a CPU
+[INFO] 16:08:14:926 kernel.log/(123457:123457): Se crea la Tabla Global de Archivos
+[INFO] 16:08:14:928 kernel.log/(123457:123457): Se crea el diccionario con los recursos.
+[INFO] 16:08:14:928 kernel.log/(123457:123457): Se agrego el recurso DISCO al diccionario
+[INFO] 16:08:14:928 kernel.log/(123457:123457): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 16:08:14:929 kernel.log/(123457:123457): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:08:21:697 kernel.log/(123457:123460): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:08:21:697 kernel.log/(123457:123460): PID: <1000> ingresa a EXECUTE
+[INFO] 16:08:21:697 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[INFO] 16:08:31:932 kernel.log/(123457:123462): El archivo <Consoles> existe en FileSystem
+[INFO] 16:08:31:932 kernel.log/(123457:123462): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 16:08:31:932 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[INFO] 16:08:32:011 kernel.log/(123457:123465): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 16:08:32:011 kernel.log/(123457:123460): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:08:32:011 kernel.log/(123457:123460): PID: <1000> ingresa a EXECUTE
+[INFO] 16:08:32:011 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[INFO] 16:08:32:074 kernel.log/(123457:123462): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 16:08:32:074 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[INFO] 16:08:37:174 kernel.log/(123457:123465): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 16:08:37:174 kernel.log/(123457:123460): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:08:37:174 kernel.log/(123457:123460): PID: <1000> ingresa a EXECUTE
+[INFO] 16:08:37:174 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[ERROR] 16:08:42:511 kernel.log/(123457:123465): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 16:08:42:513 kernel.log/(123457:123460): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:08:42:513 kernel.log/(123457:123460): PID: <1000> ingresa a EXECUTE
+[INFO] 16:08:42:513 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[INFO] 16:08:42:571 kernel.log/(123457:123462): PID: <1000> enviada a CPU
+[ERROR] 16:08:44:126 kernel.log/(123457:123462): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 16:14:43:122 kernel.log/(123457:123457): Finalizando módulo Kernel
+[INFO] 16:14:46:531 kernel.log/(123525:123525): Se crea la Tabla Global de Archivos
+[INFO] 16:14:46:531 kernel.log/(123525:123525): Se crea el diccionario con los recursos.
+[INFO] 16:14:46:531 kernel.log/(123525:123525): Se agrego el recurso DISCO al diccionario
+[INFO] 16:14:46:531 kernel.log/(123525:123525): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 16:15:30:483 kernel.log/(123541:123541): Se crea la Tabla Global de Archivos
+[INFO] 16:15:30:483 kernel.log/(123541:123541): Se crea el diccionario con los recursos.
+[INFO] 16:15:30:483 kernel.log/(123541:123541): Se agrego el recurso DISCO al diccionario
+[INFO] 16:15:30:483 kernel.log/(123541:123541): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 16:16:18:692 kernel.log/(123557:123557): Se crea la Tabla Global de Archivos
+[INFO] 16:16:18:693 kernel.log/(123557:123557): Se crea el diccionario con los recursos.
+[INFO] 16:16:18:693 kernel.log/(123557:123557): Se agrego el recurso DISCO al diccionario
+[INFO] 16:16:18:693 kernel.log/(123557:123557): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 16:16:18:694 kernel.log/(123557:123557): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 16:16:26:368 kernel.log/(123557:123560): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:16:26:368 kernel.log/(123557:123560): PID: <1000> ingresa a EXECUTE
+[INFO] 16:16:26:368 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[INFO] 16:16:36:595 kernel.log/(123557:123562): El archivo <Consoles> existe en FileSystem
+[INFO] 16:16:36:595 kernel.log/(123557:123562): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 16:16:36:595 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[INFO] 16:16:36:641 kernel.log/(123557:123565): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 16:16:36:641 kernel.log/(123557:123560): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:16:36:641 kernel.log/(123557:123560): PID: <1000> ingresa a EXECUTE
+[INFO] 16:16:36:641 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[INFO] 16:16:36:694 kernel.log/(123557:123562): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 16:16:36:698 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[ERROR] 16:16:38:018 kernel.log/(123557:123565): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 16:16:38:018 kernel.log/(123557:123560): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:16:38:018 kernel.log/(123557:123560): PID: <1000> ingresa a EXECUTE
+[INFO] 16:16:38:018 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[ERROR] 16:16:38:088 kernel.log/(123557:123565): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 16:16:38:088 kernel.log/(123557:123560): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 16:16:38:088 kernel.log/(123557:123560): PID: <1000> ingresa a EXECUTE
+[INFO] 16:16:38:088 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[INFO] 16:16:38:184 kernel.log/(123557:123562): PID: <1000> enviada a CPU
+[INFO] 17:45:31:172 kernel.log/(126490:126490): Se crea la Tabla Global de Archivos
+[INFO] 17:45:31:191 kernel.log/(126490:126490): Se crea el diccionario con los recursos.
+[INFO] 17:45:31:195 kernel.log/(126490:126490): Se agrego el recurso DISCO al diccionario
+[INFO] 17:45:31:195 kernel.log/(126490:126490): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 17:45:31:200 kernel.log/(126490:126490): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:45:35:233 kernel.log/(126490:126493): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:45:35:233 kernel.log/(126490:126493): PID: <1000> ingresa a EXECUTE
+[INFO] 17:45:35:236 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[INFO] 17:45:45:530 kernel.log/(126490:126495): El archivo <Consoles> existe en FileSystem
+[INFO] 17:45:45:530 kernel.log/(126490:126495): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 17:45:45:530 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[INFO] 17:45:45:620 kernel.log/(126490:126498): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 17:45:45:620 kernel.log/(126490:126493): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:45:45:620 kernel.log/(126490:126493): PID: <1000> ingresa a EXECUTE
+[INFO] 17:45:45:621 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[INFO] 17:45:45:652 kernel.log/(126490:126495): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 17:45:45:652 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[INFO] 17:45:46:693 kernel.log/(126490:126498): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 17:45:46:693 kernel.log/(126490:126493): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:45:46:693 kernel.log/(126490:126493): PID: <1000> ingresa a EXECUTE
+[INFO] 17:45:46:693 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[ERROR] 17:45:50:886 kernel.log/(126490:126498): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 17:45:50:886 kernel.log/(126490:126493): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:45:50:886 kernel.log/(126490:126493): PID: <1000> ingresa a EXECUTE
+[INFO] 17:45:50:886 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[INFO] 17:45:50:903 kernel.log/(126490:126495): PID: <1000> enviada a CPU
+[INFO] 17:51:08:752 kernel.log/(126705:126705): Se crea la Tabla Global de Archivos
+[INFO] 17:51:08:753 kernel.log/(126705:126705): Se crea el diccionario con los recursos.
+[INFO] 17:51:08:753 kernel.log/(126705:126705): Se agrego el recurso DISCO al diccionario
+[INFO] 17:51:08:753 kernel.log/(126705:126705): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 17:51:08:760 kernel.log/(126705:126705): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:51:11:890 kernel.log/(126705:126708): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:51:11:890 kernel.log/(126705:126708): PID: <1000> ingresa a EXECUTE
+[INFO] 17:51:11:890 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[INFO] 17:51:22:082 kernel.log/(126705:126710): El archivo <Consoles> existe en FileSystem
+[INFO] 17:51:22:082 kernel.log/(126705:126710): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 17:51:22:082 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[INFO] 17:51:22:161 kernel.log/(126705:126713): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 17:51:22:161 kernel.log/(126705:126708): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:51:22:161 kernel.log/(126705:126708): PID: <1000> ingresa a EXECUTE
+[INFO] 17:51:22:161 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[INFO] 17:51:22:236 kernel.log/(126705:126710): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 17:51:22:236 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[ERROR] 17:51:24:077 kernel.log/(126705:126713): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 17:51:24:080 kernel.log/(126705:126708): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:51:24:080 kernel.log/(126705:126708): PID: <1000> ingresa a EXECUTE
+[INFO] 17:51:24:080 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[ERROR] 17:51:24:132 kernel.log/(126705:126713): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 17:51:24:132 kernel.log/(126705:126708): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:51:24:132 kernel.log/(126705:126708): PID: <1000> ingresa a EXECUTE
+[INFO] 17:51:24:132 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[INFO] 17:51:24:209 kernel.log/(126705:126710): PID: <1000> enviada a CPU
+[INFO] 17:55:41:384 kernel.log/(126817:126817): Se crea la Tabla Global de Archivos
+[INFO] 17:55:41:385 kernel.log/(126817:126817): Se crea el diccionario con los recursos.
+[INFO] 17:55:41:385 kernel.log/(126817:126817): Se agrego el recurso DISCO al diccionario
+[INFO] 17:55:41:386 kernel.log/(126817:126817): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 17:55:41:397 kernel.log/(126817:126817): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 17:55:43:499 kernel.log/(126817:126820): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:55:43:499 kernel.log/(126817:126820): PID: <1000> ingresa a EXECUTE
+[INFO] 17:55:43:499 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[INFO] 17:55:53:689 kernel.log/(126817:126822): El archivo <Consoles> existe en FileSystem
+[INFO] 17:55:53:690 kernel.log/(126817:126822): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 17:55:53:691 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[INFO] 17:55:53:778 kernel.log/(126817:126825): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 17:55:53:778 kernel.log/(126817:126820): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:55:53:778 kernel.log/(126817:126820): PID: <1000> ingresa a EXECUTE
+[INFO] 17:55:53:778 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[INFO] 17:55:53:828 kernel.log/(126817:126822): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 17:55:53:829 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[ERROR] 17:55:55:181 kernel.log/(126817:126825): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 17:55:55:184 kernel.log/(126817:126820): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:55:55:184 kernel.log/(126817:126820): PID: <1000> ingresa a EXECUTE
+[INFO] 17:55:55:184 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[ERROR] 17:55:55:214 kernel.log/(126817:126825): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 17:55:55:214 kernel.log/(126817:126820): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 17:55:55:214 kernel.log/(126817:126820): PID: <1000> ingresa a EXECUTE
+[INFO] 17:55:55:214 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[INFO] 17:55:55:369 kernel.log/(126817:126822): PID: <1000> enviada a CPU
+[ERROR] 17:55:56:778 kernel.log/(126817:126822): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 17:59:05:053 kernel.log/(126817:126817): Finalizando módulo Kernel
+[INFO] 18:00:41:407 kernel.log/(126958:126958): Se crea la Tabla Global de Archivos
+[INFO] 18:00:41:407 kernel.log/(126958:126958): Se crea el diccionario con los recursos.
+[INFO] 18:00:41:407 kernel.log/(126958:126958): Se agrego el recurso DISCO al diccionario
+[INFO] 18:00:41:407 kernel.log/(126958:126958): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:00:41:412 kernel.log/(126958:126958): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:00:45:162 kernel.log/(126958:126961): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:00:45:162 kernel.log/(126958:126961): PID: <1000> ingresa a EXECUTE
+[INFO] 18:00:45:162 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[INFO] 18:00:55:349 kernel.log/(126958:126963): El archivo <Consoles> existe en FileSystem
+[INFO] 18:00:55:349 kernel.log/(126958:126963): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:00:55:349 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[INFO] 18:00:55:403 kernel.log/(126958:126966): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:00:55:403 kernel.log/(126958:126961): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:00:55:403 kernel.log/(126958:126961): PID: <1000> ingresa a EXECUTE
+[INFO] 18:00:55:403 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[INFO] 18:00:55:475 kernel.log/(126958:126963): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:00:55:476 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[INFO] 18:00:56:551 kernel.log/(126958:126966): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:00:56:551 kernel.log/(126958:126961): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:00:56:551 kernel.log/(126958:126961): PID: <1000> ingresa a EXECUTE
+[INFO] 18:00:56:551 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[INFO] 18:00:57:592 kernel.log/(126958:126966): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:00:57:592 kernel.log/(126958:126961): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:00:57:592 kernel.log/(126958:126961): PID: <1000> ingresa a EXECUTE
+[INFO] 18:00:57:592 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[INFO] 18:00:57:688 kernel.log/(126958:126963): PID: <1000> enviada a CPU
+[ERROR] 18:00:59:211 kernel.log/(126958:126963): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 18:04:08:565 kernel.log/(126958:126958): Finalizando módulo Kernel
+[INFO] 18:05:27:449 kernel.log/(127055:127055): Se crea la Tabla Global de Archivos
+[INFO] 18:05:27:456 kernel.log/(127055:127055): Se crea el diccionario con los recursos.
+[INFO] 18:05:27:457 kernel.log/(127055:127055): Se agrego el recurso DISCO al diccionario
+[INFO] 18:05:27:457 kernel.log/(127055:127055): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:05:27:466 kernel.log/(127055:127055): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:05:30:428 kernel.log/(127055:127058): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:05:30:428 kernel.log/(127055:127058): PID: <1000> ingresa a EXECUTE
+[INFO] 18:05:30:428 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[INFO] 18:05:40:560 kernel.log/(127055:127060): El archivo <Consoles> existe en FileSystem
+[INFO] 18:05:40:560 kernel.log/(127055:127060): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:05:40:560 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[INFO] 18:05:40:648 kernel.log/(127055:127063): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:05:40:648 kernel.log/(127055:127058): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:05:40:648 kernel.log/(127055:127058): PID: <1000> ingresa a EXECUTE
+[INFO] 18:05:40:648 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[INFO] 18:05:40:740 kernel.log/(127055:127060): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:05:40:741 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[ERROR] 18:05:42:085 kernel.log/(127055:127063): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 18:05:42:088 kernel.log/(127055:127058): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:05:42:088 kernel.log/(127055:127058): PID: <1000> ingresa a EXECUTE
+[INFO] 18:05:42:088 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[ERROR] 18:05:42:160 kernel.log/(127055:127063): [ERROR] Error al recibir respuesta de petición de FILE SYSTEM.
+[INFO] 18:05:42:161 kernel.log/(127055:127058): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:05:42:161 kernel.log/(127055:127058): PID: <1000> ingresa a EXECUTE
+[INFO] 18:05:42:161 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[INFO] 18:05:42:271 kernel.log/(127055:127060): PID: <1000> enviada a CPU
+[ERROR] 18:05:43:711 kernel.log/(127055:127060): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 18:18:47:834 kernel.log/(127055:127055): Finalizando módulo Kernel
+[INFO] 18:19:01:648 kernel.log/(127332:127332): Se crea la Tabla Global de Archivos
+[INFO] 18:19:01:648 kernel.log/(127332:127332): Se crea el diccionario con los recursos.
+[INFO] 18:19:01:648 kernel.log/(127332:127332): Se agrego el recurso DISCO al diccionario
+[INFO] 18:19:01:648 kernel.log/(127332:127332): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:20:03:912 kernel.log/(127354:127354): Se crea la Tabla Global de Archivos
+[INFO] 18:20:03:912 kernel.log/(127354:127354): Se crea el diccionario con los recursos.
+[INFO] 18:20:03:913 kernel.log/(127354:127354): Se agrego el recurso DISCO al diccionario
+[INFO] 18:20:03:913 kernel.log/(127354:127354): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:20:03:920 kernel.log/(127354:127354): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:20:10:093 kernel.log/(127354:127357): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:20:10:093 kernel.log/(127354:127357): PID: <1000> ingresa a EXECUTE
+[INFO] 18:20:10:093 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:20:20:324 kernel.log/(127354:127359): El archivo <Consoles> existe en FileSystem
+[INFO] 18:20:20:324 kernel.log/(127354:127359): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:20:20:324 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:20:20:377 kernel.log/(127354:127362): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:20:20:377 kernel.log/(127354:127357): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:20:20:377 kernel.log/(127354:127357): PID: <1000> ingresa a EXECUTE
+[INFO] 18:20:20:377 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:20:20:449 kernel.log/(127354:127359): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:20:20:452 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:20:21:539 kernel.log/(127354:127362): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:20:21:539 kernel.log/(127354:127357): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:20:21:539 kernel.log/(127354:127357): PID: <1000> ingresa a EXECUTE
+[INFO] 18:20:21:539 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:20:22:598 kernel.log/(127354:127362): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:20:22:598 kernel.log/(127354:127357): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:20:22:598 kernel.log/(127354:127357): PID: <1000> ingresa a EXECUTE
+[INFO] 18:20:22:598 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:20:22:626 kernel.log/(127354:127359): PID: <1000> enviada a CPU
+[INFO] 18:27:03:649 kernel.log/(127523:127523): Se crea la Tabla Global de Archivos
+[INFO] 18:27:03:649 kernel.log/(127523:127523): Se crea el diccionario con los recursos.
+[INFO] 18:27:03:650 kernel.log/(127523:127523): Se agrego el recurso DISCO al diccionario
+[INFO] 18:27:03:650 kernel.log/(127523:127523): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:27:03:656 kernel.log/(127523:127523): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:27:07:556 kernel.log/(127523:127526): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:27:07:556 kernel.log/(127523:127526): PID: <1000> ingresa a EXECUTE
+[INFO] 18:27:07:556 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[INFO] 18:27:17:740 kernel.log/(127523:127528): El archivo <Consoles> existe en FileSystem
+[INFO] 18:27:17:740 kernel.log/(127523:127528): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:27:17:740 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[INFO] 18:27:17:804 kernel.log/(127523:127531): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:27:17:806 kernel.log/(127523:127526): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:27:17:806 kernel.log/(127523:127526): PID: <1000> ingresa a EXECUTE
+[INFO] 18:27:17:806 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[INFO] 18:27:17:872 kernel.log/(127523:127528): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:27:17:872 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[INFO] 18:27:18:951 kernel.log/(127523:127531): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:27:18:951 kernel.log/(127523:127526): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:27:18:951 kernel.log/(127523:127526): PID: <1000> ingresa a EXECUTE
+[INFO] 18:27:18:951 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[INFO] 18:27:20:005 kernel.log/(127523:127531): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:27:20:005 kernel.log/(127523:127526): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:27:20:005 kernel.log/(127523:127526): PID: <1000> ingresa a EXECUTE
+[INFO] 18:27:20:005 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[INFO] 18:27:20:053 kernel.log/(127523:127528): PID: <1000> enviada a CPU
+[ERROR] 18:27:21:347 kernel.log/(127523:127528): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 18:30:40:942 kernel.log/(127523:127523): Finalizando módulo Kernel
+[INFO] 18:31:32:787 kernel.log/(127607:127607): Se crea la Tabla Global de Archivos
+[INFO] 18:31:32:787 kernel.log/(127607:127607): Se crea el diccionario con los recursos.
+[INFO] 18:31:32:787 kernel.log/(127607:127607): Se agrego el recurso DISCO al diccionario
+[INFO] 18:31:32:787 kernel.log/(127607:127607): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:33:18:273 kernel.log/(127665:127665): Se crea la Tabla Global de Archivos
+[INFO] 18:33:18:290 kernel.log/(127665:127665): Se crea el diccionario con los recursos.
+[INFO] 18:33:18:290 kernel.log/(127665:127665): Se agrego el recurso DISCO al diccionario
+[INFO] 18:33:18:290 kernel.log/(127665:127665): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:33:18:291 kernel.log/(127665:127665): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[ERROR] 18:33:54:984 kernel.log/(127665:127665): Finalizando módulo Kernel
+[INFO] 18:35:55:537 kernel.log/(127757:127757): Se crea la Tabla Global de Archivos
+[INFO] 18:35:55:544 kernel.log/(127757:127757): Se crea el diccionario con los recursos.
+[INFO] 18:35:55:545 kernel.log/(127757:127757): Se agrego el recurso DISCO al diccionario
+[INFO] 18:35:55:545 kernel.log/(127757:127757): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:35:55:570 kernel.log/(127757:127757): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[ERROR] 18:36:35:177 kernel.log/(127757:127757): Finalizando módulo Kernel
+[INFO] 18:39:14:307 kernel.log/(127820:127820): Se crea la Tabla Global de Archivos
+[INFO] 18:39:14:332 kernel.log/(127820:127820): Se crea el diccionario con los recursos.
+[INFO] 18:39:14:332 kernel.log/(127820:127820): Se agrego el recurso DISCO al diccionario
+[INFO] 18:39:14:332 kernel.log/(127820:127820): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:39:14:333 kernel.log/(127820:127820): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:39:33:039 kernel.log/(127820:127823): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:39:33:039 kernel.log/(127820:127823): PID: <1000> ingresa a EXECUTE
+[INFO] 18:39:33:039 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:40:01:539 kernel.log/(127820:127825): El archivo <Consoles> existe en FileSystem
+[INFO] 18:40:01:540 kernel.log/(127820:127825): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:40:01:540 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:40:47:133 kernel.log/(127820:127828): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:40:47:136 kernel.log/(127820:127823): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:40:47:136 kernel.log/(127820:127823): PID: <1000> ingresa a EXECUTE
+[INFO] 18:40:47:136 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:40:47:241 kernel.log/(127820:127825): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:40:47:242 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:46:28:501 kernel.log/(127820:127828): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:46:28:504 kernel.log/(127820:127823): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:46:28:504 kernel.log/(127820:127823): PID: <1000> ingresa a EXECUTE
+[INFO] 18:46:28:504 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:50:30:254 kernel.log/(127820:127828): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:50:30:256 kernel.log/(127820:127823): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:50:30:256 kernel.log/(127820:127823): PID: <1000> ingresa a EXECUTE
+[INFO] 18:50:30:256 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:50:30:334 kernel.log/(127820:127825): PID: <1000> enviada a CPU
+[INFO] 18:55:22:326 kernel.log/(128135:128135): Se crea la Tabla Global de Archivos
+[INFO] 18:55:22:332 kernel.log/(128135:128135): Se crea el diccionario con los recursos.
+[INFO] 18:55:22:334 kernel.log/(128135:128135): Se agrego el recurso DISCO al diccionario
+[INFO] 18:55:22:336 kernel.log/(128135:128135): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 18:55:22:352 kernel.log/(128135:128135): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 18:55:31:112 kernel.log/(128135:128138): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:55:31:112 kernel.log/(128135:128138): PID: <1000> ingresa a EXECUTE
+[INFO] 18:55:31:112 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:41:324 kernel.log/(128135:128140): El archivo <Consoles> existe en FileSystem
+[INFO] 18:55:41:324 kernel.log/(128135:128140): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:55:41:324 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:41:410 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:55:41:410 kernel.log/(128135:128138): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:55:41:410 kernel.log/(128135:128138): PID: <1000> ingresa a EXECUTE
+[INFO] 18:55:41:410 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:41:496 kernel.log/(128135:128140): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:55:41:502 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:42:607 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:55:42:607 kernel.log/(128135:128138): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:55:42:607 kernel.log/(128135:128138): PID: <1000> ingresa a EXECUTE
+[INFO] 18:55:42:607 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:43:657 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:55:43:658 kernel.log/(128135:128138): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:55:43:658 kernel.log/(128135:128138): PID: <1000> ingresa a EXECUTE
+[INFO] 18:55:43:658 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:43:702 kernel.log/(128135:128140): PID: <1000> enviada a CPU
+[INFO] 18:55:43:789 kernel.log/(128135:128136): PID: <1000> liberando estructuras en memoria
+[INFO] 18:55:43:829 kernel.log/(128135:128136): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 18:55:56:081 kernel.log/(128135:128138): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:55:56:081 kernel.log/(128135:128138): PID: <1001> ingresa a EXECUTE
+[INFO] 18:55:56:081 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:06:160 kernel.log/(128135:128140): El archivo <Consoles> existe en FileSystem
+[INFO] 18:56:06:160 kernel.log/(128135:128140): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:56:06:160 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:06:220 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:56:06:220 kernel.log/(128135:128138): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:06:220 kernel.log/(128135:128138): PID: <1001> ingresa a EXECUTE
+[INFO] 18:56:06:220 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:06:263 kernel.log/(128135:128140): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:56:06:263 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:07:316 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:56:07:316 kernel.log/(128135:128138): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:07:316 kernel.log/(128135:128138): PID: <1001> ingresa a EXECUTE
+[INFO] 18:56:07:316 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:08:378 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:56:08:378 kernel.log/(128135:128138): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:08:378 kernel.log/(128135:128138): PID: <1001> ingresa a EXECUTE
+[INFO] 18:56:08:378 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:08:396 kernel.log/(128135:128140): PID: <1001> enviada a CPU
+[INFO] 18:56:08:436 kernel.log/(128135:128136): PID: <1001> liberando estructuras en memoria
+[INFO] 18:56:08:437 kernel.log/(128135:128136): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 18:56:40:788 kernel.log/(128135:128138): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:40:788 kernel.log/(128135:128138): PID: <1002> ingresa a EXECUTE
+[INFO] 18:56:40:788 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:50:884 kernel.log/(128135:128140): El archivo <Consoles> existe en FileSystem
+[INFO] 18:56:50:884 kernel.log/(128135:128140): Agregado archivo <Consoles> a la Tabla Global de Archivos.
+[INFO] 18:56:50:884 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:50:937 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:56:50:937 kernel.log/(128135:128138): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:50:937 kernel.log/(128135:128138): PID: <1002> ingresa a EXECUTE
+[INFO] 18:56:50:937 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:50:994 kernel.log/(128135:128140): Actualización del puntero a <128> del archivo: <Consoles>
+[INFO] 18:56:50:994 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:52:063 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:56:52:063 kernel.log/(128135:128138): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:52:064 kernel.log/(128135:128138): PID: <1002> ingresa a EXECUTE
+[INFO] 18:56:52:064 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:53:104 kernel.log/(128135:128143): Peticion FILE SYSTEM terminada con éxito.
+[INFO] 18:56:53:104 kernel.log/(128135:128138): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 18:56:53:104 kernel.log/(128135:128138): PID: <1002> ingresa a EXECUTE
+[INFO] 18:56:53:104 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:53:113 kernel.log/(128135:128140): PID: <1002> enviada a CPU
+[INFO] 18:56:53:132 kernel.log/(128135:128136): PID: <1002> liberando estructuras en memoria
+[INFO] 18:56:53:133 kernel.log/(128135:128136): Ordenando a Consola la finalización del PID: <1002>
+[ERROR] 18:57:14:003 kernel.log/(128135:128135): Finalizando módulo Kernel

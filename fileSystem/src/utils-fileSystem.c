@@ -246,7 +246,7 @@ void escribir_archivo(char* nombre_archivo,int nro_byte_archivo,void* direccion_
 			escribir_bytes_diferentes_bloques(nro_bloque_inicial,nro_byte_archivo,direccion_fisica,cantidad_bytes_escribir,config_fcb_archivo,nombre_archivo);
 		}
 
-		log_info(logger,"Escribir Archivo: <%s> - Puntero <%i> - Memoria <%i> - Tamaño <%i>",nombre_archivo,nro_byte_archivo,direccion_fisica,cantidad_bytes_escribir);
+		log_info(logger,"Escribir Archivo: <%s> - Puntero <%i> - Tamaño <%i>",nombre_archivo,nro_byte_archivo,cantidad_bytes_escribir);
 
 		config_destroy(config_fcb_archivo);
 
@@ -298,6 +298,8 @@ void* leer_archivo(char* nombre_archivo,int nro_byte_archivo,int cantidad_bytes_
 		{
 			leido = leer_bytes_en_bloques_distintos( nro_bloque_inicial, nro_byte_archivo, cantidad_bytes_leer, config_fcb_archivo,nombre_archivo);
 		}
+
+		printf("%s\n",leido);
 
 		free(ruta);
 
@@ -539,4 +541,9 @@ char* obtener_ruta_archivo(const char* nombre_archivo)
 	concatenar_strings(ruta_incompleta,nombre_archivo,ruta);
 
 	return ruta;
+}
+
+int agregar_a_stream(void *stream, int* offset, void *src, int size) {
+	memcpy(stream + *offset, src, size);
+	*offset += size;
 }

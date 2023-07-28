@@ -83,8 +83,9 @@ void manejar_conexion(int* fd_cliente) {
 		recv(socket_cliente, paquete->buffer->stream, paquete->buffer->stream_size, 0);
 		int tamanio_valor;
 		int direccion_fisica;
-		char* valor;
 		void* stream = paquete->buffer->stream;
+
+		printf("%i\n",paquete->codigo_operacion);
 
 		switch(paquete->codigo_operacion) {
 		case LEER_DE_MEMORIA :
@@ -161,15 +162,17 @@ void manejar_conexion(int* fd_cliente) {
 			memcpy(&tamanio_valor, stream, sizeof(int));
 			stream += sizeof(int);
 
-			valor = malloc(tamanio_valor);
-			memset(valor_a_escribir, 0, tamanio_valor);
+
+
+			char* valor = malloc(tamanio_valor);
+			memset(valor, 0, tamanio_valor);
 
 			memcpy(valor, stream, tamanio_valor);
 			stream += tamanio_valor;
 
-			log_info(logger, "File System quiere escribir en la dirección <%d> el valor <%s>, de tamaño <%d>", direccion_fisica, valor_a_escribir, tamanio_valor);
+			log_info(logger, "File System quiere escribir en la dirección <%d> el valor <%s>, de tamaño <%d>", direccion_fisica, valor, tamanio_valor);
 
-			recv_escribir_en_memoria(direccion_fisica, tamanio_valor, valor_a_escribir, socket_cliente);
+			recv_escribir_en_memoria(direccion_fisica, tamanio_valor, valor, socket_cliente);
 
 	//		pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;

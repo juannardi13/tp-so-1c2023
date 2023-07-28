@@ -58,7 +58,7 @@ void escribir_bytes_mismo_bloque(int nro_byte_archivo,int nro_bloque_inicial,voi
 
 
 
-void escribir_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_escritura,char* contenido_escribir,int start_escritura,int cantidad_bytes_escribir,int* cantidad_bytes_asignados,t_config* config_fcb_archivo,char* nombre_archivo)
+void escribir_bytes_en_bloque(int nro_byte_archivo,int nro_bloque_escritura,void* contenido_escribir,int start_escritura,int cantidad_bytes_escribir,int* cantidad_bytes_asignados,t_config* config_fcb_archivo,char* nombre_archivo)
 {
 //	printf("------------------------------------\n");
 //
@@ -135,6 +135,8 @@ void escribir_bytes_diferentes_bloques(int nro_bloque_inicial,int nro_byte_archi
 //	printf("Logs función escribir_bytes_diferentes_bloques\n");
 
 	void* contenido_escribir = malloc(cantidad_bytes_escribir);
+
+	memset(contenido_escribir,0,cantidad_bytes_escribir);
 
 	memcpy(contenido_escribir,direccion_fisica,cantidad_bytes_escribir);
 

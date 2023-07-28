@@ -93,7 +93,7 @@ void funcion_archivo(char* key, void* elemento) {
 		proceso->llegada_ready = get_time();
 		pthread_mutex_unlock(&mutex_ready);
 
-		//sem_post(&sem_ready);
+		sem_post(&sem_ready);
 	}
 
 	pthread_mutex_unlock(archivo->mutex_instancia_usada);

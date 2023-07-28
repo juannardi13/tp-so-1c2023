@@ -936,3 +936,589 @@
 [INFO] 05:42:31:883 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET EBX THESTORY>
 [INFO] 05:42:32:884 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
 [INFO] 05:42:32:885 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 13:31:11:830 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:31:11:930 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 13:31:11:967 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:31:12:059 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 13:31:20:144 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 13:31:21:147 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 13:31:22:149 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 13:31:23:151 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 13:31:24:155 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 13:31:25:159 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 13:31:26:162 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 13:31:26:164 cpu_principal.log/(118438:118438): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 13:34:38:066 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:34:38:143 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 13:34:38:208 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:34:38:255 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 13:34:46:282 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 13:34:47:292 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 13:34:48:294 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 13:34:49:296 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 13:34:50:297 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 13:34:51:301 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 13:34:52:303 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 13:34:52:309 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 13:34:52:402 cpu_principal.log/(118650:118650): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 13:42:55:441 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:42:55:543 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 13:42:55:612 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:42:55:670 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 13:43:03:763 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 13:43:04:772 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 13:43:05:778 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 13:43:06:782 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 13:43:07:787 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 13:43:08:791 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 13:43:09:792 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 13:43:09:795 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 13:43:09:838 cpu_principal.log/(118857:118857): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 13:51:28:127 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:51:28:246 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 13:51:28:313 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:51:28:371 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 13:51:36:405 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 13:51:37:407 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 13:51:38:408 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 13:51:39:410 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 13:51:40:411 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 13:51:41:413 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 13:51:42:420 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 13:51:42:422 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 13:51:42:468 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 13:51:42:527 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 13:51:47:577 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 13:51:47:605 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <IO 2>
+[INFO] 13:51:49:615 cpu_principal.log/(119141:119141): PID: <1000> - Ejecutando: <EXIT >
+[INFO] 13:52:08:046 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:52:08:109 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 13:52:08:167 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 13:52:08:224 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <IO 7>
+[INFO] 13:52:16:260 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET AX TINI>
+[INFO] 13:52:17:276 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET BX ELLA>
+[INFO] 13:52:18:277 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET CX DICE>
+[INFO] 13:52:19:279 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET DX TAYL>
+[INFO] 13:52:20:279 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 13:52:21:282 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET EBX THESTORY>
+[INFO] 13:52:22:284 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 13:52:22:286 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 13:52:22:303 cpu_principal.log/(119141:119141): PID: <1001> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:05:11:501 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:08:42:519 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:10:08:913 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:11:32:998 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 14:12:23:703 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 14:12:24:705 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 14:12:25:707 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 14:12:26:710 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 14:12:27:711 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:12:28:713 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:12:29:716 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:12:29:717 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:13:59:706 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:19:12:938 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 14:19:53:536 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 14:21:52:925 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <IO 2>
+[INFO] 14:22:18:324 cpu_principal.log/(119281:119281): PID: <1000> - Ejecutando: <EXIT >
+[INFO] 14:23:52:004 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:28:33:162 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:29:03:093 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:31:09:324 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <IO 7>
+[INFO] 14:31:47:742 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET AX TINI>
+[INFO] 14:31:48:742 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET BX ELLA>
+[INFO] 14:31:49:744 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET CX DICE>
+[INFO] 14:31:50:745 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET DX TAYL>
+[INFO] 14:31:51:746 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:31:52:747 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:31:53:750 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:31:53:751 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:33:09:381 cpu_principal.log/(119281:119281): PID: <1001> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:41:54:626 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:41:54:733 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:41:54:782 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:41:54:829 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 14:42:02:862 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 14:42:03:863 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 14:42:04:865 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 14:42:05:866 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 14:42:06:868 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:42:07:871 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:42:08:873 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:42:08:874 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:42:08:939 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:42:28:540 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 14:42:35:858 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 14:42:35:915 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <IO 2>
+[INFO] 14:42:37:940 cpu_principal.log/(120831:120831): PID: <1000> - Ejecutando: <EXIT >
+[INFO] 14:42:54:680 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:42:54:748 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:42:54:834 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:42:54:864 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <IO 7>
+[INFO] 14:43:02:906 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET AX TINI>
+[INFO] 14:43:03:907 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET BX ELLA>
+[INFO] 14:43:04:908 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET CX DICE>
+[INFO] 14:43:05:908 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET DX TAYL>
+[INFO] 14:43:06:910 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:43:07:912 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:43:08:913 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:43:08:914 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:43:08:957 cpu_principal.log/(120831:120831): PID: <1001> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:45:31:401 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:45:31:494 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:45:31:565 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:45:31:602 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 14:45:39:638 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 14:45:40:641 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 14:45:41:642 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 14:45:42:643 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 14:45:43:644 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:45:44:646 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:45:45:647 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:45:45:650 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:45:45:696 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:46:11:941 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 14:46:18:406 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 14:46:18:446 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <IO 2>
+[INFO] 14:46:20:504 cpu_principal.log/(120963:120963): PID: <1000> - Ejecutando: <EXIT >
+[INFO] 14:46:29:116 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:46:29:160 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:46:29:214 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:46:29:247 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <IO 7>
+[INFO] 14:46:37:284 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET AX TINI>
+[INFO] 14:46:38:286 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET BX ELLA>
+[INFO] 14:46:39:289 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET CX DICE>
+[INFO] 14:46:40:290 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET DX TAYL>
+[INFO] 14:46:41:300 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:46:42:302 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:46:43:303 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:46:43:304 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:46:43:344 cpu_principal.log/(120963:120963): PID: <1001> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:54:29:642 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:54:29:730 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:54:29:814 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:54:29:869 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 14:54:37:931 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 14:54:38:935 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 14:54:39:937 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 14:54:40:939 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 14:54:41:940 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:54:42:943 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:54:43:950 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:54:43:951 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:54:43:971 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:54:44:029 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <IO 5>
+[INFO] 14:54:49:037 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 14:54:49:058 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <IO 2>
+[INFO] 14:54:51:099 cpu_principal.log/(121184:121184): PID: <1000> - Ejecutando: <EXIT >
+[INFO] 14:55:07:704 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:07:731 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:55:07:770 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:07:821 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <IO 7>
+[INFO] 14:55:15:887 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET AX TINI>
+[INFO] 14:55:16:888 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET BX ELLA>
+[INFO] 14:55:17:889 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET CX DICE>
+[INFO] 14:55:18:891 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET DX TAYL>
+[INFO] 14:55:19:893 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:55:20:896 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:55:21:897 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:55:21:898 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:55:21:934 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:55:21:979 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <IO 5>
+[INFO] 14:55:27:031 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 14:55:27:077 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <IO 2>
+[INFO] 14:55:29:099 cpu_principal.log/(121184:121184): PID: <1001> - Ejecutando: <EXIT >
+[INFO] 14:55:38:783 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:38:828 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 14:55:38:876 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 14:55:38:929 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <IO 7>
+[INFO] 14:55:46:950 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET AX TINI>
+[INFO] 14:55:47:953 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET BX ELLA>
+[INFO] 14:55:48:955 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET CX DICE>
+[INFO] 14:55:49:956 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET DX TAYL>
+[INFO] 14:55:50:957 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 14:55:51:962 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET EBX THESTORY>
+[INFO] 14:55:52:963 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 14:55:52:964 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>
+[INFO] 14:55:52:979 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <F_TRUNCATE TAYLOR_TSOU.MP3 47>
+[INFO] 14:55:53:013 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <IO 5>
+[INFO] 14:55:58:037 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <F_CLOSE TAYLOR_TSOU.MP3>
+[INFO] 14:55:58:085 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <IO 2>
+[INFO] 14:56:00:102 cpu_principal.log/(121184:121184): PID: <1002> - Ejecutando: <EXIT >
+[INFO] 14:57:01:238 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET AX SOY_>
+[INFO] 14:57:02:239 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET BX LA__>
+[INFO] 14:57:03:241 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET CX CONS>
+[INFO] 14:57:04:242 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET DX OLA_>
+[INFO] 14:57:05:245 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET EAX LIMPIADO>
+[INFO] 14:57:06:246 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET EBX RA!_____>
+[INFO] 14:57:07:248 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET ECX PONGO___>
+[INFO] 14:57:08:249 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET EDX TODO_EN_>
+[INFO] 14:57:09:252 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET RAX 0_DE_NUEVO!_____>
+[INFO] 14:57:09:255 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <IO 5>
+[INFO] 14:57:15:282 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET AX 0000>
+[INFO] 14:57:16:288 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET BX 0000>
+[INFO] 14:57:17:291 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET CX 0000>
+[INFO] 14:57:18:292 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET DX 0000>
+[INFO] 14:57:19:294 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET EAX 00000000>
+[INFO] 14:57:20:297 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET EBX 00000000>
+[INFO] 14:57:21:299 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET ECX 00000000>
+[INFO] 14:57:22:301 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET EDX 00000000>
+[INFO] 14:57:23:303 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET RAX 0000000000000000>
+[INFO] 14:57:24:304 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET RBX 0000000000000000>
+[INFO] 14:57:25:307 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET RCX 0000000000000000>
+[INFO] 14:57:26:311 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <SET RDX 0000000000000000>
+[INFO] 14:57:26:322 cpu_principal.log/(121184:121184): PID: <1003> - Ejecutando: <EXIT>
+[INFO] 15:36:05:440 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 15:36:05:445 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 15:36:06:475 cpu_principal.log/(122539:122539): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 15:36:07:479 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 15:36:07:480 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 15:36:08:485 cpu_principal.log/(122539:122539): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 15:36:09:489 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 15:36:09:491 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 15:36:10:506 cpu_principal.log/(122539:122539): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 15:36:11:507 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 15:36:11:509 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 15:36:12:518 cpu_principal.log/(122539:122539): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 15:36:13:521 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 15:36:13:522 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 15:36:14:526 cpu_principal.log/(122539:122539): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 15:36:14:527 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 15:36:14:604 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 15:36:17:694 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 15:36:17:736 cpu_principal.log/(122539:122539): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 15:45:08:158 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 15:45:08:164 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 15:45:09:264 cpu_principal.log/(122603:122603): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 15:45:10:267 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 15:45:10:268 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 15:45:11:273 cpu_principal.log/(122603:122603): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 15:45:12:276 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 15:45:12:278 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 15:45:13:295 cpu_principal.log/(122603:122603): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 15:45:14:295 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 15:45:14:296 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 15:45:15:325 cpu_principal.log/(122603:122603): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 15:45:16:335 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 15:45:16:335 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 15:45:17:340 cpu_principal.log/(122603:122603): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 15:45:17:344 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 15:46:27:164 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 15:47:01:562 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 15:47:25:886 cpu_principal.log/(122603:122603): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 15:55:15:650 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 15:55:15:666 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 15:55:16:746 cpu_principal.log/(123016:123016): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 15:55:17:750 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 15:55:17:752 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 15:55:18:764 cpu_principal.log/(123016:123016): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 15:55:19:765 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 15:55:19:769 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 15:55:20:804 cpu_principal.log/(123016:123016): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 15:55:21:811 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 15:55:21:815 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 15:55:22:828 cpu_principal.log/(123016:123016): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 15:55:23:831 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 15:55:23:833 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 15:55:24:859 cpu_principal.log/(123016:123016): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 15:55:24:863 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 15:55:24:994 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 15:55:25:067 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 15:55:25:120 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 15:55:25:185 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 15:55:25:251 cpu_principal.log/(123016:123016): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 15:59:24:076 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 15:59:24:081 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 15:59:25:108 cpu_principal.log/(123107:123107): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 15:59:26:109 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 15:59:26:111 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 15:59:27:125 cpu_principal.log/(123107:123107): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 15:59:28:126 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 15:59:28:127 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 15:59:29:150 cpu_principal.log/(123107:123107): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 15:59:30:151 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 15:59:30:157 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 15:59:31:162 cpu_principal.log/(123107:123107): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 15:59:32:167 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 15:59:32:168 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 15:59:33:177 cpu_principal.log/(123107:123107): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 15:59:33:178 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 15:59:33:334 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 16:00:47:563 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 16:00:48:795 cpu_principal.log/(123107:123107): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 16:08:22:770 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 16:08:22:777 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 16:08:23:825 cpu_principal.log/(123453:123453): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 16:08:24:828 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 16:08:24:833 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 16:08:25:839 cpu_principal.log/(123453:123453): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 16:08:26:842 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 16:08:26:842 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 16:08:27:851 cpu_principal.log/(123453:123453): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 16:08:28:851 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 16:08:28:852 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 16:08:29:858 cpu_principal.log/(123453:123453): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 16:08:30:859 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 16:08:30:867 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 16:08:31:881 cpu_principal.log/(123453:123453): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 16:08:31:885 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 16:08:31:992 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 16:08:32:053 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 16:08:32:114 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 16:08:37:185 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 16:08:42:538 cpu_principal.log/(123453:123453): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 16:16:27:436 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 16:16:27:444 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 16:16:28:509 cpu_principal.log/(123553:123553): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 16:16:29:511 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 16:16:29:513 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 16:16:30:523 cpu_principal.log/(123553:123553): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 16:16:31:525 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 16:16:31:527 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 16:16:32:536 cpu_principal.log/(123553:123553): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 16:16:33:538 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 16:16:33:539 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 16:16:34:544 cpu_principal.log/(123553:123553): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 16:16:35:547 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 16:16:35:547 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 16:16:36:555 cpu_principal.log/(123553:123553): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 16:16:36:560 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 16:16:36:612 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 16:16:36:673 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 16:16:36:754 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 16:16:38:045 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 16:16:38:146 cpu_principal.log/(123553:123553): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 17:45:36:294 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 17:45:36:360 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 17:45:37:410 cpu_principal.log/(126485:126485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 17:45:38:413 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 17:45:38:415 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 17:45:39:427 cpu_principal.log/(126485:126485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 17:45:40:428 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 17:45:40:429 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 17:45:41:433 cpu_principal.log/(126485:126485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 17:45:42:433 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 17:45:42:434 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 17:45:43:439 cpu_principal.log/(126485:126485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 17:45:44:439 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 17:45:44:441 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 17:45:45:449 cpu_principal.log/(126485:126485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 17:45:45:459 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 17:45:45:590 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 17:45:45:644 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 17:45:45:668 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 17:45:46:700 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 17:45:50:892 cpu_principal.log/(126485:126485): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 17:51:12:927 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 17:51:12:937 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 17:51:13:986 cpu_principal.log/(126701:126701): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 17:51:14:988 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 17:51:14:988 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 17:51:15:993 cpu_principal.log/(126701:126701): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 17:51:16:994 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 17:51:16:995 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 17:51:17:999 cpu_principal.log/(126701:126701): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 17:51:19:000 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 17:51:19:006 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 17:51:20:023 cpu_principal.log/(126701:126701): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 17:51:21:024 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 17:51:21:025 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 17:51:22:033 cpu_principal.log/(126701:126701): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 17:51:22:035 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 17:51:22:147 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 17:51:22:207 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 17:51:22:292 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 17:51:24:093 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 17:51:24:187 cpu_principal.log/(126701:126701): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 17:55:44:541 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 17:55:44:546 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 17:55:45:591 cpu_principal.log/(126813:126813): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 17:55:46:603 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 17:55:46:604 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 17:55:47:609 cpu_principal.log/(126813:126813): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 17:55:48:611 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 17:55:48:614 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 17:55:49:637 cpu_principal.log/(126813:126813): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 17:55:50:639 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 17:55:50:641 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 17:55:51:647 cpu_principal.log/(126813:126813): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 17:55:52:649 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 17:55:52:650 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 17:55:53:657 cpu_principal.log/(126813:126813): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 17:55:53:659 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 17:55:53:756 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 17:55:53:819 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 17:55:53:871 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 17:55:55:191 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 17:55:55:322 cpu_principal.log/(126813:126813): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:00:46:218 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:00:46:232 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:00:47:295 cpu_principal.log/(126954:126954): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:00:48:296 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:00:48:297 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:00:49:302 cpu_principal.log/(126954:126954): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:00:50:303 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:00:50:304 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:00:51:309 cpu_principal.log/(126954:126954): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:00:52:311 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:00:52:313 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:00:53:317 cpu_principal.log/(126954:126954): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:00:54:318 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:00:54:319 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:00:55:324 cpu_principal.log/(126954:126954): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:00:55:326 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:00:55:380 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:00:55:449 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:00:55:512 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:00:56:568 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:00:57:633 cpu_principal.log/(126954:126954): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:05:31:453 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:05:31:460 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:05:32:507 cpu_principal.log/(127051:127051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:05:33:513 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:05:33:513 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:05:34:518 cpu_principal.log/(127051:127051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:05:35:521 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:05:35:523 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:05:36:530 cpu_principal.log/(127051:127051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:05:37:532 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:05:37:533 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:05:38:541 cpu_principal.log/(127051:127051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:05:39:543 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:05:39:544 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:05:40:548 cpu_principal.log/(127051:127051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:05:40:549 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:05:40:621 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:05:40:708 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:05:40:793 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:05:42:105 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:05:42:245 cpu_principal.log/(127051:127051): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:20:11:156 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:20:11:171 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:20:12:215 cpu_principal.log/(127350:127350): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:20:13:217 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:20:13:218 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:20:14:222 cpu_principal.log/(127350:127350): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:20:15:224 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:20:15:227 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:20:16:242 cpu_principal.log/(127350:127350): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:20:17:245 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:20:17:248 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:20:18:270 cpu_principal.log/(127350:127350): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:20:19:272 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:20:19:273 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:20:20:281 cpu_principal.log/(127350:127350): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:20:20:284 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:20:20:356 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:20:20:419 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:20:20:485 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:20:21:562 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:20:22:610 cpu_principal.log/(127350:127350): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:27:08:597 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:27:08:617 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:27:09:652 cpu_principal.log/(127519:127519): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:27:10:654 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:27:10:654 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:27:11:658 cpu_principal.log/(127519:127519): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:27:12:659 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:27:12:660 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:27:13:667 cpu_principal.log/(127519:127519): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:27:14:670 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:27:14:670 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:27:15:674 cpu_principal.log/(127519:127519): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:27:16:677 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:27:16:678 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:27:17:686 cpu_principal.log/(127519:127519): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:27:17:688 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:27:17:770 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:27:17:844 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:27:17:912 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:27:18:973 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:27:20:021 cpu_principal.log/(127519:127519): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:39:34:120 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:39:34:129 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:39:35:176 cpu_principal.log/(127774:127774): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:39:36:184 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:39:36:185 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:39:37:192 cpu_principal.log/(127774:127774): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:39:38:194 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:39:38:194 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:39:39:209 cpu_principal.log/(127774:127774): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:39:40:214 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:39:40:214 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:39:41:223 cpu_principal.log/(127774:127774): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:39:42:224 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:39:42:225 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:39:43:233 cpu_principal.log/(127774:127774): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:39:43:236 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:40:01:581 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:40:47:211 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:40:47:285 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:46:28:549 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:50:30:295 cpu_principal.log/(127774:127774): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:55:32:150 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:55:32:159 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:55:33:208 cpu_principal.log/(128131:128131): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:55:34:218 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:55:34:219 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:55:35:227 cpu_principal.log/(128131:128131): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:55:36:229 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:55:36:230 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:55:37:235 cpu_principal.log/(128131:128131): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:55:38:236 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:55:38:237 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:55:39:244 cpu_principal.log/(128131:128131): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:55:40:245 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:55:40:247 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:55:41:256 cpu_principal.log/(128131:128131): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:55:41:260 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:55:41:378 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:55:41:471 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:55:41:530 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:55:42:638 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:55:43:674 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:55:43:766 cpu_principal.log/(128131:128131): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 18:55:57:096 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:55:57:097 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:55:58:104 cpu_principal.log/(128131:128131): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:55:59:108 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:55:59:110 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:56:00:117 cpu_principal.log/(128131:128131): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:56:01:119 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:56:01:121 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:56:02:129 cpu_principal.log/(128131:128131): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:56:03:131 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:56:03:133 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:56:04:148 cpu_principal.log/(128131:128131): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:56:05:149 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:56:05:150 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:56:06:157 cpu_principal.log/(128131:128131): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:56:06:158 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:56:06:219 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:56:06:263 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:56:06:305 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:56:07:362 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:56:08:391 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:56:08:431 cpu_principal.log/(128131:128131): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 18:56:41:812 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <SET RBX SonyPlaystation1>
+[INFO] 18:56:41:813 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <MOV_OUT 32 RBX>
+[INFO] 18:56:42:817 cpu_principal.log/(128131:128131): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <32> - Valor: <SonyPlaystation1>
+[INFO] 18:56:43:818 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <SET RBX SonyPlaystation2>
+[INFO] 18:56:43:819 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <MOV_OUT 48 RBX>
+[INFO] 18:56:44:837 cpu_principal.log/(128131:128131): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <48> - Valor: <SonyPlaystation2>
+[INFO] 18:56:45:841 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <SET RBX SonyPlaystation3>
+[INFO] 18:56:45:843 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <MOV_OUT 64 RBX>
+[INFO] 18:56:46:855 cpu_principal.log/(128131:128131): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <64> - Valor: <SonyPlaystation3>
+[INFO] 18:56:47:858 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <SET RBX SonyPlaystation4>
+[INFO] 18:56:47:859 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <MOV_OUT 80 RBX>
+[INFO] 18:56:48:866 cpu_principal.log/(128131:128131): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <SonyPlaystation4>
+[INFO] 18:56:49:867 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <SET RBX SonyPlaystation5>
+[INFO] 18:56:49:869 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <MOV_OUT 96 RBX>
+[INFO] 18:56:50:877 cpu_principal.log/(128131:128131): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <96> - Valor: <SonyPlaystation5>
+[INFO] 18:56:50:879 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <F_OPEN Consoles>
+[INFO] 18:56:50:932 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <F_TRUNCATE Consoles 256>
+[INFO] 18:56:50:993 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <F_SEEK Consoles 128>
+[INFO] 18:56:51:058 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <F_WRITE Consoles 32 80>
+[INFO] 18:56:52:091 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <F_READ Consoles 32 80>
+[INFO] 18:56:53:112 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <F_CLOSE Consoles>
+[INFO] 18:56:53:128 cpu_principal.log/(128131:128131): PID: <1002> - Ejecutando: <EXIT>

@@ -48,6 +48,7 @@ void* manejar_peticiones_fs(void) {
 		pthread_mutex_unlock(&mutex_compactacion_solicitada);
 
 		pthread_mutex_unlock(&mutex_compactacion);
+		sem_post(&sem_ready);
 	}
 }
 
@@ -148,7 +149,7 @@ t_proceso* enviar_peticion_file_system(void) {
 	}
 
 	void* a_enviar = malloc(buffer->stream_size + sizeof(int) + sizeof(int));
-	int desplazamiento;
+	int desplazamiento = 0;
 
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));

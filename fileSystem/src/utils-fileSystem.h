@@ -43,6 +43,7 @@ int abrir_archivo(char*);
 int crear_archivo(char*);
 void inicializar_estructuras();
 void probando_cositas();
+void probando_cositas_2();
 void inicializar_servidor();
 void reducir_tamanio(int,int,t_config*,char* nombre_archivo);
 void ampliar_tamanio(int,int,t_config*,char* nombre_archivo);
@@ -55,6 +56,7 @@ void escribir_bytes_mismo_bloque(int ,int ,void* ,int ,t_config*,char*);
 void escribir_archivo(char*,int,void*,int);
 void escribir_bytes_diferentes_bloques(int,int,void*,int,t_config*,char*);
 void acceso_a_bloque(void* , void* ,int ,char* ,int ,int );
+int agregar_a_stream(void *, int* , void *, int );
 
 
 

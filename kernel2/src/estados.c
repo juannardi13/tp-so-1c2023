@@ -393,6 +393,10 @@ void estado_ejecutar(void) {
 			queue_push(cola_peticiones_file_system, peticion_read);
 			pthread_mutex_unlock(&mutex_peticiones_fs);
 
+			pthread_mutex_lock(&mutex_exec);
+			list_remove(cola_exec,0);
+			pthread_mutex_unlock(&mutex_exec);
+
 //			pthread_mutex_lock(&mutex_exec);
 //			list_add(cola_exec, proceso_a_ejecutar);
 //			pthread_mutex_unlock(&mutex_exec);
@@ -437,18 +441,22 @@ void estado_ejecutar(void) {
 			t_peticion* peticion_write = malloc(sizeof(t_peticion));
 			t_archivo_proceso* archivo_write = dictionary_get(proceso_a_ejecutar->pcb->tabla_archivos, nombre_archivo_write);
 
-			peticion_read->proceso = proceso_a_ejecutar;
-			peticion_read->cantidad_bytes = cantidad_bytes_write;
-			peticion_read->codigo_operacion = F_WRITE;
-			peticion_read->direccion_fisica = direccion_fisica_write;
-			peticion_read->nombre_archivo = nombre_archivo_write;
-			peticion_read->puntero = archivo_write->puntero;
+			peticion_write->proceso = proceso_a_ejecutar;
+			peticion_write->cantidad_bytes = cantidad_bytes_write;
+			peticion_write->codigo_operacion = F_WRITE;
+			peticion_write->direccion_fisica = direccion_fisica_write;
+			peticion_write->nombre_archivo = nombre_archivo_write;
+			peticion_write->puntero = archivo_write->puntero;
 
 			log_warning(kernel_principal, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso_a_ejecutar->pcb->pid, nombre_archivo_write, archivo_write->puntero, direccion_fisica_write, cantidad_bytes_write);
 
 			pthread_mutex_lock(&mutex_peticiones_fs);
 			queue_push(cola_peticiones_file_system, peticion_write);
 			pthread_mutex_unlock(&mutex_peticiones_fs);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_remove(cola_exec,0);
+			pthread_mutex_unlock(&mutex_exec);
 
 			sem_post(&sem_peticiones_file_system);
 			sem_post(&sem_ready);
@@ -496,6 +504,10 @@ void estado_ejecutar(void) {
 			pthread_mutex_lock(&mutex_peticiones_fs);
 			queue_push(cola_peticiones_file_system, peticion_truncate);
 			pthread_mutex_unlock(&mutex_peticiones_fs);
+
+			pthread_mutex_lock(&mutex_exec);
+			list_remove(cola_exec,0);
+			pthread_mutex_unlock(&mutex_exec);
 
 			sem_post(&sem_peticiones_file_system);
 			sem_post(&sem_ready);
