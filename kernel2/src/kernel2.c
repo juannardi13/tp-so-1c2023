@@ -21,6 +21,7 @@ int main() {
 
 	iniciar_planificador_largo_plazo();
 	iniciar_planificador_corto_plazo();
+	inicializar_tabla_global_archivos();
 	iniciar_registros();
 	iniciar_recursos();
 	iniciar_peticiones_file_system();

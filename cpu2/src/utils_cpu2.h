@@ -33,6 +33,7 @@ void serializar_segmentos(t_segmento*, void*, int);
 
 // Funciones que usan las instrucciones
 void asignar_valor_a_registro(char*, char*);
+char* obtener_valor_de_registro(char*);
 void activar_segmentation_fault(t_contexto_de_ejecucion*, int);
 bool desplazamiento_supera_tamanio(int, char*);
 void escribir_en_memoria(int, char*, int, t_log*, t_contexto_de_ejecucion*, int, t_config*);

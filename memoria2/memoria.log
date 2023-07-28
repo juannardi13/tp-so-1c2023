@@ -183,3 +183,537 @@
 [INFO] 23:52:43:303 MEMORIA/(8136:8199): Eliminación de Proceso PID: 1000
 [ERROR] 23:54:16:913 MEMORIA/(8136:8199): Operación desconocida.
 [ERROR] 23:54:16:913 MEMORIA/(8136:8140): Operación desconocida.
+[INFO] 01:49:27:328 MEMORIA/(107901:107901): Se inicializaron las estructuras de Memoria
+[INFO] 01:49:27:328 MEMORIA/(107901:107901): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 01:49:49:285 MEMORIA/(107901:107901): Se conectó un cliente!
+[INFO] 01:50:00:590 MEMORIA/(107901:107901): Se conectó un cliente!
+[INFO] 01:50:18:771 MEMORIA/(107901:107901): Se conectó un cliente!
+[INFO] 01:51:30:500 MEMORIA/(107901:107915): Creación de Proceso PID: 1000
+[INFO] 01:51:33:520 MEMORIA/(107901:107903): CPU quiere escribir en la dirección <100> el valor <EAX>, de tamaño <4>
+[INFO] 01:51:33:520 MEMORIA/(107901:107903): Se escribe el valor <EAX> de tamaño <4> en la direccion fisica: 100
+[INFO] 01:51:33:520 MEMORIA/(107901:107903): Dirección física: 100
+[INFO] 01:51:33:521 MEMORIA/(107901:107903): Valor Registro: EAX
+[INFO] 01:51:34:521 MEMORIA/(107901:107903): EAX
+[INFO] 01:51:34:522 MEMORIA/(107901:107915): Eliminación de Proceso PID: 1000
+[ERROR] 02:17:03:680 MEMORIA/(107901:107915): Operación desconocida.
+[ERROR] 02:17:03:680 MEMORIA/(107901:107905): Operación desconocida.
+[ERROR] 02:17:03:681 MEMORIA/(107901:107903): Operación desconocida.
+[INFO] 02:18:15:476 MEMORIA/(109210:109210): Se inicializaron las estructuras de Memoria
+[INFO] 02:18:15:476 MEMORIA/(109210:109210): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:18:23:102 MEMORIA/(109210:109210): Se conectó un cliente!
+[INFO] 02:18:29:828 MEMORIA/(109210:109210): Se conectó un cliente!
+[INFO] 02:18:32:930 MEMORIA/(109210:109210): Se conectó un cliente!
+[INFO] 02:18:40:862 MEMORIA/(109210:109224): Creación de Proceso PID: 1000
+[INFO] 02:18:43:871 MEMORIA/(109210:109212): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 02:18:43:871 MEMORIA/(109210:109212): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 02:18:43:871 MEMORIA/(109210:109212): Dirección física: 100
+[INFO] 02:18:43:871 MEMORIA/(109210:109212): Valor Registro: PRUEBA__
+[INFO] 02:18:44:871 MEMORIA/(109210:109212): PRUEBA__
+[INFO] 02:18:44:873 MEMORIA/(109210:109212): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 02:18:44:874 MEMORIA/(109210:109212): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 02:18:44:874 MEMORIA/(109210:109212): Dirección física: 110
+[INFO] 02:18:44:874 MEMORIA/(109210:109212): Valor Registro: FUNCIONS
+[INFO] 02:18:45:874 MEMORIA/(109210:109212): FUNCIONS
+[INFO] 02:18:45:875 MEMORIA/(109210:109212): CPU quiere escribir en la dirección <8> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 02:18:45:875 MEMORIA/(109210:109212): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 8
+[INFO] 02:18:45:875 MEMORIA/(109210:109212): Dirección física: 8
+[INFO] 02:18:45:875 MEMORIA/(109210:109212): Valor Registro: MEMORIA_
+[INFO] 02:18:46:876 MEMORIA/(109210:109212): MEMORIA_
+[INFO] 02:18:46:880 MEMORIA/(109210:109212): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 02:18:47:880 MEMORIA/(109210:109212): Se envia el valor: PRUEBA__
+[INFO] 02:18:47:881 MEMORIA/(109210:109212): Se busca el valor de la direccion fisica: 100
+[INFO] 02:29:45:956 MEMORIA/(109301:109301): Se inicializaron las estructuras de Memoria
+[INFO] 02:29:45:957 MEMORIA/(109301:109301): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:29:53:241 MEMORIA/(109301:109301): Se conectó un cliente!
+[INFO] 02:30:00:156 MEMORIA/(109301:109301): Se conectó un cliente!
+[INFO] 02:30:05:119 MEMORIA/(109301:109301): Se conectó un cliente!
+[INFO] 02:30:28:073 MEMORIA/(109320:109320): Se inicializaron las estructuras de Memoria
+[INFO] 02:31:40:527 MEMORIA/(109335:109335): Se inicializaron las estructuras de Memoria
+[INFO] 02:31:50:109 MEMORIA/(109340:109340): Se inicializaron las estructuras de Memoria
+[INFO] 02:32:30:760 MEMORIA/(109342:109342): Se inicializaron las estructuras de Memoria
+[INFO] 02:32:30:760 MEMORIA/(109342:109342): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:32:34:827 MEMORIA/(109342:109342): Se conectó un cliente!
+[INFO] 02:32:38:028 MEMORIA/(109342:109342): Se conectó un cliente!
+[INFO] 02:32:41:456 MEMORIA/(109342:109342): Se conectó un cliente!
+[INFO] 02:32:59:764 MEMORIA/(109342:109356): Creación de Proceso PID: 1000
+[INFO] 02:33:02:771 MEMORIA/(109342:109344): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 02:33:02:771 MEMORIA/(109342:109344): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 02:33:02:771 MEMORIA/(109342:109344): Dirección física: 100
+[INFO] 02:33:02:771 MEMORIA/(109342:109344): Valor Registro: PRUEBA__
+[INFO] 02:33:03:771 MEMORIA/(109342:109344): PRUEBA__
+[INFO] 02:33:03:773 MEMORIA/(109342:109344): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 02:33:03:773 MEMORIA/(109342:109344): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 02:33:03:773 MEMORIA/(109342:109344): Dirección física: 110
+[INFO] 02:33:03:773 MEMORIA/(109342:109344): Valor Registro: FUNCIONS
+[INFO] 02:33:04:774 MEMORIA/(109342:109344): FUNCIONS
+[INFO] 02:33:04:775 MEMORIA/(109342:109344): CPU quiere escribir en la dirección <8> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 02:33:04:775 MEMORIA/(109342:109344): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 8
+[INFO] 02:33:04:775 MEMORIA/(109342:109344): Dirección física: 8
+[INFO] 02:33:04:776 MEMORIA/(109342:109344): Valor Registro: MEMORIA_
+[INFO] 02:33:05:777 MEMORIA/(109342:109344): MEMORIA_
+[INFO] 02:33:05:781 MEMORIA/(109342:109344): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 02:33:06:782 MEMORIA/(109342:109344): Se envia el valor: PRUEBA__
+[INFO] 02:33:06:783 MEMORIA/(109342:109344): Se busca el valor de la direccion fisica: 100
+[INFO] 02:34:35:775 MEMORIA/(109360:109360): Se inicializaron las estructuras de Memoria
+[INFO] 02:34:40:888 MEMORIA/(109362:109362): Se inicializaron las estructuras de Memoria
+[INFO] 02:34:43:034 MEMORIA/(109363:109363): Se inicializaron las estructuras de Memoria
+[INFO] 02:35:03:588 MEMORIA/(109364:109364): Se inicializaron las estructuras de Memoria
+[INFO] 02:35:03:589 MEMORIA/(109364:109364): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:35:35:686 MEMORIA/(109364:109364): Se conectó un cliente!
+[INFO] 02:37:21:985 MEMORIA/(109364:109364): Se conectó un cliente!
+[INFO] 02:37:40:785 MEMORIA/(109364:109364): Se conectó un cliente!
+[INFO] 02:38:17:371 MEMORIA/(109364:109464): Creación de Proceso PID: 1000
+[INFO] 02:41:38:634 MEMORIA/(109364:109447): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 02:41:38:634 MEMORIA/(109364:109447): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 02:41:38:634 MEMORIA/(109364:109447): Dirección física: 100
+[INFO] 02:41:38:634 MEMORIA/(109364:109447): Valor Registro: PRUEBA__
+[INFO] 02:41:39:635 MEMORIA/(109364:109447): PRUEBA__
+[INFO] 02:41:57:509 MEMORIA/(109364:109447): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 02:41:57:509 MEMORIA/(109364:109447): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 02:41:57:509 MEMORIA/(109364:109447): Dirección física: 110
+[INFO] 02:41:57:509 MEMORIA/(109364:109447): Valor Registro: FUNCIONS
+[INFO] 02:41:58:510 MEMORIA/(109364:109447): FUNCIONS
+[INFO] 02:43:30:318 MEMORIA/(109717:109717): Se inicializaron las estructuras de Memoria
+[INFO] 02:43:34:477 MEMORIA/(109718:109718): Se inicializaron las estructuras de Memoria
+[INFO] 02:43:56:535 MEMORIA/(109720:109720): Se inicializaron las estructuras de Memoria
+[INFO] 02:43:58:607 MEMORIA/(109721:109721): Se inicializaron las estructuras de Memoria
+[INFO] 02:44:00:210 MEMORIA/(109722:109722): Se inicializaron las estructuras de Memoria
+[INFO] 02:44:17:657 MEMORIA/(109724:109724): Se inicializaron las estructuras de Memoria
+[INFO] 02:44:29:137 MEMORIA/(109725:109725): Se inicializaron las estructuras de Memoria
+[INFO] 02:44:32:617 MEMORIA/(109726:109726): Se inicializaron las estructuras de Memoria
+[INFO] 02:45:33:840 MEMORIA/(109730:109730): Se inicializaron las estructuras de Memoria
+[INFO] 02:45:33:841 MEMORIA/(109730:109730): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:45:43:734 MEMORIA/(109730:109730): Se conectó un cliente!
+[ERROR] 02:45:43:735 MEMORIA/(109730:109732): Operación desconocida.
+[INFO] 02:46:20:172 MEMORIA/(109736:109736): Se inicializaron las estructuras de Memoria
+[INFO] 02:46:20:172 MEMORIA/(109736:109736): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:46:26:693 MEMORIA/(109736:109736): Se conectó un cliente!
+[INFO] 02:46:33:726 MEMORIA/(109736:109736): Se conectó un cliente!
+[INFO] 02:46:39:618 MEMORIA/(109736:109736): Se conectó un cliente!
+[INFO] 02:46:52:677 MEMORIA/(109736:109750): Creación de Proceso PID: 1000
+[INFO] 02:46:55:683 MEMORIA/(109736:109738): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 02:46:55:683 MEMORIA/(109736:109738): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 02:46:55:683 MEMORIA/(109736:109738): Dirección física: 100
+[INFO] 02:46:55:683 MEMORIA/(109736:109738): Valor Registro: PRUEBA__
+[INFO] 02:46:56:684 MEMORIA/(109736:109738): PRUEBA__
+[INFO] 02:46:56:701 MEMORIA/(109736:109738): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 02:46:56:702 MEMORIA/(109736:109738): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 02:46:56:702 MEMORIA/(109736:109738): Dirección física: 110
+[INFO] 02:46:56:702 MEMORIA/(109736:109738): Valor Registro: FUNCIONS
+[INFO] 02:46:57:703 MEMORIA/(109736:109738): FUNCIONS
+[INFO] 02:46:57:706 MEMORIA/(109736:109738): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 02:46:57:706 MEMORIA/(109736:109738): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 02:46:57:706 MEMORIA/(109736:109738): Dirección física: 80
+[INFO] 02:46:57:707 MEMORIA/(109736:109738): Valor Registro: MEMORIA_
+[INFO] 02:46:58:708 MEMORIA/(109736:109738): MEMORIA_
+[INFO] 02:46:58:721 MEMORIA/(109736:109738): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 02:46:59:721 MEMORIA/(109736:109738): Se envia el valor: PRUEBA__
+[INFO] 02:46:59:721 MEMORIA/(109736:109738): Se busca el valor de la direccion fisica: 100
+[INFO] 02:51:39:832 MEMORIA/(109835:109835): Se inicializaron las estructuras de Memoria
+[INFO] 02:51:39:832 MEMORIA/(109835:109835): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:52:06:365 MEMORIA/(109835:109835): Se conectó un cliente!
+[INFO] 02:52:19:491 MEMORIA/(109835:109835): Se conectó un cliente!
+[INFO] 02:52:22:561 MEMORIA/(109835:109835): Se conectó un cliente!
+[INFO] 02:52:34:056 MEMORIA/(109835:109850): Creación de Proceso PID: 1000
+[INFO] 02:52:37:064 MEMORIA/(109835:109838): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 02:52:37:064 MEMORIA/(109835:109838): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 02:52:37:064 MEMORIA/(109835:109838): Dirección física: 100
+[INFO] 02:52:37:064 MEMORIA/(109835:109838): Valor Registro: PRUEBA__
+[INFO] 02:52:38:064 MEMORIA/(109835:109838): PRUEBA__
+[INFO] 02:52:38:065 MEMORIA/(109835:109838): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 02:52:38:065 MEMORIA/(109835:109838): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 02:52:38:065 MEMORIA/(109835:109838): Dirección física: 110
+[INFO] 02:52:38:065 MEMORIA/(109835:109838): Valor Registro: FUNCIONS
+[INFO] 02:52:39:065 MEMORIA/(109835:109838): FUNCIONS
+[INFO] 02:52:39:067 MEMORIA/(109835:109838): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 02:52:39:067 MEMORIA/(109835:109838): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 02:52:39:067 MEMORIA/(109835:109838): Dirección física: 80
+[INFO] 02:52:39:067 MEMORIA/(109835:109838): Valor Registro: MEMORIA_
+[INFO] 02:52:40:068 MEMORIA/(109835:109838): MEMORIA_
+[INFO] 02:52:40:075 MEMORIA/(109835:109838): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 02:52:41:076 MEMORIA/(109835:109838): Se envia el valor: PRUEBA__
+[INFO] 02:52:41:076 MEMORIA/(109835:109838): Se busca el valor de la direccion fisica: 100
+[INFO] 02:55:01:569 MEMORIA/(109914:109914): Se inicializaron las estructuras de Memoria
+[INFO] 02:55:01:570 MEMORIA/(109914:109914): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:55:42:134 MEMORIA/(109914:109914): Se conectó un cliente!
+[INFO] 02:56:11:723 MEMORIA/(109914:109914): Se conectó un cliente!
+[INFO] 02:58:02:457 MEMORIA/(109984:109984): Se inicializaron las estructuras de Memoria
+[INFO] 03:00:54:744 MEMORIA/(110030:110030): Se inicializaron las estructuras de Memoria
+[INFO] 03:00:55:733 MEMORIA/(110030:110030): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:01:32:974 MEMORIA/(110030:110030): Se conectó un cliente!
+[INFO] 03:02:32:739 MEMORIA/(110030:110030): Se conectó un cliente!
+[INFO] 03:02:55:727 MEMORIA/(110030:110030): Se conectó un cliente!
+[INFO] 03:03:21:316 MEMORIA/(110030:110082): Creación de Proceso PID: 1000
+[INFO] 03:04:44:506 MEMORIA/(110030:110053): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 03:04:50:182 MEMORIA/(110030:110053): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 03:05:04:150 MEMORIA/(110030:110053): Dirección física: 100
+[INFO] 03:05:05:357 MEMORIA/(110030:110053): Valor Registro: PRUEBA__
+[INFO] 03:05:18:413 MEMORIA/(110030:110053): PRUEBA__
+[INFO] 03:07:28:715 MEMORIA/(110030:110053): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 03:07:37:474 MEMORIA/(110030:110053): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 03:07:37:475 MEMORIA/(110030:110053): Dirección física: 110
+[INFO] 03:07:37:475 MEMORIA/(110030:110053): Valor Registro: FUNCIONS
+[INFO] 03:07:38:475 MEMORIA/(110030:110053): FUNCIONS
+[INFO] 03:08:07:144 MEMORIA/(110030:110053): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 03:08:12:946 MEMORIA/(110030:110053): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 03:08:12:948 MEMORIA/(110030:110053): Dirección física: 80
+[INFO] 03:08:12:948 MEMORIA/(110030:110053): Valor Registro: MEMORIA_
+[INFO] 03:08:13:948 MEMORIA/(110030:110053): MEMORIA_
+[INFO] 03:09:03:803 MEMORIA/(110030:110053): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 03:11:19:966 MEMORIA/(110030:110053): Se envia el valor: PRUEBA__
+[INFO] 03:11:33:694 MEMORIA/(110030:110053): Se busca el valor de la direccion fisica: 100
+[INFO] 03:27:26:123 MEMORIA/(110921:110921): Se inicializaron las estructuras de Memoria
+[INFO] 03:27:27:718 MEMORIA/(110921:110921): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:28:46:594 MEMORIA/(110921:110921): Se conectó un cliente!
+[INFO] 03:29:06:674 MEMORIA/(110921:110921): Se conectó un cliente!
+[INFO] 03:29:26:693 MEMORIA/(110921:110921): Se conectó un cliente!
+[INFO] 03:29:40:155 MEMORIA/(110921:110976): Creación de Proceso PID: 1000
+[INFO] 03:29:52:894 MEMORIA/(110921:110956): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 03:29:53:096 MEMORIA/(110921:110956): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 03:29:53:096 MEMORIA/(110921:110956): Dirección física: 100
+[INFO] 03:29:53:096 MEMORIA/(110921:110956): Valor Registro: PRUEBA__
+[INFO] 03:29:54:097 MEMORIA/(110921:110956): PRUEBA__
+[INFO] 03:29:59:016 MEMORIA/(110921:110956): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 03:29:59:235 MEMORIA/(110921:110956): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 03:29:59:236 MEMORIA/(110921:110956): Dirección física: 110
+[INFO] 03:29:59:236 MEMORIA/(110921:110956): Valor Registro: FUNCIONS
+[INFO] 03:30:00:237 MEMORIA/(110921:110956): FUNCIONS
+[INFO] 03:30:06:214 MEMORIA/(110921:110956): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 03:30:06:685 MEMORIA/(110921:110956): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 03:30:06:685 MEMORIA/(110921:110956): Dirección física: 80
+[INFO] 03:30:06:685 MEMORIA/(110921:110956): Valor Registro: MEMORIA_
+[INFO] 03:30:07:686 MEMORIA/(110921:110956): MEMORIA_
+[INFO] 03:30:27:827 MEMORIA/(110921:110956): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 03:31:05:628 MEMORIA/(110921:110956): Se envia el valor: PRUEBA__
+[INFO] 03:31:16:446 MEMORIA/(110921:110956): Se busca el valor de la direccion fisica: 100
+[INFO] 03:44:33:767 MEMORIA/(111581:111581): Se inicializaron las estructuras de Memoria
+[INFO] 03:44:33:783 MEMORIA/(111581:111581): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:44:39:864 MEMORIA/(111581:111581): Se conectó un cliente!
+[INFO] 03:44:43:946 MEMORIA/(111581:111581): Se conectó un cliente!
+[INFO] 03:44:47:789 MEMORIA/(111581:111581): Se conectó un cliente!
+[INFO] 03:44:57:391 MEMORIA/(111581:111595): Creación de Proceso PID: 1000
+[INFO] 03:45:00:455 MEMORIA/(111581:111583): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 03:45:00:455 MEMORIA/(111581:111583): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 03:45:00:455 MEMORIA/(111581:111583): Dirección física: 100
+[INFO] 03:45:00:456 MEMORIA/(111581:111583): Valor Registro: PRUEBA__
+[INFO] 03:45:01:456 MEMORIA/(111581:111583): PRUEBA__
+[INFO] 03:45:01:459 MEMORIA/(111581:111583): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 03:45:01:460 MEMORIA/(111581:111583): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 03:45:01:460 MEMORIA/(111581:111583): Dirección física: 110
+[INFO] 03:45:01:461 MEMORIA/(111581:111583): Valor Registro: FUNCIONS
+[INFO] 03:45:02:461 MEMORIA/(111581:111583): FUNCIONS
+[INFO] 03:45:02:462 MEMORIA/(111581:111583): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 03:45:02:462 MEMORIA/(111581:111583): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 03:45:02:462 MEMORIA/(111581:111583): Dirección física: 80
+[INFO] 03:45:02:463 MEMORIA/(111581:111583): Valor Registro: MEMORIA_
+[INFO] 03:45:03:463 MEMORIA/(111581:111583): MEMORIA_
+[INFO] 03:45:03:471 MEMORIA/(111581:111583): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 03:45:04:471 MEMORIA/(111581:111583): Se envia el valor: PRUEBA__
+[INFO] 03:45:04:471 MEMORIA/(111581:111583): Se busca el valor de la direccion fisica: 100
+[INFO] 03:50:30:342 MEMORIA/(111736:111736): Se inicializaron las estructuras de Memoria
+[INFO] 03:50:30:547 MEMORIA/(111736:111736): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:50:37:968 MEMORIA/(111736:111736): Se conectó un cliente!
+[INFO] 03:50:41:398 MEMORIA/(111736:111736): Se conectó un cliente!
+[INFO] 03:50:43:599 MEMORIA/(111736:111736): Se conectó un cliente!
+[INFO] 03:50:48:356 MEMORIA/(111736:111750): Creación de Proceso PID: 1000
+[INFO] 03:50:51:371 MEMORIA/(111736:111738): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 03:50:51:372 MEMORIA/(111736:111738): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 03:50:51:373 MEMORIA/(111736:111738): Dirección física: 100
+[INFO] 03:50:51:374 MEMORIA/(111736:111738): Valor Registro: PRUEBA__
+[INFO] 03:50:52:379 MEMORIA/(111736:111738): PRUEBA__
+[INFO] 03:50:52:385 MEMORIA/(111736:111738): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 03:50:52:387 MEMORIA/(111736:111738): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 03:50:52:388 MEMORIA/(111736:111738): Dirección física: 110
+[INFO] 03:50:52:389 MEMORIA/(111736:111738): Valor Registro: FUNCIONS
+[INFO] 03:50:53:390 MEMORIA/(111736:111738): FUNCIONS
+[INFO] 03:50:53:391 MEMORIA/(111736:111738): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 03:50:53:392 MEMORIA/(111736:111738): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 03:50:53:393 MEMORIA/(111736:111738): Dirección física: 80
+[INFO] 03:50:53:393 MEMORIA/(111736:111738): Valor Registro: MEMORIA_
+[INFO] 03:50:54:397 MEMORIA/(111736:111738): MEMORIA_
+[INFO] 03:50:54:403 MEMORIA/(111736:111738): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 03:53:58:319 MEMORIA/(111814:111814): Se inicializaron las estructuras de Memoria
+[INFO] 03:53:58:464 MEMORIA/(111814:111814): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:54:07:943 MEMORIA/(111814:111814): Se conectó un cliente!
+[INFO] 03:54:11:034 MEMORIA/(111814:111814): Se conectó un cliente!
+[ERROR] 03:54:15:469 MEMORIA/(111814:111816): Operación desconocida.
+[ERROR] 03:54:15:469 MEMORIA/(111814:111818): Operación desconocida.
+[INFO] 03:55:09:918 MEMORIA/(111831:111831): Se inicializaron las estructuras de Memoria
+[INFO] 03:55:10:057 MEMORIA/(111831:111831): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:55:27:993 MEMORIA/(111831:111831): Se conectó un cliente!
+[INFO] 03:55:32:742 MEMORIA/(111831:111831): Se conectó un cliente!
+[INFO] 03:55:36:161 MEMORIA/(111831:111831): Se conectó un cliente!
+[INFO] 03:55:43:833 MEMORIA/(111831:111845): Creación de Proceso PID: 1000
+[INFO] 03:55:46:848 MEMORIA/(111831:111833): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 03:55:46:849 MEMORIA/(111831:111833): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 03:55:46:850 MEMORIA/(111831:111833): Dirección física: 100
+[INFO] 03:55:46:850 MEMORIA/(111831:111833): Valor Registro: PRUEBA__
+[INFO] 03:55:47:855 MEMORIA/(111831:111833): PRUEBA__
+[INFO] 03:55:47:858 MEMORIA/(111831:111833): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 03:55:47:859 MEMORIA/(111831:111833): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 03:55:47:859 MEMORIA/(111831:111833): Dirección física: 110
+[INFO] 03:55:47:860 MEMORIA/(111831:111833): Valor Registro: FUNCIONS
+[INFO] 03:55:48:861 MEMORIA/(111831:111833): FUNCIONS
+[INFO] 03:55:48:865 MEMORIA/(111831:111833): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 03:55:48:867 MEMORIA/(111831:111833): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 03:55:48:870 MEMORIA/(111831:111833): Dirección física: 80
+[INFO] 03:55:48:878 MEMORIA/(111831:111833): Valor Registro: MEMORIA_
+[INFO] 03:55:49:879 MEMORIA/(111831:111833): MEMORIA_
+[INFO] 03:55:49:890 MEMORIA/(111831:111833): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 03:56:57:848 MEMORIA/(111910:111910): Se inicializaron las estructuras de Memoria
+[INFO] 03:56:57:974 MEMORIA/(111910:111910): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:57:04:700 MEMORIA/(111910:111910): Se conectó un cliente!
+[INFO] 03:57:07:657 MEMORIA/(111910:111910): Se conectó un cliente!
+[INFO] 03:57:09:620 MEMORIA/(111910:111910): Se conectó un cliente!
+[INFO] 03:57:15:099 MEMORIA/(111910:111924): Creación de Proceso PID: 1000
+[INFO] 03:57:18:115 MEMORIA/(111910:111912): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 03:57:18:116 MEMORIA/(111910:111912): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 03:57:18:117 MEMORIA/(111910:111912): Dirección física: 100
+[INFO] 03:57:18:117 MEMORIA/(111910:111912): Valor Registro: PRUEBA__
+[INFO] 03:57:19:123 MEMORIA/(111910:111912): PRUEBA__
+[INFO] 03:57:19:129 MEMORIA/(111910:111912): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 03:57:19:131 MEMORIA/(111910:111912): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 03:57:19:133 MEMORIA/(111910:111912): Dirección física: 110
+[INFO] 03:57:19:139 MEMORIA/(111910:111912): Valor Registro: FUNCIONS
+[INFO] 03:57:20:140 MEMORIA/(111910:111912): FUNCIONS
+[INFO] 03:57:20:144 MEMORIA/(111910:111912): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 03:57:20:147 MEMORIA/(111910:111912): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 03:57:20:150 MEMORIA/(111910:111912): Dirección física: 80
+[INFO] 03:57:20:152 MEMORIA/(111910:111912): Valor Registro: MEMORIA_
+[INFO] 03:57:21:158 MEMORIA/(111910:111912): MEMORIA_
+[INFO] 03:57:21:163 MEMORIA/(111910:111912): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 03:57:22:172 MEMORIA/(111910:111912): Se envia el valor: PRUEBA__
+[INFO] 03:57:22:173 MEMORIA/(111910:111912): Se busca el valor de la direccion fisica: 100
+[INFO] 03:57:22:174 MEMORIA/(111910:111912): CPU quiere leer en la dirección <110> un tamaño de <9>
+[INFO] 03:57:23:175 MEMORIA/(111910:111912): Se envia el valor: FUNCIONS
+[INFO] 03:57:23:177 MEMORIA/(111910:111912): Se busca el valor de la direccion fisica: 110
+[INFO] 03:57:23:178 MEMORIA/(111910:111912): CPU quiere leer en la dirección <80> un tamaño de <9>
+[INFO] 03:57:24:179 MEMORIA/(111910:111912): Se envia el valor: MEMORIA_
+[INFO] 03:57:24:218 MEMORIA/(111910:111924): Eliminación de Proceso PID: 1000
+[INFO] 03:57:24:219 MEMORIA/(111910:111912): Se busca el valor de la direccion fisica: 80
+[ERROR] 04:23:34:348 MEMORIA/(111910:111924): Operación desconocida.
+[ERROR] 04:23:34:348 MEMORIA/(111910:111912): Operación desconocida.
+[ERROR] 04:23:34:349 MEMORIA/(111910:111914): Operación desconocida.
+[INFO] 04:23:51:036 MEMORIA/(112432:112432): Se inicializaron las estructuras de Memoria
+[INFO] 04:23:51:247 MEMORIA/(112432:112432): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:24:00:767 MEMORIA/(112432:112432): Se conectó un cliente!
+[INFO] 04:24:07:015 MEMORIA/(112432:112432): Se conectó un cliente!
+[INFO] 04:24:09:904 MEMORIA/(112432:112432): Se conectó un cliente!
+[INFO] 04:24:16:363 MEMORIA/(112432:112446): Creación de Proceso PID: 1000
+[INFO] 04:24:19:655 MEMORIA/(112432:112434): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 04:24:19:666 MEMORIA/(112432:112434): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 04:24:19:667 MEMORIA/(112432:112434): Dirección física: 100
+[INFO] 04:24:19:673 MEMORIA/(112432:112434): Valor Registro: PRUEBA__
+[INFO] 04:24:20:677 MEMORIA/(112432:112434): PRUEBA__
+[INFO] 04:24:20:681 MEMORIA/(112432:112434): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 04:24:20:682 MEMORIA/(112432:112434): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 04:24:20:682 MEMORIA/(112432:112434): Dirección física: 110
+[INFO] 04:24:20:683 MEMORIA/(112432:112434): Valor Registro: FUNCIONS
+[INFO] 04:24:21:683 MEMORIA/(112432:112434): FUNCIONS
+[INFO] 04:24:21:686 MEMORIA/(112432:112434): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 04:24:21:687 MEMORIA/(112432:112434): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 04:24:21:687 MEMORIA/(112432:112434): Dirección física: 80
+[INFO] 04:24:21:688 MEMORIA/(112432:112434): Valor Registro: MEMORIA_
+[INFO] 04:24:22:688 MEMORIA/(112432:112434): MEMORIA_
+[INFO] 04:24:22:764 MEMORIA/(112432:112434): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 04:24:23:767 MEMORIA/(112432:112434): Se envia el valor: PRUEBA__
+[INFO] 04:24:23:769 MEMORIA/(112432:112434): Se busca el valor de la direccion fisica: 100
+[INFO] 04:24:23:774 MEMORIA/(112432:112434): CPU quiere leer en la dirección <110> un tamaño de <9>
+[INFO] 04:24:24:775 MEMORIA/(112432:112434): Se envia el valor: FUNCIONS
+[INFO] 04:24:24:776 MEMORIA/(112432:112434): Se busca el valor de la direccion fisica: 110
+[INFO] 04:24:24:779 MEMORIA/(112432:112434): CPU quiere leer en la dirección <80> un tamaño de <9>
+[INFO] 04:24:25:780 MEMORIA/(112432:112434): Se envia el valor: MEMORIA_
+[INFO] 04:24:25:781 MEMORIA/(112432:112434): Se busca el valor de la direccion fisica: 80
+[INFO] 04:24:25:822 MEMORIA/(112432:112446): Eliminación de Proceso PID: 1000
+[ERROR] 04:25:00:232 MEMORIA/(112432:112446): Operación desconocida.
+[INFO] 04:25:14:498 MEMORIA/(112484:112484): Se inicializaron las estructuras de Memoria
+[INFO] 04:25:14:622 MEMORIA/(112484:112484): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:25:17:559 MEMORIA/(112484:112484): Se conectó un cliente!
+[INFO] 04:25:20:054 MEMORIA/(112484:112484): Se conectó un cliente!
+[INFO] 04:25:24:371 MEMORIA/(112484:112484): Se conectó un cliente!
+[INFO] 04:25:28:783 MEMORIA/(112484:112498): Creación de Proceso PID: 1000
+[INFO] 04:25:31:980 MEMORIA/(112484:112486): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 04:25:31:981 MEMORIA/(112484:112486): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 04:25:31:984 MEMORIA/(112484:112486): Dirección física: 100
+[INFO] 04:25:31:985 MEMORIA/(112484:112486): Valor Registro: PRUEBA__
+[INFO] 04:25:32:993 MEMORIA/(112484:112486): PRUEBA__
+[INFO] 04:25:32:998 MEMORIA/(112484:112486): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 04:25:32:998 MEMORIA/(112484:112486): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 04:25:32:999 MEMORIA/(112484:112486): Dirección física: 110
+[INFO] 04:25:32:999 MEMORIA/(112484:112486): Valor Registro: FUNCIONS
+[INFO] 04:25:34:000 MEMORIA/(112484:112486): FUNCIONS
+[INFO] 04:25:34:005 MEMORIA/(112484:112486): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 04:25:34:005 MEMORIA/(112484:112486): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 04:25:34:006 MEMORIA/(112484:112486): Dirección física: 80
+[INFO] 04:25:34:006 MEMORIA/(112484:112486): Valor Registro: MEMORIA_
+[INFO] 04:25:35:007 MEMORIA/(112484:112486): MEMORIA_
+[INFO] 04:25:35:065 MEMORIA/(112484:112486): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 04:25:36:084 MEMORIA/(112484:112486): Se envia el valor: PRUEBA__
+[INFO] 04:25:36:089 MEMORIA/(112484:112486): Se busca el valor de la direccion fisica: 100
+[INFO] 04:25:36:110 MEMORIA/(112484:112486): CPU quiere leer en la dirección <110> un tamaño de <9>
+[INFO] 04:25:37:111 MEMORIA/(112484:112486): Se envia el valor: FUNCIONS
+[INFO] 04:25:37:115 MEMORIA/(112484:112486): Se busca el valor de la direccion fisica: 110
+[INFO] 04:25:37:124 MEMORIA/(112484:112486): CPU quiere leer en la dirección <80> un tamaño de <9>
+[INFO] 04:25:38:126 MEMORIA/(112484:112486): Se envia el valor: MEMORIA_
+[INFO] 04:25:38:126 MEMORIA/(112484:112486): Se busca el valor de la direccion fisica: 80
+[INFO] 04:25:38:168 MEMORIA/(112484:112498): Eliminación de Proceso PID: 1000
+[ERROR] 04:28:15:334 MEMORIA/(112484:112498): Operación desconocida.
+[ERROR] 04:28:15:334 MEMORIA/(112484:112488): Operación desconocida.
+[INFO] 04:28:20:859 MEMORIA/(112572:112572): Se inicializaron las estructuras de Memoria
+[INFO] 04:28:21:048 MEMORIA/(112572:112572): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:28:31:960 MEMORIA/(112572:112572): Se conectó un cliente!
+[INFO] 04:28:43:782 MEMORIA/(112572:112572): Se conectó un cliente!
+[INFO] 04:28:52:521 MEMORIA/(112572:112572): Se conectó un cliente!
+[INFO] 04:28:59:973 MEMORIA/(112572:112586): Creación de Proceso PID: 1000
+[INFO] 04:29:03:154 MEMORIA/(112572:112574): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 04:29:03:156 MEMORIA/(112572:112574): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 04:29:03:166 MEMORIA/(112572:112574): Dirección física: 100
+[INFO] 04:29:03:172 MEMORIA/(112572:112574): Valor Registro: PRUEBA__
+[INFO] 04:29:04:179 MEMORIA/(112572:112574): PRUEBA__
+[INFO] 04:29:04:195 MEMORIA/(112572:112574): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 04:29:04:197 MEMORIA/(112572:112574): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 04:29:04:198 MEMORIA/(112572:112574): Dirección física: 110
+[INFO] 04:29:04:199 MEMORIA/(112572:112574): Valor Registro: FUNCIONS
+[INFO] 04:29:05:199 MEMORIA/(112572:112574): FUNCIONS
+[INFO] 04:29:05:202 MEMORIA/(112572:112574): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 04:29:05:204 MEMORIA/(112572:112574): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 04:29:05:205 MEMORIA/(112572:112574): Dirección física: 80
+[INFO] 04:29:05:205 MEMORIA/(112572:112574): Valor Registro: MEMORIA_
+[INFO] 04:29:06:206 MEMORIA/(112572:112574): MEMORIA_
+[INFO] 04:29:06:259 MEMORIA/(112572:112574): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 04:29:07:270 MEMORIA/(112572:112574): Se envia el valor: PRUEBA__
+[INFO] 04:29:07:272 MEMORIA/(112572:112574): Se busca el valor de la direccion fisica: 100
+[INFO] 04:29:07:276 MEMORIA/(112572:112574): CPU quiere leer en la dirección <110> un tamaño de <9>
+[INFO] 04:29:08:277 MEMORIA/(112572:112574): Se envia el valor: FUNCIONS
+[INFO] 04:29:08:278 MEMORIA/(112572:112574): Se busca el valor de la direccion fisica: 110
+[INFO] 04:29:08:280 MEMORIA/(112572:112574): CPU quiere leer en la dirección <80> un tamaño de <9>
+[INFO] 04:29:09:281 MEMORIA/(112572:112574): Se envia el valor: MEMORIA_
+[INFO] 04:29:09:286 MEMORIA/(112572:112574): Se busca el valor de la direccion fisica: 80
+[INFO] 04:29:09:349 MEMORIA/(112572:112586): Eliminación de Proceso PID: 1000
+[ERROR] 04:32:01:188 MEMORIA/(112572:112586): Operación desconocida.
+[ERROR] 04:32:01:189 MEMORIA/(112572:112576): Operación desconocida.
+[INFO] 04:32:09:459 MEMORIA/(112779:112779): Se inicializaron las estructuras de Memoria
+[INFO] 04:32:09:620 MEMORIA/(112779:112779): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:32:55:904 MEMORIA/(112779:112779): Se conectó un cliente!
+[INFO] 04:32:58:421 MEMORIA/(112779:112779): Se conectó un cliente!
+[INFO] 04:33:01:747 MEMORIA/(112779:112779): Se conectó un cliente!
+[INFO] 04:33:10:038 MEMORIA/(112779:112793): Creación de Proceso PID: 1000
+[INFO] 04:33:13:284 MEMORIA/(112779:112781): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 04:33:13:291 MEMORIA/(112779:112781): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 04:33:13:293 MEMORIA/(112779:112781): Dirección física: 100
+[INFO] 04:33:13:298 MEMORIA/(112779:112781): Valor Registro: PRUEBA__
+[INFO] 04:33:14:313 MEMORIA/(112779:112781): PRUEBA__
+[INFO] 04:33:14:323 MEMORIA/(112779:112781): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 04:33:14:324 MEMORIA/(112779:112781): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 04:33:14:324 MEMORIA/(112779:112781): Dirección física: 110
+[INFO] 04:33:14:326 MEMORIA/(112779:112781): Valor Registro: FUNCIONS
+[INFO] 04:33:15:326 MEMORIA/(112779:112781): FUNCIONS
+[INFO] 04:33:15:329 MEMORIA/(112779:112781): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 04:33:15:329 MEMORIA/(112779:112781): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 04:33:15:330 MEMORIA/(112779:112781): Dirección física: 80
+[INFO] 04:33:15:330 MEMORIA/(112779:112781): Valor Registro: MEMORIA_
+[INFO] 04:33:16:331 MEMORIA/(112779:112781): MEMORIA_
+[INFO] 04:33:16:360 MEMORIA/(112779:112781): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 04:33:17:375 MEMORIA/(112779:112781): Se envia el valor: PRUEBA__
+[INFO] 04:33:17:377 MEMORIA/(112779:112781): Se busca el valor de la direccion fisica: 100
+[INFO] 04:33:17:385 MEMORIA/(112779:112781): CPU quiere leer en la dirección <110> un tamaño de <9>
+[INFO] 04:33:18:388 MEMORIA/(112779:112781): Se envia el valor: FUNCIONS
+[INFO] 04:33:18:389 MEMORIA/(112779:112781): Se busca el valor de la direccion fisica: 110
+[INFO] 04:33:18:396 MEMORIA/(112779:112781): CPU quiere leer en la dirección <80> un tamaño de <9>
+[INFO] 04:33:19:398 MEMORIA/(112779:112781): Se envia el valor: MEMORIA_
+[INFO] 04:33:19:404 MEMORIA/(112779:112781): Se busca el valor de la direccion fisica: 80
+[INFO] 04:33:19:474 MEMORIA/(112779:112793): Eliminación de Proceso PID: 1000
+[ERROR] 04:34:54:746 MEMORIA/(112779:112793): Operación desconocida.
+[ERROR] 04:34:54:746 MEMORIA/(112779:112783): Operación desconocida.
+[INFO] 04:47:59:386 MEMORIA/(113678:113678): Se inicializaron las estructuras de Memoria
+[INFO] 04:47:59:637 MEMORIA/(113678:113678): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:48:03:537 MEMORIA/(113678:113678): Se conectó un cliente!
+[INFO] 04:48:06:165 MEMORIA/(113678:113678): Se conectó un cliente!
+[INFO] 04:48:09:660 MEMORIA/(113678:113678): Se conectó un cliente!
+[INFO] 04:48:13:796 MEMORIA/(113678:113692): Creación de Proceso PID: 1000
+[INFO] 04:48:16:947 MEMORIA/(113678:113680): CPU quiere escribir en la dirección <100> el valor <PRUEBA__>, de tamaño <9>
+[INFO] 04:48:16:949 MEMORIA/(113678:113680): Se escribe el valor <PRUEBA__> de tamaño <9> en la direccion fisica: 100
+[INFO] 04:48:16:950 MEMORIA/(113678:113680): Dirección física: 100
+[INFO] 04:48:16:970 MEMORIA/(113678:113680): Valor Registro: PRUEBA__
+[INFO] 04:48:17:974 MEMORIA/(113678:113680): PRUEBA__
+[INFO] 04:48:17:978 MEMORIA/(113678:113680): CPU quiere escribir en la dirección <110> el valor <FUNCIONS>, de tamaño <9>
+[INFO] 04:48:17:979 MEMORIA/(113678:113680): Se escribe el valor <FUNCIONS> de tamaño <9> en la direccion fisica: 110
+[INFO] 04:48:17:980 MEMORIA/(113678:113680): Dirección física: 110
+[INFO] 04:48:17:980 MEMORIA/(113678:113680): Valor Registro: FUNCIONS
+[INFO] 04:48:18:982 MEMORIA/(113678:113680): FUNCIONS
+[INFO] 04:48:18:985 MEMORIA/(113678:113680): CPU quiere escribir en la dirección <80> el valor <MEMORIA_>, de tamaño <9>
+[INFO] 04:48:18:987 MEMORIA/(113678:113680): Se escribe el valor <MEMORIA_> de tamaño <9> en la direccion fisica: 80
+[INFO] 04:48:18:988 MEMORIA/(113678:113680): Dirección física: 80
+[INFO] 04:48:18:988 MEMORIA/(113678:113680): Valor Registro: MEMORIA_
+[INFO] 04:48:19:989 MEMORIA/(113678:113680): MEMORIA_
+[INFO] 04:48:20:064 MEMORIA/(113678:113680): CPU quiere leer en la dirección <100> un tamaño de <9>
+[INFO] 04:48:21:098 MEMORIA/(113678:113680): Se envia el valor: PRUEBA__
+[INFO] 04:48:21:100 MEMORIA/(113678:113680): Se busca el valor de la direccion fisica: 100
+[INFO] 04:48:21:107 MEMORIA/(113678:113680): CPU quiere leer en la dirección <110> un tamaño de <9>
+[INFO] 04:48:22:112 MEMORIA/(113678:113680): Se envia el valor: FUNCIONS
+[INFO] 04:48:22:114 MEMORIA/(113678:113680): Se busca el valor de la direccion fisica: 110
+[INFO] 04:48:22:119 MEMORIA/(113678:113680): CPU quiere leer en la dirección <80> un tamaño de <9>
+[INFO] 04:48:23:121 MEMORIA/(113678:113680): Se envia el valor: MEMORIA_
+[INFO] 04:48:23:126 MEMORIA/(113678:113680): Se busca el valor de la direccion fisica: 80
+[INFO] 04:48:23:151 MEMORIA/(113678:113692): Eliminación de Proceso PID: 1000
+[ERROR] 04:53:14:724 MEMORIA/(113678:113692): Operación desconocida.
+[ERROR] 04:53:14:751 MEMORIA/(113678:113682): Operación desconocida.
+[INFO] 04:53:57:327 MEMORIA/(113766:113766): Se inicializaron las estructuras de Memoria
+[INFO] 04:53:57:480 MEMORIA/(113766:113766): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:54:02:773 MEMORIA/(113766:113766): Se conectó un cliente!
+[INFO] 04:54:06:458 MEMORIA/(113766:113766): Se conectó un cliente!
+[INFO] 04:54:09:424 MEMORIA/(113766:113766): Se conectó un cliente!
+[INFO] 04:54:20:276 MEMORIA/(113766:113780): Creación de Proceso PID: 1000
+[ERROR] 04:54:20:703 MEMORIA/(113766:113780): Operación desconocida.
+[ERROR] 04:54:20:709 MEMORIA/(113766:113770): Operación desconocida.
+[INFO] 04:57:18:471 MEMORIA/(113792:113792): Se inicializaron las estructuras de Memoria
+[INFO] 04:57:18:634 MEMORIA/(113792:113792): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:57:26:134 MEMORIA/(113792:113792): Se conectó un cliente!
+[INFO] 04:57:28:124 MEMORIA/(113792:113792): Se conectó un cliente!
+[INFO] 04:58:55:408 MEMORIA/(113792:113792): Se conectó un cliente!
+[INFO] 04:59:56:819 MEMORIA/(113792:113865): Creación de Proceso PID: 1000
+[ERROR] 05:03:20:060 MEMORIA/(113792:113865): Operación desconocida.
+[ERROR] 05:03:20:084 MEMORIA/(113792:113796): Operación desconocida.
+[INFO] 05:05:53:129 MEMORIA/(114099:114099): Se inicializaron las estructuras de Memoria
+[INFO] 05:05:53:266 MEMORIA/(114099:114099): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:05:57:675 MEMORIA/(114099:114099): Se conectó un cliente!
+[INFO] 05:06:01:047 MEMORIA/(114099:114099): Se conectó un cliente!
+[INFO] 05:06:04:226 MEMORIA/(114099:114099): Se conectó un cliente!
+[INFO] 05:06:12:280 MEMORIA/(114099:114113): Creación de Proceso PID: 1000
+[ERROR] 05:07:11:443 MEMORIA/(114099:114113): Operación desconocida.
+[INFO] 05:14:47:354 MEMORIA/(114216:114216): Se inicializaron las estructuras de Memoria
+[INFO] 05:14:47:511 MEMORIA/(114216:114216): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:14:50:303 MEMORIA/(114216:114216): Se conectó un cliente!
+[INFO] 05:15:05:801 MEMORIA/(114216:114216): Se conectó un cliente!
+[ERROR] 05:15:48:091 MEMORIA/(114216:114231): Operación desconocida.
+[INFO] 05:16:44:168 MEMORIA/(114271:114271): Se inicializaron las estructuras de Memoria
+[INFO] 05:17:11:372 MEMORIA/(114278:114278): Se inicializaron las estructuras de Memoria
+[INFO] 05:18:01:710 MEMORIA/(114280:114280): Se inicializaron las estructuras de Memoria
+[INFO] 05:18:01:889 MEMORIA/(114280:114280): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:18:16:307 MEMORIA/(114280:114280): Se conectó un cliente!
+[INFO] 05:18:49:892 MEMORIA/(114280:114280): Se conectó un cliente!
+[INFO] 05:19:18:203 MEMORIA/(114280:114280): Se conectó un cliente!
+[ERROR] 05:21:03:487 MEMORIA/(114280:114322): Operación desconocida.
+[INFO] 05:21:17:740 MEMORIA/(114362:114362): Se inicializaron las estructuras de Memoria
+[INFO] 05:21:24:474 MEMORIA/(114364:114364): Se inicializaron las estructuras de Memoria
+[INFO] 05:21:38:750 MEMORIA/(114365:114365): Se inicializaron las estructuras de Memoria
+[INFO] 05:21:42:041 MEMORIA/(114366:114366): Se inicializaron las estructuras de Memoria
+[INFO] 05:21:44:460 MEMORIA/(114367:114367): Se inicializaron las estructuras de Memoria
+[INFO] 05:21:47:056 MEMORIA/(114368:114368): Se inicializaron las estructuras de Memoria
+[INFO] 05:21:57:087 MEMORIA/(114369:114369): Se inicializaron las estructuras de Memoria
+[INFO] 05:22:00:687 MEMORIA/(114370:114370): Se inicializaron las estructuras de Memoria
+[INFO] 05:22:09:104 MEMORIA/(114372:114372): Se inicializaron las estructuras de Memoria
+[INFO] 05:22:18:402 MEMORIA/(114374:114374): Se inicializaron las estructuras de Memoria
+[INFO] 05:22:18:537 MEMORIA/(114374:114374): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:22:40:313 MEMORIA/(114374:114374): Se conectó un cliente!
+[INFO] 05:23:01:096 MEMORIA/(114374:114374): Se conectó un cliente!
+[INFO] 05:23:13:192 MEMORIA/(114374:114374): Se conectó un cliente!
+[INFO] 05:23:39:686 MEMORIA/(114374:114432): Creación de Proceso PID: 1000
+[ERROR] 05:31:54:967 MEMORIA/(114374:114416): Operación desconocida.
+[INFO] 05:42:00:024 MEMORIA/(115287:115287): Se inicializaron las estructuras de Memoria
+[INFO] 05:42:00:273 MEMORIA/(115287:115287): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:42:12:528 MEMORIA/(115287:115287): Se conectó un cliente!
+[INFO] 05:42:13:932 MEMORIA/(115287:115287): Se conectó un cliente!
+[INFO] 05:42:16:249 MEMORIA/(115287:115287): Se conectó un cliente!
+[INFO] 05:42:18:525 MEMORIA/(115287:115301): Creación de Proceso PID: 1000
+[ERROR] 05:44:41:865 MEMORIA/(115287:115301): Operación desconocida.

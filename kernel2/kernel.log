@@ -4722,3 +4722,344 @@
 [WARNING] 23:52:24:734 kernel.log/(8170:8189): PID: <1000> solicita una instancia del Recurso: <NO_EXISTO>
 [INFO] 23:52:43:303 kernel.log/(8170:8184): PID: <1000> liberando estructuras en memoria
 [INFO] 23:52:43:304 kernel.log/(8170:8184): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 01:50:18:770 kernel.log/(107906:107906): Se crea el diccionario con los recursos.
+[INFO] 01:50:18:770 kernel.log/(107906:107906): Se agrego el recurso DISCO al diccionario
+[INFO] 01:50:18:770 kernel.log/(107906:107906): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 01:50:18:771 kernel.log/(107906:107906): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 01:51:30:501 kernel.log/(107906:107909): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:51:30:501 kernel.log/(107906:107909): PID: <1000> ingresa a EXECUTE
+[INFO] 01:51:30:501 kernel.log/(107906:107911): PID: <1000> enviada a CPU
+[WARNING] 01:51:33:505 kernel.log/(107906:107911): La última instrucción ejecutada fue YIELD
+[INFO] 01:51:33:505 kernel.log/(107906:107909): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:51:33:506 kernel.log/(107906:107909): PID: <1000> ingresa a EXECUTE
+[INFO] 01:51:33:507 kernel.log/(107906:107911): PID: <1000> enviada a CPU
+[INFO] 01:51:34:522 kernel.log/(107906:107907): PID: <1000> liberando estructuras en memoria
+[INFO] 01:51:34:522 kernel.log/(107906:107907): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 02:17:03:677 kernel.log/(107906:107906): Finalizando módulo Kernel
+[INFO] 02:18:32:929 kernel.log/(109215:109215): Se crea el diccionario con los recursos.
+[INFO] 02:18:32:930 kernel.log/(109215:109215): Se agrego el recurso DISCO al diccionario
+[INFO] 02:18:32:930 kernel.log/(109215:109215): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:18:32:930 kernel.log/(109215:109215): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:18:40:862 kernel.log/(109215:109218): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:18:40:862 kernel.log/(109215:109218): PID: <1000> ingresa a EXECUTE
+[INFO] 02:18:40:862 kernel.log/(109215:109220): PID: <1000> enviada a CPU
+[WARNING] 02:18:43:865 kernel.log/(109215:109220): La última instrucción ejecutada fue YIELD
+[INFO] 02:18:43:865 kernel.log/(109215:109218): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:18:43:865 kernel.log/(109215:109218): PID: <1000> ingresa a EXECUTE
+[INFO] 02:18:43:865 kernel.log/(109215:109220): PID: <1000> enviada a CPU
+[WARNING] 02:18:46:876 kernel.log/(109215:109220): La última instrucción ejecutada fue YIELD
+[INFO] 02:18:46:876 kernel.log/(109215:109218): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:18:46:876 kernel.log/(109215:109218): PID: <1000> ingresa a EXECUTE
+[INFO] 02:18:46:877 kernel.log/(109215:109220): PID: <1000> enviada a CPU
+[INFO] 02:30:05:119 kernel.log/(109306:109306): Se crea el diccionario con los recursos.
+[INFO] 02:30:05:119 kernel.log/(109306:109306): Se agrego el recurso DISCO al diccionario
+[INFO] 02:30:05:119 kernel.log/(109306:109306): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:30:05:120 kernel.log/(109306:109306): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[ERROR] 02:31:33:562 kernel.log/(109306:109306): Finalizando módulo Kernel
+[INFO] 02:32:41:456 kernel.log/(109347:109347): Se crea el diccionario con los recursos.
+[INFO] 02:32:41:456 kernel.log/(109347:109347): Se agrego el recurso DISCO al diccionario
+[INFO] 02:32:41:456 kernel.log/(109347:109347): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:32:41:458 kernel.log/(109347:109347): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:32:59:764 kernel.log/(109347:109350): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:32:59:764 kernel.log/(109347:109350): PID: <1000> ingresa a EXECUTE
+[INFO] 02:32:59:764 kernel.log/(109347:109352): PID: <1000> enviada a CPU
+[WARNING] 02:33:02:768 kernel.log/(109347:109352): La última instrucción ejecutada fue YIELD
+[INFO] 02:33:02:768 kernel.log/(109347:109350): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:33:02:768 kernel.log/(109347:109350): PID: <1000> ingresa a EXECUTE
+[INFO] 02:33:02:768 kernel.log/(109347:109352): PID: <1000> enviada a CPU
+[WARNING] 02:33:05:777 kernel.log/(109347:109352): La última instrucción ejecutada fue YIELD
+[INFO] 02:33:05:777 kernel.log/(109347:109350): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:33:05:777 kernel.log/(109347:109350): PID: <1000> ingresa a EXECUTE
+[INFO] 02:33:05:777 kernel.log/(109347:109352): PID: <1000> enviada a CPU
+[ERROR] 02:33:07:016 kernel.log/(109347:109352): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 02:33:59:891 kernel.log/(109347:109347): Finalizando módulo Kernel
+[INFO] 02:37:40:783 kernel.log/(109455:109455): Se crea el diccionario con los recursos.
+[INFO] 02:37:40:784 kernel.log/(109455:109455): Se agrego el recurso DISCO al diccionario
+[INFO] 02:37:40:784 kernel.log/(109455:109455): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:37:40:785 kernel.log/(109455:109455): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:38:17:372 kernel.log/(109455:109458): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:38:17:372 kernel.log/(109455:109458): PID: <1000> ingresa a EXECUTE
+[INFO] 02:38:17:372 kernel.log/(109455:109460): PID: <1000> enviada a CPU
+[WARNING] 02:39:33:877 kernel.log/(109455:109460): La última instrucción ejecutada fue YIELD
+[INFO] 02:39:33:877 kernel.log/(109455:109458): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:39:33:877 kernel.log/(109455:109458): PID: <1000> ingresa a EXECUTE
+[INFO] 02:39:33:877 kernel.log/(109455:109460): PID: <1000> enviada a CPU
+[ERROR] 02:43:45:433 kernel.log/(109455:109455): Finalizando módulo Kernel
+[INFO] 02:46:39:617 kernel.log/(109741:109741): Se crea el diccionario con los recursos.
+[INFO] 02:46:39:617 kernel.log/(109741:109741): Se agrego el recurso DISCO al diccionario
+[INFO] 02:46:39:617 kernel.log/(109741:109741): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:46:39:619 kernel.log/(109741:109741): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:46:52:677 kernel.log/(109741:109744): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:46:52:677 kernel.log/(109741:109744): PID: <1000> ingresa a EXECUTE
+[INFO] 02:46:52:678 kernel.log/(109741:109746): PID: <1000> enviada a CPU
+[WARNING] 02:46:55:681 kernel.log/(109741:109746): La última instrucción ejecutada fue YIELD
+[INFO] 02:46:55:681 kernel.log/(109741:109744): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:46:55:681 kernel.log/(109741:109744): PID: <1000> ingresa a EXECUTE
+[INFO] 02:46:55:681 kernel.log/(109741:109746): PID: <1000> enviada a CPU
+[WARNING] 02:46:58:709 kernel.log/(109741:109746): La última instrucción ejecutada fue YIELD
+[INFO] 02:46:58:709 kernel.log/(109741:109744): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:46:58:709 kernel.log/(109741:109744): PID: <1000> ingresa a EXECUTE
+[INFO] 02:46:58:710 kernel.log/(109741:109746): PID: <1000> enviada a CPU
+[INFO] 02:52:22:542 kernel.log/(109841:109841): Se crea el diccionario con los recursos.
+[INFO] 02:52:22:543 kernel.log/(109841:109841): Se agrego el recurso DISCO al diccionario
+[INFO] 02:52:22:543 kernel.log/(109841:109841): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 02:52:22:561 kernel.log/(109841:109841): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:52:34:057 kernel.log/(109841:109844): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:52:34:057 kernel.log/(109841:109844): PID: <1000> ingresa a EXECUTE
+[INFO] 02:52:34:057 kernel.log/(109841:109846): PID: <1000> enviada a CPU
+[WARNING] 02:52:37:060 kernel.log/(109841:109846): La última instrucción ejecutada fue YIELD
+[INFO] 02:52:37:060 kernel.log/(109841:109844): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:52:37:060 kernel.log/(109841:109844): PID: <1000> ingresa a EXECUTE
+[INFO] 02:52:37:060 kernel.log/(109841:109846): PID: <1000> enviada a CPU
+[WARNING] 02:52:40:069 kernel.log/(109841:109846): La última instrucción ejecutada fue YIELD
+[INFO] 02:52:40:069 kernel.log/(109841:109844): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:52:40:069 kernel.log/(109841:109844): PID: <1000> ingresa a EXECUTE
+[INFO] 02:52:40:070 kernel.log/(109841:109846): PID: <1000> enviada a CPU
+[INFO] 03:02:55:704 kernel.log/(110073:110073): Se crea el diccionario con los recursos.
+[INFO] 03:02:55:718 kernel.log/(110073:110073): Se agrego el recurso DISCO al diccionario
+[INFO] 03:02:55:718 kernel.log/(110073:110073): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:02:55:719 kernel.log/(110073:110073): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:03:21:317 kernel.log/(110073:110076): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:03:21:317 kernel.log/(110073:110076): PID: <1000> ingresa a EXECUTE
+[INFO] 03:03:21:317 kernel.log/(110073:110078): PID: <1000> enviada a CPU
+[WARNING] 03:03:24:320 kernel.log/(110073:110078): La última instrucción ejecutada fue YIELD
+[INFO] 03:03:24:320 kernel.log/(110073:110076): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:03:24:320 kernel.log/(110073:110076): PID: <1000> ingresa a EXECUTE
+[INFO] 03:03:24:320 kernel.log/(110073:110078): PID: <1000> enviada a CPU
+[WARNING] 03:08:13:951 kernel.log/(110073:110078): La última instrucción ejecutada fue YIELD
+[INFO] 03:08:13:951 kernel.log/(110073:110076): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:08:13:951 kernel.log/(110073:110076): PID: <1000> ingresa a EXECUTE
+[INFO] 03:08:13:951 kernel.log/(110073:110078): PID: <1000> enviada a CPU
+[INFO] 03:29:26:682 kernel.log/(110967:110967): Se crea el diccionario con los recursos.
+[INFO] 03:29:26:688 kernel.log/(110967:110967): Se agrego el recurso DISCO al diccionario
+[INFO] 03:29:26:688 kernel.log/(110967:110967): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:29:26:690 kernel.log/(110967:110967): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:29:40:158 kernel.log/(110967:110970): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:29:40:158 kernel.log/(110967:110970): PID: <1000> ingresa a EXECUTE
+[INFO] 03:29:40:158 kernel.log/(110967:110972): PID: <1000> enviada a CPU
+[WARNING] 03:29:43:181 kernel.log/(110967:110972): La última instrucción ejecutada fue YIELD
+[INFO] 03:29:43:181 kernel.log/(110967:110970): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:29:43:181 kernel.log/(110967:110970): PID: <1000> ingresa a EXECUTE
+[INFO] 03:29:43:181 kernel.log/(110967:110972): PID: <1000> enviada a CPU
+[WARNING] 03:30:07:687 kernel.log/(110967:110972): La última instrucción ejecutada fue YIELD
+[INFO] 03:30:07:687 kernel.log/(110967:110970): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:30:07:687 kernel.log/(110967:110970): PID: <1000> ingresa a EXECUTE
+[INFO] 03:30:07:687 kernel.log/(110967:110972): PID: <1000> enviada a CPU
+[INFO] 03:44:47:773 kernel.log/(111586:111586): Se crea el diccionario con los recursos.
+[INFO] 03:44:47:789 kernel.log/(111586:111586): Se agrego el recurso DISCO al diccionario
+[INFO] 03:44:47:789 kernel.log/(111586:111586): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:44:47:789 kernel.log/(111586:111586): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:44:57:423 kernel.log/(111586:111589): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:44:57:423 kernel.log/(111586:111589): PID: <1000> ingresa a EXECUTE
+[INFO] 03:44:57:423 kernel.log/(111586:111591): PID: <1000> enviada a CPU
+[WARNING] 03:45:00:453 kernel.log/(111586:111591): La última instrucción ejecutada fue YIELD
+[INFO] 03:45:00:453 kernel.log/(111586:111589): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:45:00:453 kernel.log/(111586:111589): PID: <1000> ingresa a EXECUTE
+[INFO] 03:45:00:453 kernel.log/(111586:111591): PID: <1000> enviada a CPU
+[WARNING] 03:45:03:465 kernel.log/(111586:111591): La última instrucción ejecutada fue YIELD
+[INFO] 03:45:03:465 kernel.log/(111586:111589): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:45:03:465 kernel.log/(111586:111589): PID: <1000> ingresa a EXECUTE
+[INFO] 03:45:03:466 kernel.log/(111586:111591): PID: <1000> enviada a CPU
+[INFO] 03:50:43:536 kernel.log/(111741:111741): Se crea el diccionario con los recursos.
+[INFO] 03:50:43:536 kernel.log/(111741:111741): Se agrego el recurso DISCO al diccionario
+[INFO] 03:50:43:536 kernel.log/(111741:111741): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:50:43:541 kernel.log/(111741:111741): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:50:48:366 kernel.log/(111741:111744): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:50:48:366 kernel.log/(111741:111744): PID: <1000> ingresa a EXECUTE
+[INFO] 03:50:48:366 kernel.log/(111741:111746): PID: <1000> enviada a CPU
+[WARNING] 03:50:51:369 kernel.log/(111741:111746): La última instrucción ejecutada fue YIELD
+[INFO] 03:50:51:369 kernel.log/(111741:111744): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:50:51:369 kernel.log/(111741:111744): PID: <1000> ingresa a EXECUTE
+[INFO] 03:50:51:369 kernel.log/(111741:111746): PID: <1000> enviada a CPU
+[WARNING] 03:50:54:399 kernel.log/(111741:111746): La última instrucción ejecutada fue YIELD
+[INFO] 03:50:54:399 kernel.log/(111741:111744): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:50:54:399 kernel.log/(111741:111744): PID: <1000> ingresa a EXECUTE
+[INFO] 03:50:54:399 kernel.log/(111741:111746): PID: <1000> enviada a CPU
+[ERROR] 03:50:56:096 kernel.log/(111741:111746): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 03:53:44:887 kernel.log/(111741:111741): Finalizando módulo Kernel
+[INFO] 03:54:15:401 kernel.log/(111819:111819): Se crea el diccionario con los recursos.
+[INFO] 03:54:15:401 kernel.log/(111819:111819): Se agrego el recurso DISCO al diccionario
+[INFO] 03:54:15:402 kernel.log/(111819:111819): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:55:36:099 kernel.log/(111836:111836): Se crea el diccionario con los recursos.
+[INFO] 03:55:36:099 kernel.log/(111836:111836): Se agrego el recurso DISCO al diccionario
+[INFO] 03:55:36:099 kernel.log/(111836:111836): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:55:36:105 kernel.log/(111836:111836): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:55:43:843 kernel.log/(111836:111839): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:55:43:843 kernel.log/(111836:111839): PID: <1000> ingresa a EXECUTE
+[INFO] 03:55:43:843 kernel.log/(111836:111841): PID: <1000> enviada a CPU
+[WARNING] 03:55:46:845 kernel.log/(111836:111841): La última instrucción ejecutada fue YIELD
+[INFO] 03:55:46:845 kernel.log/(111836:111839): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:55:46:845 kernel.log/(111836:111839): PID: <1000> ingresa a EXECUTE
+[INFO] 03:55:46:845 kernel.log/(111836:111841): PID: <1000> enviada a CPU
+[WARNING] 03:55:49:881 kernel.log/(111836:111841): La última instrucción ejecutada fue YIELD
+[INFO] 03:55:49:881 kernel.log/(111836:111839): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:55:49:881 kernel.log/(111836:111839): PID: <1000> ingresa a EXECUTE
+[INFO] 03:55:49:882 kernel.log/(111836:111841): PID: <1000> enviada a CPU
+[INFO] 03:57:09:560 kernel.log/(111915:111915): Se crea el diccionario con los recursos.
+[INFO] 03:57:09:560 kernel.log/(111915:111915): Se agrego el recurso DISCO al diccionario
+[INFO] 03:57:09:560 kernel.log/(111915:111915): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 03:57:09:565 kernel.log/(111915:111915): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 03:57:15:109 kernel.log/(111915:111918): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:57:15:109 kernel.log/(111915:111918): PID: <1000> ingresa a EXECUTE
+[INFO] 03:57:15:109 kernel.log/(111915:111920): PID: <1000> enviada a CPU
+[WARNING] 03:57:18:112 kernel.log/(111915:111920): La última instrucción ejecutada fue YIELD
+[INFO] 03:57:18:112 kernel.log/(111915:111918): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:57:18:112 kernel.log/(111915:111918): PID: <1000> ingresa a EXECUTE
+[INFO] 03:57:18:112 kernel.log/(111915:111920): PID: <1000> enviada a CPU
+[WARNING] 03:57:21:159 kernel.log/(111915:111920): La última instrucción ejecutada fue YIELD
+[INFO] 03:57:21:159 kernel.log/(111915:111918): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 03:57:21:160 kernel.log/(111915:111918): PID: <1000> ingresa a EXECUTE
+[INFO] 03:57:21:160 kernel.log/(111915:111920): PID: <1000> enviada a CPU
+[INFO] 03:57:24:180 kernel.log/(111915:111916): PID: <1000> liberando estructuras en memoria
+[INFO] 03:57:24:232 kernel.log/(111915:111916): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 04:23:34:344 kernel.log/(111915:111915): Finalizando módulo Kernel
+[INFO] 04:24:09:831 kernel.log/(112437:112437): Se crea el diccionario con los recursos.
+[INFO] 04:24:09:831 kernel.log/(112437:112437): Se agrego el recurso DISCO al diccionario
+[INFO] 04:24:09:831 kernel.log/(112437:112437): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:24:09:837 kernel.log/(112437:112437): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:24:16:374 kernel.log/(112437:112440): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:24:16:374 kernel.log/(112437:112440): PID: <1000> ingresa a EXECUTE
+[INFO] 04:24:16:374 kernel.log/(112437:112442): PID: <1000> enviada a CPU
+[WARNING] 04:24:19:605 kernel.log/(112437:112442): La última instrucción ejecutada fue YIELD
+[INFO] 04:24:19:629 kernel.log/(112437:112440): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:24:19:629 kernel.log/(112437:112440): PID: <1000> ingresa a EXECUTE
+[INFO] 04:24:19:629 kernel.log/(112437:112442): PID: <1000> enviada a CPU
+[WARNING] 04:24:22:692 kernel.log/(112437:112442): La última instrucción ejecutada fue YIELD
+[INFO] 04:24:22:692 kernel.log/(112437:112440): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:24:22:692 kernel.log/(112437:112440): PID: <1000> ingresa a EXECUTE
+[INFO] 04:24:22:693 kernel.log/(112437:112442): PID: <1000> enviada a CPU
+[INFO] 04:24:25:793 kernel.log/(112437:112438): PID: <1000> liberando estructuras en memoria
+[INFO] 04:24:25:823 kernel.log/(112437:112438): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 04:25:00:230 kernel.log/(112437:112437): Finalizando módulo Kernel
+[INFO] 04:25:24:283 kernel.log/(112489:112489): Se crea el diccionario con los recursos.
+[INFO] 04:25:24:283 kernel.log/(112489:112489): Se agrego el recurso DISCO al diccionario
+[INFO] 04:25:24:283 kernel.log/(112489:112489): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:25:24:301 kernel.log/(112489:112489): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:25:28:790 kernel.log/(112489:112492): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:25:28:790 kernel.log/(112489:112492): PID: <1000> ingresa a EXECUTE
+[INFO] 04:25:28:790 kernel.log/(112489:112494): PID: <1000> enviada a CPU
+[WARNING] 04:25:31:889 kernel.log/(112489:112494): La última instrucción ejecutada fue YIELD
+[INFO] 04:25:31:889 kernel.log/(112489:112492): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:25:31:889 kernel.log/(112489:112492): PID: <1000> ingresa a EXECUTE
+[INFO] 04:25:31:889 kernel.log/(112489:112494): PID: <1000> enviada a CPU
+[WARNING] 04:25:35:009 kernel.log/(112489:112494): La última instrucción ejecutada fue YIELD
+[INFO] 04:25:35:009 kernel.log/(112489:112492): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:25:35:009 kernel.log/(112489:112492): PID: <1000> ingresa a EXECUTE
+[INFO] 04:25:35:009 kernel.log/(112489:112494): PID: <1000> enviada a CPU
+[INFO] 04:25:38:140 kernel.log/(112489:112490): PID: <1000> liberando estructuras en memoria
+[INFO] 04:25:38:174 kernel.log/(112489:112490): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 04:28:15:326 kernel.log/(112489:112489): Finalizando módulo Kernel
+[INFO] 04:28:52:453 kernel.log/(112577:112577): Se crea el diccionario con los recursos.
+[INFO] 04:28:52:454 kernel.log/(112577:112577): Se agrego el recurso DISCO al diccionario
+[INFO] 04:28:52:455 kernel.log/(112577:112577): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:28:52:475 kernel.log/(112577:112577): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:28:59:982 kernel.log/(112577:112580): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:28:59:982 kernel.log/(112577:112580): PID: <1000> ingresa a EXECUTE
+[INFO] 04:28:59:982 kernel.log/(112577:112582): PID: <1000> enviada a CPU
+[WARNING] 04:29:03:038 kernel.log/(112577:112582): La última instrucción ejecutada fue YIELD
+[INFO] 04:29:03:038 kernel.log/(112577:112580): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:29:03:038 kernel.log/(112577:112580): PID: <1000> ingresa a EXECUTE
+[INFO] 04:29:03:038 kernel.log/(112577:112582): PID: <1000> enviada a CPU
+[WARNING] 04:29:06:218 kernel.log/(112577:112582): La última instrucción ejecutada fue YIELD
+[INFO] 04:29:06:219 kernel.log/(112577:112580): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:29:06:219 kernel.log/(112577:112580): PID: <1000> ingresa a EXECUTE
+[INFO] 04:29:06:222 kernel.log/(112577:112582): PID: <1000> enviada a CPU
+[INFO] 04:29:09:325 kernel.log/(112577:112578): PID: <1000> liberando estructuras en memoria
+[INFO] 04:29:09:358 kernel.log/(112577:112578): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 04:32:01:182 kernel.log/(112577:112577): Finalizando módulo Kernel
+[INFO] 04:33:01:671 kernel.log/(112784:112784): Se crea el diccionario con los recursos.
+[INFO] 04:33:01:672 kernel.log/(112784:112784): Se agrego el recurso DISCO al diccionario
+[INFO] 04:33:01:672 kernel.log/(112784:112784): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:33:01:687 kernel.log/(112784:112784): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:33:10:105 kernel.log/(112784:112787): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:33:10:105 kernel.log/(112784:112787): PID: <1000> ingresa a EXECUTE
+[INFO] 04:33:10:105 kernel.log/(112784:112789): PID: <1000> enviada a CPU
+[WARNING] 04:33:13:165 kernel.log/(112784:112789): La última instrucción ejecutada fue YIELD
+[INFO] 04:33:13:166 kernel.log/(112784:112787): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:33:13:166 kernel.log/(112784:112787): PID: <1000> ingresa a EXECUTE
+[INFO] 04:33:13:168 kernel.log/(112784:112789): PID: <1000> enviada a CPU
+[WARNING] 04:33:16:334 kernel.log/(112784:112789): La última instrucción ejecutada fue YIELD
+[INFO] 04:33:16:334 kernel.log/(112784:112787): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:33:16:334 kernel.log/(112784:112787): PID: <1000> ingresa a EXECUTE
+[INFO] 04:33:16:334 kernel.log/(112784:112789): PID: <1000> enviada a CPU
+[INFO] 04:33:19:457 kernel.log/(112784:112785): PID: <1000> liberando estructuras en memoria
+[INFO] 04:33:19:477 kernel.log/(112784:112785): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 04:34:54:734 kernel.log/(112784:112784): Finalizando módulo Kernel
+[INFO] 04:48:09:597 kernel.log/(113683:113683): Se crea el diccionario con los recursos.
+[INFO] 04:48:09:597 kernel.log/(113683:113683): Se agrego el recurso DISCO al diccionario
+[INFO] 04:48:09:597 kernel.log/(113683:113683): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:48:09:605 kernel.log/(113683:113683): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:48:13:804 kernel.log/(113683:113686): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:48:13:804 kernel.log/(113683:113686): PID: <1000> ingresa a EXECUTE
+[INFO] 04:48:13:804 kernel.log/(113683:113688): PID: <1000> enviada a CPU
+[WARNING] 04:48:16:903 kernel.log/(113683:113688): La última instrucción ejecutada fue YIELD
+[INFO] 04:48:16:903 kernel.log/(113683:113686): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:48:16:903 kernel.log/(113683:113686): PID: <1000> ingresa a EXECUTE
+[INFO] 04:48:16:903 kernel.log/(113683:113688): PID: <1000> enviada a CPU
+[WARNING] 04:48:19:999 kernel.log/(113683:113688): La última instrucción ejecutada fue YIELD
+[INFO] 04:48:20:000 kernel.log/(113683:113686): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:48:20:000 kernel.log/(113683:113686): PID: <1000> ingresa a EXECUTE
+[INFO] 04:48:20:000 kernel.log/(113683:113688): PID: <1000> enviada a CPU
+[INFO] 04:48:23:142 kernel.log/(113683:113684): PID: <1000> liberando estructuras en memoria
+[INFO] 04:48:23:153 kernel.log/(113683:113684): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 04:53:14:668 kernel.log/(113683:113683): Finalizando módulo Kernel
+[INFO] 04:54:09:354 kernel.log/(113771:113771): Se crea el diccionario con los recursos.
+[INFO] 04:54:09:354 kernel.log/(113771:113771): Se agrego el recurso DISCO al diccionario
+[INFO] 04:54:09:354 kernel.log/(113771:113771): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:54:09:363 kernel.log/(113771:113771): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 04:54:20:284 kernel.log/(113771:113774): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 04:54:20:284 kernel.log/(113771:113774): PID: <1000> ingresa a EXECUTE
+[INFO] 04:54:20:284 kernel.log/(113771:113776): PID: <1000> enviada a CPU
+[INFO] 04:58:53:951 kernel.log/(113832:113832): Se crea el diccionario con los recursos.
+[INFO] 04:58:53:951 kernel.log/(113832:113832): Se agrego el recurso DISCO al diccionario
+[INFO] 04:58:53:951 kernel.log/(113832:113832): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 04:58:56:232 kernel.log/(113832:113832): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 05:00:58:863 kernel.log/(113832:113851): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 05:00:58:864 kernel.log/(113832:113851): PID: <1000> ingresa a EXECUTE
+[INFO] 05:01:14:330 kernel.log/(113832:113853): PID: <1000> enviada a CPU
+[INFO] 05:06:04:128 kernel.log/(114104:114104): Se crea la Tabla Global de Archivos
+[INFO] 05:06:04:128 kernel.log/(114104:114104): Se crea el diccionario con los recursos.
+[INFO] 05:06:04:128 kernel.log/(114104:114104): Se agrego el recurso DISCO al diccionario
+[INFO] 05:06:04:128 kernel.log/(114104:114104): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:06:04:143 kernel.log/(114104:114104): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 05:06:12:286 kernel.log/(114104:114107): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 05:06:12:286 kernel.log/(114104:114107): PID: <1000> ingresa a EXECUTE
+[INFO] 05:06:12:286 kernel.log/(114104:114109): PID: <1000> enviada a CPU
+[ERROR] 05:07:11:432 kernel.log/(114104:114104): Finalizando módulo Kernel
+[INFO] 05:19:18:118 kernel.log/(114332:114332): Se crea la Tabla Global de Archivos
+[INFO] 05:19:18:119 kernel.log/(114332:114332): Se crea el diccionario con los recursos.
+[INFO] 05:19:18:119 kernel.log/(114332:114332): Se agrego el recurso DISCO al diccionario
+[INFO] 05:19:18:119 kernel.log/(114332:114332): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:19:18:135 kernel.log/(114332:114332): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[ERROR] 05:21:12:655 kernel.log/(114332:114332): Finalizando módulo Kernel
+[INFO] 05:23:13:028 kernel.log/(114423:114423): Se crea la Tabla Global de Archivos
+[INFO] 05:23:13:029 kernel.log/(114423:114423): Se crea el diccionario con los recursos.
+[INFO] 05:23:13:029 kernel.log/(114423:114423): Se agrego el recurso DISCO al diccionario
+[INFO] 05:23:13:029 kernel.log/(114423:114423): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:23:13:065 kernel.log/(114423:114423): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 05:23:39:747 kernel.log/(114423:114426): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 05:23:39:747 kernel.log/(114423:114426): PID: <1000> ingresa a EXECUTE
+[INFO] 05:23:39:747 kernel.log/(114423:114428): PID: <1000> enviada a CPU
+[ERROR] 05:31:54:965 kernel.log/(114423:114428): [ERROR] Error al determinar si existe <TINI_CONSEJODEAMOR.MP3> en FileSystem
+[ERROR] 05:31:54:965 kernel.log/(114423:114428): [ERROR] Fallo al recibir la respuesta de FileSystem, arreglate hermano.
+[INFO] 05:31:54:966 kernel.log/(114423:114428): PID: <1000> enviada a CPU
+[INFO] 05:31:55:158 kernel.log/(114423:114428): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:31:55:158 kernel.log/(114423:114428): PID: <1000> enviada a CPU
+[INFO] 05:42:16:185 kernel.log/(115292:115292): Se crea la Tabla Global de Archivos
+[INFO] 05:42:16:185 kernel.log/(115292:115292): Se crea el diccionario con los recursos.
+[INFO] 05:42:16:185 kernel.log/(115292:115292): Se agrego el recurso DISCO al diccionario
+[INFO] 05:42:16:185 kernel.log/(115292:115292): Se agrego el recurso RECURSO_1 al diccionario
+[INFO] 05:42:16:186 kernel.log/(115292:115292): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 05:42:18:531 kernel.log/(115292:115295): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 05:42:18:531 kernel.log/(115292:115295): PID: <1000> ingresa a EXECUTE
+[INFO] 05:42:18:531 kernel.log/(115292:115297): PID: <1000> enviada a CPU
+[INFO] 05:42:18:602 kernel.log/(115292:115297): El archivo <TINI_CONSEJODEAMOR.MP3> no existe en FileSystem
+[INFO] 05:42:18:602 kernel.log/(115292:115297): Agregado archivo <TINI_CONSEJODEAMOR.MP3> a la Tabla Global de Archivos.
+[INFO] 05:42:18:602 kernel.log/(115292:115297): PID: <1000> enviada a CPU
+[INFO] 05:42:18:682 kernel.log/(115292:115297): Actualización del puntero a <23> del archivo: <TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:42:18:683 kernel.log/(115292:115297): PID: <1000> enviada a CPU
+[INFO] 05:42:18:755 kernel.log/(115292:115297): PID: <1000> enviada a CPU
+[INFO] 05:42:25:832 kernel.log/(115292:115295): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 05:42:25:833 kernel.log/(115292:115295): PID: <1000> ingresa a EXECUTE
+[INFO] 05:42:25:833 kernel.log/(115292:115297): PID: <1000> enviada a CPU
+[ERROR] 05:44:41:863 kernel.log/(115292:115292): Finalizando módulo Kernel

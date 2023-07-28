@@ -599,3 +599,340 @@
 [INFO] 23:51:34:312 cpu_principal.log/(8139:8139): PID: <1000> - Ejecutando: <SET ECX EJECUTAR>
 [INFO] 23:51:35:312 cpu_principal.log/(8139:8139): PID: <1000> - Ejecutando: <SET EDX WAIT_404>
 [INFO] 23:51:35:312 cpu_principal.log/(8139:8139): PID: <1000> - Ejecutando: <WAIT NO_EXISTO>
+[INFO] 01:51:31:502 cpu_principal.log/(107902:107902): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 01:51:32:502 cpu_principal.log/(107902:107902): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 01:51:33:503 cpu_principal.log/(107902:107902): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 01:51:33:505 cpu_principal.log/(107902:107902): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 01:51:33:520 cpu_principal.log/(107902:107902): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 01:51:34:521 cpu_principal.log/(107902:107902): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <EAX>
+[INFO] 01:51:34:521 cpu_principal.log/(107902:107902): PID: <1000> - Ejecutando: <MOV_OUT 120 EBX >
+[INFO] 01:51:34:521 cpu_principal.log/(107902:107902): PID: <1000> - Error SEG_FAULT- Segmento: <0> - Offset: <120> - Tamaño: <128>
+[INFO] 02:18:41:863 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 02:18:42:864 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 02:18:43:864 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 02:18:43:865 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:18:43:870 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 02:18:44:872 cpu_principal.log/(109211:109211): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 02:18:44:873 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 02:18:45:875 cpu_principal.log/(109211:109211): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 02:18:45:875 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <MOV_OUT 8O ECX>
+[INFO] 02:18:46:876 cpu_principal.log/(109211:109211): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <8> - Valor: <MEMORIA_>
+[INFO] 02:18:46:876 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:18:46:879 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 02:18:46:879 cpu_principal.log/(109211:109211): Quiero leer en la dirección <100> un total de <9>
+[INFO] 02:18:47:880 cpu_principal.log/(109211:109211): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <
+>
+[INFO] 02:18:47:881 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 02:18:47:881 cpu_principal.log/(109211:109211): Quiero leer en la dirección <110> un total de <9>
+[INFO] 02:18:48:100 cpu_principal.log/(109211:109211): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 02:18:48:100 cpu_principal.log/(109211:109211): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 02:18:48:100 cpu_principal.log/(109211:109211): Quiero leer en la dirección <80> un total de <9>
+[INFO] 02:33:00:765 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 02:33:01:766 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 02:33:02:767 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 02:33:02:768 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:33:02:771 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 02:33:03:772 cpu_principal.log/(109343:109343): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 02:33:03:772 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 02:33:04:775 cpu_principal.log/(109343:109343): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 02:33:04:775 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <MOV_OUT 8O ECX>
+[INFO] 02:33:05:777 cpu_principal.log/(109343:109343): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <8> - Valor: <MEMORIA_>
+[INFO] 02:33:05:777 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:33:05:781 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 02:33:05:781 cpu_principal.log/(109343:109343): Quiero leer en la dirección <100> un total de <9>
+[INFO] 02:33:06:782 cpu_principal.log/(109343:109343): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <
+>
+[INFO] 02:33:06:782 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 02:33:06:783 cpu_principal.log/(109343:109343): Quiero leer en la dirección <110> un total de <9>
+[INFO] 02:33:07:015 cpu_principal.log/(109343:109343): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 02:33:07:015 cpu_principal.log/(109343:109343): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 02:33:07:015 cpu_principal.log/(109343:109343): Quiero leer en la dirección <80> un total de <9>
+[INFO] 02:39:11:530 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 02:39:19:031 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 02:39:23:811 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 02:39:33:623 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:40:40:080 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 02:41:39:635 cpu_principal.log/(109431:109431): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 02:41:56:254 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 02:41:58:510 cpu_principal.log/(109431:109431): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 02:42:14:452 cpu_principal.log/(109431:109431): PID: <1000> - Ejecutando: <MOV_OUT 8O ECX>
+[INFO] 02:46:53:678 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 02:46:54:680 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 02:46:55:680 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 02:46:55:681 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:46:55:683 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 02:46:56:692 cpu_principal.log/(109737:109737): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 02:46:56:692 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 02:46:57:705 cpu_principal.log/(109737:109737): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 02:46:57:706 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 02:46:58:708 cpu_principal.log/(109737:109737): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 02:46:58:708 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:46:58:720 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 02:46:58:720 cpu_principal.log/(109737:109737): Quiero leer en la dirección <100> un total de <9>
+[INFO] 02:46:59:721 cpu_principal.log/(109737:109737): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <
+>
+[INFO] 02:46:59:721 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 02:46:59:721 cpu_principal.log/(109737:109737): Quiero leer en la dirección <110> un total de <9>
+[INFO] 02:46:59:933 cpu_principal.log/(109737:109737): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 02:46:59:933 cpu_principal.log/(109737:109737): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 02:46:59:933 cpu_principal.log/(109737:109737): Quiero leer en la dirección <80> un total de <9>
+[INFO] 02:52:35:058 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 02:52:36:058 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 02:52:37:060 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 02:52:37:060 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:52:37:063 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 02:52:38:064 cpu_principal.log/(109837:109837): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 02:52:38:065 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 02:52:39:067 cpu_principal.log/(109837:109837): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 02:52:39:067 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 02:52:40:068 cpu_principal.log/(109837:109837): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 02:52:40:068 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:52:40:074 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 02:52:40:075 cpu_principal.log/(109837:109837): Quiero leer en la dirección <100> un total de <9>
+[INFO] 02:52:41:076 cpu_principal.log/(109837:109837): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <
+>
+[INFO] 02:52:41:076 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 02:52:41:077 cpu_principal.log/(109837:109837): Quiero leer en la dirección <110> un total de <9>
+[INFO] 02:52:41:312 cpu_principal.log/(109837:109837): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 02:52:41:312 cpu_principal.log/(109837:109837): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 02:52:41:312 cpu_principal.log/(109837:109837): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:03:22:318 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 03:03:23:319 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 03:03:24:319 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 03:03:24:320 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:03:24:327 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 03:05:23:237 cpu_principal.log/(110051:110051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 03:05:23:237 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 03:07:38:475 cpu_principal.log/(110051:110051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 03:07:38:476 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 03:08:13:950 cpu_principal.log/(110051:110051): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 03:08:13:951 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:08:13:954 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 03:08:13:954 cpu_principal.log/(110051:110051): Quiero leer en la dirección <100> un total de <9>
+[INFO] 03:11:15:886 cpu_principal.log/(110051:110051): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <
+>
+[INFO] 03:11:15:887 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 03:11:15:887 cpu_principal.log/(110051:110051): Quiero leer en la dirección <110> un total de <9>
+[INFO] 03:12:54:276 cpu_principal.log/(110051:110051): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 03:12:54:276 cpu_principal.log/(110051:110051): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 03:12:54:276 cpu_principal.log/(110051:110051): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:29:41:160 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 03:29:42:179 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 03:29:43:180 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 03:29:43:180 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:29:43:182 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 03:29:54:099 cpu_principal.log/(110953:110953): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 03:29:54:100 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 03:30:00:237 cpu_principal.log/(110953:110953): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 03:30:00:238 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 03:30:07:686 cpu_principal.log/(110953:110953): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 03:30:07:687 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:30:07:690 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 03:30:07:690 cpu_principal.log/(110953:110953): Quiero leer en la dirección <100> un total de <9>
+[INFO] 03:31:03:839 cpu_principal.log/(110953:110953): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 03:31:03:840 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 03:31:03:840 cpu_principal.log/(110953:110953): Quiero leer en la dirección <110> un total de <9>
+[INFO] 03:31:37:427 cpu_principal.log/(110953:110953): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 03:31:37:427 cpu_principal.log/(110953:110953): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 03:31:37:427 cpu_principal.log/(110953:110953): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:44:58:424 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 03:44:59:450 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 03:45:00:451 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 03:45:00:451 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:45:00:455 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 03:45:01:458 cpu_principal.log/(111582:111582): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 03:45:01:458 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 03:45:02:462 cpu_principal.log/(111582:111582): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 03:45:02:462 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 03:45:03:464 cpu_principal.log/(111582:111582): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 03:45:03:464 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:45:03:470 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 03:45:03:471 cpu_principal.log/(111582:111582): Quiero leer en la dirección <100> un total de <9>
+[INFO] 03:45:04:471 cpu_principal.log/(111582:111582): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 03:45:04:471 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 03:45:04:471 cpu_principal.log/(111582:111582): Quiero leer en la dirección <110> un total de <9>
+[INFO] 03:45:04:784 cpu_principal.log/(111582:111582): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 03:45:04:784 cpu_principal.log/(111582:111582): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 03:45:04:784 cpu_principal.log/(111582:111582): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:50:49:367 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 03:50:50:368 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 03:50:51:368 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 03:50:51:368 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:50:51:370 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 03:50:52:383 cpu_principal.log/(111737:111737): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 03:50:52:383 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 03:50:53:391 cpu_principal.log/(111737:111737): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 03:50:53:391 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 03:50:54:399 cpu_principal.log/(111737:111737): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 03:50:54:399 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:50:54:402 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 03:50:54:402 cpu_principal.log/(111737:111737): Quiero leer en la dirección <100> un total de <9>
+[INFO] 03:50:56:095 cpu_principal.log/(111737:111737): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <ERROR>
+[INFO] 03:50:56:095 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 03:50:56:095 cpu_principal.log/(111737:111737): Quiero leer en la dirección <110> un total de <9>
+[INFO] 03:50:56:095 cpu_principal.log/(111737:111737): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 03:50:56:095 cpu_principal.log/(111737:111737): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 03:50:56:095 cpu_principal.log/(111737:111737): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:55:44:844 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 03:55:45:845 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 03:55:46:845 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 03:55:46:845 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:55:46:846 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 03:55:47:857 cpu_principal.log/(111832:111832): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 03:55:47:857 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 03:55:48:863 cpu_principal.log/(111832:111832): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 03:55:48:864 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 03:55:49:881 cpu_principal.log/(111832:111832): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 03:55:49:881 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:55:49:887 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 03:55:49:887 cpu_principal.log/(111832:111832): Quiero leer en la dirección <100> un total de <9>
+[INFO] 03:55:51:283 cpu_principal.log/(111832:111832): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <ERROR>
+[INFO] 03:55:51:284 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 03:55:51:284 cpu_principal.log/(111832:111832): Quiero leer en la dirección <110> un total de <9>
+[INFO] 03:55:51:284 cpu_principal.log/(111832:111832): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <ERROR>
+[INFO] 03:55:51:284 cpu_principal.log/(111832:111832): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 03:55:51:284 cpu_principal.log/(111832:111832): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:57:16:111 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 03:57:17:111 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 03:57:18:112 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 03:57:18:112 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:57:18:114 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 03:57:19:126 cpu_principal.log/(111911:111911): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 03:57:19:126 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 03:57:20:143 cpu_principal.log/(111911:111911): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 03:57:20:143 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 03:57:21:159 cpu_principal.log/(111911:111911): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 03:57:21:159 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 03:57:21:162 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 03:57:21:162 cpu_principal.log/(111911:111911): Quiero leer en la dirección <100> un total de <9>
+[INFO] 03:57:22:171 cpu_principal.log/(111911:111911): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 03:57:22:172 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 03:57:22:172 cpu_principal.log/(111911:111911): Quiero leer en la dirección <110> un total de <9>
+[INFO] 03:57:23:176 cpu_principal.log/(111911:111911): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <	>
+[INFO] 03:57:23:176 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 03:57:23:176 cpu_principal.log/(111911:111911): Quiero leer en la dirección <80> un total de <9>
+[INFO] 03:57:24:180 cpu_principal.log/(111911:111911): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <80> - Valor: <	>
+[INFO] 03:57:24:180 cpu_principal.log/(111911:111911): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:24:17:408 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 04:24:18:411 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 04:24:19:412 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 04:24:19:592 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:24:19:644 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 04:24:20:678 cpu_principal.log/(112433:112433): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 04:24:20:679 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 04:24:21:684 cpu_principal.log/(112433:112433): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 04:24:21:685 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 04:24:22:689 cpu_principal.log/(112433:112433): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 04:24:22:691 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:24:22:746 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 04:24:22:754 cpu_principal.log/(112433:112433): Quiero leer en la dirección <100> un total de <9>
+[INFO] 04:24:23:771 cpu_principal.log/(112433:112433): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 04:24:23:773 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 04:24:23:773 cpu_principal.log/(112433:112433): Quiero leer en la dirección <110> un total de <9>
+[INFO] 04:24:24:775 cpu_principal.log/(112433:112433): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <	>
+[INFO] 04:24:24:777 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 04:24:24:778 cpu_principal.log/(112433:112433): Quiero leer en la dirección <80> un total de <9>
+[INFO] 04:24:25:781 cpu_principal.log/(112433:112433): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <80> - Valor: <	>
+[INFO] 04:24:25:783 cpu_principal.log/(112433:112433): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:25:29:860 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 04:25:30:864 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 04:25:31:865 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 04:25:31:870 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:25:31:947 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 04:25:32:995 cpu_principal.log/(112485:112485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 04:25:32:996 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 04:25:34:001 cpu_principal.log/(112485:112485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 04:25:34:003 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 04:25:35:007 cpu_principal.log/(112485:112485): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 04:25:35:008 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:25:35:036 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 04:25:35:049 cpu_principal.log/(112485:112485): Quiero leer en la dirección <100> un total de <9>
+[INFO] 04:25:36:103 cpu_principal.log/(112485:112485): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 04:25:36:108 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 04:25:36:109 cpu_principal.log/(112485:112485): Quiero leer en la dirección <110> un total de <9>
+[INFO] 04:25:37:114 cpu_principal.log/(112485:112485): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <	>
+[INFO] 04:25:37:119 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 04:25:37:122 cpu_principal.log/(112485:112485): Quiero leer en la dirección <80> un total de <9>
+[INFO] 04:25:38:127 cpu_principal.log/(112485:112485): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <80> - Valor: <	>
+[INFO] 04:25:38:128 cpu_principal.log/(112485:112485): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:29:01:011 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 04:29:02:014 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 04:29:03:016 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 04:29:03:024 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:29:03:122 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 04:29:04:183 cpu_principal.log/(112573:112573): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 04:29:04:186 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 04:29:05:200 cpu_principal.log/(112573:112573): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 04:29:05:201 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 04:29:06:209 cpu_principal.log/(112573:112573): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 04:29:06:212 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:29:06:242 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 04:29:06:254 cpu_principal.log/(112573:112573): Quiero leer en la dirección <100> un total de <9>
+[INFO] 04:29:07:271 cpu_principal.log/(112573:112573): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 04:29:07:274 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 04:29:07:275 cpu_principal.log/(112573:112573): Quiero leer en la dirección <110> un total de <9>
+[INFO] 04:29:08:278 cpu_principal.log/(112573:112573): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <	>
+[INFO] 04:29:08:279 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 04:29:08:279 cpu_principal.log/(112573:112573): Quiero leer en la dirección <80> un total de <9>
+[INFO] 04:29:09:284 cpu_principal.log/(112573:112573): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <80> - Valor: <	>
+[INFO] 04:29:09:294 cpu_principal.log/(112573:112573): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:33:11:137 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 04:33:12:141 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 04:33:13:143 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 04:33:13:150 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:33:13:252 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 04:33:14:315 cpu_principal.log/(112780:112780): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 04:33:14:316 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 04:33:15:327 cpu_principal.log/(112780:112780): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 04:33:15:327 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 04:33:16:332 cpu_principal.log/(112780:112780): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 04:33:16:333 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:33:16:354 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 04:33:16:357 cpu_principal.log/(112780:112780): Quiero leer en la dirección <100> un total de <9>
+[INFO] 04:33:17:380 cpu_principal.log/(112780:112780): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <	>
+[INFO] 04:33:17:383 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 04:33:17:384 cpu_principal.log/(112780:112780): Quiero leer en la dirección <110> un total de <9>
+[INFO] 04:33:18:388 cpu_principal.log/(112780:112780): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <	>
+[INFO] 04:33:18:390 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 04:33:18:395 cpu_principal.log/(112780:112780): Quiero leer en la dirección <80> un total de <9>
+[INFO] 04:33:19:401 cpu_principal.log/(112780:112780): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <80> - Valor: <	>
+[INFO] 04:33:19:417 cpu_principal.log/(112780:112780): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:48:14:877 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <SET EAX PRUEBA__>
+[INFO] 04:48:15:881 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <SET EBX FUNCIONS>
+[INFO] 04:48:16:883 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <SET ECX MEMORIA_>
+[INFO] 04:48:16:890 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:48:16:936 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <MOV_OUT 100 EAX>
+[INFO] 04:48:17:975 cpu_principal.log/(113679:113679): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 04:48:17:976 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <MOV_OUT 110 EBX >
+[INFO] 04:48:18:982 cpu_principal.log/(113679:113679): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 04:48:18:983 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <MOV_OUT 80 ECX>
+[INFO] 04:48:19:993 cpu_principal.log/(113679:113679): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 04:48:19:997 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 04:48:20:050 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <MOV_IN ECX 100>
+[INFO] 04:48:20:057 cpu_principal.log/(113679:113679): Quiero leer en la dirección <100> un total de <9>
+[INFO] 04:48:21:102 cpu_principal.log/(113679:113679): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <100> - Valor: <PRUEBA__>
+[INFO] 04:48:21:105 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <MOV_IN EAX 110>
+[INFO] 04:48:21:106 cpu_principal.log/(113679:113679): Quiero leer en la dirección <110> un total de <9>
+[INFO] 04:48:22:113 cpu_principal.log/(113679:113679): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <110> - Valor: <FUNCIONS>
+[INFO] 04:48:22:115 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <MOV_IN EBX 80>
+[INFO] 04:48:22:117 cpu_principal.log/(113679:113679): Quiero leer en la dirección <80> un total de <9>
+[INFO] 04:48:23:123 cpu_principal.log/(113679:113679): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <80> - Valor: <MEMORIA_>
+[INFO] 04:48:23:125 cpu_principal.log/(113679:113679): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 04:54:20:318 cpu_principal.log/(113767:113767): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:01:14:099 cpu_principal.log/(113793:113793): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:06:12:337 cpu_principal.log/(114100:114100): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:23:39:784 cpu_principal.log/(114375:114375): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:31:55:080 cpu_principal.log/(114375:114375): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 05:31:55:275 cpu_principal.log/(114375:114375): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:42:18:573 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <F_OPEN TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:42:18:639 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <F_SEEK TINI_CONSEJODEAMOR.MP3 23>
+[INFO] 05:42:18:722 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <F_CLOSE TINI_CONSEJODEAMOR.MP3>
+[INFO] 05:42:18:815 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <IO 7>
+[INFO] 05:42:26:867 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET AX TINI>
+[INFO] 05:42:27:871 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET BX ELLA>
+[INFO] 05:42:28:874 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET CX DICE>
+[INFO] 05:42:29:876 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET DX TAYL>
+[INFO] 05:42:30:878 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET EAX ORSWIFT->
+[INFO] 05:42:31:883 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET EBX THESTORY>
+[INFO] 05:42:32:884 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <SET ECX OFUSTVER>
+[INFO] 05:42:32:885 cpu_principal.log/(115288:115288): PID: <1000> - Ejecutando: <F_OPEN TAYLOR_TSOU.MP3>

@@ -55,6 +55,64 @@ void asignar_valor_a_registro(char *valor, char *registro) {
 	}
 }
 
+char* obtener_valor_de_registro(char *registro) {
+
+	char* ret;
+
+	if (strcmp(registro, "AX") == 0) {
+		ret = malloc(5);
+		strcpy(ret,registros_cpu.ax);
+	}
+	else if (strcmp(registro, "BX") == 0) {
+		ret = malloc(5);
+		strcpy(ret,registros_cpu.bx);
+	}
+	else if (strcmp(registro, "CX") == 0) {
+		ret = malloc(5);
+		strcpy(ret,registros_cpu.cx);
+	}
+	else if (strcmp(registro, "DX") == 0) {
+		ret = malloc(5);
+		strcpy(ret,registros_cpu.dx);
+	}
+	else if (strcmp(registro, "EAX") == 0) {
+		ret = malloc(9);
+		strcpy(ret,registros_cpu.eax);
+	}
+	else if (strcmp(registro, "EBX") == 0) {
+		ret = malloc(9);
+		strcpy(ret,registros_cpu.ebx);
+	}
+	else if (strcmp(registro, "ECX") == 0) {
+		ret = malloc(9);
+		strcpy(ret,registros_cpu.ecx);
+	}
+	else if (strcmp(registro, "EDX") == 0) {
+		ret = malloc(9);
+		strcpy(ret,registros_cpu.edx);
+	}
+	else if (strcmp(registro, "RAX") == 0) {
+		ret = malloc(17);
+		strcpy(ret,registros_cpu.rax);
+	}
+	else if (strcmp(registro, "RBX") == 0) {
+		ret = malloc(17);
+		strcpy(ret,registros_cpu.rbx);
+	}
+	else if (strcmp(registro, "RCX") == 0) {
+		ret = malloc(17);
+		strcpy(ret,registros_cpu.rcx);
+	}
+	else if (strcmp(registro, "RDX") == 0) {
+		ret = malloc(17);
+		strcpy(ret,registros_cpu.rdx);
+	}
+
+	return ret;
+}
+
+
+
 void activar_segmentation_fault(t_contexto_de_ejecucion* contexto, int fd_kernel){
 	t_buffer *buffer = malloc(sizeof(t_buffer));
 	t_paquete *paquete = malloc(sizeof(t_paquete));
@@ -278,12 +336,12 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 	t_paquete* paquete_respuesta = malloc(sizeof(t_paquete));
 	paquete_respuesta->buffer = malloc(sizeof(t_buffer));
 
-	recv(fd_memoria, &(paquete_respuesta->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+	recv(fd_memoria, &(paquete_respuesta->codigo_operacion), sizeof(int), MSG_WAITALL);
 	recv(fd_memoria, &(paquete_respuesta->buffer->stream_size), sizeof(int), 0);
 	paquete_respuesta->buffer->stream = malloc(paquete_respuesta->buffer->stream_size);
 	recv(fd_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
 
-	char* valor;
+
 
 	switch(paquete_respuesta->codigo_operacion) {
 		case LEIDO :
@@ -293,11 +351,12 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 			memcpy(&tamanio_valor_memoria, stream_respuesta, sizeof(int));
 			stream_respuesta += sizeof(int);
 
-			valor = malloc(tamanio_valor_memoria);
+			char* valor = malloc(tamanio_valor_memoria);
 			memset(valor, 0, tamanio_valor_memoria);
 
 			memcpy(valor, stream_respuesta, tamanio_valor_memoria);
 			stream_respuesta += tamanio_valor_memoria;
+
 
 			break;
 		case NO_LEIDO :

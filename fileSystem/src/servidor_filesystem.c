@@ -7,17 +7,20 @@
 
 int socket_memoria;
 
-void manejar_fopen(int socket_cliente)
+void manejar_fopen(int socket_cliente,void* stream)
 {
 	// ya saque cod op, me falta el size del buffer y el buffer
 
-	int size_buffer;
-	void* contenido_buffer = recibir_buffer(&size_buffer,socket_cliente);
-
-	// el paquete recibido tiene solo un string, por ende en el stream hay |strlen(stringEnviado) + 1 (por \n)|stringEnviado|
 	int offset = 0;
-	int tamanio_string_recibido = deserializar_int(contenido_buffer,&offset);
-	char* string_recibido = deserializar_string(tamanio_string_recibido,contenido_buffer,&offset);
+
+	int tam_nombre_archivo;
+	memcpy(&tam_nombre_archivo,stream + offset,sizeof(int));
+	offset += sizeof(int);
+	char* string_recibido = malloc(tam_nombre_archivo);
+	memset(string_recibido,0,tam_nombre_archivo);
+	memcpy(string_recibido,stream + offset,tam_nombre_archivo);
+	offset += tam_nombre_archivo;
+
 
 	int rta_para_kernel = abrir_archivo(string_recibido);
 
@@ -39,7 +42,7 @@ void manejar_fopen(int socket_cliente)
 
 	send_op(socket_cliente,rta);
 
-	free(contenido_buffer);
+	free(stream);
 	free(string_recibido);
 }
 
@@ -205,15 +208,22 @@ void manejar_conexion(int socket_cliente){
 
 	while(1){
 
-		int codigo_operacion = recibir_operacion(socket_cliente);
+		t_paquete* paquete = malloc(sizeof(t_paquete));
+		paquete->buffer = malloc(sizeof(t_buffer));
 
-//		printf("%i\n",codigo_operacion);
+		recv(socket_cliente,&(paquete->codigo_operacion),sizeof(int),MSG_WAITALL);
+		recv(socket_cliente,&(paquete->buffer->stream_size),sizeof(int),0);
 
-		switch(codigo_operacion)
+		paquete->buffer->stream = malloc(paquete->buffer->stream_size);
+		recv(socket_cliente,paquete->buffer->stream,paquete->buffer->stream_size,0);
+
+		void* stream = paquete->buffer->stream;
+
+		switch(paquete->codigo_operacion)
 		{
 
 		case F_OPEN:
-				manejar_fopen(socket_cliente);
+				manejar_fopen(socket_cliente,stream);
 				break;
 
 		case F_READ:
