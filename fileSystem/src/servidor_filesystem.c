@@ -189,7 +189,7 @@ void manejar_fwrite(int socket_cliente,void* stream)
 	paquete_rta->buffer->stream = malloc(paquete_rta->buffer->stream_size);
 	recv(socket_memoria,paquete_rta->buffer->stream,paquete_rta->buffer->stream_size,0);
 
-	void* stream_rta = paquete->buffer->stream;
+	void* stream_rta = paquete_rta->buffer->stream;
 
 //	switch(paquete_rta->codigo_operacion) {
 //			case LEIDO :
