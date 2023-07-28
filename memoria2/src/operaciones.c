@@ -198,8 +198,8 @@ void recv_liberar_estructuras(int socket_cliente, void *stream) {
 
 // FUNCIONES AUXILIARES - Gero, si queres las pasamos a otro archivo
 void recv_leer_de_memoria(int tamanio, int direccion_fisica, int socket_cliente){
-	buscar_valor_enviar(direccion_fisica, tamanio, socket_cliente);
 	log_info(logger, "Se busca el valor de la direccion fisica: %d", direccion_fisica);
+	buscar_valor_enviar(direccion_fisica, tamanio, socket_cliente);
 }
 
 
@@ -216,12 +216,10 @@ void buscar_valor_enviar(int direccion_fisica_buscada, int tamanio, int socket_c
 	memset(valor_buscado,0,tamanio);
 
 	if((memoria + direccion_fisica_buscada) != NULL){
+
 		msleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
+
 		memcpy(valor_buscado, memoria + direccion_fisica_buscada, tamanio);
-//		t_paquete* paquete = crear_paquete(LEIDO);
-//		agregar_int_a_paquete(paquete, tamanio);
-//		agregar_string_a_paquete(paquete, valor_buscado, tamanio);
-//		enviar_paquete(paquete, socket_cliente);
 
 		t_paquete* paquete = malloc(sizeof(t_paquete));
 		t_buffer* buffer = malloc(sizeof(t_buffer));
@@ -232,9 +230,9 @@ void buscar_valor_enviar(int direccion_fisica_buscada, int tamanio, int socket_c
 		void* stream = malloc(buffer->stream_size);
 		int off = 0;
 
-		memcpy(stream + off,&tam_val,sizeof(int));
+		memcpy(stream + off, &tam_val, sizeof(int));
 		off += sizeof(int);
-		memcpy(stream + off,valor_buscado,tam_val);
+		memcpy(stream + off, valor_buscado, tam_val);
 		off += tam_val;
 
 		buffer->stream = stream;

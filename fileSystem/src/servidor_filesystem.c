@@ -168,7 +168,7 @@ void manejar_fwrite(int socket_cliente,void* stream)
 	offset += sizeof(int);
 
 
-	paquete->codigo_operacion = LEER_DE_MEMORIA_FS;
+	paquete->codigo_operacion = LEER_DE_MEMORIA;
 	paquete->buffer->stream = stream_mem;
 
 	int tam_a_enviar = sizeof(int) + sizeof(int) + paquete->buffer->stream_size;
@@ -191,9 +191,9 @@ void manejar_fwrite(int socket_cliente,void* stream)
 
 	void* stream_rta = paquete->buffer->stream;
 
-	switch(paquete_rta->codigo_operacion) {
-			case LEIDO :
-				log_info(logger, "Se escribió con éxito en memoria");
+//	switch(paquete_rta->codigo_operacion) {
+//			case LEIDO :
+				log_info(logger, "Se leyó con éxito de memoria");
 
 //				int size_buffer_mem;
 //				void* contenido_buffer_mem = recibir_buffer(&size_buffer_mem,socket_cliente);
@@ -207,9 +207,14 @@ void manejar_fwrite(int socket_cliente,void* stream)
 
 				memcpy(&tamanio_recibido,stream_rta + offset_rta,sizeof(int));
 				offset_rta += sizeof(int);
-				void* direccion_fisica_contenido = malloc(tamanio_recibido);
-				memcpy(direccion_fisica_contenido,stream_rta + offset_rta,tamanio_recibido);
+
+				char* direccion_fisica_contenido = malloc(tamanio_recibido);
+				memset(direccion_fisica_contenido, 0, tamanio_recibido);
+
+				memcpy(direccion_fisica_contenido, stream_rta + offset_rta, tamanio_recibido);
 				offset_rta += tamanio_recibido;
+
+				log_warning(logger, "LO QUE SE LEYÓ DE MEMORIA: %s", direccion_fisica_contenido);
 
 				escribir_archivo(string_nombre_archivo,nro_byte_archivo,direccion_fisica_contenido,cantidad_bytes_escribir);
 
@@ -221,14 +226,14 @@ void manejar_fwrite(int socket_cliente,void* stream)
 
 				free(direccion_fisica_contenido);
 
-				break;
-			case NO_LEIDO :
-				printf("No se pudo leer el valor del registro dado");
-				break;
-			default :
-				printf("Operacion desconocida");
-				break;
-		}
+//				break;
+//			case NO_LEIDO :
+//				printf("No se pudo leer el valor del registro dado");
+//				break;
+//			default :
+//				printf("Operacion desconocida");
+//				break;
+//		}
 
 
 //	void* direccion_fisica_contenido = "Fernando Alonso";

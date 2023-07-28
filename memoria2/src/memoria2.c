@@ -173,7 +173,6 @@ void manejar_conexion(int* fd_cliente) {
 			log_info(logger, "File System quiere escribir en la dirección <%d> el valor <%s>, de tamaño <%d>", direccion_fisica, valor, tamanio_valor);
 
 			recv_escribir_en_memoria(direccion_fisica, tamanio_valor, valor, socket_cliente);
-
 	//		pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;
 
