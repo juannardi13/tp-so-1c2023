@@ -341,9 +341,20 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 	paquete_respuesta->buffer->stream = malloc(paquete_respuesta->buffer->stream_size);
 	recv(fd_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
 
+	void* stream_respuesta = paquete_respuesta->buffer->stream;
+	int tamanio_valor_memoria;
+
+	memcpy(&tamanio_valor_memoria, stream_respuesta, sizeof(int));
+	stream_respuesta += sizeof(int);
+
+	char* valor = malloc(tamanio_valor_memoria);
+	memset(valor, 0, tamanio_valor_memoria);
+
+	memcpy(valor, stream_respuesta, tamanio_valor_memoria);
+	stream_respuesta += tamanio_valor_memoria;
 
 
-	switch(paquete_respuesta->codigo_operacion) {
+	/*switch(paquete_respuesta->codigo_operacion) {
 		case LEIDO :
 			void* stream_respuesta = paquete_respuesta->buffer->stream;
 			int tamanio_valor_memoria;
@@ -369,7 +380,7 @@ char* mmu_valor_buscado(t_contexto_de_ejecucion* contexto, int direccion_logica,
 			valor = malloc(6);
 			strcpy(valor, "ERROR");
 			break;
-	}
+	}*/
 
 	eliminar_paquete(paquete_respuesta);
 
