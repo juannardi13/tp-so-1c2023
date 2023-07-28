@@ -87,19 +87,19 @@ void estado_ejecutar(void) {
 		memcpy(&(proceso_a_ejecutar->pcb->registros.rdx), stream, tamanio_registro_grande);
 		stream += tamanio_registro_grande;
 
-		log_info(logger_kernel, "Los registros que trajo PID: <%d> de la CPU son: ", proceso_a_ejecutar->pcb->pid);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ax);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.bx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.cx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.dx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.eax);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ebx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ecx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.edx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rax);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rbx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rcx);
-		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rdx);
+//		log_info(logger_kernel, "Los registros que trajo PID: <%d> de la CPU son: ", proceso_a_ejecutar->pcb->pid);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ax);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.bx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.cx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.dx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.eax);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ebx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.ecx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.edx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rax);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rbx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rcx);
+//		log_info(logger_kernel, "%s", proceso_a_ejecutar->pcb->registros.rdx);
 
 		//--- FALTA DESERIALIZAR SEGMENTOS JAJSDJASJDAJSD SISI YA LOS DESERIALIZO
 		// 24/07/23 ME FUI DOMADISIMO Y TENGO QUE SERIALIZAR SEGMENTOS AL FINAL
@@ -120,10 +120,10 @@ void estado_ejecutar(void) {
 			memcpy(&(aux->tamanio), stream, sizeof(int));
 			stream += sizeof(int);
 
-			log_info(logger_kernel, "Segmento <%d>:", m);
-			log_info(logger_kernel, "Base <%d>", aux->base);
-			log_info(logger_kernel, "ID <%d>", aux->id);
-			log_info(logger_kernel, "Tamaño <%d>", aux->tamanio);
+//			log_info(logger_kernel, "Segmento <%d>:", m);
+//			log_info(logger_kernel, "Base <%d>", aux->base);
+//			log_info(logger_kernel, "ID <%d>", aux->id);
+//			log_info(logger_kernel, "Tamaño <%d>", aux->tamanio);
 
 			list_add(proceso_a_ejecutar->pcb->tabla_segmentos.segmentos, aux);
 		}
@@ -179,7 +179,7 @@ void estado_ejecutar(void) {
 //			list_add(cola_exec, proceso_a_ejecutar);
 //			pthread_mutex_unlock(&mutex_exec);
 
-			sem_post(&sem_exec);
+//			sem_post(&sem_exec);
 			break;
 		case DELETE_SEGMENT:
 			proceso_a_ejecutar->ultima_instruccion = DELETE_SEGMENT;

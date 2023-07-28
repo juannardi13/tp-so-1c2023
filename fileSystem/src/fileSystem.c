@@ -4,9 +4,9 @@ int main(void) {
 
 	inicializar_estructuras();
 
-	probando_cositas();
+//	probando_cositas();
 
-//	inicializar_servidor();
+	inicializar_servidor();
 
 	liberar_recursos_bitmap();
 

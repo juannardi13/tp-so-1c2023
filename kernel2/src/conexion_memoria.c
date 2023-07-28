@@ -189,11 +189,16 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 		list_add(cola_exit, proceso);
 		pthread_mutex_unlock(&mutex_exit);
 
+		pthread_mutex_lock(&mutex_exec);
+		list_remove(cola_exec, 0);
+		pthread_mutex_unlock(&mutex_exec);
+
 		log_info(logger_kernel, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>", proceso->pcb->pid);
 		log_info(logger_kernel, "Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>", proceso->pcb->pid);
 		sem_post(&sem_exit); //despierta el proceso que saca a los procesos del sistema
 		sem_post(&sem_ready);
 		break;
+
 	case SEGMENTO_CREADO:
 		log_info(logger_kernel, "El segmento solicitado por PID: <%d> fue exitosamente creado", proceso->pcb->pid);
 		//recibir_tablas_segmentos_global();
@@ -217,6 +222,7 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 
 		sem_post(&sem_exec);
 		break;
+
 	case NECESITO_COMPACTAR:
 		log_info(logger_kernel, "Compactación: <Se solicitó compactación>");
 
@@ -250,8 +256,9 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 		pthread_mutex_unlock(&mutex_compactacion_solicitada);
 
 		pthread_mutex_unlock(&mutex_compactacion);
-		sem_post(&sem_exec);
-		break;//TODO acá va la recepción de las tablas de segmentos actualizadas
+//		sem_post(&sem_exec);
+		break;
+
 	default:
 		log_error(logger_kernel, "[ERROR] Error al recibir respuesta de CREATE_SEGMENT");
 		break;
@@ -298,7 +305,6 @@ void ordenar_compactacion(void) {
 	recv(socket_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
 
 	void* stream_respuesta = paquete_respuesta->buffer->stream;
-	int offset_respuesta = 0;
 
 	switch(paquete_respuesta->codigo_operacion) {
 	case COMPACTACION_TERMINADA:

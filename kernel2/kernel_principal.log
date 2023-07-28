@@ -72,3 +72,169 @@
 [INFO] 04:40:03:593 kernel_principal.log/(25718:25740): PID: <1001>
 [INFO] 04:40:03:593 kernel_principal.log/(25718:25736): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
 [INFO] 04:40:48:182 kernel_principal.log/(25718:25738): PID: <1000> - Signal: <RECURSO_1> - Instancias: <3>
+[INFO] 22:22:39:532 kernel_principal.log/(6367:6401): Se crea el proceso <1000> en NEW
+[INFO] 22:22:39:537 kernel_principal.log/(6367:6401): Cola NEW: 
+[INFO] 22:22:39:537 kernel_principal.log/(6367:6401): PID: <1000>
+[INFO] 22:22:39:537 kernel_principal.log/(6367:6374): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 22:22:39:537 kernel_principal.log/(6367:6374): Cola Ready <FIFO>:
+[INFO] 22:22:39:537 kernel_principal.log/(6367:6374): PID: <1000>
+[INFO] 22:22:39:537 kernel_principal.log/(6367:6370): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:22:41:545 kernel_principal.log/(6367:6372): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 22:22:41:546 kernel_principal.log/(6367:6372): PID: <1000> - Bloqueado por: <IO>
+[INFO] 22:22:41:546 kernel_principal.log/(6367:6373): PID: <1000> - Ejecuta IO: <5>
+[INFO] 22:22:46:546 kernel_principal.log/(6367:6373): Cola Ready <FIFO>:
+[INFO] 22:22:46:546 kernel_principal.log/(6367:6373): PID: <1000>
+[INFO] 22:22:46:546 kernel_principal.log/(6367:6370): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:22:48:550 kernel_principal.log/(6367:6370): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:22:50:552 kernel_principal.log/(6367:6372): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 22:22:50:552 kernel_principal.log/(6367:6372): PID: <1000> - Bloqueado por: <IO>
+[INFO] 22:22:50:552 kernel_principal.log/(6367:6373): PID: <1000> - Ejecuta IO: <5>
+[INFO] 22:22:55:553 kernel_principal.log/(6367:6373): Cola Ready <FIFO>:
+[INFO] 22:22:55:553 kernel_principal.log/(6367:6373): PID: <1000>
+[INFO] 22:22:55:553 kernel_principal.log/(6367:6370): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:22:57:556 kernel_principal.log/(6367:6370): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:22:59:558 kernel_principal.log/(6367:6372): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 22:22:59:558 kernel_principal.log/(6367:6372): PID: <1000> - Bloqueado por: <IO>
+[INFO] 22:22:59:558 kernel_principal.log/(6367:6373): PID: <1000> - Ejecuta IO: <5>
+[INFO] 22:23:04:559 kernel_principal.log/(6367:6373): Cola Ready <FIFO>:
+[INFO] 22:23:04:559 kernel_principal.log/(6367:6373): PID: <1000>
+[INFO] 22:23:04:559 kernel_principal.log/(6367:6370): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:23:06:561 kernel_principal.log/(6367:6372): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 22:23:06:561 kernel_principal.log/(6367:6372): Finaliza el proceso <1000> - Motivo: <SUCCESS>
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6455): Se crea el proceso <1001> en NEW
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6455): Cola NEW: 
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6455): PID: <1001>
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6374): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6374): Cola Ready <FIFO>:
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6374): PID: <1001>
+[INFO] 22:33:29:052 kernel_principal.log/(6367:6370): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:33:38:058 kernel_principal.log/(6367:6372): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 22:33:38:058 kernel_principal.log/(6367:6372): PID: <1001> - Bloqueado por: <IO>
+[INFO] 22:33:38:058 kernel_principal.log/(6367:6373): PID: <1001> - Ejecuta IO: <5>
+[INFO] 22:33:43:059 kernel_principal.log/(6367:6373): Cola Ready <FIFO>:
+[INFO] 22:33:43:059 kernel_principal.log/(6367:6373): PID: <1001>
+[INFO] 22:33:43:059 kernel_principal.log/(6367:6370): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:33:55:066 kernel_principal.log/(6367:6372): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 22:33:55:066 kernel_principal.log/(6367:6372): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6539): Se crea el proceso <1002> en NEW
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6539): Cola NEW: 
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6539): PID: <1002>
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6374): PID: <1002> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6374): Cola Ready <FIFO>:
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6374): PID: <1002>
+[INFO] 22:40:50:115 kernel_principal.log/(6367:6370): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:40:52:116 kernel_principal.log/(6367:6372): PID: <1002> - Wait: <DISCO> - Instancias: <0>
+[INFO] 22:40:52:118 kernel_principal.log/(6367:6372): PID: <1002> - Wait: <RECURSO_1> - Instancias: <1>
+[INFO] 22:40:52:120 kernel_principal.log/(6367:6372): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 22:40:52:120 kernel_principal.log/(6367:6372): PID: <1002> - Bloqueado por: <IO>
+[INFO] 22:40:52:120 kernel_principal.log/(6367:6373): PID: <1002> - Ejecuta IO: <5>
+[INFO] 22:40:57:121 kernel_principal.log/(6367:6373): Cola Ready <FIFO>:
+[INFO] 22:40:57:121 kernel_principal.log/(6367:6373): PID: <1002>
+[INFO] 22:40:57:121 kernel_principal.log/(6367:6370): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 22:40:59:123 kernel_principal.log/(6367:6372): PID: <1002> - Crear Segmento - Id: <16> - Tamaño: <64>
+[INFO] 22:40:59:125 kernel_principal.log/(6367:6372): PID: <1002> - Eliminar Segmento - Id Segmento: <16>
+[INFO] 22:40:59:127 kernel_principal.log/(6367:6372): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 22:40:59:127 kernel_principal.log/(6367:6372): PID: <1002> - Bloqueado por: <IO>
+[INFO] 22:40:59:127 kernel_principal.log/(6367:6373): PID: <1002> - Ejecuta IO: <5>
+[INFO] 22:58:55:890 kernel_principal.log/(6941:6990): Se crea el proceso <1000> en NEW
+[INFO] 22:58:55:890 kernel_principal.log/(6941:6990): Cola NEW: 
+[INFO] 22:58:55:890 kernel_principal.log/(6941:6990): PID: <1000>
+[INFO] 22:59:44:911 kernel_principal.log/(6941:6962): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 22:59:50:818 kernel_principal.log/(6941:6962): Cola Ready <FIFO>:
+[INFO] 22:59:52:867 kernel_principal.log/(6941:6962): PID: <1000>
+[INFO] 23:01:34:206 kernel_principal.log/(6941:6958): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:01:53:580 kernel_principal.log/(6941:6960): PID: <1000> - Wait: <DISCO> - Instancias: <0>
+[INFO] 23:01:53:582 kernel_principal.log/(6941:6960): PID: <1000> - Wait: <RECURSO_1> - Instancias: <1>
+[INFO] 23:01:53:584 kernel_principal.log/(6941:6960): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:01:53:584 kernel_principal.log/(6941:6960): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:03:14:095 kernel_principal.log/(6941:6961): PID: <1000> - Ejecuta IO: <5>
+[INFO] 23:03:32:411 kernel_principal.log/(6941:6961): Cola Ready <FIFO>:
+[INFO] 23:03:36:012 kernel_principal.log/(6941:6961): PID: <1000>
+[INFO] 23:05:48:316 kernel_principal.log/(6941:6958): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:05:53:462 kernel_principal.log/(6941:6960): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[INFO] 23:05:53:466 kernel_principal.log/(6941:6960): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[INFO] 23:06:20:528 kernel_principal.log/(6941:6960): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:06:20:528 kernel_principal.log/(6941:6960): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:09:26:960 kernel_principal.log/(7278:7327): Se crea el proceso <1000> en NEW
+[INFO] 23:09:26:960 kernel_principal.log/(7278:7327): Cola NEW: 
+[INFO] 23:09:26:960 kernel_principal.log/(7278:7327): PID: <1000>
+[INFO] 23:09:26:961 kernel_principal.log/(7278:7297): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:09:26:961 kernel_principal.log/(7278:7297): Cola Ready <FIFO>:
+[INFO] 23:09:26:961 kernel_principal.log/(7278:7297): PID: <1000>
+[INFO] 23:09:26:961 kernel_principal.log/(7278:7293): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:11:41:003 kernel_principal.log/(7278:7295): PID: <1000> - Wait: <DISCO> - Instancias: <0>
+[INFO] 23:13:02:735 kernel_principal.log/(7278:7295): PID: <1000> - Wait: <RECURSO_1> - Instancias: <1>
+[INFO] 23:14:10:786 kernel_principal.log/(7278:7295): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:14:12:355 kernel_principal.log/(7278:7295): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:14:15:579 kernel_principal.log/(7278:7296): PID: <1000> - Ejecuta IO: <5>
+[INFO] 23:14:25:660 kernel_principal.log/(7278:7296): Cola Ready <FIFO>:
+[INFO] 23:14:25:660 kernel_principal.log/(7278:7296): PID: <1000>
+[INFO] 23:14:25:660 kernel_principal.log/(7278:7293): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:15:29:420 kernel_principal.log/(7278:7295): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[INFO] 23:28:02:726 kernel_principal.log/(8170:8219): Se crea el proceso <1000> en NEW
+[INFO] 23:28:02:726 kernel_principal.log/(8170:8219): Cola NEW: 
+[INFO] 23:28:02:726 kernel_principal.log/(8170:8219): PID: <1000>
+[INFO] 23:28:02:727 kernel_principal.log/(8170:8191): PID: <1000> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:28:02:727 kernel_principal.log/(8170:8191): Cola Ready <FIFO>:
+[INFO] 23:28:02:727 kernel_principal.log/(8170:8191): PID: <1000>
+[INFO] 23:28:02:727 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:28:30:556 kernel_principal.log/(8170:8189): PID: <1000> - Wait: <DISCO> - Instancias: <0>
+[INFO] 23:29:42:732 kernel_principal.log/(8170:8189): PID: <1000> - Wait: <RECURSO_1> - Instancias: <1>
+[INFO] 23:30:06:530 kernel_principal.log/(8170:8189): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:30:06:726 kernel_principal.log/(8170:8189): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:30:07:063 kernel_principal.log/(8170:8190): PID: <1000> - Ejecuta IO: <5>
+[INFO] 23:30:12:064 kernel_principal.log/(8170:8190): Cola Ready <FIFO>:
+[INFO] 23:30:12:065 kernel_principal.log/(8170:8190): PID: <1000>
+[INFO] 23:30:12:065 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:30:51:620 kernel_principal.log/(8170:8189): PID: <1000> - Crear Segmento - Id: <16> - Tamaño: <64>
+[INFO] 23:32:49:411 kernel_principal.log/(8170:8189): PID: <1000> - Eliminar Segmento - Id Segmento: <16>
+[INFO] 23:35:49:218 kernel_principal.log/(8170:8189): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:35:49:919 kernel_principal.log/(8170:8189): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:35:53:899 kernel_principal.log/(8170:8190): PID: <1000> - Ejecuta IO: <5>
+[INFO] 23:36:07:873 kernel_principal.log/(8170:8190): Cola Ready <FIFO>:
+[INFO] 23:36:07:873 kernel_principal.log/(8170:8190): PID: <1000>
+[INFO] 23:36:07:873 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:37:29:513 kernel_principal.log/(8170:8189): PID: <1000> - Bloqueado por <DISCO>
+[INFO] 23:41:51:928 kernel_principal.log/(8170:9026): Se crea el proceso <1001> en NEW
+[INFO] 23:41:51:928 kernel_principal.log/(8170:9026): Cola NEW: 
+[INFO] 23:41:51:928 kernel_principal.log/(8170:9026): PID: <1001>
+[INFO] 23:41:51:928 kernel_principal.log/(8170:8191): PID: <1001> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:41:51:929 kernel_principal.log/(8170:8191): Cola Ready <FIFO>:
+[INFO] 23:41:51:929 kernel_principal.log/(8170:8191): PID: <1001>
+[INFO] 23:41:51:929 kernel_principal.log/(8170:8187): PID: <1001> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:43:23:704 kernel_principal.log/(8170:8188): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 23:43:32:044 kernel_principal.log/(8170:8189): PID: <1001> - Signal: <DISCO> - Instancias: <0>
+[INFO] 23:44:41:491 kernel_principal.log/(8170:8189): PID: <1001> - Signal: <RECURSO_1> - Instancias: <2>
+[INFO] 23:46:14:145 kernel_principal.log/(8170:8189): PID: <1001> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 23:46:15:977 kernel_principal.log/(8170:8189): Finaliza el proceso <1001> - Motivo: <SUCCESS>
+[INFO] 23:46:24:824 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:47:11:704 kernel_principal.log/(8170:8189): PID: <1000> - Bloqueado por <DISCO>
+[INFO] 23:47:28:997 kernel_principal.log/(8170:9443): Se crea el proceso <1002> en NEW
+[INFO] 23:47:28:997 kernel_principal.log/(8170:9443): Cola NEW: 
+[INFO] 23:47:28:997 kernel_principal.log/(8170:9443): PID: <1002>
+[INFO] 23:47:28:997 kernel_principal.log/(8170:8191): PID: <1002> - Estado Anterior: <NEW> - Estado Actual: <READY>
+[INFO] 23:47:28:997 kernel_principal.log/(8170:8191): Cola Ready <FIFO>:
+[INFO] 23:47:28:997 kernel_principal.log/(8170:8191): PID: <1002>
+[INFO] 23:47:28:997 kernel_principal.log/(8170:8187): PID: <1002> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:48:00:592 kernel_principal.log/(8170:8188): PID: <1000> - Estado Anterior: <BLOCK> - Estado Actual: <READY>
+[INFO] 23:48:05:850 kernel_principal.log/(8170:8189): PID: <1002> - Signal: <DISCO> - Instancias: <0>
+[INFO] 23:48:38:293 kernel_principal.log/(8170:8189): PID: <1002> - Signal: <RECURSO_1> - Instancias: <3>
+[INFO] 23:49:22:901 kernel_principal.log/(8170:8189): PID: <1002> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 23:49:24:587 kernel_principal.log/(8170:8189): Finaliza el proceso <1002> - Motivo: <SUCCESS>
+[INFO] 23:49:27:825 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:49:55:984 kernel_principal.log/(8170:8189): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:49:58:062 kernel_principal.log/(8170:8189): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:50:00:447 kernel_principal.log/(8170:8190): PID: <1000> - Ejecuta IO: <5>
+[INFO] 23:50:05:448 kernel_principal.log/(8170:8190): Cola Ready <FIFO>:
+[INFO] 23:50:05:448 kernel_principal.log/(8170:8190): PID: <1000>
+[INFO] 23:50:05:448 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:50:29:144 kernel_principal.log/(8170:8189): PID: <1000> - Signal: <RECURSO_1> - Instancias: <4>
+[INFO] 23:50:53:910 kernel_principal.log/(8170:8189): PID: <1000> - Signal: <DISCO> - Instancias: <1>
+[INFO] 23:51:20:468 kernel_principal.log/(8170:8189): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>
+[INFO] 23:51:24:454 kernel_principal.log/(8170:8189): PID: <1000> - Bloqueado por: <IO>
+[INFO] 23:51:26:512 kernel_principal.log/(8170:8190): PID: <1000> - Ejecuta IO: <5>
+[INFO] 23:51:31:513 kernel_principal.log/(8170:8190): Cola Ready <FIFO>:
+[INFO] 23:51:31:513 kernel_principal.log/(8170:8190): PID: <1000>
+[INFO] 23:51:31:513 kernel_principal.log/(8170:8187): PID: <1000> - Estado Anterior: <READY> - Estado Actual: <EXEC>
+[INFO] 23:52:39:201 kernel_principal.log/(8170:8189): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 23:52:41:409 kernel_principal.log/(8170:8189): Finaliza el proceso <1000> - Motivo: <INVALID_RESOURCE>

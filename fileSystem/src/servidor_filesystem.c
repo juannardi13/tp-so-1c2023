@@ -254,7 +254,7 @@ void atender_clientes_file_system(int fd_fs){
 
 void inicializar_servidor(){
 
-//	socket_memoria = crear_conexion_alt(config_valores.puerto_memoria,config_valores.puerto_memoria);
+	socket_memoria = crear_conexion_alt(config_valores.ip, config_valores.puerto_memoria);
 
 	char* puerto_escucha = config_valores.puerto_escucha;
 	int fd_fs= iniciar_servidor(puerto_escucha);

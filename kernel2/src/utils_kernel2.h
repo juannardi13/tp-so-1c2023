@@ -244,4 +244,10 @@ void actualizar_puntero_archivo_proceso(t_proceso*, char*, int);
 op_code consultar_existencia_archivo_a_fs(char*);
 void crear_archivo_en_fs(char*);
 
+//Funciones conexión con File System
+void iniciar_peticiones_file_system(void);
+void* manejar_peticiones_fs(void);
+t_proceso* enviar_peticion_file_system(void);
+void respuesta_peticion_file_system(void);
+
 #endif /* UTILS_H_ */

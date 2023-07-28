@@ -118,3 +118,68 @@
 [INFO] 04:40:03:592 MEMORIA/(25677:25745): Creación de Proceso PID: 1001
 [ERROR] 04:41:14:969 MEMORIA/(25677:25745): Operación desconocida.
 [ERROR] 04:41:14:969 MEMORIA/(25677:25695): Operación desconocida.
+[INFO] 22:11:49:978 MEMORIA/(5758:5758): Se inicializaron las estructuras de Memoria
+[INFO] 22:11:49:979 MEMORIA/(5758:5758): Servidor Memoria iniciado, esperando conexiones entrantes
+[ERROR] 22:14:16:421 MEMORIA/(5758:5781): Operación desconocida.
+[INFO] 22:18:57:609 MEMORIA/(6243:6243): Se inicializaron las estructuras de Memoria
+[INFO] 22:18:57:609 MEMORIA/(6243:6243): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 22:22:39:532 MEMORIA/(6243:6376): Creación de Proceso PID: 1000
+[INFO] 22:23:06:562 MEMORIA/(6243:6376): Eliminación de Proceso PID: 1000
+[INFO] 22:33:29:051 MEMORIA/(6243:6376): Creación de Proceso PID: 1001
+[INFO] 22:33:55:066 MEMORIA/(6243:6376): Eliminación de Proceso PID: 1001
+[INFO] 22:40:50:115 MEMORIA/(6243:6376): Creación de Proceso PID: 1002
+[INFO] 22:40:59:124 MEMORIA/(6243:6376): PID: 1002 - Crear Segmento: 16 - Base: 128 - Tamaño: 64
+[INFO] 22:40:59:125 MEMORIA/(6243:6376): PID: 1002 - Eliminar Segmento: 16 - Base: 128 - Tamaño: 64
+[ERROR] 22:40:59:289 MEMORIA/(6243:6376): Operación desconocida.
+[INFO] 22:50:41:235 MEMORIA/(6688:6688): Se inicializaron las estructuras de Memoria
+[INFO] 22:50:41:237 MEMORIA/(6688:6688): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 22:51:21:179 MEMORIA/(6753:6753): Se inicializaron las estructuras de Memoria
+[INFO] 22:51:21:179 MEMORIA/(6753:6753): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 22:51:25:275 MEMORIA/(6753:6753): Se conectó un cliente!
+[INFO] 22:51:30:139 MEMORIA/(6753:6753): Se conectó un cliente!
+[INFO] 22:54:07:607 MEMORIA/(6753:6753): Se conectó un cliente!
+[INFO] 22:56:26:129 MEMORIA/(6895:6895): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:34:009 MEMORIA/(6896:6896): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:35:241 MEMORIA/(6897:6897): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:36:153 MEMORIA/(6898:6898): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:36:977 MEMORIA/(6899:6899): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:37:721 MEMORIA/(6900:6900): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:38:297 MEMORIA/(6901:6901): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:38:617 MEMORIA/(6902:6902): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:38:849 MEMORIA/(6903:6903): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:39:048 MEMORIA/(6904:6904): Se inicializaron las estructuras de Memoria
+[INFO] 22:56:44:513 MEMORIA/(6905:6905): Se inicializaron las estructuras de Memoria
+[INFO] 22:57:00:026 MEMORIA/(6907:6907): Se inicializaron las estructuras de Memoria
+[INFO] 22:57:21:491 MEMORIA/(6908:6908): Se inicializaron las estructuras de Memoria
+[INFO] 22:57:21:491 MEMORIA/(6908:6908): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 22:57:24:563 MEMORIA/(6908:6908): Se conectó un cliente!
+[INFO] 22:57:27:123 MEMORIA/(6908:6908): Se conectó un cliente!
+[INFO] 22:57:48:854 MEMORIA/(6908:6908): Se conectó un cliente!
+[INFO] 22:58:55:890 MEMORIA/(6908:6970): Creación de Proceso PID: 1000
+[INFO] 23:05:53:463 MEMORIA/(6908:6970): PID: 1000 - Crear Segmento: 16 - Base: 128 - Tamaño: 64
+[INFO] 23:05:53:466 MEMORIA/(6908:6970): PID: 1000 - Eliminar Segmento: 16 - Base: 128 - Tamaño: 64
+[ERROR] 23:06:41:104 MEMORIA/(6908:6970): Operación desconocida.
+[ERROR] 23:06:41:114 MEMORIA/(6908:6912): Operación desconocida.
+[INFO] 23:08:17:528 MEMORIA/(7253:7253): Se inicializaron las estructuras de Memoria
+[INFO] 23:08:17:528 MEMORIA/(7253:7253): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 23:08:20:801 MEMORIA/(7253:7253): Se conectó un cliente!
+[INFO] 23:08:23:536 MEMORIA/(7253:7253): Se conectó un cliente!
+[INFO] 23:08:49:206 MEMORIA/(7253:7253): Se conectó un cliente!
+[INFO] 23:09:26:960 MEMORIA/(7253:7306): Creación de Proceso PID: 1000
+[INFO] 23:17:00:274 MEMORIA/(7253:7306): PID: 1000 - Crear Segmento: 16 - Base: 128 - Tamaño: 64
+[ERROR] 23:23:13:178 MEMORIA/(7253:7306): Operación desconocida.
+[INFO] 23:27:15:055 MEMORIA/(8136:8136): Se inicializaron las estructuras de Memoria
+[INFO] 23:27:15:056 MEMORIA/(8136:8136): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 23:27:17:575 MEMORIA/(8136:8136): Se conectó un cliente!
+[INFO] 23:27:20:255 MEMORIA/(8136:8136): Se conectó un cliente!
+[INFO] 23:27:34:325 MEMORIA/(8136:8136): Se conectó un cliente!
+[INFO] 23:28:02:726 MEMORIA/(8136:8199): Creación de Proceso PID: 1000
+[INFO] 23:30:56:267 MEMORIA/(8136:8199): PID: 1000 - Crear Segmento: 16 - Base: 128 - Tamaño: 64
+[INFO] 23:33:12:273 MEMORIA/(8136:8199): PID: 1000 - Eliminar Segmento: 16 - Base: 128 - Tamaño: 64
+[INFO] 23:41:51:928 MEMORIA/(8136:8199): Creación de Proceso PID: 1001
+[INFO] 23:46:23:306 MEMORIA/(8136:8199): Eliminación de Proceso PID: 1001
+[INFO] 23:47:28:996 MEMORIA/(8136:8199): Creación de Proceso PID: 1002
+[INFO] 23:49:27:197 MEMORIA/(8136:8199): Eliminación de Proceso PID: 1002
+[INFO] 23:52:43:303 MEMORIA/(8136:8199): Eliminación de Proceso PID: 1000
+[ERROR] 23:54:16:913 MEMORIA/(8136:8199): Operación desconocida.
+[ERROR] 23:54:16:913 MEMORIA/(8136:8140): Operación desconocida.

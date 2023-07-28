@@ -85,14 +85,14 @@ void inicializar_estructuras()
 
 		//  Inicialización bitmap //
 		// --- INICIO --- //
-		estructura_bitmap = inicializar_archivo_bm_prueba(archivo_bm);
+		estructura_bitmap = inicializar_archivo_bm(archivo_bm);
 
 
 		// --- FIN --- //
 
 		// Inicialización archivo de bloques
 		// --- INICIO --- //
-		levantar_archivo_bloques_prueba();
+		levantar_archivo_bloques();
 		// --- FIN --- //
 
 		// Loggear información fileSystem //

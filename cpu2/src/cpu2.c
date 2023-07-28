@@ -196,13 +196,13 @@ int main() {
 				case F_READ:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-					ejecutar_F_READ(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
+					ejecutar_F_READ(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config, logger_principal);
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_WRITE:
 					contexto->pc++;
 					log_info(logger_principal, "PID: <%d> - Ejecutando: <%s>", contexto->pid, instruccion_a_ejecutar);
-					ejecutar_F_WRITE(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config);
+					ejecutar_F_WRITE(instruccion_a_ejecutar, contexto, fd_kernel, fd_memoria, config, logger_principal);
 					contexto_sigue_en_cpu = 0;
 					break;
 				case F_TRUNCATE: //TERMINADA EN CPU - FALTA TERMINARLA EN KERNEL TODO

@@ -43,7 +43,7 @@ void quitar_entrada_archivo_del_proceso(char* nombre, t_proceso* proceso) {
 	}
 
 	list_remove_by_condition(proceso->pcb->tabla_archivos, buscar_archivo);*/
-	dictionary_remove_and_destroy(proceso->pcb->tabla_archivos, nombre);
+	dictionary_remove_and_destroy(proceso->pcb->tabla_archivos, nombre, free);
 }
 
 

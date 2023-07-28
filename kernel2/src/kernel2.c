@@ -26,7 +26,7 @@ int main() {
 	iniciar_peticiones_file_system();
 
 	//Iniciarse como cliente de los siguientes servidores: (COMENTAR PARA PROBAR EL KERNEL, SI NO TENÉS QUE INICIAR TODO)
-	socket_filesystem = crear_conexion(logger, "KERNEL", config_kernel.ip_filesystem, config_kernel.puerto_filesystem);
+	socket_filesystem = crear_conexion(logger_kernel, "KERNEL", config_kernel.ip_filesystem, config_kernel.puerto_filesystem);
 	socket_cpu = crear_conexion(logger_kernel, "KERNEL", config_kernel.ip_cpu, config_kernel.puerto_cpu);
 	socket_memoria = crear_conexion(logger_kernel, "KERNEL", config_kernel.ip_memoria, config_kernel.puerto_memoria);
 

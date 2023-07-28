@@ -152,7 +152,7 @@ t_proceso* enviar_peticion_file_system(void) {
 
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->codigo_operacion), sizeof(int));
 	agregar_a_stream(a_enviar, &desplazamiento, &(paquete->buffer->stream_size), sizeof(int));
-	agregar_a_stream(a_enviar, paquete->buffer->stream, paquete->buffer->stream_size);
+	agregar_a_stream(a_enviar, &desplazamiento, paquete->buffer->stream, paquete->buffer->stream_size);
 
 	send(socket_filesystem, a_enviar, buffer->stream_size + sizeof(int) + sizeof(int), 0);
 

@@ -55,27 +55,6 @@ void inicializar_config(void) {
 
 int esperar_conexiones(int socket_servidor) {
 
-//	conexiones[0] = malloc(sizeof(int));
-//	*conexiones[0] = accept(socket_servidor, NULL, NULL); // esperar_cliente(socket_servidor);
-//	pthread_create(&hilos[0], NULL, (void *) atender_File_System, conexiones[0]);
-//	log_info(logger, "Se conectó el File System!");
-
-//	pthread_t hilo_cpu;
-//	pthread_t hilo_kernel;
-//
-//	int*socket_cpu = malloc(sizeof(int));
-//	*socket_cpu = accept(socket_servidor, NULL, NULL);
-//	pthread_create(&hilo_cpu, NULL, (void*) atender_CPU, socket_cpu);
-//	log_info(logger, "Se conectó la CPU!");
-//
-//	int*socket_kernel = malloc(sizeof(int));
-//	*socket_kernel = accept(socket_servidor, NULL, NULL);
-//	pthread_create(&hilo_kernel, NULL, (void *) atender_kernel, socket_kernel);
-//	log_info(logger, "Se conectó el Kernel!");
-//
-//	pthread_detach(hilo_kernel);
-//	pthread_detach(hilo_cpu);
-
 	//TODO DESPUÉS VEMOS BIEN ESTO
 	int* socket_cliente = malloc(sizeof(int));//esperar_cliente(logger_kernel,"KERNEL", socket_servidor); // se conecta el cliente
 		*socket_cliente = accept(socket_servidor, NULL, NULL);
@@ -86,13 +65,14 @@ int esperar_conexiones(int socket_servidor) {
 	pthread_create(&hilo_cliente, NULL, (void*) manejar_conexion, socket_cliente); // creo el hilo con la funcion manejar conexion a la que le paso el socket del cliente y sigo en la otra funcion
 	pthread_detach(hilo_cliente);
 
+	log_info(logger, "Se conectó un cliente!");
+
 	return 1;
 
 }
 
 void manejar_conexion(int* fd_cliente) {
 	int socket_cliente = *fd_cliente;
-//	pthread_mutex_t mutex_atendiendo_fs = PTHREAD_MUTEX_INITIALIZER;
 
 	while(1) {
 		t_paquete* paquete = malloc(sizeof(t_paquete));
@@ -166,16 +146,7 @@ void manejar_conexion(int* fd_cliente) {
 
 		case COMPACTAR:
 			log_info(logger, "Solicitud de compactación");
-
-<<<<<<< HEAD
-//			int offset = 0;
-//			int algo = deserializar_int(stream, &offset); // no se usa, creo que igual no hace falta
-//			pthread_mutex_lock(&mutex_atendiendo_fs);
-=======
-			pthread_mutex_lock(&mutex_atendiendo_fs);
->>>>>>> da2e4946a01c6cd340270ec7ecf12d33a88c5afe
 			compactar(socket_cliente);
-			//pthread_mutex_unlock(&mutex_atendiendo_fs);
 			break;
 
 

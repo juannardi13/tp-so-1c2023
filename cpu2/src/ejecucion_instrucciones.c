@@ -1464,6 +1464,3 @@ int agregar_a_stream(void* stream, int* offset, void* src, int size) {
 	memcpy(stream + *offset, src, size);
 	*offset +=size;
 }
-
-
-
