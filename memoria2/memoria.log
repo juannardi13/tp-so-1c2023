@@ -2552,3 +2552,778 @@ NOMBRE_ARCHIV
 [INFO] 03:24:11:386 MEMORIA/(22435:22449): Eliminación de Proceso PID: 1000
 [INFO] 03:24:11:387 MEMORIA/(22435:22449): Eliminación de Proceso PID: 1001
 [ERROR] 03:36:01:046 MEMORIA/(22435:22449): Operación desconocida.
+[INFO] 03:43:44:633 MEMORIA/(22900:22900): Se inicializaron las estructuras de Memoria
+[INFO] 03:43:44:633 MEMORIA/(22900:22900): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:43:52:785 MEMORIA/(22900:22900): Se conectó un cliente!
+[INFO] 03:44:03:000 MEMORIA/(22900:22900): Se conectó un cliente!
+[INFO] 03:44:11:081 MEMORIA/(22900:22900): Se conectó un cliente!
+[INFO] 03:50:59:591 MEMORIA/(22900:22914): Creación de Proceso PID: 1000
+[INFO] 03:51:00:343 MEMORIA/(22900:22914): Creación de Proceso PID: 1001
+[INFO] 03:51:00:592 MEMORIA/(22900:22902): CPU quiere escribir en la dirección <0> el valor <SonicTheHedgehog>, de tamaño <17>
+[INFO] 03:51:00:592 MEMORIA/(22900:22902): Se escribe el valor <SonicTheHedgehog> de tamaño <17> en la direccion fisica: 0
+[INFO] 03:51:00:592 MEMORIA/(22900:22902): Dirección física: 0
+[INFO] 03:51:00:592 MEMORIA/(22900:22902): Valor Registro: SonicTheHedgehog
+[INFO] 03:51:01:593 MEMORIA/(22900:22902): SonicTheHedgehog
+[INFO] 03:51:02:593 MEMORIA/(22900:22902): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 03:51:02:593 MEMORIA/(22900:22902): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 03:51:02:593 MEMORIA/(22900:22902): Dirección física: 32
+[INFO] 03:51:02:593 MEMORIA/(22900:22902): Valor Registro: SonyPlaystation1
+[INFO] 03:51:03:594 MEMORIA/(22900:22902): SonyPlaystation1
+[INFO] 03:51:04:594 MEMORIA/(22900:22902): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 03:51:04:594 MEMORIA/(22900:22902): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 03:51:04:594 MEMORIA/(22900:22902): Dirección física: 48
+[INFO] 03:51:04:594 MEMORIA/(22900:22902): Valor Registro: SonyPlaystation2
+[INFO] 03:51:05:595 MEMORIA/(22900:22902): SonyPlaystation2
+[INFO] 03:51:06:596 MEMORIA/(22900:22902): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 03:51:06:596 MEMORIA/(22900:22902): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 03:51:06:596 MEMORIA/(22900:22902): Dirección física: 64
+[INFO] 03:51:06:596 MEMORIA/(22900:22902): Valor Registro: SonyPlaystation3
+[INFO] 03:51:07:596 MEMORIA/(22900:22902): SonyPlaystation3
+[INFO] 03:51:08:597 MEMORIA/(22900:22902): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 03:51:08:597 MEMORIA/(22900:22902): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 03:51:08:597 MEMORIA/(22900:22902): Dirección física: 80
+[INFO] 03:51:08:597 MEMORIA/(22900:22902): Valor Registro: SonyPlaystation4
+[INFO] 03:51:09:598 MEMORIA/(22900:22902): SonyPlaystation4
+[INFO] 03:51:10:599 MEMORIA/(22900:22902): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 03:51:10:599 MEMORIA/(22900:22902): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 03:51:10:599 MEMORIA/(22900:22902): Dirección física: 96
+[INFO] 03:51:10:599 MEMORIA/(22900:22902): Valor Registro: SonyPlaystation5
+[INFO] 03:51:11:599 MEMORIA/(22900:22902): SonyPlaystation5
+[INFO] 03:51:11:645 MEMORIA/(22900:22904): CPU quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 03:51:11:645 MEMORIA/(22900:22904): Se busca el valor de la direccion fisica: 32
+[INFO] 03:51:11:646 MEMORIA/(22900:22914): PID: 1001 - Crear Segmento: 1 - Base: 128 - Tamaño: 64
+[INFO] 03:51:11:646 MEMORIA/(22900:22914): PID: 1001 - Crear Segmento: 2 - Base: 192 - Tamaño: 64
+[INFO] 03:51:11:647 MEMORIA/(22900:22914): PID: 1001 - Crear Segmento: 3 - Base: 256 - Tamaño: 64
+[INFO] 03:51:11:648 MEMORIA/(22900:22914): PID: 1001 - Crear Segmento: 4 - Base: 320 - Tamaño: 64
+[INFO] 03:51:11:649 MEMORIA/(22900:22914): PID: 1001 - Crear Segmento: 5 - Base: 384 - Tamaño: 128
+[INFO] 03:51:11:650 MEMORIA/(22900:22914): PID: 1001 - Eliminar Segmento: 2 - Base: 192 - Tamaño: 64
+[INFO] 03:51:11:660 MEMORIA/(22900:22914): PID: 1001 - Eliminar Segmento: 4 - Base: 320 - Tamaño: 64
+[INFO] 03:51:11:661 MEMORIA/(22900:22914): No hay suficiente espacio contiguo para crear el segmento, requiere compactación
+[INFO] 03:51:12:645 MEMORIA/(22900:22904): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 03:51:12:647 MEMORIA/(22900:22914): Solicitud de compactación
+[INFO] 03:51:42:647 MEMORIA/(22900:22914): PID: 1000 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 03:51:42:647 MEMORIA/(22900:22914): PID: 1001 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 03:51:42:647 MEMORIA/(22900:22914): PID: 1001 - Segmento: 1 - Base: 128 - Tamaño: 64
+[INFO] 03:51:42:647 MEMORIA/(22900:22914): PID: 1001 - Segmento: 3 - Base: 192 - Tamaño: 64
+[INFO] 03:51:42:647 MEMORIA/(22900:22914): PID: 1001 - Segmento: 5 - Base: 256 - Tamaño: 128
+[INFO] 03:51:42:648 MEMORIA/(22900:22914): PID: 1001 - Crear Segmento: 6 - Base: 384 - Tamaño: 128
+[INFO] 03:51:42:649 MEMORIA/(22900:22914): Eliminación de Proceso PID: 1001
+[INFO] 03:51:42:696 MEMORIA/(22900:22904): CPU quiere leer en la dirección <0> un tamaño de <16>
+[INFO] 03:51:42:696 MEMORIA/(22900:22904): Se busca el valor de la direccion fisica: 0
+[INFO] 03:51:43:697 MEMORIA/(22900:22904): Se envia el valor: SonicTheHedgehog
+[INFO] 03:51:43:698 MEMORIA/(22900:22914): Eliminación de Proceso PID: 1000
+[ERROR] 03:56:04:257 MEMORIA/(22900:22914): Operación desconocida.
+[INFO] 03:56:36:591 MEMORIA/(23116:23116): Se inicializaron las estructuras de Memoria
+[INFO] 03:56:36:592 MEMORIA/(23116:23116): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:56:39:894 MEMORIA/(23116:23116): Se conectó un cliente!
+[INFO] 03:56:42:837 MEMORIA/(23116:23116): Se conectó un cliente!
+[INFO] 03:56:48:450 MEMORIA/(23116:23116): Se conectó un cliente!
+[ERROR] 03:58:00:469 MEMORIA/(23116:23130): Operación desconocida.
+[INFO] 03:58:07:650 MEMORIA/(23163:23163): Se inicializaron las estructuras de Memoria
+[INFO] 03:58:07:650 MEMORIA/(23163:23163): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:58:10:256 MEMORIA/(23163:23163): Se conectó un cliente!
+[INFO] 03:58:16:030 MEMORIA/(23163:23163): Se conectó un cliente!
+[INFO] 03:58:20:860 MEMORIA/(23163:23163): Se conectó un cliente!
+[INFO] 03:58:41:831 MEMORIA/(23163:23179): Creación de Proceso PID: 1000
+[INFO] 03:58:42:511 MEMORIA/(23163:23179): Creación de Proceso PID: 1001
+[INFO] 03:58:42:832 MEMORIA/(23163:23165): CPU quiere escribir en la dirección <0> el valor <SonicTheHedgehog>, de tamaño <17>
+[INFO] 03:58:42:832 MEMORIA/(23163:23165): Se escribe el valor <SonicTheHedgehog> de tamaño <17> en la direccion fisica: 0
+[INFO] 03:58:42:832 MEMORIA/(23163:23165): Dirección física: 0
+[INFO] 03:58:42:832 MEMORIA/(23163:23165): Valor Registro: SonicTheHedgehog
+[INFO] 03:58:43:832 MEMORIA/(23163:23165): SonicTheHedgehog
+[INFO] 03:58:44:833 MEMORIA/(23163:23165): CPU quiere escribir en la dirección <32> el valor <SonyPlaystation1>, de tamaño <17>
+[INFO] 03:58:44:833 MEMORIA/(23163:23165): Se escribe el valor <SonyPlaystation1> de tamaño <17> en la direccion fisica: 32
+[INFO] 03:58:44:833 MEMORIA/(23163:23165): Dirección física: 32
+[INFO] 03:58:44:833 MEMORIA/(23163:23165): Valor Registro: SonyPlaystation1
+[INFO] 03:58:45:833 MEMORIA/(23163:23165): SonyPlaystation1
+[INFO] 03:58:46:834 MEMORIA/(23163:23165): CPU quiere escribir en la dirección <48> el valor <SonyPlaystation2>, de tamaño <17>
+[INFO] 03:58:46:834 MEMORIA/(23163:23165): Se escribe el valor <SonyPlaystation2> de tamaño <17> en la direccion fisica: 48
+[INFO] 03:58:46:834 MEMORIA/(23163:23165): Dirección física: 48
+[INFO] 03:58:46:834 MEMORIA/(23163:23165): Valor Registro: SonyPlaystation2
+[INFO] 03:58:47:834 MEMORIA/(23163:23165): SonyPlaystation2
+[INFO] 03:58:48:835 MEMORIA/(23163:23165): CPU quiere escribir en la dirección <64> el valor <SonyPlaystation3>, de tamaño <17>
+[INFO] 03:58:48:835 MEMORIA/(23163:23165): Se escribe el valor <SonyPlaystation3> de tamaño <17> en la direccion fisica: 64
+[INFO] 03:58:48:835 MEMORIA/(23163:23165): Dirección física: 64
+[INFO] 03:58:48:836 MEMORIA/(23163:23165): Valor Registro: SonyPlaystation3
+[INFO] 03:58:49:836 MEMORIA/(23163:23165): SonyPlaystation3
+[INFO] 03:58:50:836 MEMORIA/(23163:23165): CPU quiere escribir en la dirección <80> el valor <SonyPlaystation4>, de tamaño <17>
+[INFO] 03:58:50:836 MEMORIA/(23163:23165): Se escribe el valor <SonyPlaystation4> de tamaño <17> en la direccion fisica: 80
+[INFO] 03:58:50:837 MEMORIA/(23163:23165): Dirección física: 80
+[INFO] 03:58:50:837 MEMORIA/(23163:23165): Valor Registro: SonyPlaystation4
+[INFO] 03:58:51:837 MEMORIA/(23163:23165): SonyPlaystation4
+[INFO] 03:58:52:838 MEMORIA/(23163:23165): CPU quiere escribir en la dirección <96> el valor <SonyPlaystation5>, de tamaño <17>
+[INFO] 03:58:52:838 MEMORIA/(23163:23165): Se escribe el valor <SonyPlaystation5> de tamaño <17> en la direccion fisica: 96
+[INFO] 03:58:52:838 MEMORIA/(23163:23165): Dirección física: 96
+[INFO] 03:58:52:838 MEMORIA/(23163:23165): Valor Registro: SonyPlaystation5
+[INFO] 03:58:53:838 MEMORIA/(23163:23165): SonyPlaystation5
+[INFO] 03:59:38:890 MEMORIA/(23163:23179): PID: 1001 - Crear Segmento: 1 - Base: 128 - Tamaño: 64
+[INFO] 03:59:38:891 MEMORIA/(23163:23179): PID: 1001 - Crear Segmento: 2 - Base: 192 - Tamaño: 64
+[INFO] 03:59:38:892 MEMORIA/(23163:23179): PID: 1001 - Crear Segmento: 3 - Base: 256 - Tamaño: 64
+[INFO] 03:59:38:893 MEMORIA/(23163:23179): PID: 1001 - Crear Segmento: 4 - Base: 320 - Tamaño: 64
+[INFO] 03:59:38:895 MEMORIA/(23163:23179): PID: 1001 - Crear Segmento: 5 - Base: 384 - Tamaño: 128
+[INFO] 03:59:38:897 MEMORIA/(23163:23167): CPU quiere leer en la dirección <32> un tamaño de <80>
+[INFO] 03:59:38:897 MEMORIA/(23163:23167): Se busca el valor de la direccion fisica: 32
+[INFO] 03:59:38:898 MEMORIA/(23163:23179): PID: 1001 - Eliminar Segmento: 2 - Base: 192 - Tamaño: 64
+[INFO] 03:59:38:900 MEMORIA/(23163:23179): PID: 1001 - Eliminar Segmento: 4 - Base: 320 - Tamaño: 64
+[INFO] 03:59:38:905 MEMORIA/(23163:23179): No hay suficiente espacio contiguo para crear el segmento, requiere compactación
+[INFO] 03:59:39:897 MEMORIA/(23163:23167): Se envia el valor: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 04:00:39:899 MEMORIA/(23163:23179): Solicitud de compactación
+[INFO] 04:01:09:899 MEMORIA/(23163:23179): PID: 1000 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 04:01:09:899 MEMORIA/(23163:23179): PID: 1001 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 04:01:09:899 MEMORIA/(23163:23179): PID: 1001 - Segmento: 1 - Base: 128 - Tamaño: 64
+[INFO] 04:01:09:899 MEMORIA/(23163:23179): PID: 1001 - Segmento: 3 - Base: 192 - Tamaño: 64
+[INFO] 04:01:09:899 MEMORIA/(23163:23179): PID: 1001 - Segmento: 5 - Base: 256 - Tamaño: 128
+[INFO] 04:01:09:900 MEMORIA/(23163:23179): PID: 1001 - Crear Segmento: 6 - Base: 384 - Tamaño: 128
+[INFO] 04:01:09:905 MEMORIA/(23163:23179): Eliminación de Proceso PID: 1001
+[INFO] 04:01:09:953 MEMORIA/(23163:23167): CPU quiere leer en la dirección <0> un tamaño de <16>
+[INFO] 04:01:09:953 MEMORIA/(23163:23167): Se busca el valor de la direccion fisica: 0
+[INFO] 04:01:10:953 MEMORIA/(23163:23167): Se envia el valor: SonicTheHedgehog
+[INFO] 04:01:25:955 MEMORIA/(23163:23179): Eliminación de Proceso PID: 1000
+[ERROR] 04:03:20:862 MEMORIA/(23163:23179): Operación desconocida.
+[INFO] 04:03:36:101 MEMORIA/(23191:23191): Se inicializaron las estructuras de Memoria
+[INFO] 04:03:36:101 MEMORIA/(23191:23191): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:03:39:144 MEMORIA/(23191:23191): Se conectó un cliente!
+[INFO] 04:03:42:554 MEMORIA/(23191:23191): Se conectó un cliente!
+[INFO] 04:03:45:772 MEMORIA/(23191:23191): Se conectó un cliente!
+[ERROR] 04:05:46:882 MEMORIA/(23191:23205): Operación desconocida.
+[INFO] 04:05:57:657 MEMORIA/(23212:23212): Se inicializaron las estructuras de Memoria
+[INFO] 04:05:57:657 MEMORIA/(23212:23212): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:05:59:906 MEMORIA/(23212:23212): Se conectó un cliente!
+[INFO] 04:06:02:562 MEMORIA/(23212:23212): Se conectó un cliente!
+[INFO] 04:06:05:162 MEMORIA/(23212:23212): Se conectó un cliente!
+[INFO] 04:08:12:929 MEMORIA/(23212:23226): Creación de Proceso PID: 1000
+[INFO] 04:08:13:661 MEMORIA/(23212:23226): Creación de Proceso PID: 1001
+[INFO] 04:08:14:377 MEMORIA/(23212:23226): Creación de Proceso PID: 1002
+[INFO] 04:08:15:168 MEMORIA/(23212:23226): Creación de Proceso PID: 1003
+[INFO] 04:08:27:930 MEMORIA/(23212:23216): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 04:08:27:930 MEMORIA/(23212:23216): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 04:08:27:930 MEMORIA/(23212:23216): Dirección física: 16
+[INFO] 04:08:27:930 MEMORIA/(23212:23216): Valor Registro: SonicTheHedgehog
+[INFO] 04:08:28:930 MEMORIA/(23212:23216): SonicTheHedgehog
+[INFO] 04:08:28:932 MEMORIA/(23212:23214): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 04:08:28:932 MEMORIA/(23212:23214): Se busca el valor de la direccion fisica: 16
+[INFO] 04:08:29:932 MEMORIA/(23212:23214): Se envia el valor: SonicTheHedgehog5
+[ERROR] 04:08:30:486 MEMORIA/(23212:23226): Operación desconocida.
+[INFO] 04:21:03:907 MEMORIA/(23377:23377): Se inicializaron las estructuras de Memoria
+[INFO] 04:21:03:907 MEMORIA/(23377:23377): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:21:06:683 MEMORIA/(23377:23377): Se conectó un cliente!
+[INFO] 04:21:11:276 MEMORIA/(23377:23377): Se conectó un cliente!
+[INFO] 04:21:37:780 MEMORIA/(23377:23377): Se conectó un cliente!
+[INFO] 04:22:17:505 MEMORIA/(23377:23450): Creación de Proceso PID: 1000
+[INFO] 04:25:08:061 MEMORIA/(23377:23386): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 04:25:08:061 MEMORIA/(23377:23386): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 04:25:08:061 MEMORIA/(23377:23386): Dirección física: 16
+[INFO] 04:25:08:061 MEMORIA/(23377:23386): Valor Registro: SonicTheHedgehog
+[INFO] 04:25:09:061 MEMORIA/(23377:23386): SonicTheHedgehog
+[INFO] 04:28:04:446 MEMORIA/(23377:23379): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 04:28:04:446 MEMORIA/(23377:23379): Se busca el valor de la direccion fisica: 16
+[INFO] 04:28:05:446 MEMORIA/(23377:23379): Se envia el valor: SonicTheHedgehog5
+[ERROR] 04:30:48:389 MEMORIA/(23377:23450): Operación desconocida.
+[INFO] 04:35:10:622 MEMORIA/(24050:24050): Se inicializaron las estructuras de Memoria
+[INFO] 04:35:10:622 MEMORIA/(24050:24050): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:35:13:825 MEMORIA/(24050:24050): Se conectó un cliente!
+[ERROR] 04:35:32:699 MEMORIA/(24050:24052): Operación desconocida.
+[INFO] 04:36:02:115 MEMORIA/(24142:24142): Se inicializaron las estructuras de Memoria
+[INFO] 04:36:02:117 MEMORIA/(24142:24142): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:36:07:545 MEMORIA/(24142:24142): Se conectó un cliente!
+[INFO] 04:36:23:789 MEMORIA/(24142:24142): Se conectó un cliente!
+[INFO] 04:36:30:128 MEMORIA/(24142:24142): Se conectó un cliente!
+[INFO] 04:36:48:691 MEMORIA/(24142:24214): Creación de Proceso PID: 1000
+[INFO] 04:39:41:085 MEMORIA/(24142:24144): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 04:39:41:085 MEMORIA/(24142:24144): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 04:39:41:085 MEMORIA/(24142:24144): Dirección física: 16
+[INFO] 04:39:41:085 MEMORIA/(24142:24144): Valor Registro: SonicTheHedgehog
+[INFO] 04:39:42:088 MEMORIA/(24142:24144): SonicTheHedgehog
+[INFO] 04:41:10:711 MEMORIA/(24142:24200): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 04:41:10:711 MEMORIA/(24142:24200): Se busca el valor de la direccion fisica: 16
+[INFO] 04:41:11:712 MEMORIA/(24142:24200): Se envia el valor: SonicTheHedgehog5
+[ERROR] 04:46:40:893 MEMORIA/(24142:24214): Operación desconocida.
+[INFO] 04:51:17:705 MEMORIA/(25168:25168): Se inicializaron las estructuras de Memoria
+[INFO] 04:51:17:706 MEMORIA/(25168:25168): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:51:20:882 MEMORIA/(25168:25168): Se conectó un cliente!
+[INFO] 04:51:23:178 MEMORIA/(25168:25168): Se conectó un cliente!
+[INFO] 04:51:26:331 MEMORIA/(25168:25168): Se conectó un cliente!
+[INFO] 04:51:42:096 MEMORIA/(25168:25182): Creación de Proceso PID: 1000
+[INFO] 04:51:57:098 MEMORIA/(25168:25172): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 04:51:57:098 MEMORIA/(25168:25172): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 04:51:57:098 MEMORIA/(25168:25172): Dirección física: 16
+[INFO] 04:51:57:098 MEMORIA/(25168:25172): Valor Registro: SonicTheHedgehog
+[INFO] 04:51:58:098 MEMORIA/(25168:25172): SonicTheHedgehog
+[INFO] 04:51:58:099 MEMORIA/(25168:25170): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 04:51:58:099 MEMORIA/(25168:25170): Se busca el valor de la direccion fisica: 16
+[INFO] 04:51:59:099 MEMORIA/(25168:25170): Se envia el valor: SonicTheHedgehog5
+[ERROR] 04:51:59:592 MEMORIA/(25168:25182): Operación desconocida.
+[INFO] 04:52:10:738 MEMORIA/(25188:25188): Se inicializaron las estructuras de Memoria
+[INFO] 04:52:10:738 MEMORIA/(25188:25188): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:52:12:954 MEMORIA/(25188:25188): Se conectó un cliente!
+[INFO] 04:52:15:434 MEMORIA/(25188:25188): Se conectó un cliente!
+[INFO] 04:52:22:001 MEMORIA/(25188:25188): Se conectó un cliente!
+[ERROR] 04:52:22:243 MEMORIA/(25188:25202): Operación desconocida.
+[INFO] 04:55:14:009 MEMORIA/(25454:25454): Se inicializaron las estructuras de Memoria
+[INFO] 04:55:14:009 MEMORIA/(25454:25454): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:55:17:274 MEMORIA/(25454:25454): Se conectó un cliente!
+[INFO] 04:55:20:570 MEMORIA/(25454:25454): Se conectó un cliente!
+[INFO] 04:55:29:876 MEMORIA/(25454:25454): Se conectó un cliente!
+[INFO] 04:55:56:957 MEMORIA/(25454:25468): Creación de Proceso PID: 1000
+[INFO] 04:55:57:005 MEMORIA/(25454:25468): Eliminación de Proceso PID: 1000
+[ERROR] 04:57:25:137 MEMORIA/(25454:25456): Operación desconocida.
+[INFO] 04:57:36:178 MEMORIA/(25608:25608): Se inicializaron las estructuras de Memoria
+[INFO] 04:57:36:178 MEMORIA/(25608:25608): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 04:57:39:402 MEMORIA/(25608:25608): Se conectó un cliente!
+[INFO] 04:57:42:709 MEMORIA/(25608:25608): Se conectó un cliente!
+[INFO] 04:57:48:074 MEMORIA/(25608:25608): Se conectó un cliente!
+[INFO] 04:58:00:018 MEMORIA/(25608:25622): Creación de Proceso PID: 1000
+[INFO] 04:58:15:020 MEMORIA/(25608:25612): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 04:58:15:020 MEMORIA/(25608:25612): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 04:58:15:020 MEMORIA/(25608:25612): Dirección física: 16
+[INFO] 04:58:15:020 MEMORIA/(25608:25612): Valor Registro: SonicTheHedgehog
+[INFO] 04:58:16:020 MEMORIA/(25608:25612): SonicTheHedgehog
+[INFO] 04:58:17:021 MEMORIA/(25608:25622): Eliminación de Proceso PID: 1000
+[INFO] 04:59:13:400 MEMORIA/(25608:25622): Creación de Proceso PID: 1001
+[INFO] 05:00:37:824 MEMORIA/(25608:25622): Creación de Proceso PID: 1002
+[ERROR] 05:00:37:951 MEMORIA/(25608:25610): Operación desconocida.
+[INFO] 05:01:20:851 MEMORIA/(25793:25793): Se inicializaron las estructuras de Memoria
+[INFO] 05:01:40:986 MEMORIA/(25794:25794): Se inicializaron las estructuras de Memoria
+[INFO] 05:01:40:986 MEMORIA/(25794:25794): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:01:43:963 MEMORIA/(25794:25794): Se conectó un cliente!
+[INFO] 05:01:46:515 MEMORIA/(25794:25794): Se conectó un cliente!
+[INFO] 05:01:49:739 MEMORIA/(25794:25794): Se conectó un cliente!
+[INFO] 05:01:57:240 MEMORIA/(25794:25808): Creación de Proceso PID: 1000
+[INFO] 05:02:12:242 MEMORIA/(25794:25798): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 05:02:12:242 MEMORIA/(25794:25798): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 05:02:12:242 MEMORIA/(25794:25798): Dirección física: 16
+[INFO] 05:02:12:242 MEMORIA/(25794:25798): Valor Registro: SonicTheHedgehog
+[INFO] 05:02:13:243 MEMORIA/(25794:25798): SonicTheHedgehog
+[INFO] 05:02:14:244 MEMORIA/(25794:25808): Eliminación de Proceso PID: 1000
+[INFO] 05:02:43:736 MEMORIA/(25794:25808): Creación de Proceso PID: 1001
+[INFO] 05:02:58:738 MEMORIA/(25794:25798): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 05:02:58:738 MEMORIA/(25794:25798): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 05:02:58:738 MEMORIA/(25794:25798): Dirección física: 16
+[INFO] 05:02:58:738 MEMORIA/(25794:25798): Valor Registro: SonicTheHedgehog
+[INFO] 05:02:59:739 MEMORIA/(25794:25798): SonicTheHedgehog
+[INFO] 05:03:00:740 MEMORIA/(25794:25808): Eliminación de Proceso PID: 1001
+[INFO] 05:03:16:680 MEMORIA/(25794:25808): Creación de Proceso PID: 1002
+[INFO] 05:03:31:681 MEMORIA/(25794:25798): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 05:03:31:681 MEMORIA/(25794:25798): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 05:03:31:681 MEMORIA/(25794:25798): Dirección física: 16
+[INFO] 05:03:31:681 MEMORIA/(25794:25798): Valor Registro: SonicTheHedgehog
+[INFO] 05:03:32:681 MEMORIA/(25794:25798): SonicTheHedgehog
+[INFO] 05:03:32:682 MEMORIA/(25794:25808): Eliminación de Proceso PID: 1002
+[INFO] 05:04:11:264 MEMORIA/(25794:25808): Creación de Proceso PID: 1003
+[INFO] 05:04:26:266 MEMORIA/(25794:25798): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 05:04:26:266 MEMORIA/(25794:25798): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 05:04:26:266 MEMORIA/(25794:25798): Dirección física: 16
+[INFO] 05:04:26:266 MEMORIA/(25794:25798): Valor Registro: SonicTheHedgehog
+[INFO] 05:04:27:266 MEMORIA/(25794:25798): SonicTheHedgehog
+[INFO] 05:04:27:268 MEMORIA/(25794:25796): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 05:04:27:268 MEMORIA/(25794:25796): Se busca el valor de la direccion fisica: 16
+[INFO] 05:04:28:268 MEMORIA/(25794:25796): Se envia el valor: SonicTheHedgehog5
+[ERROR] 05:04:28:740 MEMORIA/(25794:25808): Operación desconocida.
+[INFO] 05:07:24:922 MEMORIA/(25929:25929): Se inicializaron las estructuras de Memoria
+[INFO] 05:07:24:922 MEMORIA/(25929:25929): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:07:28:035 MEMORIA/(25929:25929): Se conectó un cliente!
+[INFO] 05:07:33:282 MEMORIA/(25929:25929): Se conectó un cliente!
+[INFO] 05:07:35:714 MEMORIA/(25929:25929): Se conectó un cliente!
+[ERROR] 05:07:36:201 MEMORIA/(25929:25933): Operación desconocida.
+[INFO] 05:07:38:937 MEMORIA/(25945:25945): Se inicializaron las estructuras de Memoria
+[INFO] 05:07:38:938 MEMORIA/(25945:25945): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:07:51:746 MEMORIA/(25945:25945): Se conectó un cliente!
+[INFO] 05:08:01:041 MEMORIA/(25945:25945): Se conectó un cliente!
+[INFO] 05:08:06:090 MEMORIA/(25945:25945): Se conectó un cliente!
+[INFO] 05:08:19:659 MEMORIA/(25945:26021): Creación de Proceso PID: 1000
+[INFO] 05:09:46:731 MEMORIA/(25945:25988): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 05:09:46:731 MEMORIA/(25945:25988): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 05:09:46:731 MEMORIA/(25945:25988): Dirección física: 16
+[INFO] 05:09:46:731 MEMORIA/(25945:25988): Valor Registro: SonicTheHedgehog
+[INFO] 05:09:47:731 MEMORIA/(25945:25988): SonicTheHedgehog
+[INFO] 05:12:42:529 MEMORIA/(25945:26006): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 05:12:42:530 MEMORIA/(25945:26006): Se busca el valor de la direccion fisica: 16
+[INFO] 05:12:43:530 MEMORIA/(25945:26006): Se envia el valor: SonicTheHedgehog5
+[ERROR] 05:18:08:896 MEMORIA/(25945:26021): Operación desconocida.
+[INFO] 05:27:21:371 MEMORIA/(27085:27085): Se inicializaron las estructuras de Memoria
+[INFO] 05:27:21:371 MEMORIA/(27085:27085): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:27:25:101 MEMORIA/(27085:27085): Se conectó un cliente!
+[INFO] 05:27:29:084 MEMORIA/(27085:27085): Se conectó un cliente!
+[INFO] 05:27:33:340 MEMORIA/(27085:27085): Se conectó un cliente!
+[INFO] 05:27:44:696 MEMORIA/(27085:27099): Creación de Proceso PID: 1000
+[INFO] 05:27:59:698 MEMORIA/(27085:27089): CPU quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 05:27:59:698 MEMORIA/(27085:27089): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 05:27:59:698 MEMORIA/(27085:27089): Dirección física: 16
+[INFO] 05:27:59:698 MEMORIA/(27085:27089): Valor Registro: SonicTheHedgehog
+[INFO] 05:28:00:699 MEMORIA/(27085:27089): SonicTheHedgehog
+[INFO] 05:28:00:700 MEMORIA/(27085:27087): CPU quiere leer en la dirección <16> un tamaño de <16>
+[INFO] 05:28:00:700 MEMORIA/(27085:27087): Se busca el valor de la direccion fisica: 16
+[INFO] 05:28:01:700 MEMORIA/(27085:27087): Se envia el valor: SonicTheHedgehog
+[INFO] 05:28:01:701 MEMORIA/(27085:27099): Eliminación de Proceso PID: 1000
+[ERROR] 05:29:37:610 MEMORIA/(27085:27099): Operación desconocida.
+[ERROR] 05:29:37:611 MEMORIA/(27085:27087): Operación desconocida.
+[INFO] 05:29:45:380 MEMORIA/(27103:27103): Se inicializaron las estructuras de Memoria
+[INFO] 05:29:45:380 MEMORIA/(27103:27103): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:29:50:711 MEMORIA/(27103:27103): Se conectó un cliente!
+[INFO] 05:29:53:172 MEMORIA/(27103:27103): Se conectó un cliente!
+[INFO] 05:30:00:996 MEMORIA/(27103:27103): Se conectó un cliente!
+[INFO] 05:31:07:770 MEMORIA/(27103:27117): Creación de Proceso PID: 1000
+[INFO] 05:31:08:771 MEMORIA/(27103:27105): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 05:31:08:771 MEMORIA/(27103:27105): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 05:31:08:771 MEMORIA/(27103:27105): Dirección física: 12
+[INFO] 05:31:08:771 MEMORIA/(27103:27105): Valor Registro: h014
+[INFO] 05:31:09:772 MEMORIA/(27103:27105): h014
+[INFO] 05:31:09:772 MEMORIA/(27103:27117): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 05:32:08:482 MEMORIA/(27103:27117): Creación de Proceso PID: 1001
+[INFO] 05:32:08:483 MEMORIA/(27103:27105): CPU quiere leer en la dirección <12> un tamaño de <4>
+[INFO] 05:32:08:483 MEMORIA/(27103:27105): Se busca el valor de la direccion fisica: 12
+[INFO] 05:32:09:483 MEMORIA/(27103:27105): Se envia el valor: h014�
+[INFO] 05:32:09:483 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 05:32:09:484 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 05:32:09:485 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 05:32:09:485 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 05:32:09:486 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 05:32:09:487 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 05:32:09:488 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 05:32:09:490 MEMORIA/(27103:27117): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 05:32:10:492 MEMORIA/(27103:27105): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 05:32:10:493 MEMORIA/(27103:27105): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 05:32:10:493 MEMORIA/(27103:27105): Dirección física: 12
+[INFO] 05:32:10:493 MEMORIA/(27103:27105): Valor Registro: Ch4u
+[INFO] 05:32:11:493 MEMORIA/(27103:27105): Ch4u
+[INFO] 05:32:11:497 MEMORIA/(27103:27117): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 05:32:11:498 MEMORIA/(27103:27105): CPU quiere leer en la dirección <12> un tamaño de <4>
+[INFO] 05:32:11:498 MEMORIA/(27103:27105): Se busca el valor de la direccion fisica: 12
+[INFO] 05:32:12:498 MEMORIA/(27103:27105): Se envia el valor: Ch4u�
+[INFO] 05:34:14:259 MEMORIA/(27103:27117): Creación de Proceso PID: 1002
+[ERROR] 05:35:52:329 MEMORIA/(27103:27117): Operación desconocida.
+[INFO] 05:36:44:648 MEMORIA/(27207:27207): Se inicializaron las estructuras de Memoria
+[INFO] 05:36:44:648 MEMORIA/(27207:27207): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 05:36:48:373 MEMORIA/(27207:27207): Se conectó un cliente!
+[INFO] 05:36:50:852 MEMORIA/(27207:27207): Se conectó un cliente!
+[INFO] 05:36:55:938 MEMORIA/(27207:27207): Se conectó un cliente!
+[INFO] 05:37:09:352 MEMORIA/(27207:27221): Creación de Proceso PID: 1000
+[INFO] 05:37:10:354 MEMORIA/(27207:27209): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 05:37:10:354 MEMORIA/(27207:27209): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 05:37:10:354 MEMORIA/(27207:27209): Dirección física: 12
+[INFO] 05:37:10:354 MEMORIA/(27207:27209): Valor Registro: h014
+[INFO] 05:37:11:355 MEMORIA/(27207:27209): h014
+[INFO] 05:37:11:356 MEMORIA/(27207:27221): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 05:37:22:478 MEMORIA/(27207:27221): Creación de Proceso PID: 1001
+[INFO] 05:37:22:479 MEMORIA/(27207:27209): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 05:37:22:479 MEMORIA/(27207:27209): Se busca el valor de la direccion fisica: 12
+[INFO] 05:37:23:479 MEMORIA/(27207:27209): Se envia el valor: h014
+[INFO] 05:37:23:480 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 05:37:23:481 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 05:37:23:481 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 05:37:23:482 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 05:37:23:483 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 05:37:23:485 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 05:37:23:487 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 05:37:23:489 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 05:37:24:492 MEMORIA/(27207:27209): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 05:37:24:492 MEMORIA/(27207:27209): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 05:37:24:492 MEMORIA/(27207:27209): Dirección física: 12
+[INFO] 05:37:24:492 MEMORIA/(27207:27209): Valor Registro: Ch4u
+[INFO] 05:37:25:493 MEMORIA/(27207:27209): Ch4u
+[INFO] 05:37:25:497 MEMORIA/(27207:27221): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 05:37:25:497 MEMORIA/(27207:27209): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 05:37:25:497 MEMORIA/(27207:27209): Se busca el valor de la direccion fisica: 12
+[INFO] 05:37:26:498 MEMORIA/(27207:27209): Se envia el valor: Ch4u
+[INFO] 05:37:26:501 MEMORIA/(27207:27221): PID: 1001 - Crear Segmento: 9 - Base: 128 - Tamaño: 64
+[INFO] 05:37:27:504 MEMORIA/(27207:27209): CPU quiere escribir en la dirección <256> el valor <CoscuWin>, de tamaño <9>
+[INFO] 05:37:27:504 MEMORIA/(27207:27209): Se escribe el valor <CoscuWin> de tamaño <9> en la direccion fisica: 256
+[INFO] 05:37:27:504 MEMORIA/(27207:27209): Dirección física: 256
+[INFO] 05:37:27:504 MEMORIA/(27207:27209): Valor Registro: CoscuWin
+[INFO] 05:37:28:505 MEMORIA/(27207:27209): CoscuWin
+[INFO] 05:37:29:506 MEMORIA/(27207:27209): CPU quiere escribir en la dirección <704> el valor <GermanNo>, de tamaño <9>
+[INFO] 05:37:29:506 MEMORIA/(27207:27209): Se escribe el valor <GermanNo> de tamaño <9> en la direccion fisica: 704
+[INFO] 05:37:29:506 MEMORIA/(27207:27209): Dirección física: 704
+[INFO] 05:37:29:506 MEMORIA/(27207:27209): Valor Registro: GermanNo
+[INFO] 05:37:30:506 MEMORIA/(27207:27209): GermanNo
+[INFO] 05:37:45:025 MEMORIA/(27207:27221): Creación de Proceso PID: 1002
+[INFO] 05:37:45:026 MEMORIA/(27207:27221): PID: 1002 - Crear Segmento: 1 - Base: 768 - Tamaño: 256
+[INFO] 05:37:45:027 MEMORIA/(27207:27209): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 05:37:45:027 MEMORIA/(27207:27209): Se busca el valor de la direccion fisica: 12
+[INFO] 05:37:46:027 MEMORIA/(27207:27209): Se envia el valor: Ch4u
+[INFO] 05:37:46:030 MEMORIA/(27207:27209): CPU quiere leer en la dirección <256> un tamaño de <9>
+[INFO] 05:37:46:030 MEMORIA/(27207:27209): Se busca el valor de la direccion fisica: 256
+[INFO] 05:37:47:030 MEMORIA/(27207:27209): Se envia el valor: CoscuWin
+[INFO] 05:37:47:030 MEMORIA/(27207:27221): PID: 1001 - Eliminar Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 05:37:47:032 MEMORIA/(27207:27209): CPU quiere leer en la dirección <704> un tamaño de <9>
+[INFO] 05:37:47:032 MEMORIA/(27207:27209): Se busca el valor de la direccion fisica: 704
+[INFO] 05:37:48:032 MEMORIA/(27207:27209): Se envia el valor: GermanNo
+[INFO] 05:37:48:033 MEMORIA/(27207:27221): PID: 1001 - Eliminar Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 05:37:48:034 MEMORIA/(27207:27221): PID: 1001 - Eliminar Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 05:37:48:035 MEMORIA/(27207:27221): PID: 1001 - Eliminar Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 05:37:48:037 MEMORIA/(27207:27221): PID: 1002 - Crear Segmento: 2 - Base: 192 - Tamaño: 128
+[INFO] 05:37:48:040 MEMORIA/(27207:27221): Eliminación de Proceso PID: 1002
+[INFO] 05:37:48:042 MEMORIA/(27207:27221): Eliminación de Proceso PID: 1000
+[INFO] 05:37:48:044 MEMORIA/(27207:27221): Eliminación de Proceso PID: 1001
+[ERROR] 05:38:35:642 MEMORIA/(27207:27221): Operación desconocida.
+[INFO] 06:00:56:442 MEMORIA/(27626:27626): Se inicializaron las estructuras de Memoria
+[INFO] 06:00:56:442 MEMORIA/(27626:27626): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:00:59:019 MEMORIA/(27626:27626): Se conectó un cliente!
+[INFO] 06:01:01:076 MEMORIA/(27626:27626): Se conectó un cliente!
+[INFO] 06:01:07:085 MEMORIA/(27626:27626): Se conectó un cliente!
+[INFO] 06:01:21:113 MEMORIA/(27626:27640): Creación de Proceso PID: 1000
+[INFO] 06:01:22:114 MEMORIA/(27626:27628): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:01:22:114 MEMORIA/(27626:27628): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:01:22:114 MEMORIA/(27626:27628): Dirección física: 12
+[INFO] 06:01:22:114 MEMORIA/(27626:27628): Valor Registro: h014
+[INFO] 06:01:23:114 MEMORIA/(27626:27628): h014
+[INFO] 06:01:23:115 MEMORIA/(27626:27640): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:02:01:496 MEMORIA/(27626:27640): Creación de Proceso PID: 1001
+[INFO] 06:02:01:497 MEMORIA/(27626:27628): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:02:01:497 MEMORIA/(27626:27628): Se busca el valor de la direccion fisica: 12
+[INFO] 06:02:02:497 MEMORIA/(27626:27628): Se envia el valor: h014
+[INFO] 06:02:02:497 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:02:02:498 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:02:02:499 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 06:02:02:500 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:02:02:501 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:02:02:503 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 06:02:02:505 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 06:02:02:507 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 06:02:03:509 MEMORIA/(27626:27628): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 06:02:03:509 MEMORIA/(27626:27628): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:02:03:509 MEMORIA/(27626:27628): Dirección física: 12
+[INFO] 06:02:03:509 MEMORIA/(27626:27628): Valor Registro: Ch4u
+[INFO] 06:02:04:509 MEMORIA/(27626:27628): Ch4u
+[INFO] 06:02:04:512 MEMORIA/(27626:27640): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:02:04:512 MEMORIA/(27626:27628): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:02:04:512 MEMORIA/(27626:27628): Se busca el valor de la direccion fisica: 12
+[INFO] 06:02:05:512 MEMORIA/(27626:27628): Se envia el valor: Ch4u
+[INFO] 06:02:05:513 MEMORIA/(27626:27640): PID: 1001 - Crear Segmento: 9 - Base: 128 - Tamaño: 64
+[INFO] 06:02:06:514 MEMORIA/(27626:27628): CPU quiere escribir en la dirección <256> el valor <CoscuWin>, de tamaño <9>
+[INFO] 06:02:06:514 MEMORIA/(27626:27628): Se escribe el valor <CoscuWin> de tamaño <9> en la direccion fisica: 256
+[INFO] 06:02:06:514 MEMORIA/(27626:27628): Dirección física: 256
+[INFO] 06:02:06:514 MEMORIA/(27626:27628): Valor Registro: CoscuWin
+[INFO] 06:02:07:514 MEMORIA/(27626:27628): CoscuWin
+[INFO] 06:02:08:515 MEMORIA/(27626:27628): CPU quiere escribir en la dirección <704> el valor <GermanNo>, de tamaño <9>
+[INFO] 06:02:08:516 MEMORIA/(27626:27628): Se escribe el valor <GermanNo> de tamaño <9> en la direccion fisica: 704
+[INFO] 06:02:08:516 MEMORIA/(27626:27628): Dirección física: 704
+[INFO] 06:02:08:516 MEMORIA/(27626:27628): Valor Registro: GermanNo
+[INFO] 06:02:09:516 MEMORIA/(27626:27628): GermanNo
+[INFO] 06:02:46:264 MEMORIA/(27626:27640): Creación de Proceso PID: 1002
+[INFO] 06:02:46:265 MEMORIA/(27626:27640): PID: 1002 - Crear Segmento: 1 - Base: 768 - Tamaño: 256
+[INFO] 06:02:46:265 MEMORIA/(27626:27628): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:02:46:265 MEMORIA/(27626:27628): Se busca el valor de la direccion fisica: 12
+[INFO] 06:02:47:265 MEMORIA/(27626:27628): Se envia el valor: Ch4u
+[INFO] 06:02:47:267 MEMORIA/(27626:27628): CPU quiere leer en la dirección <256> un tamaño de <9>
+[INFO] 06:02:47:267 MEMORIA/(27626:27628): Se busca el valor de la direccion fisica: 256
+[INFO] 06:02:48:267 MEMORIA/(27626:27628): Se envia el valor: CoscuWin
+[INFO] 06:02:48:267 MEMORIA/(27626:27640): PID: 1001 - Eliminar Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:02:48:268 MEMORIA/(27626:27628): CPU quiere leer en la dirección <704> un tamaño de <9>
+[INFO] 06:02:48:268 MEMORIA/(27626:27628): Se busca el valor de la direccion fisica: 704
+[INFO] 06:02:49:268 MEMORIA/(27626:27628): Se envia el valor: GermanNo
+[INFO] 06:02:49:271 MEMORIA/(27626:27640): PID: 1001 - Eliminar Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:02:49:272 MEMORIA/(27626:27640): PID: 1001 - Eliminar Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:02:49:273 MEMORIA/(27626:27640): PID: 1001 - Eliminar Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:02:49:277 MEMORIA/(27626:27640): PID: 1002 - Crear Segmento: 2 - Base: 192 - Tamaño: 128
+[INFO] 06:02:49:280 MEMORIA/(27626:27640): Eliminación de Proceso PID: 1002
+[INFO] 06:02:49:282 MEMORIA/(27626:27640): Eliminación de Proceso PID: 1000
+[INFO] 06:02:49:285 MEMORIA/(27626:27640): Eliminación de Proceso PID: 1001
+[ERROR] 06:03:31:785 MEMORIA/(27626:27640): Operación desconocida.
+[INFO] 06:03:55:274 MEMORIA/(27788:27788): Se inicializaron las estructuras de Memoria
+[INFO] 06:03:55:274 MEMORIA/(27788:27788): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:03:57:618 MEMORIA/(27788:27788): Se conectó un cliente!
+[INFO] 06:03:59:842 MEMORIA/(27788:27788): Se conectó un cliente!
+[INFO] 06:04:02:563 MEMORIA/(27788:27788): Se conectó un cliente!
+[INFO] 06:04:14:833 MEMORIA/(27788:27802): Creación de Proceso PID: 1000
+[INFO] 06:04:15:834 MEMORIA/(27788:27790): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:04:15:834 MEMORIA/(27788:27790): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:04:15:834 MEMORIA/(27788:27790): Dirección física: 12
+[INFO] 06:04:15:834 MEMORIA/(27788:27790): Valor Registro: h014
+[INFO] 06:04:16:835 MEMORIA/(27788:27790): h014
+[INFO] 06:04:16:835 MEMORIA/(27788:27802): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:04:28:073 MEMORIA/(27788:27802): Creación de Proceso PID: 1001
+[INFO] 06:04:28:074 MEMORIA/(27788:27790): CPU quiere leer en la dirección <12> un tamaño de <4>
+[INFO] 06:04:28:074 MEMORIA/(27788:27790): Se busca el valor de la direccion fisica: 12
+[INFO] 06:04:29:074 MEMORIA/(27788:27790): Se envia el valor: h014�
+[INFO] 06:04:29:075 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:04:29:076 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:04:29:084 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 06:04:29:086 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:04:29:088 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:04:29:090 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 06:04:29:094 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 06:04:29:095 MEMORIA/(27788:27802): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 06:04:30:097 MEMORIA/(27788:27790): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 06:04:30:097 MEMORIA/(27788:27790): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:04:30:097 MEMORIA/(27788:27790): Dirección física: 12
+[INFO] 06:04:30:097 MEMORIA/(27788:27790): Valor Registro: Ch4u
+[INFO] 06:04:31:097 MEMORIA/(27788:27790): Ch4u
+[INFO] 06:04:31:099 MEMORIA/(27788:27802): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:04:31:100 MEMORIA/(27788:27790): CPU quiere leer en la dirección <12> un tamaño de <4>
+[INFO] 06:04:31:100 MEMORIA/(27788:27790): Se busca el valor de la direccion fisica: 12
+[INFO] 06:04:32:100 MEMORIA/(27788:27790): Se envia el valor: Ch4u�
+[ERROR] 06:06:32:977 MEMORIA/(27788:27802): Operación desconocida.
+[INFO] 06:14:11:563 MEMORIA/(28437:28437): Se inicializaron las estructuras de Memoria
+[INFO] 06:14:11:563 MEMORIA/(28437:28437): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:14:15:457 MEMORIA/(28437:28437): Se conectó un cliente!
+[INFO] 06:14:18:729 MEMORIA/(28437:28437): Se conectó un cliente!
+[INFO] 06:14:22:896 MEMORIA/(28437:28437): Se conectó un cliente!
+[INFO] 06:14:33:358 MEMORIA/(28437:28451): Creación de Proceso PID: 1000
+[INFO] 06:14:34:359 MEMORIA/(28437:28439): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:14:34:359 MEMORIA/(28437:28439): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:14:34:359 MEMORIA/(28437:28439): Dirección física: 12
+[INFO] 06:14:34:359 MEMORIA/(28437:28439): Valor Registro: h014
+[INFO] 06:14:35:360 MEMORIA/(28437:28439): h014
+[INFO] 06:14:35:360 MEMORIA/(28437:28451): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:14:52:807 MEMORIA/(28437:28451): Creación de Proceso PID: 1001
+[INFO] 06:14:52:808 MEMORIA/(28437:28439): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:14:52:808 MEMORIA/(28437:28439): Se busca el valor de la direccion fisica: 12
+[INFO] 06:14:53:808 MEMORIA/(28437:28439): Se envia el valor: h014�
+[INFO] 06:14:53:809 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:14:53:809 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:14:53:810 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 06:14:53:811 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:14:53:812 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:14:53:814 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 06:14:53:815 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 06:14:53:818 MEMORIA/(28437:28451): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 06:14:54:821 MEMORIA/(28437:28439): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 06:14:54:821 MEMORIA/(28437:28439): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:14:54:821 MEMORIA/(28437:28439): Dirección física: 12
+[INFO] 06:14:54:821 MEMORIA/(28437:28439): Valor Registro: Ch4u
+[INFO] 06:14:55:821 MEMORIA/(28437:28439): Ch4u
+[INFO] 06:14:55:823 MEMORIA/(28437:28451): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:14:55:824 MEMORIA/(28437:28439): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:14:55:824 MEMORIA/(28437:28439): Se busca el valor de la direccion fisica: 12
+[INFO] 06:14:56:824 MEMORIA/(28437:28439): Se envia el valor: Ch4u�
+[INFO] 06:15:16:146 MEMORIA/(28437:28451): Creación de Proceso PID: 1002
+[ERROR] 06:15:25:328 MEMORIA/(28437:28451): Operación desconocida.
+[INFO] 06:15:40:387 MEMORIA/(28460:28460): Se inicializaron las estructuras de Memoria
+[INFO] 06:15:40:387 MEMORIA/(28460:28460): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:15:46:503 MEMORIA/(28460:28460): Se conectó un cliente!
+[INFO] 06:15:50:566 MEMORIA/(28460:28460): Se conectó un cliente!
+[INFO] 06:15:57:283 MEMORIA/(28460:28460): Se conectó un cliente!
+[ERROR] 06:15:57:283 MEMORIA/(28460:28474): Operación desconocida.
+[INFO] 06:16:16:625 MEMORIA/(28476:28476): Se inicializaron las estructuras de Memoria
+[INFO] 06:16:16:625 MEMORIA/(28476:28476): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:16:18:456 MEMORIA/(28476:28476): Se conectó un cliente!
+[INFO] 06:16:20:656 MEMORIA/(28476:28476): Se conectó un cliente!
+[INFO] 06:16:23:918 MEMORIA/(28476:28476): Se conectó un cliente!
+[ERROR] 06:16:23:918 MEMORIA/(28476:28490): Operación desconocida.
+[INFO] 06:16:27:787 MEMORIA/(28492:28492): Se inicializaron las estructuras de Memoria
+[INFO] 06:16:27:787 MEMORIA/(28492:28492): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:16:30:609 MEMORIA/(28492:28492): Se conectó un cliente!
+[INFO] 06:16:33:265 MEMORIA/(28492:28492): Se conectó un cliente!
+[INFO] 06:16:55:239 MEMORIA/(28492:28492): Se conectó un cliente!
+[INFO] 06:18:01:011 MEMORIA/(28492:28513): Creación de Proceso PID: 1000
+[INFO] 06:18:16:013 MEMORIA/(28492:28496): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 06:18:16:013 MEMORIA/(28492:28496): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 06:18:16:013 MEMORIA/(28492:28496): Dirección física: 16
+[INFO] 06:18:16:013 MEMORIA/(28492:28496): Valor Registro: SonicTheHedgehog
+[INFO] 06:18:17:013 MEMORIA/(28492:28496): SonicTheHedgehog
+[INFO] 06:18:17:013 MEMORIA/(28492:28494): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 06:18:17:013 MEMORIA/(28492:28494): Se busca el valor de la direccion fisica: 16
+[INFO] 06:18:18:013 MEMORIA/(28492:28494): Se envia el valor: SonicTheHedgehog
+[INFO] 06:18:18:014 MEMORIA/(28492:28513): Eliminación de Proceso PID: 1000
+[ERROR] 06:23:51:350 MEMORIA/(28492:28513): Operación desconocida.
+[INFO] 06:23:59:999 MEMORIA/(28659:28659): Se inicializaron las estructuras de Memoria
+[INFO] 06:23:59:999 MEMORIA/(28659:28659): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:24:02:799 MEMORIA/(28659:28659): Se conectó un cliente!
+[INFO] 06:24:05:231 MEMORIA/(28659:28659): Se conectó un cliente!
+[INFO] 06:24:08:544 MEMORIA/(28659:28659): Se conectó un cliente!
+[INFO] 06:24:13:845 MEMORIA/(28659:28673): Creación de Proceso PID: 1000
+[INFO] 06:24:28:847 MEMORIA/(28659:28663): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 06:24:28:847 MEMORIA/(28659:28663): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 06:24:28:847 MEMORIA/(28659:28663): Dirección física: 16
+[INFO] 06:24:28:847 MEMORIA/(28659:28663): Valor Registro: SonicTheHedgehog
+[INFO] 06:24:29:847 MEMORIA/(28659:28663): SonicTheHedgehog
+[INFO] 06:24:29:847 MEMORIA/(28659:28661): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 06:24:29:847 MEMORIA/(28659:28661): Se busca el valor de la direccion fisica: 16
+[INFO] 06:24:30:847 MEMORIA/(28659:28661): Se envia el valor: SonicTheHedgehog
+[INFO] 06:24:30:848 MEMORIA/(28659:28673): Eliminación de Proceso PID: 1000
+[ERROR] 06:24:53:261 MEMORIA/(28659:28673): Operación desconocida.
+[INFO] 06:24:57:566 MEMORIA/(28677:28677): Se inicializaron las estructuras de Memoria
+[INFO] 06:24:57:567 MEMORIA/(28677:28677): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:25:01:662 MEMORIA/(28677:28677): Se conectó un cliente!
+[INFO] 06:25:06:742 MEMORIA/(28677:28677): Se conectó un cliente!
+[INFO] 06:25:10:504 MEMORIA/(28677:28677): Se conectó un cliente!
+[INFO] 06:25:26:197 MEMORIA/(28677:28710): Creación de Proceso PID: 1000
+[INFO] 06:25:27:199 MEMORIA/(28677:28698): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:25:27:199 MEMORIA/(28677:28698): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:25:27:199 MEMORIA/(28677:28698): Dirección física: 12
+[INFO] 06:25:27:199 MEMORIA/(28677:28698): Valor Registro: h014
+[INFO] 06:25:28:199 MEMORIA/(28677:28698): h014
+[INFO] 06:25:28:199 MEMORIA/(28677:28710): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:25:44:557 MEMORIA/(28677:28710): Creación de Proceso PID: 1001
+[INFO] 06:25:44:558 MEMORIA/(28677:28698): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:25:44:558 MEMORIA/(28677:28698): Se busca el valor de la direccion fisica: 12
+[INFO] 06:25:45:558 MEMORIA/(28677:28698): Se envia el valor: h014�~
+[INFO] 06:25:45:558 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:25:45:558 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:25:45:558 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 06:25:45:559 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:25:45:559 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:25:45:559 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 06:25:45:559 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 06:25:45:560 MEMORIA/(28677:28710): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 06:25:46:560 MEMORIA/(28677:28698): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 06:25:46:560 MEMORIA/(28677:28698): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:25:46:560 MEMORIA/(28677:28698): Dirección física: 12
+[INFO] 06:25:46:560 MEMORIA/(28677:28698): Valor Registro: Ch4u
+[INFO] 06:25:47:560 MEMORIA/(28677:28698): Ch4u
+[INFO] 06:25:47:562 MEMORIA/(28677:28710): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:25:47:562 MEMORIA/(28677:28698): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:25:47:562 MEMORIA/(28677:28698): Se busca el valor de la direccion fisica: 12
+[INFO] 06:25:48:562 MEMORIA/(28677:28698): Se envia el valor: Ch4u�~
+[ERROR] 06:27:55:689 MEMORIA/(28677:28710): Operación desconocida.
+[INFO] 06:28:50:968 MEMORIA/(28794:28794): Se inicializaron las estructuras de Memoria
+[INFO] 06:28:51:566 MEMORIA/(28794:28794): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:29:27:528 MEMORIA/(28794:28794): Se conectó un cliente!
+[INFO] 06:29:35:789 MEMORIA/(28794:28794): Se conectó un cliente!
+[INFO] 06:29:35:793 MEMORIA/(28794:28794): Se conectó un cliente!
+[INFO] 06:29:46:776 MEMORIA/(28794:28835): Creación de Proceso PID: 1000
+[INFO] 06:29:47:777 MEMORIA/(28794:28817): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:29:47:777 MEMORIA/(28794:28817): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:29:47:777 MEMORIA/(28794:28817): Dirección física: 12
+[INFO] 06:29:47:777 MEMORIA/(28794:28817): Valor Registro: h014
+[INFO] 06:29:48:777 MEMORIA/(28794:28817): h014
+[INFO] 06:29:48:777 MEMORIA/(28794:28835): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[ERROR] 06:29:58:388 MEMORIA/(28794:28835): Operación desconocida.
+[ERROR] 06:29:58:390 MEMORIA/(28794:28834): Operación desconocida.
+[ERROR] 06:29:58:390 MEMORIA/(28794:28817): Operación desconocida.
+[INFO] 06:30:15:655 MEMORIA/(28860:28860): Se inicializaron las estructuras de Memoria
+[INFO] 06:30:16:070 MEMORIA/(28860:28860): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:30:35:458 MEMORIA/(28860:28860): Se conectó un cliente!
+[INFO] 06:30:46:290 MEMORIA/(28860:28860): Se conectó un cliente!
+[INFO] 06:30:54:653 MEMORIA/(28860:28860): Se conectó un cliente!
+[ERROR] 06:30:54:657 MEMORIA/(28860:28904): Operación desconocida.
+[INFO] 06:31:46:131 MEMORIA/(28935:28935): Se inicializaron las estructuras de Memoria
+[INFO] 06:31:46:508 MEMORIA/(28935:28935): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:32:02:163 MEMORIA/(28970:28970): Se inicializaron las estructuras de Memoria
+[INFO] 06:32:03:492 MEMORIA/(28970:28970): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:32:28:576 MEMORIA/(28970:28970): Se conectó un cliente!
+[INFO] 06:32:36:129 MEMORIA/(28970:28970): Se conectó un cliente!
+[INFO] 06:32:39:161 MEMORIA/(28970:28970): Se conectó un cliente!
+[INFO] 06:32:48:995 MEMORIA/(28970:29006): Creación de Proceso PID: 1000
+[INFO] 06:33:04:755 MEMORIA/(28970:28990): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:33:04:755 MEMORIA/(28970:28990): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:33:04:755 MEMORIA/(28970:28990): Dirección física: 12
+[INFO] 06:33:04:755 MEMORIA/(28970:28990): Valor Registro: h014
+[INFO] 06:33:05:755 MEMORIA/(28970:28990): h014
+[INFO] 06:33:42:506 MEMORIA/(28970:29006): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:34:02:842 MEMORIA/(28970:29006): Creación de Proceso PID: 1001
+[INFO] 06:34:24:570 MEMORIA/(28970:28990): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:34:35:226 MEMORIA/(28970:28990): Se busca el valor de la direccion fisica: 12
+[INFO] 06:36:49:747 MEMORIA/(29167:29167): Se inicializaron las estructuras de Memoria
+[INFO] 06:37:23:187 MEMORIA/(29199:29199): Se inicializaron las estructuras de Memoria
+[INFO] 06:37:24:698 MEMORIA/(29199:29199): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:37:42:849 MEMORIA/(29199:29199): Se conectó un cliente!
+[INFO] 06:37:51:462 MEMORIA/(29199:29199): Se conectó un cliente!
+[INFO] 06:37:54:094 MEMORIA/(29199:29199): Se conectó un cliente!
+[INFO] 06:38:09:186 MEMORIA/(29199:29238): Creación de Proceso PID: 1000
+[INFO] 06:38:41:722 MEMORIA/(29199:29221): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 06:38:47:531 MEMORIA/(29199:29221): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:38:49:247 MEMORIA/(29199:29221): Dirección física: 12
+[INFO] 06:38:50:275 MEMORIA/(29199:29221): Valor Registro: h014
+[INFO] 06:39:13:205 MEMORIA/(29199:29221): h014
+[INFO] 06:39:17:938 MEMORIA/(29199:29238): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:39:35:914 MEMORIA/(29199:29238): Creación de Proceso PID: 1001
+[INFO] 06:39:50:586 MEMORIA/(29199:29221): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:39:55:212 MEMORIA/(29199:29221): Se busca el valor de la direccion fisica: 12
+[INFO] 06:40:48:140 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:40:48:140 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:40:48:140 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 06:40:48:141 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:40:48:141 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:40:48:142 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 06:40:48:142 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 06:40:48:143 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 06:40:51:490 MEMORIA/(29199:29221): Se envia el valor: h014
+[INFO] 06:41:40:843 MEMORIA/(29199:29221): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 06:41:44:330 MEMORIA/(29199:29221): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 06:41:44:330 MEMORIA/(29199:29221): Dirección física: 12
+[INFO] 06:41:44:330 MEMORIA/(29199:29221): Valor Registro: Ch4u
+[INFO] 06:41:45:330 MEMORIA/(29199:29221): Ch4u
+[INFO] 06:41:46:073 MEMORIA/(29199:29238): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 06:41:54:627 MEMORIA/(29199:29221): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:41:56:594 MEMORIA/(29199:29221): Se busca el valor de la direccion fisica: 12
+[INFO] 06:41:57:594 MEMORIA/(29199:29221): Se envia el valor: Ch4u
+[INFO] 06:42:01:417 MEMORIA/(29199:29238): PID: 1001 - Crear Segmento: 9 - Base: 128 - Tamaño: 64
+[INFO] 06:42:13:523 MEMORIA/(29199:29221): CPU quiere escribir en la dirección <256> el valor <CoscuWin>, de tamaño <9>
+[INFO] 06:42:17:914 MEMORIA/(29199:29221): Se escribe el valor <CoscuWin> de tamaño <9> en la direccion fisica: 256
+[INFO] 06:42:17:914 MEMORIA/(29199:29221): Dirección física: 256
+[INFO] 06:42:17:914 MEMORIA/(29199:29221): Valor Registro: CoscuWin
+[INFO] 06:42:18:915 MEMORIA/(29199:29221): CoscuWin
+[INFO] 06:42:29:259 MEMORIA/(29199:29221): CPU quiere escribir en la dirección <704> el valor <GermanNo>, de tamaño <9>
+[INFO] 06:42:30:170 MEMORIA/(29199:29221): Se escribe el valor <GermanNo> de tamaño <9> en la direccion fisica: 704
+[INFO] 06:42:30:170 MEMORIA/(29199:29221): Dirección física: 704
+[INFO] 06:42:30:170 MEMORIA/(29199:29221): Valor Registro: GermanNo
+[INFO] 06:42:31:170 MEMORIA/(29199:29221): GermanNo
+[INFO] 06:42:51:867 MEMORIA/(29199:29238): Creación de Proceso PID: 1002
+[INFO] 06:42:51:869 MEMORIA/(29199:29238): PID: 1002 - Crear Segmento: 1 - Base: 768 - Tamaño: 256
+[INFO] 06:42:58:378 MEMORIA/(29199:29221): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 06:42:59:779 MEMORIA/(29199:29221): Se busca el valor de la direccion fisica: 12
+[INFO] 06:43:00:779 MEMORIA/(29199:29221): Se envia el valor: Ch4u
+[INFO] 06:43:05:579 MEMORIA/(29199:29221): CPU quiere leer en la dirección <256> un tamaño de <9>
+[INFO] 06:43:06:081 MEMORIA/(29199:29221): Se busca el valor de la direccion fisica: 256
+[INFO] 06:43:07:082 MEMORIA/(29199:29221): Se envia el valor: CoscuWin
+[INFO] 06:43:07:730 MEMORIA/(29199:29238): PID: 1001 - Eliminar Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 06:43:13:146 MEMORIA/(29199:29221): CPU quiere leer en la dirección <704> un tamaño de <9>
+[INFO] 06:43:13:380 MEMORIA/(29199:29221): Se busca el valor de la direccion fisica: 704
+[INFO] 06:43:14:380 MEMORIA/(29199:29221): Se envia el valor: GermanNo
+[INFO] 06:43:14:678 MEMORIA/(29199:29238): PID: 1001 - Eliminar Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 06:43:14:679 MEMORIA/(29199:29238): PID: 1001 - Eliminar Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 06:43:16:266 MEMORIA/(29199:29238): PID: 1001 - Eliminar Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 06:43:16:271 MEMORIA/(29199:29238): PID: 1002 - Crear Segmento: 2 - Base: 192 - Tamaño: 128
+[INFO] 06:43:16:272 MEMORIA/(29199:29238): Eliminación de Proceso PID: 1002
+[INFO] 06:43:16:273 MEMORIA/(29199:29238): Eliminación de Proceso PID: 1000
+[INFO] 06:43:16:274 MEMORIA/(29199:29238): Eliminación de Proceso PID: 1001
+[INFO] 06:44:13:028 MEMORIA/(29585:29585): Se inicializaron las estructuras de Memoria
+[INFO] 06:44:13:028 MEMORIA/(29585:29585): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:44:18:348 MEMORIA/(29585:29585): Se conectó un cliente!
+[INFO] 06:44:24:924 MEMORIA/(29585:29585): Se conectó un cliente!
+[INFO] 06:44:30:180 MEMORIA/(29585:29585): Se conectó un cliente!
+[INFO] 06:45:07:562 MEMORIA/(29585:29599): Creación de Proceso PID: 1000
+[INFO] 06:45:22:564 MEMORIA/(29585:29589): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 06:45:22:564 MEMORIA/(29585:29589): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 06:45:22:564 MEMORIA/(29585:29589): Dirección física: 16
+[INFO] 06:45:22:564 MEMORIA/(29585:29589): Valor Registro: SonicTheHedgehog
+[INFO] 06:45:23:565 MEMORIA/(29585:29589): SonicTheHedgehog
+[INFO] 06:45:23:565 MEMORIA/(29585:29587): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 06:45:23:565 MEMORIA/(29585:29587): Se busca el valor de la direccion fisica: 16
+[INFO] 06:45:24:566 MEMORIA/(29585:29587): Se envia el valor: SonicTheHedgehog5
+[ERROR] 06:45:24:892 MEMORIA/(29585:29599): Operación desconocida.
+[INFO] 06:47:26:460 MEMORIA/(29757:29757): Se inicializaron las estructuras de Memoria
+[INFO] 06:47:28:507 MEMORIA/(29757:29757): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:47:58:121 MEMORIA/(29757:29757): Se conectó un cliente!
+[INFO] 06:48:05:750 MEMORIA/(29757:29757): Se conectó un cliente!
+[INFO] 06:48:09:206 MEMORIA/(29757:29757): Se conectó un cliente!
+[INFO] 06:48:24:322 MEMORIA/(29757:29794): Creación de Proceso PID: 1000
+[INFO] 06:48:39:324 MEMORIA/(29757:29784): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog>, de tamaño <16>
+[INFO] 06:48:39:324 MEMORIA/(29757:29784): Se escribe el valor <SonicTheHedgehog> de tamaño <16> en la direccion fisica: 16
+[INFO] 06:48:39:324 MEMORIA/(29757:29784): Dirección física: 16
+[INFO] 06:48:39:324 MEMORIA/(29757:29784): Valor Registro: SonicTheHedgehog
+[INFO] 06:48:40:324 MEMORIA/(29757:29784): SonicTheHedgehog
+[INFO] 06:49:10:948 MEMORIA/(29757:29778): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 06:49:21:074 MEMORIA/(29757:29778): Se busca el valor de la direccion fisica: 16
+[INFO] 06:59:19:940 MEMORIA/(30197:30197): Se inicializaron las estructuras de Memoria
+[INFO] 06:59:19:940 MEMORIA/(30197:30197): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 06:59:23:132 MEMORIA/(30197:30197): Se conectó un cliente!
+[INFO] 06:59:27:604 MEMORIA/(30197:30197): Se conectó un cliente!
+[INFO] 06:59:31:357 MEMORIA/(30197:30197): Se conectó un cliente!
+[INFO] 06:59:42:739 MEMORIA/(30197:30211): Creación de Proceso PID: 1000
+[INFO] 06:59:57:740 MEMORIA/(30197:30201): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog%>, de tamaño <17>
+[INFO] 06:59:57:740 MEMORIA/(30197:30201): Se escribe el valor <SonicTheHedgehog%> de tamaño <17> en la direccion fisica: 16
+[INFO] 06:59:57:740 MEMORIA/(30197:30201): Dirección física: 16
+[INFO] 06:59:57:740 MEMORIA/(30197:30201): Valor Registro: SonicTheHedgehog%
+[INFO] 06:59:58:740 MEMORIA/(30197:30201): SonicTheHedgehog%
+[INFO] 06:59:58:740 MEMORIA/(30197:30199): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 06:59:58:740 MEMORIA/(30197:30199): Se busca el valor de la direccion fisica: 16
+[INFO] 06:59:59:741 MEMORIA/(30197:30199): Se envia el valor: SonicTheHedgehog%
+[ERROR] 07:00:00:086 MEMORIA/(30197:30211): Operación desconocida.
+[INFO] 07:11:03:932 MEMORIA/(30500:30500): Se inicializaron las estructuras de Memoria
+[INFO] 07:11:03:932 MEMORIA/(30500:30500): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 07:11:07:268 MEMORIA/(30500:30500): Se conectó un cliente!
+[INFO] 07:11:10:604 MEMORIA/(30500:30500): Se conectó un cliente!
+[INFO] 07:11:14:748 MEMORIA/(30500:30500): Se conectó un cliente!
+[INFO] 07:11:28:195 MEMORIA/(30500:30514): Creación de Proceso PID: 1000
+[INFO] 07:11:43:196 MEMORIA/(30500:30504): File System quiere escribir en la dirección <16> el valor <SonicTheHedgehog%>, de tamaño <17>
+[INFO] 07:11:43:196 MEMORIA/(30500:30504): Se escribe el valor <SonicTheHedgehog%> de tamaño <17> en la direccion fisica: 16
+[INFO] 07:11:43:196 MEMORIA/(30500:30504): Dirección física: 16
+[INFO] 07:11:43:196 MEMORIA/(30500:30504): Valor Registro: SonicTheHedgehog%
+[INFO] 07:11:44:197 MEMORIA/(30500:30504): SonicTheHedgehog%
+[INFO] 07:11:44:198 MEMORIA/(30500:30502): CPU quiere leer en la dirección <16> un tamaño de <17>
+[INFO] 07:11:44:198 MEMORIA/(30500:30502): Se busca el valor de la direccion fisica: 16
+[INFO] 07:11:45:198 MEMORIA/(30500:30502): Se envia el valor: SonicTheHedgehog%
+[ERROR] 07:11:45:563 MEMORIA/(30500:30514): Operación desconocida.

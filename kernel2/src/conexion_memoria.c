@@ -271,7 +271,6 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 		break;
 
 	case NECESITO_COMPACTAR:
-		log_info(logger_kernel, "Compactación: <Se solicitó compactación>");
 
 		//TODO semáforos y las tablas actualizadas para la compactación
 
@@ -282,6 +281,8 @@ void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_s
 			log_info(logger_kernel, "Compactación: <Esperando Fin de Operaciones de FS");
 			sem_wait(&sem_finalizar_peticiones_fs);
 		}
+		log_info(logger_kernel, "Compactación: <Se solicitó compactación>");
+
 
 		pthread_mutex_lock(&mutex_compactacion);
 

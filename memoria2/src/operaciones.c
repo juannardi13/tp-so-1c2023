@@ -260,6 +260,12 @@ void recv_leer_de_memoria(int tamanio, int direccion_fisica, int socket_cliente)
 	buscar_valor_enviar(direccion_fisica, tamanio, socket_cliente);
 }
 
+void recv_leer_de_memoria_cpu(int tamanio, int direccion_fisica, int socket_cliente){
+	log_info(logger, "Se busca el valor de la direccion fisica: %d", direccion_fisica);
+	buscar_valor_enviar_cpu(direccion_fisica, tamanio, socket_cliente);
+}
+
+
 
 void recv_escribir_en_memoria(int direccion_fisica, int tamanio, char* valor, int socket_cliente){
 	log_info(logger, "Se escribe el valor <%s> de tamaño <%d> en la direccion fisica: %d", valor, tamanio, direccion_fisica);
@@ -320,8 +326,57 @@ void buscar_valor_enviar(int direccion_fisica_buscada, int tamanio, int socket_c
 	}
 }
 
+void buscar_valor_enviar_cpu(int direccion_fisica_buscada, int tamanio, int socket_cliente){
+
+	char* valor_buscado = malloc(tamanio-1);
+	memset(valor_buscado,0,tamanio-1);
+
+	if((memoria + direccion_fisica_buscada) != NULL){
+
+		msleep(config_memoria.retardo_memoria); // Cada vez que accede al espacio memoria debe retrasarse segun config
+
+		memcpy(valor_buscado, memoria + direccion_fisica_buscada, tamanio-1);
+
+		t_paquete* paquete = malloc(sizeof(t_paquete));
+		t_buffer* buffer = malloc(sizeof(t_buffer));
+
+		int tam_val = strlen(valor_buscado) + 1;
+		buffer->stream_size = sizeof(int) + tam_val;
+
+		void* stream = malloc(buffer->stream_size);
+		int off = 0;
+
+		memcpy(stream + off, &tam_val, sizeof(int));
+		off += sizeof(int);
+		memcpy(stream + off, valor_buscado, tam_val);
+		off += tam_val;
+
+		buffer->stream = stream;
+
+		paquete->buffer = buffer;
+		paquete->codigo_operacion = LEIDO;
+
+		void* a_enviar = malloc(sizeof(int) + sizeof(int) + paquete->buffer->stream_size);
+		off = 0;
+
+		agregar_a_stream(a_enviar,&off,&(paquete->codigo_operacion),sizeof(int));
+		agregar_a_stream(a_enviar,&off,&(paquete->buffer->stream_size),sizeof(int));
+		agregar_a_stream(a_enviar,&off,paquete->buffer->stream,paquete->buffer->stream_size);
+
+		send(socket_cliente,a_enviar,sizeof(int) + sizeof(int) + paquete->buffer->stream_size,0);
+
+		free(a_enviar);
+		eliminar_paquete(paquete);
 
 
+
+		log_info(logger, "Se envia el valor: %s", valor_buscado);
+	}
+	else{
+		t_paquete* paquete = crear_paquete(NO_LEIDO);
+		enviar_paquete(paquete, socket_cliente);
+	}
+}
 
 void escribir_valor_en_direccion_fisica(int socket_cliente, int direccion_fisica, int tamanio_valor, char* valor){
 

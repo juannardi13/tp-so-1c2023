@@ -168,7 +168,7 @@ void manejar_fwrite(int socket_cliente,void* stream)
 	offset += sizeof(int);
 
 
-	paquete->codigo_operacion = LEER_DE_MEMORIA;
+	paquete->codigo_operacion = LEER_DE_MEMORIA_FS;
 	paquete->buffer->stream = stream_mem;
 
 	int tam_a_enviar = sizeof(int) + sizeof(int) + paquete->buffer->stream_size;

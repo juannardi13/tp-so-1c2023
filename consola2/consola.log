@@ -1376,3 +1376,377 @@
 [INFO] 03:24:11:386 consola.log/(22460:22460): Finalizó el proceso, terminando consola
 [INFO] 03:24:11:386 consola.log/(22450:22450): Finalizó el proceso, terminando consola
 [INFO] 03:24:11:387 consola.log/(22452:22452): Finalizó el proceso, terminando consola
+[INFO] 03:50:11:657 consola.log/(22961:22961): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 03:50:11:657 consola.log/(22961:22961): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 03:50:11:661 consola.log/(22961:22961): Se creo la conexion con el Kernel
+[INFO] 03:50:28:651 consola.log/(22963:22963): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 03:50:28:651 consola.log/(22963:22963): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 03:50:28:652 consola.log/(22963:22963): Se creo la conexion con el Kernel
+[INFO] 03:50:59:591 consola.log/(22961:22961): Paquete de instrucciones enviado correctamente!
+
+[INFO] 03:50:59:592 consola.log/(22961:22961): Esperando respuesta de Kernel para finalizar.
+[INFO] 03:51:00:343 consola.log/(22963:22963): Paquete de instrucciones enviado correctamente!
+
+[INFO] 03:51:00:343 consola.log/(22963:22963): Esperando respuesta de Kernel para finalizar.
+[INFO] 03:51:42:649 consola.log/(22963:22963): Finalizó el proceso, terminando consola
+[INFO] 03:51:43:699 consola.log/(22961:22961): Finalizó el proceso, terminando consola
+[INFO] 03:58:31:438 consola.log/(23180:23180): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 03:58:31:438 consola.log/(23180:23180): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 03:58:31:439 consola.log/(23180:23180): Se creo la conexion con el Kernel
+[INFO] 03:58:33:301 consola.log/(23183:23183): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 03:58:33:301 consola.log/(23183:23183): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 03:58:33:301 consola.log/(23183:23183): Se creo la conexion con el Kernel
+[INFO] 03:58:41:831 consola.log/(23180:23180): Paquete de instrucciones enviado correctamente!
+
+[INFO] 03:58:41:832 consola.log/(23180:23180): Esperando respuesta de Kernel para finalizar.
+[INFO] 03:58:42:510 consola.log/(23183:23183): Paquete de instrucciones enviado correctamente!
+
+[INFO] 03:58:42:511 consola.log/(23183:23183): Esperando respuesta de Kernel para finalizar.
+[INFO] 04:01:09:905 consola.log/(23183:23183): Finalizó el proceso, terminando consola
+[INFO] 04:01:25:956 consola.log/(23180:23180): Finalizó el proceso, terminando consola
+[INFO] 04:04:34:603 consola.log/(23206:23206): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:04:34:603 consola.log/(23206:23206): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:04:34:605 consola.log/(23206:23206): Se creo la conexion con el Kernel
+[INFO] 04:07:12:306 consola.log/(23264:23264): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:07:12:306 consola.log/(23264:23264): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:07:12:307 consola.log/(23264:23264): Se creo la conexion con el Kernel
+[INFO] 04:07:20:827 consola.log/(23266:23266): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:07:20:827 consola.log/(23266:23266): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:07:20:828 consola.log/(23266:23266): Se creo la conexion con el Kernel
+[INFO] 04:07:39:194 consola.log/(23268:23268): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:07:39:194 consola.log/(23268:23268): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:07:39:195 consola.log/(23268:23268): Se creo la conexion con el Kernel
+[INFO] 04:07:46:210 consola.log/(23270:23270): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:07:46:210 consola.log/(23270:23270): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:07:46:211 consola.log/(23270:23270): Se creo la conexion con el Kernel
+[INFO] 04:08:12:928 consola.log/(23264:23264): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:08:12:929 consola.log/(23264:23264): Esperando respuesta de Kernel para finalizar.
+[INFO] 04:08:13:661 consola.log/(23266:23266): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:08:13:661 consola.log/(23266:23266): Esperando respuesta de Kernel para finalizar.
+[INFO] 04:08:14:377 consola.log/(23268:23268): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:08:14:377 consola.log/(23268:23268): Esperando respuesta de Kernel para finalizar.
+[INFO] 04:08:15:168 consola.log/(23270:23270): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:08:15:169 consola.log/(23270:23270): Esperando respuesta de Kernel para finalizar.
+[ERROR] 04:08:30:485 consola.log/(23270:23270): Error al querer finalizar la consola
+[INFO] 04:08:30:485 consola.log/(23270:23270): Finalizó el proceso, terminando consola
+[ERROR] 04:08:30:485 consola.log/(23268:23268): Error al querer finalizar la consola
+[INFO] 04:08:30:485 consola.log/(23268:23268): Finalizó el proceso, terminando consola
+[ERROR] 04:08:30:485 consola.log/(23266:23266): Error al querer finalizar la consola
+[INFO] 04:08:30:485 consola.log/(23266:23266): Finalizó el proceso, terminando consola
+[ERROR] 04:08:30:485 consola.log/(23264:23264): Error al querer finalizar la consola
+[INFO] 04:08:30:485 consola.log/(23264:23264): Finalizó el proceso, terminando consola
+[INFO] 04:21:58:297 consola.log/(23465:23465): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:21:58:298 consola.log/(23465:23465): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:21:58:317 consola.log/(23465:23465): Se creo la conexion con el Kernel
+[INFO] 04:22:17:505 consola.log/(23465:23465): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:22:17:506 consola.log/(23465:23465): Esperando respuesta de Kernel para finalizar.
+[ERROR] 04:30:48:388 consola.log/(23465:23465): Error al querer finalizar la consola
+[INFO] 04:30:48:389 consola.log/(23465:23465): Finalizó el proceso, terminando consola
+[INFO] 04:36:46:821 consola.log/(24222:24222): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:36:46:821 consola.log/(24222:24222): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:36:46:822 consola.log/(24222:24222): Se creo la conexion con el Kernel
+[INFO] 04:36:48:690 consola.log/(24222:24222): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:36:48:691 consola.log/(24222:24222): Esperando respuesta de Kernel para finalizar.
+[ERROR] 04:46:40:893 consola.log/(24222:24222): Error al querer finalizar la consola
+[INFO] 04:46:40:893 consola.log/(24222:24222): Finalizó el proceso, terminando consola
+[INFO] 04:51:39:146 consola.log/(25183:25183): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:51:39:146 consola.log/(25183:25183): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:51:39:147 consola.log/(25183:25183): Se creo la conexion con el Kernel
+[INFO] 04:51:42:096 consola.log/(25183:25183): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:51:42:097 consola.log/(25183:25183): Esperando respuesta de Kernel para finalizar.
+[ERROR] 04:51:59:591 consola.log/(25183:25183): Error al querer finalizar la consola
+[INFO] 04:51:59:591 consola.log/(25183:25183): Finalizó el proceso, terminando consola
+[INFO] 04:55:45:210 consola.log/(25470:25470): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:55:45:210 consola.log/(25470:25470): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:55:45:214 consola.log/(25470:25470): Se creo la conexion con el Kernel
+[INFO] 04:55:56:952 consola.log/(25470:25470): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:55:56:957 consola.log/(25470:25470): Esperando respuesta de Kernel para finalizar.
+[INFO] 04:55:57:005 consola.log/(25470:25470): Finalizó el proceso, terminando consola
+[INFO] 04:57:55:777 consola.log/(25623:25623): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:57:55:777 consola.log/(25623:25623): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:57:55:778 consola.log/(25623:25623): Se creo la conexion con el Kernel
+[INFO] 04:58:00:018 consola.log/(25623:25623): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:58:00:018 consola.log/(25623:25623): Esperando respuesta de Kernel para finalizar.
+[INFO] 04:58:17:022 consola.log/(25623:25623): Finalizó el proceso, terminando consola
+[INFO] 04:59:11:777 consola.log/(25665:25665): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 04:59:11:778 consola.log/(25665:25665): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 04:59:11:778 consola.log/(25665:25665): Se creo la conexion con el Kernel
+[INFO] 04:59:13:400 consola.log/(25665:25665): Paquete de instrucciones enviado correctamente!
+
+[INFO] 04:59:13:400 consola.log/(25665:25665): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:00:35:697 consola.log/(25671:25671): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:00:35:698 consola.log/(25671:25671): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:00:35:698 consola.log/(25671:25671): Se creo la conexion con el Kernel
+[INFO] 05:00:37:824 consola.log/(25671:25671): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:00:37:825 consola.log/(25671:25671): Esperando respuesta de Kernel para finalizar.
+[ERROR] 05:00:38:214 consola.log/(25671:25671): Error al querer finalizar la consola
+[INFO] 05:00:38:214 consola.log/(25671:25671): Finalizó el proceso, terminando consola
+[ERROR] 05:00:38:214 consola.log/(25665:25665): Error al querer finalizar la consola
+[INFO] 05:00:38:214 consola.log/(25665:25665): Finalizó el proceso, terminando consola
+[INFO] 05:01:53:937 consola.log/(25809:25809): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:01:53:937 consola.log/(25809:25809): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:01:53:938 consola.log/(25809:25809): Se creo la conexion con el Kernel
+[INFO] 05:01:57:240 consola.log/(25809:25809): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:01:57:241 consola.log/(25809:25809): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:02:14:245 consola.log/(25809:25809): Finalizó el proceso, terminando consola
+[INFO] 05:02:41:553 consola.log/(25811:25811): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:02:41:553 consola.log/(25811:25811): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:02:41:554 consola.log/(25811:25811): Se creo la conexion con el Kernel
+[INFO] 05:02:43:736 consola.log/(25811:25811): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:02:43:736 consola.log/(25811:25811): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:03:00:740 consola.log/(25811:25811): Finalizó el proceso, terminando consola
+[INFO] 05:03:14:001 consola.log/(25817:25817): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:03:14:001 consola.log/(25817:25817): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:03:14:002 consola.log/(25817:25817): Se creo la conexion con el Kernel
+[INFO] 05:03:16:680 consola.log/(25817:25817): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:03:16:681 consola.log/(25817:25817): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:03:32:683 consola.log/(25817:25817): Finalizó el proceso, terminando consola
+[INFO] 05:04:03:513 consola.log/(25821:25821): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:04:03:514 consola.log/(25821:25821): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:04:03:514 consola.log/(25821:25821): Se creo la conexion con el Kernel
+[INFO] 05:04:11:264 consola.log/(25821:25821): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:04:11:265 consola.log/(25821:25821): Esperando respuesta de Kernel para finalizar.
+[ERROR] 05:04:28:739 consola.log/(25821:25821): Error al querer finalizar la consola
+[INFO] 05:04:28:739 consola.log/(25821:25821): Finalizó el proceso, terminando consola
+[INFO] 05:08:18:061 consola.log/(26028:26028): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:08:18:061 consola.log/(26028:26028): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:08:18:062 consola.log/(26028:26028): Se creo la conexion con el Kernel
+[INFO] 05:08:19:659 consola.log/(26028:26028): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:08:19:661 consola.log/(26028:26028): Esperando respuesta de Kernel para finalizar.
+[ERROR] 05:18:08:895 consola.log/(26028:26028): Error al querer finalizar la consola
+[INFO] 05:18:08:895 consola.log/(26028:26028): Finalizó el proceso, terminando consola
+[INFO] 05:27:41:595 consola.log/(27100:27100): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:27:41:596 consola.log/(27100:27100): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:27:41:597 consola.log/(27100:27100): Se creo la conexion con el Kernel
+[INFO] 05:27:44:698 consola.log/(27100:27100): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:27:44:698 consola.log/(27100:27100): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:28:01:701 consola.log/(27100:27100): Finalizó el proceso, terminando consola
+[INFO] 05:31:03:915 consola.log/(27121:27121): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:31:03:915 consola.log/(27121:27121): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:31:03:916 consola.log/(27121:27121): Se creo la conexion con el Kernel
+[INFO] 05:31:07:770 consola.log/(27121:27121): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:31:07:770 consola.log/(27121:27121): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:32:07:300 consola.log/(27128:27128): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:32:07:301 consola.log/(27128:27128): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:32:07:303 consola.log/(27128:27128): Se creo la conexion con el Kernel
+[INFO] 05:32:08:482 consola.log/(27128:27128): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:32:08:482 consola.log/(27128:27128): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:34:12:238 consola.log/(27131:27131): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:34:12:238 consola.log/(27131:27131): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:34:12:243 consola.log/(27131:27131): Se creo la conexion con el Kernel
+[INFO] 05:34:14:259 consola.log/(27131:27131): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:34:14:259 consola.log/(27131:27131): Esperando respuesta de Kernel para finalizar.
+[ERROR] 05:35:52:331 consola.log/(27131:27131): Error al querer finalizar la consola
+[INFO] 05:35:52:331 consola.log/(27131:27131): Finalizó el proceso, terminando consola
+[ERROR] 05:35:52:332 consola.log/(27128:27128): Error al querer finalizar la consola
+[INFO] 05:35:52:332 consola.log/(27128:27128): Finalizó el proceso, terminando consola
+[ERROR] 05:35:52:334 consola.log/(27121:27121): Error al querer finalizar la consola
+[INFO] 05:35:52:334 consola.log/(27121:27121): Finalizó el proceso, terminando consola
+[INFO] 05:37:08:592 consola.log/(27222:27222): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:37:08:592 consola.log/(27222:27222): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:37:08:593 consola.log/(27222:27222): Se creo la conexion con el Kernel
+[INFO] 05:37:09:351 consola.log/(27222:27222): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:37:09:351 consola.log/(27222:27222): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:37:22:047 consola.log/(27224:27224): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:37:22:047 consola.log/(27224:27224): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:37:22:049 consola.log/(27224:27224): Se creo la conexion con el Kernel
+[INFO] 05:37:22:478 consola.log/(27224:27224): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:37:22:478 consola.log/(27224:27224): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:37:44:241 consola.log/(27226:27226): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 05:37:44:242 consola.log/(27226:27226): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 05:37:44:242 consola.log/(27226:27226): Se creo la conexion con el Kernel
+[INFO] 05:37:45:025 consola.log/(27226:27226): Paquete de instrucciones enviado correctamente!
+
+[INFO] 05:37:45:025 consola.log/(27226:27226): Esperando respuesta de Kernel para finalizar.
+[INFO] 05:37:48:040 consola.log/(27226:27226): Finalizó el proceso, terminando consola
+[INFO] 05:37:48:042 consola.log/(27222:27222): Finalizó el proceso, terminando consola
+[INFO] 05:37:48:044 consola.log/(27224:27224): Finalizó el proceso, terminando consola
+[INFO] 06:01:19:570 consola.log/(27641:27641): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:01:19:570 consola.log/(27641:27641): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:01:19:571 consola.log/(27641:27641): Se creo la conexion con el Kernel
+[INFO] 06:01:21:112 consola.log/(27641:27641): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:01:21:112 consola.log/(27641:27641): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:01:58:826 consola.log/(27648:27648): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:01:58:827 consola.log/(27648:27648): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:01:58:828 consola.log/(27648:27648): Se creo la conexion con el Kernel
+[INFO] 06:02:01:496 consola.log/(27648:27648): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:02:01:496 consola.log/(27648:27648): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:02:45:073 consola.log/(27652:27652): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:02:45:074 consola.log/(27652:27652): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:02:45:074 consola.log/(27652:27652): Se creo la conexion con el Kernel
+[INFO] 06:02:46:264 consola.log/(27652:27652): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:02:46:264 consola.log/(27652:27652): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:02:49:280 consola.log/(27652:27652): Finalizó el proceso, terminando consola
+[INFO] 06:02:49:282 consola.log/(27641:27641): Finalizó el proceso, terminando consola
+[INFO] 06:02:49:285 consola.log/(27648:27648): Finalizó el proceso, terminando consola
+[INFO] 06:04:14:378 consola.log/(27803:27803): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:04:14:378 consola.log/(27803:27803): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:04:14:379 consola.log/(27803:27803): Se creo la conexion con el Kernel
+[INFO] 06:04:14:832 consola.log/(27803:27803): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:04:14:832 consola.log/(27803:27803): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:04:27:114 consola.log/(27805:27805): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:04:27:114 consola.log/(27805:27805): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:04:27:116 consola.log/(27805:27805): Se creo la conexion con el Kernel
+[INFO] 06:04:28:072 consola.log/(27805:27805): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:04:28:072 consola.log/(27805:27805): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:06:32:979 consola.log/(27805:27805): Error al querer finalizar la consola
+[INFO] 06:06:32:979 consola.log/(27805:27805): Finalizó el proceso, terminando consola
+[ERROR] 06:06:32:979 consola.log/(27803:27803): Error al querer finalizar la consola
+[INFO] 06:06:32:979 consola.log/(27803:27803): Finalizó el proceso, terminando consola
+[INFO] 06:14:31:960 consola.log/(28452:28452): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:14:31:960 consola.log/(28452:28452): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:14:31:961 consola.log/(28452:28452): Se creo la conexion con el Kernel
+[INFO] 06:14:33:358 consola.log/(28452:28452): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:14:33:358 consola.log/(28452:28452): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:14:50:984 consola.log/(28454:28454): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:14:50:984 consola.log/(28454:28454): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:14:50:985 consola.log/(28454:28454): Se creo la conexion con el Kernel
+[INFO] 06:14:52:807 consola.log/(28454:28454): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:14:52:807 consola.log/(28454:28454): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:15:15:399 consola.log/(28456:28456): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:15:15:399 consola.log/(28456:28456): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:15:15:399 consola.log/(28456:28456): Se creo la conexion con el Kernel
+[INFO] 06:15:16:146 consola.log/(28456:28456): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:15:16:147 consola.log/(28456:28456): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:15:25:329 consola.log/(28456:28456): Error al querer finalizar la consola
+[INFO] 06:15:25:329 consola.log/(28456:28456): Finalizó el proceso, terminando consola
+[ERROR] 06:15:25:330 consola.log/(28454:28454): Error al querer finalizar la consola
+[INFO] 06:15:25:330 consola.log/(28454:28454): Finalizó el proceso, terminando consola
+[ERROR] 06:15:25:333 consola.log/(28452:28452): Error al querer finalizar la consola
+[INFO] 06:15:25:333 consola.log/(28452:28452): Finalizó el proceso, terminando consola
+[INFO] 06:17:57:198 consola.log/(28518:28518): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:17:57:198 consola.log/(28518:28518): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:17:57:199 consola.log/(28518:28518): Se creo la conexion con el Kernel
+[INFO] 06:18:01:011 consola.log/(28518:28518): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:18:01:011 consola.log/(28518:28518): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:18:18:018 consola.log/(28518:28518): Finalizó el proceso, terminando consola
+[INFO] 06:24:13:470 consola.log/(28674:28674): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:24:13:470 consola.log/(28674:28674): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:24:13:470 consola.log/(28674:28674): Se creo la conexion con el Kernel
+[INFO] 06:24:13:845 consola.log/(28674:28674): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:24:13:845 consola.log/(28674:28674): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:24:30:848 consola.log/(28674:28674): Finalizó el proceso, terminando consola
+[INFO] 06:25:24:702 consola.log/(28712:28712): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:25:24:703 consola.log/(28712:28712): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:25:24:703 consola.log/(28712:28712): Se creo la conexion con el Kernel
+[INFO] 06:25:26:197 consola.log/(28712:28712): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:25:26:197 consola.log/(28712:28712): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:25:43:814 consola.log/(28715:28715): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:25:43:814 consola.log/(28715:28715): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:25:43:815 consola.log/(28715:28715): Se creo la conexion con el Kernel
+[INFO] 06:25:44:557 consola.log/(28715:28715): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:25:44:557 consola.log/(28715:28715): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:27:55:690 consola.log/(28715:28715): Error al querer finalizar la consola
+[INFO] 06:27:55:690 consola.log/(28715:28715): Finalizó el proceso, terminando consola
+[ERROR] 06:27:55:691 consola.log/(28712:28712): Error al querer finalizar la consola
+[INFO] 06:27:55:691 consola.log/(28712:28712): Finalizó el proceso, terminando consola
+[INFO] 06:29:45:471 consola.log/(28837:28837): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:29:45:472 consola.log/(28837:28837): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:29:45:472 consola.log/(28837:28837): Se creo la conexion con el Kernel
+[INFO] 06:29:46:775 consola.log/(28837:28837): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:29:46:775 consola.log/(28837:28837): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:29:58:388 consola.log/(28837:28837): Error al querer finalizar la consola
+[INFO] 06:29:58:388 consola.log/(28837:28837): Finalizó el proceso, terminando consola
+[INFO] 06:32:48:339 consola.log/(29007:29007): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:32:48:339 consola.log/(29007:29007): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:32:48:340 consola.log/(29007:29007): Se creo la conexion con el Kernel
+[INFO] 06:32:48:994 consola.log/(29007:29007): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:32:48:994 consola.log/(29007:29007): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:34:02:155 consola.log/(29018:29018): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:34:02:155 consola.log/(29018:29018): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:34:02:157 consola.log/(29018:29018): Se creo la conexion con el Kernel
+[INFO] 06:34:02:841 consola.log/(29018:29018): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:34:02:842 consola.log/(29018:29018): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:36:13:818 consola.log/(29007:29007): Error al querer finalizar la consola
+[INFO] 06:36:13:818 consola.log/(29007:29007): Finalizó el proceso, terminando consola
+[ERROR] 06:36:13:818 consola.log/(29018:29018): Error al querer finalizar la consola
+[INFO] 06:36:13:818 consola.log/(29018:29018): Finalizó el proceso, terminando consola
+[INFO] 06:38:07:396 consola.log/(29239:29239): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:38:07:397 consola.log/(29239:29239): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:38:07:397 consola.log/(29239:29239): Se creo la conexion con el Kernel
+[INFO] 06:38:09:186 consola.log/(29239:29239): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:38:09:186 consola.log/(29239:29239): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:39:34:203 consola.log/(29297:29297): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:39:34:203 consola.log/(29297:29297): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:39:34:204 consola.log/(29297:29297): Se creo la conexion con el Kernel
+[INFO] 06:39:35:913 consola.log/(29297:29297): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:39:35:914 consola.log/(29297:29297): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:42:51:019 consola.log/(29494:29494): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:42:51:019 consola.log/(29494:29494): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:42:51:020 consola.log/(29494:29494): Se creo la conexion con el Kernel
+[INFO] 06:42:51:866 consola.log/(29494:29494): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:42:51:866 consola.log/(29494:29494): Esperando respuesta de Kernel para finalizar.
+[INFO] 06:43:16:272 consola.log/(29494:29494): Finalizó el proceso, terminando consola
+[INFO] 06:43:16:273 consola.log/(29239:29239): Finalizó el proceso, terminando consola
+[INFO] 06:43:16:274 consola.log/(29297:29297): Finalizó el proceso, terminando consola
+[INFO] 06:44:51:731 consola.log/(29600:29600): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:44:51:731 consola.log/(29600:29600): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:44:51:732 consola.log/(29600:29600): Se creo la conexion con el Kernel
+[INFO] 06:45:07:562 consola.log/(29600:29600): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:45:07:563 consola.log/(29600:29600): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:45:24:892 consola.log/(29600:29600): Error al querer finalizar la consola
+[INFO] 06:45:24:892 consola.log/(29600:29600): Finalizó el proceso, terminando consola
+[INFO] 06:48:21:508 consola.log/(29795:29795): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:48:21:508 consola.log/(29795:29795): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:48:21:508 consola.log/(29795:29795): Se creo la conexion con el Kernel
+[INFO] 06:48:24:322 consola.log/(29795:29795): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:48:24:322 consola.log/(29795:29795): Esperando respuesta de Kernel para finalizar.
+[ERROR] 06:55:35:986 consola.log/(29795:29795): Error al querer finalizar la consola
+[INFO] 06:55:35:986 consola.log/(29795:29795): Finalizó el proceso, terminando consola
+[INFO] 06:59:39:217 consola.log/(30212:30212): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 06:59:39:218 consola.log/(30212:30212): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 06:59:39:218 consola.log/(30212:30212): Se creo la conexion con el Kernel
+[INFO] 06:59:42:738 consola.log/(30212:30212): Paquete de instrucciones enviado correctamente!
+
+[INFO] 06:59:42:738 consola.log/(30212:30212): Esperando respuesta de Kernel para finalizar.
+[ERROR] 07:00:00:085 consola.log/(30212:30212): Error al querer finalizar la consola
+[INFO] 07:00:00:086 consola.log/(30212:30212): Finalizó el proceso, terminando consola
+[INFO] 07:11:25:995 consola.log/(30515:30515): Hola! Se inicializo el modulo cliente Consola.
+[INFO] 07:11:25:996 consola.log/(30515:30515): Se ha leido el archivo de config con exito, con los valores PUERTO: 8000 e IP: 127.0.0.1.
+[INFO] 07:11:25:996 consola.log/(30515:30515): Se creo la conexion con el Kernel
+[INFO] 07:11:28:194 consola.log/(30515:30515): Paquete de instrucciones enviado correctamente!
+
+[INFO] 07:11:28:194 consola.log/(30515:30515): Esperando respuesta de Kernel para finalizar.
+[ERROR] 07:11:45:563 consola.log/(30515:30515): Error al querer finalizar la consola
+[INFO] 07:11:45:563 consola.log/(30515:30515): Finalizó el proceso, terminando consola
