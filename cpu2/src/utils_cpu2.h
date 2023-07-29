@@ -13,6 +13,7 @@
 #include<commons/config.h>
 #include<readline/readline.h>
 #include <shared-2.h>
+#include <math.h>
 
 extern t_registros registros_cpu;
 extern t_list* tabla_segmentos_prueba;

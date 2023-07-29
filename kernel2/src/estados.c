@@ -815,7 +815,7 @@ void calcular_response_ratio(t_proceso* proceso) {
 	int elapsed = fin_espera - proceso->llegada_ready;
 
 	proceso->tiempo_espera = elapsed; //TODO poner tiempo de llegada a ready en el hilo correspondiente estado_ready y estado_block
-	proceso->response_ratio = 1 + (proceso->tiempo_espera / proceso->rafaga_estimada);
+	proceso->response_ratio = (double) 1 + ((double) proceso->tiempo_espera / (double) proceso->rafaga_estimada);
 }
 
 bool comparador_response_ratio(t_proceso* un_proceso, t_proceso* otro_proceso) {

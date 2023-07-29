@@ -2141,3 +2141,132 @@
 [INFO] 00:42:05:299 cpu_principal.log/(19219:19219): PID: <1000> - Ejecutando: <DELETE_SEGMENT 2>
 [INFO] 00:42:05:299 cpu_principal.log/(19219:19219): PID: <1000> - Ejecutando: <DELETE_SEGMENT 4>
 [INFO] 00:42:05:300 cpu_principal.log/(19219:19219): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 01:33:45:480 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET AX AAAA>
+[INFO] 01:33:46:480 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET BX BBBB>
+[INFO] 01:33:47:480 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET CX CCCC>
+[INFO] 01:33:48:480 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET DX DDDD>
+[INFO] 01:33:49:481 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET EAX AAAAAAAA>
+[INFO] 01:33:50:481 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET EBX BBBBBBBB>
+[INFO] 01:33:51:481 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET ECX CCCCCCCC>
+[INFO] 01:33:52:481 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET EDX DDDDDDDD>
+[INFO] 01:33:53:481 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET RAX AAAAAAAAAAAAAAAA>
+[INFO] 01:33:54:482 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET RBX BBBBBBBBBBBBBBBB>
+[INFO] 01:33:55:483 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET RCX CCCCCCCCCCCCCCCC>
+[INFO] 01:33:56:483 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET RDX DDDDDDDDDDDDDDDD>
+[INFO] 01:33:56:483 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 01:33:57:485 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG0>
+[INFO] 01:33:58:485 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA0>
+[INFO] 01:33:58:485 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:33:59:486 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG0>
+[INFO] 01:34:00:486 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA0>
+[INFO] 01:34:00:486 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:01:487 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET RAX TCHOUAMENIAFUERA>
+[INFO] 01:34:02:488 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <SET RBX SEGUNDO_FRANCIA_>
+[INFO] 01:34:02:488 cpu_principal.log/(19599:19599): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 01:34:03:489 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG1>
+[INFO] 01:34:04:490 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA0>
+[INFO] 01:34:04:491 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:05:491 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG1>
+[INFO] 01:34:06:492 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA0>
+[INFO] 01:34:06:492 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:07:492 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG2>
+[INFO] 01:34:08:493 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA0>
+[INFO] 01:34:08:493 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:09:494 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG2>
+[INFO] 01:34:10:495 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA0>
+[INFO] 01:34:10:495 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:11:496 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG2>
+[INFO] 01:34:12:496 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA1>
+[INFO] 01:34:12:496 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:13:497 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG2>
+[INFO] 01:34:14:497 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA1>
+[INFO] 01:34:14:497 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:15:498 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG2>
+[INFO] 01:34:16:498 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA2>
+[INFO] 01:34:16:498 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:17:499 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG2>
+[INFO] 01:34:18:499 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA2>
+[INFO] 01:34:18:499 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:19:499 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG3>
+[INFO] 01:34:20:499 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA2>
+[INFO] 01:34:20:500 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:21:500 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG3>
+[INFO] 01:34:22:500 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA2>
+[INFO] 01:34:22:500 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:23:501 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET AX ARG3>
+[INFO] 01:34:24:502 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET BX FRA3>
+[INFO] 01:34:24:503 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:25:504 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET AX ARG3>
+[INFO] 01:34:26:504 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET BX FRA3>
+[INFO] 01:34:26:504 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:27:505 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET RDX VAMOSALOSPENALES>
+[INFO] 01:34:27:505 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 01:34:28:505 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET RDX VAMOSALOSPENALES>
+[INFO] 01:34:28:505 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 01:34:29:505 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <SET RAX ARGENTINACAMPEON>
+[INFO] 01:34:29:506 cpu_principal.log/(19599:19599): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 01:34:30:507 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <SET RAX ARGENTINACAMPEON>
+[INFO] 01:34:30:507 cpu_principal.log/(19599:19599): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 01:43:55:951 cpu_principal.log/(19733:19733): PID: <1000> - Ejecutando: <SET AX HOLA>
+[INFO] 01:43:55:952 cpu_principal.log/(19733:19733): PID: <1000> - Ejecutando: <WAIT LA_TERCERA_DE_FRANCIA>
+[INFO] 01:44:59:623 cpu_principal.log/(19733:19733): PID: <1001> - Ejecutando: <SET AX HOLA>
+[INFO] 01:44:59:623 cpu_principal.log/(19733:19733): PID: <1001> - Ejecutando: <SIGNAL EL_CUARTO_DE_FRANCIA>
+[INFO] 01:46:05:239 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <SET AX HOLA>
+[INFO] 01:46:06:240 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <SET RAX MappaLlegaEl2c23>
+[INFO] 01:46:06:240 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <MOV_OUT 124 AX>
+[INFO] 01:46:07:241 cpu_principal.log/(19733:19733): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 01:46:07:241 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <MOV_IN BX 124>
+[INFO] 01:46:07:241 cpu_principal.log/(19733:19733): Quiero leer en la dirección <124> un total de <5>
+[INFO] 01:46:08:241 cpu_principal.log/(19733:19733): PID: <1002> - Acción: <LEER> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 01:46:08:241 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <MOV_OUT 120 RAX>
+[INFO] 01:46:09:241 cpu_principal.log/(19733:19733): PID: <1002> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <120> - Valor: <MappaLlegaEl2c23>
+[INFO] 01:46:09:241 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <MOV_IN RBX 120>
+[INFO] 01:46:09:241 cpu_principal.log/(19733:19733): Quiero leer en la dirección <120> un total de <17>
+[INFO] 01:46:10:242 cpu_principal.log/(19733:19733): PID: <1002> - Acción: <LEER> - Segmento: <0> - Dirección Física: <120> - Valor: <MappaLlegaEl2c23>
+[INFO] 01:46:10:243 cpu_principal.log/(19733:19733): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 01:53:11:319 cpu_principal.log/(19733:19733): PID: <1003> - Ejecutando: <SET AX HOLA>
+[INFO] 01:53:12:319 cpu_principal.log/(19733:19733): PID: <1003> - Ejecutando: <SET RAX MappaLlegaEl2c23>
+[INFO] 01:53:12:320 cpu_principal.log/(19733:19733): PID: <1003> - Ejecutando: <MOV_OUT 124 AX>
+[INFO] 01:53:13:320 cpu_principal.log/(19733:19733): PID: <1003> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 01:53:13:320 cpu_principal.log/(19733:19733): PID: <1003> - Ejecutando: <MOV_IN BX 124>
+[INFO] 01:53:13:320 cpu_principal.log/(19733:19733): Quiero leer en la dirección <124> un total de <5>
+[INFO] 01:53:14:320 cpu_principal.log/(19733:19733): PID: <1003> - Acción: <LEER> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 01:53:14:320 cpu_principal.log/(19733:19733): PID: <1003> - Ejecutando: <MOV_OUT 120 RAX>
+[INFO] 01:53:15:321 cpu_principal.log/(19733:19733): PID: <1003> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <120> - Valor: <MappaLlegaEl2c23>
+[INFO] 01:53:15:321 cpu_principal.log/(19733:19733): PID: <1003> - Ejecutando: <MOV_IN RBX 257>
+[INFO] 02:05:35:535 cpu_principal.log/(20655:20655): PID: <1000> - Ejecutando: <SET AX HOLA>
+[INFO] 02:05:36:535 cpu_principal.log/(20655:20655): PID: <1000> - Ejecutando: <SET RAX MappaLlegaEl2c23>
+[INFO] 02:05:36:535 cpu_principal.log/(20655:20655): PID: <1000> - Ejecutando: <MOV_OUT 124 AX>
+[INFO] 02:05:37:536 cpu_principal.log/(20655:20655): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 02:05:37:536 cpu_principal.log/(20655:20655): PID: <1000> - Ejecutando: <MOV_IN BX 124>
+[INFO] 02:05:37:536 cpu_principal.log/(20655:20655): Quiero leer en la dirección <124> un total de <5>
+[INFO] 02:05:38:536 cpu_principal.log/(20655:20655): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 02:05:38:536 cpu_principal.log/(20655:20655): PID: <1000> - Ejecutando: <MOV_OUT 120 RAX>
+[INFO] 02:05:39:537 cpu_principal.log/(20655:20655): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <120> - Valor: <MappaLlegaEl2c23>
+[INFO] 02:05:39:537 cpu_principal.log/(20655:20655): PID: <1000> - Ejecutando: <MOV_IN RBX 257>
+[INFO] 02:09:07:568 cpu_principal.log/(20754:20754): PID: <1000> - Ejecutando: <SET AX HOLA>
+[INFO] 02:09:13:975 cpu_principal.log/(20754:20754): PID: <1000> - Ejecutando: <SET RAX MappaLlegaEl2c23>
+[INFO] 02:09:20:695 cpu_principal.log/(20754:20754): PID: <1000> - Ejecutando: <MOV_OUT 124 AX>
+[INFO] 02:09:21:895 cpu_principal.log/(20754:20754): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 02:09:24:663 cpu_principal.log/(20754:20754): PID: <1000> - Ejecutando: <MOV_IN BX 124>
+[INFO] 02:09:25:206 cpu_principal.log/(20754:20754): Quiero leer en la dirección <124> un total de <5>
+[INFO] 02:09:26:207 cpu_principal.log/(20754:20754): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <124> - Valor: <HOLA>
+[INFO] 02:09:29:416 cpu_principal.log/(20754:20754): PID: <1000> - Ejecutando: <MOV_OUT 120 RAX>
+[INFO] 02:09:30:702 cpu_principal.log/(20754:20754): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <120> - Valor: <MappaLlegaEl2c23>
+[INFO] 02:09:43:095 cpu_principal.log/(20754:20754): PID: <1000> - Ejecutando: <MOV_IN RBX 257>
+[INFO] 02:15:09:375 cpu_principal.log/(21360:21360): PID: <1000> - Ejecutando: <SET AX HOLA>
+[INFO] 02:15:10:375 cpu_principal.log/(21360:21360): PID: <1000> - Ejecutando: <SET RAX MappaLlegaEl2c23>
+[INFO] 02:15:10:376 cpu_principal.log/(21360:21360): PID: <1000> - Ejecutando: <MOV_OUT 124 AX>
+[INFO] 02:15:10:376 cpu_principal.log/(21360:21360): PID: <1000> - Error SEG_FAULT- Segmento: <0> - Offset: <124> - Tamaño: <256>
+[INFO] 02:15:59:903 cpu_principal.log/(21360:21360): PID: <1001> - Ejecutando: <SET AX HOLA>
+[INFO] 02:16:00:903 cpu_principal.log/(21360:21360): PID: <1001> - Ejecutando: <SET RAX MappaLlegaEl2c23>
+[INFO] 02:16:00:903 cpu_principal.log/(21360:21360): PID: <1001> - Ejecutando: <MOV_OUT 124 AX>
+[INFO] 02:16:00:903 cpu_principal.log/(21360:21360): PID: <1001> - Error SEG_FAULT- Segmento: <0> - Offset: <124> - Tamaño: <256>
+[INFO] 02:17:21:094 cpu_principal.log/(21360:21360): PID: <1002> - Ejecutando: <CREATE_SEGMENT 1 256>
+[INFO] 02:17:21:094 cpu_principal.log/(21360:21360): PID: <1002> - Ejecutando: <CREATE_SEGMENT 2 256>
+[INFO] 02:17:21:094 cpu_principal.log/(21360:21360): PID: <1002> - Ejecutando: <CREATE_SEGMENT 3 256>
+[INFO] 02:17:21:095 cpu_principal.log/(21360:21360): PID: <1002> - Ejecutando: <CREATE_SEGMENT 4 256>
+[INFO] 02:21:59:255 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 1 256>
+[INFO] 02:21:59:256 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 2 256>
+[INFO] 02:21:59:256 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 3 256>
+[INFO] 02:21:59:256 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 4 256>

@@ -7092,3 +7092,215 @@
 [INFO] 00:42:05:300 kernel.log/(19223:19224): PID: <1000> liberando estructuras en memoria
 [INFO] 00:42:05:300 kernel.log/(19223:19224): Ordenando a Consola la finalización del PID: <1000>
 [ERROR] 00:42:16:460 kernel.log/(19223:19223): Finalizando módulo Kernel
+[INFO] 01:32:11:729 kernel.log/(19603:19603): Se crea la Tabla Global de Archivos
+[INFO] 01:32:11:729 kernel.log/(19603:19603): Se crea el diccionario con los recursos.
+[INFO] 01:32:11:729 kernel.log/(19603:19603): Se agrego el recurso DISCO al diccionario
+[INFO] 01:32:11:730 kernel.log/(19603:19603): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 01:33:44:479 kernel.log/(19603:19606): PID: <1000> tiene un RR de: 1.000000
+[INFO] 01:33:44:479 kernel.log/(19603:19606): PID: <1000> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:33:44:479 kernel.log/(19603:19606): PID: <1000> ingresa a EXECUTE
+[INFO] 01:33:44:479 kernel.log/(19603:19608): PID: <1000> enviada a CPU
+[WARNING] 01:33:56:484 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:33:56:484 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 6.763000
+[INFO] 01:33:56:484 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 6.430500
+[INFO] 01:33:56:484 kernel.log/(19603:19606): PID: <1000> tiene un RR de: 1.000000
+[INFO] 01:33:56:484 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:33:56:484 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:33:56:484 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:33:58:485 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:33:58:485 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 7.431000
+[INFO] 01:33:58:485 kernel.log/(19603:19606): PID: <1000> tiene un RR de: 2.000500
+[INFO] 01:33:58:485 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:33:58:485 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:33:58:485 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:33:58:485 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:00:486 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:00:486 kernel.log/(19603:19606): PID: <1000> tiene un RR de: 3.001000
+[INFO] 01:34:00:487 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.000500
+[INFO] 01:34:00:487 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:00:487 kernel.log/(19603:19606): PID: <1000> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:00:487 kernel.log/(19603:19606): PID: <1000> ingresa a EXECUTE
+[INFO] 01:34:00:487 kernel.log/(19603:19608): PID: <1000> enviada a CPU
+[INFO] 01:34:02:488 kernel.log/(19603:19604): PID: <1000> liberando estructuras en memoria
+[INFO] 01:34:02:488 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 3.001500
+[INFO] 01:34:02:488 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 2.001000
+[INFO] 01:34:02:488 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:02:488 kernel.log/(19603:19604): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 01:34:02:489 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:02:489 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:04:491 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:04:491 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 3.002500
+[INFO] 01:34:04:491 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:34:04:491 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:04:491 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:04:491 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:06:492 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:06:492 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.000500
+[INFO] 01:34:06:492 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:06:492 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:06:492 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:06:492 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:08:494 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:08:494 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 2.001000
+[INFO] 01:34:08:494 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:34:08:494 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:08:494 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:08:494 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:10:495 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:10:495 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.000500
+[INFO] 01:34:10:495 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:10:495 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:10:495 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:10:495 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:12:496 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:12:497 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 2.001000
+[INFO] 01:34:12:497 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000500
+[INFO] 01:34:12:497 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:12:497 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:12:497 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:14:498 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:14:498 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.001000
+[INFO] 01:34:14:498 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:14:498 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:14:498 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:14:498 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:16:498 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:16:498 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 2.000000
+[INFO] 01:34:16:498 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:34:16:498 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:16:498 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:16:498 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:18:499 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:18:499 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.000500
+[INFO] 01:34:18:499 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:18:499 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:18:499 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:18:499 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:20:500 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:20:500 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 2.000500
+[INFO] 01:34:20:500 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:34:20:500 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:20:500 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:20:500 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:22:500 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:22:500 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.000000
+[INFO] 01:34:22:500 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:22:500 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:22:500 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:22:500 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:24:503 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:24:503 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 2.001500
+[INFO] 01:34:24:503 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:34:24:503 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:24:503 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:24:503 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:26:505 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:26:505 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 2.001000
+[INFO] 01:34:26:505 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:26:505 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:26:505 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:26:505 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[WARNING] 01:34:27:505 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:27:505 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.500000
+[INFO] 01:34:27:505 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.000000
+[INFO] 01:34:27:505 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:27:505 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:27:505 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[WARNING] 01:34:28:505 kernel.log/(19603:19608): La última instrucción ejecutada fue YIELD
+[INFO] 01:34:28:505 kernel.log/(19603:19606): PID: <1001> tiene un RR de: 1.500000
+[INFO] 01:34:28:505 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.000000
+[INFO] 01:34:28:505 kernel.log/(19603:19606): PID: <1001> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:28:505 kernel.log/(19603:19606): PID: <1001> ingresa a EXECUTE
+[INFO] 01:34:28:505 kernel.log/(19603:19608): PID: <1001> enviada a CPU
+[INFO] 01:34:29:506 kernel.log/(19603:19604): PID: <1001> liberando estructuras en memoria
+[INFO] 01:34:29:507 kernel.log/(19603:19606): PID: <1002> tiene un RR de: 1.500500
+[INFO] 01:34:29:507 kernel.log/(19603:19604): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 01:34:29:507 kernel.log/(19603:19606): PID: <1002> saliendo de Cola de Ready por HRRN para ejecutar.
+[INFO] 01:34:29:507 kernel.log/(19603:19606): PID: <1002> ingresa a EXECUTE
+[INFO] 01:34:29:507 kernel.log/(19603:19608): PID: <1002> enviada a CPU
+[INFO] 01:34:30:507 kernel.log/(19603:19604): PID: <1002> liberando estructuras en memoria
+[INFO] 01:34:30:507 kernel.log/(19603:19604): Ordenando a Consola la finalización del PID: <1002>
+[ERROR] 01:42:35:741 kernel.log/(19603:19603): Finalizando módulo Kernel
+[INFO] 01:43:15:096 kernel.log/(19737:19737): Se crea la Tabla Global de Archivos
+[INFO] 01:43:15:096 kernel.log/(19737:19737): Se crea el diccionario con los recursos.
+[INFO] 01:43:15:096 kernel.log/(19737:19737): Se agrego el recurso DISCO al diccionario
+[INFO] 01:43:15:097 kernel.log/(19737:19737): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 01:43:54:950 kernel.log/(19737:19740): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:43:54:950 kernel.log/(19737:19740): PID: <1000> ingresa a EXECUTE
+[INFO] 01:43:54:951 kernel.log/(19737:19742): PID: <1000> enviada a CPU
+[WARNING] 01:43:55:952 kernel.log/(19737:19742): PID: <1000> solicita una instancia del Recurso: <LA_TERCERA_DE_FRANCIA>
+[INFO] 01:43:55:952 kernel.log/(19737:19738): PID: <1000> liberando estructuras en memoria
+[INFO] 01:43:55:952 kernel.log/(19737:19738): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 01:44:58:622 kernel.log/(19737:19740): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:44:58:622 kernel.log/(19737:19740): PID: <1001> ingresa a EXECUTE
+[INFO] 01:44:58:622 kernel.log/(19737:19742): PID: <1001> enviada a CPU
+[WARNING] 01:44:59:623 kernel.log/(19737:19742): PID: <1001> solicita liberar una instancia del Recurso <EL_CUARTO_DE_FRANCIA>
+[INFO] 01:44:59:623 kernel.log/(19737:19738): PID: <1001> liberando estructuras en memoria
+[INFO] 01:44:59:623 kernel.log/(19737:19738): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 01:46:04:239 kernel.log/(19737:19740): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:46:04:239 kernel.log/(19737:19740): PID: <1002> ingresa a EXECUTE
+[INFO] 01:46:04:239 kernel.log/(19737:19742): PID: <1002> enviada a CPU
+[INFO] 01:46:10:243 kernel.log/(19737:19738): PID: <1002> liberando estructuras en memoria
+[INFO] 01:46:10:243 kernel.log/(19737:19738): Ordenando a Consola la finalización del PID: <1002>
+[INFO] 01:53:10:319 kernel.log/(19737:19740): PID: <1003> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 01:53:10:319 kernel.log/(19737:19740): PID: <1003> ingresa a EXECUTE
+[INFO] 01:53:10:319 kernel.log/(19737:19742): PID: <1003> enviada a CPU
+[ERROR] 01:53:15:396 kernel.log/(19737:19742): [ERROR] Feneció el CPU, chau loco suerte arreglate.
+[ERROR] 01:58:03:390 kernel.log/(19737:19737): Finalizando módulo Kernel
+[INFO] 02:05:14:928 kernel.log/(20659:20659): Se crea la Tabla Global de Archivos
+[INFO] 02:05:14:928 kernel.log/(20659:20659): Se crea el diccionario con los recursos.
+[INFO] 02:05:14:928 kernel.log/(20659:20659): Se agrego el recurso DISCO al diccionario
+[INFO] 02:05:14:929 kernel.log/(20659:20659): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:05:34:534 kernel.log/(20659:20662): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:05:34:534 kernel.log/(20659:20662): PID: <1000> ingresa a EXECUTE
+[INFO] 02:05:34:534 kernel.log/(20659:20664): PID: <1000> enviada a CPU
+[INFO] 02:08:16:488 kernel.log/(20789:20789): Se crea la Tabla Global de Archivos
+[INFO] 02:08:16:488 kernel.log/(20789:20789): Se crea el diccionario con los recursos.
+[INFO] 02:08:16:488 kernel.log/(20789:20789): Se agrego el recurso DISCO al diccionario
+[INFO] 02:08:16:494 kernel.log/(20789:20789): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:08:34:198 kernel.log/(20789:20792): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:08:34:198 kernel.log/(20789:20792): PID: <1000> ingresa a EXECUTE
+[INFO] 02:08:34:198 kernel.log/(20789:20794): PID: <1000> enviada a CPU
+[INFO] 02:15:00:831 kernel.log/(21365:21365): Se crea la Tabla Global de Archivos
+[INFO] 02:15:00:832 kernel.log/(21365:21365): Se crea el diccionario con los recursos.
+[INFO] 02:15:00:832 kernel.log/(21365:21365): Se agrego el recurso DISCO al diccionario
+[INFO] 02:15:00:832 kernel.log/(21365:21365): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:15:08:375 kernel.log/(21365:21368): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:15:08:375 kernel.log/(21365:21368): PID: <1000> ingresa a EXECUTE
+[INFO] 02:15:08:375 kernel.log/(21365:21370): PID: <1000> enviada a CPU
+[INFO] 02:15:10:377 kernel.log/(21365:21366): PID: <1000> liberando estructuras en memoria
+[INFO] 02:15:10:377 kernel.log/(21365:21366): Ordenando a Consola la finalización del PID: <1000>
+[INFO] 02:15:58:902 kernel.log/(21365:21368): PID: <1001> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:15:58:902 kernel.log/(21365:21368): PID: <1001> ingresa a EXECUTE
+[INFO] 02:15:58:902 kernel.log/(21365:21370): PID: <1001> enviada a CPU
+[INFO] 02:16:00:904 kernel.log/(21365:21366): PID: <1001> liberando estructuras en memoria
+[INFO] 02:16:00:904 kernel.log/(21365:21366): Ordenando a Consola la finalización del PID: <1001>
+[INFO] 02:17:21:094 kernel.log/(21365:21368): PID: <1002> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:17:21:094 kernel.log/(21365:21368): PID: <1002> ingresa a EXECUTE
+[INFO] 02:17:21:094 kernel.log/(21365:21370): PID: <1002> enviada a CPU
+[INFO] 02:17:21:094 kernel.log/(21365:21370): El segmento solicitado por PID: <1002> fue exitosamente creado
+[INFO] 02:17:21:094 kernel.log/(21365:21370): PID: <1002> enviada a CPU
+[INFO] 02:17:21:094 kernel.log/(21365:21370): El segmento solicitado por PID: <1002> fue exitosamente creado
+[INFO] 02:17:21:094 kernel.log/(21365:21370): PID: <1002> enviada a CPU
+[INFO] 02:17:21:095 kernel.log/(21365:21370): El segmento solicitado por PID: <1002> fue exitosamente creado
+[INFO] 02:17:21:095 kernel.log/(21365:21370): PID: <1002> enviada a CPU
+[ERROR] 02:20:21:574 kernel.log/(21365:21365): Finalizando módulo Kernel
+[INFO] 02:21:52:384 kernel.log/(21843:21843): Se crea la Tabla Global de Archivos
+[INFO] 02:21:52:384 kernel.log/(21843:21843): Se crea el diccionario con los recursos.
+[INFO] 02:21:52:385 kernel.log/(21843:21843): Se agrego el recurso DISCO al diccionario
+[INFO] 02:21:52:385 kernel.log/(21843:21843): Kernel inicializado, esperando a recibir a la consola en el PUERTO 8000.
+[INFO] 02:21:59:255 kernel.log/(21843:21846): PID: <1000> saliendo de Cola de Ready por FIFO para ejecutar.
+[INFO] 02:21:59:255 kernel.log/(21843:21846): PID: <1000> ingresa a EXECUTE
+[INFO] 02:21:59:255 kernel.log/(21843:21848): PID: <1000> enviada a CPU
+[INFO] 02:21:59:255 kernel.log/(21843:21848): El segmento solicitado por PID: <1000> fue exitosamente creado
+[INFO] 02:21:59:255 kernel.log/(21843:21848): PID: <1000> enviada a CPU
+[INFO] 02:21:59:256 kernel.log/(21843:21848): El segmento solicitado por PID: <1000> fue exitosamente creado
+[INFO] 02:21:59:256 kernel.log/(21843:21848): PID: <1000> enviada a CPU
+[INFO] 02:21:59:256 kernel.log/(21843:21848): El segmento solicitado por PID: <1000> fue exitosamente creado
+[INFO] 02:21:59:256 kernel.log/(21843:21848): PID: <1000> enviada a CPU
+[INFO] 02:21:59:257 kernel.log/(21843:21848): No hay suficiente memoria para crear el segmento solicitado por PID: <1000>
+[INFO] 02:21:59:257 kernel.log/(21843:21848): PID: <1000> - Estado Anterior: <EXEC> - Estado Actual: <EXIT>
+[INFO] 02:21:59:257 kernel.log/(21843:21848): Finaliza el proceso <1000> - Motivo: <OUT_OF_MEMORY>
+[INFO] 02:21:59:257 kernel.log/(21843:21844): PID: <1000> liberando estructuras en memoria
+[INFO] 02:21:59:257 kernel.log/(21843:21844): Ordenando a Consola la finalización del PID: <1000>
+[ERROR] 02:22:57:254 kernel.log/(21843:21843): Finalizando módulo Kernel

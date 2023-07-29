@@ -94,7 +94,11 @@ void recv_crear_segmento(int socket_cliente, void *stream) {
 
 	if (! hay_espacio(tamanio)) { // NO hay espacio, no importa compactación
 		log_info(logger, "No hay espacio suficiente en memoria para crear el segmento solicitado");
-		send_op(socket_cliente, OUT_OF_MEMORY);
+		t_paquete *paquete = crear_paquete(OUT_OF_MEMORY);
+		int random = 1;
+		agregar_int_a_paquete(paquete, random);
+		enviar_paquete(paquete, socket_cliente);
+		eliminar_paquete(paquete);
 		return;
 	}
 

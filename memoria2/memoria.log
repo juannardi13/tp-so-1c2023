@@ -2207,3 +2207,130 @@ NOMBRE_ARCHIV
 [INFO] 00:42:05:300 MEMORIA/(19218:19232): PID: 1000 - Eliminar Segmento: 4 - Base: 384 - Tamaño: 64
 [INFO] 00:42:05:300 MEMORIA/(19218:19232): Eliminación de Proceso PID: 1000
 [ERROR] 00:42:16:462 MEMORIA/(19218:19232): Operación desconocida.
+[INFO] 01:31:53:985 MEMORIA/(19598:19598): Se inicializaron las estructuras de Memoria
+[INFO] 01:31:53:986 MEMORIA/(19598:19598): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 01:32:00:465 MEMORIA/(19598:19598): Se conectó un cliente!
+[INFO] 01:32:03:393 MEMORIA/(19598:19598): Se conectó un cliente!
+[INFO] 01:32:11:730 MEMORIA/(19598:19598): Se conectó un cliente!
+[INFO] 01:33:44:479 MEMORIA/(19598:19612): Creación de Proceso PID: 1000
+[INFO] 01:33:44:958 MEMORIA/(19598:19612): Creación de Proceso PID: 1001
+[INFO] 01:33:45:623 MEMORIA/(19598:19612): Creación de Proceso PID: 1002
+[INFO] 01:34:02:488 MEMORIA/(19598:19612): Eliminación de Proceso PID: 1000
+[INFO] 01:34:29:507 MEMORIA/(19598:19612): Eliminación de Proceso PID: 1001
+[INFO] 01:34:30:507 MEMORIA/(19598:19612): Eliminación de Proceso PID: 1002
+[ERROR] 01:42:35:742 MEMORIA/(19598:19612): Operación desconocida.
+[INFO] 01:42:56:494 MEMORIA/(19732:19732): Se inicializaron las estructuras de Memoria
+[INFO] 01:42:56:494 MEMORIA/(19732:19732): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 01:43:04:902 MEMORIA/(19732:19732): Se conectó un cliente!
+[INFO] 01:43:07:719 MEMORIA/(19732:19732): Se conectó un cliente!
+[INFO] 01:43:15:097 MEMORIA/(19732:19732): Se conectó un cliente!
+[INFO] 01:43:54:950 MEMORIA/(19732:19746): Creación de Proceso PID: 1000
+[INFO] 01:43:55:952 MEMORIA/(19732:19746): Eliminación de Proceso PID: 1000
+[INFO] 01:44:58:622 MEMORIA/(19732:19746): Creación de Proceso PID: 1001
+[INFO] 01:44:59:623 MEMORIA/(19732:19746): Eliminación de Proceso PID: 1001
+[INFO] 01:46:04:239 MEMORIA/(19732:19746): Creación de Proceso PID: 1002
+[INFO] 01:46:06:240 MEMORIA/(19732:19734): CPU quiere escribir en la dirección <124> el valor <HOLA>, de tamaño <5>
+[INFO] 01:46:06:240 MEMORIA/(19732:19734): Se escribe el valor <HOLA> de tamaño <5> en la direccion fisica: 124
+[INFO] 01:46:06:240 MEMORIA/(19732:19734): Dirección física: 124
+[INFO] 01:46:06:240 MEMORIA/(19732:19734): Valor Registro: HOLA
+[INFO] 01:46:07:241 MEMORIA/(19732:19734): HOLA
+[INFO] 01:46:07:241 MEMORIA/(19732:19734): CPU quiere leer en la dirección <124> un tamaño de <5>
+[INFO] 01:46:07:241 MEMORIA/(19732:19734): Se busca el valor de la direccion fisica: 124
+[INFO] 01:46:08:241 MEMORIA/(19732:19734): Se envia el valor: HOLA
+[INFO] 01:46:08:241 MEMORIA/(19732:19734): CPU quiere escribir en la dirección <120> el valor <MappaLlegaEl2c23>, de tamaño <17>
+[INFO] 01:46:08:241 MEMORIA/(19732:19734): Se escribe el valor <MappaLlegaEl2c23> de tamaño <17> en la direccion fisica: 120
+[INFO] 01:46:08:241 MEMORIA/(19732:19734): Dirección física: 120
+[INFO] 01:46:08:241 MEMORIA/(19732:19734): Valor Registro: MappaLlegaEl2c23
+[INFO] 01:46:09:241 MEMORIA/(19732:19734): MappaLlegaEl2c23
+[INFO] 01:46:09:241 MEMORIA/(19732:19734): CPU quiere leer en la dirección <120> un tamaño de <17>
+[INFO] 01:46:09:241 MEMORIA/(19732:19734): Se busca el valor de la direccion fisica: 120
+[INFO] 01:46:10:242 MEMORIA/(19732:19734): Se envia el valor: MappaLlegaEl2c23
+[INFO] 01:46:10:243 MEMORIA/(19732:19746): Eliminación de Proceso PID: 1002
+[INFO] 01:53:10:318 MEMORIA/(19732:19746): Creación de Proceso PID: 1003
+[INFO] 01:53:12:320 MEMORIA/(19732:19734): CPU quiere escribir en la dirección <124> el valor <HOLA>, de tamaño <5>
+[INFO] 01:53:12:320 MEMORIA/(19732:19734): Se escribe el valor <HOLA> de tamaño <5> en la direccion fisica: 124
+[INFO] 01:53:12:320 MEMORIA/(19732:19734): Dirección física: 124
+[INFO] 01:53:12:320 MEMORIA/(19732:19734): Valor Registro: HOLA
+[INFO] 01:53:13:320 MEMORIA/(19732:19734): HOLA
+[INFO] 01:53:13:320 MEMORIA/(19732:19734): CPU quiere leer en la dirección <124> un tamaño de <5>
+[INFO] 01:53:13:320 MEMORIA/(19732:19734): Se busca el valor de la direccion fisica: 124
+[INFO] 01:53:14:320 MEMORIA/(19732:19734): Se envia el valor: HOLA
+[INFO] 01:53:14:320 MEMORIA/(19732:19734): CPU quiere escribir en la dirección <120> el valor <MappaLlegaEl2c23>, de tamaño <17>
+[INFO] 01:53:14:320 MEMORIA/(19732:19734): Se escribe el valor <MappaLlegaEl2c23> de tamaño <17> en la direccion fisica: 120
+[INFO] 01:53:14:321 MEMORIA/(19732:19734): Dirección física: 120
+[INFO] 01:53:14:321 MEMORIA/(19732:19734): Valor Registro: MappaLlegaEl2c23
+[INFO] 01:53:15:321 MEMORIA/(19732:19734): MappaLlegaEl2c23
+[ERROR] 01:53:15:396 MEMORIA/(19732:19734): Operación desconocida.
+[INFO] 01:57:44:079 MEMORIA/(20270:20270): Se inicializaron las estructuras de Memoria
+[INFO] 01:57:44:079 MEMORIA/(20270:20270): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 01:57:47:280 MEMORIA/(20270:20270): Se conectó un cliente!
+[INFO] 01:57:53:312 MEMORIA/(20270:20270): Se conectó un cliente!
+[ERROR] 01:57:53:312 MEMORIA/(20270:20274): Operación desconocida.
+[INFO] 01:58:06:423 MEMORIA/(20276:20276): Se inicializaron las estructuras de Memoria
+[INFO] 02:05:06:463 MEMORIA/(20654:20654): Se inicializaron las estructuras de Memoria
+[INFO] 02:05:06:464 MEMORIA/(20654:20654): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:05:08:864 MEMORIA/(20654:20654): Se conectó un cliente!
+[INFO] 02:05:11:464 MEMORIA/(20654:20654): Se conectó un cliente!
+[INFO] 02:05:14:928 MEMORIA/(20654:20654): Se conectó un cliente!
+[INFO] 02:05:34:534 MEMORIA/(20654:20668): Creación de Proceso PID: 1000
+[INFO] 02:05:36:535 MEMORIA/(20654:20656): CPU quiere escribir en la dirección <124> el valor <HOLA>, de tamaño <5>
+[INFO] 02:05:36:535 MEMORIA/(20654:20656): Se escribe el valor <HOLA> de tamaño <5> en la direccion fisica: 124
+[INFO] 02:05:36:535 MEMORIA/(20654:20656): Dirección física: 124
+[INFO] 02:05:36:535 MEMORIA/(20654:20656): Valor Registro: HOLA
+[INFO] 02:05:37:535 MEMORIA/(20654:20656): HOLA
+[INFO] 02:05:37:536 MEMORIA/(20654:20656): CPU quiere leer en la dirección <124> un tamaño de <5>
+[INFO] 02:05:37:536 MEMORIA/(20654:20656): Se busca el valor de la direccion fisica: 124
+[INFO] 02:05:38:536 MEMORIA/(20654:20656): Se envia el valor: HOLA
+[INFO] 02:05:38:536 MEMORIA/(20654:20656): CPU quiere escribir en la dirección <120> el valor <MappaLlegaEl2c23>, de tamaño <17>
+[INFO] 02:05:38:536 MEMORIA/(20654:20656): Se escribe el valor <MappaLlegaEl2c23> de tamaño <17> en la direccion fisica: 120
+[INFO] 02:05:38:536 MEMORIA/(20654:20656): Dirección física: 120
+[INFO] 02:05:38:536 MEMORIA/(20654:20656): Valor Registro: MappaLlegaEl2c23
+[INFO] 02:05:39:536 MEMORIA/(20654:20656): MappaLlegaEl2c23
+[ERROR] 02:05:39:610 MEMORIA/(20654:20656): Operación desconocida.
+[INFO] 02:07:41:630 MEMORIA/(20726:20726): Se inicializaron las estructuras de Memoria
+[INFO] 02:07:41:630 MEMORIA/(20726:20726): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:07:50:160 MEMORIA/(20726:20726): Se conectó un cliente!
+[INFO] 02:08:06:943 MEMORIA/(20726:20726): Se conectó un cliente!
+[INFO] 02:08:16:494 MEMORIA/(20726:20726): Se conectó un cliente!
+[INFO] 02:08:34:198 MEMORIA/(20726:20798): Creación de Proceso PID: 1000
+[INFO] 02:09:20:894 MEMORIA/(20726:20783): CPU quiere escribir en la dirección <124> el valor <HOLA>, de tamaño <5>
+[INFO] 02:09:20:894 MEMORIA/(20726:20783): Se escribe el valor <HOLA> de tamaño <5> en la direccion fisica: 124
+[INFO] 02:09:20:895 MEMORIA/(20726:20783): Dirección física: 124
+[INFO] 02:09:20:895 MEMORIA/(20726:20783): Valor Registro: HOLA
+[INFO] 02:09:21:895 MEMORIA/(20726:20783): HOLA
+[INFO] 02:09:25:206 MEMORIA/(20726:20783): CPU quiere leer en la dirección <124> un tamaño de <5>
+[INFO] 02:09:25:206 MEMORIA/(20726:20783): Se busca el valor de la direccion fisica: 124
+[INFO] 02:09:26:207 MEMORIA/(20726:20783): Se envia el valor: HOLA
+[INFO] 02:09:29:702 MEMORIA/(20726:20783): CPU quiere escribir en la dirección <120> el valor <MappaLlegaEl2c23>, de tamaño <17>
+[INFO] 02:09:29:702 MEMORIA/(20726:20783): Se escribe el valor <MappaLlegaEl2c23> de tamaño <17> en la direccion fisica: 120
+[INFO] 02:09:29:702 MEMORIA/(20726:20783): Dirección física: 120
+[INFO] 02:09:29:702 MEMORIA/(20726:20783): Valor Registro: MappaLlegaEl2c23
+[INFO] 02:09:30:702 MEMORIA/(20726:20783): MappaLlegaEl2c23
+[ERROR] 02:10:44:340 MEMORIA/(20726:20783): Operación desconocida.
+[INFO] 02:14:54:511 MEMORIA/(21359:21359): Se inicializaron las estructuras de Memoria
+[INFO] 02:14:54:511 MEMORIA/(21359:21359): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:14:56:872 MEMORIA/(21359:21359): Se conectó un cliente!
+[INFO] 02:14:58:808 MEMORIA/(21359:21359): Se conectó un cliente!
+[INFO] 02:15:00:832 MEMORIA/(21359:21359): Se conectó un cliente!
+[INFO] 02:15:08:374 MEMORIA/(21359:21374): Creación de Proceso PID: 1000
+[INFO] 02:15:10:377 MEMORIA/(21359:21374): Eliminación de Proceso PID: 1000
+[INFO] 02:15:58:902 MEMORIA/(21359:21374): Creación de Proceso PID: 1001
+[INFO] 02:16:00:904 MEMORIA/(21359:21374): Eliminación de Proceso PID: 1001
+[INFO] 02:17:21:094 MEMORIA/(21359:21374): Creación de Proceso PID: 1002
+[INFO] 02:17:21:094 MEMORIA/(21359:21374): PID: 1002 - Crear Segmento: 1 - Base: 128 - Tamaño: 256
+[INFO] 02:17:21:094 MEMORIA/(21359:21374): PID: 1002 - Crear Segmento: 2 - Base: 384 - Tamaño: 256
+[INFO] 02:17:21:094 MEMORIA/(21359:21374): PID: 1002 - Crear Segmento: 3 - Base: 640 - Tamaño: 256
+[INFO] 02:17:21:095 MEMORIA/(21359:21374): No hay espacio suficiente en memoria para crear el segmento solicitado
+[ERROR] 02:20:21:574 MEMORIA/(21359:21374): Operación desconocida.
+[INFO] 02:21:44:215 MEMORIA/(21838:21838): Se inicializaron las estructuras de Memoria
+[INFO] 02:21:44:216 MEMORIA/(21838:21838): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:21:47:152 MEMORIA/(21838:21838): Se conectó un cliente!
+[INFO] 02:21:49:352 MEMORIA/(21838:21838): Se conectó un cliente!
+[INFO] 02:21:52:385 MEMORIA/(21838:21838): Se conectó un cliente!
+[INFO] 02:21:59:255 MEMORIA/(21838:21852): Creación de Proceso PID: 1000
+[INFO] 02:21:59:255 MEMORIA/(21838:21852): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 256
+[INFO] 02:21:59:256 MEMORIA/(21838:21852): PID: 1000 - Crear Segmento: 2 - Base: 384 - Tamaño: 256
+[INFO] 02:21:59:256 MEMORIA/(21838:21852): PID: 1000 - Crear Segmento: 3 - Base: 640 - Tamaño: 256
+[INFO] 02:21:59:256 MEMORIA/(21838:21852): No hay espacio suficiente en memoria para crear el segmento solicitado
+[INFO] 02:21:59:257 MEMORIA/(21838:21852): Eliminación de Proceso PID: 1000
+[ERROR] 02:22:57:254 MEMORIA/(21838:21852): Operación desconocida.

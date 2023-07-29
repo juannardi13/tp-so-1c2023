@@ -219,22 +219,35 @@ bool desplazamiento_supera_tamanio(int desplazamiento, char* valor){
 int obtener_direccion_fisica(int direccion_logica, int fd_memoria, t_config* config, t_contexto_de_ejecucion* contexto, t_log* logger_principal, int fd_kernel, int tamanio_valor) {
 	int tamanio_segmento =  config_get_int_value(config, "TAM_MAX_SEGMENTO");
 	//int numero_segmento = floor((float)contexto->segmentos->base / (float)tamanio_segmento);
-	int numero_segmento = floor(direccion_logica / tamanio_segmento);
+	int numero_segmento = floor((double) direccion_logica / (double) tamanio_segmento);
 	int desplazamiento_segmento = direccion_logica % tamanio_segmento;
-	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
-	//int tamanio_valor = strlen(valor) + 1;
-	// Ojo Juani, segun la consigna: En caso de que el desplazamiento dentro del segmento (desplazamiento_segmento) sumado al tamaño a leer / escribir, sea mayor al tamaño del segmento
-	// Estaba mal planteado el if
+
+//	t_segmento* segmento_buscado = list_get(contexto->tabla_segmentos, numero_segmento);
+
+	bool mismo_id(t_segmento *seg) {
+		return seg->id == numero_segmento;
+	}
+
+	t_segmento *segmento_buscado = list_find(contexto->tabla_segmentos, (void *) mismo_id);
+
 	int direccion_fisica;
 
-	if(desplazamiento_segmento + tamanio_valor > tamanio_segmento) {
+
+	if (segmento_buscado == NULL) {
 		log_info(logger_principal, "PID: <%d> - Error SEG_FAULT- Segmento: <%d> - Offset: <%d> - Tamaño: <%d>", contexto->pid, numero_segmento, desplazamiento_segmento, tamanio_segmento);
 		activar_segmentation_fault(contexto, fd_kernel);
 		direccion_fisica = -1;
 	} else {
-		direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
-	}
+		int tamanio_segmento_buscado = segmento_buscado->tamanio;
 
+		if(desplazamiento_segmento + tamanio_valor > tamanio_segmento_buscado) {
+			log_info(logger_principal, "PID: <%d> - Error SEG_FAULT- Segmento: <%d> - Offset: <%d> - Tamaño: <%d>", contexto->pid, numero_segmento, desplazamiento_segmento, tamanio_segmento);
+			activar_segmentation_fault(contexto, fd_kernel);
+			direccion_fisica = -1;
+		} else {
+			direccion_fisica = segmento_buscado->base + desplazamiento_segmento;
+		}
+	}
 
 	return direccion_fisica;
 }
