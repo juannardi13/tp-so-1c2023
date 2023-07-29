@@ -2270,3 +2270,261 @@
 [INFO] 02:21:59:256 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 2 256>
 [INFO] 02:21:59:256 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 3 256>
 [INFO] 02:21:59:256 cpu_principal.log/(21839:21839): PID: <1000> - Ejecutando: <CREATE_SEGMENT 4 256>
+[INFO] 02:32:25:711 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET AX AAAA>
+[INFO] 02:32:26:711 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET BX BBBB>
+[INFO] 02:32:27:712 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET CX CCCC>
+[INFO] 02:32:28:712 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET DX DDDD>
+[INFO] 02:32:29:713 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET EAX AAAAAAAA>
+[INFO] 02:32:30:713 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET EBX BBBBBBBB>
+[INFO] 02:32:31:713 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET ECX CCCCCCCC>
+[INFO] 02:32:32:714 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET EDX DDDDDDDD>
+[INFO] 02:32:33:714 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET RAX AAAAAAAAAAAAAAAA>
+[INFO] 02:32:34:714 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET RBX BBBBBBBBBBBBBBBB>
+[INFO] 02:32:35:714 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET RCX CCCCCCCCCCCCCCCC>
+[INFO] 02:32:36:714 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET RDX DDDDDDDDDDDDDDDD>
+[INFO] 02:32:36:715 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <YIELD>
+[INFO] 02:32:37:715 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG0>
+[INFO] 02:32:38:716 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA0>
+[INFO] 02:32:38:716 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:32:39:716 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG0>
+[INFO] 02:32:40:716 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA0>
+[INFO] 02:32:40:716 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:32:41:718 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG1>
+[INFO] 02:32:42:718 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA0>
+[INFO] 02:32:42:719 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:32:43:720 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG1>
+[INFO] 02:32:44:720 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA0>
+[INFO] 02:32:44:720 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:32:45:721 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET RAX TCHOUAMENIAFUERA>
+[INFO] 02:32:46:721 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <SET RBX SEGUNDO_FRANCIA_>
+[INFO] 02:32:46:722 cpu_principal.log/(22062:22062): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 02:32:47:724 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG2>
+[INFO] 02:32:48:724 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA0>
+[INFO] 02:32:48:724 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:32:49:725 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG2>
+[INFO] 02:32:50:725 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA0>
+[INFO] 02:32:50:725 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:32:51:726 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG2>
+[INFO] 02:32:52:727 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA1>
+[INFO] 02:32:52:727 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:32:53:729 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG2>
+[INFO] 02:32:54:729 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA1>
+[INFO] 02:32:54:729 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:32:55:729 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG2>
+[INFO] 02:32:56:729 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA2>
+[INFO] 02:32:56:730 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:32:57:730 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG2>
+[INFO] 02:32:58:730 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA2>
+[INFO] 02:32:58:730 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:32:59:731 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG3>
+[INFO] 02:33:00:731 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA2>
+[INFO] 02:33:00:731 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:33:01:732 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG3>
+[INFO] 02:33:02:732 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA2>
+[INFO] 02:33:02:732 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:33:03:733 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET AX ARG3>
+[INFO] 02:33:04:733 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET BX FRA3>
+[INFO] 02:33:04:733 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:33:05:733 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET AX ARG3>
+[INFO] 02:33:06:734 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET BX FRA3>
+[INFO] 02:33:06:735 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:33:07:735 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET RDX VAMOSALOSPENALES>
+[INFO] 02:33:07:735 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <YIELD>
+[INFO] 02:33:08:736 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET RDX VAMOSALOSPENALES>
+[INFO] 02:33:08:736 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <YIELD>
+[INFO] 02:33:09:736 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <SET RAX ARGENTINACAMPEON>
+[INFO] 02:33:09:736 cpu_principal.log/(22062:22062): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 02:33:10:738 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <SET RAX ARGENTINACAMPEON>
+[INFO] 02:33:10:738 cpu_principal.log/(22062:22062): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 02:59:07:431 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 02:59:08:431 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <SET AX h014>
+[INFO] 02:59:08:431 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <MOV_OUT 12 AX>
+[INFO] 02:59:09:432 cpu_principal.log/(22141:22141): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <12> - Valor: <h014>
+[INFO] 02:59:09:432 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <CREATE_SEGMENT 1 128>
+[INFO] 02:59:09:432 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <SIGNAL RB>
+[INFO] 02:59:09:432 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:00:44:287 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:00:44:287 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <MOV_IN CX 12>
+[INFO] 03:00:44:287 cpu_principal.log/(22141:22141): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:00:45:288 cpu_principal.log/(22141:22141): PID: <1001> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <h014>
+[INFO] 03:00:45:288 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 1 64>
+[INFO] 03:00:45:289 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 2 64>
+[INFO] 03:00:45:289 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 3 64>
+[INFO] 03:00:45:290 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 4 64>
+[INFO] 03:00:45:291 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 5 64>
+[INFO] 03:00:45:292 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 6 64>
+[INFO] 03:00:45:292 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 7 64>
+[INFO] 03:00:45:293 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 8 64>
+[INFO] 03:00:46:294 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <SET BX Ch4u>
+[INFO] 03:00:46:294 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <MOV_OUT 12 BX>
+[INFO] 03:00:47:295 cpu_principal.log/(22141:22141): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:00:47:295 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <SIGNAL RA>
+[INFO] 03:00:47:296 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:00:47:296 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <DELETE_SEGMENT 1>
+[INFO] 03:00:47:297 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <MOV_IN DX 12>
+[INFO] 03:00:47:297 cpu_principal.log/(22141:22141): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:00:48:297 cpu_principal.log/(22141:22141): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:00:48:297 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <SIGNAL RB>
+[INFO] 03:00:48:298 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:00:48:299 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <CREATE_SEGMENT 9 64>
+[INFO] 03:00:49:301 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <SET EAX CoscuWin>
+[INFO] 03:00:49:301 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <MOV_OUT 256 EAX>
+[INFO] 03:00:50:301 cpu_principal.log/(22141:22141): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <1> - Dirección Física: <256> - Valor: <CoscuWin>
+[INFO] 03:00:51:301 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <SET EBX GermanNo>
+[INFO] 03:00:51:302 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <MOV_OUT 2048 EBX>
+[INFO] 03:00:52:303 cpu_principal.log/(22141:22141): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <8> - Dirección Física: <704> - Valor: <GermanNo>
+[INFO] 03:00:52:303 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <SIGNAL RC>
+[INFO] 03:00:52:304 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:04:51:439 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <WAIT RC>
+[INFO] 03:04:51:440 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <CREATE_SEGMENT 1 256>
+[INFO] 03:04:51:440 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <MOV_IN AX 12>
+[INFO] 03:04:51:440 cpu_principal.log/(22141:22141): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:04:52:440 cpu_principal.log/(22141:22141): PID: <1002> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:04:52:440 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <SIGNAL RB>
+[INFO] 03:04:52:440 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <WAIT RC>
+[INFO] 03:04:52:441 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <MOV_IN ECX 256>
+[INFO] 03:04:52:441 cpu_principal.log/(22141:22141): Quiero leer en la dirección <256> un total de <9>
+[INFO] 03:04:53:441 cpu_principal.log/(22141:22141): PID: <1001> - Acción: <LEER> - Segmento: <1> - Dirección Física: <256> - Valor: <CoscuWin>
+[INFO] 03:04:53:441 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <DELETE_SEGMENT 1>
+[INFO] 03:04:53:442 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <MOV_IN EDX 2048>
+[INFO] 03:04:53:442 cpu_principal.log/(22141:22141): Quiero leer en la dirección <704> un total de <9>
+[INFO] 03:04:54:442 cpu_principal.log/(22141:22141): PID: <1001> - Acción: <LEER> - Segmento: <8> - Dirección Física: <704> - Valor: <GermanNo>
+[INFO] 03:04:54:443 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <DELETE_SEGMENT 2>
+[INFO] 03:04:54:443 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <DELETE_SEGMENT 4>
+[INFO] 03:04:54:444 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <DELETE_SEGMENT 5>
+[INFO] 03:04:54:445 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <SIGNAL RC>
+[INFO] 03:04:54:445 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:04:54:445 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <CREATE_SEGMENT 2 128>
+[INFO] 03:04:54:446 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <SIGNAL RA>
+[INFO] 03:04:54:446 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <SIGNAL RB>
+[INFO] 03:04:54:446 cpu_principal.log/(22141:22141): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 03:04:54:447 cpu_principal.log/(22141:22141): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 03:04:54:447 cpu_principal.log/(22141:22141): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 03:12:42:231 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:12:43:231 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <SET AX h014>
+[INFO] 03:12:43:231 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <MOV_OUT 12 AX>
+[INFO] 03:12:44:232 cpu_principal.log/(22402:22402): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <12> - Valor: <h014>
+[INFO] 03:12:44:232 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <CREATE_SEGMENT 1 128>
+[INFO] 03:12:44:233 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <SIGNAL RB>
+[INFO] 03:12:44:233 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:13:59:455 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:13:59:455 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <MOV_IN CX 12>
+[INFO] 03:13:59:455 cpu_principal.log/(22402:22402): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:14:00:456 cpu_principal.log/(22402:22402): PID: <1001> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <h014>
+[INFO] 03:14:00:456 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 1 64>
+[INFO] 03:14:00:456 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 2 64>
+[INFO] 03:14:00:457 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 3 64>
+[INFO] 03:14:00:457 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 4 64>
+[INFO] 03:14:00:458 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 5 64>
+[INFO] 03:14:00:459 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 6 64>
+[INFO] 03:14:00:459 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 7 64>
+[INFO] 03:14:00:460 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 8 64>
+[INFO] 03:14:01:461 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <SET BX Ch4u>
+[INFO] 03:14:01:461 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <MOV_OUT 12 BX>
+[INFO] 03:14:02:462 cpu_principal.log/(22402:22402): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:14:02:462 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <SIGNAL RA>
+[INFO] 03:14:02:463 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:14:02:463 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <DELETE_SEGMENT 1>
+[INFO] 03:14:02:463 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <MOV_IN DX 12>
+[INFO] 03:14:02:463 cpu_principal.log/(22402:22402): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:14:03:463 cpu_principal.log/(22402:22402): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:14:03:464 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <SIGNAL RB>
+[INFO] 03:14:03:464 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:14:03:464 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <CREATE_SEGMENT 9 64>
+[INFO] 03:14:04:465 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <SET EAX CoscuWin>
+[INFO] 03:14:04:465 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <MOV_OUT 256 EAX>
+[INFO] 03:14:05:465 cpu_principal.log/(22402:22402): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <1> - Dirección Física: <256> - Valor: <CoscuWin>
+[INFO] 03:14:06:466 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <SET EBX GermanNo>
+[INFO] 03:14:06:466 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <MOV_OUT 2048 EBX>
+[INFO] 03:14:07:466 cpu_principal.log/(22402:22402): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <8> - Dirección Física: <704> - Valor: <GermanNo>
+[INFO] 03:14:07:466 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <SIGNAL RC>
+[INFO] 03:14:07:467 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:15:58:599 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <WAIT RC>
+[INFO] 03:15:58:599 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <CREATE_SEGMENT 1 256>
+[INFO] 03:15:58:600 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <MOV_IN AX 12>
+[INFO] 03:15:58:600 cpu_principal.log/(22402:22402): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:15:59:600 cpu_principal.log/(22402:22402): PID: <1002> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:15:59:600 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <SIGNAL RB>
+[INFO] 03:15:59:600 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <WAIT RC>
+[INFO] 03:15:59:601 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <MOV_IN ECX 256>
+[INFO] 03:15:59:601 cpu_principal.log/(22402:22402): Quiero leer en la dirección <256> un total de <9>
+[INFO] 03:16:00:601 cpu_principal.log/(22402:22402): PID: <1001> - Acción: <LEER> - Segmento: <1> - Dirección Física: <256> - Valor: <CoscuWin>
+[INFO] 03:16:00:602 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <DELETE_SEGMENT 1>
+[INFO] 03:16:00:602 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <MOV_IN EDX 2048>
+[INFO] 03:16:00:602 cpu_principal.log/(22402:22402): Quiero leer en la dirección <704> un total de <9>
+[INFO] 03:16:01:603 cpu_principal.log/(22402:22402): PID: <1001> - Acción: <LEER> - Segmento: <8> - Dirección Física: <704> - Valor: <GermanNo>
+[INFO] 03:16:01:603 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <DELETE_SEGMENT 2>
+[INFO] 03:16:01:603 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <DELETE_SEGMENT 4>
+[INFO] 03:16:01:603 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <DELETE_SEGMENT 5>
+[INFO] 03:16:01:604 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <SIGNAL RC>
+[INFO] 03:16:01:604 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:16:01:604 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <CREATE_SEGMENT 2 128>
+[INFO] 03:16:01:604 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <SIGNAL RA>
+[INFO] 03:16:01:605 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <SIGNAL RB>
+[INFO] 03:16:01:605 cpu_principal.log/(22402:22402): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 03:16:01:605 cpu_principal.log/(22402:22402): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 03:16:01:606 cpu_principal.log/(22402:22402): PID: <1001> - Ejecutando: <EXIT>
+[INFO] 03:19:31:895 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:19:32:896 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <SET AX h014>
+[INFO] 03:19:32:896 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <MOV_OUT 12 AX>
+[INFO] 03:19:33:896 cpu_principal.log/(22436:22436): PID: <1000> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <12> - Valor: <h014>
+[INFO] 03:19:33:896 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <CREATE_SEGMENT 1 128>
+[INFO] 03:19:33:897 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <SIGNAL RB>
+[INFO] 03:19:33:897 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:20:04:655 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:20:04:655 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <MOV_IN CX 12>
+[INFO] 03:20:04:655 cpu_principal.log/(22436:22436): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:20:05:656 cpu_principal.log/(22436:22436): PID: <1001> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <h014>
+[INFO] 03:20:05:656 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 1 64>
+[INFO] 03:20:05:656 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 2 64>
+[INFO] 03:20:05:656 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 3 64>
+[INFO] 03:20:05:657 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 4 64>
+[INFO] 03:20:05:657 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 5 64>
+[INFO] 03:20:05:657 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 6 64>
+[INFO] 03:20:05:658 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 7 64>
+[INFO] 03:20:05:658 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 8 64>
+[INFO] 03:20:06:659 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <SET BX Ch4u>
+[INFO] 03:20:06:659 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <MOV_OUT 12 BX>
+[INFO] 03:20:07:660 cpu_principal.log/(22436:22436): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:20:07:660 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <SIGNAL RA>
+[INFO] 03:20:07:660 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:20:07:660 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <DELETE_SEGMENT 1>
+[INFO] 03:20:07:660 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <MOV_IN DX 12>
+[INFO] 03:20:07:660 cpu_principal.log/(22436:22436): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:20:08:660 cpu_principal.log/(22436:22436): PID: <1000> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:20:08:660 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <SIGNAL RB>
+[INFO] 03:20:08:661 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <WAIT RA>
+[INFO] 03:20:08:661 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <CREATE_SEGMENT 9 64>
+[INFO] 03:20:09:661 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <SET EAX CoscuWin>
+[INFO] 03:20:09:661 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <MOV_OUT 256 EAX>
+[INFO] 03:20:10:662 cpu_principal.log/(22436:22436): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <1> - Dirección Física: <256> - Valor: <CoscuWin>
+[INFO] 03:20:11:662 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <SET EBX GermanNo>
+[INFO] 03:20:11:662 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <MOV_OUT 2048 EBX>
+[INFO] 03:20:12:663 cpu_principal.log/(22436:22436): PID: <1001> - Acción: <ESCRIBIR> - Segmento: <8> - Dirección Física: <704> - Valor: <GermanNo>
+[INFO] 03:20:12:663 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <SIGNAL RC>
+[INFO] 03:20:12:663 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:23:08:375 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <WAIT RC>
+[INFO] 03:23:08:375 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <CREATE_SEGMENT 1 256>
+[INFO] 03:24:08:376 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <MOV_IN AX 12>
+[INFO] 03:24:08:376 cpu_principal.log/(22436:22436): Quiero leer en la dirección <12> un total de <5>
+[INFO] 03:24:09:377 cpu_principal.log/(22436:22436): PID: <1002> - Acción: <LEER> - Segmento: <0> - Dirección Física: <12> - Valor: <Ch4u>
+[INFO] 03:24:09:377 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <SIGNAL RB>
+[INFO] 03:24:09:377 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <WAIT RC>
+[INFO] 03:24:09:378 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <MOV_IN ECX 256>
+[INFO] 03:24:09:378 cpu_principal.log/(22436:22436): Quiero leer en la dirección <128> un total de <9>
+[INFO] 03:24:10:379 cpu_principal.log/(22436:22436): PID: <1001> - Acción: <LEER> - Segmento: <1> - Dirección Física: <128> - Valor: <CoscuWin>
+[INFO] 03:24:10:379 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <DELETE_SEGMENT 1>
+[INFO] 03:24:10:380 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <MOV_IN EDX 2048>
+[INFO] 03:24:10:380 cpu_principal.log/(22436:22436): Quiero leer en la dirección <576> un total de <9>
+[INFO] 03:24:11:381 cpu_principal.log/(22436:22436): PID: <1001> - Acción: <LEER> - Segmento: <8> - Dirección Física: <576> - Valor: <GermanNo>
+[INFO] 03:24:11:381 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <DELETE_SEGMENT 2>
+[INFO] 03:24:11:382 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <DELETE_SEGMENT 4>
+[INFO] 03:24:11:383 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <DELETE_SEGMENT 5>
+[INFO] 03:24:11:383 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <SIGNAL RC>
+[INFO] 03:24:11:384 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <WAIT RB>
+[INFO] 03:24:11:384 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <CREATE_SEGMENT 2 128>
+[INFO] 03:24:11:385 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <SIGNAL RA>
+[INFO] 03:24:11:385 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <SIGNAL RB>
+[INFO] 03:24:11:386 cpu_principal.log/(22436:22436): PID: <1002> - Ejecutando: <EXIT>
+[INFO] 03:24:11:386 cpu_principal.log/(22436:22436): PID: <1000> - Ejecutando: <EXIT>
+[INFO] 03:24:11:387 cpu_principal.log/(22436:22436): PID: <1001> - Ejecutando: <EXIT>

@@ -112,7 +112,12 @@ void recv_crear_segmento(int socket_cliente, void *stream) {
 
 	if (list_is_empty(huecos_suficientes)) {
 		log_info(logger, "No hay suficiente espacio contiguo para crear el segmento, requiere compactación");
-		send_op(socket_cliente, NECESITO_COMPACTAR);
+//		send_op(socket_cliente, NECESITO_COMPACTAR);
+		t_paquete *paquete = crear_paquete(NECESITO_COMPACTAR);
+		int rand = 1;
+		agregar_int_a_paquete(paquete, rand);
+		enviar_paquete(paquete, socket_cliente);
+		eliminar_paquete(paquete);
 		dinamitar_listas(huecos_disponibles, huecos_suficientes);
 		return;
 	}
@@ -207,9 +212,10 @@ void compactar(int socket_cliente) {
 
 	list_destroy(segmentos_en_uso);
 	list_destroy(contenido_segmentos);
-	mostrar_esquema_memoria();
 
 	msleep(config_memoria.retardo_compactacion);
+	mostrar_esquema_memoria();
+
 	send_tablas(socket_cliente);
 }
 

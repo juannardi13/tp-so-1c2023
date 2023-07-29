@@ -2334,3 +2334,221 @@ NOMBRE_ARCHIV
 [INFO] 02:21:59:256 MEMORIA/(21838:21852): No hay espacio suficiente en memoria para crear el segmento solicitado
 [INFO] 02:21:59:257 MEMORIA/(21838:21852): Eliminación de Proceso PID: 1000
 [ERROR] 02:22:57:254 MEMORIA/(21838:21852): Operación desconocida.
+[INFO] 02:31:17:129 MEMORIA/(22061:22061): Se inicializaron las estructuras de Memoria
+[INFO] 02:31:17:129 MEMORIA/(22061:22061): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:31:22:304 MEMORIA/(22061:22061): Se conectó un cliente!
+[INFO] 02:31:24:359 MEMORIA/(22061:22061): Se conectó un cliente!
+[INFO] 02:31:31:625 MEMORIA/(22061:22061): Se conectó un cliente!
+[INFO] 02:32:24:710 MEMORIA/(22061:22075): Creación de Proceso PID: 1000
+[INFO] 02:32:25:246 MEMORIA/(22061:22075): Creación de Proceso PID: 1001
+[INFO] 02:32:25:782 MEMORIA/(22061:22075): Creación de Proceso PID: 1002
+[INFO] 02:32:46:722 MEMORIA/(22061:22075): Eliminación de Proceso PID: 1000
+[INFO] 02:33:09:737 MEMORIA/(22061:22075): Eliminación de Proceso PID: 1001
+[INFO] 02:33:10:738 MEMORIA/(22061:22075): Eliminación de Proceso PID: 1002
+[ERROR] 02:36:34:598 MEMORIA/(22061:22075): Operación desconocida.
+[INFO] 02:57:00:808 MEMORIA/(22140:22140): Se inicializaron las estructuras de Memoria
+[INFO] 02:57:00:808 MEMORIA/(22140:22140): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 02:57:06:319 MEMORIA/(22140:22140): Se conectó un cliente!
+[INFO] 02:57:10:160 MEMORIA/(22140:22140): Se conectó un cliente!
+[INFO] 02:57:16:888 MEMORIA/(22140:22140): Se conectó un cliente!
+[INFO] 02:59:07:431 MEMORIA/(22140:22154): Creación de Proceso PID: 1000
+[INFO] 02:59:08:432 MEMORIA/(22140:22142): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 02:59:08:432 MEMORIA/(22140:22142): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 02:59:08:432 MEMORIA/(22140:22142): Dirección física: 12
+[INFO] 02:59:08:432 MEMORIA/(22140:22142): Valor Registro: h014
+[INFO] 02:59:09:432 MEMORIA/(22140:22142): h014
+[INFO] 02:59:09:432 MEMORIA/(22140:22154): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 03:00:44:287 MEMORIA/(22140:22154): Creación de Proceso PID: 1001
+[INFO] 03:00:44:287 MEMORIA/(22140:22142): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:00:44:287 MEMORIA/(22140:22142): Se busca el valor de la direccion fisica: 12
+[INFO] 03:00:45:288 MEMORIA/(22140:22142): Se envia el valor: h014
+[INFO] 03:00:45:288 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 03:00:45:289 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 03:00:45:289 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 03:00:45:290 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 03:00:45:291 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 03:00:45:292 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 03:00:45:292 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 03:00:45:293 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 03:00:46:294 MEMORIA/(22140:22142): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 03:00:46:294 MEMORIA/(22140:22142): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 03:00:46:294 MEMORIA/(22140:22142): Dirección física: 12
+[INFO] 03:00:46:294 MEMORIA/(22140:22142): Valor Registro: Ch4u
+[INFO] 03:00:47:295 MEMORIA/(22140:22142): Ch4u
+[INFO] 03:00:47:296 MEMORIA/(22140:22154): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 03:00:47:297 MEMORIA/(22140:22142): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:00:47:297 MEMORIA/(22140:22142): Se busca el valor de la direccion fisica: 12
+[INFO] 03:00:48:297 MEMORIA/(22140:22142): Se envia el valor: Ch4u
+[INFO] 03:00:48:299 MEMORIA/(22140:22154): PID: 1001 - Crear Segmento: 9 - Base: 128 - Tamaño: 64
+[INFO] 03:00:49:301 MEMORIA/(22140:22142): CPU quiere escribir en la dirección <256> el valor <CoscuWin>, de tamaño <9>
+[INFO] 03:00:49:301 MEMORIA/(22140:22142): Se escribe el valor <CoscuWin> de tamaño <9> en la direccion fisica: 256
+[INFO] 03:00:49:301 MEMORIA/(22140:22142): Dirección física: 256
+[INFO] 03:00:49:301 MEMORIA/(22140:22142): Valor Registro: CoscuWin
+[INFO] 03:00:50:301 MEMORIA/(22140:22142): CoscuWin
+[INFO] 03:00:51:302 MEMORIA/(22140:22142): CPU quiere escribir en la dirección <704> el valor <GermanNo>, de tamaño <9>
+[INFO] 03:00:51:302 MEMORIA/(22140:22142): Se escribe el valor <GermanNo> de tamaño <9> en la direccion fisica: 704
+[INFO] 03:00:51:302 MEMORIA/(22140:22142): Dirección física: 704
+[INFO] 03:00:51:302 MEMORIA/(22140:22142): Valor Registro: GermanNo
+[INFO] 03:00:52:303 MEMORIA/(22140:22142): GermanNo
+[INFO] 03:04:51:439 MEMORIA/(22140:22154): Creación de Proceso PID: 1002
+[INFO] 03:04:51:440 MEMORIA/(22140:22154): PID: 1002 - Crear Segmento: 1 - Base: 768 - Tamaño: 256
+[INFO] 03:04:51:440 MEMORIA/(22140:22142): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:04:51:440 MEMORIA/(22140:22142): Se busca el valor de la direccion fisica: 12
+[INFO] 03:04:52:440 MEMORIA/(22140:22142): Se envia el valor: Ch4u
+[INFO] 03:04:52:441 MEMORIA/(22140:22142): CPU quiere leer en la dirección <256> un tamaño de <9>
+[INFO] 03:04:52:441 MEMORIA/(22140:22142): Se busca el valor de la direccion fisica: 256
+[INFO] 03:04:53:441 MEMORIA/(22140:22142): Se envia el valor: CoscuWin
+[INFO] 03:04:53:441 MEMORIA/(22140:22154): PID: 1001 - Eliminar Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 03:04:53:442 MEMORIA/(22140:22142): CPU quiere leer en la dirección <704> un tamaño de <9>
+[INFO] 03:04:53:442 MEMORIA/(22140:22142): Se busca el valor de la direccion fisica: 704
+[INFO] 03:04:54:442 MEMORIA/(22140:22142): Se envia el valor: GermanNo
+[INFO] 03:04:54:443 MEMORIA/(22140:22154): PID: 1001 - Eliminar Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 03:04:54:444 MEMORIA/(22140:22154): PID: 1001 - Eliminar Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 03:04:54:444 MEMORIA/(22140:22154): PID: 1001 - Eliminar Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 03:04:54:445 MEMORIA/(22140:22154): PID: 1002 - Crear Segmento: 2 - Base: 192 - Tamaño: 128
+[INFO] 03:04:54:446 MEMORIA/(22140:22154): Eliminación de Proceso PID: 1002
+[INFO] 03:04:54:447 MEMORIA/(22140:22154): Eliminación de Proceso PID: 1000
+[INFO] 03:04:54:447 MEMORIA/(22140:22154): Eliminación de Proceso PID: 1001
+[ERROR] 03:09:51:478 MEMORIA/(22140:22154): Operación desconocida.
+[INFO] 03:11:27:993 MEMORIA/(22400:22400): Se inicializaron las estructuras de Memoria
+[INFO] 03:11:27:993 MEMORIA/(22400:22400): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:11:51:104 MEMORIA/(22400:22400): Se conectó un cliente!
+[INFO] 03:12:10:159 MEMORIA/(22400:22400): Se conectó un cliente!
+[INFO] 03:12:14:241 MEMORIA/(22400:22400): Se conectó un cliente!
+[INFO] 03:12:42:231 MEMORIA/(22400:22416): Creación de Proceso PID: 1000
+[INFO] 03:12:43:231 MEMORIA/(22400:22403): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 03:12:43:231 MEMORIA/(22400:22403): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 03:12:43:232 MEMORIA/(22400:22403): Dirección física: 12
+[INFO] 03:12:43:232 MEMORIA/(22400:22403): Valor Registro: h014
+[INFO] 03:12:44:232 MEMORIA/(22400:22403): h014
+[INFO] 03:12:44:233 MEMORIA/(22400:22416): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 03:13:59:455 MEMORIA/(22400:22416): Creación de Proceso PID: 1001
+[INFO] 03:13:59:455 MEMORIA/(22400:22403): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:13:59:455 MEMORIA/(22400:22403): Se busca el valor de la direccion fisica: 12
+[INFO] 03:14:00:455 MEMORIA/(22400:22403): Se envia el valor: h014
+[INFO] 03:14:00:456 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 03:14:00:456 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 03:14:00:457 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 03:14:00:457 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 03:14:00:458 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 03:14:00:459 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 03:14:00:459 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 03:14:00:460 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 03:14:01:462 MEMORIA/(22400:22403): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 03:14:01:462 MEMORIA/(22400:22403): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 03:14:01:462 MEMORIA/(22400:22403): Dirección física: 12
+[INFO] 03:14:01:462 MEMORIA/(22400:22403): Valor Registro: Ch4u
+[INFO] 03:14:02:462 MEMORIA/(22400:22403): Ch4u
+[INFO] 03:14:02:463 MEMORIA/(22400:22416): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 03:14:02:463 MEMORIA/(22400:22403): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:14:02:463 MEMORIA/(22400:22403): Se busca el valor de la direccion fisica: 12
+[INFO] 03:14:03:463 MEMORIA/(22400:22403): Se envia el valor: Ch4u
+[INFO] 03:14:03:464 MEMORIA/(22400:22416): PID: 1001 - Crear Segmento: 9 - Base: 128 - Tamaño: 64
+[INFO] 03:14:04:465 MEMORIA/(22400:22403): CPU quiere escribir en la dirección <256> el valor <CoscuWin>, de tamaño <9>
+[INFO] 03:14:04:465 MEMORIA/(22400:22403): Se escribe el valor <CoscuWin> de tamaño <9> en la direccion fisica: 256
+[INFO] 03:14:04:465 MEMORIA/(22400:22403): Dirección física: 256
+[INFO] 03:14:04:465 MEMORIA/(22400:22403): Valor Registro: CoscuWin
+[INFO] 03:14:05:465 MEMORIA/(22400:22403): CoscuWin
+[INFO] 03:14:06:466 MEMORIA/(22400:22403): CPU quiere escribir en la dirección <704> el valor <GermanNo>, de tamaño <9>
+[INFO] 03:14:06:466 MEMORIA/(22400:22403): Se escribe el valor <GermanNo> de tamaño <9> en la direccion fisica: 704
+[INFO] 03:14:06:466 MEMORIA/(22400:22403): Dirección física: 704
+[INFO] 03:14:06:466 MEMORIA/(22400:22403): Valor Registro: GermanNo
+[INFO] 03:14:07:466 MEMORIA/(22400:22403): GermanNo
+[INFO] 03:15:58:599 MEMORIA/(22400:22416): Creación de Proceso PID: 1002
+[INFO] 03:15:58:599 MEMORIA/(22400:22416): PID: 1002 - Crear Segmento: 1 - Base: 768 - Tamaño: 256
+[INFO] 03:15:58:600 MEMORIA/(22400:22403): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:15:58:600 MEMORIA/(22400:22403): Se busca el valor de la direccion fisica: 12
+[INFO] 03:15:59:600 MEMORIA/(22400:22403): Se envia el valor: Ch4u
+[INFO] 03:15:59:601 MEMORIA/(22400:22403): CPU quiere leer en la dirección <256> un tamaño de <9>
+[INFO] 03:15:59:601 MEMORIA/(22400:22403): Se busca el valor de la direccion fisica: 256
+[INFO] 03:16:00:601 MEMORIA/(22400:22403): Se envia el valor: CoscuWin
+[INFO] 03:16:00:602 MEMORIA/(22400:22416): PID: 1001 - Eliminar Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 03:16:00:602 MEMORIA/(22400:22403): CPU quiere leer en la dirección <704> un tamaño de <9>
+[INFO] 03:16:00:602 MEMORIA/(22400:22403): Se busca el valor de la direccion fisica: 704
+[INFO] 03:16:01:603 MEMORIA/(22400:22403): Se envia el valor: GermanNo
+[INFO] 03:16:01:603 MEMORIA/(22400:22416): PID: 1001 - Eliminar Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 03:16:01:603 MEMORIA/(22400:22416): PID: 1001 - Eliminar Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 03:16:01:603 MEMORIA/(22400:22416): PID: 1001 - Eliminar Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 03:16:01:604 MEMORIA/(22400:22416): PID: 1002 - Crear Segmento: 2 - Base: 448 - Tamaño: 128
+[INFO] 03:16:01:605 MEMORIA/(22400:22416): Eliminación de Proceso PID: 1002
+[INFO] 03:16:01:606 MEMORIA/(22400:22416): Eliminación de Proceso PID: 1000
+[INFO] 03:16:01:606 MEMORIA/(22400:22416): Eliminación de Proceso PID: 1001
+[ERROR] 03:18:41:439 MEMORIA/(22400:22416): Operación desconocida.
+[INFO] 03:18:53:114 MEMORIA/(22435:22435): Se inicializaron las estructuras de Memoria
+[INFO] 03:18:53:114 MEMORIA/(22435:22435): Servidor Memoria iniciado, esperando conexiones entrantes
+[INFO] 03:18:56:047 MEMORIA/(22435:22435): Se conectó un cliente!
+[INFO] 03:18:59:233 MEMORIA/(22435:22435): Se conectó un cliente!
+[INFO] 03:19:02:065 MEMORIA/(22435:22435): Se conectó un cliente!
+[INFO] 03:19:31:895 MEMORIA/(22435:22449): Creación de Proceso PID: 1000
+[INFO] 03:19:32:896 MEMORIA/(22435:22437): CPU quiere escribir en la dirección <12> el valor <h014>, de tamaño <5>
+[INFO] 03:19:32:896 MEMORIA/(22435:22437): Se escribe el valor <h014> de tamaño <5> en la direccion fisica: 12
+[INFO] 03:19:32:896 MEMORIA/(22435:22437): Dirección física: 12
+[INFO] 03:19:32:896 MEMORIA/(22435:22437): Valor Registro: h014
+[INFO] 03:19:33:896 MEMORIA/(22435:22437): h014
+[INFO] 03:19:33:897 MEMORIA/(22435:22449): PID: 1000 - Crear Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 03:20:04:655 MEMORIA/(22435:22449): Creación de Proceso PID: 1001
+[INFO] 03:20:04:655 MEMORIA/(22435:22437): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:20:04:655 MEMORIA/(22435:22437): Se busca el valor de la direccion fisica: 12
+[INFO] 03:20:05:656 MEMORIA/(22435:22437): Se envia el valor: h014
+[INFO] 03:20:05:656 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 1 - Base: 256 - Tamaño: 64
+[INFO] 03:20:05:656 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 2 - Base: 320 - Tamaño: 64
+[INFO] 03:20:05:656 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 3 - Base: 384 - Tamaño: 64
+[INFO] 03:20:05:657 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 4 - Base: 448 - Tamaño: 64
+[INFO] 03:20:05:657 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 5 - Base: 512 - Tamaño: 64
+[INFO] 03:20:05:657 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 6 - Base: 576 - Tamaño: 64
+[INFO] 03:20:05:658 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 7 - Base: 640 - Tamaño: 64
+[INFO] 03:20:05:658 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 8 - Base: 704 - Tamaño: 64
+[INFO] 03:20:06:659 MEMORIA/(22435:22437): CPU quiere escribir en la dirección <12> el valor <Ch4u>, de tamaño <5>
+[INFO] 03:20:06:659 MEMORIA/(22435:22437): Se escribe el valor <Ch4u> de tamaño <5> en la direccion fisica: 12
+[INFO] 03:20:06:659 MEMORIA/(22435:22437): Dirección física: 12
+[INFO] 03:20:06:659 MEMORIA/(22435:22437): Valor Registro: Ch4u
+[INFO] 03:20:07:659 MEMORIA/(22435:22437): Ch4u
+[INFO] 03:20:07:660 MEMORIA/(22435:22449): PID: 1000 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 128
+[INFO] 03:20:07:660 MEMORIA/(22435:22437): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:20:07:660 MEMORIA/(22435:22437): Se busca el valor de la direccion fisica: 12
+[INFO] 03:20:08:660 MEMORIA/(22435:22437): Se envia el valor: Ch4u
+[INFO] 03:20:08:661 MEMORIA/(22435:22449): PID: 1001 - Crear Segmento: 9 - Base: 768 - Tamaño: 64
+[INFO] 03:20:09:661 MEMORIA/(22435:22437): CPU quiere escribir en la dirección <256> el valor <CoscuWin>, de tamaño <9>
+[INFO] 03:20:09:661 MEMORIA/(22435:22437): Se escribe el valor <CoscuWin> de tamaño <9> en la direccion fisica: 256
+[INFO] 03:20:09:661 MEMORIA/(22435:22437): Dirección física: 256
+[INFO] 03:20:09:662 MEMORIA/(22435:22437): Valor Registro: CoscuWin
+[INFO] 03:20:10:662 MEMORIA/(22435:22437): CoscuWin
+[INFO] 03:20:11:662 MEMORIA/(22435:22437): CPU quiere escribir en la dirección <704> el valor <GermanNo>, de tamaño <9>
+[INFO] 03:20:11:662 MEMORIA/(22435:22437): Se escribe el valor <GermanNo> de tamaño <9> en la direccion fisica: 704
+[INFO] 03:20:11:662 MEMORIA/(22435:22437): Dirección física: 704
+[INFO] 03:20:11:662 MEMORIA/(22435:22437): Valor Registro: GermanNo
+[INFO] 03:20:12:662 MEMORIA/(22435:22437): GermanNo
+[INFO] 03:23:08:374 MEMORIA/(22435:22449): Creación de Proceso PID: 1002
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): No hay suficiente espacio contiguo para crear el segmento, requiere compactación
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): Solicitud de compactación
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1000 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 1 - Base: 128 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 2 - Base: 192 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 3 - Base: 256 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 4 - Base: 320 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 5 - Base: 384 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 6 - Base: 448 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 7 - Base: 512 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 8 - Base: 576 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1001 - Segmento: 9 - Base: 640 - Tamaño: 64
+[INFO] 03:23:08:375 MEMORIA/(22435:22449): PID: 1002 - Segmento: 0 - Base: 0 - Tamaño: 128
+[INFO] 03:24:08:376 MEMORIA/(22435:22449): PID: 1002 - Crear Segmento: 1 - Base: 704 - Tamaño: 256
+[INFO] 03:24:08:376 MEMORIA/(22435:22437): CPU quiere leer en la dirección <12> un tamaño de <5>
+[INFO] 03:24:08:376 MEMORIA/(22435:22437): Se busca el valor de la direccion fisica: 12
+[INFO] 03:24:09:377 MEMORIA/(22435:22437): Se envia el valor: Ch4u
+[INFO] 03:24:09:378 MEMORIA/(22435:22437): CPU quiere leer en la dirección <128> un tamaño de <9>
+[INFO] 03:24:09:378 MEMORIA/(22435:22437): Se busca el valor de la direccion fisica: 128
+[INFO] 03:24:10:378 MEMORIA/(22435:22437): Se envia el valor: CoscuWin
+[INFO] 03:24:10:379 MEMORIA/(22435:22449): PID: 1001 - Eliminar Segmento: 1 - Base: 128 - Tamaño: 64
+[INFO] 03:24:10:380 MEMORIA/(22435:22437): CPU quiere leer en la dirección <576> un tamaño de <9>
+[INFO] 03:24:10:380 MEMORIA/(22435:22437): Se busca el valor de la direccion fisica: 576
+[INFO] 03:24:11:381 MEMORIA/(22435:22437): Se envia el valor: GermanNo
+[INFO] 03:24:11:381 MEMORIA/(22435:22449): PID: 1001 - Eliminar Segmento: 2 - Base: 192 - Tamaño: 64
+[INFO] 03:24:11:382 MEMORIA/(22435:22449): PID: 1001 - Eliminar Segmento: 4 - Base: 320 - Tamaño: 64
+[INFO] 03:24:11:383 MEMORIA/(22435:22449): PID: 1001 - Eliminar Segmento: 5 - Base: 384 - Tamaño: 64
+[INFO] 03:24:11:384 MEMORIA/(22435:22449): PID: 1002 - Crear Segmento: 2 - Base: 320 - Tamaño: 128
+[INFO] 03:24:11:386 MEMORIA/(22435:22449): Eliminación de Proceso PID: 1002
+[INFO] 03:24:11:386 MEMORIA/(22435:22449): Eliminación de Proceso PID: 1000
+[INFO] 03:24:11:387 MEMORIA/(22435:22449): Eliminación de Proceso PID: 1001
+[ERROR] 03:36:01:046 MEMORIA/(22435:22449): Operación desconocida.

@@ -135,6 +135,7 @@ void estado_ejecutar(void) {
 			int finalizacion_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = finalizacion_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+			calcular_estimacion(proceso_a_ejecutar);
 
 			proceso_a_ejecutar->ultima_instruccion = IO;
 
@@ -237,6 +238,7 @@ void estado_ejecutar(void) {
 				list_remove(cola_exec, 0);
 				proceso_a_ejecutar->final_ultima_rafaga = get_time();
 				proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+				calcular_estimacion(proceso_a_ejecutar);
 
 				log_info(kernel_principal, "PID: <%d> - Estado Anterior: <EXEC> - Estado Actual: <BLOCK>", proceso_a_ejecutar->pcb->pid);
 				log_info(kernel_principal, "PID: <%d> - Bloqueado por: <%s>", proceso_a_ejecutar->pcb->pid, nombre_archivo_a_abrir);
@@ -358,7 +360,8 @@ void estado_ejecutar(void) {
 			proceso_a_ejecutar->desalojado = DESALOJADO;
 			proceso_a_ejecutar->final_ultima_rafaga = get_time();
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
-			
+			calcular_estimacion(proceso_a_ejecutar);
+
 			int tamanio_archivo_read;
 			int direccion_fisica_read;
 			int cantidad_bytes_read;
@@ -414,7 +417,8 @@ void estado_ejecutar(void) {
 			proceso_a_ejecutar->desalojado = DESALOJADO;
 			proceso_a_ejecutar->final_ultima_rafaga = get_time();
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
-			
+			calcular_estimacion(proceso_a_ejecutar);
+
 			int tamanio_archivo_write;
 			int direccion_fisica_write;
 			int cantidad_bytes_write;
@@ -468,6 +472,7 @@ void estado_ejecutar(void) {
 			proceso_a_ejecutar->desalojado = DESALOJADO;
 			proceso_a_ejecutar->final_ultima_rafaga = get_time();
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+			calcular_estimacion(proceso_a_ejecutar);
 
 			int tamanio_archivo_a_truncar;
 			int nuevo_tamanio;
@@ -549,6 +554,8 @@ void estado_ejecutar(void) {
 					proceso_a_ejecutar->desalojado = DESALOJADO;
 					proceso_a_ejecutar->final_ultima_rafaga = get_time();
 					proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+					calcular_estimacion(proceso_a_ejecutar);
+
 
 					pthread_mutex_lock(&mutex_exec);
 					list_remove(cola_exec, 0);
@@ -633,6 +640,7 @@ void estado_ejecutar(void) {
 			int fin_cpu = get_time();
 			proceso_a_ejecutar->final_ultima_rafaga = fin_cpu;
 			proceso_a_ejecutar->ultima_rafaga = proceso_a_ejecutar->final_ultima_rafaga - proceso_a_ejecutar->principio_ultima_rafaga;
+			calcular_estimacion(proceso_a_ejecutar);
 			
 			pthread_mutex_lock(&mutex_exec);
 			list_remove(cola_exec, 0);
