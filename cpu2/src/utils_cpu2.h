@@ -22,7 +22,7 @@ t_log* iniciar_logger(void);
 t_log* iniciar_logger_principal(void);
 void inicializar_registros(void);
 void inicializar_segmentos_prueba(void);
-t_config* iniciar_config(void);
+t_config* iniciar_config(char *);
 
 // Funciones para serializar y deserializar
 char* deserializar_paquete_de_memoria(t_buffer*);

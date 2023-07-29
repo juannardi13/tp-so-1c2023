@@ -12,12 +12,18 @@ void sighandler(int signal) {
 	exit(0);
 }
 
-int main() {
+int main(int argc, char **argv) {
+
+	if (argc < 2) {
+		printf("ALTO BOT AMIGO\n");
+		return EXIT_FAILURE;
+	}
+
 	signal(SIGINT, sighandler);
 
 	logger_kernel = log_create("./kernel.log", "kernel.log", 1, LOG_LEVEL_INFO);
 	kernel_principal = log_create("./kernel_principal.log", "kernel_principal.log", 1, LOG_LEVEL_INFO);
-	cargar_valores_config("cfg/kernel.config");
+	cargar_valores_config(argv[1]);
 
 	iniciar_planificador_largo_plazo();
 	iniciar_planificador_corto_plazo();

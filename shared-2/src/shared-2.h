@@ -10,6 +10,7 @@
 #include<commons/collections/list.h>
 #include<commons/collections/dictionary.h>
 #include <unistd.h>
+#include <commons/config.h>
 
 typedef enum {
 	NEW,

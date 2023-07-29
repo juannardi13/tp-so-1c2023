@@ -38,6 +38,7 @@ void manejar_conexion(int* fd_cliente) {
 
 		proceso->pcb = crear_estructura_pcb(data);
 		proceso->socket = socket_cliente;
+		proceso->rafaga_estimada = config_kernel.estimacion_inicial;
 
 		agregar_proceso_a_new(proceso);
 //

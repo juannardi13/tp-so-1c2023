@@ -29,8 +29,8 @@ t_log* iniciar_logger_principal(void) {
 	return nuevo_logger;
 }
 
-t_config* iniciar_config(void) {
-	t_config* nuevo_config = config_create("cfg/cpu.config");
+t_config* iniciar_config(char *ruta) {
+	t_config* nuevo_config = config_create(ruta);
 
 	if (nuevo_config == NULL) {
 		printf("No se pudo leer la config\n");

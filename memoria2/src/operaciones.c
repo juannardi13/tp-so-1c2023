@@ -34,6 +34,54 @@ void send_tabla(int socket_cliente, t_tabla_segmentos *tabla) {
 
 	enviar_paquete(paquete, socket_cliente);
 	eliminar_paquete(paquete);
+
+//	int cant_segs = list_size(tabla->segmentos);
+//
+//	t_paquete *paquete = malloc(sizeof(t_paquete));
+//	t_buffer* buffer = malloc(sizeof(t_buffer));
+//
+//	buffer->stream_size = sizeof(int) + sizeof(int) + (3 * sizeof(int) * cant_segs);
+//
+//	void *stream = malloc(buffer->stream_size);
+//
+//	memcpy(stream, &(tabla->pid), sizeof(int));
+//	stream += sizeof(int);
+//	memcpy(stream, &cant_segs, sizeof(int));
+//	stream += sizeof(int);
+//
+//	t_list_iterator* iterador = list_iterator_create(tabla->segmentos);
+//
+//	while(list_iterator_has_next(iterador)) {
+//		t_segmento* aux = (t_segmento*) list_iterator_next(iterador);
+//
+//		memcpy(stream, &(aux->id), sizeof(int));
+//		stream += sizeof(int);
+//		memcpy(stream,&(aux->base), sizeof(int));
+//		stream += sizeof(int);
+//		memcpy(stream, &(aux->tamanio), sizeof(int));
+//		stream += sizeof(int);
+//	}
+//
+//	list_iterator_destroy(iterador);
+//
+//	buffer->stream = stream;
+//
+//	paquete->codigo_operacion = NUEVA_TABLA;
+//
+//	paquete->buffer = buffer;
+//
+//	int bytes = 2 * sizeof(int) + paquete->buffer->stream_size;
+//	void *a_enviar = malloc(bytes);
+//	int offset = 0;
+//
+//	agregar_a_stream(a_enviar, &offset, &(paquete->codigo_operacion), sizeof(int));
+//	agregar_a_stream(a_enviar, &offset, &(paquete->buffer->stream_size), sizeof(int));
+//	agregar_a_stream(a_enviar, &offset, paquete->buffer->stream, paquete->buffer->stream_size);
+//
+//	send(socket_cliente, a_enviar, bytes, 0);
+//
+//	free(a_enviar);
+////	eliminar_paquete(paquete);
 }
 
 void recv_crear_segmento(int socket_cliente, void *stream) {

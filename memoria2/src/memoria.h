@@ -15,7 +15,7 @@ t_list *tablas_segmentos;
 t_bitarray *bitmap;
 t_segmento *segmento_0;
 
-void inicializar_config(void);
+void inicializar_config(char *);
 int esperar_conexiones(int);
 void terminar_memoria(void);
 void destruir_bitmap(void);

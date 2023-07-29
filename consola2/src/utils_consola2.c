@@ -16,7 +16,7 @@ t_log* iniciar_logger(void) {
 }
 
 t_config* iniciar_config(char* ruta) {
-	
+
 	t_config* config;
 
 	if((config = config_create(ruta)) == NULL) {

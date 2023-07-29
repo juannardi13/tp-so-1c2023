@@ -171,6 +171,53 @@ void recibir_tablas_segmentos(t_pcb* pcb) {
 	}
 }
 
+void recibir_tablas_delete(t_pcb* pcb) {
+	t_paquete* paquete_respuesta = malloc(sizeof(t_paquete));
+	paquete_respuesta->buffer = malloc(sizeof(t_buffer));
+
+	recv(socket_memoria, &(paquete_respuesta->codigo_operacion), sizeof(op_code), MSG_WAITALL);
+	recv(socket_memoria, &(paquete_respuesta->buffer->stream_size), sizeof(int), 0);
+	paquete_respuesta->buffer->stream = malloc(paquete_respuesta->buffer->stream_size);
+	recv(socket_memoria, paquete_respuesta->buffer->stream, paquete_respuesta->buffer->stream_size, 0);
+
+	switch(paquete_respuesta->codigo_operacion) {
+	case NUEVA_TABLA:
+//		t_tabla_segmentos tabla; // = malloc(sizeof(t_tabla_segmentos));
+
+		void* stream = paquete_respuesta->buffer->stream;
+
+		int pid;
+		memcpy(&pid, stream, sizeof(int));
+		stream += sizeof(int);
+
+		int tam_segmentos;
+
+		memcpy(&tam_segmentos, stream, sizeof(int));
+		stream += sizeof(int);
+
+		list_clean_and_destroy_elements(pcb->tabla_segmentos.segmentos, free);
+
+		for(int i = 0; i < tam_segmentos; i++) {
+			t_segmento* aux = malloc(sizeof(t_segmento));
+
+			memcpy((&aux->id), stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&(aux->base), stream, sizeof(int));
+			stream += sizeof(int);
+			memcpy(&(aux->tamanio), stream, sizeof(int));
+			stream += sizeof(int);
+
+			list_add(pcb->tabla_segmentos.segmentos, aux);
+		}
+
+		break;
+
+	default:
+		log_error(logger_kernel, "[ERROR] Error recibiendo las tablas de segmentos.");
+		break;
+	}
+}
+
 void recibir_respuesta_create(t_proceso* proceso, int id_segmento, int tamanio_segmento) {
 	t_paquete* paquete_respuesta = malloc(sizeof(t_paquete));
 	paquete_respuesta->buffer = malloc(sizeof(t_buffer));

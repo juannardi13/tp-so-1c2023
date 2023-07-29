@@ -2,12 +2,17 @@
 
 #define MAX_LEN 256
 
-int main() {
+int main(int argc, char **argv) {
+
+	if (argc < 2) {
+		printf("ALTO BOT AMIGO\n");
+	}
+
 	char* ip_kernel;
 	char* puerto_kernel;
     t_log* logger = iniciar_logger();
     t_log* logger_principal = iniciar_logger_principal();
-    t_config* config = iniciar_config();
+    t_config* config = iniciar_config(argv[1]);
     inicializar_registros();
     inicializar_segmentos_prueba();
 
@@ -17,12 +22,12 @@ int main() {
 
     log_info(logger, "Hola! Se inicializo el modulo cliente CPU.");
 
-    ip_kernel = config_get_string_value(config, "IP");
+    ip_kernel = config_get_string_value(config, "IP_MEMORIA");
     puerto_kernel = config_get_string_value(config, "PUERTO_KERNEL");
 
     log_info(logger, "La configuracion de la conexion indica el PUERTO %s y la IP %s", ip_kernel, puerto_kernel);
 
-    char* ip_memoria = config_get_string_value(config, "IP"); //TODO comentado para probar serialización de segmentos en kernel.
+    char* ip_memoria = config_get_string_value(config, "IP_MEMORIA"); //TODO comentado para probar serialización de segmentos en kernel.
     char* puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
     int fd_memoria = crear_conexion(logger, "CPU", ip_memoria, puerto_memoria);
 
@@ -98,19 +103,19 @@ int main() {
 			memcpy(&(contexto->registros_pcb.rdx), stream, tamanio_registro_grande);
 			stream += tamanio_registro_grande;
 
-			log_info(logger, "Los registros que trajo PID: <%d> son: ", contexto->pid);
-			log_info(logger, "%s", contexto->registros_pcb.ax);
-			log_info(logger, "%s", contexto->registros_pcb.bx);
-			log_info(logger, "%s", contexto->registros_pcb.cx);
-			log_info(logger, "%s", contexto->registros_pcb.dx);
-			log_info(logger, "%s", contexto->registros_pcb.eax);
-			log_info(logger, "%s", contexto->registros_pcb.ebx);
-			log_info(logger, "%s", contexto->registros_pcb.ecx);
-			log_info(logger, "%s", contexto->registros_pcb.edx);
-			log_info(logger, "%s", contexto->registros_pcb.rax);
-			log_info(logger, "%s", contexto->registros_pcb.rbx);
-			log_info(logger, "%s", contexto->registros_pcb.rcx);
-			log_info(logger, "%s", contexto->registros_pcb.rdx);
+//			log_info(logger, "Los registros que trajo PID: <%d> son: ", contexto->pid);
+//			log_info(logger, "%s", contexto->registros_pcb.ax);
+//			log_info(logger, "%s", contexto->registros_pcb.bx);
+//			log_info(logger, "%s", contexto->registros_pcb.cx);
+//			log_info(logger, "%s", contexto->registros_pcb.dx);
+//			log_info(logger, "%s", contexto->registros_pcb.eax);
+//			log_info(logger, "%s", contexto->registros_pcb.ebx);
+//			log_info(logger, "%s", contexto->registros_pcb.ecx);
+//			log_info(logger, "%s", contexto->registros_pcb.edx);
+//			log_info(logger, "%s", contexto->registros_pcb.rax);
+//			log_info(logger, "%s", contexto->registros_pcb.rbx);
+//			log_info(logger, "%s", contexto->registros_pcb.rcx);
+//			log_info(logger, "%s", contexto->registros_pcb.rdx);
 
 			log_info(logger, "PID: <%d> recibido desde el Kernel para ejecutar.", contexto->pid);
 
@@ -256,18 +261,18 @@ int main() {
 				free(instruccion_a_ejecutar);
 			}
 
-			log_warning(logger, "AX: %s", registros_cpu.ax);
-			log_warning(logger, "BX: %s", registros_cpu.bx);
-			log_warning(logger, "CX: %s", registros_cpu.cx);
-			log_warning(logger, "DX: %s", registros_cpu.dx);
-			log_warning(logger, "EAX: %s", registros_cpu.eax);
-			log_warning(logger, "EBX: %s", registros_cpu.ebx);
-			log_warning(logger, "ECX: %s", registros_cpu.ecx);
-			log_warning(logger, "EDX: %s", registros_cpu.edx);
-			log_warning(logger, "RAX: %s", registros_cpu.rax);
-			log_warning(logger, "RBX: %s", registros_cpu.rbx);
-			log_warning(logger, "RCX: %s", registros_cpu.rcx);
-			log_warning(logger, "RDX: %s", registros_cpu.rdx);
+//			log_warning(logger, "AX: %s", registros_cpu.ax);
+//			log_warning(logger, "BX: %s", registros_cpu.bx);
+//			log_warning(logger, "CX: %s", registros_cpu.cx);
+//			log_warning(logger, "DX: %s", registros_cpu.dx);
+//			log_warning(logger, "EAX: %s", registros_cpu.eax);
+//			log_warning(logger, "EBX: %s", registros_cpu.ebx);
+//			log_warning(logger, "ECX: %s", registros_cpu.ecx);
+//			log_warning(logger, "EDX: %s", registros_cpu.edx);
+//			log_warning(logger, "RAX: %s", registros_cpu.rax);
+//			log_warning(logger, "RBX: %s", registros_cpu.rbx);
+//			log_warning(logger, "RCX: %s", registros_cpu.rcx);
+//			log_warning(logger, "RDX: %s", registros_cpu.rdx);
 			break;
 		default:
 			log_error(logger, "[ERROR] Se desconectó Kernel, chau loco suerte.");

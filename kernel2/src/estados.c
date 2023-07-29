@@ -195,7 +195,7 @@ void estado_ejecutar(void) {
 			pthread_mutex_lock(&mutex_operacion_memoria);
 			enviar_parametros_a_memoria(proceso_a_ejecutar->pcb->pid, id_segmento_a_borrar, 0, DELETE_SEGMENT); //pongo un 0 en el tercer parámetro porque si es DELETE_SEGMENT no interfiere para nada
 
-			recibir_tablas_segmentos(proceso_a_ejecutar->pcb);
+			recibir_tablas_delete(proceso_a_ejecutar->pcb);
 			pthread_mutex_unlock(&mutex_operacion_memoria);
 
 //			pthread_mutex_lock(&mutex_exec);

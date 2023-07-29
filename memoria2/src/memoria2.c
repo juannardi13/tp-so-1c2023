@@ -1,9 +1,14 @@
 #include "memoria.h"
 #include <pthread.h>
 
-int main(void) {
+int main(int argc, char **argv) {
 
-	inicializar_config();
+	if (argc < 2) {
+		printf("ALTO BOT AMIGO\n");
+		return EXIT_FAILURE;
+	}
+
+	inicializar_config(argv[1]);
 
 	logger = log_create("memoria.log", "MEMORIA", 1, LOG_LEVEL_INFO);
 
@@ -33,9 +38,9 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-void inicializar_config(void) {
+void inicializar_config(char *ruta_config) {
 
-	config = config_create("./cfg/memoria.config");
+	config = config_create(ruta_config);
 
 	if (config == NULL) {
 		perror("No se encontró el path de la config");

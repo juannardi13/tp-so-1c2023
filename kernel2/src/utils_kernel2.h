@@ -231,6 +231,7 @@ void enviar_pid_memoria(int, op_code);
 void ordenar_compactacion(void);
 void recibir_respuesta_create(t_proceso*, int, int);
 void recibir_tablas_segmentos(t_pcb*);
+void recibir_tablas_delete(t_pcb*);
 
 //Funciones para el manejo de archivos
 void inicializar_tabla_global_archivos(void);
