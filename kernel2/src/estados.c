@@ -770,7 +770,7 @@ void estado_ready(void) {
 			list_add(cola_exec, siguiente_proceso);
 			pthread_mutex_unlock(&mutex_exec);
 
-			log_info(logger_kernel, "PID: <%d> ingresa a EXECUTE", siguiente_proceso->pcb->pid);
+			//log_info(logger_kernel, "PID: <%d> ingresa a EXECUTE", siguiente_proceso->pcb->pid);
 			log_info(kernel_principal, "PID: <%d> - Estado Anterior: <READY> - Estado Actual: <EXEC>", siguiente_proceso->pcb->pid);
 			sem_post(&sem_exec);
 		} else {

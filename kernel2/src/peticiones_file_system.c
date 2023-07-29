@@ -38,6 +38,8 @@ void* manejar_peticiones_fs(void) {
 		list_add(cola_ready, proceso);
 		proceso->llegada_ready = get_time();
 		pthread_mutex_unlock(&mutex_ready);
+		log_info(kernel_principal, "PID: <%d> - Estado Anterior: <BLOCK> - Estado Actual: <READY>", proceso->pcb->pid);
+
 
 		pthread_mutex_lock(&mutex_compactacion_solicitada);
 		pthread_mutex_lock(&mutex_peticiones_fs);

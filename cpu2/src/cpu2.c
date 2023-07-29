@@ -135,10 +135,10 @@ int main(int argc, char **argv) {
 				memcpy(&(aux->tamanio), stream, sizeof(int));
 				stream += sizeof(int);
 
-				log_info(logger, "Segmento <%d>:", m);
-				log_info(logger, "Base <%d>", aux->base);
-				log_info(logger, "ID <%d>", aux->id);
-				log_info(logger, "Tamaño <%d>", aux->tamanio);
+				//log_info(logger, "Segmento <%d>:", m);
+				//log_info(logger, "Base <%d>", aux->base);
+				//log_info(logger, "ID <%d>", aux->id);
+				//log_info(logger, "Tamaño <%d>", aux->tamanio);
 
 				list_add(contexto->tabla_segmentos, aux);
 			}
