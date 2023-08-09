@@ -4,9 +4,8 @@
 
 ##  <h1 align="center"> T.U.K.I. - 1c-2023 - DeLorean </h1>
 
-*[Enunciado](https://docs.google.com/document/d/1orfThJsPmMx5uPzbY3wClGhqX8jASMOCUMlWnYAr7cA/edit)
-
-*[Documento de pruebas](https://docs.google.com/document/d/1MNalaTCB95qGO8q3rlR7VVCQqv3VLP3oeYxBgXgBy5g/edit)
+* [Enunciado](https://docs.google.com/document/d/1orfThJsPmMx5uPzbY3wClGhqX8jASMOCUMlWnYAr7cA/edit)
+* [Documento de pruebas](https://docs.google.com/document/d/1MNalaTCB95qGO8q3rlR7VVCQqv3VLP3oeYxBgXgBy5g/edit)
 
 ## Autores ✒️
 
