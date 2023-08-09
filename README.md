@@ -9,7 +9,7 @@
 
 ## Autores ✒️
 
-| ![geroPenaflor](https://avatars.githubusercontent.com/u/102915702?v=4) | ![bautigs](https://avatars.githubusercontent.com/u/102747012?v=4) | ![candlavia](https://avatars.githubusercontent.com/u/102686872?v=4) | ![juannardi13](https://avatars.githubusercontent.com/u/102627173?s=96&v=4) | ![camivinciguerra](https://avatars.githubusercontent.com/u/83617190?v=4) |
+| ![geroPenaflor](https://avatars.githubusercontent.com/u/102915702?v=4) | ![bautigs](https://avatars.githubusercontent.com/u/102747012?v=4) | ![candlavia](https://avatars.githubusercontent.com/u/102686872?v=4) | ![juannardi13](https://github.com/sisoputnfrba/tp-2023-1c-DeLorean/assets/102627173/1e079ed2-58b4-44df-ad6c-6a2a3f00dcbd) | ![camivinciguerra](https://avatars.githubusercontent.com/u/83617190?v=4) |
 |:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|
 | [geroPenaflor](https://github.com/geroPenaflor) | [bautigs](https://github.com/bautigs) | [candlavia](https://github.com/candlavia) | [juannardi13](https://github.com/juannardi13) | [camivinciguerra](https://github.com/camivinciguerra) |
 
