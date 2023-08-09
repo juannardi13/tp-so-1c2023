@@ -7,7 +7,7 @@
 * [Enunciado](https://docs.google.com/document/d/1orfThJsPmMx5uPzbY3wClGhqX8jASMOCUMlWnYAr7cA/edit)
 * [Documento de pruebas](https://docs.google.com/document/d/1MNalaTCB95qGO8q3rlR7VVCQqv3VLP3oeYxBgXgBy5g/edit)
 
-## <h1 align="center> 🛠️ Construido con 🛠️ </h1>
+## <h1 align="center"> 🛠️ Construido con 🛠️ </h1>
 
 * [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) - Virtual Machine
 * [Eclipse](https://www.eclipse.org/downloads/)  - IDE usado incluído en la VM
